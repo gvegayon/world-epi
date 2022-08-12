@@ -178,12 +178,27 @@ std::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_en
 <tr class="memitem:afc0909e595dad5722e7c04e87cc56530"><td class="memItemLeft" align="right" valign="top"><a id="afc0909e595dad5722e7c04e87cc56530"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (unsigned int s)</td></tr>
 <tr class="separator:afc0909e595dad5722e7c04e87cc56530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memItemLeft" align="right" valign="top"><a id="a19ae15f81d1cf3215b69ea5c17cf6e37"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_norm</b> (epiworld_double mean, epiworld_double sd)</td></tr>
+<tr class="separator:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154180aadb2d122e14a3821a56ff948c"><td class="memItemLeft" align="right" valign="top"><a id="a154180aadb2d122e14a3821a56ff948c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_unif</b> (epiworld_double a, epiworld_double b)</td></tr>
+<tr class="separator:a154180aadb2d122e14a3821a56ff948c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c4c339c731c8c07203a07da6024736"><td class="memItemLeft" align="right" valign="top"><a id="ac9c4c339c731c8c07203a07da6024736"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_exp</b> (epiworld_double lambda)</td></tr>
+<tr class="separator:ac9c4c339c731c8c07203a07da6024736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a1d24e19954c0ab354bb1ae0f3450e"><td class="memItemLeft" align="right" valign="top"><a id="af7a1d24e19954c0ab354bb1ae0f3450e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_gamma</b> (epiworld_double alpha, epiworld_double beta)</td></tr>
 <tr class="separator:af7a1d24e19954c0ab354bb1ae0f3450e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf9a25074a14cdaa24413653cb5a3d1"><td class="memItemLeft" align="right" valign="top"><a id="a8cf9a25074a14cdaa24413653cb5a3d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_lognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
+<tr class="separator:a8cf9a25074a14cdaa24413653cb5a3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cabf2d1052237ca7ad1b8145dcabc58"><td class="memItemLeft" align="right" valign="top"><a id="a9cabf2d1052237ca7ad1b8145dcabc58"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>runif</b> ()</td></tr>
 <tr class="separator:a9cabf2d1052237ca7ad1b8145dcabc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dc90b1506b14ffd76d82fe8f9d5dac"><td class="memItemLeft" align="right" valign="top"><a id="a69dc90b1506b14ffd76d82fe8f9d5dac"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>runif</b> (epiworld_double a, epiworld_double b)</td></tr>
+<tr class="separator:a69dc90b1506b14ffd76d82fe8f9d5dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4332e0c48841d3366ed291cdcfb1c0"><td class="memItemLeft" align="right" valign="top"><a id="abe4332e0c48841d3366ed291cdcfb1c0"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rnorm</b> ()</td></tr>
 <tr class="separator:abe4332e0c48841d3366ed291cdcfb1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +211,18 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rgamma</b>
 <tr class="memitem:a26d8e413b4943b58b12d3b186d8aac1a"><td class="memItemLeft" align="right" valign="top"><a id="a26d8e413b4943b58b12d3b186d8aac1a"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rgamma</b> (epiworld_double alpha, epiworld_double beta)</td></tr>
 <tr class="separator:a26d8e413b4943b58b12d3b186d8aac1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3d4284d0b7af39e5e3eb246155c122"><td class="memItemLeft" align="right" valign="top"><a id="a8f3d4284d0b7af39e5e3eb246155c122"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rexp</b> ()</td></tr>
+<tr class="separator:a8f3d4284d0b7af39e5e3eb246155c122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059afbb5d6e6bff2c08d5f879bace604"><td class="memItemLeft" align="right" valign="top"><a id="a059afbb5d6e6bff2c08d5f879bace604"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rexp</b> (epiworld_double lambda)</td></tr>
+<tr class="separator:a059afbb5d6e6bff2c08d5f879bace604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06834cc7fb2bfe26dc43104b61338756"><td class="memItemLeft" align="right" valign="top"><a id="a06834cc7fb2bfe26dc43104b61338756"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal</b> ()</td></tr>
+<tr class="separator:a06834cc7fb2bfe26dc43104b61338756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015fb51d30cc963e8dcff3dd33790d41"><td class="memItemLeft" align="right" valign="top"><a id="a015fb51d30cc963e8dcff3dd33790d41"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
+<tr class="separator:a015fb51d30cc963e8dcff3dd33790d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Add Virus/Tool to the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This is done before the model has been initialized.</p>
 <dl class="params"><dt>Parameters</dt><dd>

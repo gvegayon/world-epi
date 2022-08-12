@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['write_5fdata_92',['write_data',['../classepiworld_1_1_model.html#a02135cd989e6fdadaf71d3140fb4a2e8',1,'epiworld::Model::write_data()'],['../class_model.html#a02135cd989e6fdadaf71d3140fb4a2e8',1,'Model::write_data()'],['../classepiworld_1_1_data_base.html#a728d678114efad7b3184e0ae7198a1c1',1,'epiworld::DataBase::write_data()'],['../classepiworld_1_1_model.html#a6c07199ce0c9102cccb9749a7eda421d',1,'epiworld::Model::write_data(std::string fn_variant_info, std::string fn_variant_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition) const']]],
-  ['write_5fedgelist_93',['write_edgelist',['../classepiworld_1_1_model.html#a9843d2f6c92916f775baf47e6d5a9fde',1,'epiworld::Model']]]
+  ['vcount_87',['vcount',['../classepiworld_1_1_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1',1,'epiworld::AdjList::vcount()'],['../class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1',1,'AdjList::vcount()']]],
+  ['vechasher_88',['vecHasher',['../structepiworld_1_1vec_hasher.html',1,'epiworld::vecHasher&lt; T &gt;'],['../structvec_hasher.html',1,'vecHasher&lt; T &gt;']]],
+  ['virus_89',['Virus',['../classepiworld_1_1_virus.html',1,'epiworld::Virus&lt; TSeq &gt;'],['../class_virus.html',1,'Virus&lt; TSeq &gt;']]],
+  ['viruses_90',['Viruses',['../classepiworld_1_1_viruses.html',1,'epiworld::Viruses&lt; TSeq &gt;'],['../class_viruses.html',1,'Viruses&lt; TSeq &gt;']]],
+  ['viruses_5fconst_91',['Viruses_const',['../classepiworld_1_1_viruses__const.html',1,'epiworld::Viruses_const&lt; TSeq &gt;'],['../class_viruses__const.html',1,'Viruses_const&lt; TSeq &gt;']]]
 ];

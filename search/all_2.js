@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['database_15',['DataBase',['../class_data_base.html',1,'DataBase&lt; TSeq &gt;'],['../classepiworld_1_1_data_base.html',1,'epiworld::DataBase&lt; TSeq &gt;']]],
-  ['database_3c_20bool_20_3e_16',['DataBase&lt; bool &gt;',['../classepiworld_1_1_data_base.html',1,'epiworld']]],
-  ['database_3c_20int_20_3e_17',['DataBase&lt; int &gt;',['../class_data_base.html',1,'']]]
+  ['contributor_20code_20of_20conduct_14',['Contributor Code of Conduct',['../md__c_o_d_e__o_f__c_o_n_d_u_c_t.html',1,'']]],
+  ['contributor_20covenant_20code_20of_20conduct_15',['Contributor Covenant Code of Conduct',['../md_rpackage__c_o_d_e__o_f__c_o_n_d_u_c_t.html',1,'']]]
 ];

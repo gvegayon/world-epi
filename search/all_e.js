@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['today_81',['today',['../classepiworld_1_1_model.html#aa3ce8d5f025e239f8090ab9645f3e917',1,'epiworld::Model::today()'],['../class_model.html#aa3ce8d5f025e239f8090ab9645f3e917',1,'Model::today()']]],
-  ['tool_82',['Tool',['../classepiworld_1_1_tool.html',1,'epiworld::Tool&lt; TSeq &gt;'],['../class_tool.html',1,'Tool&lt; TSeq &gt;']]],
-  ['tools_83',['Tools',['../classepiworld_1_1_tools.html',1,'epiworld::Tools&lt; TSeq &gt;'],['../class_tools.html',1,'Tools&lt; TSeq &gt;']]],
-  ['tools_5fconst_84',['Tools_const',['../classepiworld_1_1_tools__const.html',1,'epiworld::Tools_const&lt; TSeq &gt;'],['../class_tools__const.html',1,'Tools_const&lt; TSeq &gt;']]],
-  ['transition_5fprobability_85',['transition_probability',['../classepiworld_1_1_data_base.html#a3391ab73b07892c8b66160e61dd294fd',1,'epiworld::DataBase::transition_probability()'],['../class_data_base.html#a3391ab73b07892c8b66160e61dd294fd',1,'DataBase::transition_probability()']]]
+  ['sample_5fvirus_5fsingle_72',['sample_virus_single',['../namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e',1,'epiworld::sampler::sample_virus_single()'],['../namespacesampler.html#ab33532e84aba976673b13d0f6758e95b',1,'sampler::sample_virus_single()']]],
+  ['sampler_73',['sampler',['../namespacesampler.html',1,'']]],
+  ['set_5fagents_5fdata_74',['set_agents_data',['../classepiworld_1_1_model.html#a14758e0476fd4a05643ab41190530513',1,'epiworld::Model::set_agents_data()'],['../class_model.html#a14758e0476fd4a05643ab41190530513',1,'Model::set_agents_data()']]],
+  ['set_5fbackup_75',['set_backup',['../classepiworld_1_1_model.html#a8dac7be907b0ddeb4109562e8d16a4d1',1,'epiworld::Model']]],
+  ['set_5fname_76',['set_name',['../classepiworld_1_1_virus.html#aafcddea084bce283c6e881a5d5f81459',1,'epiworld::Virus::set_name()'],['../classepiworld_1_1_tool.html#a31c515c9aac7551af30719cc6d6ed3c9',1,'epiworld::Tool::set_name()']]],
+  ['set_5frand_5fengine_77',['set_rand_engine',['../classepiworld_1_1_model.html#a8d87fcc71abe84e341ea56a4e251cb08',1,'epiworld::Model']]],
+  ['set_5frewire_5ffun_78',['set_rewire_fun',['../classepiworld_1_1_model.html#ae3c3f9d908aebef89e5ce98823af8cb1',1,'epiworld::Model']]],
+  ['set_5fupdate_5fsusceptible_79',['set_update_susceptible',['../classepiworld_1_1_model.html#acd773e1a9dd762b8735886e6f27598bd',1,'epiworld::Model']]],
+  ['set_5fuser_5fdata_80',['set_user_data',['../classepiworld_1_1_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'epiworld::Model::set_user_data()'],['../class_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'Model::set_user_data()'],['../classepiworld_1_1_model.html#a61893953dc4fa046b84a77c89a5bc458',1,'epiworld::Model::set_user_data()']]]
 ];

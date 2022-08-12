@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['get_5fdb_27',['get_db',['../classepiworld_1_1_model.html#a9b1ca7337427a404cf44ad3fbb6e9c3b',1,'epiworld::Model']]],
-  ['get_5felapsed_28',['get_elapsed',['../classepiworld_1_1_model.html#a6d3c8549e9666ab93664995e79a3cab7',1,'epiworld::Model']]],
-  ['get_5fid_29',['get_id',['../classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a',1,'epiworld::Agent::get_id()'],['../class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a',1,'Agent::get_id()']]],
-  ['get_5fprob_5finfecting_30',['get_prob_infecting',['../classepiworld_1_1_virus.html#ab4cfb589ad71d273636be3d9c3f50d45',1,'epiworld::Virus']]],
-  ['get_5fqueue_31',['get_queue',['../classepiworld_1_1_model.html#a3cf5b4f14dcd54816785b38894c8088f',1,'epiworld::Model::get_queue()'],['../class_model.html#aaf33c877732b9bdc7cb77e063ad0c1a6',1,'Model::get_queue()']]],
-  ['get_5fsusceptibility_5freduction_32',['get_susceptibility_reduction',['../classepiworld_1_1_tool.html#adbc3bec3b25a2768fb51275c680be2d9',1,'epiworld::Tool']]],
-  ['get_5ftoday_5ftotal_33',['get_today_total',['../classepiworld_1_1_data_base.html#a048cc81c3c16ed7d3cdbd65e84d24b11',1,'epiworld::DataBase']]]
+  ['ecount_19',['ecount',['../classepiworld_1_1_adj_list.html#a776cefb7cc85d544e4eb9e61aaa46f83',1,'epiworld::AdjList::ecount()'],['../class_adj_list.html#a776cefb7cc85d544e4eb9e61aaa46f83',1,'AdjList::ecount()']]],
+  ['entities_20',['Entities',['../class_entities.html',1,'Entities&lt; TSeq &gt;'],['../classepiworld_1_1_entities.html',1,'epiworld::Entities&lt; TSeq &gt;']]],
+  ['entities_5fconst_21',['Entities_const',['../class_entities__const.html',1,'Entities_const&lt; TSeq &gt;'],['../classepiworld_1_1_entities__const.html',1,'epiworld::Entities_const&lt; TSeq &gt;']]],
+  ['entity_22',['Entity',['../class_entity.html',1,'Entity&lt; TSeq &gt;'],['../classepiworld_1_1_entity.html',1,'epiworld::Entity&lt; TSeq &gt;']]],
+  ['epi_20simulator_23',['EPI Simulator',['../md__r_e_a_d_m_e_old.html',1,'']]],
+  ['epiworld_201_2e0_24',['epiworld 1.0',['../md_rpackage__n_e_w_s.html',1,'']]],
+  ['epiworld_20c_2b_2b_20template_20library_25',['epiworld c++ template library',['../md_examples_07_surveillance_07_surveillance.html',1,'']]],
+  ['example_3a_2000_2dhello_2dworld_26',['Example: 00-hello-world',['../index.html',1,'']]],
+  ['sampler_27',['sampler',['../namespaceepiworld_1_1sampler.html',1,'epiworld']]]
 ];

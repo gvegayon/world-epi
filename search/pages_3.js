@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sir_20multiple_20runs_20_28b_29_191',['SIR Multiple Runs (b)',['../md_examples_02b_sir_multiple_runs_02b_sir_multiple_runs.html',1,'']]]
+  ['mit_20license_190',['MIT License',['../md__l_i_c_e_n_s_e.html',1,'(Global Namespace)'],['../md_rpackage__l_i_c_e_n_s_e.html',1,'(Global Namespace)']]],
+  ['model1_191',['model1',['../md_model1.html',1,'']]]
 ];
