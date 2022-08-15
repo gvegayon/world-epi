@@ -7,31 +7,39 @@
 \DoxyCodeLine{Running the model...}
 \DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
 \DoxyCodeLine{||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| done.}
+\DoxyCodeLine{[epiworld-\/debug] DEBUGGING ON (compiled with EPI\_DEBUG defined)}
 \DoxyCodeLine{}
 \DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
 \DoxyCodeLine{SIMULATION STUDY}
 \DoxyCodeLine{}
-\DoxyCodeLine{Population size    : 100000}
-\DoxyCodeLine{Days (duration)    : 100 (of 100)}
-\DoxyCodeLine{Number of variants : 1}
-\DoxyCodeLine{Last run elapsed t : 256.00ms}
-\DoxyCodeLine{Rewiring           : off}
+\DoxyCodeLine{Population size     : 10000}
+\DoxyCodeLine{Number of entitites : 0}
+\DoxyCodeLine{Days (duration)     : 100 (of 100)}
+\DoxyCodeLine{Number of variants  : 1}
+\DoxyCodeLine{Last run elapsed t  : 40.00ms}
+\DoxyCodeLine{Rewiring            : off}
 \DoxyCodeLine{}
 \DoxyCodeLine{Virus(es):}
-\DoxyCodeLine{ -\/ covid 19 (baseline prevalence: 5 seeds)}
+\DoxyCodeLine{ -\/ covid 19 (baseline prevalence: 50 seeds)}
+\DoxyCodeLine{}
 \DoxyCodeLine{Tool(s):}
 \DoxyCodeLine{ -\/ vaccine (baseline prevalence: 50.00\%)}
+\DoxyCodeLine{ -\/ Immunity (covid 19) (originated in the model...)}
 \DoxyCodeLine{}
 \DoxyCodeLine{Model parameters:}
+\DoxyCodeLine{ (none)}
 \DoxyCodeLine{}
 \DoxyCodeLine{Distribution of the population at time 100:}
-\DoxyCodeLine{ -\/ Total healthy (S)   :   99995 -\/> 97390}
-\DoxyCodeLine{ -\/ Total recovered (S) :       0 -\/> 2554}
-\DoxyCodeLine{ -\/ Total infected (I)  :       5 -\/> 56}
-\DoxyCodeLine{ -\/ Total removed (R)   :       0 -\/> 0}
+\DoxyCodeLine{ -\/ (0) Susceptible :  9950 -\/> 70}
+\DoxyCodeLine{ -\/ (1) Exposed     :    50 -\/> 70}
+\DoxyCodeLine{ -\/ (2) Recovered   :     0 -\/> 9271}
+\DoxyCodeLine{ -\/ (3) Removed     :     0 -\/> 589}
 \DoxyCodeLine{}
-\DoxyCodeLine{(S): Susceptible, (I): Infected, (R): Recovered}
-\DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\DoxyCodeLine{Transition Probabilities:}
+\DoxyCodeLine{ -\/ Susceptible  0.95  0.05  0.00  0.00}
+\DoxyCodeLine{ -\/ Exposed      0.00  0.85  0.14  0.01}
+\DoxyCodeLine{ -\/ Recovered    0.00  0.00  1.00  0.00}
+\DoxyCodeLine{ -\/ Removed      0.00  0.00  0.00  1.00}
 
 \end{DoxyCode}
  

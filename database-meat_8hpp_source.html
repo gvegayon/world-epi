@@ -199,7 +199,7 @@ $(function() {
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">  133</a></span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">  136</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase&lt;TSeq&gt;::record_variant</a>(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> &amp; v)</div>
@@ -285,7 +285,7 @@ $(function() {
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// Reflecting the change</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        t.set_id(new_id);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        t.set_date(tool_origin_date[new_id]);</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">  219</a></span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="comment">// Moving statistics (only if we are affecting an individual)</span></div>
@@ -297,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        today_tool[new_id][tmp_status]++;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
-<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">  231</a></span>&#160;    </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;} </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
@@ -892,7 +892,7 @@ $(function() {
 <div class="ttc" id="aclass_data_base_html_a3391ab73b07892c8b66160e61dd294fd"><div class="ttname"><a href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase::transition_probability</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; transition_probability(bool print=true) const</div><div class="ttdoc">Calculates the transition probabilities.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:730</div></div>
 <div class="ttc" id="aclass_data_base_html_a5d43d9fba8e46bee17f529e0ebce670e"><div class="ttname"><a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase::reproductive_number</a></div><div class="ttdeci">MapVec_type&lt; int, int &gt; reproductive_number() const</div><div class="ttdoc">Computes the reproductive number of each case.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:679</div></div>
 <div class="ttc" id="aclass_data_base_html_a833cf232df236cf097ccbaf537ff32ab"><div class="ttname"><a href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase::record_variant</a></div><div class="ttdeci">void record_variant(Virus&lt; TSeq &gt; &amp;v)</div><div class="ttdoc">Registering a new variant.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:136</div></div>
-<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model&lt; TSeq &gt;</a></div></div>
+<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>

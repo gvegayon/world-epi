@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>* m</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    );</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = <span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">inline</span> std::function&lt;void(<span class="keywordtype">size_t</span>,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt; make_save_run(</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string fmt = <span class="stringliteral">&quot;%03lu-episimulation.csv&quot;</span>,</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> total_hist = <span class="keyword">true</span>,</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// template&lt;typename TSeq&gt;</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// class ToolPtr;</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = <span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_model.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_model.html">Model</a> {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt;;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_agents_sample.html">AgentsSample</a>&lt;TSeq&gt;;</div>
@@ -441,10 +441,10 @@ $(function() {
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_adj_list_html"><div class="ttname"><a href="class_adj_list.html">AdjList</a></div><div class="ttdef"><b>Definition:</b> adjlist-bones.hpp:4</div></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
-<div class="ttc" id="aclass_agents_sample_html"><div class="ttname"><a href="class_agents_sample.html">AgentsSample</a></div><div class="ttdoc">Sample of agents.</div><div class="ttdef"><b>Definition:</b> agentssample-bones.hpp:27</div></div>
+<div class="ttc" id="aclass_agents_sample_html"><div class="ttname"><a href="class_agents_sample.html">AgentsSample</a></div><div class="ttdoc">Sample of agents.</div><div class="ttdef"><b>Definition:</b> agentssample-bones.hpp:28</div></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:31</div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:20</div></div>
-<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model&lt; TSeq &gt;</a></div></div>
+<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_model_html_a02135cd989e6fdadaf71d3140fb4a2e8"><div class="ttname"><a href="class_model.html#a02135cd989e6fdadaf71d3140fb4a2e8">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div></div>
 <div class="ttc" id="aclass_model_html_a14758e0476fd4a05643ab41190530513"><div class="ttname"><a href="class_model.html#a14758e0476fd4a05643ab41190530513">Model::set_agents_data</a></div><div class="ttdeci">void set_agents_data(double *data_, size_t ncols_)</div><div class="ttdoc">Set the agents data object.</div></div>
 <div class="ttc" id="aclass_model_html_a1cbe26a38285095c62d1971251a6c3db"><div class="ttname"><a href="class_model.html#a1cbe26a38285095c62d1971251a6c3db">Model::queuing_on</a></div><div class="ttdeci">void queuing_on()</div><div class="ttdoc">Activates the queuing system (default.)</div></div>
@@ -458,11 +458,11 @@ $(function() {
 <div class="ttc" id="aclass_model_html_adc3b2119335ffa4b0128123be919f454"><div class="ttname"><a href="class_model.html#adc3b2119335ffa4b0128123be919f454">Model::add_global_action</a></div><div class="ttdeci">void add_global_action(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, int date=-99)</div><div class="ttdoc">Set a global action.</div></div>
 <div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div></div>
 <div class="ttc" id="aclass_progress_html"><div class="ttname"><a href="class_progress.html">Progress</a></div><div class="ttdoc">A simple progress bar.</div><div class="ttdef"><b>Definition:</b> progress.hpp:11</div></div>
-<div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:22</div></div>
+<div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:16</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
-<div class="ttc" id="astruct_action_html"><div class="ttname"><a href="struct_action.html">Action</a></div><div class="ttdoc">Action data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:105</div></div>
+<div class="ttc" id="astruct_action_html"><div class="ttname"><a href="struct_action.html">Action</a></div><div class="ttdoc">Action data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:107</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

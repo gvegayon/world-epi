@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespacesampler.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesampler.html">sampler</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = <span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacesampler.html#a9f4c303b5e9016b050dd008fec902448">   24</a></span>&#160;<span class="keyword">inline</span> std::function&lt;void(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a>*,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt; <a class="code" href="namespacesampler.html#a9f4c303b5e9016b050dd008fec902448">make_update_susceptible</a>(</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; exclude = {}</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    )</div>
@@ -443,9 +443,9 @@ $(function() {
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;}</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent&lt; TSeq &gt;</a></div></div>
+<div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div></div>
-<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model&lt; TSeq &gt;</a></div></div>
+<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="anamespacesampler_html"><div class="ttname"><a href="namespacesampler.html">sampler</a></div><div class="ttdoc">Functions for sampling viruses.</div><div class="ttdef"><b>Definition:</b> agent-meat-virus-sampling.hpp:8</div></div>
 <div class="ttc" id="anamespacesampler_html_a4cafc444e0a6c563f34ed5f9b5366ae4"><div class="ttname"><a href="namespacesampler.html#a4cafc444e0a6c563f34ed5f9b5366ae4">sampler::make_sample_virus_neighbors</a></div><div class="ttdeci">std::function&lt; Virus&lt; TSeq &gt; *(Agent&lt; TSeq &gt; *, Model&lt; TSeq &gt; *)&gt; make_sample_virus_neighbors(std::vector&lt; epiworld_fast_uint &gt; exclude={})</div><div class="ttdoc">Make a function to sample from neighbors.</div><div class="ttdef"><b>Definition:</b> agent-meat-virus-sampling.hpp:196</div></div>
