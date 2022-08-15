@@ -118,87 +118,88 @@
 \contentsline {subsubsection}{\numberline {15.19.2.2}add\_param()}{76}{subsubsection.15.19.2.2}%
 \contentsline {subsubsection}{\numberline {15.19.2.3}add\_status\_susceptible()}{77}{subsubsection.15.19.2.3}%
 \contentsline {subsubsection}{\numberline {15.19.2.4}init()}{77}{subsubsection.15.19.2.4}%
-\contentsline {subsubsection}{\numberline {15.19.2.5}pop\_from\_adjlist()}{77}{subsubsection.15.19.2.5}%
+\contentsline {subsubsection}{\numberline {15.19.2.5}pop\_from\_adjlist()}{78}{subsubsection.15.19.2.5}%
 \contentsline {subsubsection}{\numberline {15.19.2.6}reset()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{78}{subsubsection.15.19.2.6}%
-\contentsline {subsubsection}{\numberline {15.19.2.7}reset()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{78}{subsubsection.15.19.2.7}%
+\contentsline {subsubsection}{\numberline {15.19.2.7}reset()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{79}{subsubsection.15.19.2.7}%
 \contentsline {subsubsection}{\numberline {15.19.2.8}reset\_status\_codes()}{79}{subsubsection.15.19.2.8}%
 \contentsline {subsubsection}{\numberline {15.19.2.9}run\_multiple()}{79}{subsubsection.15.19.2.9}%
-\contentsline {subsubsection}{\numberline {15.19.2.10}set\_agents\_data()}{79}{subsubsection.15.19.2.10}%
+\contentsline {subsubsection}{\numberline {15.19.2.10}set\_agents\_data()}{80}{subsubsection.15.19.2.10}%
 \contentsline {subsubsection}{\numberline {15.19.2.11}set\_backup()}{80}{subsubsection.15.19.2.11}%
 \contentsline {subsubsection}{\numberline {15.19.2.12}set\_rand\_engine()}{80}{subsubsection.15.19.2.12}%
-\contentsline {subsubsection}{\numberline {15.19.2.13}set\_rewire\_fun()}{80}{subsubsection.15.19.2.13}%
+\contentsline {subsubsection}{\numberline {15.19.2.13}set\_rewire\_fun()}{81}{subsubsection.15.19.2.13}%
 \contentsline {subsubsection}{\numberline {15.19.2.14}set\_user\_data()}{81}{subsubsection.15.19.2.14}%
 \contentsline {subsubsection}{\numberline {15.19.2.15}write\_data()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{81}{subsubsection.15.19.2.15}%
 \contentsline {subsubsection}{\numberline {15.19.2.16}write\_data()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{82}{subsubsection.15.19.2.16}%
 \contentsline {subsubsection}{\numberline {15.19.2.17}write\_edgelist()}{82}{subsubsection.15.19.2.17}%
-\contentsline {section}{\numberline {15.20}Model$<$ TSeq $>$ Class Template Reference}{82}{section.15.20}%
-\contentsline {subsection}{\numberline {15.20.1}Detailed Description}{88}{subsection.15.20.1}%
+\contentsline {section}{\numberline {15.20}Model$<$ TSeq $>$ Class Template Reference}{83}{section.15.20}%
+\contentsline {subsection}{\numberline {15.20.1}Detailed Description}{89}{subsection.15.20.1}%
 \contentsline {subsection}{\numberline {15.20.2}Member Function Documentation}{89}{subsection.15.20.2}%
 \contentsline {subsubsection}{\numberline {15.20.2.1}add\_global\_action()}{89}{subsubsection.15.20.2.1}%
 \contentsline {subsubsection}{\numberline {15.20.2.2}reset()}{89}{subsubsection.15.20.2.2}%
-\contentsline {subsubsection}{\numberline {15.20.2.3}run\_multiple()}{89}{subsubsection.15.20.2.3}%
+\contentsline {subsubsection}{\numberline {15.20.2.3}run\_multiple()}{90}{subsubsection.15.20.2.3}%
 \contentsline {subsubsection}{\numberline {15.20.2.4}set\_agents\_data()}{90}{subsubsection.15.20.2.4}%
 \contentsline {subsubsection}{\numberline {15.20.2.5}write\_data()}{90}{subsubsection.15.20.2.5}%
 \contentsline {section}{\numberline {15.21}Network$<$ Nettype, Nodetype, Edgetype $>$ Class Template Reference}{91}{section.15.21}%
-\contentsline {section}{\numberline {15.22}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Person$<$ TSeq $>$ Class Template Reference}{91}{section.15.22}%
+\contentsline {section}{\numberline {15.22}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Person$<$ TSeq $>$ Class Template Reference}{92}{section.15.22}%
 \contentsline {section}{\numberline {15.23}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Person\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tools$<$ TSeq $>$ Class Template Reference}{92}{section.15.23}%
-\contentsline {subsection}{\numberline {15.23.1}Detailed Description}{92}{subsection.15.23.1}%
+\contentsline {subsection}{\numberline {15.23.1}Detailed Description}{93}{subsection.15.23.1}%
 \contentsline {section}{\numberline {15.24}Person\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tools$<$ TSeq $>$ Class Template Reference}{93}{section.15.24}%
-\contentsline {section}{\numberline {15.25}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Person\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Viruses$<$ TSeq $>$ Class Template Reference}{93}{section.15.25}%
-\contentsline {subsection}{\numberline {15.25.1}Detailed Description}{93}{subsection.15.25.1}%
+\contentsline {section}{\numberline {15.25}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Person\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Viruses$<$ TSeq $>$ Class Template Reference}{94}{section.15.25}%
+\contentsline {subsection}{\numberline {15.25.1}Detailed Description}{94}{subsection.15.25.1}%
 \contentsline {section}{\numberline {15.26}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Progress Class Reference}{94}{section.15.26}%
-\contentsline {subsection}{\numberline {15.26.1}Detailed Description}{94}{subsection.15.26.1}%
-\contentsline {section}{\numberline {15.27}Progress Class Reference}{94}{section.15.27}%
+\contentsline {subsection}{\numberline {15.26.1}Detailed Description}{95}{subsection.15.26.1}%
+\contentsline {section}{\numberline {15.27}Progress Class Reference}{95}{section.15.27}%
 \contentsline {subsection}{\numberline {15.27.1}Detailed Description}{95}{subsection.15.27.1}%
 \contentsline {section}{\numberline {15.28}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Queue$<$ TSeq $>$ Class Template Reference}{95}{section.15.28}%
-\contentsline {subsection}{\numberline {15.28.1}Detailed Description}{95}{subsection.15.28.1}%
-\contentsline {section}{\numberline {15.29}Queue$<$ TSeq $>$ Class Template Reference}{95}{section.15.29}%
+\contentsline {subsection}{\numberline {15.28.1}Detailed Description}{96}{subsection.15.28.1}%
+\contentsline {section}{\numberline {15.29}Queue$<$ TSeq $>$ Class Template Reference}{96}{section.15.29}%
 \contentsline {subsection}{\numberline {15.29.1}Detailed Description}{96}{subsection.15.29.1}%
-\contentsline {section}{\numberline {15.30}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Queue\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Values Class Reference}{96}{section.15.30}%
-\contentsline {section}{\numberline {15.31}Queue\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Values Class Reference}{96}{section.15.31}%
+\contentsline {section}{\numberline {15.30}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Queue\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Values Class Reference}{97}{section.15.30}%
+\contentsline {section}{\numberline {15.31}Queue\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Values Class Reference}{97}{section.15.31}%
 \contentsline {section}{\numberline {15.32}Rand\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graph Class Reference}{97}{section.15.32}%
-\contentsline {section}{\numberline {15.33}SAMPLETYPE Class Reference}{97}{section.15.33}%
-\contentsline {section}{\numberline {15.34}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tool$<$ TSeq $>$ Class Template Reference}{97}{section.15.34}%
-\contentsline {subsection}{\numberline {15.34.1}Detailed Description}{99}{subsection.15.34.1}%
-\contentsline {subsection}{\numberline {15.34.2}Member Function Documentation}{99}{subsection.15.34.2}%
-\contentsline {subsubsection}{\numberline {15.34.2.1}get\_susceptibility\_reduction()}{99}{subsubsection.15.34.2.1}%
-\contentsline {section}{\numberline {15.35}Tool$<$ TSeq $>$ Class Template Reference}{100}{section.15.35}%
-\contentsline {subsection}{\numberline {15.35.1}Detailed Description}{101}{subsection.15.35.1}%
-\contentsline {section}{\numberline {15.36}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tools$<$ TSeq $>$ Class Template Reference}{101}{section.15.36}%
+\contentsline {section}{\numberline {15.33}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::SAMPLETYPE Class Reference}{98}{section.15.33}%
+\contentsline {section}{\numberline {15.34}SAMPLETYPE Class Reference}{98}{section.15.34}%
+\contentsline {section}{\numberline {15.35}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tool$<$ TSeq $>$ Class Template Reference}{98}{section.15.35}%
+\contentsline {subsection}{\numberline {15.35.1}Detailed Description}{100}{subsection.15.35.1}%
+\contentsline {subsection}{\numberline {15.35.2}Member Function Documentation}{100}{subsection.15.35.2}%
+\contentsline {subsubsection}{\numberline {15.35.2.1}get\_susceptibility\_reduction()}{100}{subsubsection.15.35.2.1}%
+\contentsline {section}{\numberline {15.36}Tool$<$ TSeq $>$ Class Template Reference}{101}{section.15.36}%
 \contentsline {subsection}{\numberline {15.36.1}Detailed Description}{102}{subsection.15.36.1}%
-\contentsline {section}{\numberline {15.37}Tools$<$ TSeq $>$ Class Template Reference}{102}{section.15.37}%
+\contentsline {section}{\numberline {15.37}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tools$<$ TSeq $>$ Class Template Reference}{102}{section.15.37}%
 \contentsline {subsection}{\numberline {15.37.1}Detailed Description}{102}{subsection.15.37.1}%
-\contentsline {section}{\numberline {15.38}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tools\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{103}{section.15.38}%
+\contentsline {section}{\numberline {15.38}Tools$<$ TSeq $>$ Class Template Reference}{103}{section.15.38}%
 \contentsline {subsection}{\numberline {15.38.1}Detailed Description}{103}{subsection.15.38.1}%
-\contentsline {section}{\numberline {15.39}Tools\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{104}{section.15.39}%
+\contentsline {section}{\numberline {15.39}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tools\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{104}{section.15.39}%
 \contentsline {subsection}{\numberline {15.39.1}Detailed Description}{104}{subsection.15.39.1}%
-\contentsline {section}{\numberline {15.40}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data$<$ TSeq $>$ Class Template Reference}{104}{section.15.40}%
-\contentsline {subsection}{\numberline {15.40.1}Detailed Description}{106}{subsection.15.40.1}%
-\contentsline {subsection}{\numberline {15.40.2}Constructor \& Destructor Documentation}{106}{subsection.15.40.2}%
-\contentsline {subsubsection}{\numberline {15.40.2.1}UserData()}{106}{subsubsection.15.40.2.1}%
-\contentsline {section}{\numberline {15.41}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data$<$ TSeq $>$ Class Template Reference}{106}{section.15.41}%
-\contentsline {subsection}{\numberline {15.41.1}Detailed Description}{107}{subsection.15.41.1}%
-\contentsline {subsection}{\numberline {15.41.2}Constructor \& Destructor Documentation}{108}{subsection.15.41.2}%
-\contentsline {subsubsection}{\numberline {15.41.2.1}UserData()}{108}{subsubsection.15.41.2.1}%
-\contentsline {section}{\numberline {15.42}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::vec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hasher$<$ T $>$ Struct Template Reference}{108}{section.15.42}%
+\contentsline {section}{\numberline {15.40}Tools\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{104}{section.15.40}%
+\contentsline {subsection}{\numberline {15.40.1}Detailed Description}{105}{subsection.15.40.1}%
+\contentsline {section}{\numberline {15.41}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data$<$ TSeq $>$ Class Template Reference}{105}{section.15.41}%
+\contentsline {subsection}{\numberline {15.41.1}Detailed Description}{106}{subsection.15.41.1}%
+\contentsline {subsection}{\numberline {15.41.2}Constructor \& Destructor Documentation}{107}{subsection.15.41.2}%
+\contentsline {subsubsection}{\numberline {15.41.2.1}UserData()}{107}{subsubsection.15.41.2.1}%
+\contentsline {section}{\numberline {15.42}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data$<$ TSeq $>$ Class Template Reference}{107}{section.15.42}%
 \contentsline {subsection}{\numberline {15.42.1}Detailed Description}{108}{subsection.15.42.1}%
-\contentsline {section}{\numberline {15.43}vec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hasher$<$ T $>$ Struct Template Reference}{109}{section.15.43}%
+\contentsline {subsection}{\numberline {15.42.2}Constructor \& Destructor Documentation}{108}{subsection.15.42.2}%
+\contentsline {subsubsection}{\numberline {15.42.2.1}UserData()}{108}{subsubsection.15.42.2.1}%
+\contentsline {section}{\numberline {15.43}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::vec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hasher$<$ T $>$ Struct Template Reference}{109}{section.15.43}%
 \contentsline {subsection}{\numberline {15.43.1}Detailed Description}{109}{subsection.15.43.1}%
-\contentsline {section}{\numberline {15.44}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Virus$<$ TSeq $>$ Class Template Reference}{109}{section.15.44}%
-\contentsline {subsection}{\numberline {15.44.1}Detailed Description}{112}{subsection.15.44.1}%
-\contentsline {subsection}{\numberline {15.44.2}Member Function Documentation}{113}{subsection.15.44.2}%
-\contentsline {subsubsection}{\numberline {15.44.2.1}get\_prob\_infecting()}{113}{subsubsection.15.44.2.1}%
-\contentsline {section}{\numberline {15.45}Virus$<$ TSeq $>$ Class Template Reference}{113}{section.15.45}%
-\contentsline {subsection}{\numberline {15.45.1}Detailed Description}{115}{subsection.15.45.1}%
-\contentsline {section}{\numberline {15.46}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Viruses$<$ TSeq $>$ Class Template Reference}{115}{section.15.46}%
-\contentsline {subsection}{\numberline {15.46.1}Detailed Description}{116}{subsection.15.46.1}%
-\contentsline {section}{\numberline {15.47}Viruses$<$ TSeq $>$ Class Template Reference}{116}{section.15.47}%
-\contentsline {subsection}{\numberline {15.47.1}Detailed Description}{116}{subsection.15.47.1}%
-\contentsline {section}{\numberline {15.48}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Viruses\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{117}{section.15.48}%
-\contentsline {subsection}{\numberline {15.48.1}Detailed Description}{117}{subsection.15.48.1}%
-\contentsline {section}{\numberline {15.49}Viruses\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{118}{section.15.49}%
-\contentsline {subsection}{\numberline {15.49.1}Detailed Description}{118}{subsection.15.49.1}%
+\contentsline {section}{\numberline {15.44}vec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hasher$<$ T $>$ Struct Template Reference}{109}{section.15.44}%
+\contentsline {subsection}{\numberline {15.44.1}Detailed Description}{109}{subsection.15.44.1}%
+\contentsline {section}{\numberline {15.45}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Virus$<$ TSeq $>$ Class Template Reference}{110}{section.15.45}%
+\contentsline {subsection}{\numberline {15.45.1}Detailed Description}{112}{subsection.15.45.1}%
+\contentsline {subsection}{\numberline {15.45.2}Member Function Documentation}{112}{subsection.15.45.2}%
+\contentsline {subsubsection}{\numberline {15.45.2.1}get\_prob\_infecting()}{112}{subsubsection.15.45.2.1}%
+\contentsline {section}{\numberline {15.46}Virus$<$ TSeq $>$ Class Template Reference}{113}{section.15.46}%
+\contentsline {subsection}{\numberline {15.46.1}Detailed Description}{114}{subsection.15.46.1}%
+\contentsline {section}{\numberline {15.47}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Viruses$<$ TSeq $>$ Class Template Reference}{115}{section.15.47}%
+\contentsline {subsection}{\numberline {15.47.1}Detailed Description}{115}{subsection.15.47.1}%
+\contentsline {section}{\numberline {15.48}Viruses$<$ TSeq $>$ Class Template Reference}{116}{section.15.48}%
+\contentsline {subsection}{\numberline {15.48.1}Detailed Description}{116}{subsection.15.48.1}%
+\contentsline {section}{\numberline {15.49}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Viruses\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{116}{section.15.49}%
+\contentsline {subsection}{\numberline {15.49.1}Detailed Description}{117}{subsection.15.49.1}%
+\contentsline {section}{\numberline {15.50}Viruses\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{117}{section.15.50}%
+\contentsline {subsection}{\numberline {15.50.1}Detailed Description}{117}{subsection.15.50.1}%
 \contentsline {chapter}{\numberline {16}File Documentation}{119}{chapter.16}%
 \contentsline {section}{\numberline {16.1}include/epiworld/agent-\/meat-\/status.hpp File Reference}{119}{section.16.1}%
 \contentsline {subsection}{\numberline {16.1.1}Detailed Description}{120}{subsection.16.1.1}%
-\contentsline {chapter}{Index}{121}{section*.125}%
+\contentsline {chapter}{Index}{121}{section*.126}%

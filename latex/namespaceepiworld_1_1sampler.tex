@@ -8,7 +8,7 @@ Functions for sampling viruses.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename TSeq  = int$>$ }\\std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{namespaceepiworld_1_1sampler_af58114de37befaa5de5450e3d4414b22}{make\+\_\+update\+\_\+susceptible}} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ exclude=\{\})
+{\footnotesize template$<$typename TSeq $>$ }\\std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{namespaceepiworld_1_1sampler_af58114de37befaa5de5450e3d4414b22}{make\+\_\+update\+\_\+susceptible}} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ exclude=\{\})
 \begin{DoxyCompactList}\small\item\em Make a function to sample from neighbors. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename TSeq  = int$>$ }\\std\+::function$<$ \mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$(\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{namespaceepiworld_1_1sampler_a058e471163798e71719e9580b016692f}{make\+\_\+sample\+\_\+virus\+\_\+neighbors}} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ exclude=\{\})
 \begin{DoxyCompactList}\small\item\em Make a function to sample from neighbors. \end{DoxyCompactList}\item 
@@ -50,7 +50,7 @@ Virus$<$\+TSeq$>$$\ast$ of the selected virus. If none selected (or none availab
 \index{epiworld::sampler@{epiworld::sampler}!make\_update\_susceptible@{make\_update\_susceptible}}
 \index{make\_update\_susceptible@{make\_update\_susceptible}!epiworld::sampler@{epiworld::sampler}}
 \doxysubsubsection{\texorpdfstring{make\_update\_susceptible()}{make\_update\_susceptible()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = int$>$ \\
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
 std\+::function$<$void(\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$TSeq$>$$\ast$,\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$TSeq$>$$\ast$)$>$ epiworld\+::sampler\+::make\+\_\+update\+\_\+susceptible (\begin{DoxyParamCaption}\item[{std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$}]{exclude = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
