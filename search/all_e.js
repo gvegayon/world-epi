@@ -9,6 +9,5 @@ var searchData=
   ['set_5frand_5fengine_76',['set_rand_engine',['../classepiworld_1_1_model.html#a8d87fcc71abe84e341ea56a4e251cb08',1,'epiworld::Model']]],
   ['set_5frewire_5ffun_77',['set_rewire_fun',['../classepiworld_1_1_model.html#ae3c3f9d908aebef89e5ce98823af8cb1',1,'epiworld::Model']]],
   ['set_5fupdate_5fsusceptible_78',['set_update_susceptible',['../classepiworld_1_1_model.html#acd773e1a9dd762b8735886e6f27598bd',1,'epiworld::Model']]],
-  ['set_5fuser_5fdata_79',['set_user_data',['../classepiworld_1_1_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'epiworld::Model::set_user_data()'],['../class_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'Model::set_user_data()'],['../classepiworld_1_1_model.html#a61893953dc4fa046b84a77c89a5bc458',1,'epiworld::Model::set_user_data()']]],
-  ['sirconstatus_80',['SIRCONSTATUS',['../class_s_i_r_c_o_n_s_t_a_t_u_s.html',1,'']]]
+  ['set_5fuser_5fdata_79',['set_user_data',['../classepiworld_1_1_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'epiworld::Model::set_user_data()'],['../class_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'Model::set_user_data()'],['../classepiworld_1_1_model.html#a61893953dc4fa046b84a77c89a5bc458',1,'epiworld::Model::set_user_data()']]]
 ];
