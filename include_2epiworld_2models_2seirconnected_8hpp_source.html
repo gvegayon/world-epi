@@ -213,7 +213,7 @@ $(function() {
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                        <span class="stringliteral">&quot;[epiworld-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        <span class="stringliteral">&quot;virus to share. The agent&#39;s status is: &quot;</span> +</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operatorp[](which)-&gt;get_status())</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operator[](which)-&gt;get_status())</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    );</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">                #endif</span></div>
