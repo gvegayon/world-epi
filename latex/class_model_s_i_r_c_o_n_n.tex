@@ -1,0 +1,85 @@
+\hypertarget{class_model_s_i_r_c_o_n_n}{}\doxysection{Model\+SIRCONN$<$ TSeq $>$ Class Template Reference}
+\label{class_model_s_i_r_c_o_n_n}\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+
+
+Inheritance diagram for Model\+SIRCONN$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_model_s_i_r_c_o_n_n__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+SIRCONN$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_model_s_i_r_c_o_n_n__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a26c4e33700cdff2b3c4e51395d84c21b}{Model\+SIRCONN}} (\mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double prob\+\_\+recovery)
+\begin{DoxyCompactList}\small\item\em Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a02cac8f949aa00c9c3278364ad5e2bd5}\label{class_model_s_i_r_c_o_n_n_a02cac8f949aa00c9c3278364ad5e2bd5}} 
+{\bfseries Model\+SIRCONN} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double prob\+\_\+recovery)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a20086788fb4a7c385b95aa7a637d8d3f}\label{class_model_s_i_r_c_o_n_n_a20086788fb4a7c385b95aa7a637d8d3f}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries tracked\+\_\+agents\+\_\+infected} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_ac9b8b86d1cebb262c7189ff4f34d1bf2}\label{class_model_s_i_r_c_o_n_n_ac9b8b86d1cebb262c7189ff4f34d1bf2}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries tracked\+\_\+agents\+\_\+infected\+\_\+next} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a9d555d4a4081f92f32156f57c6f51a5c}\label{class_model_s_i_r_c_o_n_n_a9d555d4a4081f92f32156f57c6f51a5c}} 
+bool {\bfseries tracked\+\_\+started} = false
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_aac030bab8f500a8dd0bd0d237f79e6df}\label{class_model_s_i_r_c_o_n_n_aac030bab8f500a8dd0bd0d237f79e6df}} 
+int {\bfseries tracked\+\_\+ninfected} = 0
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_ac8e1cce9b8cd810d41efb3add9a6c750}\label{class_model_s_i_r_c_o_n_n_ac8e1cce9b8cd810d41efb3add9a6c750}} 
+int {\bfseries tracked\+\_\+ninfected\+\_\+next} = 0
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a1dc85015357fe8c95c51a328a389086b}\label{class_model_s_i_r_c_o_n_n_a1dc85015357fe8c95c51a328a389086b}} 
+epiworld\+\_\+double {\bfseries tracked\+\_\+current\+\_\+infect\+\_\+prob} = 0.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a26c4e33700cdff2b3c4e51395d84c21b}\label{class_model_s_i_r_c_o_n_n_a26c4e33700cdff2b3c4e51395d84c21b}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!ModelSIRCONN@{ModelSIRCONN}}
+\index{ModelSIRCONN@{ModelSIRCONN}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{ModelSIRCONN()}{ModelSIRCONN()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{reproductive\+\_\+number,  }\item[{epiworld\+\_\+double}]{prob\+\_\+transmission,  }\item[{epiworld\+\_\+double}]{prob\+\_\+recovery }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & A \mbox{\hyperlink{classepiworld_1_1_model}{Model$<$\+TSeq$>$}} object where to set up the SIR. \\
+\hline
+{\em vname} & std\+::string Name of the virus \\
+\hline
+{\em prevalence} & Initial prevalence (proportion) \\
+\hline
+{\em reproductive\+\_\+number} & Reproductive number (beta) \\
+\hline
+{\em prob\+\_\+transmission} & Probability of transmission \\
+\hline
+{\em prob\+\_\+recovery} & Probability of recovery \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/epiworld/models/sirconnected.\+hpp\end{DoxyCompactItemize}

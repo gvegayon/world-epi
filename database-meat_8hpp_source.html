@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Only store every now and then</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> ((model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>() % sampling_freq) == 0)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> ((model-&gt;today() % sampling_freq) == 0)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// Recording variant&#39;s history</span></div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                hist_variant_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                hist_variant_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                hist_variant_id.push_back(p.second);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                hist_variant_status.push_back(s);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                hist_variant_counts.push_back(today_variant[p.second][s]);</div>
@@ -151,7 +151,7 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                hist_tool_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                hist_tool_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                hist_tool_id.push_back(p.second);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                hist_tool_status.push_back(s);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                hist_tool_counts.push_back(today_tool[p.second][s]);</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// Recording the overall history</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            hist_total_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            hist_total_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            hist_total_nvariants_active.push_back(today_total_nvariants_active);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            hist_total_status.push_back(s);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            hist_total_counts.push_back(today_total[s]);</div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        variant_id[hash] = new_id;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        variant_name.push_back(v.get_name());</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        variant_sequence.push_back(*v.get_sequence());</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        variant_origin_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        variant_origin_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        variant_parent_id.push_back(old_id);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        </div>
@@ -225,7 +225,7 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;       </div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="comment">// Updating the variant</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        v.set_id(new_id);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        v.set_date(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        v.set_date(model-&gt;today());</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        today_total_nvariants_active++;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
@@ -268,14 +268,14 @@ $(function() {
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        tool_id[hash] = new_id;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        tool_name.push_back(t.get_name());</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        tool_sequence.push_back(*t.get_sequence());</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        tool_origin_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        tool_origin_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                </div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        today_tool.push_back({});</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        today_tool[new_id].resize(model-&gt;nstatus, 0);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// Updating the tool</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        t.set_id(new_id);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        t.set_date(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        t.set_date(model-&gt;today());</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
@@ -611,7 +611,7 @@ $(function() {
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160; </div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordtype">int</span> ns = model-&gt;nstatus;</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>(); ++i)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= model-&gt;today(); ++i)</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        {</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> from = 0u; from &lt; ns; ++from)</div>
@@ -639,7 +639,7 @@ $(function() {
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordtype">int</span> i_expo_date</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;) {</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160; </div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    transmission_date.push_back(model-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    transmission_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    transmission_source.push_back(i);</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    transmission_target.push_back(j);</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    transmission_variant.push_back(variant);</div>
@@ -893,7 +893,6 @@ $(function() {
 <div class="ttc" id="aclass_data_base_html_a5d43d9fba8e46bee17f529e0ebce670e"><div class="ttname"><a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase::reproductive_number</a></div><div class="ttdeci">MapVec_type&lt; int, int &gt; reproductive_number() const</div><div class="ttdoc">Computes the reproductive number of each case.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:679</div></div>
 <div class="ttc" id="aclass_data_base_html_a833cf232df236cf097ccbaf537ff32ab"><div class="ttname"><a href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase::record_variant</a></div><div class="ttdeci">void record_variant(Virus&lt; TSeq &gt; &amp;v)</div><div class="ttdoc">Registering a new variant.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:136</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
-<div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>

@@ -278,9 +278,9 @@ $(function() {
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    model.add_virus(virus, prevalence);</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">// Adding updating function</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    model.<a class="code" href="class_model.html#adc3b2119335ffa4b0128123be919f454">add_global_action</a>(SEIRCONN::global_accounting, -1);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    model.add_global_action(SEIRCONN::global_accounting, -1);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    model.<a class="code" href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">queuing_off</a>(); <span class="comment">// No queuing need</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
@@ -314,8 +314,6 @@ $(function() {
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_model_html_a70f0e1d4c74e1cfc887aca35984c52b6"><div class="ttname"><a href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model::queuing_off</a></div><div class="ttdeci">void queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div></div>
-<div class="ttc" id="aclass_model_html_adc3b2119335ffa4b0128123be919f454"><div class="ttname"><a href="class_model.html#adc3b2119335ffa4b0128123be919f454">Model::add_global_action</a></div><div class="ttdeci">void add_global_action(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, int date=-99)</div><div class="ttdoc">Set a global action.</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model&lt; TSeq &gt;</a></div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="classepiworld_1_1_model.html#aa3ce8d5f025e239f8090ab9645f3e917">epiworld::Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6262</div></div>
 <div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5113</div></div>
