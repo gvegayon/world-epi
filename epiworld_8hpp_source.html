@@ -11125,268 +11125,319 @@ $(function() {
 <div class="line"><a name="l12206"></a><span class="lineno">12206</span>&#160;<span class="comment">#ifndef EPIWORLD_MODELS_SEIRCONNECTED_HPP</span></div>
 <div class="line"><a name="l12207"></a><span class="lineno">12207</span>&#160;<span class="comment">#define EPIWORLD_MODELS_SEIRCONNECTED_HPP</span></div>
 <div class="line"><a name="l12208"></a><span class="lineno">12208</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12209"></a><span class="lineno">12209</span>&#160;<span class="comment">namespace SEIRCONN {</span></div>
-<div class="line"><a name="l12210"></a><span class="lineno">12210</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12211"></a><span class="lineno">12211</span>&#160;<span class="comment">    static const int SUSCEPTIBLE = 0;</span></div>
-<div class="line"><a name="l12212"></a><span class="lineno">12212</span>&#160;<span class="comment">    static const int EXPOSED     = 1;</span></div>
-<div class="line"><a name="l12213"></a><span class="lineno">12213</span>&#160;<span class="comment">    static const int INFECTED    = 2;</span></div>
-<div class="line"><a name="l12214"></a><span class="lineno">12214</span>&#160;<span class="comment">    static const int RECOVERE    = 3;</span></div>
-<div class="line"><a name="l12215"></a><span class="lineno">12215</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12216"></a><span class="lineno">12216</span>&#160;<span class="comment">    // Tracking who is infected and who is not</span></div>
-<div class="line"><a name="l12217"></a><span class="lineno">12217</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;&gt;* &gt; tracked_agents_infected(0u);</span></div>
-<div class="line"><a name="l12218"></a><span class="lineno">12218</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;&gt;* &gt; tracked_agents_infected_next(0u);</span></div>
+<div class="line"><a name="l12209"></a><span class="lineno">12209</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
+<div class="line"><a name="l12210"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">12210</a></span>&#160;<span class="comment">class ModelSEIRCONN : public epiworld::Model&lt;TSeq&gt; </span></div>
+<div class="line"><a name="l12211"></a><span class="lineno">12211</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l12212"></a><span class="lineno">12212</span>&#160;<span class="comment">private:</span></div>
+<div class="line"><a name="l12213"></a><span class="lineno">12213</span>&#160;<span class="comment">    static const int SUSCEPTIBLE = 0;</span></div>
+<div class="line"><a name="l12214"></a><span class="lineno">12214</span>&#160;<span class="comment">    static const int EXPOSED     = 1;</span></div>
+<div class="line"><a name="l12215"></a><span class="lineno">12215</span>&#160;<span class="comment">    static const int INFECTED    = 2;</span></div>
+<div class="line"><a name="l12216"></a><span class="lineno">12216</span>&#160;<span class="comment">    static const int RECOVERE    = 3;</span></div>
+<div class="line"><a name="l12217"></a><span class="lineno">12217</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12218"></a><span class="lineno">12218</span>&#160;<span class="comment">public:</span></div>
 <div class="line"><a name="l12219"></a><span class="lineno">12219</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12220"></a><span class="lineno">12220</span>&#160;<span class="comment">    bool tracked_started = false;</span></div>
-<div class="line"><a name="l12221"></a><span class="lineno">12221</span>&#160;<span class="comment">    int tracked_ninfected = 0;</span></div>
-<div class="line"><a name="l12222"></a><span class="lineno">12222</span>&#160;<span class="comment">    int tracked_ninfected_next = 0;</span></div>
-<div class="line"><a name="l12223"></a><span class="lineno">12223</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12224"></a><span class="lineno">12224</span>&#160;<span class="comment">    template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l12225"></a><span class="lineno">12225</span>&#160;<span class="comment">    inline void tracked_agents_check_init(epiworld::Model&lt;TSeq&gt; * m) </span></div>
-<div class="line"><a name="l12226"></a><span class="lineno">12226</span>&#160;<span class="comment">    {</span></div>
-<div class="line"><a name="l12227"></a><span class="lineno">12227</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12228"></a><span class="lineno">12228</span>&#160;<span class="comment">        if (tracked_started)</span></div>
-<div class="line"><a name="l12229"></a><span class="lineno">12229</span>&#160;<span class="comment">            return;</span></div>
-<div class="line"><a name="l12230"></a><span class="lineno">12230</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12231"></a><span class="lineno">12231</span>&#160;<span class="comment">        /* Checking first if it hasn&#39;t  */</span> </div>
-<div class="line"><a name="l12232"></a><span class="lineno">12232</span>&#160;        <span class="keywordflow">if</span> (!tracked_started) </div>
-<div class="line"><a name="l12233"></a><span class="lineno">12233</span>&#160;        { </div>
-<div class="line"><a name="l12234"></a><span class="lineno">12234</span>&#160;            </div>
-<div class="line"><a name="l12235"></a><span class="lineno">12235</span>&#160;            <span class="comment">/* Listing who is infected */</span> </div>
-<div class="line"><a name="l12236"></a><span class="lineno">12236</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : *(m-&gt;get_agents()))</div>
-<div class="line"><a name="l12237"></a><span class="lineno">12237</span>&#160;            {</div>
-<div class="line"><a name="l12238"></a><span class="lineno">12238</span>&#160;                <span class="keywordflow">if</span> (p.get_status() == SEIRCONN::INFECTED)</div>
-<div class="line"><a name="l12239"></a><span class="lineno">12239</span>&#160;                {</div>
-<div class="line"><a name="l12240"></a><span class="lineno">12240</span>&#160;                </div>
-<div class="line"><a name="l12241"></a><span class="lineno">12241</span>&#160;                    tracked_agents_infected.push_back(&amp;p);</div>
-<div class="line"><a name="l12242"></a><span class="lineno">12242</span>&#160;                    tracked_ninfected++;</div>
-<div class="line"><a name="l12243"></a><span class="lineno">12243</span>&#160;                </div>
-<div class="line"><a name="l12244"></a><span class="lineno">12244</span>&#160;                }</div>
-<div class="line"><a name="l12245"></a><span class="lineno">12245</span>&#160;            }</div>
-<div class="line"><a name="l12246"></a><span class="lineno">12246</span>&#160; </div>
-<div class="line"><a name="l12247"></a><span class="lineno">12247</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p: tracked_agents_infected)</div>
-<div class="line"><a name="l12248"></a><span class="lineno">12248</span>&#160;            {</div>
-<div class="line"><a name="l12249"></a><span class="lineno">12249</span>&#160;                <span class="keywordflow">if</span> (p-&gt;get_n_viruses() == 0)</div>
-<div class="line"><a name="l12250"></a><span class="lineno">12250</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Cannot be infected and have no viruses.&quot;</span>);</div>
-<div class="line"><a name="l12251"></a><span class="lineno">12251</span>&#160;            }</div>
-<div class="line"><a name="l12252"></a><span class="lineno">12252</span>&#160;            </div>
-<div class="line"><a name="l12253"></a><span class="lineno">12253</span>&#160;            tracked_started = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l12254"></a><span class="lineno">12254</span>&#160;            </div>
-<div class="line"><a name="l12255"></a><span class="lineno">12255</span>&#160;        }</div>
-<div class="line"><a name="l12256"></a><span class="lineno">12256</span>&#160; </div>
-<div class="line"><a name="l12257"></a><span class="lineno">12257</span>&#160;    }</div>
-<div class="line"><a name="l12258"></a><span class="lineno">12258</span>&#160; </div>
-<div class="line"><a name="l12259"></a><span class="lineno">12259</span>&#160;    EPI_NEW_UPDATEFUN(update_susceptible, <span class="keywordtype">int</span>)</div>
-<div class="line"><a name="l12260"></a><span class="lineno">12260</span>&#160;    {</div>
-<div class="line"><a name="l12261"></a><span class="lineno">12261</span>&#160; </div>
-<div class="line"><a name="l12262"></a><span class="lineno">12262</span>&#160;        tracked_agents_check_init(m);</div>
-<div class="line"><a name="l12263"></a><span class="lineno">12263</span>&#160; </div>
-<div class="line"><a name="l12264"></a><span class="lineno">12264</span>&#160;        <span class="comment">// No infected individual?</span></div>
-<div class="line"><a name="l12265"></a><span class="lineno">12265</span>&#160;        <span class="keywordflow">if</span> (tracked_ninfected == 0)</div>
-<div class="line"><a name="l12266"></a><span class="lineno">12266</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12267"></a><span class="lineno">12267</span>&#160; </div>
-<div class="line"><a name="l12268"></a><span class="lineno">12268</span>&#160;        <span class="comment">// Computing probability of contagion</span></div>
-<div class="line"><a name="l12269"></a><span class="lineno">12269</span>&#160;        <span class="comment">// P(infected) = 1 - (1 - beta/Pop * ptransmit) ^ ninfected</span></div>
-<div class="line"><a name="l12270"></a><span class="lineno">12270</span>&#160;        epiworld_double prob_infect = 1.0 - std::pow(</div>
-<div class="line"><a name="l12271"></a><span class="lineno">12271</span>&#160;            1.0 - (*m-&gt;p0) * (*m-&gt;p1) / m-&gt;size(),</div>
-<div class="line"><a name="l12272"></a><span class="lineno">12272</span>&#160;            tracked_ninfected</div>
-<div class="line"><a name="l12273"></a><span class="lineno">12273</span>&#160;            );</div>
-<div class="line"><a name="l12274"></a><span class="lineno">12274</span>&#160; </div>
-<div class="line"><a name="l12275"></a><span class="lineno">12275</span>&#160;        <span class="keywordflow">if</span> (m-&gt;runif() &lt; prob_infect)</div>
-<div class="line"><a name="l12276"></a><span class="lineno">12276</span>&#160;        {</div>
-<div class="line"><a name="l12277"></a><span class="lineno">12277</span>&#160; </div>
-<div class="line"><a name="l12278"></a><span class="lineno">12278</span>&#160;            <span class="comment">// Now selecting who is transmitting the disease</span></div>
-<div class="line"><a name="l12279"></a><span class="lineno">12279</span>&#160;            epiworld_fast_uint which = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l12280"></a><span class="lineno">12280</span>&#160;                std::floor(tracked_ninfected * m-&gt;runif())</div>
-<div class="line"><a name="l12281"></a><span class="lineno">12281</span>&#160;            );</div>
-<div class="line"><a name="l12282"></a><span class="lineno">12282</span>&#160; </div>
-<div class="line"><a name="l12283"></a><span class="lineno">12283</span>&#160;            <span class="comment">// Infecting the individual</span></div>
-<div class="line"><a name="l12284"></a><span class="lineno">12284</span>&#160;<span class="preprocessor">            #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l12285"></a><span class="lineno">12285</span>&#160;            <span class="keywordflow">if</span> (tracked_agents_infected[which]-&gt;get_n_viruses() == 0)</div>
-<div class="line"><a name="l12286"></a><span class="lineno">12286</span>&#160;            {</div>
-<div class="line"><a name="l12287"></a><span class="lineno">12287</span>&#160; </div>
-<div class="line"><a name="l12288"></a><span class="lineno">12288</span>&#160;                printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] date: %i\n&quot;</span>, m-&gt;today());</div>
-<div class="line"><a name="l12289"></a><span class="lineno">12289</span>&#160;                printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] sim#: %i\n&quot;</span>, m-&gt;get_n_replicates());</div>
-<div class="line"><a name="l12290"></a><span class="lineno">12290</span>&#160; </div>
-<div class="line"><a name="l12291"></a><span class="lineno">12291</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l12292"></a><span class="lineno">12292</span>&#160;                    <span class="stringliteral">&quot;[epiworld-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
-<div class="line"><a name="l12293"></a><span class="lineno">12293</span>&#160;                    <span class="stringliteral">&quot;virus to share. The agent&#39;s status is: &quot;</span> +</div>
-<div class="line"><a name="l12294"></a><span class="lineno">12294</span>&#160;                    std::to_string(tracked_agents_infected[which]-&gt;get_status())</div>
-<div class="line"><a name="l12295"></a><span class="lineno">12295</span>&#160;                );</div>
-<div class="line"><a name="l12296"></a><span class="lineno">12296</span>&#160;            }</div>
-<div class="line"><a name="l12297"></a><span class="lineno">12297</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l12298"></a><span class="lineno">12298</span>&#160;            p-&gt;add_virus(</div>
-<div class="line"><a name="l12299"></a><span class="lineno">12299</span>&#160;                tracked_agents_infected[which]-&gt;get_virus(0u),</div>
-<div class="line"><a name="l12300"></a><span class="lineno">12300</span>&#160;                SEIRCONN::EXPOSED</div>
-<div class="line"><a name="l12301"></a><span class="lineno">12301</span>&#160;                ); </div>
-<div class="line"><a name="l12302"></a><span class="lineno">12302</span>&#160; </div>
-<div class="line"><a name="l12303"></a><span class="lineno">12303</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12304"></a><span class="lineno">12304</span>&#160; </div>
-<div class="line"><a name="l12305"></a><span class="lineno">12305</span>&#160;        }</div>
+<div class="line"><a name="l12220"></a><span class="lineno">12220</span>&#160;<span class="comment">    ModelSEIRCONN() {};</span></div>
+<div class="line"><a name="l12221"></a><span class="lineno">12221</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12222"></a><span class="lineno">12222</span>&#160;<span class="comment">    ModelSEIRCONN(</span></div>
+<div class="line"><a name="l12223"></a><span class="lineno">12223</span>&#160;<span class="comment">        ModelSEIRCONN&lt;TSeq&gt; &amp; model,</span></div>
+<div class="line"><a name="l12224"></a><span class="lineno">12224</span>&#160;<span class="comment">        std::string vname,</span></div>
+<div class="line"><a name="l12225"></a><span class="lineno">12225</span>&#160;<span class="comment">        epiworld_double prevalence,</span></div>
+<div class="line"><a name="l12226"></a><span class="lineno">12226</span>&#160;<span class="comment">        epiworld_double reproductive_number,</span></div>
+<div class="line"><a name="l12227"></a><span class="lineno">12227</span>&#160;<span class="comment">        epiworld_double prob_transmission,</span></div>
+<div class="line"><a name="l12228"></a><span class="lineno">12228</span>&#160;<span class="comment">        epiworld_double incubation_days,</span></div>
+<div class="line"><a name="l12229"></a><span class="lineno">12229</span>&#160;<span class="comment">        epiworld_double prob_recovery</span></div>
+<div class="line"><a name="l12230"></a><span class="lineno">12230</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l12231"></a><span class="lineno">12231</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l12232"></a><span class="lineno">12232</span>&#160;<span class="comment">    ModelSEIRCONN(</span></div>
+<div class="line"><a name="l12233"></a><span class="lineno">12233</span>&#160;<span class="comment">        std::string vname,</span></div>
+<div class="line"><a name="l12234"></a><span class="lineno">12234</span>&#160;<span class="comment">        epiworld_double prevalence,</span></div>
+<div class="line"><a name="l12235"></a><span class="lineno">12235</span>&#160;<span class="comment">        epiworld_double reproductive_number,</span></div>
+<div class="line"><a name="l12236"></a><span class="lineno">12236</span>&#160;<span class="comment">        epiworld_double prob_transmission,</span></div>
+<div class="line"><a name="l12237"></a><span class="lineno">12237</span>&#160;<span class="comment">        epiworld_double incubation_days,</span></div>
+<div class="line"><a name="l12238"></a><span class="lineno">12238</span>&#160;<span class="comment">        epiworld_double prob_recovery</span></div>
+<div class="line"><a name="l12239"></a><span class="lineno">12239</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l12240"></a><span class="lineno">12240</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12241"></a><span class="lineno">12241</span>&#160;<span class="comment">    // Tracking who is infected and who is not</span></div>
+<div class="line"><a name="l12242"></a><span class="lineno">12242</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;&gt;* &gt; tracked_agents_infected = {};</span></div>
+<div class="line"><a name="l12243"></a><span class="lineno">12243</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;&gt;* &gt; tracked_agents_infected_next = {};</span></div>
+<div class="line"><a name="l12244"></a><span class="lineno">12244</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12245"></a><span class="lineno">12245</span>&#160;<span class="comment">    bool tracked_started = false;</span></div>
+<div class="line"><a name="l12246"></a><span class="lineno">12246</span>&#160;<span class="comment">    int tracked_ninfected = 0;</span></div>
+<div class="line"><a name="l12247"></a><span class="lineno">12247</span>&#160;<span class="comment">    int tracked_ninfected_next = 0;</span></div>
+<div class="line"><a name="l12248"></a><span class="lineno">12248</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12249"></a><span class="lineno">12249</span>&#160;<span class="comment">};</span></div>
+<div class="line"><a name="l12250"></a><span class="lineno">12250</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12261"></a><span class="lineno">12261</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l12262"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a214612494be51de27a9ff4628fec1f0a">12262</a></span>&#160;<span class="comment">inline ModelSEIRCONN&lt;TSeq&gt;::ModelSEIRCONN(</span></div>
+<div class="line"><a name="l12263"></a><span class="lineno">12263</span>&#160;<span class="comment">    ModelSEIRCONN&lt;TSeq&gt; &amp; model,</span></div>
+<div class="line"><a name="l12264"></a><span class="lineno">12264</span>&#160;<span class="comment">    std::string vname,</span></div>
+<div class="line"><a name="l12265"></a><span class="lineno">12265</span>&#160;<span class="comment">    epiworld_double prevalence,</span></div>
+<div class="line"><a name="l12266"></a><span class="lineno">12266</span>&#160;<span class="comment">    epiworld_double reproductive_number,</span></div>
+<div class="line"><a name="l12267"></a><span class="lineno">12267</span>&#160;<span class="comment">    epiworld_double prob_transmission,</span></div>
+<div class="line"><a name="l12268"></a><span class="lineno">12268</span>&#160;<span class="comment">    epiworld_double incubation_days,</span></div>
+<div class="line"><a name="l12269"></a><span class="lineno">12269</span>&#160;<span class="comment">    epiworld_double prob_recovery</span></div>
+<div class="line"><a name="l12270"></a><span class="lineno">12270</span>&#160;<span class="comment">    // epiworld_double prob_reinfection</span></div>
+<div class="line"><a name="l12271"></a><span class="lineno">12271</span>&#160;<span class="comment">    )</span></div>
+<div class="line"><a name="l12272"></a><span class="lineno">12272</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l12273"></a><span class="lineno">12273</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12274"></a><span class="lineno">12274</span>&#160;<span class="comment">    auto * _tracked_agents_infected = &amp;model.tracked_agents_infected;</span></div>
+<div class="line"><a name="l12275"></a><span class="lineno">12275</span>&#160;<span class="comment">    auto * _tracked_agents_infected_next = &amp;model.tracked_agents_infected_next;</span></div>
+<div class="line"><a name="l12276"></a><span class="lineno">12276</span>&#160;<span class="comment">    auto * _tracked_started = &amp;model.tracked_started;</span></div>
+<div class="line"><a name="l12277"></a><span class="lineno">12277</span>&#160;<span class="comment">    auto * _tracked_ninfected = &amp;model.tracked_ninfected;</span></div>
+<div class="line"><a name="l12278"></a><span class="lineno">12278</span>&#160;<span class="comment">    auto * _tracked_ninfected_next = &amp;model.tracked_ninfected_next;</span></div>
+<div class="line"><a name="l12279"></a><span class="lineno">12279</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12280"></a><span class="lineno">12280</span>&#160;<span class="comment">    std::function&lt;void(epiworld::Model&lt;TSeq&gt; *)&gt; tracked_agents_check_init = </span></div>
+<div class="line"><a name="l12281"></a><span class="lineno">12281</span>&#160;<span class="comment">    [</span></div>
+<div class="line"><a name="l12282"></a><span class="lineno">12282</span>&#160;<span class="comment">        _tracked_started,</span></div>
+<div class="line"><a name="l12283"></a><span class="lineno">12283</span>&#160;<span class="comment">        _tracked_agents_infected,</span></div>
+<div class="line"><a name="l12284"></a><span class="lineno">12284</span>&#160;<span class="comment">        _tracked_ninfected</span></div>
+<div class="line"><a name="l12285"></a><span class="lineno">12285</span>&#160;<span class="comment">    ](epiworld::Model&lt;TSeq&gt; * m) </span></div>
+<div class="line"><a name="l12286"></a><span class="lineno">12286</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l12287"></a><span class="lineno">12287</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12288"></a><span class="lineno">12288</span>&#160;<span class="comment">            if (*_tracked_started)</span></div>
+<div class="line"><a name="l12289"></a><span class="lineno">12289</span>&#160;<span class="comment">                return;</span></div>
+<div class="line"><a name="l12290"></a><span class="lineno">12290</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12291"></a><span class="lineno">12291</span>&#160;<span class="comment">            /* Checking first if it hasn&#39;t  */</span> </div>
+<div class="line"><a name="l12292"></a><span class="lineno">12292</span>&#160;            <span class="keywordflow">if</span> (!*_tracked_started) </div>
+<div class="line"><a name="l12293"></a><span class="lineno">12293</span>&#160;            { </div>
+<div class="line"><a name="l12294"></a><span class="lineno">12294</span>&#160;                </div>
+<div class="line"><a name="l12295"></a><span class="lineno">12295</span>&#160;                <span class="comment">/* Listing who is infected */</span> </div>
+<div class="line"><a name="l12296"></a><span class="lineno">12296</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : *(m-&gt;get_agents()))</div>
+<div class="line"><a name="l12297"></a><span class="lineno">12297</span>&#160;                {</div>
+<div class="line"><a name="l12298"></a><span class="lineno">12298</span>&#160;                    <span class="keywordflow">if</span> (p.get_status() == <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
+<div class="line"><a name="l12299"></a><span class="lineno">12299</span>&#160;                    {</div>
+<div class="line"><a name="l12300"></a><span class="lineno">12300</span>&#160;                    </div>
+<div class="line"><a name="l12301"></a><span class="lineno">12301</span>&#160;                        _tracked_agents_infected-&gt;push_back(&amp;p);</div>
+<div class="line"><a name="l12302"></a><span class="lineno">12302</span>&#160;                        *_tracked_ninfected += 1;</div>
+<div class="line"><a name="l12303"></a><span class="lineno">12303</span>&#160;                    </div>
+<div class="line"><a name="l12304"></a><span class="lineno">12304</span>&#160;                    }</div>
+<div class="line"><a name="l12305"></a><span class="lineno">12305</span>&#160;                }</div>
 <div class="line"><a name="l12306"></a><span class="lineno">12306</span>&#160; </div>
-<div class="line"><a name="l12307"></a><span class="lineno">12307</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12308"></a><span class="lineno">12308</span>&#160; </div>
-<div class="line"><a name="l12309"></a><span class="lineno">12309</span>&#160;    }</div>
-<div class="line"><a name="l12310"></a><span class="lineno">12310</span>&#160; </div>
-<div class="line"><a name="l12311"></a><span class="lineno">12311</span>&#160;    EPI_NEW_UPDATEFUN(update_infected, <span class="keywordtype">int</span>)</div>
-<div class="line"><a name="l12312"></a><span class="lineno">12312</span>&#160;    {</div>
-<div class="line"><a name="l12313"></a><span class="lineno">12313</span>&#160; </div>
-<div class="line"><a name="l12314"></a><span class="lineno">12314</span>&#160;        tracked_agents_check_init(m);</div>
-<div class="line"><a name="l12315"></a><span class="lineno">12315</span>&#160;        <span class="keyword">auto</span> status = p-&gt;get_status();</div>
+<div class="line"><a name="l12307"></a><span class="lineno">12307</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p: *_tracked_agents_infected)</div>
+<div class="line"><a name="l12308"></a><span class="lineno">12308</span>&#160;                {</div>
+<div class="line"><a name="l12309"></a><span class="lineno">12309</span>&#160;                    <span class="keywordflow">if</span> (p-&gt;get_n_viruses() == 0)</div>
+<div class="line"><a name="l12310"></a><span class="lineno">12310</span>&#160;                        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Cannot be infected and have no viruses.&quot;</span>);</div>
+<div class="line"><a name="l12311"></a><span class="lineno">12311</span>&#160;                }</div>
+<div class="line"><a name="l12312"></a><span class="lineno">12312</span>&#160;                </div>
+<div class="line"><a name="l12313"></a><span class="lineno">12313</span>&#160;                *_tracked_started = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l12314"></a><span class="lineno">12314</span>&#160;                </div>
+<div class="line"><a name="l12315"></a><span class="lineno">12315</span>&#160;            }</div>
 <div class="line"><a name="l12316"></a><span class="lineno">12316</span>&#160; </div>
-<div class="line"><a name="l12317"></a><span class="lineno">12317</span>&#160;        <span class="keywordflow">if</span> (status == SEIRCONN::EXPOSED)</div>
-<div class="line"><a name="l12318"></a><span class="lineno">12318</span>&#160;        {</div>
-<div class="line"><a name="l12319"></a><span class="lineno">12319</span>&#160; </div>
-<div class="line"><a name="l12320"></a><span class="lineno">12320</span>&#160;            <span class="comment">// Does the agent become infected?</span></div>
-<div class="line"><a name="l12321"></a><span class="lineno">12321</span>&#160;            <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(*m-&gt;p3))</div>
-<div class="line"><a name="l12322"></a><span class="lineno">12322</span>&#160;            {</div>
-<div class="line"><a name="l12323"></a><span class="lineno">12323</span>&#160;                <span class="comment">// Adding the individual to the queue</span></div>
-<div class="line"><a name="l12324"></a><span class="lineno">12324</span>&#160;                tracked_agents_infected_next.push_back(p);</div>
-<div class="line"><a name="l12325"></a><span class="lineno">12325</span>&#160;                tracked_ninfected_next++;</div>
+<div class="line"><a name="l12317"></a><span class="lineno">12317</span>&#160;        };</div>
+<div class="line"><a name="l12318"></a><span class="lineno">12318</span>&#160; </div>
+<div class="line"><a name="l12319"></a><span class="lineno">12319</span>&#160;    epiworld::UpdateFun&lt;TSeq&gt; update_susceptible = </div>
+<div class="line"><a name="l12320"></a><span class="lineno">12320</span>&#160;    [</div>
+<div class="line"><a name="l12321"></a><span class="lineno">12321</span>&#160;        tracked_agents_check_init,</div>
+<div class="line"><a name="l12322"></a><span class="lineno">12322</span>&#160;        _tracked_ninfected,</div>
+<div class="line"><a name="l12323"></a><span class="lineno">12323</span>&#160;        _tracked_agents_infected</div>
+<div class="line"><a name="l12324"></a><span class="lineno">12324</span>&#160;    ](<a class="code" href="classepiworld_1_1_agent.html">epiworld::Agent&lt;TSeq&gt;</a> * p, <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l12325"></a><span class="lineno">12325</span>&#160;        {</div>
 <div class="line"><a name="l12326"></a><span class="lineno">12326</span>&#160; </div>
-<div class="line"><a name="l12327"></a><span class="lineno">12327</span>&#160;                p-&gt;change_status(SEIRCONN::INFECTED);</div>
+<div class="line"><a name="l12327"></a><span class="lineno">12327</span>&#160;            tracked_agents_check_init(m);</div>
 <div class="line"><a name="l12328"></a><span class="lineno">12328</span>&#160; </div>
-<div class="line"><a name="l12329"></a><span class="lineno">12329</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12330"></a><span class="lineno">12330</span>&#160; </div>
-<div class="line"><a name="l12331"></a><span class="lineno">12331</span>&#160;            }</div>
+<div class="line"><a name="l12329"></a><span class="lineno">12329</span>&#160;            <span class="comment">// No infected individual?</span></div>
+<div class="line"><a name="l12330"></a><span class="lineno">12330</span>&#160;            <span class="keywordflow">if</span> (*_tracked_ninfected == 0)</div>
+<div class="line"><a name="l12331"></a><span class="lineno">12331</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l12332"></a><span class="lineno">12332</span>&#160; </div>
-<div class="line"><a name="l12333"></a><span class="lineno">12333</span>&#160; </div>
-<div class="line"><a name="l12334"></a><span class="lineno">12334</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (status == SEIRCONN::INFECTED)</div>
-<div class="line"><a name="l12335"></a><span class="lineno">12335</span>&#160;        {</div>
-<div class="line"><a name="l12336"></a><span class="lineno">12336</span>&#160; </div>
-<div class="line"><a name="l12337"></a><span class="lineno">12337</span>&#160;            <span class="keywordflow">if</span> (m-&gt;runif() &lt; (*m-&gt;p2))</div>
-<div class="line"><a name="l12338"></a><span class="lineno">12338</span>&#160;            {</div>
+<div class="line"><a name="l12333"></a><span class="lineno">12333</span>&#160;            <span class="comment">// Computing probability of contagion</span></div>
+<div class="line"><a name="l12334"></a><span class="lineno">12334</span>&#160;            <span class="comment">// P(infected) = 1 - (1 - beta/Pop * ptransmit) ^ ninfected</span></div>
+<div class="line"><a name="l12335"></a><span class="lineno">12335</span>&#160;            epiworld_double prob_infect = 1.0 - std::pow(</div>
+<div class="line"><a name="l12336"></a><span class="lineno">12336</span>&#160;                1.0 - (*m-&gt;p0) * (*m-&gt;p1) / m-&gt;size(),</div>
+<div class="line"><a name="l12337"></a><span class="lineno">12337</span>&#160;                *_tracked_ninfected</div>
+<div class="line"><a name="l12338"></a><span class="lineno">12338</span>&#160;                );</div>
 <div class="line"><a name="l12339"></a><span class="lineno">12339</span>&#160; </div>
-<div class="line"><a name="l12340"></a><span class="lineno">12340</span>&#160;                tracked_ninfected_next--;</div>
-<div class="line"><a name="l12341"></a><span class="lineno">12341</span>&#160;                p-&gt;rm_virus(0);</div>
-<div class="line"><a name="l12342"></a><span class="lineno">12342</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12343"></a><span class="lineno">12343</span>&#160; </div>
-<div class="line"><a name="l12344"></a><span class="lineno">12344</span>&#160;            }</div>
-<div class="line"><a name="l12345"></a><span class="lineno">12345</span>&#160; </div>
-<div class="line"><a name="l12346"></a><span class="lineno">12346</span>&#160;            tracked_agents_infected_next.push_back(p);</div>
+<div class="line"><a name="l12340"></a><span class="lineno">12340</span>&#160;            <span class="keywordflow">if</span> (m-&gt;runif() &lt; prob_infect)</div>
+<div class="line"><a name="l12341"></a><span class="lineno">12341</span>&#160;            {</div>
+<div class="line"><a name="l12342"></a><span class="lineno">12342</span>&#160; </div>
+<div class="line"><a name="l12343"></a><span class="lineno">12343</span>&#160;                <span class="comment">// Now selecting who is transmitting the disease</span></div>
+<div class="line"><a name="l12344"></a><span class="lineno">12344</span>&#160;                epiworld_fast_uint which = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l12345"></a><span class="lineno">12345</span>&#160;                    std::floor(*_tracked_ninfected * m-&gt;runif())</div>
+<div class="line"><a name="l12346"></a><span class="lineno">12346</span>&#160;                );</div>
 <div class="line"><a name="l12347"></a><span class="lineno">12347</span>&#160; </div>
-<div class="line"><a name="l12348"></a><span class="lineno">12348</span>&#160;        } </div>
-<div class="line"><a name="l12349"></a><span class="lineno">12349</span>&#160; </div>
-<div class="line"><a name="l12350"></a><span class="lineno">12350</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12351"></a><span class="lineno">12351</span>&#160; </div>
-<div class="line"><a name="l12352"></a><span class="lineno">12352</span>&#160;    }</div>
-<div class="line"><a name="l12353"></a><span class="lineno">12353</span>&#160; </div>
-<div class="line"><a name="l12354"></a><span class="lineno">12354</span>&#160;    EPI_NEW_GLOBALFUN(global_accounting, <span class="keywordtype">int</span>)</div>
-<div class="line"><a name="l12355"></a><span class="lineno">12355</span>&#160;    {</div>
-<div class="line"><a name="l12356"></a><span class="lineno">12356</span>&#160; </div>
-<div class="line"><a name="l12357"></a><span class="lineno">12357</span>&#160;        <span class="comment">// On the last day, also reset tracked agents and</span></div>
-<div class="line"><a name="l12358"></a><span class="lineno">12358</span>&#160;        <span class="comment">// set the initialized value to false</span></div>
-<div class="line"><a name="l12359"></a><span class="lineno">12359</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;today()) == (m-&gt;get_ndays() - 1))</div>
-<div class="line"><a name="l12360"></a><span class="lineno">12360</span>&#160;        {</div>
-<div class="line"><a name="l12361"></a><span class="lineno">12361</span>&#160; </div>
-<div class="line"><a name="l12362"></a><span class="lineno">12362</span>&#160;            tracked_started = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l12363"></a><span class="lineno">12363</span>&#160;            tracked_agents_infected.clear();</div>
-<div class="line"><a name="l12364"></a><span class="lineno">12364</span>&#160;            tracked_agents_infected_next.clear();</div>
-<div class="line"><a name="l12365"></a><span class="lineno">12365</span>&#160;            tracked_ninfected = 0;</div>
-<div class="line"><a name="l12366"></a><span class="lineno">12366</span>&#160;            tracked_ninfected_next = 0;    </div>
+<div class="line"><a name="l12348"></a><span class="lineno">12348</span>&#160;                <span class="comment">// Infecting the individual</span></div>
+<div class="line"><a name="l12349"></a><span class="lineno">12349</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l12350"></a><span class="lineno">12350</span>&#160;                <span class="keywordflow">if</span> (_tracked_agents_infected-&gt;operator[](which)-&gt;get_n_viruses() == 0)</div>
+<div class="line"><a name="l12351"></a><span class="lineno">12351</span>&#160;                {</div>
+<div class="line"><a name="l12352"></a><span class="lineno">12352</span>&#160; </div>
+<div class="line"><a name="l12353"></a><span class="lineno">12353</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] date: %i\n&quot;</span>, m-&gt;today());</div>
+<div class="line"><a name="l12354"></a><span class="lineno">12354</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] sim#: %i\n&quot;</span>, m-&gt;get_n_replicates());</div>
+<div class="line"><a name="l12355"></a><span class="lineno">12355</span>&#160; </div>
+<div class="line"><a name="l12356"></a><span class="lineno">12356</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
+<div class="line"><a name="l12357"></a><span class="lineno">12357</span>&#160;                        <span class="stringliteral">&quot;[epiworld-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
+<div class="line"><a name="l12358"></a><span class="lineno">12358</span>&#160;                        <span class="stringliteral">&quot;virus to share. The agent&#39;s status is: &quot;</span> +</div>
+<div class="line"><a name="l12359"></a><span class="lineno">12359</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operatorp[](which)-&gt;get_status())</div>
+<div class="line"><a name="l12360"></a><span class="lineno">12360</span>&#160;                    );</div>
+<div class="line"><a name="l12361"></a><span class="lineno">12361</span>&#160;                }</div>
+<div class="line"><a name="l12362"></a><span class="lineno">12362</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l12363"></a><span class="lineno">12363</span>&#160;                p-&gt;add_virus(</div>
+<div class="line"><a name="l12364"></a><span class="lineno">12364</span>&#160;                    _tracked_agents_infected-&gt;operator[](which)-&gt;get_virus(0u),</div>
+<div class="line"><a name="l12365"></a><span class="lineno">12365</span>&#160;                    <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::EXPOSED</a></div>
+<div class="line"><a name="l12366"></a><span class="lineno">12366</span>&#160;                    ); </div>
 <div class="line"><a name="l12367"></a><span class="lineno">12367</span>&#160; </div>
-<div class="line"><a name="l12368"></a><span class="lineno">12368</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12369"></a><span class="lineno">12369</span>&#160;        }</div>
-<div class="line"><a name="l12370"></a><span class="lineno">12370</span>&#160; </div>
-<div class="line"><a name="l12371"></a><span class="lineno">12371</span>&#160;        std::swap(tracked_agents_infected, tracked_agents_infected_next);</div>
-<div class="line"><a name="l12372"></a><span class="lineno">12372</span>&#160;        tracked_agents_infected_next.clear();</div>
+<div class="line"><a name="l12368"></a><span class="lineno">12368</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12369"></a><span class="lineno">12369</span>&#160; </div>
+<div class="line"><a name="l12370"></a><span class="lineno">12370</span>&#160;            }</div>
+<div class="line"><a name="l12371"></a><span class="lineno">12371</span>&#160; </div>
+<div class="line"><a name="l12372"></a><span class="lineno">12372</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l12373"></a><span class="lineno">12373</span>&#160; </div>
-<div class="line"><a name="l12374"></a><span class="lineno">12374</span>&#160;        tracked_ninfected += tracked_ninfected_next;</div>
-<div class="line"><a name="l12375"></a><span class="lineno">12375</span>&#160;        tracked_ninfected_next = 0;</div>
-<div class="line"><a name="l12376"></a><span class="lineno">12376</span>&#160; </div>
-<div class="line"><a name="l12377"></a><span class="lineno">12377</span>&#160;    }</div>
-<div class="line"><a name="l12378"></a><span class="lineno">12378</span>&#160; </div>
-<div class="line"><a name="l12379"></a><span class="lineno">12379</span>&#160;}</div>
-<div class="line"><a name="l12380"></a><span class="lineno">12380</span>&#160; </div>
+<div class="line"><a name="l12374"></a><span class="lineno">12374</span>&#160;        };</div>
+<div class="line"><a name="l12375"></a><span class="lineno">12375</span>&#160; </div>
+<div class="line"><a name="l12376"></a><span class="lineno">12376</span>&#160;    epiworld::UpdateFun&lt;TSeq&gt; update_infected = </div>
+<div class="line"><a name="l12377"></a><span class="lineno">12377</span>&#160;    [</div>
+<div class="line"><a name="l12378"></a><span class="lineno">12378</span>&#160;        tracked_agents_check_init,</div>
+<div class="line"><a name="l12379"></a><span class="lineno">12379</span>&#160;        _tracked_agents_infected_next,</div>
+<div class="line"><a name="l12380"></a><span class="lineno">12380</span>&#160;        _tracked_ninfected_next</div>
 <div class="line"><a name="l12381"></a><span class="lineno">12381</span>&#160; </div>
-<div class="line"><a name="l12392"></a><span class="lineno">12392</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = EPI_DEFAULT_TSEQ&gt;</div>
-<div class="line"><a name="l12393"></a><span class="lineno">12393</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> seir_connected(</div>
-<div class="line"><a name="l12394"></a><span class="lineno">12394</span>&#160;    <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> &amp; model,</div>
-<div class="line"><a name="l12395"></a><span class="lineno">12395</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l12396"></a><span class="lineno">12396</span>&#160;    epiworld_double prevalence,</div>
-<div class="line"><a name="l12397"></a><span class="lineno">12397</span>&#160;    epiworld_double reproductive_number,</div>
-<div class="line"><a name="l12398"></a><span class="lineno">12398</span>&#160;    epiworld_double prob_transmission,</div>
-<div class="line"><a name="l12399"></a><span class="lineno">12399</span>&#160;    epiworld_double incubation_days,</div>
-<div class="line"><a name="l12400"></a><span class="lineno">12400</span>&#160;    epiworld_double prob_recovery</div>
-<div class="line"><a name="l12401"></a><span class="lineno">12401</span>&#160;    <span class="comment">// epiworld_double prob_reinfection</span></div>
-<div class="line"><a name="l12402"></a><span class="lineno">12402</span>&#160;    )</div>
-<div class="line"><a name="l12403"></a><span class="lineno">12403</span>&#160;{</div>
+<div class="line"><a name="l12382"></a><span class="lineno">12382</span>&#160;    ](<a class="code" href="classepiworld_1_1_agent.html">epiworld::Agent&lt;TSeq&gt;</a> * p, <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l12383"></a><span class="lineno">12383</span>&#160;        {</div>
+<div class="line"><a name="l12384"></a><span class="lineno">12384</span>&#160; </div>
+<div class="line"><a name="l12385"></a><span class="lineno">12385</span>&#160;            tracked_agents_check_init(m);</div>
+<div class="line"><a name="l12386"></a><span class="lineno">12386</span>&#160;            <span class="keyword">auto</span> status = p-&gt;get_status();</div>
+<div class="line"><a name="l12387"></a><span class="lineno">12387</span>&#160; </div>
+<div class="line"><a name="l12388"></a><span class="lineno">12388</span>&#160;            <span class="keywordflow">if</span> (status == <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::EXPOSED</a>)</div>
+<div class="line"><a name="l12389"></a><span class="lineno">12389</span>&#160;            {</div>
+<div class="line"><a name="l12390"></a><span class="lineno">12390</span>&#160; </div>
+<div class="line"><a name="l12391"></a><span class="lineno">12391</span>&#160;                <span class="comment">// Does the agent become infected?</span></div>
+<div class="line"><a name="l12392"></a><span class="lineno">12392</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(*m-&gt;p3))</div>
+<div class="line"><a name="l12393"></a><span class="lineno">12393</span>&#160;                {</div>
+<div class="line"><a name="l12394"></a><span class="lineno">12394</span>&#160;                    <span class="comment">// Adding the individual to the queue</span></div>
+<div class="line"><a name="l12395"></a><span class="lineno">12395</span>&#160;                    _tracked_agents_infected_next-&gt;push_back(p);</div>
+<div class="line"><a name="l12396"></a><span class="lineno">12396</span>&#160;                    *_tracked_ninfected_next += 1;</div>
+<div class="line"><a name="l12397"></a><span class="lineno">12397</span>&#160; </div>
+<div class="line"><a name="l12398"></a><span class="lineno">12398</span>&#160;                    p-&gt;change_status(<a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>);</div>
+<div class="line"><a name="l12399"></a><span class="lineno">12399</span>&#160; </div>
+<div class="line"><a name="l12400"></a><span class="lineno">12400</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12401"></a><span class="lineno">12401</span>&#160; </div>
+<div class="line"><a name="l12402"></a><span class="lineno">12402</span>&#160;                }</div>
+<div class="line"><a name="l12403"></a><span class="lineno">12403</span>&#160; </div>
 <div class="line"><a name="l12404"></a><span class="lineno">12404</span>&#160; </div>
-<div class="line"><a name="l12405"></a><span class="lineno">12405</span>&#160;    <span class="comment">// Setting up parameters</span></div>
-<div class="line"><a name="l12406"></a><span class="lineno">12406</span>&#160;    model.add_param(reproductive_number, <span class="stringliteral">&quot;Beta&quot;</span>);</div>
-<div class="line"><a name="l12407"></a><span class="lineno">12407</span>&#160;    model.add_param(prob_transmission, <span class="stringliteral">&quot;Prob. Transmission&quot;</span>);</div>
-<div class="line"><a name="l12408"></a><span class="lineno">12408</span>&#160;    model.add_param(prob_recovery, <span class="stringliteral">&quot;Prob. Recovery&quot;</span>);</div>
-<div class="line"><a name="l12409"></a><span class="lineno">12409</span>&#160;    model.add_param(incubation_days, <span class="stringliteral">&quot;Avg. Incubation days&quot;</span>);</div>
-<div class="line"><a name="l12410"></a><span class="lineno">12410</span>&#160;    </div>
-<div class="line"><a name="l12411"></a><span class="lineno">12411</span>&#160;    <span class="comment">// Status</span></div>
-<div class="line"><a name="l12412"></a><span class="lineno">12412</span>&#160;    model.add_status(<span class="stringliteral">&quot;Susceptible&quot;</span>, SEIRCONN::update_susceptible);</div>
-<div class="line"><a name="l12413"></a><span class="lineno">12413</span>&#160;    model.add_status(<span class="stringliteral">&quot;Exposed&quot;</span>, SEIRCONN::update_infected);</div>
-<div class="line"><a name="l12414"></a><span class="lineno">12414</span>&#160;    model.add_status(<span class="stringliteral">&quot;Infected&quot;</span>, SEIRCONN::update_infected);</div>
-<div class="line"><a name="l12415"></a><span class="lineno">12415</span>&#160;    model.add_status(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l12405"></a><span class="lineno">12405</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (status == <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
+<div class="line"><a name="l12406"></a><span class="lineno">12406</span>&#160;            {</div>
+<div class="line"><a name="l12407"></a><span class="lineno">12407</span>&#160; </div>
+<div class="line"><a name="l12408"></a><span class="lineno">12408</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; (*m-&gt;p2))</div>
+<div class="line"><a name="l12409"></a><span class="lineno">12409</span>&#160;                {</div>
+<div class="line"><a name="l12410"></a><span class="lineno">12410</span>&#160; </div>
+<div class="line"><a name="l12411"></a><span class="lineno">12411</span>&#160;                    *_tracked_ninfected_next -= 1;</div>
+<div class="line"><a name="l12412"></a><span class="lineno">12412</span>&#160;                    p-&gt;rm_virus(0);</div>
+<div class="line"><a name="l12413"></a><span class="lineno">12413</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12414"></a><span class="lineno">12414</span>&#160; </div>
+<div class="line"><a name="l12415"></a><span class="lineno">12415</span>&#160;                }</div>
 <div class="line"><a name="l12416"></a><span class="lineno">12416</span>&#160; </div>
-<div class="line"><a name="l12417"></a><span class="lineno">12417</span>&#160; </div>
-<div class="line"><a name="l12418"></a><span class="lineno">12418</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
-<div class="line"><a name="l12419"></a><span class="lineno">12419</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
-<div class="line"><a name="l12420"></a><span class="lineno">12420</span>&#160;    virus.set_status(1,3,3);</div>
-<div class="line"><a name="l12421"></a><span class="lineno">12421</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l12417"></a><span class="lineno">12417</span>&#160;                _tracked_agents_infected_next-&gt;push_back(p);</div>
+<div class="line"><a name="l12418"></a><span class="lineno">12418</span>&#160; </div>
+<div class="line"><a name="l12419"></a><span class="lineno">12419</span>&#160;            } </div>
+<div class="line"><a name="l12420"></a><span class="lineno">12420</span>&#160; </div>
+<div class="line"><a name="l12421"></a><span class="lineno">12421</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l12422"></a><span class="lineno">12422</span>&#160; </div>
-<div class="line"><a name="l12423"></a><span class="lineno">12423</span>&#160;    <span class="comment">// Adding updating function</span></div>
-<div class="line"><a name="l12424"></a><span class="lineno">12424</span>&#160;    model.add_global_action(SEIRCONN::global_accounting, -1);</div>
-<div class="line"><a name="l12425"></a><span class="lineno">12425</span>&#160; </div>
-<div class="line"><a name="l12426"></a><span class="lineno">12426</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
-<div class="line"><a name="l12427"></a><span class="lineno">12427</span>&#160; </div>
-<div class="line"><a name="l12428"></a><span class="lineno">12428</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l12429"></a><span class="lineno">12429</span>&#160; </div>
-<div class="line"><a name="l12430"></a><span class="lineno">12430</span>&#160;}</div>
-<div class="line"><a name="l12431"></a><span class="lineno">12431</span>&#160; </div>
-<div class="line"><a name="l12432"></a><span class="lineno">12432</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = EPI_DEFAULT_TSEQ&gt;</div>
-<div class="line"><a name="l12433"></a><span class="lineno">12433</span>&#160;<span class="keyword">inline</span> <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> seir_connected(</div>
-<div class="line"><a name="l12434"></a><span class="lineno">12434</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l12435"></a><span class="lineno">12435</span>&#160;    epiworld_double prevalence,</div>
-<div class="line"><a name="l12436"></a><span class="lineno">12436</span>&#160;    epiworld_double reproductive_number,</div>
-<div class="line"><a name="l12437"></a><span class="lineno">12437</span>&#160;    epiworld_double prob_transmission,</div>
-<div class="line"><a name="l12438"></a><span class="lineno">12438</span>&#160;    epiworld_double incubation_days,</div>
-<div class="line"><a name="l12439"></a><span class="lineno">12439</span>&#160;    epiworld_double prob_recovery</div>
-<div class="line"><a name="l12440"></a><span class="lineno">12440</span>&#160;    )</div>
-<div class="line"><a name="l12441"></a><span class="lineno">12441</span>&#160;{</div>
-<div class="line"><a name="l12442"></a><span class="lineno">12442</span>&#160; </div>
-<div class="line"><a name="l12443"></a><span class="lineno">12443</span>&#160;    <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> model;</div>
-<div class="line"><a name="l12444"></a><span class="lineno">12444</span>&#160; </div>
-<div class="line"><a name="l12445"></a><span class="lineno">12445</span>&#160;    seir_connected(</div>
-<div class="line"><a name="l12446"></a><span class="lineno">12446</span>&#160;        model,</div>
-<div class="line"><a name="l12447"></a><span class="lineno">12447</span>&#160;        vname,</div>
-<div class="line"><a name="l12448"></a><span class="lineno">12448</span>&#160;        prevalence,</div>
-<div class="line"><a name="l12449"></a><span class="lineno">12449</span>&#160;        reproductive_number,</div>
-<div class="line"><a name="l12450"></a><span class="lineno">12450</span>&#160;        prob_transmission,</div>
-<div class="line"><a name="l12451"></a><span class="lineno">12451</span>&#160;        incubation_days,</div>
-<div class="line"><a name="l12452"></a><span class="lineno">12452</span>&#160;        prob_recovery</div>
-<div class="line"><a name="l12453"></a><span class="lineno">12453</span>&#160;    );</div>
+<div class="line"><a name="l12423"></a><span class="lineno">12423</span>&#160;        };</div>
+<div class="line"><a name="l12424"></a><span class="lineno">12424</span>&#160; </div>
+<div class="line"><a name="l12425"></a><span class="lineno">12425</span>&#160;    epiworld::GlobalFun&lt;TSeq&gt; global_accounting = </div>
+<div class="line"><a name="l12426"></a><span class="lineno">12426</span>&#160;    [</div>
+<div class="line"><a name="l12427"></a><span class="lineno">12427</span>&#160;        _tracked_started,</div>
+<div class="line"><a name="l12428"></a><span class="lineno">12428</span>&#160;        _tracked_agents_infected,</div>
+<div class="line"><a name="l12429"></a><span class="lineno">12429</span>&#160;        _tracked_agents_infected_next,</div>
+<div class="line"><a name="l12430"></a><span class="lineno">12430</span>&#160;        _tracked_ninfected,</div>
+<div class="line"><a name="l12431"></a><span class="lineno">12431</span>&#160;        _tracked_ninfected_next</div>
+<div class="line"><a name="l12432"></a><span class="lineno">12432</span>&#160;    ](<a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a>* m) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l12433"></a><span class="lineno">12433</span>&#160;        {</div>
+<div class="line"><a name="l12434"></a><span class="lineno">12434</span>&#160; </div>
+<div class="line"><a name="l12435"></a><span class="lineno">12435</span>&#160;            <span class="comment">// On the last day, also reset tracked agents and</span></div>
+<div class="line"><a name="l12436"></a><span class="lineno">12436</span>&#160;            <span class="comment">// set the initialized value to false</span></div>
+<div class="line"><a name="l12437"></a><span class="lineno">12437</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;today()) == (m-&gt;get_ndays() - 1))</div>
+<div class="line"><a name="l12438"></a><span class="lineno">12438</span>&#160;            {</div>
+<div class="line"><a name="l12439"></a><span class="lineno">12439</span>&#160; </div>
+<div class="line"><a name="l12440"></a><span class="lineno">12440</span>&#160;                *_tracked_started = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l12441"></a><span class="lineno">12441</span>&#160;                _tracked_agents_infected-&gt;clear();</div>
+<div class="line"><a name="l12442"></a><span class="lineno">12442</span>&#160;                _tracked_agents_infected_next-&gt;clear();</div>
+<div class="line"><a name="l12443"></a><span class="lineno">12443</span>&#160;                *_tracked_ninfected = 0;</div>
+<div class="line"><a name="l12444"></a><span class="lineno">12444</span>&#160;                *_tracked_ninfected_next = 0;    </div>
+<div class="line"><a name="l12445"></a><span class="lineno">12445</span>&#160; </div>
+<div class="line"><a name="l12446"></a><span class="lineno">12446</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12447"></a><span class="lineno">12447</span>&#160;            }</div>
+<div class="line"><a name="l12448"></a><span class="lineno">12448</span>&#160; </div>
+<div class="line"><a name="l12449"></a><span class="lineno">12449</span>&#160;            std::swap(*_tracked_agents_infected, *_tracked_agents_infected_next);</div>
+<div class="line"><a name="l12450"></a><span class="lineno">12450</span>&#160;            _tracked_agents_infected_next-&gt;clear();</div>
+<div class="line"><a name="l12451"></a><span class="lineno">12451</span>&#160; </div>
+<div class="line"><a name="l12452"></a><span class="lineno">12452</span>&#160;            *_tracked_ninfected += *_tracked_ninfected_next;</div>
+<div class="line"><a name="l12453"></a><span class="lineno">12453</span>&#160;            *_tracked_ninfected_next = 0;</div>
 <div class="line"><a name="l12454"></a><span class="lineno">12454</span>&#160; </div>
-<div class="line"><a name="l12455"></a><span class="lineno">12455</span>&#160;    <span class="keywordflow">return</span> model;</div>
+<div class="line"><a name="l12455"></a><span class="lineno">12455</span>&#160;        };</div>
 <div class="line"><a name="l12456"></a><span class="lineno">12456</span>&#160; </div>
-<div class="line"><a name="l12457"></a><span class="lineno">12457</span>&#160;}</div>
-<div class="line"><a name="l12458"></a><span class="lineno">12458</span>&#160; </div>
-<div class="line"><a name="l12459"></a><span class="lineno">12459</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l12460"></a><span class="lineno">12460</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a name="l12462"></a><span class="lineno">12462</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12463"></a><span class="lineno">12463</span>&#160;<span class="comment"> End of -include/epiworld//models/seirconnected.hpp-</span></div>
-<div class="line"><a name="l12464"></a><span class="lineno">12464</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12467"></a><span class="lineno">12467</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12468"></a><span class="lineno">12468</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12469"></a><span class="lineno">12469</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l12470"></a><span class="lineno">12470</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12471"></a><span class="lineno">12471</span>&#160;<span class="comment">#endif</span></div>
-<div class="line"><a name="l12472"></a><span class="lineno">12472</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a name="l12474"></a><span class="lineno">12474</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12475"></a><span class="lineno">12475</span>&#160;<span class="comment"> End of -include/epiworld/models/models.hpp-</span></div>
-<div class="line"><a name="l12476"></a><span class="lineno">12476</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12479"></a><span class="lineno">12479</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12480"></a><span class="lineno">12480</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12481"></a><span class="lineno">12481</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12482"></a><span class="lineno">12482</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l12483"></a><span class="lineno">12483</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l12484"></a><span class="lineno">12484</span>&#160;<span class="comment">#endif </span></div>
+<div class="line"><a name="l12457"></a><span class="lineno">12457</span>&#160;    <span class="comment">// Setting up parameters</span></div>
+<div class="line"><a name="l12458"></a><span class="lineno">12458</span>&#160;    model.add_param(reproductive_number, <span class="stringliteral">&quot;Beta&quot;</span>);</div>
+<div class="line"><a name="l12459"></a><span class="lineno">12459</span>&#160;    model.add_param(prob_transmission, <span class="stringliteral">&quot;Prob. Transmission&quot;</span>);</div>
+<div class="line"><a name="l12460"></a><span class="lineno">12460</span>&#160;    model.add_param(prob_recovery, <span class="stringliteral">&quot;Prob. Recovery&quot;</span>);</div>
+<div class="line"><a name="l12461"></a><span class="lineno">12461</span>&#160;    model.add_param(incubation_days, <span class="stringliteral">&quot;Avg. Incubation days&quot;</span>);</div>
+<div class="line"><a name="l12462"></a><span class="lineno">12462</span>&#160;    </div>
+<div class="line"><a name="l12463"></a><span class="lineno">12463</span>&#160;    <span class="comment">// Status</span></div>
+<div class="line"><a name="l12464"></a><span class="lineno">12464</span>&#160;    model.add_status(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l12465"></a><span class="lineno">12465</span>&#160;    model.add_status(<span class="stringliteral">&quot;Exposed&quot;</span>, update_infected);</div>
+<div class="line"><a name="l12466"></a><span class="lineno">12466</span>&#160;    model.add_status(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
+<div class="line"><a name="l12467"></a><span class="lineno">12467</span>&#160;    model.add_status(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l12468"></a><span class="lineno">12468</span>&#160; </div>
+<div class="line"><a name="l12469"></a><span class="lineno">12469</span>&#160; </div>
+<div class="line"><a name="l12470"></a><span class="lineno">12470</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
+<div class="line"><a name="l12471"></a><span class="lineno">12471</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
+<div class="line"><a name="l12472"></a><span class="lineno">12472</span>&#160;    virus.set_status(1,3,3);</div>
+<div class="line"><a name="l12473"></a><span class="lineno">12473</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l12474"></a><span class="lineno">12474</span>&#160; </div>
+<div class="line"><a name="l12475"></a><span class="lineno">12475</span>&#160;    <span class="comment">// Adding updating function</span></div>
+<div class="line"><a name="l12476"></a><span class="lineno">12476</span>&#160;    model.add_global_action(global_accounting, -1);</div>
+<div class="line"><a name="l12477"></a><span class="lineno">12477</span>&#160; </div>
+<div class="line"><a name="l12478"></a><span class="lineno">12478</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
+<div class="line"><a name="l12479"></a><span class="lineno">12479</span>&#160; </div>
+<div class="line"><a name="l12480"></a><span class="lineno">12480</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12481"></a><span class="lineno">12481</span>&#160; </div>
+<div class="line"><a name="l12482"></a><span class="lineno">12482</span>&#160;}</div>
+<div class="line"><a name="l12483"></a><span class="lineno">12483</span>&#160; </div>
+<div class="line"><a name="l12484"></a><span class="lineno">12484</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l12485"></a><span class="lineno">12485</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::ModelSEIRCONN</a>(</div>
+<div class="line"><a name="l12486"></a><span class="lineno">12486</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l12487"></a><span class="lineno">12487</span>&#160;    epiworld_double prevalence,</div>
+<div class="line"><a name="l12488"></a><span class="lineno">12488</span>&#160;    epiworld_double reproductive_number,</div>
+<div class="line"><a name="l12489"></a><span class="lineno">12489</span>&#160;    epiworld_double prob_transmission,</div>
+<div class="line"><a name="l12490"></a><span class="lineno">12490</span>&#160;    epiworld_double incubation_days,</div>
+<div class="line"><a name="l12491"></a><span class="lineno">12491</span>&#160;    epiworld_double prob_recovery</div>
+<div class="line"><a name="l12492"></a><span class="lineno">12492</span>&#160;    )</div>
+<div class="line"><a name="l12493"></a><span class="lineno">12493</span>&#160;{</div>
+<div class="line"><a name="l12494"></a><span class="lineno">12494</span>&#160; </div>
+<div class="line"><a name="l12495"></a><span class="lineno">12495</span>&#160;    <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN</a>(</div>
+<div class="line"><a name="l12496"></a><span class="lineno">12496</span>&#160;        *<span class="keyword">this</span>,</div>
+<div class="line"><a name="l12497"></a><span class="lineno">12497</span>&#160;        vname,</div>
+<div class="line"><a name="l12498"></a><span class="lineno">12498</span>&#160;        prevalence,</div>
+<div class="line"><a name="l12499"></a><span class="lineno">12499</span>&#160;        reproductive_number,</div>
+<div class="line"><a name="l12500"></a><span class="lineno">12500</span>&#160;        prob_transmission,</div>
+<div class="line"><a name="l12501"></a><span class="lineno">12501</span>&#160;        incubation_days,</div>
+<div class="line"><a name="l12502"></a><span class="lineno">12502</span>&#160;        prob_recovery</div>
+<div class="line"><a name="l12503"></a><span class="lineno">12503</span>&#160;    );</div>
+<div class="line"><a name="l12504"></a><span class="lineno">12504</span>&#160; </div>
+<div class="line"><a name="l12505"></a><span class="lineno">12505</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l12506"></a><span class="lineno">12506</span>&#160; </div>
+<div class="line"><a name="l12507"></a><span class="lineno">12507</span>&#160;}</div>
+<div class="line"><a name="l12508"></a><span class="lineno">12508</span>&#160; </div>
+<div class="line"><a name="l12509"></a><span class="lineno">12509</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l12510"></a><span class="lineno">12510</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l12512"></a><span class="lineno">12512</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12513"></a><span class="lineno">12513</span>&#160;<span class="comment"> End of -include/epiworld//models/seirconnected.hpp-</span></div>
+<div class="line"><a name="l12514"></a><span class="lineno">12514</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12517"></a><span class="lineno">12517</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12518"></a><span class="lineno">12518</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12519"></a><span class="lineno">12519</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l12520"></a><span class="lineno">12520</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12521"></a><span class="lineno">12521</span>&#160;<span class="comment">#endif</span></div>
+<div class="line"><a name="l12522"></a><span class="lineno">12522</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l12524"></a><span class="lineno">12524</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12525"></a><span class="lineno">12525</span>&#160;<span class="comment"> End of -include/epiworld/models/models.hpp-</span></div>
+<div class="line"><a name="l12526"></a><span class="lineno">12526</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12529"></a><span class="lineno">12529</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12530"></a><span class="lineno">12530</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12531"></a><span class="lineno">12531</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12532"></a><span class="lineno">12532</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l12533"></a><span class="lineno">12533</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l12534"></a><span class="lineno">12534</span>&#160;<span class="comment">#endif </span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
+<div class="ttc" id="aclass_model_s_e_i_r_c_o_n_n_html"><div class="ttname"><a href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN</a></div><div class="ttdef"><b>Definition:</b> seirconnected.hpp:6</div></div>
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:23</div></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
@@ -11395,6 +11446,7 @@ $(function() {
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model&lt; TSeq &gt;</a></div></div>
 <div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5777</div></div>
 <div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5113</div></div>
+<div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">epiworld::epimodels::ModelSEIRCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:12211</div></div>
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">epiworld::epimodels::ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:11911</div></div>
 <div class="ttc" id="anamespaceepiworld_1_1sampler_html_a021132a942bb59db17289b6454315b4e"><div class="ttname"><a href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">epiworld::sampler::sample_virus_single</a></div><div class="ttdeci">Virus&lt; TSeq &gt; * sample_virus_single(Agent&lt; TSeq &gt; *p, Model&lt; TSeq &gt; *m)</div><div class="ttdoc">Sample from neighbors pool of viruses (at most one)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9590</div></div>
 <div class="ttc" id="anamespaceepiworld_1_1sampler_html_a058e471163798e71719e9580b016692f"><div class="ttname"><a href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">epiworld::sampler::make_sample_virus_neighbors</a></div><div class="ttdeci">std::function&lt; Virus&lt; TSeq &gt; *(Agent&lt; TSeq &gt; *, Model&lt; TSeq &gt; *)&gt; make_sample_virus_neighbors(std::vector&lt; epiworld_fast_uint &gt; exclude={})</div><div class="ttdoc">Make a function to sample from neighbors.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9420</div></div>
