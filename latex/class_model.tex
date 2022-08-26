@@ -79,7 +79,9 @@ const std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+viruses
 const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} () const
 \item 
 void \mbox{\hyperlink{class_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
-\begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Set the backup object}\par
 {\em {\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. }\begin{DoxyCompactItemize}
 \item 
@@ -694,6 +696,22 @@ The data should be an array with the data stored in a column major order, i.\+e.
 {\em data\+\_\+} & Pointer to the first element of an array of size {\ttfamily size() $\ast$ ncols\+\_\+}. \\
 \hline
 {\em ncols\+\_\+} & Number of features included in the data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_model_a453485b4cfe2a51addf33003f8d70c36}\label{class_model_a453485b4cfe2a51addf33003f8d70c36}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Set the name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_model_a02135cd989e6fdadaf71d3140fb4a2e8}\label{class_model_a02135cd989e6fdadaf71d3140fb4a2e8}} 

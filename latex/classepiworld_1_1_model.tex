@@ -80,6 +80,8 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 \item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a4b6fee5e8cc1d67b2b46c3e06dd7fb2a}\label{classepiworld_1_1_model_a4b6fee5e8cc1d67b2b46c3e06dd7fb2a}} 
 {\bfseries Model} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
 \item 
@@ -1118,7 +1120,23 @@ void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$
 
 Set the backup object. 
 
-{\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. @\mbox{[} \mbox{\Hypertarget{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}\label{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}} 
+{\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. @\mbox{[} \mbox{\Hypertarget{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}\label{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}} 
+\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}\label{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_rand\_engine@{set\_rand\_engine}}
 \index{set\_rand\_engine@{set\_rand\_engine}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{set\_rand\_engine()}{set\_rand\_engine()}}
