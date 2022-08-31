@@ -91,12 +91,12 @@ Collaboration diagram for ModelSIRCONN&lt; TSeq &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26c4e33700cdff2b3c4e51395d84c21b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_s_i_r_c_o_n_n.html#a26c4e33700cdff2b3c4e51395d84c21b">ModelSIRCONN</a> (<a class="el" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
-<tr class="memdesc:a26c4e33700cdff2b3c4e51395d84c21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Infected-Removed (SIR) model.  <a href="class_model_s_i_r_c_o_n_n.html#a26c4e33700cdff2b3c4e51395d84c21b">More...</a><br /></td></tr>
-<tr class="separator:a26c4e33700cdff2b3c4e51395d84c21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02cac8f949aa00c9c3278364ad5e2bd5"><td class="memItemLeft" align="right" valign="top"><a id="a02cac8f949aa00c9c3278364ad5e2bd5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSIRCONN</b> (std::string vname, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
-<tr class="separator:a02cac8f949aa00c9c3278364ad5e2bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61278f92453a04ea6e18798400db770"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_s_i_r_c_o_n_n.html#ab61278f92453a04ea6e18798400db770">ModelSIRCONN</a> (<a class="el" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, unsigned int n, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
+<tr class="memdesc:ab61278f92453a04ea6e18798400db770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Infected-Removed (SIR) model.  <a href="class_model_s_i_r_c_o_n_n.html#ab61278f92453a04ea6e18798400db770">More...</a><br /></td></tr>
+<tr class="separator:ab61278f92453a04ea6e18798400db770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c3d2eb3c63015ce6bb40632d6ce863"><td class="memItemLeft" align="right" valign="top"><a id="a48c3d2eb3c63015ce6bb40632d6ce863"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSIRCONN</b> (std::string vname, unsigned int n, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
+<tr class="separator:a48c3d2eb3c63015ce6bb40632d6ce863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
 <tr class="memitem:a4b6fee5e8cc1d67b2b46c3e06dd7fb2a inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a4b6fee5e8cc1d67b2b46c3e06dd7fb2a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Model</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;m)</td></tr>
@@ -559,6 +559,9 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; 
 <tr class="memitem:afb92b7fb6e29a2edd9100735244c7b0a inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="afb92b7fb6e29a2edd9100735244c7b0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_smallworld</b> (unsigned int n=1000, unsigned int k=5, bool d=false, epiworld_double p=.01)</td></tr>
 <tr class="separator:afb92b7fb6e29a2edd9100735244c7b0a inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43fb38a00d0fe706fbabc4f19eaaeb9 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ab43fb38a00d0fe706fbabc4f19eaaeb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b> (unsigned int n=1000)</td></tr>
+<tr class="separator:ab43fb38a00d0fe706fbabc4f19eaaeb9 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237dbec55b0d47a037a11502eecc8733 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a237dbec55b0d47a037a11502eecc8733"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (unsigned int ndays, unsigned int seed)</td></tr>
 <tr class="separator:a237dbec55b0d47a037a11502eecc8733 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -837,8 +840,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>npar_used</b>
 <tr class="separator:a6b01550c5b2e08ccc9417d3ca80ed329 inherit pub_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a26c4e33700cdff2b3c4e51395d84c21b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26c4e33700cdff2b3c4e51395d84c21b">&#9670;&nbsp;</a></span>ModelSIRCONN()</h2>
+<a id="ab61278f92453a04ea6e18798400db770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61278f92453a04ea6e18798400db770">&#9670;&nbsp;</a></span>ModelSIRCONN()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -859,6 +862,12 @@ template&lt;typename TSeq &gt; </div>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>vname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

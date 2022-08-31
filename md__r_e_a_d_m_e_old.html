@@ -66,22 +66,22 @@ $(function() {
 <div class="title">EPI Simulator </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md37"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md38"></a>
 Disease dynamics</h1>
 <p>Diseases continuously evolve in time. Changes in their genetic sequence make them more or less resistant to the particular version of the vaccine. Mutations also affect the transmissibility level and mortality rate of the disease. Using this approach allows making vaccination efficacy a function of compatibility between the variant and the vaccine.</p>
 <p>When an individual becomes infected, the disease accumulates mutations in the new host. Ultimately, there is no single version of the disease present in the model, but rather an infinite number of them, each slightly different from the other.</p>
-<h1><a class="anchor" id="autotoc_md38"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 Network dynamics</h1>
 <p>We can assume that the Population is organized in fully connected blocks for the first version of the model. Block sizes and the number of connections between blocks are Poisson random variables. Individuals interact with all the members of their blocks, and bridging individuals allow the disease to move across blocks.</p>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md40"></a>
 Contagion dynamics</h1>
 <p>The transmission of the disease will be governed by the number of vaccinated, infected, and recovered within each block. Transmission between blocks will be treated in the same way, although individuals bridging the block will only interact with others within the block and their direct connections across the blocks.</p>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 Time dynamics</h1>
 <p>Time dynamics has two components, how biology evolves and how agents react.</p>
 <p>The model develops as a continuous-time Markov process. Each block of individuals takes action at rates <code>L(i|N(i))</code> function of the local number of infections. This way, if <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md42"></a>
 Updating agent's status</h1>
 <p>Like most other components, updating agents' states can be personalized. A naive approach allows agents to get infected with a single virus or stay as-is. The probability of this event is conditional on acquiring at most one virus. Since these are independent events, the conditional probability is computed as follows:</p>
 <div class="fragment"><div class="line">P(Variant k|at most 1) = P(at most 1| Variant k) * P(Variant k)/P(at most 1)</div>
@@ -92,7 +92,7 @@ Updating agent's status</h1>
 <div class="line">P(at most 1) = P(None) + Sum(v in variants) P(v) * Prod(m != v) (1 - P(m))</div>
 <div class="line">P(None) = Prod(v in variants) (1 - P(v))</div>
 </div><!-- fragment --><p>Furthermore, the (Variant, Person) pairs are treated independently.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Other parameters</h2>
 <ul>
 <li>Who did you get the infection from.</li>
