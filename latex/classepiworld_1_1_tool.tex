@@ -39,7 +39,7 @@ std\+::string {\bfseries get\+\_\+name} () const
 \mbox{\Hypertarget{classepiworld_1_1_tool_ace2305b68fb1016df38cf371a4bc6817}\label{classepiworld_1_1_tool_ace2305b68fb1016df38cf371a4bc6817}} 
 \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$ {\bfseries get\+\_\+agent} ()
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a467bf8f79f47563d11ad0ba3b65de2d5}\label{classepiworld_1_1_tool_a467bf8f79f47563d11ad0ba3b65de2d5}} 
+\mbox{\Hypertarget{classepiworld_1_1_tool_a3fb5e6c7d8f4079b7ba7ad34301f0bc7}\label{classepiworld_1_1_tool_a3fb5e6c7d8f4079b7ba7ad34301f0bc7}} 
 int {\bfseries get\+\_\+id} () const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_tool_a07dfd10c1b6f39ec9094f66b3cd34407}\label{classepiworld_1_1_tool_a07dfd10c1b6f39ec9094f66b3cd34407}} 
@@ -62,83 +62,6 @@ void {\bfseries get\+\_\+status} (epiworld\+\_\+fast\+\_\+int $\ast$init, epiwor
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_tool_a57f703b8aa2eefacc43143061313067e}\label{classepiworld_1_1_tool_a57f703b8aa2eefacc43143061313067e}} 
 void {\bfseries get\+\_\+queue} (epiworld\+\_\+fast\+\_\+int $\ast$init, epiworld\+\_\+fast\+\_\+int $\ast$post)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a68b57ba319ae538622bffd482192b83e}\label{classepiworld_1_1_tool_a68b57ba319ae538622bffd482192b83e}} 
-{\bfseries Tool} (std\+::string name=\char`\"{}unknown tool\char`\"{})
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a1f4607c8de42ab7b44adbc3945b1045f}\label{classepiworld_1_1_tool_a1f4607c8de42ab7b44adbc3945b1045f}} 
-void {\bfseries set\+\_\+sequence} (TSeq d)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a74578ce3ee44db805226027150a320cc}\label{classepiworld_1_1_tool_a74578ce3ee44db805226027150a320cc}} 
-void {\bfseries set\+\_\+sequence\+\_\+unique} (TSeq d)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_acc9ac7651d8f616e7373ee0c52c0b9f1}\label{classepiworld_1_1_tool_acc9ac7651d8f616e7373ee0c52c0b9f1}} 
-void {\bfseries set\+\_\+sequence} (std\+::shared\+\_\+ptr$<$ TSeq $>$ d)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a762a22e0a2895822c60d2cd83e2566aa}\label{classepiworld_1_1_tool_a762a22e0a2895822c60d2cd83e2566aa}} 
-std\+::shared\+\_\+ptr$<$ TSeq $>$ {\bfseries get\+\_\+sequence} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_acff97d6b9e086e043232e2a37c5ecfd8}\label{classepiworld_1_1_tool_acff97d6b9e086e043232e2a37c5ecfd8}} 
-TSeq \& {\bfseries get\+\_\+sequence\+\_\+unique} ()
-\item 
-epiworld\+\_\+double \mbox{\hyperlink{classepiworld_1_1_tool_adbc3bec3b25a2768fb51275c680be2d9}{get\+\_\+susceptibility\+\_\+reduction}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\begin{DoxyCompactList}\small\item\em Get and set the tool functions. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a3891e99bd8fbd5e2233ddfd133035e2c}\label{classepiworld_1_1_tool_a3891e99bd8fbd5e2233ddfd133035e2c}} 
-epiworld\+\_\+double {\bfseries get\+\_\+transmission\+\_\+reduction} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_ab56c07e4912197717364a10c652ea4d3}\label{classepiworld_1_1_tool_ab56c07e4912197717364a10c652ea4d3}} 
-epiworld\+\_\+double {\bfseries get\+\_\+recovery\+\_\+enhancer} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a4feb92dcd53b1aba4400642f482d7c12}\label{classepiworld_1_1_tool_a4feb92dcd53b1aba4400642f482d7c12}} 
-epiworld\+\_\+double {\bfseries get\+\_\+death\+\_\+reduction} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a62171c3dcd65acfa12e1bc71e883999b}\label{classepiworld_1_1_tool_a62171c3dcd65acfa12e1bc71e883999b}} 
-void {\bfseries set\+\_\+susceptibility\+\_\+reduction\+\_\+fun} (Tool\+Fun$<$ TSeq $>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_ae22c62260ab1467b4db5977d6f5fa2dd}\label{classepiworld_1_1_tool_ae22c62260ab1467b4db5977d6f5fa2dd}} 
-void {\bfseries set\+\_\+transmission\+\_\+reduction\+\_\+fun} (Tool\+Fun$<$ TSeq $>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a9c8d44b61bdb2d0b84ebf6a6987060e3}\label{classepiworld_1_1_tool_a9c8d44b61bdb2d0b84ebf6a6987060e3}} 
-void {\bfseries set\+\_\+recovery\+\_\+enhancer\+\_\+fun} (Tool\+Fun$<$ TSeq $>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a3b8eaac27c05a073d5baf1f443843623}\label{classepiworld_1_1_tool_a3b8eaac27c05a073d5baf1f443843623}} 
-void {\bfseries set\+\_\+death\+\_\+reduction\+\_\+fun} (Tool\+Fun$<$ TSeq $>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a333bb07c599fda077ec248c1a338214d}\label{classepiworld_1_1_tool_a333bb07c599fda077ec248c1a338214d}} 
-void {\bfseries set\+\_\+susceptibility\+\_\+reduction} (epiworld\+\_\+double $\ast$prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_adf9f30e9273a5e1529911a4657db1b3b}\label{classepiworld_1_1_tool_adf9f30e9273a5e1529911a4657db1b3b}} 
-void {\bfseries set\+\_\+transmission\+\_\+reduction} (epiworld\+\_\+double $\ast$prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a5dcf122f08c3c0e4f596323d65e015f4}\label{classepiworld_1_1_tool_a5dcf122f08c3c0e4f596323d65e015f4}} 
-void {\bfseries set\+\_\+recovery\+\_\+enhancer} (epiworld\+\_\+double $\ast$prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a76aa9e36d66addfc54762df5c1bf9b9c}\label{classepiworld_1_1_tool_a76aa9e36d66addfc54762df5c1bf9b9c}} 
-void {\bfseries set\+\_\+death\+\_\+reduction} (epiworld\+\_\+double $\ast$prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a427a58941b6cddfb7ebafd285782d794}\label{classepiworld_1_1_tool_a427a58941b6cddfb7ebafd285782d794}} 
-void {\bfseries set\+\_\+susceptibility\+\_\+reduction} (epiworld\+\_\+double prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a3cdfe6cb2e00c1f5f5d56aa4c5c10bbe}\label{classepiworld_1_1_tool_a3cdfe6cb2e00c1f5f5d56aa4c5c10bbe}} 
-void {\bfseries set\+\_\+transmission\+\_\+reduction} (epiworld\+\_\+double prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a024d43a7111354141a7efe389cb61153}\label{classepiworld_1_1_tool_a024d43a7111354141a7efe389cb61153}} 
-void {\bfseries set\+\_\+recovery\+\_\+enhancer} (epiworld\+\_\+double prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a6ccede7b6ac232d52bad1f128e88e15e}\label{classepiworld_1_1_tool_a6ccede7b6ac232d52bad1f128e88e15e}} 
-void {\bfseries set\+\_\+death\+\_\+reduction} (epiworld\+\_\+double prob)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a31c515c9aac7551af30719cc6d6ed3c9}\label{classepiworld_1_1_tool_a31c515c9aac7551af30719cc6d6ed3c9}} 
-void \mbox{\hyperlink{classepiworld_1_1_tool_a31c515c9aac7551af30719cc6d6ed3c9}{set\+\_\+name}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_ac702262d0bee7b2dbd2c98d78c80663c}\label{classepiworld_1_1_tool_ac702262d0bee7b2dbd2c98d78c80663c}} 
-std\+::string {\bfseries get\+\_\+name} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_ae235e28321697c3e4a228f5191d741b6}\label{classepiworld_1_1_tool_ae235e28321697c3e4a228f5191d741b6}} 
-\mbox{\hyperlink{classepiworld_1_1_person}{Person}}$<$ TSeq $>$ $\ast$ {\bfseries get\+\_\+person} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a5944196937fbcec64318bb46c8ed68ff}\label{classepiworld_1_1_tool_a5944196937fbcec64318bb46c8ed68ff}} 
-unsigned int {\bfseries get\+\_\+id} () const
 \end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Get and set the tool functions}\par
 {\em 
@@ -211,12 +134,6 @@ class {\bfseries Agent$<$ TSeq $>$}
 \mbox{\Hypertarget{classepiworld_1_1_tool_aa4532e80368ab60b4fda5bb917f6f0ca}\label{classepiworld_1_1_tool_aa4532e80368ab60b4fda5bb917f6f0ca}} 
 class {\bfseries Model$<$ TSeq $>$}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a675efc124d6c7bc55aca20aee9566c91}\label{classepiworld_1_1_tool_a675efc124d6c7bc55aca20aee9566c91}} 
-class {\bfseries Person\+Tools$<$ TSeq $>$}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a195def33d9d6483c6a309af6984bbf90}\label{classepiworld_1_1_tool_a195def33d9d6483c6a309af6984bbf90}} 
-class {\bfseries Person$<$ TSeq $>$}
-\item 
 \mbox{\Hypertarget{classepiworld_1_1_tool_a1f4deae20e873213f82b53cd4d5db4f7}\label{classepiworld_1_1_tool_a1f4deae20e873213f82b53cd4d5db4f7}} 
 void {\bfseries default\+\_\+add\+\_\+tool} (\mbox{\hyperlink{structepiworld_1_1_action}{Action}}$<$ TSeq $>$ \&a, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$m)
 \item 
@@ -226,42 +143,16 @@ void {\bfseries default\+\_\+rm\+\_\+tool} (\mbox{\hyperlink{structepiworld_1_1_
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename TSeq = bool$>$\newline
+\subsubsection*{template$<$typename TSeq$>$\newline
 class epiworld\+::\+Tool$<$ TSeq $>$}
 
 \mbox{\hyperlink{classepiworld_1_1_tools}{Tools}} for defending the agent against the virus. 
-
-\mbox{\hyperlink{classepiworld_1_1_tools}{Tools}} for defending the host against the virus.
 
 
 \begin{DoxyTemplParams}{Template Parameters}
 {\em TSeq} & Type of sequence \\
 \hline
 \end{DoxyTemplParams}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classepiworld_1_1_tool_adbc3bec3b25a2768fb51275c680be2d9}\label{classepiworld_1_1_tool_adbc3bec3b25a2768fb51275c680be2d9}} 
-\index{epiworld::Tool$<$ TSeq $>$@{epiworld::Tool$<$ TSeq $>$}!get\_susceptibility\_reduction@{get\_susceptibility\_reduction}}
-\index{get\_susceptibility\_reduction@{get\_susceptibility\_reduction}!epiworld::Tool$<$ TSeq $>$@{epiworld::Tool$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{get\_susceptibility\_reduction()}{get\_susceptibility\_reduction()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-epiworld\+\_\+double \mbox{\hyperlink{classepiworld_1_1_tool}{Tool}}$<$ TSeq $>$\+::get\+\_\+susceptibility\+\_\+reduction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Get and set the tool functions. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em v} & The virus over which to operate \\
-\hline
-{\em fun} & the function to be used\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-epiworld\+\_\+double @\mbox{[} 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

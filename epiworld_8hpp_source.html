@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">class Agent;</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">class PersonTools;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classepiworld_1_1_person_tools.html">   68</a></span>&#160;<span class="comment">class PersonTools;</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">class Virus;</span></div>
@@ -2196,7 +2196,7 @@ $(function() {
 <div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;<span class="comment">inline void default_rm_tool(Action&lt;TSeq&gt; &amp; a, Model&lt;TSeq&gt; * m);</span></div>
 <div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;<span class="comment">class DataBase {</span></div>
+<div class="line"><a name="l02520"></a><span class="lineno"><a class="line" href="classepiworld_1_1_data_base.html"> 2520</a></span>&#160;<span class="comment">class DataBase {</span></div>
 <div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;<span class="comment">    friend class Model&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;<span class="comment">    friend void default_add_virus&lt;TSeq&gt;(Action&lt;TSeq&gt; &amp; a, Model&lt;TSeq&gt; * m);</span></div>
 <div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;<span class="comment">    friend void default_add_tool&lt;TSeq&gt;(Action&lt;TSeq&gt; &amp; a, Model&lt;TSeq&gt; * m);</span></div>
@@ -2290,7 +2290,7 @@ $(function() {
 <div class="line"><a name="l02611"></a><span class="lineno"> 2611</span>&#160;<span class="comment">    DataBase() = delete;</span></div>
 <div class="line"><a name="l02612"></a><span class="lineno"> 2612</span>&#160;<span class="comment">    DataBase(Model&lt;TSeq&gt; &amp; m) : model(&amp;m), user_data(m) {};</span></div>
 <div class="line"><a name="l02613"></a><span class="lineno"> 2613</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02622"></a><span class="lineno"><a class="line" href="classepiworld_1_1_data_base.html#a833cf232df236cf097ccbaf537ff32ab"> 2622</a></span>&#160;<span class="comment">    void record_variant(Virus&lt;TSeq&gt; &amp; v); </span></div>
+<div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160;<span class="comment">    void record_variant(Virus&lt;TSeq&gt; &amp; v); </span></div>
 <div class="line"><a name="l02623"></a><span class="lineno"> 2623</span>&#160;<span class="comment">    void record_tool(Tool&lt;TSeq&gt; &amp; t); </span></div>
 <div class="line"><a name="l02624"></a><span class="lineno"> 2624</span>&#160;<span class="comment">    void set_seq_hasher(std::function&lt;std::vector&lt;int&gt;(TSeq)&gt; fun);</span></div>
 <div class="line"><a name="l02625"></a><span class="lineno"> 2625</span>&#160;<span class="comment">    void set_model(Model&lt;TSeq&gt; &amp; m);</span></div>
@@ -2352,13 +2352,13 @@ $(function() {
 <div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;<span class="comment">    UserData&lt;TSeq&gt; &amp; get_user_data();</span></div>
 <div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02708"></a><span class="lineno"><a class="line" href="classepiworld_1_1_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e"> 2708</a></span>&#160;<span class="comment">    MapVec_type&lt;int,int&gt; reproductive_number() const;</span></div>
+<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;<span class="comment">    MapVec_type&lt;int,int&gt; reproductive_number() const;</span></div>
 <div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;<span class="comment">    void reproductive_number(</span></div>
 <div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;<span class="comment">        std::string fn</span></div>
 <div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;<span class="comment">        ) const;</span></div>
 <div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02720"></a><span class="lineno"><a class="line" href="classepiworld_1_1_data_base.html#a3391ab73b07892c8b66160e61dd294fd"> 2720</a></span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; transition_probability(</span></div>
+<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; transition_probability(</span></div>
 <div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;<span class="comment">        bool print = true</span></div>
 <div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;<span class="comment">    ) const;</span></div>
 <div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;<span class="comment"></span> </div>
@@ -4052,7 +4052,7 @@ $(function() {
 <div class="line"><a name="l04484"></a><span class="lineno"> 4484</span>&#160;<span class="comment">// class ToolPtr;</span></div>
 <div class="line"><a name="l04485"></a><span class="lineno"> 4485</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04495"></a><span class="lineno"> 4495</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l04496"></a><span class="lineno"> 4496</span>&#160;<span class="comment">class Model {</span></div>
+<div class="line"><a name="l04496"></a><span class="lineno"><a class="line" href="classepiworld_1_1_model.html"> 4496</a></span>&#160;<span class="comment">class Model {</span></div>
 <div class="line"><a name="l04497"></a><span class="lineno"> 4497</span>&#160;<span class="comment">    friend class Agent&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l04498"></a><span class="lineno"> 4498</span>&#160;<span class="comment">    friend class AgentsSample&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l04499"></a><span class="lineno"> 4499</span>&#160;<span class="comment">    friend class DataBase&lt;TSeq&gt;;</span></div>
@@ -6759,7 +6759,7 @@ $(function() {
 <div class="line"><a name="l07514"></a><span class="lineno"> 7514</span>&#160;<span class="comment">class Model;</span></div>
 <div class="line"><a name="l07515"></a><span class="lineno"> 7515</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l07526"></a><span class="lineno"> 7526</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l07527"></a><span class="lineno"> 7527</span>&#160;<span class="comment">class Virus {</span></div>
+<div class="line"><a name="l07527"></a><span class="lineno"><a class="line" href="classepiworld_1_1_virus.html"> 7527</a></span>&#160;<span class="comment">class Virus {</span></div>
 <div class="line"><a name="l07528"></a><span class="lineno"> 7528</span>&#160;<span class="comment">    friend class Agent&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l07529"></a><span class="lineno"> 7529</span>&#160;<span class="comment">    friend class Model&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l07530"></a><span class="lineno"> 7530</span>&#160;<span class="comment">    friend class DataBase&lt;TSeq&gt;;</span></div>
@@ -7490,7 +7490,7 @@ $(function() {
 <div class="line"><a name="l08307"></a><span class="lineno"> 8307</span>&#160;<span class="comment">class Tool;</span></div>
 <div class="line"><a name="l08308"></a><span class="lineno"> 8308</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l08314"></a><span class="lineno"> 8314</span>&#160;<span class="comment">template&lt;typename TSeq&gt; </span></div>
-<div class="line"><a name="l08315"></a><span class="lineno"> 8315</span>&#160;<span class="comment">class Tool {</span></div>
+<div class="line"><a name="l08315"></a><span class="lineno"><a class="line" href="classepiworld_1_1_tool.html"> 8315</a></span>&#160;<span class="comment">class Tool {</span></div>
 <div class="line"><a name="l08316"></a><span class="lineno"> 8316</span>&#160;<span class="comment">    friend class Agent&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l08317"></a><span class="lineno"> 8317</span>&#160;<span class="comment">    friend class Model&lt;TSeq&gt;;</span></div>
 <div class="line"><a name="l08318"></a><span class="lineno"> 8318</span>&#160;<span class="comment">    friend void default_add_tool&lt;TSeq&gt;(Action&lt;TSeq&gt; &amp; a, Model&lt;TSeq&gt; * m);</span></div>
@@ -9025,13 +9025,13 @@ $(function() {
 <div class="line"><a name="l09991"></a><span class="lineno"> 9991</span>&#160;<span class="comment">        epiworld_fast_int queue = -99</span></div>
 <div class="line"><a name="l09992"></a><span class="lineno"> 9992</span>&#160;<span class="comment">    );</span></div>
 <div class="line"><a name="l09993"></a><span class="lineno"> 9993</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l09994"></a><span class="lineno"><a class="line" href="classepiworld_1_1_agent.html#ad5f1f07d77bc303809af93c49025c434"> 9994</a></span>&#160;<span class="comment">    void rm_agent_by_virus(</span></div>
+<div class="line"><a name="l09994"></a><span class="lineno"> 9994</span>&#160;<span class="comment">    void rm_agent_by_virus(</span></div>
 <div class="line"><a name="l09995"></a><span class="lineno"> 9995</span>&#160;<span class="comment">        epiworld_fast_uint virus_idx,</span></div>
 <div class="line"><a name="l09996"></a><span class="lineno"> 9996</span>&#160;<span class="comment">        epiworld_fast_int status_new = -99,</span></div>
 <div class="line"><a name="l09997"></a><span class="lineno"> 9997</span>&#160;<span class="comment">        epiworld_fast_int queue = -99</span></div>
 <div class="line"><a name="l09998"></a><span class="lineno"> 9998</span>&#160;<span class="comment">    ); ///&lt; Agent removed by virus</span></div>
 <div class="line"><a name="l09999"></a><span class="lineno"> 9999</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l10000"></a><span class="lineno"><a class="line" href="classepiworld_1_1_agent.html#ab8a9e5e20a2656d1acd72daed6644dbf">10000</a></span>&#160;<span class="comment">    void rm_agent_by_virus(</span></div>
+<div class="line"><a name="l10000"></a><span class="lineno">10000</span>&#160;<span class="comment">    void rm_agent_by_virus(</span></div>
 <div class="line"><a name="l10001"></a><span class="lineno">10001</span>&#160;<span class="comment">        VirusPtr&lt;TSeq&gt; &amp; virus,</span></div>
 <div class="line"><a name="l10002"></a><span class="lineno">10002</span>&#160;<span class="comment">        epiworld_fast_int status_new = -99,</span></div>
 <div class="line"><a name="l10003"></a><span class="lineno">10003</span>&#160;<span class="comment">        epiworld_fast_int queue = -99</span></div>
@@ -9042,7 +9042,7 @@ $(function() {
 <div class="line"><a name="l10016"></a><span class="lineno">10016</span>&#160;<span class="comment">    epiworld_double get_recovery_enhancer(VirusPtr&lt;TSeq&gt; v);</span></div>
 <div class="line"><a name="l10017"></a><span class="lineno">10017</span>&#160;<span class="comment">    epiworld_double get_death_reduction(VirusPtr&lt;TSeq&gt; v);</span></div>
 <div class="line"><a name="l10019"></a><span class="lineno">10019</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l10020"></a><span class="lineno"><a class="line" href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">10020</a></span>&#160;<span class="comment">    int get_id() const; ///&lt; Id of the individual</span></div>
+<div class="line"><a name="l10020"></a><span class="lineno">10020</span>&#160;<span class="comment">    int get_id() const; ///&lt; Id of the individual</span></div>
 <div class="line"><a name="l10021"></a><span class="lineno">10021</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l10022"></a><span class="lineno">10022</span>&#160;<span class="comment">    std::mt19937 * get_rand_endgine();</span></div>
 <div class="line"><a name="l10023"></a><span class="lineno">10023</span>&#160;<span class="comment">    Model&lt;TSeq&gt; * get_model(); </span></div>
@@ -9082,7 +9082,7 @@ $(function() {
 <div class="line"><a name="l10057"></a><span class="lineno">10057</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10058"></a><span class="lineno">10058</span>&#160;<span class="comment">    void print(bool compressed = false) const;</span></div>
 <div class="line"><a name="l10059"></a><span class="lineno">10059</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l10076"></a><span class="lineno"><a class="line" href="classepiworld_1_1_agent.html#a370107b9e18076bce06f7bffb32f2757">10076</a></span>&#160;<span class="comment">    double &amp; operator()(size_t j);</span></div>
+<div class="line"><a name="l10076"></a><span class="lineno">10076</span>&#160;<span class="comment">    double &amp; operator()(size_t j);</span></div>
 <div class="line"><a name="l10077"></a><span class="lineno">10077</span>&#160;<span class="comment">    double &amp; operator[](size_t j);</span></div>
 <div class="line"><a name="l10079"></a><span class="lineno">10079</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10080"></a><span class="lineno">10080</span>&#160;<span class="comment">    Entities&lt;TSeq&gt; get_entities();</span></div>
@@ -11629,9 +11629,9 @@ $(function() {
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9856</div></div>
 <div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10724</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model&lt; TSeq &gt;</a></div></div>
-<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5777</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5113</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4496</div></div>
+<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8315</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:7527</div></div>
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">epiworld::epimodels::ModelSEIRCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:12407</div></div>
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">epiworld::epimodels::ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:12098</div></div>
 <div class="ttc" id="anamespaceepiworld_1_1sampler_html_a021132a942bb59db17289b6454315b4e"><div class="ttname"><a href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">epiworld::sampler::sample_virus_single</a></div><div class="ttdeci">Virus&lt; TSeq &gt; * sample_virus_single(Agent&lt; TSeq &gt; *p, Model&lt; TSeq &gt; *m)</div><div class="ttdoc">Sample from neighbors pool of viruses (at most one)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9641</div></div>

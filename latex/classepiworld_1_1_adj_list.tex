@@ -24,43 +24,14 @@ std\+::vector$<$ std\+::map$<$ unsigned int, unsigned int $>$ $>$ \& {\bfseries 
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_adj_list_a70e14a9f262278d028cecae547382049}\label{classepiworld_1_1_adj_list_a70e14a9f262278d028cecae547382049}} 
 bool \mbox{\hyperlink{classepiworld_1_1_adj_list_a70e14a9f262278d028cecae547382049}{is\+\_\+directed}} () const
-\begin{DoxyCompactList}\small\item\em {\ttfamily true} if the network is directed. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classepiworld_1_1_adj_list_ac3a2f15c4f93bbf1527c4f808559d55e}{Adj\+List}} (const std\+::vector$<$ unsigned int $>$ \&source, const std\+::vector$<$ unsigned int $>$ \&target, bool directed, int min\+\_\+id=-\/1, int max\+\_\+id=-\/1)
-\begin{DoxyCompactList}\small\item\em Construct a new Adj List object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a4c07113e353eab697964b64e38ad710e}\label{classepiworld_1_1_adj_list_a4c07113e353eab697964b64e38ad710e}} 
-void {\bfseries read\+\_\+edgelist} (std\+::string fn, int skip=0, bool directed=true, int min\+\_\+id=-\/1, int max\+\_\+id=-\/1)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a06bc92a042a7f313ec3e9faf869f00ea}\label{classepiworld_1_1_adj_list_a06bc92a042a7f313ec3e9faf869f00ea}} 
-std\+::map$<$ unsigned int, unsigned int $>$ {\bfseries operator()} (unsigned int i) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a785ba1893013552e84c1b246af7427b5}\label{classepiworld_1_1_adj_list_a785ba1893013552e84c1b246af7427b5}} 
-void {\bfseries print} (unsigned int limit=20u) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_aa7d57ee2cce6de58017a81fefc1ee34f}\label{classepiworld_1_1_adj_list_aa7d57ee2cce6de58017a81fefc1ee34f}} 
-unsigned int {\bfseries get\+\_\+id\+\_\+max} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_aaee5772f0833058619ade13657efa9b6}\label{classepiworld_1_1_adj_list_aaee5772f0833058619ade13657efa9b6}} 
-unsigned int {\bfseries get\+\_\+id\+\_\+min} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a0b909f7aa06dcd904b24d6ffb5b4bd99}\label{classepiworld_1_1_adj_list_a0b909f7aa06dcd904b24d6ffb5b4bd99}} 
-size\+\_\+t {\bfseries vcount} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a77a0d4618c971679ed548ec94881d91b}\label{classepiworld_1_1_adj_list_a77a0d4618c971679ed548ec94881d91b}} 
-size\+\_\+t {\bfseries ecount} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_a4570d002b26e107c2d1ba81546478c2d}\label{classepiworld_1_1_adj_list_a4570d002b26e107c2d1ba81546478c2d}} 
-std\+::map$<$ unsigned int, std\+::map$<$ unsigned int, unsigned int $>$ $>$ \& {\bfseries get\+\_\+dat} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_af2fdf76b4099f7da5570fbfba2906f27}\label{classepiworld_1_1_adj_list_af2fdf76b4099f7da5570fbfba2906f27}} 
-bool {\bfseries is\+\_\+directed} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if the network is directed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classepiworld_1_1_adj_list_a62a25b8a845d552028d7e730b2098987}\label{classepiworld_1_1_adj_list_a62a25b8a845d552028d7e730b2098987}} 
 \index{epiworld::AdjList@{epiworld::AdjList}!AdjList@{AdjList}}
 \index{AdjList@{AdjList}!epiworld::AdjList@{epiworld::AdjList}}
-\doxysubsubsection{\texorpdfstring{AdjList()}{AdjList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{AdjList()}{AdjList()}}
 {\footnotesize\ttfamily Adj\+List\+::\+Adj\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned int $>$ \&}]{source,  }\item[{const std\+::vector$<$ unsigned int $>$ \&}]{target,  }\item[{int}]{size,  }\item[{bool}]{directed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -78,31 +49,6 @@ Ids in the network are assume to range from {\ttfamily 0} to {\ttfamily size -\/
 {\em size} & Number of vertices in the network. \\
 \hline
 {\em directed} & Bool true if the network is directed \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_adj_list_ac3a2f15c4f93bbf1527c4f808559d55e}\label{classepiworld_1_1_adj_list_ac3a2f15c4f93bbf1527c4f808559d55e}} 
-\index{epiworld::AdjList@{epiworld::AdjList}!AdjList@{AdjList}}
-\index{AdjList@{AdjList}!epiworld::AdjList@{epiworld::AdjList}}
-\doxysubsubsection{\texorpdfstring{AdjList()}{AdjList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Adj\+List\+::\+Adj\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned int $>$ \&}]{source,  }\item[{const std\+::vector$<$ unsigned int $>$ \&}]{target,  }\item[{bool}]{directed,  }\item[{int}]{min\+\_\+id = {\ttfamily -\/1},  }\item[{int}]{max\+\_\+id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Construct a new Adj List object. 
-
-It will create an adjacency list object with {\ttfamily maxid -\/ minid + 1} nodes. If min\+\_\+id and max\+\_\+id are not specified (both $<$ 0), then the program will try to figure them out automatically by looking at the range of the observed ids.
-
-
-\begin{DoxyParams}{Parameters}
-{\em source} & Unsigned int vector with the source \\
-\hline
-{\em target} & Unsigned int vector with the target \\
-\hline
-{\em directed} & Bool true if the network is directed \\
-\hline
-{\em min\+\_\+id} & int min id. \\
-\hline
-{\em max\+\_\+id} & int max id. \\
 \hline
 \end{DoxyParams}
 

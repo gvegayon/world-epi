@@ -81,271 +81,7 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 void \mbox{\hyperlink{classepiworld_1_1_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4b6fee5e8cc1d67b2b46c3e06dd7fb2a}\label{classepiworld_1_1_model_a4b6fee5e8cc1d67b2b46c3e06dd7fb2a}} 
-{\bfseries Model} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aafdb572cb3ce9d3f0ee44135d19601b2}\label{classepiworld_1_1_model_aafdb572cb3ce9d3f0ee44135d19601b2}} 
-{\bfseries Model} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&\&m)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae29e3a0872a42368b168b01cb9167885}\label{classepiworld_1_1_model_ae29e3a0872a42368b168b01cb9167885}} 
-\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a53265dd7471b77f1571b184d298bf02b}\label{classepiworld_1_1_model_a53265dd7471b77f1571b184d298bf02b}} 
-void {\bfseries clone\+\_\+population} (std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_person}{Person}}$<$ TSeq $>$ $>$ \&p, std\+::map$<$ int, int $>$ \&p\+\_\+ids, bool \&d, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$m=nullptr) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6e583a4ac77731769c1715c604d2177c}\label{classepiworld_1_1_model_a6e583a4ac77731769c1715c604d2177c}} 
-void {\bfseries clone\+\_\+population} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a8dac7be907b0ddeb4109562e8d16a4d1}{set\+\_\+backup}} ()
-\begin{DoxyCompactList}\small\item\em Set the backup object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a111d48039f7e3de7a1bf32a5644aab98}\label{classepiworld_1_1_model_a111d48039f7e3de7a1bf32a5644aab98}} 
-void {\bfseries restore\+\_\+backup} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9b1ca7337427a404cf44ad3fbb6e9c3b}\label{classepiworld_1_1_model_a9b1ca7337427a404cf44ad3fbb6e9c3b}} 
-\mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1_model_a9b1ca7337427a404cf44ad3fbb6e9c3b}{get\+\_\+db}} ()
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_abb5634cbc77dd1fdb4cca3c89bfc5292}\label{classepiworld_1_1_model_abb5634cbc77dd1fdb4cca3c89bfc5292}} 
-epiworld\+\_\+double \& {\bfseries operator()} (std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac1fe363947a8b68f286ffbd95e57448c}\label{classepiworld_1_1_model_ac1fe363947a8b68f286ffbd95e57448c}} 
-size\+\_\+t {\bfseries size} () const
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}{set\+\_\+rand\+\_\+engine}} (std\+::mt19937 \&eng)
-\begin{DoxyCompactList}\small\item\em Random number generation. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a55a9d92f10b0c7b0c0c628d059015d31}\label{classepiworld_1_1_model_a55a9d92f10b0c7b0c0c628d059015d31}} 
-std\+::mt19937 $\ast$ {\bfseries get\+\_\+rand\+\_\+endgine} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae8be96ed9e26fbcba47ff2bd2481f470}\label{classepiworld_1_1_model_ae8be96ed9e26fbcba47ff2bd2481f470}} 
-void {\bfseries seed} (unsigned int s)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1dd9276ff9bcddb0d2dc2eaa2568520a}\label{classepiworld_1_1_model_a1dd9276ff9bcddb0d2dc2eaa2568520a}} 
-void {\bfseries set\+\_\+rand\+\_\+gamma} (epiworld\+\_\+double alpha, epiworld\+\_\+double beta)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1b9393c15417e499ff1be3d17e78e926}\label{classepiworld_1_1_model_a1b9393c15417e499ff1be3d17e78e926}} 
-epiworld\+\_\+double {\bfseries runif} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a38afae0b3fb944d34900d96ee732edc1}\label{classepiworld_1_1_model_a38afae0b3fb944d34900d96ee732edc1}} 
-epiworld\+\_\+double {\bfseries rnorm} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_acf2463e7d58d58f7ebc6f58b7f650131}\label{classepiworld_1_1_model_acf2463e7d58d58f7ebc6f58b7f650131}} 
-epiworld\+\_\+double {\bfseries rnorm} (epiworld\+\_\+double mean, epiworld\+\_\+double sd)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aec5b47419bc3f818be89ca09698013a2}\label{classepiworld_1_1_model_aec5b47419bc3f818be89ca09698013a2}} 
-epiworld\+\_\+double {\bfseries rgamma} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5e1cadb28176c760c3620cb36537c8fc}\label{classepiworld_1_1_model_a5e1cadb28176c760c3620cb36537c8fc}} 
-epiworld\+\_\+double {\bfseries rgamma} (epiworld\+\_\+double alpha, epiworld\+\_\+double beta)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ab96ecca1439d0efd57c16df75680b22c}\label{classepiworld_1_1_model_ab96ecca1439d0efd57c16df75680b22c}} 
-void \mbox{\hyperlink{classepiworld_1_1_model_ab96ecca1439d0efd57c16df75680b22c}{add\+\_\+virus}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ v, epiworld\+\_\+double preval)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a839d92d2f4d6c1142ad6225c43cdb02d}\label{classepiworld_1_1_model_a839d92d2f4d6c1142ad6225c43cdb02d}} 
-void {\bfseries add\+\_\+virus\+\_\+n} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ v, unsigned int preval)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_af011fdad586f2501f261aed4ccb0434b}\label{classepiworld_1_1_model_af011fdad586f2501f261aed4ccb0434b}} 
-void {\bfseries add\+\_\+tool} (\mbox{\hyperlink{classepiworld_1_1_tool}{Tool}}$<$ TSeq $>$ t, epiworld\+\_\+double preval)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a06a4728bff527176a0cdcb8fbae0db4a}\label{classepiworld_1_1_model_a06a4728bff527176a0cdcb8fbae0db4a}} 
-void {\bfseries add\+\_\+tool\+\_\+n} (\mbox{\hyperlink{classepiworld_1_1_tool}{Tool}}$<$ TSeq $>$ t, unsigned int preval)
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_ad228aed8654e0f1eb6f5ccc58156cfb6}{pop\+\_\+from\+\_\+adjlist}} (std\+::string fn, int skip=0, bool directed=false, int min\+\_\+id=-\/1, int max\+\_\+id=-\/1)
-\begin{DoxyCompactList}\small\item\em Accessing population of the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0afb11e07c35341134dbd1d219fbe8a1}\label{classepiworld_1_1_model_a0afb11e07c35341134dbd1d219fbe8a1}} 
-void {\bfseries pop\+\_\+from\+\_\+adjlist} (\mbox{\hyperlink{classepiworld_1_1_adj_list}{Adj\+List}} al)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a2733db61be1c5c407fa291e2314651cd}\label{classepiworld_1_1_model_a2733db61be1c5c407fa291e2314651cd}} 
-bool {\bfseries is\+\_\+directed} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a47bc8b81bf75f0732712f38f1d2c07f6}\label{classepiworld_1_1_model_a47bc8b81bf75f0732712f38f1d2c07f6}} 
-std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_person}{Person}}$<$ TSeq $>$ $>$ $\ast$ {\bfseries get\+\_\+population} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1d148129766a675e1695872027962247}\label{classepiworld_1_1_model_a1d148129766a675e1695872027962247}} 
-void {\bfseries pop\+\_\+from\+\_\+random} (unsigned int n=1000, unsigned int k=5, bool d=false, epiworld\+\_\+double p=.\+01)
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a99720a4e24ebbd1849e3ee01e2335bd2}{init}} (unsigned int ndays, unsigned int seed)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a66853c54864102f7c2259b80d9fc1638}\label{classepiworld_1_1_model_a66853c54864102f7c2259b80d9fc1638}} 
-void {\bfseries update\+\_\+status} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a60bdb7efa1de9716579b32f9899d3428}\label{classepiworld_1_1_model_a60bdb7efa1de9716579b32f9899d3428}} 
-void {\bfseries mutate\+\_\+variant} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aea83bd992117ac236fa4fa5accd3bf2c}\label{classepiworld_1_1_model_aea83bd992117ac236fa4fa5accd3bf2c}} 
-void {\bfseries next} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a90a6d9db5628d1a7129876e96a74f666}\label{classepiworld_1_1_model_a90a6d9db5628d1a7129876e96a74f666}} 
-void {\bfseries run} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a19824502152690539d276715589683c9}\label{classepiworld_1_1_model_a19824502152690539d276715589683c9}} 
-void {\bfseries run\+\_\+multiple} (unsigned int nexperiments, std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun, bool \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}, bool verbose)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aecf6782e468b78459a37187903845d12}\label{classepiworld_1_1_model_aecf6782e468b78459a37187903845d12}} 
-void \mbox{\hyperlink{classepiworld_1_1_model_aecf6782e468b78459a37187903845d12}{record\+\_\+variant}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5eac1533dd336124785f9ba2c79a168c}\label{classepiworld_1_1_model_a5eac1533dd336124785f9ba2c79a168c}} 
-int {\bfseries get\+\_\+nvariants} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a21c995533e20f7d2e18bd41e939b05c7}\label{classepiworld_1_1_model_a21c995533e20f7d2e18bd41e939b05c7}} 
-unsigned int {\bfseries get\+\_\+ndays} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a3169437c93b12f9c34103d687f8db717}\label{classepiworld_1_1_model_a3169437c93b12f9c34103d687f8db717}} 
-void {\bfseries set\+\_\+ndays} (unsigned int ndays)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8ff741b23004e310e807df15f59a7d1b}\label{classepiworld_1_1_model_a8ff741b23004e310e807df15f59a7d1b}} 
-bool {\bfseries get\+\_\+verbose} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a29b4f8e002d5aa727705dd50f7d60df2}\label{classepiworld_1_1_model_a29b4f8e002d5aa727705dd50f7d60df2}} 
-void {\bfseries verbose\+\_\+off} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ad7e99101f60d2139ab76c6b916cc0906}\label{classepiworld_1_1_model_ad7e99101f60d2139ab76c6b916cc0906}} 
-void {\bfseries verbose\+\_\+on} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aaa665337079262d493f3904cd99a132b}\label{classepiworld_1_1_model_aaa665337079262d493f3904cd99a132b}} 
-int {\bfseries today} () const
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_ae3c3f9d908aebef89e5ce98823af8cb1}{set\+\_\+rewire\+\_\+fun}} (std\+::function$<$ void(std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_person}{Person}}$<$ TSeq $>$$>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$, epiworld\+\_\+double)$>$ fun)
-\begin{DoxyCompactList}\small\item\em Rewire the network preserving the degree sequence. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4d1a37b8b8922f06fd1b40d3dada6f59}\label{classepiworld_1_1_model_a4d1a37b8b8922f06fd1b40d3dada6f59}} 
-void {\bfseries set\+\_\+rewire\+\_\+prop} (epiworld\+\_\+double prop)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ad4d93697c43055e74210348c7d56de49}\label{classepiworld_1_1_model_ad4d93697c43055e74210348c7d56de49}} 
-epiworld\+\_\+double {\bfseries get\+\_\+rewire\+\_\+prop} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a2227afd6fc6ac3f148f5dc060bca1373}\label{classepiworld_1_1_model_a2227afd6fc6ac3f148f5dc060bca1373}} 
-void {\bfseries rewire} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_acd773e1a9dd762b8735886e6f27598bd}\label{classepiworld_1_1_model_acd773e1a9dd762b8735886e6f27598bd}} 
-void \mbox{\hyperlink{classepiworld_1_1_model_acd773e1a9dd762b8735886e6f27598bd}{set\+\_\+update\+\_\+susceptible}} (Update\+Fun$<$ TSeq $>$ fun)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a7f0468cdca24a951e39d9a06fb73d7b9}\label{classepiworld_1_1_model_a7f0468cdca24a951e39d9a06fb73d7b9}} 
-void {\bfseries set\+\_\+update\+\_\+exposed} (Update\+Fun$<$ TSeq $>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_afe91a508a304b20929208b7b156ff4cd}\label{classepiworld_1_1_model_afe91a508a304b20929208b7b156ff4cd}} 
-void {\bfseries set\+\_\+update\+\_\+removed} (Update\+Fun$<$ TSeq $>$ fun)
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a6c07199ce0c9102cccb9749a7eda421d}{write\+\_\+data}} (std\+::string fn\+\_\+variant\+\_\+info, std\+::string fn\+\_\+variant\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition) const
-\begin{DoxyCompactList}\small\item\em Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a9843d2f6c92916f775baf47e6d5a9fde}{write\+\_\+edgelist}} (std\+::string fn) const
-\begin{DoxyCompactList}\small\item\em Export the network data in edgelist form. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac0c29dd30c5d89399a10922e29fcfed2}\label{classepiworld_1_1_model_ac0c29dd30c5d89399a10922e29fcfed2}} 
-void {\bfseries write\+\_\+edgelist} (std\+::vector$<$ unsigned int $>$ \&source, std\+::vector$<$ unsigned int $>$ \&target) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4c9648dcf5ad648eaa6610e2d884b5c8}\label{classepiworld_1_1_model_a4c9648dcf5ad648eaa6610e2d884b5c8}} 
-std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& \mbox{\hyperlink{classepiworld_1_1_model_a4c9648dcf5ad648eaa6610e2d884b5c8}{params}} ()
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a56e55a360f83f839426ed88caeec54d0}{reset}} ()
-\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ad8df696e567f83d1e3ff1a88e71bf371}\label{classepiworld_1_1_model_ad8df696e567f83d1e3ff1a88e71bf371}} 
-void {\bfseries print} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a05349fb0ba94a21e986539c725aa9455}\label{classepiworld_1_1_model_a05349fb0ba94a21e986539c725aa9455}} 
-\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&\& {\bfseries clone} () const
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_ad8dcbd73a6af4d2136641d66121c0c51}{add\+\_\+status\+\_\+susceptible}} (epiworld\+\_\+fast\+\_\+uint s, std\+::string lab)
-\begin{DoxyCompactList}\small\item\em Adds extra statuses to the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a722d349d0cf4fb5a794ac5b99e27e60b}\label{classepiworld_1_1_model_a722d349d0cf4fb5a794ac5b99e27e60b}} 
-void {\bfseries add\+\_\+status\+\_\+exposed} (epiworld\+\_\+fast\+\_\+uint s, std\+::string lab)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a48821df94966d9378d95b331c572cf46}\label{classepiworld_1_1_model_a48821df94966d9378d95b331c572cf46}} 
-void {\bfseries add\+\_\+status\+\_\+removed} (epiworld\+\_\+fast\+\_\+uint s, std\+::string lab)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a61949aaf7d1a50760833b407d870f9e0}\label{classepiworld_1_1_model_a61949aaf7d1a50760833b407d870f9e0}} 
-void {\bfseries add\+\_\+status\+\_\+susceptible} (std\+::string lab)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_af24f512a9370addfeec8723d9b735e05}\label{classepiworld_1_1_model_af24f512a9370addfeec8723d9b735e05}} 
-void {\bfseries add\+\_\+status\+\_\+exposed} (std\+::string lab)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a32c38a9855bbb306df3dd0abea7bcbc8}\label{classepiworld_1_1_model_a32c38a9855bbb306df3dd0abea7bcbc8}} 
-void {\bfseries add\+\_\+status\+\_\+removed} (std\+::string lab)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a484c7f24fb62f3c5ff0a70a8d4a98726}\label{classepiworld_1_1_model_a484c7f24fb62f3c5ff0a70a8d4a98726}} 
-const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \& {\bfseries get\+\_\+status\+\_\+susceptible} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ab55d23304d57d8f25719ce7edb802630}\label{classepiworld_1_1_model_ab55d23304d57d8f25719ce7edb802630}} 
-const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \& {\bfseries get\+\_\+status\+\_\+exposed} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a7668bd109374144bb246f4ed1e2b9f1e}\label{classepiworld_1_1_model_a7668bd109374144bb246f4ed1e2b9f1e}} 
-const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \& {\bfseries get\+\_\+status\+\_\+removed} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_abd4d6de30019b7ee3f90c2e6c14d6003}\label{classepiworld_1_1_model_abd4d6de30019b7ee3f90c2e6c14d6003}} 
-const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+status\+\_\+susceptible\+\_\+labels} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1ed0a73671318e8a8ae52e613b79ddf3}\label{classepiworld_1_1_model_a1ed0a73671318e8a8ae52e613b79ddf3}} 
-const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+status\+\_\+exposed\+\_\+labels} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a77b0d03856469defc627cf9fab576917}\label{classepiworld_1_1_model_a77b0d03856469defc627cf9fab576917}} 
-const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+status\+\_\+removed\+\_\+labels} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a41f2c9626ae7277d4370814df6dc738b}\label{classepiworld_1_1_model_a41f2c9626ae7277d4370814df6dc738b}} 
-void {\bfseries print\+\_\+status\+\_\+codes} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a969a74cd135276bdab6a7022b7c6f6aa}\label{classepiworld_1_1_model_a969a74cd135276bdab6a7022b7c6f6aa}} 
-epiworld\+\_\+fast\+\_\+uint {\bfseries get\+\_\+default\+\_\+susceptible} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9be5663b3f3abb6d830fd66eaaf97e1d}\label{classepiworld_1_1_model_a9be5663b3f3abb6d830fd66eaaf97e1d}} 
-epiworld\+\_\+fast\+\_\+uint {\bfseries get\+\_\+default\+\_\+exposed} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8a4e9b0c0a803df412d7914dc6f4d72e}\label{classepiworld_1_1_model_a8a4e9b0c0a803df412d7914dc6f4d72e}} 
-epiworld\+\_\+fast\+\_\+uint {\bfseries get\+\_\+default\+\_\+removed} () const
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_aa5819bef86c4c7d5623a7525831fb73c}{reset\+\_\+status\+\_\+codes}} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ codes, std\+::vector$<$ std\+::string $>$ names, bool verbose=true)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-epiworld\+\_\+double \mbox{\hyperlink{classepiworld_1_1_model_a9aa4e37291fdc6e6b8643e5d28080961}{add\+\_\+param}} (epiworld\+\_\+double initial\+\_\+val, std\+::string pname)
-\begin{DoxyCompactList}\small\item\em Setting and accessing parameters from the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1db9259e58b919268420fa54f2aba8fb}\label{classepiworld_1_1_model_a1db9259e58b919268420fa54f2aba8fb}} 
-epiworld\+\_\+double {\bfseries set\+\_\+param} (std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6039bba88efd91d8993a96c154f1ac28}\label{classepiworld_1_1_model_a6039bba88efd91d8993a96c154f1ac28}} 
-epiworld\+\_\+double {\bfseries get\+\_\+param} (unsigned int k)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_acd6c5c30908492df05bc0ef3ee7c7ad4}\label{classepiworld_1_1_model_acd6c5c30908492df05bc0ef3ee7c7ad4}} 
-epiworld\+\_\+double {\bfseries get\+\_\+param} (std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac5cf9b418167050c9b842dc847a78f48}\label{classepiworld_1_1_model_ac5cf9b418167050c9b842dc847a78f48}} 
-epiworld\+\_\+double {\bfseries par} (unsigned int k)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1606272f1933a72fc94ff076dd52d518}\label{classepiworld_1_1_model_a1606272f1933a72fc94ff076dd52d518}} 
-epiworld\+\_\+double {\bfseries par} (std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6d3c8549e9666ab93664995e79a3cab7}\label{classepiworld_1_1_model_a6d3c8549e9666ab93664995e79a3cab7}} 
-void \mbox{\hyperlink{classepiworld_1_1_model_a6d3c8549e9666ab93664995e79a3cab7}{get\+\_\+elapsed}} (std\+::string unit=\char`\"{}auto\char`\"{}, epiworld\+\_\+double $\ast$last\+\_\+elapsed=nullptr, epiworld\+\_\+double $\ast$total\+\_\+elapsed=nullptr, unsigned int $\ast$n\+\_\+replicates=nullptr, std\+::string $\ast$unit\+\_\+abbr=nullptr, bool print=true) const
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a61893953dc4fa046b84a77c89a5bc458}{set\+\_\+user\+\_\+data}} (std\+::vector$<$ std\+::string $>$ names)
-\begin{DoxyCompactList}\small\item\em Set the user data object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8e3fcc3985242b8378312c43e3802329}\label{classepiworld_1_1_model_a8e3fcc3985242b8378312c43e3802329}} 
-void {\bfseries add\+\_\+user\+\_\+data} (unsigned int j, epiworld\+\_\+double x)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a524db64f5eb1bef20247184d6a127931}\label{classepiworld_1_1_model_a524db64f5eb1bef20247184d6a127931}} 
-void {\bfseries add\+\_\+user\+\_\+data} (std\+::vector$<$ epiworld\+\_\+double $>$ x)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac4ad5aa58c6b79e0acd20ce1fc119cc5}\label{classepiworld_1_1_model_ac4ad5aa58c6b79e0acd20ce1fc119cc5}} 
-\mbox{\hyperlink{classepiworld_1_1_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac935c51bfdbf17d5061b325d971f10fd}\label{classepiworld_1_1_model_ac935c51bfdbf17d5061b325d971f10fd}} 
-void \mbox{\hyperlink{classepiworld_1_1_model_ac935c51bfdbf17d5061b325d971f10fd}{add\+\_\+global\+\_\+action}} (std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun, int date)
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a7ab9ecc7e51c705c57c14f70d663c85d}\label{classepiworld_1_1_model_a7ab9ecc7e51c705c57c14f70d663c85d}} 
-void {\bfseries run\+\_\+global\+\_\+actions} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aae43e087c6d2fd8c1f0ad92d50f78eb8}\label{classepiworld_1_1_model_aae43e087c6d2fd8c1f0ad92d50f78eb8}} 
-void {\bfseries clear\+\_\+status\+\_\+set} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5a5392dbe1c59fe1d2de493b50c1b1ce}\label{classepiworld_1_1_model_a5a5392dbe1c59fe1d2de493b50c1b1ce}} 
-void {\bfseries toggle\+\_\+visited} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a7472a8c391fc68a31e2851da020bddcd}\label{classepiworld_1_1_model_a7472a8c391fc68a31e2851da020bddcd}} 
-void {\bfseries queuing\+\_\+on} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ad3da39a01a4afce3839551de4006a6e8}\label{classepiworld_1_1_model_ad3da39a01a4afce3839551de4006a6e8}} 
-void {\bfseries queuing\+\_\+off} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0b8d8ed53590fce7899da86097dc9fc4}\label{classepiworld_1_1_model_a0b8d8ed53590fce7899da86097dc9fc4}} 
-bool {\bfseries is\+\_\+queuing\+\_\+on} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9ee951360c19641153b6fd527765a8cb}\label{classepiworld_1_1_model_a9ee951360c19641153b6fd527765a8cb}} 
-\mbox{\hyperlink{classepiworld_1_1_queue}{Queue}}$<$ TSeq $>$ \& {\bfseries get\+\_\+queue} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Set the backup object}\par
 {\em {\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. }\begin{DoxyCompactItemize}
 \item 
@@ -676,18 +412,15 @@ class {\bfseries Data\+Base$<$ TSeq $>$}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a2bfabd70b21ded1907307daeb724ae58}\label{classepiworld_1_1_model_a2bfabd70b21ded1907307daeb724ae58}} 
 class {\bfseries Queue$<$ TSeq $>$}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a195def33d9d6483c6a309af6984bbf90}\label{classepiworld_1_1_model_a195def33d9d6483c6a309af6984bbf90}} 
-class {\bfseries Person$<$ TSeq $>$}
 \end{DoxyCompactItemize}
 \doxysubsection*{Tool Mixers}
 \label{_amgrp67ee6851908e1ae3beb62101cd96087d}%
 These functions combine the effects tools have to deliver a single effect. For example, wearing a mask, been vaccinated, and the immune system combine together to jointly reduce the susceptibility for a given virus. \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a37522c5a7345ecb275eeff136caa6bf5}\label{classepiworld_1_1_model_a37522c5a7345ecb275eeff136caa6bf5}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a85c4d2b9fb36014ddf7aea1c5730dad8}\label{classepiworld_1_1_model_a85c4d2b9fb36014ddf7aea1c5730dad8}} 
 std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries array\+\_\+double\+\_\+tmp}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aaf5ab3a33e671343d2102d532779bf46}\label{classepiworld_1_1_model_aaf5ab3a33e671343d2102d532779bf46}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_aeb21deba7e0952d68f24ace44726595d}\label{classepiworld_1_1_model_aeb21deba7e0952d68f24ace44726595d}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries array\+\_\+virus\+\_\+tmp}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a9a5bf2e16359abdc54ab4daeb0ab8260}\label{classepiworld_1_1_model_a9a5bf2e16359abdc54ab4daeb0ab8260}} 
@@ -741,127 +474,127 @@ The current value of the parameter in the model.
 \end{DoxyReturn}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ab07a96a5d0c6be72e20b05b64b671ac0}\label{classepiworld_1_1_model_ab07a96a5d0c6be72e20b05b64b671ac0}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a563f9bb80b7f90d86a0eeb7e11055c8f}\label{classepiworld_1_1_model_a563f9bb80b7f90d86a0eeb7e11055c8f}} 
 epiworld\+\_\+double $\ast$ {\bfseries p0}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a3aaf79fb68dcee391fa250a1c97c7ca0}\label{classepiworld_1_1_model_a3aaf79fb68dcee391fa250a1c97c7ca0}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac997538ba98e258e54ccfbefc3c41548}\label{classepiworld_1_1_model_ac997538ba98e258e54ccfbefc3c41548}} 
 epiworld\+\_\+double $\ast$ {\bfseries p1}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a07303a360643a91d425eaabc0827d048}\label{classepiworld_1_1_model_a07303a360643a91d425eaabc0827d048}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a9819370790d938b71d855b2fa784b279}\label{classepiworld_1_1_model_a9819370790d938b71d855b2fa784b279}} 
 epiworld\+\_\+double $\ast$ {\bfseries p2}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae6bb4cab4c96289d0229a8668cba58ab}\label{classepiworld_1_1_model_ae6bb4cab4c96289d0229a8668cba58ab}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a879a666061f32d6e5f8b9662239be310}\label{classepiworld_1_1_model_a879a666061f32d6e5f8b9662239be310}} 
 epiworld\+\_\+double $\ast$ {\bfseries p3}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a3c319d7b5addced5141da1136de4d3ec}\label{classepiworld_1_1_model_a3c319d7b5addced5141da1136de4d3ec}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a08b1df7ead404b389627b98dcdd3b059}\label{classepiworld_1_1_model_a08b1df7ead404b389627b98dcdd3b059}} 
 epiworld\+\_\+double $\ast$ {\bfseries p4}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6cc7dfa806458716c3b39256fd87585c}\label{classepiworld_1_1_model_a6cc7dfa806458716c3b39256fd87585c}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a40ff8973ebe0fa1d91626e67b757c79e}\label{classepiworld_1_1_model_a40ff8973ebe0fa1d91626e67b757c79e}} 
 epiworld\+\_\+double $\ast$ {\bfseries p5}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac446cd47d90b84f4de5335b66525fc5f}\label{classepiworld_1_1_model_ac446cd47d90b84f4de5335b66525fc5f}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a09273817b80c1704e4c50b3fc041f3bd}\label{classepiworld_1_1_model_a09273817b80c1704e4c50b3fc041f3bd}} 
 epiworld\+\_\+double $\ast$ {\bfseries p6}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6ba82634066ea7d2dc93c4f7d90be79c}\label{classepiworld_1_1_model_a6ba82634066ea7d2dc93c4f7d90be79c}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a4e3da70bcf1b342bce6ba7b4f1289dc9}\label{classepiworld_1_1_model_a4e3da70bcf1b342bce6ba7b4f1289dc9}} 
 epiworld\+\_\+double $\ast$ {\bfseries p7}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a70ba65ecccdcd73888b0ac64154d7c04}\label{classepiworld_1_1_model_a70ba65ecccdcd73888b0ac64154d7c04}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_aef5212e40231f12f219f89e4f55a4d56}\label{classepiworld_1_1_model_aef5212e40231f12f219f89e4f55a4d56}} 
 epiworld\+\_\+double $\ast$ {\bfseries p8}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac22587b4c247f13ca06e4588262366b7}\label{classepiworld_1_1_model_ac22587b4c247f13ca06e4588262366b7}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac83602c1feaa564bae8359bfc6575afb}\label{classepiworld_1_1_model_ac83602c1feaa564bae8359bfc6575afb}} 
 epiworld\+\_\+double $\ast$ {\bfseries p9}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9f9b8c444f26caf16d796e740e3ac6fb}\label{classepiworld_1_1_model_a9f9b8c444f26caf16d796e740e3ac6fb}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_aec8441d75f2e962b445b4431f339dc95}\label{classepiworld_1_1_model_aec8441d75f2e962b445b4431f339dc95}} 
 epiworld\+\_\+double $\ast$ {\bfseries p10}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a30e96e2c5855e24fb4d415f4e86d58a9}\label{classepiworld_1_1_model_a30e96e2c5855e24fb4d415f4e86d58a9}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a1c5f9a32bb44c68041639d3ebd9da546}\label{classepiworld_1_1_model_a1c5f9a32bb44c68041639d3ebd9da546}} 
 epiworld\+\_\+double $\ast$ {\bfseries p11}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1920964e174db4495af92bb065632ff9}\label{classepiworld_1_1_model_a1920964e174db4495af92bb065632ff9}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5ed46254b31d8b15ffefbde67aca65f2}\label{classepiworld_1_1_model_a5ed46254b31d8b15ffefbde67aca65f2}} 
 epiworld\+\_\+double $\ast$ {\bfseries p12}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5ec5f2bbcf3a4c85f09692854463dce2}\label{classepiworld_1_1_model_a5ec5f2bbcf3a4c85f09692854463dce2}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a54c8687e102684a9c59cf605f1bd03ea}\label{classepiworld_1_1_model_a54c8687e102684a9c59cf605f1bd03ea}} 
 epiworld\+\_\+double $\ast$ {\bfseries p13}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a18a356a81252d3d099ff491db6a89ea4}\label{classepiworld_1_1_model_a18a356a81252d3d099ff491db6a89ea4}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a892bee02fe465790f45cf2b124d15310}\label{classepiworld_1_1_model_a892bee02fe465790f45cf2b124d15310}} 
 epiworld\+\_\+double $\ast$ {\bfseries p14}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a64a1040593a14fcfa8ab61a45de0c83e}\label{classepiworld_1_1_model_a64a1040593a14fcfa8ab61a45de0c83e}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a8b31404910aa56872f255afd8022c57b}\label{classepiworld_1_1_model_a8b31404910aa56872f255afd8022c57b}} 
 epiworld\+\_\+double $\ast$ {\bfseries p15}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ad40b6b413296cd2dde77b27ecad39fd3}\label{classepiworld_1_1_model_ad40b6b413296cd2dde77b27ecad39fd3}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a27d5cda8881467fb532116df1bc77969}\label{classepiworld_1_1_model_a27d5cda8881467fb532116df1bc77969}} 
 epiworld\+\_\+double $\ast$ {\bfseries p16}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8eaecf8e7722f7156554bb05d1852579}\label{classepiworld_1_1_model_a8eaecf8e7722f7156554bb05d1852579}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a25cc3bfd07b83bbbc1664b211bfcb349}\label{classepiworld_1_1_model_a25cc3bfd07b83bbbc1664b211bfcb349}} 
 epiworld\+\_\+double $\ast$ {\bfseries p17}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a37ccad60c6e42500c49d0cf703d05b76}\label{classepiworld_1_1_model_a37ccad60c6e42500c49d0cf703d05b76}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac461c40cd12bfbff31e09d7b476bbe8d}\label{classepiworld_1_1_model_ac461c40cd12bfbff31e09d7b476bbe8d}} 
 epiworld\+\_\+double $\ast$ {\bfseries p18}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae5fcc5246ae675d8b1c622128bb95403}\label{classepiworld_1_1_model_ae5fcc5246ae675d8b1c622128bb95403}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0cd0351a09698531c884dad8a2b129d4}\label{classepiworld_1_1_model_a0cd0351a09698531c884dad8a2b129d4}} 
 epiworld\+\_\+double $\ast$ {\bfseries p19}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a62ab573e746531f718067d7b9ebed68e}\label{classepiworld_1_1_model_a62ab573e746531f718067d7b9ebed68e}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ae62889369dfeda611beca0e7ee524e08}\label{classepiworld_1_1_model_ae62889369dfeda611beca0e7ee524e08}} 
 epiworld\+\_\+double $\ast$ {\bfseries p20}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aae928ccb852aa3bc8983ab909837bbc8}\label{classepiworld_1_1_model_aae928ccb852aa3bc8983ab909837bbc8}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ae3ef4ee549cf5a0f44ef413c11b5258c}\label{classepiworld_1_1_model_ae3ef4ee549cf5a0f44ef413c11b5258c}} 
 epiworld\+\_\+double $\ast$ {\bfseries p21}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a08b5ddd071a2b2e53dec7f7ade42e040}\label{classepiworld_1_1_model_a08b5ddd071a2b2e53dec7f7ade42e040}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5ed6df8f12eb6e982f55ab1920270aee}\label{classepiworld_1_1_model_a5ed6df8f12eb6e982f55ab1920270aee}} 
 epiworld\+\_\+double $\ast$ {\bfseries p22}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_adf2824c8b4a210e00fe7723660c11680}\label{classepiworld_1_1_model_adf2824c8b4a210e00fe7723660c11680}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0144bfa93d1f031955da2ef4c3561d2d}\label{classepiworld_1_1_model_a0144bfa93d1f031955da2ef4c3561d2d}} 
 epiworld\+\_\+double $\ast$ {\bfseries p23}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4f3a01e04f06c1c767ecccb50d86c61c}\label{classepiworld_1_1_model_a4f3a01e04f06c1c767ecccb50d86c61c}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_aa9ae53d4a7f7c4a4ad4385f6bdbac09c}\label{classepiworld_1_1_model_aa9ae53d4a7f7c4a4ad4385f6bdbac09c}} 
 epiworld\+\_\+double $\ast$ {\bfseries p24}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1bf594e318eb39744c9c13bd273c1b98}\label{classepiworld_1_1_model_a1bf594e318eb39744c9c13bd273c1b98}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a077345884e0698935366f40fcd5118ef}\label{classepiworld_1_1_model_a077345884e0698935366f40fcd5118ef}} 
 epiworld\+\_\+double $\ast$ {\bfseries p25}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae716038dfcc4f28c3aebdd51056a5b08}\label{classepiworld_1_1_model_ae716038dfcc4f28c3aebdd51056a5b08}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a23ff4f0c1405cd51b99d169454e167fa}\label{classepiworld_1_1_model_a23ff4f0c1405cd51b99d169454e167fa}} 
 epiworld\+\_\+double $\ast$ {\bfseries p26}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac3aa465eb382a5eb25f40bdab636c4fc}\label{classepiworld_1_1_model_ac3aa465eb382a5eb25f40bdab636c4fc}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_aaafe10b2b264787432a44432e8af19d5}\label{classepiworld_1_1_model_aaafe10b2b264787432a44432e8af19d5}} 
 epiworld\+\_\+double $\ast$ {\bfseries p27}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a333245ef765a60f3c29c477a6144ecf4}\label{classepiworld_1_1_model_a333245ef765a60f3c29c477a6144ecf4}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ae4d947e2fb01ca385a3f856f445c5323}\label{classepiworld_1_1_model_ae4d947e2fb01ca385a3f856f445c5323}} 
 epiworld\+\_\+double $\ast$ {\bfseries p28}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_af5a3b37a8870042dd284fa0b9c59a092}\label{classepiworld_1_1_model_af5a3b37a8870042dd284fa0b9c59a092}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a846a3241c0bb561b16d4a78917d13d66}\label{classepiworld_1_1_model_a846a3241c0bb561b16d4a78917d13d66}} 
 epiworld\+\_\+double $\ast$ {\bfseries p29}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a19072fa40b4e15f42e1f27d57999afae}\label{classepiworld_1_1_model_a19072fa40b4e15f42e1f27d57999afae}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0b25b84862c8b9e3d34d1506c3902c81}\label{classepiworld_1_1_model_a0b25b84862c8b9e3d34d1506c3902c81}} 
 epiworld\+\_\+double $\ast$ {\bfseries p30}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aff62498ffc141543860ff2b2992af984}\label{classepiworld_1_1_model_aff62498ffc141543860ff2b2992af984}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a26005a1d15282bf6d7b54266d7cb0de1}\label{classepiworld_1_1_model_a26005a1d15282bf6d7b54266d7cb0de1}} 
 epiworld\+\_\+double $\ast$ {\bfseries p31}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a65767341d77511b55c507ad4221db543}\label{classepiworld_1_1_model_a65767341d77511b55c507ad4221db543}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5dd7b553268ff46432ba64a6a743d306}\label{classepiworld_1_1_model_a5dd7b553268ff46432ba64a6a743d306}} 
 epiworld\+\_\+double $\ast$ {\bfseries p32}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a084d421912c8baa6a2a1d04ab09f8b8a}\label{classepiworld_1_1_model_a084d421912c8baa6a2a1d04ab09f8b8a}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a6832e6c9f1d7697d6dc0d9741dbc154e}\label{classepiworld_1_1_model_a6832e6c9f1d7697d6dc0d9741dbc154e}} 
 epiworld\+\_\+double $\ast$ {\bfseries p33}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a83877127b96be1175f849f43cb8512d8}\label{classepiworld_1_1_model_a83877127b96be1175f849f43cb8512d8}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a6843cc87ce8704aca858595054575593}\label{classepiworld_1_1_model_a6843cc87ce8704aca858595054575593}} 
 epiworld\+\_\+double $\ast$ {\bfseries p34}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a12fe04d3ae05ca32135d10c58190cd1e}\label{classepiworld_1_1_model_a12fe04d3ae05ca32135d10c58190cd1e}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_adb84e07118161483d6535a9d0b91cb0d}\label{classepiworld_1_1_model_adb84e07118161483d6535a9d0b91cb0d}} 
 epiworld\+\_\+double $\ast$ {\bfseries p35}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8e7dffafe56edcc8cc7cc48778f3605c}\label{classepiworld_1_1_model_a8e7dffafe56edcc8cc7cc48778f3605c}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a9a42328da23eaa75a6304203af06b1d8}\label{classepiworld_1_1_model_a9a42328da23eaa75a6304203af06b1d8}} 
 epiworld\+\_\+double $\ast$ {\bfseries p36}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a779eda62b0b080273525dce8150b3770}\label{classepiworld_1_1_model_a779eda62b0b080273525dce8150b3770}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a4b66e1dbe47f51f2c2fc89981802a832}\label{classepiworld_1_1_model_a4b66e1dbe47f51f2c2fc89981802a832}} 
 epiworld\+\_\+double $\ast$ {\bfseries p37}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_acc0da8110d420278a84b906c9fbcddf6}\label{classepiworld_1_1_model_acc0da8110d420278a84b906c9fbcddf6}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a41292b3fc36a306aa811066e793ef31d}\label{classepiworld_1_1_model_a41292b3fc36a306aa811066e793ef31d}} 
 epiworld\+\_\+double $\ast$ {\bfseries p38}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a256cd64788b798e26e70470084978148}\label{classepiworld_1_1_model_a256cd64788b798e26e70470084978148}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a09bbc11d779a33f71aeaf66b532510ed}\label{classepiworld_1_1_model_a09bbc11d779a33f71aeaf66b532510ed}} 
 epiworld\+\_\+double $\ast$ {\bfseries p39}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6b01550c5b2e08ccc9417d3ca80ed329}\label{classepiworld_1_1_model_a6b01550c5b2e08ccc9417d3ca80ed329}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_ae410c88ed7d3d4bf39ebf783fa77b55a}\label{classepiworld_1_1_model_ae410c88ed7d3d4bf39ebf783fa77b55a}} 
 unsigned int {\bfseries npar\+\_\+used} = 0u
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}\label{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}} 
@@ -885,7 +618,7 @@ epiworld\+\_\+double {\bfseries par} (std\+::string pname)
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename TSeq = bool$>$\newline
+\subsubsection*{template$<$typename TSeq$>$\newline
 class epiworld\+::\+Model$<$ TSeq $>$}
 
 Core class of epiworld. 
@@ -918,112 +651,10 @@ Set a global action.
 {\em date} & Integer indicating when the function is called (see details)\\
 \hline
 \end{DoxyParams}
-When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{classepiworld_1_1_model_a9aa4e37291fdc6e6b8643e5d28080961}\label{classepiworld_1_1_model_a9aa4e37291fdc6e6b8643e5d28080961}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!add\_param@{add\_param}}
-\index{add\_param@{add\_param}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{add\_param()}{add\_param()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-epiworld\+\_\+double \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::add\+\_\+param (\begin{DoxyParamCaption}\item[{epiworld\+\_\+double}]{initial\+\_\+val,  }\item[{std\+::string}]{pname }\end{DoxyParamCaption})}
-
-
-
-Setting and accessing parameters from the model. 
-
-\mbox{\hyperlink{classepiworld_1_1_tools}{Tools}} can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std\+::map$<$$>$ of parameters in the model. Using the {\ttfamily unsigned int} method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the {\ttfamily std\+::string} method involves searching the parameter directly in the std\+::map$<$$>$ member of the model (so it is not recommended.)
-
-The function {\ttfamily set\+\_\+param()} can be used when the parameter already exists in the model.
-
-The {\ttfamily par()} function members are aliases for {\ttfamily get\+\_\+param()}.
-
-
-\begin{DoxyParams}{Parameters}
-{\em initial\+\_\+val} & \\
-\hline
-{\em pname} & Name of the parameter to add or to fetch \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The current value of the parameter in the model. @\mbox{[} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classepiworld_1_1_model_ad8dcbd73a6af4d2136641d66121c0c51}\label{classepiworld_1_1_model_ad8dcbd73a6af4d2136641d66121c0c51}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!add\_status\_susceptible@{add\_status\_susceptible}}
-\index{add\_status\_susceptible@{add\_status\_susceptible}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{add\_status\_susceptible()}{add\_status\_susceptible()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::add\+\_\+status\+\_\+susceptible (\begin{DoxyParamCaption}\item[{epiworld\+\_\+fast\+\_\+uint}]{s,  }\item[{std\+::string}]{lab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Adds extra statuses to the model. 
-
-Adding values of {\ttfamily s} that are already present in the model will result in an error.
-
-The functions {\ttfamily get\+\_\+status\+\_\+$\ast$} return the current values for the statuses included in the model.
-
-
-\begin{DoxyParams}{Parameters}
-{\em s} & {\ttfamily unsigned int} Code of the status \\
-\hline
-{\em lab} & {\ttfamily std\+::string} Name of the status.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-{\ttfamily add\+\_\+status$\ast$} returns nothing. 
-
-{\ttfamily get\+\_\+status\+\_\+$\ast$} returns a vector of pairs with the statuses and their labels. @\mbox{[} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classepiworld_1_1_model_a99720a4e24ebbd1849e3ee01e2335bd2}\label{classepiworld_1_1_model_a99720a4e24ebbd1849e3ee01e2335bd2}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!init@{init}}
-\index{init@{init}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::init (\begin{DoxyParamCaption}\item[{unsigned int}]{ndays,  }\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
-
-
-
-@\mbox{]} 
-
-Functions to run the model
-
-
-\begin{DoxyParams}{Parameters}
-{\em seed} & Seed to be used for Pseudo-\/\+RNG. \\
-\hline
-{\em ndays} & Number of days (steps) of the simulation. \\
-\hline
-{\em fun} & In the case of {\ttfamily run\+\_\+multiple}, a function that is called after each experiment. @\mbox{[} \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_ad228aed8654e0f1eb6f5ccc58156cfb6}\label{classepiworld_1_1_model_ad228aed8654e0f1eb6f5ccc58156cfb6}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!pop\_from\_adjlist@{pop\_from\_adjlist}}
-\index{pop\_from\_adjlist@{pop\_from\_adjlist}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{pop\_from\_adjlist()}{pop\_from\_adjlist()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::pop\+\_\+from\+\_\+adjlist (\begin{DoxyParamCaption}\item[{std\+::string}]{fn,  }\item[{int}]{skip = {\ttfamily 0},  }\item[{bool}]{directed = {\ttfamily false},  }\item[{int}]{min\+\_\+id = {\ttfamily -\/1},  }\item[{int}]{max\+\_\+id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Accessing population of the model. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em fn} & std\+::string Filename of the edgelist file. \\
-\hline
-{\em skip} & int Number of lines to skip in {\ttfamily fn}. \\
-\hline
-{\em directed} & bool Whether the graph is directed or not. \\
-\hline
-{\em min\+\_\+id} & int Minimum id number (if negative, the program will try to guess from the data.) \\
-\hline
-{\em max\+\_\+id} & int Maximum id number (if negative, the program will try to guess from the data.) \\
-\hline
-{\em al} & \mbox{\hyperlink{classepiworld_1_1_adj_list}{Adj\+List}} to read into the model. @\mbox{[} \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}\label{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}} 
+When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}\label{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!reset@{reset}}
 \index{reset@{reset}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{reset()}{reset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
 void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -1038,49 +669,7 @@ Resetting the model will\+:
 \item re-\/distribute tools
 \item re-\/distribute viruses
 \item set the date to 0 
-\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_a56e55a360f83f839426ed88caeec54d0}\label{classepiworld_1_1_model_a56e55a360f83f839426ed88caeec54d0}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!reset@{reset}}
-\index{reset@{reset}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{reset()}{reset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Reset the model. 
-
-Resetting the model will\+:
-\begin{DoxyItemize}
-\item clear the database
-\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
-\item re-\/distribute tools
-\item re-\/distribute viruses
-\item set the date to 0 
-\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_aa5819bef86c4c7d5623a7525831fb73c}\label{classepiworld_1_1_model_aa5819bef86c4c7d5623a7525831fb73c}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!reset\_status\_codes@{reset\_status\_codes}}
-\index{reset\_status\_codes@{reset\_status\_codes}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{reset\_status\_codes()}{reset\_status\_codes()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::reset\+\_\+status\+\_\+codes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$}]{codes,  }\item[{std\+::vector$<$ std\+::string $>$}]{names,  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-@\mbox{]} 
-
-Reset all the status codes of the model
-
-The default values are those specified in the enum STATUS.
-
-
-\begin{DoxyParams}{Parameters}
-{\em codes} & In the following order\+: Susceptible, Infected, Removed \\
-\hline
-{\em names} & Names matching the codes \\
-\hline
-{\em verbose} & When {\ttfamily true}, it will print the new mappings. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_ac1c996c80a2834f6ed010b9c5c9ba6f2}\label{classepiworld_1_1_model_ac1c996c80a2834f6ed010b9c5c9ba6f2}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_ac1c996c80a2834f6ed010b9c5c9ba6f2}\label{classepiworld_1_1_model_ac1c996c80a2834f6ed010b9c5c9ba6f2}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!run\_multiple@{run\_multiple}}
 \index{run\_multiple@{run\_multiple}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{run\_multiple()}{run\_multiple()}}
@@ -1112,18 +701,7 @@ The data should be an array with the data stored in a column major order, i.\+e.
 {\em ncols\+\_\+} & Number of features included in the data. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_a8dac7be907b0ddeb4109562e8d16a4d1}\label{classepiworld_1_1_model_a8dac7be907b0ddeb4109562e8d16a4d1}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_backup@{set\_backup}}
-\index{set\_backup@{set\_backup}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{set\_backup()}{set\_backup()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::set\+\_\+backup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Set the backup object. 
-
-{\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. @\mbox{[} \mbox{\Hypertarget{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}\label{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}\label{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_name@{set\_name}}
 \index{set\_name@{set\_name}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
@@ -1139,63 +717,10 @@ Set the name object.
 {\em name} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}\label{classepiworld_1_1_model_a8d87fcc71abe84e341ea56a4e251cb08}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_rand\_engine@{set\_rand\_engine}}
-\index{set\_rand\_engine@{set\_rand\_engine}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{set\_rand\_engine()}{set\_rand\_engine()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::set\+\_\+rand\+\_\+engine (\begin{DoxyParamCaption}\item[{std\+::mt19937 \&}]{eng }\end{DoxyParamCaption})}
-
-
-
-Random number generation. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em eng} & @\mbox{[} \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_ae3c3f9d908aebef89e5ce98823af8cb1}\label{classepiworld_1_1_model_ae3c3f9d908aebef89e5ce98823af8cb1}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_rewire\_fun@{set\_rewire\_fun}}
-\index{set\_rewire\_fun@{set\_rewire\_fun}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{set\_rewire\_fun()}{set\_rewire\_fun()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::set\+\_\+rewire\+\_\+fun (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_person}{Person}}$<$ TSeq $>$$>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$, epiworld\+\_\+double)$>$}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Rewire the network preserving the degree sequence. 
-
-This implementation assumes an undirected network, thus if \{(i,j), (k,l)\} -\/$>$ \{(i,l), (k,j)\}, the reciprocal is also true, i.\+e., \{(j,i), (l,k)\} -\/$>$ \{(j,k), (l,i)\}.
-
-
-\begin{DoxyParams}{Parameters}
-{\em proportion} & Proportion of ties to be rewired.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A rewired version of the network. @\mbox{[} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classepiworld_1_1_model_a61893953dc4fa046b84a77c89a5bc458}\label{classepiworld_1_1_model_a61893953dc4fa046b84a77c89a5bc458}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!set\_user\_data@{set\_user\_data}}
-\index{set\_user\_data@{set\_user\_data}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{set\_user\_data()}{set\_user\_data()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::set\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{names }\end{DoxyParamCaption})}
-
-
-
-Set the user data object. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em names} & \mbox{[}@ \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{classepiworld_1_1_model_a02135cd989e6fdadaf71d3140fb4a2e8}\label{classepiworld_1_1_model_a02135cd989e6fdadaf71d3140fb4a2e8}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!write\_data@{write\_data}}
 \index{write\_data@{write\_data}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{write\_data()}{write\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{write\_data()}{write\_data()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
 void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+variant\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+variant\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition,  }\item[{std\+::string}]{fn\+\_\+reproductive\+\_\+number }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -1222,51 +747,7 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 {\em fn\+\_\+reproductive\+\_\+number} & Filename. Case by case reproductive number \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_a6c07199ce0c9102cccb9749a7eda421d}\label{classepiworld_1_1_model_a6c07199ce0c9102cccb9749a7eda421d}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!write\_data@{write\_data}}
-\index{write\_data@{write\_data}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{write\_data()}{write\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+variant\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+variant\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data} 
-
-
-\begin{DoxyParams}{Parameters}
-{\em fn\+\_\+variant\+\_\+info} & Filename. Information about the variant. \\
-\hline
-{\em fn\+\_\+variant\+\_\+hist} & Filename. History of the variant. \\
-\hline
-{\em fn\+\_\+total\+\_\+hist} & Filename. Aggregated history (status) \\
-\hline
-{\em fn\+\_\+transmission} & Filename. Transmission history. \\
-\hline
-{\em fn\+\_\+transition} & Filename. Markov transition history. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_a9843d2f6c92916f775baf47e6d5a9fde}\label{classepiworld_1_1_model_a9843d2f6c92916f775baf47e6d5a9fde}} 
-\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!write\_edgelist@{write\_edgelist}}
-\index{write\_edgelist@{write\_edgelist}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{write\_edgelist()}{write\_edgelist()}}
-{\footnotesize\ttfamily template$<$typename TSeq  = bool$>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::write\+\_\+edgelist (\begin{DoxyParamCaption}\item[{std\+::string}]{fn }\end{DoxyParamCaption}) const}
-
-
-
-Export the network data in edgelist form. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em fn} & std\+::string. File name. \\
-\hline
-{\em source} & Integer vector \\
-\hline
-{\em target} & Integer vector\\
-\hline
-\end{DoxyParams}
-When passing the source and target, the function will write the edgelist on those. \mbox{[}@ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

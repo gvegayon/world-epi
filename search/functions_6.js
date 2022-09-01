@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['params_170',['params',['../classepiworld_1_1_model.html#a4c9648dcf5ad648eaa6610e2d884b5c8',1,'epiworld::Model']]],
-  ['pop_5ffrom_5fadjlist_171',['pop_from_adjlist',['../classepiworld_1_1_model.html#ad228aed8654e0f1eb6f5ccc58156cfb6',1,'epiworld::Model']]]
+  ['queuing_5foff_120',['queuing_off',['../classepiworld_1_1_model.html#a70f0e1d4c74e1cfc887aca35984c52b6',1,'epiworld::Model::queuing_off()'],['../class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6',1,'Model::queuing_off()']]],
+  ['queuing_5fon_121',['queuing_on',['../classepiworld_1_1_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'epiworld::Model::queuing_on()'],['../class_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'Model::queuing_on()']]]
 ];

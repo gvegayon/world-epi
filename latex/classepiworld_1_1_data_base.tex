@@ -69,86 +69,7 @@ void {\bfseries add\+\_\+user\+\_\+data} (unsigned int j, epiworld\+\_\+double x
 \mbox{\hyperlink{classepiworld_1_1_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
 \item 
 std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{classepiworld_1_1_data_base_a3391ab73b07892c8b66160e61dd294fd}{transition\+\_\+probability}} (bool print=true) const
-\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a9b081fddf99fe5634897170f3af831ce}\label{classepiworld_1_1_data_base_a9b081fddf99fe5634897170f3af831ce}} 
-{\bfseries Data\+Base} (int freq=1)
-\item 
-void \mbox{\hyperlink{classepiworld_1_1_data_base_a0058539b69a0082728b36df5c7f71d9f}{record\+\_\+variant}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v)
-\begin{DoxyCompactList}\small\item\em Registering a new variant. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a427e8c011bc973c8360e4396ed29b54b}\label{classepiworld_1_1_data_base_a427e8c011bc973c8360e4396ed29b54b}} 
-void {\bfseries set\+\_\+seq\+\_\+hasher} (std\+::function$<$ std\+::vector$<$ int $>$(TSeq)$>$ fun)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ac36f69ec2f8cf8839a35d662e5001fcc}\label{classepiworld_1_1_data_base_ac36f69ec2f8cf8839a35d662e5001fcc}} 
-void {\bfseries set\+\_\+model} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a34a715edb54c37d18d4e25a82d00a5c1}\label{classepiworld_1_1_data_base_a34a715edb54c37d18d4e25a82d00a5c1}} 
-\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries get\+\_\+model} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a24dbece279990b1fb1b0f749e6ec2922}\label{classepiworld_1_1_data_base_a24dbece279990b1fb1b0f749e6ec2922}} 
-void {\bfseries record} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a66844dfe51b4b8a879b14d2de1eb9470}\label{classepiworld_1_1_data_base_a66844dfe51b4b8a879b14d2de1eb9470}} 
-const std\+::vector$<$ TSeq $>$ \& {\bfseries get\+\_\+sequence} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_adfc7e74e5946d3948cb1bbc9709017d6}\label{classepiworld_1_1_data_base_adfc7e74e5946d3948cb1bbc9709017d6}} 
-const std\+::vector$<$ int $>$ \& {\bfseries get\+\_\+nexposed} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a36c6f885a10472761366a1f2dd46b7a1}\label{classepiworld_1_1_data_base_a36c6f885a10472761366a1f2dd46b7a1}} 
-size\+\_\+t {\bfseries size} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a8e835949b2a595d78813fdb2911da843}\label{classepiworld_1_1_data_base_a8e835949b2a595d78813fdb2911da843}} 
-void {\bfseries up\+\_\+exposed} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v, epiworld\+\_\+fast\+\_\+uint new\+\_\+status)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ae8d0943593aa64e79cbedaee475c5ea1}\label{classepiworld_1_1_data_base_ae8d0943593aa64e79cbedaee475c5ea1}} 
-void {\bfseries down\+\_\+exposed} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$v, epiworld\+\_\+fast\+\_\+uint prev\+\_\+status)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a04e8a503a13fffc837a70487de1c2f09}\label{classepiworld_1_1_data_base_a04e8a503a13fffc837a70487de1c2f09}} 
-void {\bfseries state\+\_\+change} (epiworld\+\_\+fast\+\_\+uint prev\+\_\+status, epiworld\+\_\+fast\+\_\+uint new\+\_\+status)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a8117602f2e80e6a29bd5f5b36e43f098}\label{classepiworld_1_1_data_base_a8117602f2e80e6a29bd5f5b36e43f098}} 
-void {\bfseries record\+\_\+transition} (epiworld\+\_\+fast\+\_\+uint from, epiworld\+\_\+fast\+\_\+uint to)
-\item 
-int \mbox{\hyperlink{classepiworld_1_1_data_base_a048cc81c3c16ed7d3cdbd65e84d24b11}{get\+\_\+today\+\_\+total}} (std\+::string what) const
-\begin{DoxyCompactList}\small\item\em Get recorded information from the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a1ef5bc8fbaabf3f5b2506de0f1b9b3f4}\label{classepiworld_1_1_data_base_a1ef5bc8fbaabf3f5b2506de0f1b9b3f4}} 
-int {\bfseries get\+\_\+today\+\_\+total} (epiworld\+\_\+fast\+\_\+uint what) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_afe132b18a67eff4ba11b06218f84aea5}\label{classepiworld_1_1_data_base_afe132b18a67eff4ba11b06218f84aea5}} 
-void {\bfseries get\+\_\+today\+\_\+total} (std\+::vector$<$ std\+::string $>$ $\ast$status=nullptr, std\+::vector$<$ int $>$ $\ast$counts=nullptr) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a876ccc8c3c19867176e15ce1ed6a0e50}\label{classepiworld_1_1_data_base_a876ccc8c3c19867176e15ce1ed6a0e50}} 
-void {\bfseries get\+\_\+today\+\_\+variant} (std\+::vector$<$ std\+::string $>$ \&status, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ int $>$ \&counts) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a86dc2356bdd4db0cca2336a46c8684fa}\label{classepiworld_1_1_data_base_a86dc2356bdd4db0cca2336a46c8684fa}} 
-void {\bfseries get\+\_\+hist\+\_\+total} (std\+::vector$<$ int $>$ $\ast$date, std\+::vector$<$ std\+::string $>$ $\ast$status, std\+::vector$<$ int $>$ $\ast$counts) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_adb74d8ec0cbacbcd70186b326283a24c}\label{classepiworld_1_1_data_base_adb74d8ec0cbacbcd70186b326283a24c}} 
-void {\bfseries get\+\_\+hist\+\_\+variant} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ std\+::string $>$ \&status, std\+::vector$<$ int $>$ \&counts) const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a728d678114efad7b3184e0ae7198a1c1}\label{classepiworld_1_1_data_base_a728d678114efad7b3184e0ae7198a1c1}} 
-void \mbox{\hyperlink{classepiworld_1_1_data_base_a728d678114efad7b3184e0ae7198a1c1}{write\+\_\+data}} (std\+::string fn\+\_\+variant\+\_\+info, std\+::string fn\+\_\+variant\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition) const
-\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ab0ec18d8e72264ed77559f65483c4d71}\label{classepiworld_1_1_data_base_ab0ec18d8e72264ed77559f65483c4d71}} 
-void {\bfseries record\+\_\+transmission} (int i, int j, int variant)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a08f61f1d0d04afa66d2455063eb1bf9a}\label{classepiworld_1_1_data_base_a08f61f1d0d04afa66d2455063eb1bf9a}} 
-size\+\_\+t {\bfseries get\+\_\+nvariants} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a533c804d902b135241c7cca7083da561}\label{classepiworld_1_1_data_base_a533c804d902b135241c7cca7083da561}} 
-void {\bfseries reset} ()
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_aaec45c2b63dd445574f4def63ddf0e76}\label{classepiworld_1_1_data_base_aaec45c2b63dd445574f4def63ddf0e76}} 
-void {\bfseries set\+\_\+user\+\_\+data} (std\+::vector$<$ std\+::string $>$ names)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ae72f8a11ad222550a913ed420b922db5}\label{classepiworld_1_1_data_base_ae72f8a11ad222550a913ed420b922db5}} 
-void {\bfseries add\+\_\+user\+\_\+data} (std\+::vector$<$ epiworld\+\_\+double $>$ x)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ad93b4e19348a1221761ce7218c9694d1}\label{classepiworld_1_1_data_base_ad93b4e19348a1221761ce7218c9694d1}} 
-void {\bfseries add\+\_\+user\+\_\+data} (unsigned int j, epiworld\+\_\+double x)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_aafc346ba158cb2999d6a9eb460039a5e}\label{classepiworld_1_1_data_base_aafc346ba158cb2999d6a9eb460039a5e}} 
-\mbox{\hyperlink{classepiworld_1_1_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Get recorded information from the model}\par
 {\em 
 \begin{DoxyParams}{Parameters}
@@ -230,37 +151,10 @@ Statistical data about the process.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a048cc81c3c16ed7d3cdbd65e84d24b11}\label{classepiworld_1_1_data_base_a048cc81c3c16ed7d3cdbd65e84d24b11}} 
-\index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!get\_today\_total@{get\_today\_total}}
-\index{get\_today\_total@{get\_today\_total}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{get\_today\_total()}{get\_today\_total()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-int \mbox{\hyperlink{classepiworld_1_1_data_base}{epiworld\+::\+Data\+Base}}$<$ TSeq $>$\+::get\+\_\+today\+\_\+total (\begin{DoxyParamCaption}\item[{std\+::string}]{what }\end{DoxyParamCaption}) const}
-
-
-
-Get recorded information from the model. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em what} & std\+::string, The status, e.\+g., 0, 1, 2, ... \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-In {\ttfamily get\+\_\+today\+\_\+total}, the current counts of {\ttfamily what}. 
-
-In {\ttfamily get\+\_\+today\+\_\+variant}, the current counts of {\ttfamily what} for each variant. 
-
-In {\ttfamily get\+\_\+hist\+\_\+total}, the time series of {\ttfamily what} 
-
-In {\ttfamily get\+\_\+hist\+\_\+variant}, the time series of what for each variant. 
-
-In {\ttfamily get\+\_\+hist\+\_\+total\+\_\+date} and {\ttfamily get\+\_\+hist\+\_\+variant\+\_\+date} the corresponding dates @\mbox{[} 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
 \index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!record\_variant@{record\_variant}}
 \index{record\_variant@{record\_variant}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
 void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::record\+\_\+variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -271,22 +165,6 @@ Registering a new variant.
 
 \begin{DoxyParams}{Parameters}
 {\em v} & Pointer to the new variant. Since variants are originated in the agent, the numbers simply move around. From the parent variant to the new variant. And the total number of infected does not change. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a0058539b69a0082728b36df5c7f71d9f}\label{classepiworld_1_1_data_base_a0058539b69a0082728b36df5c7f71d9f}} 
-\index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!record\_variant@{record\_variant}}
-\index{record\_variant@{record\_variant}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::record\+\_\+variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Registering a new variant. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em v} & Pointer to the new variant. Since variants are originated in the host, the numbers simply move around. From the parent variant to the new variant. And the total number of infected does not change. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a5d43d9fba8e46bee17f529e0ebce670e}\label{classepiworld_1_1_data_base_a5d43d9fba8e46bee17f529e0ebce670e}} 

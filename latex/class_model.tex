@@ -12,10 +12,10 @@ Core class of epiworld.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_a1624a5abc06a9ecd4d00396da7eaaed4}\label{class_model_a1624a5abc06a9ecd4d00396da7eaaed4}} 
+\mbox{\Hypertarget{class_model_a9a2d8f67ad467c6d5793a855d2314a39}\label{class_model_a9a2d8f67ad467c6d5793a855d2314a39}} 
 \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \& {\bfseries get\+\_\+db} ()
 \item 
-\mbox{\Hypertarget{class_model_a6b75645cd3909696eb23bd68d3575c54}\label{class_model_a6b75645cd3909696eb23bd68d3575c54}} 
+\mbox{\Hypertarget{class_model_a7b5e55bf646a07c97488f222822bd734}\label{class_model_a7b5e55bf646a07c97488f222822bd734}} 
 epiworld\+\_\+double \& {\bfseries operator()} (std\+::string pname)
 \item 
 \mbox{\Hypertarget{class_model_a40f2aa6db21fb71bc9b591aadd26ce3a}\label{class_model_a40f2aa6db21fb71bc9b591aadd26ce3a}} 
@@ -50,7 +50,7 @@ int \mbox{\hyperlink{class_model_aa3ce8d5f025e239f8090ab9645f3e917}{today}} () c
 \begin{DoxyCompactList}\small\item\em The current time of the model. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_a02135cd989e6fdadaf71d3140fb4a2e8}{write\+\_\+data}} (std\+::string fn\+\_\+variant\+\_\+info, std\+::string fn\+\_\+variant\+\_\+hist, std\+::string fn\+\_\+tool\+\_\+info, std\+::string fn\+\_\+tool\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition, std\+::string fn\+\_\+reproductive\+\_\+number) const
 \begin{DoxyCompactList}\small\item\em Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_ad4ef616002233662f80614f8e917d005}\label{class_model_ad4ef616002233662f80614f8e917d005}} 
+\mbox{\Hypertarget{class_model_a3c6f310249ec2e9c089ca0970606ed4f}\label{class_model_a3c6f310249ec2e9c089ca0970606ed4f}} 
 std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& {\bfseries params} ()
 \item 
 void \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
@@ -58,7 +58,7 @@ void \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
 \mbox{\Hypertarget{class_model_abf88e09ca6281a1e083138fef477b3d7}\label{class_model_abf88e09ca6281a1e083138fef477b3d7}} 
 void {\bfseries print} () const
 \item 
-\mbox{\Hypertarget{class_model_a66c80c4753f8f2b6459cb5735781b777}\label{class_model_a66c80c4753f8f2b6459cb5735781b777}} 
+\mbox{\Hypertarget{class_model_a1204f90aa24fd6eb3d84e96c42e60429}\label{class_model_a1204f90aa24fd6eb3d84e96c42e60429}} 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&\& {\bfseries clone} () const
 \item 
 \mbox{\Hypertarget{class_model_acff738dcd85c99e96ca206d8239ceb21}\label{class_model_acff738dcd85c99e96ca206d8239ceb21}} 
@@ -72,10 +72,10 @@ void {\bfseries run\+\_\+global\+\_\+actions} ()
 \mbox{\Hypertarget{class_model_ae5a8909a9e6c74d41e2af9b0e0fd45d2}\label{class_model_ae5a8909a9e6c74d41e2af9b0e0fd45d2}} 
 void {\bfseries clear\+\_\+status\+\_\+set} ()
 \item 
-\mbox{\Hypertarget{class_model_a01fb5bdf7deeaf86aecd0c17087da6a1}\label{class_model_a01fb5bdf7deeaf86aecd0c17087da6a1}} 
+\mbox{\Hypertarget{class_model_af5c3197e72237ff481e7bd07e58dd80a}\label{class_model_af5c3197e72237ff481e7bd07e58dd80a}} 
 const std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+viruses} () const
 \item 
-\mbox{\Hypertarget{class_model_af5ce54646c8b1073fcdc711890650d97}\label{class_model_af5ce54646c8b1073fcdc711890650d97}} 
+\mbox{\Hypertarget{class_model_a0b6762c8a7316a363b12d5a092447fdf}\label{class_model_a0b6762c8a7316a363b12d5a092447fdf}} 
 const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} () const
 \item 
 void \mbox{\hyperlink{class_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
@@ -105,7 +105,7 @@ void {\bfseries restore\+\_\+backup} ()
 \mbox{\Hypertarget{class_model_a9cd759fcd96ff1500665f6009127bf6a}\label{class_model_a9cd759fcd96ff1500665f6009127bf6a}} 
 void {\bfseries set\+\_\+rand\+\_\+engine} (std\+::mt19937 \&eng)
 \item 
-\mbox{\Hypertarget{class_model_ac51fba0aa22973a5865d5cae2b89bbf0}\label{class_model_ac51fba0aa22973a5865d5cae2b89bbf0}} 
+\mbox{\Hypertarget{class_model_a3e671337c54bbbddbae9c41fb78d5c11}\label{class_model_a3e671337c54bbbddbae9c41fb78d5c11}} 
 std\+::mt19937 $\ast$ {\bfseries get\+\_\+rand\+\_\+endgine} ()
 \item 
 \mbox{\Hypertarget{class_model_afc0909e595dad5722e7c04e87cc56530}\label{class_model_afc0909e595dad5722e7c04e87cc56530}} 
@@ -224,7 +224,7 @@ void {\bfseries agents\+\_\+from\+\_\+adjlist} (\mbox{\hyperlink{class_adj_list}
 \mbox{\Hypertarget{class_model_a9e65d452cd5ccf2aff1f53dd454faa0e}\label{class_model_a9e65d452cd5ccf2aff1f53dd454faa0e}} 
 bool {\bfseries is\+\_\+directed} () const
 \item 
-\mbox{\Hypertarget{class_model_a91b6d87655d3534021be1269f1254949}\label{class_model_a91b6d87655d3534021be1269f1254949}} 
+\mbox{\Hypertarget{class_model_a21b883fd81283e25a0b936d7e61683a3}\label{class_model_a21b883fd81283e25a0b936d7e61683a3}} 
 std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $>$ $\ast$ {\bfseries get\+\_\+agents} ()
 \item 
 \mbox{\Hypertarget{class_model_afb92b7fb6e29a2edd9100735244c7b0a}\label{class_model_afb92b7fb6e29a2edd9100735244c7b0a}} 
@@ -327,10 +327,10 @@ void {\bfseries write\+\_\+edgelist} (std\+::vector$<$ unsigned int $>$ \&source
 \mbox{\Hypertarget{class_model_a0d889d940256492431efc02e868f6b9f}\label{class_model_a0d889d940256492431efc02e868f6b9f}} 
 void {\bfseries add\+\_\+status} (std\+::string lab, Update\+Fun$<$ TSeq $>$ fun=nullptr)
 \item 
-\mbox{\Hypertarget{class_model_ac6ff20e949dfc95ce348fc1265bb1f0b}\label{class_model_ac6ff20e949dfc95ce348fc1265bb1f0b}} 
+\mbox{\Hypertarget{class_model_a04638c66ef9993f611a50d3da7e2df1d}\label{class_model_a04638c66ef9993f611a50d3da7e2df1d}} 
 const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+status} () const
 \item 
-\mbox{\Hypertarget{class_model_aec13f8d3ef1a3e2ff5413c34cdc2e92b}\label{class_model_aec13f8d3ef1a3e2ff5413c34cdc2e92b}} 
+\mbox{\Hypertarget{class_model_a4f10774b783ba77434998fe54fb47ae7}\label{class_model_a4f10774b783ba77434998fe54fb47ae7}} 
 const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+status\+\_\+fun} () const
 \item 
 \mbox{\Hypertarget{class_model_a280daf95b8f2f81f19297816ac319a82}\label{class_model_a280daf95b8f2f81f19297816ac319a82}} 
@@ -354,7 +354,7 @@ void {\bfseries add\+\_\+user\+\_\+data} (unsigned int j, epiworld\+\_\+double x
 \mbox{\Hypertarget{class_model_afe5b13a42b44107da27f65935f58a875}\label{class_model_afe5b13a42b44107da27f65935f58a875}} 
 void {\bfseries add\+\_\+user\+\_\+data} (std\+::vector$<$ epiworld\+\_\+double $>$ x)
 \item 
-\mbox{\Hypertarget{class_model_a4c6238df673ea53b6945e42ae13da57f}\label{class_model_a4c6238df673ea53b6945e42ae13da57f}} 
+\mbox{\Hypertarget{class_model_a42afe4906debf8b4c40d085ad94177c5}\label{class_model_a42afe4906debf8b4c40d085ad94177c5}} 
 \mbox{\hyperlink{class_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
 \end{DoxyCompactItemize}
 \end{Indent}
@@ -370,8 +370,8 @@ void \mbox{\hyperlink{class_model_a70f0e1d4c74e1cfc887aca35984c52b6}{queuing\+\_
 \mbox{\Hypertarget{class_model_a2c4ac58e918e9e8dc2e58be6521d8827}\label{class_model_a2c4ac58e918e9e8dc2e58be6521d8827}} 
 bool \mbox{\hyperlink{class_model_a2c4ac58e918e9e8dc2e58be6521d8827}{is\+\_\+queuing\+\_\+on}} () const
 \begin{DoxyCompactList}\small\item\em Query if the queuing system is on. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_aaf33c877732b9bdc7cb77e063ad0c1a6}\label{class_model_aaf33c877732b9bdc7cb77e063ad0c1a6}} 
-\mbox{\hyperlink{class_queue}{Queue}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_aaf33c877732b9bdc7cb77e063ad0c1a6}{get\+\_\+queue}} ()
+\mbox{\Hypertarget{class_model_a3cf5b4f14dcd54816785b38894c8088f}\label{class_model_a3cf5b4f14dcd54816785b38894c8088f}} 
+\mbox{\hyperlink{class_queue}{Queue}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_a3cf5b4f14dcd54816785b38894c8088f}{get\+\_\+queue}} ()
 \begin{DoxyCompactList}\small\item\em Retrieve the {\ttfamily \mbox{\hyperlink{class_queue}{Queue}}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Get the susceptibility reduction object}\par
@@ -638,7 +638,7 @@ The model class provides the wrapper that puts together {\ttfamily \mbox{\hyperl
 \index{add\_global\_action@{add\_global\_action}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{add\_global\_action()}{add\_global\_action()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::add\+\_\+global\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun,  }\item[{int}]{date = {\ttfamily -\/99} }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::add\+\_\+global\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun,  }\item[{int}]{date = {\ttfamily -\/99} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -656,7 +656,7 @@ When date is less than zero, then the function is called at the end of every day
 \index{reset@{reset}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{reset()}{reset()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -674,7 +674,7 @@ Resetting the model will\+:
 \index{run\_multiple@{run\_multiple}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{run\_multiple()}{run\_multiple()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{unsigned int}]{nexperiments,  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$~TSeq~$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{unsigned int}]{nexperiments,  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$TSeq$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -686,7 +686,7 @@ void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\be
 \index{set\_agents\_data@{set\_agents\_data}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{set\_agents\_data()}{set\_agents\_data()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::set\+\_\+agents\+\_\+data (\begin{DoxyParamCaption}\item[{double $\ast$}]{data\+\_\+,  }\item[{size\+\_\+t}]{ncols\+\_\+ }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::set\+\_\+agents\+\_\+data (\begin{DoxyParamCaption}\item[{double $\ast$}]{data\+\_\+,  }\item[{size\+\_\+t}]{ncols\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -706,7 +706,7 @@ The data should be an array with the data stored in a column major order, i.\+e.
 \index{set\_name@{set\_name}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -722,7 +722,7 @@ Set the name object.
 \index{write\_data@{write\_data}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{write\_data()}{write\_data()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+variant\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+variant\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition,  }\item[{std\+::string}]{fn\+\_\+reproductive\+\_\+number }\end{DoxyParamCaption}) const}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+variant\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+variant\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition,  }\item[{std\+::string}]{fn\+\_\+reproductive\+\_\+number }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -752,4 +752,6 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/epiworld/agent-\/bones.\+hpp\item 
-include/epiworld/model-\/bones.\+hpp\end{DoxyCompactItemize}
+include/epiworld/model-\/bones.\+hpp\item 
+include/epiworld/model-\/meat-\/print.\+hpp\item 
+include/epiworld/model-\/meat.\+hpp\end{DoxyCompactItemize}

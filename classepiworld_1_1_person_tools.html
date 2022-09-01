@@ -66,93 +66,11 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
-<a href="classepiworld_1_1_person_tools-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">epiworld::PersonTools&lt; TSeq &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>List of tools available for the individual to.  
- <a href="classepiworld_1_1_person_tools.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="rpackage_2inst_2include_2epiworld_8hpp_source.html">epiworld.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aee02b139536be9b2e06f416fa9db63bd"><td class="memItemLeft" align="right" valign="top"><a id="aee02b139536be9b2e06f416fa9db63bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_person_tools.html#aee02b139536be9b2e06f416fa9db63bd">add_tool</a> (int date, <a class="el" href="classepiworld_1_1_tool.html">Tool</a>&lt; TSeq &gt; tool)</td></tr>
-<tr class="memdesc:aee02b139536be9b2e06f416fa9db63bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">@] <br /></td></tr>
-<tr class="separator:aee02b139536be9b2e06f416fa9db63bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa734043d5a479286a5a0cdd500230163"><td class="memItemLeft" align="right" valign="top"><a id="aa734043d5a479286a5a0cdd500230163"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_susceptibility_reduction</b> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *v)</td></tr>
-<tr class="separator:aa734043d5a479286a5a0cdd500230163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb13d233085c163ef91a5cf6df0a232d"><td class="memItemLeft" align="right" valign="top"><a id="afb13d233085c163ef91a5cf6df0a232d"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_transmission_reduction</b> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *v)</td></tr>
-<tr class="separator:afb13d233085c163ef91a5cf6df0a232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32bd986d63bf9f3510fd1cc37d57d0d6"><td class="memItemLeft" align="right" valign="top"><a id="a32bd986d63bf9f3510fd1cc37d57d0d6"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_recovery_enhancer</b> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *v)</td></tr>
-<tr class="separator:a32bd986d63bf9f3510fd1cc37d57d0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d1867458c9b3bdb85ef3e70562918de"><td class="memItemLeft" align="right" valign="top"><a id="a3d1867458c9b3bdb85ef3e70562918de"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_death_reduction</b> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *v)</td></tr>
-<tr class="separator:a3d1867458c9b3bdb85ef3e70562918de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a790700bcb363b3b81dbfc23f9432e220"><td class="memItemLeft" align="right" valign="top"><a id="a790700bcb363b3b81dbfc23f9432e220"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_susceptibility_reduction_mixer</b> (MixerFun&lt; TSeq &gt; fun)</td></tr>
-<tr class="separator:a790700bcb363b3b81dbfc23f9432e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad053a19a983b68a3997bef97d5f5418d"><td class="memItemLeft" align="right" valign="top"><a id="ad053a19a983b68a3997bef97d5f5418d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_transmission_reduction_mixer</b> (MixerFun&lt; TSeq &gt; fun)</td></tr>
-<tr class="separator:ad053a19a983b68a3997bef97d5f5418d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a483438ddbb7f61621b48ab8d782f5c29"><td class="memItemLeft" align="right" valign="top"><a id="a483438ddbb7f61621b48ab8d782f5c29"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_recovery_enhancer_mixer</b> (MixerFun&lt; TSeq &gt; fun)</td></tr>
-<tr class="separator:a483438ddbb7f61621b48ab8d782f5c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c4d68f4343e8a6b7ea6b4aaa2a41a79"><td class="memItemLeft" align="right" valign="top"><a id="a4c4d68f4343e8a6b7ea6b4aaa2a41a79"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_death_reduction_mixer</b> (MixerFun&lt; TSeq &gt; fun)</td></tr>
-<tr class="separator:a4c4d68f4343e8a6b7ea6b4aaa2a41a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab92f280863f770deaa3b8732313db1ac"><td class="memItemLeft" align="right" valign="top"><a id="ab92f280863f770deaa3b8732313db1ac"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
-<tr class="separator:ab92f280863f770deaa3b8732313db1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a727b5e3afce4f20e43a528fc2d1c44d5"><td class="memItemLeft" align="right" valign="top"><a id="a727b5e3afce4f20e43a528fc2d1c44d5"></a>
-<a class="el" href="classepiworld_1_1_tool.html">Tool</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int i)</td></tr>
-<tr class="separator:a727b5e3afce4f20e43a528fc2d1c44d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957488013247f9cc8774edd50791c676"><td class="memItemLeft" align="right" valign="top"><a id="a957488013247f9cc8774edd50791c676"></a>
-<a class="el" href="classepiworld_1_1_person.html">Person</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>get_person</b> ()</td></tr>
-<tr class="separator:a957488013247f9cc8774edd50791c676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a597e6f065ca3b7e765efa8cf9938b3fa"><td class="memItemLeft" align="right" valign="top"><a id="a597e6f065ca3b7e765efa8cf9938b3fa"></a>
-<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>get_model</b> ()</td></tr>
-<tr class="separator:a597e6f065ca3b7e765efa8cf9938b3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274047296d41453f25feeb250c073b8e"><td class="memItemLeft" align="right" valign="top"><a id="a274047296d41453f25feeb250c073b8e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="separator:a274047296d41453f25feeb250c073b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f29220b629c03927fddc9bb6ffdbcc"><td class="memItemLeft" align="right" valign="top"><a id="a66f29220b629c03927fddc9bb6ffdbcc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_tool</b> (unsigned int t) const</td></tr>
-<tr class="separator:a66f29220b629c03927fddc9bb6ffdbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3b7fbc29c9a7166b9ca49f6a54fcd5"><td class="memItemLeft" align="right" valign="top"><a id="a4f3b7fbc29c9a7166b9ca49f6a54fcd5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_tool</b> (std::string name) const</td></tr>
-<tr class="separator:a4f3b7fbc29c9a7166b9ca49f6a54fcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a195def33d9d6483c6a309af6984bbf90"><td class="memItemLeft" align="right" valign="top"><a id="a195def33d9d6483c6a309af6984bbf90"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Person&lt; TSeq &gt;</b></td></tr>
-<tr class="separator:a195def33d9d6483c6a309af6984bbf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4532e80368ab60b4fda5bb917f6f0ca"><td class="memItemLeft" align="right" valign="top"><a id="aa4532e80368ab60b4fda5bb917f6f0ca"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Model&lt; TSeq &gt;</b></td></tr>
-<tr class="separator:aa4532e80368ab60b4fda5bb917f6f0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename TSeq = bool&gt;<br />
-class epiworld::PersonTools&lt; TSeq &gt;</h3>
-
-<p>List of tools available for the individual to. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">TSeq</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a></li>
 </ul>
 </div><!-- contents -->
