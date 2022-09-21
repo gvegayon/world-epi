@@ -949,19 +949,19 @@ $(function() {
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::runif</a>() {</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;    <span class="comment">// CHECK_INIT()</span></div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <span class="keywordflow">return</span> runifd-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <span class="keywordflow">return</span> (runifd-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;}</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::runif</a>(epiworld_double a, epiworld_double b) {</div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    <span class="comment">// CHECK_INIT()</span></div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <span class="keywordflow">return</span> (runifd-&gt;operator()(*engine) * (b - a) + a);</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <span class="keywordflow">return</span> ((runifd-&gt;operator())(*engine) * (b - a) + a);</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;}</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160; </div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rnorm</a>() {</div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="comment">// CHECK_INIT()</span></div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <span class="keywordflow">return</span> (rnormd-&gt;operator()(*engine));</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <span class="keywordflow">return</span> (rnormd-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;}</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160; </div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -972,42 +972,42 @@ $(function() {
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160; </div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rgamma</a>() {</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">return</span> rgammad-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">return</span> (rgammad-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;}</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rgamma</a>(epiworld_double alpha, epiworld_double beta) {</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="keyword">auto</span> old_param = rgammad-&gt;param();</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    rgammad-&gt;param(std::gamma_distribution&lt;&gt;::param_type(alpha, beta));</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    epiworld_double ans = rgammad-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    epiworld_double ans = (rgammad-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    rgammad-&gt;param(old_param);</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;}</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160; </div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rexp</a>() {</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    <span class="keywordflow">return</span> rexp-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    <span class="keywordflow">return</span> (rexp-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;}</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160; </div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rexp</a>(epiworld_double lambda) {</div>
 <div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    <span class="keyword">auto</span> old_param = rexpd-&gt;param();</div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    rexpd-&gt;param(std::exponential_distribution&lt;&gt;::param_type(lambda));</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    epiworld_double ans = rexpd-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    epiworld_double ans = (rexpd-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    rexpd-&gt;param(old_param);</div>
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;}</div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160; </div>
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rlognormal</a>() {</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="keywordflow">return</span> rlognormald-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="keywordflow">return</span> (rlognormald-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;}</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160; </div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="keyword">inline</span> epiworld_double <a class="code" href="class_model.html">Model&lt;TSeq&gt;::rlognormal</a>(epiworld_double mean, epiworld_double shape) {</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    <span class="keyword">auto</span> old_param = rlognormald-&gt;param();</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    rlognormald-&gt;param(std::lognormal_distribution&lt;&gt;::param_type(mean, shape));</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    epiworld_double ans = rlognormald-&gt;operator()(*engine);</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    epiworld_double ans = (rlognormald-&gt;operator())(*engine);</div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    rlognormald-&gt;param(old_param);</div>
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;}</div>
@@ -2024,8 +2024,8 @@ $(function() {
 <div class="line"><a name="l01979"></a><span class="lineno"> 1979</span>&#160;<span class="preprocessor">#undef CHECK_INIT</span></div>
 <div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_adj_list_html"><div class="ttname"><a href="class_adj_list.html">AdjList</a></div><div class="ttdef"><b>Definition:</b> adjlist-bones.hpp:4</div></div>
-<div class="ttc" id="aclass_adj_list_html_a2bf3a057863c9dfb958d44ff370690d1"><div class="ttname"><a href="class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1">AdjList::vcount</a></div><div class="ttdeci">size_t vcount() const</div><div class="ttdoc">Number of vertices/nodes in the network.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:170</div></div>
-<div class="ttc" id="aclass_adj_list_html_aa08631a4605cc3037f017bb437a96ef0"><div class="ttname"><a href="class_adj_list.html#aa08631a4605cc3037f017bb437a96ef0">AdjList::read_edgelist</a></div><div class="ttdeci">void read_edgelist(std::string fn, int size, int skip=0, bool directed=true)</div><div class="ttdoc">Read an edgelist.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:60</div></div>
+<div class="ttc" id="aclass_adj_list_html_a2bf3a057863c9dfb958d44ff370690d1"><div class="ttname"><a href="class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1">AdjList::vcount</a></div><div class="ttdeci">size_t vcount() const</div><div class="ttdoc">Number of vertices/nodes in the network.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:190</div></div>
+<div class="ttc" id="aclass_adj_list_html_aa08631a4605cc3037f017bb437a96ef0"><div class="ttname"><a href="class_adj_list.html#aa08631a4605cc3037f017bb437a96ef0">AdjList::read_edgelist</a></div><div class="ttdeci">void read_edgelist(std::string fn, int size, int skip=0, bool directed=true)</div><div class="ttdoc">Read an edgelist.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:79</div></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:377</div></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:31</div></div>
