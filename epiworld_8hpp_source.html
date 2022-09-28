@@ -3235,7 +3235,7 @@ $(function() {
 <div class="line"><a name="l03620"></a><span class="lineno"> 3620</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l03621"></a><span class="lineno"> 3621</span>&#160;<span class="comment">    AdjList(AdjList &amp;&amp; a); // Move constructor</span></div>
 <div class="line"><a name="l03622"></a><span class="lineno"> 3622</span>&#160;<span class="comment">    AdjList(const AdjList &amp; a); // Copy constructor</span></div>
-<div class="line"><a name="l03623"></a><span class="lineno"> 3623</span>&#160;<span class="comment">    AdjList&amp; AdjList::operator=(const AdjList&amp; a);</span></div>
+<div class="line"><a name="l03623"></a><span class="lineno"> 3623</span>&#160;<span class="comment">    AdjList&amp; operator=(const AdjList&amp; a);</span></div>
 <div class="line"><a name="l03624"></a><span class="lineno"> 3624</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l03625"></a><span class="lineno"> 3625</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l03636"></a><span class="lineno"> 3636</span>&#160;<span class="comment">    void read_edgelist(</span></div>
@@ -3362,7 +3362,7 @@ $(function() {
 <div class="line"><a name="l03763"></a><span class="lineno"> 3763</span>&#160;<span class="comment">    this-&gt;dat = a.dat;</span></div>
 <div class="line"><a name="l03764"></a><span class="lineno"> 3764</span>&#160;<span class="comment">    this-&gt;directed = a.directed;</span></div>
 <div class="line"><a name="l03765"></a><span class="lineno"> 3765</span>&#160;<span class="comment">    this-&gt;N = a.N;</span></div>
-<div class="line"><a name="l03766"></a><span class="lineno"> 3766</span>&#160;<span class="comment">    this-&gt;M = a.M;</span></div>
+<div class="line"><a name="l03766"></a><span class="lineno"> 3766</span>&#160;<span class="comment">    this-&gt;E = a.E;</span></div>
 <div class="line"><a name="l03767"></a><span class="lineno"> 3767</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l03768"></a><span class="lineno"> 3768</span>&#160;<span class="comment">    return *this;</span></div>
 <div class="line"><a name="l03769"></a><span class="lineno"> 3769</span>&#160;<span class="comment">}</span></div>
@@ -5333,7 +5333,7 @@ $(function() {
 <div class="line"><a name="l06060"></a><span class="lineno"> 6060</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l06061"></a><span class="lineno"> 6061</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
 <div class="line"><a name="l06062"></a><span class="lineno"> 6062</span>&#160;<span class="comment">inline epiworld_double Model&lt;TSeq&gt;::rexp() {</span></div>
-<div class="line"><a name="l06063"></a><span class="lineno"> 6063</span>&#160;<span class="comment">    return (rexp-&gt;operator())(*engine);</span></div>
+<div class="line"><a name="l06063"></a><span class="lineno"> 6063</span>&#160;<span class="comment">    return (rexpd-&gt;operator())(*engine);</span></div>
 <div class="line"><a name="l06064"></a><span class="lineno"> 6064</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l06065"></a><span class="lineno"> 6065</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l06066"></a><span class="lineno"> 6066</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
