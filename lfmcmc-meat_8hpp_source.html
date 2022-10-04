@@ -291,7 +291,7 @@ $(function() {
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        summary_fun(proposed_stats_i, data_i, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="comment">// Step 4: Compute the hastings ratio using the kernel function</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">double</span> hr = kernel_fun(proposed_stats_i, observed_stats, epsilon, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        epiworld_double hr = kernel_fun(proposed_stats_i, observed_stats, epsilon, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        sampled_stats_prob[i] = hr;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="comment">// Storing data</span></div>
@@ -299,11 +299,11 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            sampled_stats[i * n_statistics + k] = proposed_stats_i[k];</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        </div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// Running Hastings ratio</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">double</span> r      = runif();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        epiworld_double r      = runif();</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        drawn_prob[i] = r;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// Step 5: Update if likely</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> (r &lt; std::min(1.0, hr / accepted_params_prob[i - 1u]))</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> (r &lt; std::min(<span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(1.0), hr / accepted_params_prob[i - 1u]))</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        {</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            accepted_params_prob[i] = hr;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            sampled_accepted[i]     = <span class="keyword">true</span>;</div>
