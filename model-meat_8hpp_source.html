@@ -525,7 +525,7 @@ $(function() {
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        p.neighbors.clear();</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    </div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="comment">// Relinking individuals</span></div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; size(); ++i)</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; size(); ++i)</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    {</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <span class="comment">// Making room</span></div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; agent_this = population[i];</div>
@@ -533,7 +533,7 @@ $(function() {
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160; </div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="comment">// Readding</span></div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        std::vector&lt; Agent&lt;TSeq&gt; * &gt; neigh = agent_this.neighbors;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 0u; n &lt; neigh.size(); ++n)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint n = 0u; n &lt; neigh.size(); ++n)</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        {</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            <span class="comment">// Point to the right neighbors</span></div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            <span class="keywordtype">int</span> loc = p[neigh[n]-&gt;get_id()].get_id();</div>
@@ -568,8 +568,8 @@ $(function() {
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::agents_smallworld</a>(</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k,</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    epiworld_fast_uint k,</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordtype">bool</span> d,</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    epiworld_double p</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;)</div>
@@ -581,7 +581,7 @@ $(function() {
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::agents_empty_graph</a>(</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    epiworld_fast_uint n</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;) </div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;{</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160; </div>
@@ -652,8 +652,8 @@ $(function() {
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::init</a>(</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ndays,</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> seed</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    epiworld_fast_uint ndays,</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    epiworld_fast_uint seed</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    ) {</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="keywordflow">if</span> (initialized) </div>
@@ -738,7 +738,7 @@ $(function() {
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keywordtype">int</span> n_left = n;</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    std::iota(idx.begin(), idx.end(), 0);</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v = 0; v &lt; viruses.size(); ++v)</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint v = 0; v &lt; viruses.size(); ++v)</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    {</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keywordflow">if</span> (viruses_dist_funs[v])</div>
@@ -769,7 +769,7 @@ $(function() {
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            <span class="keywordflow">while</span> (nsampled &gt; 0)</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            {</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(floor(runif() * (n_left--)));</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(floor(runif() * (n_left--)));</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; agent = population[idx[loc]];</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                </div>
@@ -797,7 +797,7 @@ $(function() {
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="comment">// Starting first infection</span></div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordtype">int</span> n = size();</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    std::vector&lt; size_t &gt; idx(n);</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> t = 0; t &lt; tools.size(); ++t)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint t = 0; t &lt; tools.size(); ++t)</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    {</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <span class="keywordflow">if</span> (tools_dist_funs[t])</div>
@@ -828,7 +828,7 @@ $(function() {
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            std::iota(idx.begin(), idx.end(), 0);</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            <span class="keywordflow">while</span> (nsampled &gt; 0)</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            {</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(floor(runif() * n_left--));</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(floor(runif() * n_left--));</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                </div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                population[idx[loc]].add_tool(tool, tool-&gt;status_init, tool-&gt;queue_init);</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                </div>
@@ -854,7 +854,7 @@ $(function() {
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="comment">// Starting first infection</span></div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <span class="keywordtype">int</span> n = size();</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    std::vector&lt; size_t &gt; idx(n);</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> e = 0; e &lt; entities.size(); ++e)</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint e = 0; e &lt; entities.size(); ++e)</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    {</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        <span class="keywordflow">if</span> (entities_dist_funs[e])</div>
@@ -885,7 +885,7 @@ $(function() {
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            std::iota(idx.begin(), idx.end(), 0);</div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            <span class="keywordflow">while</span> (nsampled &gt; 0)</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            {</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(floor(runif() * n_left--));</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                <span class="keywordtype">int</span> loc = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(floor(runif() * n_left--));</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                </div>
 <div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                population[idx[loc]].add_entity(entity, entity.status_init, entity.queue_init);</div>
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                </div>
@@ -1013,7 +1013,7 @@ $(function() {
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;}</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160; </div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::seed</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s) {</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::seed</a>(epiworld_fast_uint s) {</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;    this-&gt;engine-&gt;seed(s);</div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;}</div>
 <div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160; </div>
@@ -1052,7 +1052,7 @@ $(function() {
 <div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;}</div>
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160; </div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_virus_n</a>(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval)</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_virus_n</a>(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, epiworld_fast_uint preval)</div>
 <div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;{</div>
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160; </div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <span class="comment">// Checking the ids</span></div>
@@ -1126,7 +1126,7 @@ $(function() {
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;}</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160; </div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_tool_n</a>(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval)</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_tool_n</a>(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, epiworld_fast_uint preval)</div>
 <div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;{</div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    t.id = tools.size();</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    tools.push_back(std::make_shared&lt;<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> &gt;(t));</div>
@@ -1166,7 +1166,7 @@ $(function() {
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;}</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160; </div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_entity_n</a>(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval)</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_entity_n</a>(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, epiworld_fast_uint preval)</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;{</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160; </div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;    e.model = <span class="keyword">this</span>;</div>
@@ -1313,8 +1313,8 @@ $(function() {
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;}</div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160; </div>
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01271"></a><span class="lineno"><a class="line" href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2"> 1271</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2">Model&lt;TSeq&gt;::run_multiple</a>(</div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nexperiments,</div>
+<div class="line"><a name="l01271"></a><span class="lineno"><a class="line" href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0"> 1271</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">Model&lt;TSeq&gt;::run_multiple</a>(</div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;    epiworld_fast_uint nexperiments,</div>
 <div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;    std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span>,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt; fun,</div>
 <div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    <span class="keywordtype">bool</span> reset,</div>
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    <span class="keywordtype">bool</span> verbose</div>
@@ -1344,7 +1344,7 @@ $(function() {
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160; </div>
 <div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;    }</div>
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160; </div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 0u; n &lt; nexperiments; ++n)</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint n = 0u; n &lt; nexperiments; ++n)</div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;    {</div>
 <div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;        </div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;        run();</div>
@@ -1446,18 +1446,18 @@ $(function() {
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;}</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160; </div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_ndays</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;<span class="keyword">inline</span> epiworld_fast_uint <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_ndays</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    <span class="keywordflow">return</span> ndays;</div>
 <div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;}</div>
 <div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160; </div>
 <div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_n_replicates</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="keyword">inline</span> epiworld_fast_uint <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_n_replicates</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;    <span class="keywordflow">return</span> n_replicates;</div>
 <div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;}</div>
 <div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160; </div>
 <div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::set_ndays</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ndays) {</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::set_ndays</a>(epiworld_fast_uint ndays) {</div>
 <div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;    this-&gt;ndays = ndays;</div>
 <div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;}</div>
 <div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160; </div>
@@ -1634,7 +1634,7 @@ $(function() {
 <div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;        p.neighbors.clear();</div>
 <div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;    </div>
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;    <span class="comment">// Rechecking individuals</span></div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p = 0u; p &lt; size(); ++p)</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint p = 0u; p &lt; size(); ++p)</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;    {</div>
 <div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        <span class="comment">// Making room</span></div>
 <div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; agent_this = population[p];</div>
@@ -1647,7 +1647,7 @@ $(function() {
 <div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160; </div>
 <div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;        <span class="comment">// Readding</span></div>
 <div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;        std::vector&lt; Agent&lt;TSeq&gt; * &gt; neigh = agent_this.neighbors;</div>
-<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 0u; n &lt; neigh.size(); ++n)</div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint n = 0u; n &lt; neigh.size(); ++n)</div>
 <div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;        {</div>
 <div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;            <span class="comment">// Point to the right neighbors</span></div>
 <div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;            <span class="keywordtype">int</span> loc = res.population_ids[neigh[n]-&gt;get_id()];</div>
@@ -1704,18 +1704,18 @@ $(function() {
 <div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160; </div>
 <div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;    <span class="comment">// Horizontal line</span></div>
 <div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;    std::string line = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; 80u; ++i)</div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; 80u; ++i)</div>
 <div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;        line += <span class="stringliteral">&quot;_&quot;</span>;</div>
 <div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160; </div>
 <div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;\n%s\nSTATUS CODES\n\n&quot;</span>, line.c_str());</div>
 <div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160; </div>
-<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nchar = 0u;</div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;    epiworld_fast_uint nchar = 0u;</div>
 <div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : status_labels)</div>
 <div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;        <span class="keywordflow">if</span> (p.length() &gt; nchar)</div>
 <div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;            nchar = p.length();</div>
 <div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;    </div>
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;    std::string fmt = <span class="stringliteral">&quot; %2i = %-&quot;</span> + std::to_string(nchar + 1 + 4) + <span class="stringliteral">&quot;s\n&quot;</span>;</div>
-<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; nstatus; ++i)</div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; nstatus; ++i)</div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;    {</div>
 <div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160; </div>
 <div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;        printf_epiworld(</div>
@@ -1912,7 +1912,7 @@ $(function() {
 <div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;}</div>
 <div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160; </div>
 <div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_user_data</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j, epiworld_double x)</div>
+<div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_user_data</a>(epiworld_fast_uint j, epiworld_double x)</div>
 <div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;{</div>
 <div class="line"><a name="l01872"></a><span class="lineno"> 1872</span>&#160;    db.add_user_data(j, x);</div>
 <div class="line"><a name="l01873"></a><span class="lineno"> 1873</span>&#160;}</div>
@@ -1945,7 +1945,7 @@ $(function() {
 <div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::run_global_actions</a>()</div>
 <div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;{</div>
 <div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160; </div>
-<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; global_action_dates.size(); ++i)</div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; global_action_dates.size(); ++i)</div>
 <div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;    {</div>
 <div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160; </div>
 <div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;        <span class="keywordflow">if</span> (global_action_dates[i] &lt; 0)</div>
@@ -2037,11 +2037,11 @@ $(function() {
 <div class="ttc" id="aclass_model_html_a2c4ac58e918e9e8dc2e58be6521d8827"><div class="ttname"><a href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model::is_queuing_on</a></div><div class="ttdeci">bool is_queuing_on() const</div><div class="ttdoc">Query if the queuing system is on.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1938</div></div>
 <div class="ttc" id="aclass_model_html_a3cf5b4f14dcd54816785b38894c8088f"><div class="ttname"><a href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model::get_queue</a></div><div class="ttdeci">Queue&lt; TSeq &gt; &amp; get_queue()</div><div class="ttdoc">Retrieve the Queue object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1944</div></div>
 <div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1969</div></div>
+<div class="ttc" id="aclass_model_html_a534bcb0cce1a8d1ffbfc176364a1c9f0"><div class="ttname"><a href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(epiworld_fast_uint nexperiments, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1271</div></div>
 <div class="ttc" id="aclass_model_html_a70f0e1d4c74e1cfc887aca35984c52b6"><div class="ttname"><a href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model::queuing_off</a></div><div class="ttdeci">void queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1932</div></div>
 <div class="ttc" id="aclass_model_html_a825c7fb2498c7693cbf1bfcd0a416ef4"><div class="ttname"><a href="class_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">Model::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1237</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1531</div></div>
 <div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1215</div></div>
-<div class="ttc" id="aclass_model_html_ac1c996c80a2834f6ed010b9c5c9ba6f2"><div class="ttname"><a href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(unsigned int nexperiments, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1271</div></div>
 <div class="ttc" id="aclass_model_html_adc3b2119335ffa4b0128123be919f454"><div class="ttname"><a href="class_model.html#adc3b2119335ffa4b0128123be919f454">Model::add_global_action</a></div><div class="ttdeci">void add_global_action(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, int date=-99)</div><div class="ttdoc">Set a global action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1888</div></div>
 <div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1864</div></div>
 <div class="ttc" id="aclass_progress_html"><div class="ttname"><a href="class_progress.html">Progress</a></div><div class="ttdoc">A simple progress bar.</div><div class="ttdef"><b>Definition:</b> progress.hpp:11</div></div>

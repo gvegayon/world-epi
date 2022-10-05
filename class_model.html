@@ -93,15 +93,15 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_variants</b> 
 <tr class="memitem:a50aa99abe9d9b997ebce22f90a05009c"><td class="memItemLeft" align="right" valign="top"><a id="a50aa99abe9d9b997ebce22f90a05009c"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_tools</b> () const</td></tr>
 <tr class="separator:a50aa99abe9d9b997ebce22f90a05009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaaeeb7a2da3d3fed8387debdfcb5334"><td class="memItemLeft" align="right" valign="top"><a id="aaaaeeb7a2da3d3fed8387debdfcb5334"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>get_ndays</b> () const</td></tr>
-<tr class="separator:aaaaeeb7a2da3d3fed8387debdfcb5334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa510302e29abe9015bd08e7cae2b03ee"><td class="memItemLeft" align="right" valign="top"><a id="aa510302e29abe9015bd08e7cae2b03ee"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_replicates</b> () const</td></tr>
-<tr class="separator:aa510302e29abe9015bd08e7cae2b03ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359bfa973d2afcc0069885bf4a550c99"><td class="memItemLeft" align="right" valign="top"><a id="a359bfa973d2afcc0069885bf4a550c99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ndays</b> (unsigned int ndays)</td></tr>
-<tr class="separator:a359bfa973d2afcc0069885bf4a550c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d7138ec8dfbf6567e24f81234720a7"><td class="memItemLeft" align="right" valign="top"><a id="a16d7138ec8dfbf6567e24f81234720a7"></a>
+epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>get_ndays</b> () const</td></tr>
+<tr class="separator:a16d7138ec8dfbf6567e24f81234720a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171d1a3a36a9a93bfb317fce1b40adc7"><td class="memItemLeft" align="right" valign="top"><a id="a171d1a3a36a9a93bfb317fce1b40adc7"></a>
+epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_replicates</b> () const</td></tr>
+<tr class="separator:a171d1a3a36a9a93bfb317fce1b40adc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f589402f7bdde8d56c3768955fa7aa7"><td class="memItemLeft" align="right" valign="top"><a id="a6f589402f7bdde8d56c3768955fa7aa7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ndays</b> (epiworld_fast_uint ndays)</td></tr>
+<tr class="separator:a6f589402f7bdde8d56c3768955fa7aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc4944af1e71a36f16085edbc130762"><td class="memItemLeft" align="right" valign="top"><a id="a0dc4944af1e71a36f16085edbc130762"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_verbose</b> () const</td></tr>
 <tr class="separator:a0dc4944af1e71a36f16085edbc130762"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,9 +178,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (
 <tr class="memitem:a3e671337c54bbbddbae9c41fb78d5c11"><td class="memItemLeft" align="right" valign="top"><a id="a3e671337c54bbbddbae9c41fb78d5c11"></a>
 std::mt19937 *&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
 <tr class="separator:a3e671337c54bbbddbae9c41fb78d5c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0909e595dad5722e7c04e87cc56530"><td class="memItemLeft" align="right" valign="top"><a id="afc0909e595dad5722e7c04e87cc56530"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (unsigned int s)</td></tr>
-<tr class="separator:afc0909e595dad5722e7c04e87cc56530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa672695db93849523d55f1dfc9a53bc2"><td class="memItemLeft" align="right" valign="top"><a id="aa672695db93849523d55f1dfc9a53bc2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (epiworld_fast_uint s)</td></tr>
+<tr class="separator:aa672695db93849523d55f1dfc9a53bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memItemLeft" align="right" valign="top"><a id="a19ae15f81d1cf3215b69ea5c17cf6e37"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_norm</b> (epiworld_double mean, epiworld_double sd)</td></tr>
 <tr class="separator:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,27 +240,27 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal
 <tr class="memitem:a3a1e9be2e50d761a4f0ca8d6ece9bb22"><td class="memItemLeft" align="right" valign="top"><a id="a3a1e9be2e50d761a4f0ca8d6ece9bb22"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus</b> (<a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; v, epiworld_double preval)</td></tr>
 <tr class="separator:a3a1e9be2e50d761a4f0ca8d6ece9bb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78854237bf9bb5b810240db4b19845f1"><td class="memItemLeft" align="right" valign="top"><a id="a78854237bf9bb5b810240db4b19845f1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus_n</b> (<a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; v, unsigned int preval)</td></tr>
-<tr class="separator:a78854237bf9bb5b810240db4b19845f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96741527b6586899ab34e9062fb29637"><td class="memItemLeft" align="right" valign="top"><a id="a96741527b6586899ab34e9062fb29637"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus_n</b> (<a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; v, epiworld_fast_uint preval)</td></tr>
+<tr class="separator:a96741527b6586899ab34e9062fb29637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63aad17303decfa9dc250c7c7b9b54c6"><td class="memItemLeft" align="right" valign="top"><a id="a63aad17303decfa9dc250c7c7b9b54c6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus_fun</b> (<a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; v, VirusToAgentFun&lt; TSeq &gt; fun)</td></tr>
 <tr class="separator:a63aad17303decfa9dc250c7c7b9b54c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad232953a10299b7a82d53ad7b64cd0"><td class="memItemLeft" align="right" valign="top"><a id="a1ad232953a10299b7a82d53ad7b64cd0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; t, epiworld_double preval)</td></tr>
 <tr class="separator:a1ad232953a10299b7a82d53ad7b64cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8acdadbe354fd81f789ef267b061f0"><td class="memItemLeft" align="right" valign="top"><a id="aae8acdadbe354fd81f789ef267b061f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_n</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; t, unsigned int preval)</td></tr>
-<tr class="separator:aae8acdadbe354fd81f789ef267b061f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb64e8785fce9e49299617ac53caa14"><td class="memItemLeft" align="right" valign="top"><a id="aeeb64e8785fce9e49299617ac53caa14"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_n</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; t, epiworld_fast_uint preval)</td></tr>
+<tr class="separator:aeeb64e8785fce9e49299617ac53caa14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5aa87536d8ff020442add27b8f48870"><td class="memItemLeft" align="right" valign="top"><a id="af5aa87536d8ff020442add27b8f48870"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_fun</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; t, ToolToAgentFun&lt; TSeq &gt; fun)</td></tr>
 <tr class="separator:af5aa87536d8ff020442add27b8f48870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1a5c8f23f69b61aeb2689d20ebb5f9c"><td class="memItemLeft" align="right" valign="top"><a id="ac1a5c8f23f69b61aeb2689d20ebb5f9c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, epiworld_double preval)</td></tr>
 <tr class="separator:ac1a5c8f23f69b61aeb2689d20ebb5f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2205447e8d2ef10740a020cdab99dfdf"><td class="memItemLeft" align="right" valign="top"><a id="a2205447e8d2ef10740a020cdab99dfdf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity_n</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, unsigned int preval)</td></tr>
-<tr class="separator:a2205447e8d2ef10740a020cdab99dfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c30714581353ba0a5dd1c8450d9f47"><td class="memItemLeft" align="right" valign="top"><a id="a90c30714581353ba0a5dd1c8450d9f47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity_n</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, epiworld_fast_uint preval)</td></tr>
+<tr class="separator:a90c30714581353ba0a5dd1c8450d9f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeda84715ac62a7bf5ce169c897f22ec"><td class="memItemLeft" align="right" valign="top"><a id="aaeda84715ac62a7bf5ce169c897f22ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity_fun</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, EntityToAgentFun&lt; TSeq &gt; fun)</td></tr>
 <tr class="separator:aaeda84715ac62a7bf5ce169c897f22ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,12 +288,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_directed</b> () co
 <tr class="memitem:a21b883fd81283e25a0b936d7e61683a3"><td class="memItemLeft" align="right" valign="top"><a id="a21b883fd81283e25a0b936d7e61683a3"></a>
 std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents</b> ()</td></tr>
 <tr class="separator:a21b883fd81283e25a0b936d7e61683a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb92b7fb6e29a2edd9100735244c7b0a"><td class="memItemLeft" align="right" valign="top"><a id="afb92b7fb6e29a2edd9100735244c7b0a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_smallworld</b> (unsigned int n=1000, unsigned int k=5, bool d=false, epiworld_double p=.01)</td></tr>
-<tr class="separator:afb92b7fb6e29a2edd9100735244c7b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43fb38a00d0fe706fbabc4f19eaaeb9"><td class="memItemLeft" align="right" valign="top"><a id="ab43fb38a00d0fe706fbabc4f19eaaeb9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b> (unsigned int n=1000)</td></tr>
-<tr class="separator:ab43fb38a00d0fe706fbabc4f19eaaeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1246f44a227f645bca2be2ffced014f1"><td class="memItemLeft" align="right" valign="top"><a id="a1246f44a227f645bca2be2ffced014f1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_smallworld</b> (epiworld_fast_uint n=1000, epiworld_fast_uint k=5, bool d=false, epiworld_double p=.01)</td></tr>
+<tr class="separator:a1246f44a227f645bca2be2ffced014f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3de29f3e2522a850f9e8b6762124c0"><td class="memItemLeft" align="right" valign="top"><a id="aac3de29f3e2522a850f9e8b6762124c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b> (epiworld_fast_uint n=1000)</td></tr>
+<tr class="separator:aac3de29f3e2522a850f9e8b6762124c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Functions to run the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -304,9 +304,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b
   </dd>
 </dl>
 </div></td></tr>
-<tr class="memitem:a237dbec55b0d47a037a11502eecc8733"><td class="memItemLeft" align="right" valign="top"><a id="a237dbec55b0d47a037a11502eecc8733"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (unsigned int ndays, unsigned int seed)</td></tr>
-<tr class="separator:a237dbec55b0d47a037a11502eecc8733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c0eb512807cade519c11cc19f672ec"><td class="memItemLeft" align="right" valign="top"><a id="aa7c0eb512807cade519c11cc19f672ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (epiworld_fast_uint ndays, epiworld_fast_uint seed)</td></tr>
+<tr class="separator:aa7c0eb512807cade519c11cc19f672ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memItemLeft" align="right" valign="top"><a id="ae551e7b2be3d8fb3d3d857153681aa94"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_status</b> ()</td></tr>
 <tr class="separator:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,8 +320,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">run</a> ()</td></tr>
 <tr class="memdesc:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
 <tr class="separator:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1c996c80a2834f6ed010b9c5c9ba6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2">run_multiple</a> (unsigned int nexperiments, std::function&lt; void(size_t, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true)</td></tr>
-<tr class="separator:ac1c996c80a2834f6ed010b9c5c9ba6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true)</td></tr>
+<tr class="separator:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Rewire the network preserving the degree sequence.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This implementation assumes an undirected network, thus if {(i,j), (k,l)} -&gt; {(i,l), (k,j)}, the reciprocal is also true, i.e., {(j,i), (l,k)} -&gt; {(j,k), (l,i)}.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -358,9 +358,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rewire</b> ()</td></t
 <tr class="memitem:a93fc0b94d8d9abe2c8f491f06358d8b7"><td class="memItemLeft" align="right" valign="top"><a id="a93fc0b94d8d9abe2c8f491f06358d8b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::string fn) const</td></tr>
 <tr class="separator:a93fc0b94d8d9abe2c8f491f06358d8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ec3040315eaf6c1c4fff6a146a85e1"><td class="memItemLeft" align="right" valign="top"><a id="a34ec3040315eaf6c1c4fff6a146a85e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::vector&lt; unsigned int &gt; &amp;source, std::vector&lt; unsigned int &gt; &amp;target) const</td></tr>
-<tr class="separator:a34ec3040315eaf6c1c4fff6a146a85e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55810dfd8a6506bae94ab42cbe165c5"><td class="memItemLeft" align="right" valign="top"><a id="aa55810dfd8a6506bae94ab42cbe165c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::vector&lt; epiworld_fast_uint &gt; &amp;source, std::vector&lt; epiworld_fast_uint &gt; &amp;target) const</td></tr>
+<tr class="separator:aa55810dfd8a6506bae94ab42cbe165c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Manage status (states) in the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The functions <code>get_status</code> return the current values for the statuses included in the model.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -397,9 +397,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_status_codes</b
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">set_user_data</a> (std::vector&lt; std::string &gt; names)</td></tr>
 <tr class="memdesc:adc8d49825ecf57ac045a4c93e4d63924"><td class="mdescLeft">&#160;</td><td class="mdescRight">[@ <br /></td></tr>
 <tr class="separator:adc8d49825ecf57ac045a4c93e4d63924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb8f52c3c04282276ee3ff51c3031cf9"><td class="memItemLeft" align="right" valign="top"><a id="afb8f52c3c04282276ee3ff51c3031cf9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_user_data</b> (unsigned int j, epiworld_double x)</td></tr>
-<tr class="separator:afb8f52c3c04282276ee3ff51c3031cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f4a1dafc522b0db27c6144b7c15b9b"><td class="memItemLeft" align="right" valign="top"><a id="ad3f4a1dafc522b0db27c6144b7c15b9b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_user_data</b> (epiworld_fast_uint j, epiworld_double x)</td></tr>
+<tr class="separator:ad3f4a1dafc522b0db27c6144b7c15b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe5b13a42b44107da27f65935f58a875"><td class="memItemLeft" align="right" valign="top"><a id="afe5b13a42b44107da27f65935f58a875"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_user_data</b> (std::vector&lt; epiworld_double &gt; x)</td></tr>
 <tr class="separator:afe5b13a42b44107da27f65935f58a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -491,7 +491,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> 
 <tr class="separator:a3d9b9f0fdd85f6cbec1aa4004476ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Setting and accessing parameters from the model</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp61207d51bcc1b661804b11cec5dc845e"></a> <a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>unsigned int</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp61207d51bcc1b661804b11cec5dc845e"></a> <a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
 <p>The <code>par()</code> function members are aliases for <code>get_param()</code>.</p>
 <p>In the case of the function <code>read_params</code>, users can pass a file listing parameters to be included in the model. Each line in the file should have the following structure:</p>
 <div class="fragment"><div class="line">[name of parameter 1]: [value in double]</div>
@@ -628,24 +628,24 @@ epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p38</b><
 <tr class="memitem:a256cd64788b798e26e70470084978148"><td class="memItemLeft" align="right" valign="top"><a id="a256cd64788b798e26e70470084978148"></a>
 epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p39</b></td></tr>
 <tr class="separator:a256cd64788b798e26e70470084978148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b01550c5b2e08ccc9417d3ca80ed329"><td class="memItemLeft" align="right" valign="top"><a id="a6b01550c5b2e08ccc9417d3ca80ed329"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>npar_used</b> = 0u</td></tr>
-<tr class="separator:a6b01550c5b2e08ccc9417d3ca80ed329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812bde42aac3e3af8a4633a98d59fe2b"><td class="memItemLeft" align="right" valign="top"><a id="a812bde42aac3e3af8a4633a98d59fe2b"></a>
+epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>npar_used</b> = 0u</td></tr>
+<tr class="separator:a812bde42aac3e3af8a4633a98d59fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412e4addbe3799787dccc43322aa2954"><td class="memItemLeft" align="right" valign="top"><a id="a412e4addbe3799787dccc43322aa2954"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>add_param</b> (epiworld_double initial_val, std::string pname)</td></tr>
 <tr class="separator:a412e4addbe3799787dccc43322aa2954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memItemLeft" align="right" valign="top"><a id="a5c77cd0dbf9bc4eadb94bec62ce9279d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read_params</b> (std::string fn)</td></tr>
 <tr class="separator:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a918aa6fe562d73f3bd9699e6a2bec"><td class="memItemLeft" align="right" valign="top"><a id="a96a918aa6fe562d73f3bd9699e6a2bec"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (unsigned int k)</td></tr>
-<tr class="separator:a96a918aa6fe562d73f3bd9699e6a2bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f232a9fff2c6610f82a7238200e9bde"><td class="memItemLeft" align="right" valign="top"><a id="a2f232a9fff2c6610f82a7238200e9bde"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (epiworld_fast_uint k)</td></tr>
+<tr class="separator:a2f232a9fff2c6610f82a7238200e9bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d6350ebba9df34b279a8c36d318311b"><td class="memItemLeft" align="right" valign="top"><a id="a6d6350ebba9df34b279a8c36d318311b"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (std::string pname)</td></tr>
 <tr class="separator:a6d6350ebba9df34b279a8c36d318311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed6d5436c5cd4a61e296ab044037190c"><td class="memItemLeft" align="right" valign="top"><a id="aed6d5436c5cd4a61e296ab044037190c"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (unsigned int k)</td></tr>
-<tr class="separator:aed6d5436c5cd4a61e296ab044037190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47236bb6be24276293e605a986aa68e"><td class="memItemLeft" align="right" valign="top"><a id="ac47236bb6be24276293e605a986aa68e"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (epiworld_fast_uint k)</td></tr>
+<tr class="separator:ac47236bb6be24276293e605a986aa68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5e71c658245167f80d44ca3859afc9"><td class="memItemLeft" align="right" valign="top"><a id="ada5e71c658245167f80d44ca3859afc9"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (std::string pname)</td></tr>
 <tr class="separator:ada5e71c658245167f80d44ca3859afc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -744,8 +744,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="ac1c996c80a2834f6ed010b9c5c9ba6f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1c996c80a2834f6ed010b9c5c9ba6f2">&#9670;&nbsp;</a></span>run_multiple()</h2>
+<a id="a534bcb0cce1a8d1ffbfc176364a1c9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534bcb0cce1a8d1ffbfc176364a1c9f0">&#9670;&nbsp;</a></span>run_multiple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -758,7 +758,7 @@ template&lt;typename TSeq &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::run_multiple </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">epiworld_fast_uint&#160;</td>
           <td class="paramname"><em>nexperiments</em>, </td>
         </tr>
         <tr>

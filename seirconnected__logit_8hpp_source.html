@@ -92,7 +92,7 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit</a>(</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;</a> &amp; model,</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::string vname,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        epiworld_fast_uint n,</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        epiworld_double prevalence,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        epiworld_double reproductive_number,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        epiworld_double prob_transmission,</div>
@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit</a>(</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::string vname,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        epiworld_fast_uint n,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        epiworld_double prevalence,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        epiworld_double reproductive_number,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        epiworld_double prob_transmission,</div>
@@ -125,10 +125,10 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_model_s_e_i_r_c_o_n_n_logit.html#aed2573b19d9c30454e2b5ecb042df0af">   66</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::ModelSEIRCONNLogit</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_model_s_e_i_r_c_o_n_n_logit.html#a497d6d6d6ffb19b53a404974d4c0696f">   66</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::ModelSEIRCONNLogit</a>(</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;</a> &amp; model,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    epiworld_fast_uint n,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    epiworld_double prevalence,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    epiworld_double reproductive_number,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    epiworld_double prob_transmission,</div>
@@ -303,7 +303,7 @@ $(function() {
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">// On the last day, also reset tracked agents and</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="comment">// set the initialized value to false</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;today()) == (m-&gt;get_ndays() - 1))</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(m-&gt;today()) == (m-&gt;get_ndays() - 1))</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            {</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                *_tracked_started = <span class="keyword">false</span>;</div>
@@ -365,7 +365,7 @@ $(function() {
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::ModelSEIRCONNLogit</a>(</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    epiworld_fast_uint n,</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    epiworld_double prevalence,</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    epiworld_double reproductive_number,</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    epiworld_double prob_transmission,</div>
@@ -394,9 +394,9 @@ $(function() {
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_e_i_r_c_o_n_n_logit_html"><div class="ttname"><a href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit</a></div><div class="ttdef"><b>Definition:</b> seirconnected_logit.hpp:6</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9925</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4546</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:7596</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9921</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4542</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:7592</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

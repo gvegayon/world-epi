@@ -23,10 +23,10 @@ Collaboration diagram for Model\+SEIRCONN$<$ TSeq $>$\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_aefc56492efc5762761f0abbf76c45bf0}{Model\+SEIRCONN}} (\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&model, std\+::string vname, unsigned int n, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double incubation\+\_\+days, epiworld\+\_\+double prob\+\_\+recovery)
+\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a841bfb154aaec2f5bed5415a741fb30a}{Model\+SEIRCONN}} (\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double incubation\+\_\+days, epiworld\+\_\+double prob\+\_\+recovery)
 \begin{DoxyCompactList}\small\item\em Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_ae28dd9f4f74b8b119e672f83aa95fd5b}\label{class_model_s_e_i_r_c_o_n_n_ae28dd9f4f74b8b119e672f83aa95fd5b}} 
-{\bfseries Model\+SEIRCONN} (std\+::string vname, unsigned int n, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double incubation\+\_\+days, epiworld\+\_\+double prob\+\_\+recovery)
+\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_aeef16537708882c27d8e38b9e0daed96}\label{class_model_s_e_i_r_c_o_n_n_aeef16537708882c27d8e38b9e0daed96}} 
+{\bfseries Model\+SEIRCONN} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double reproductive\+\_\+number, epiworld\+\_\+double prob\+\_\+transmission, epiworld\+\_\+double incubation\+\_\+days, epiworld\+\_\+double prob\+\_\+recovery)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -49,12 +49,12 @@ int {\bfseries tracked\+\_\+ninfected\+\_\+next} = 0
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_aefc56492efc5762761f0abbf76c45bf0}\label{class_model_s_e_i_r_c_o_n_n_aefc56492efc5762761f0abbf76c45bf0}} 
+\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_a841bfb154aaec2f5bed5415a741fb30a}\label{class_model_s_e_i_r_c_o_n_n_a841bfb154aaec2f5bed5415a741fb30a}} 
 \index{ModelSEIRCONN$<$ TSeq $>$@{ModelSEIRCONN$<$ TSeq $>$}!ModelSEIRCONN@{ModelSEIRCONN}}
 \index{ModelSEIRCONN@{ModelSEIRCONN}!ModelSEIRCONN$<$ TSeq $>$@{ModelSEIRCONN$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{ModelSEIRCONN()}{ModelSEIRCONN()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{unsigned int}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{reproductive\+\_\+number,  }\item[{epiworld\+\_\+double}]{prob\+\_\+transmission,  }\item[{epiworld\+\_\+double}]{incubation\+\_\+days,  }\item[{epiworld\+\_\+double}]{prob\+\_\+recovery }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{reproductive\+\_\+number,  }\item[{epiworld\+\_\+double}]{prob\+\_\+transmission,  }\item[{epiworld\+\_\+double}]{incubation\+\_\+days,  }\item[{epiworld\+\_\+double}]{prob\+\_\+recovery }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

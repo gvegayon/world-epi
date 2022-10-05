@@ -96,12 +96,12 @@ std::vector&lt; epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" va
 <tr class="memitem:a4901be780934888fce8e14ecfa2ead64"><td class="memItemLeft" align="right" valign="top"><a id="a4901be780934888fce8e14ecfa2ead64"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_all</b> (std::vector&lt; std::string &gt; *names=nullptr, std::vector&lt; int &gt; *date=nullptr, std::vector&lt; epiworld_double &gt; *data=nullptr)</td></tr>
 <tr class="separator:a4901be780934888fce8e14ecfa2ead64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26ed1d63b0dcad2d272d970a0e2225ec"><td class="memItemLeft" align="right" valign="top"><a id="a26ed1d63b0dcad2d272d970a0e2225ec"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>nrow</b> () const</td></tr>
-<tr class="separator:a26ed1d63b0dcad2d272d970a0e2225ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e86c5f8138c975b37625ca0202aa69"><td class="memItemLeft" align="right" valign="top"><a id="ad9e86c5f8138c975b37625ca0202aa69"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>ncol</b> () const</td></tr>
-<tr class="separator:ad9e86c5f8138c975b37625ca0202aa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e3ab4afbfdc9467a05f3e9b7a582f9"><td class="memItemLeft" align="right" valign="top"><a id="ae1e3ab4afbfdc9467a05f3e9b7a582f9"></a>
+epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>nrow</b> () const</td></tr>
+<tr class="separator:ae1e3ab4afbfdc9467a05f3e9b7a582f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb46f2a4abcef0c6a4b3115c25f4bc1d"><td class="memItemLeft" align="right" valign="top"><a id="afb46f2a4abcef0c6a4b3115c25f4bc1d"></a>
+epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>ncol</b> () const</td></tr>
+<tr class="separator:afb46f2a4abcef0c6a4b3115c25f4bc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d718e83afbe80eca2ca5d04219a302"><td class="memItemLeft" align="right" valign="top"><a id="a94d718e83afbe80eca2ca5d04219a302"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (std::string fn)</td></tr>
 <tr class="separator:a94d718e83afbe80eca2ca5d04219a302"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +120,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> () const</t
 <tr class="memitem:af5b2e637536227178636a9c4409a3338"><td class="memItemLeft" align="right" valign="top"><a id="af5b2e637536227178636a9c4409a3338"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (std::vector&lt; epiworld_double &gt; x)</td></tr>
 <tr class="separator:af5b2e637536227178636a9c4409a3338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb780cd801fd045c2082f887daa20935"><td class="memItemLeft" align="right" valign="top"><a id="abb780cd801fd045c2082f887daa20935"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (unsigned int j, epiworld_double x)</td></tr>
-<tr class="separator:abb780cd801fd045c2082f887daa20935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1e2a952e421ec0ba21984e4108d51b"><td class="memItemLeft" align="right" valign="top"><a id="a1b1e2a952e421ec0ba21984e4108d51b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (epiworld_fast_uint j, epiworld_double x)</td></tr>
+<tr class="separator:a1b1e2a952e421ec0ba21984e4108d51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Access data</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -133,12 +133,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (unsigned int
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>epiworld_double&amp; </dd></dl>
 </div></td></tr>
-<tr class="memitem:a47c2b4bf53b4d4f259cff3c508560fa2"><td class="memItemLeft" align="right" valign="top"><a id="a47c2b4bf53b4d4f259cff3c508560fa2"></a>
-epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (unsigned int i, unsigned int j)</td></tr>
-<tr class="separator:a47c2b4bf53b4d4f259cff3c508560fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0124f68193cae9818b4740a28bbc34d2"><td class="memItemLeft" align="right" valign="top"><a id="a0124f68193cae9818b4740a28bbc34d2"></a>
-epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (unsigned int i, std::string name)</td></tr>
-<tr class="separator:a0124f68193cae9818b4740a28bbc34d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46446543696e6136fad4111e321a8581"><td class="memItemLeft" align="right" valign="top"><a id="a46446543696e6136fad4111e321a8581"></a>
+epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (epiworld_fast_uint i, epiworld_fast_uint j)</td></tr>
+<tr class="separator:a46446543696e6136fad4111e321a8581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bda77beecf498dcc3d63c35c93457ca"><td class="memItemLeft" align="right" valign="top"><a id="a5bda77beecf498dcc3d63c35c93457ca"></a>
+epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (epiworld_fast_uint i, std::string name)</td></tr>
+<tr class="separator:a5bda77beecf498dcc3d63c35c93457ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

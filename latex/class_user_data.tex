@@ -29,11 +29,11 @@ std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+data} ()
 \mbox{\Hypertarget{class_user_data_a4901be780934888fce8e14ecfa2ead64}\label{class_user_data_a4901be780934888fce8e14ecfa2ead64}} 
 void {\bfseries get\+\_\+all} (std\+::vector$<$ std\+::string $>$ $\ast$names=nullptr, std\+::vector$<$ int $>$ $\ast$date=nullptr, std\+::vector$<$ epiworld\+\_\+double $>$ $\ast$data=nullptr)
 \item 
-\mbox{\Hypertarget{class_user_data_a26ed1d63b0dcad2d272d970a0e2225ec}\label{class_user_data_a26ed1d63b0dcad2d272d970a0e2225ec}} 
-unsigned int {\bfseries nrow} () const
+\mbox{\Hypertarget{class_user_data_ae1e3ab4afbfdc9467a05f3e9b7a582f9}\label{class_user_data_ae1e3ab4afbfdc9467a05f3e9b7a582f9}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries nrow} () const
 \item 
-\mbox{\Hypertarget{class_user_data_ad9e86c5f8138c975b37625ca0202aa69}\label{class_user_data_ad9e86c5f8138c975b37625ca0202aa69}} 
-unsigned int {\bfseries ncol} () const
+\mbox{\Hypertarget{class_user_data_afb46f2a4abcef0c6a4b3115c25f4bc1d}\label{class_user_data_afb46f2a4abcef0c6a4b3115c25f4bc1d}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries ncol} () const
 \item 
 \mbox{\Hypertarget{class_user_data_a94d718e83afbe80eca2ca5d04219a302}\label{class_user_data_a94d718e83afbe80eca2ca5d04219a302}} 
 void {\bfseries write} (std\+::string fn)
@@ -54,8 +54,8 @@ void {\bfseries print} () const
 \mbox{\Hypertarget{class_user_data_af5b2e637536227178636a9c4409a3338}\label{class_user_data_af5b2e637536227178636a9c4409a3338}} 
 void {\bfseries add} (std\+::vector$<$ epiworld\+\_\+double $>$ x)
 \item 
-\mbox{\Hypertarget{class_user_data_abb780cd801fd045c2082f887daa20935}\label{class_user_data_abb780cd801fd045c2082f887daa20935}} 
-void {\bfseries add} (unsigned int j, epiworld\+\_\+double x)
+\mbox{\Hypertarget{class_user_data_a1b1e2a952e421ec0ba21984e4108d51b}\label{class_user_data_a1b1e2a952e421ec0ba21984e4108d51b}} 
+void {\bfseries add} (epiworld\+\_\+fast\+\_\+uint j, epiworld\+\_\+double x)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Access data}\par
@@ -71,11 +71,11 @@ epiworld\+\_\+double\&
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_user_data_a47c2b4bf53b4d4f259cff3c508560fa2}\label{class_user_data_a47c2b4bf53b4d4f259cff3c508560fa2}} 
-epiworld\+\_\+double \& {\bfseries operator()} (unsigned int i, unsigned int j)
+\mbox{\Hypertarget{class_user_data_a46446543696e6136fad4111e321a8581}\label{class_user_data_a46446543696e6136fad4111e321a8581}} 
+epiworld\+\_\+double \& {\bfseries operator()} (epiworld\+\_\+fast\+\_\+uint i, epiworld\+\_\+fast\+\_\+uint j)
 \item 
-\mbox{\Hypertarget{class_user_data_a0124f68193cae9818b4740a28bbc34d2}\label{class_user_data_a0124f68193cae9818b4740a28bbc34d2}} 
-epiworld\+\_\+double \& {\bfseries operator()} (unsigned int i, std\+::string name)
+\mbox{\Hypertarget{class_user_data_a5bda77beecf498dcc3d63c35c93457ca}\label{class_user_data_a5bda77beecf498dcc3d63c35c93457ca}} 
+epiworld\+\_\+double \& {\bfseries operator()} (epiworld\+\_\+fast\+\_\+uint i, std\+::string name)
 \end{DoxyCompactItemize}
 \end{Indent}
 \doxysubsection*{Friends}

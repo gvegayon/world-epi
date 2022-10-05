@@ -91,12 +91,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa08631a4605cc3037f017bb437a96ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_adj_list.html#aa08631a4605cc3037f017bb437a96ef0">read_edgelist</a> (std::string fn, int size, int skip=0, bool directed=true)</td></tr>
 <tr class="memdesc:aa08631a4605cc3037f017bb437a96ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an edgelist.  <a href="classepiworld_1_1_adj_list.html#aa08631a4605cc3037f017bb437a96ef0">More...</a><br /></td></tr>
 <tr class="separator:aa08631a4605cc3037f017bb437a96ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23842be8fec6210e8e1b78a80d2c6ac6"><td class="memItemLeft" align="right" valign="top"><a id="a23842be8fec6210e8e1b78a80d2c6ac6"></a>
-std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (unsigned int i) const</td></tr>
-<tr class="separator:a23842be8fec6210e8e1b78a80d2c6ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e9c3d2680ccc643ae48c6712a7741c"><td class="memItemLeft" align="right" valign="top"><a id="ac0e9c3d2680ccc643ae48c6712a7741c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (unsigned int limit=20u) const</td></tr>
-<tr class="separator:ac0e9c3d2680ccc643ae48c6712a7741c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d410594f6bc47b6ac5f71bf416f42a4"><td class="memItemLeft" align="right" valign="top"><a id="a7d410594f6bc47b6ac5f71bf416f42a4"></a>
+std::map&lt; epiworld_fast_uint, epiworld_fast_uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (epiworld_fast_uint i) const</td></tr>
+<tr class="separator:a7d410594f6bc47b6ac5f71bf416f42a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f7d6d243e37f7496eee5e16592d94b"><td class="memItemLeft" align="right" valign="top"><a id="a64f7d6d243e37f7496eee5e16592d94b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (epiworld_fast_uint limit=20u) const</td></tr>
+<tr class="separator:a64f7d6d243e37f7496eee5e16592d94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bf3a057863c9dfb958d44ff370690d1"><td class="memItemLeft" align="right" valign="top"><a id="a2bf3a057863c9dfb958d44ff370690d1"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1">vcount</a> () const</td></tr>
 <tr class="memdesc:a2bf3a057863c9dfb958d44ff370690d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices/nodes in the network. <br /></td></tr>
@@ -105,9 +105,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_adj_list.html#a776cefb7cc85d544e4eb9e61aaa46f83">ecount</a> () const</td></tr>
 <tr class="memdesc:a776cefb7cc85d544e4eb9e61aaa46f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of edges/arcs/ties in the network. <br /></td></tr>
 <tr class="separator:a776cefb7cc85d544e4eb9e61aaa46f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb8505f493ec89272121049990aa5fea"><td class="memItemLeft" align="right" valign="top"><a id="acb8505f493ec89272121049990aa5fea"></a>
-std::vector&lt; std::map&lt; unsigned int, unsigned int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_dat</b> ()</td></tr>
-<tr class="separator:acb8505f493ec89272121049990aa5fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa8f3b6ed3f444612832e4682277f62"><td class="memItemLeft" align="right" valign="top"><a id="a0aa8f3b6ed3f444612832e4682277f62"></a>
+std::vector&lt; std::map&lt; epiworld_fast_uint, epiworld_fast_uint &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_dat</b> ()</td></tr>
+<tr class="separator:a0aa8f3b6ed3f444612832e4682277f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70e14a9f262278d028cecae547382049"><td class="memItemLeft" align="right" valign="top"><a id="a70e14a9f262278d028cecae547382049"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_adj_list.html#a70e14a9f262278d028cecae547382049">is_directed</a> () const</td></tr>
 <tr class="memdesc:a70e14a9f262278d028cecae547382049"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>true</code> if the network is directed. <br /></td></tr>

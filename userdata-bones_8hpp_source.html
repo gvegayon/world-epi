@@ -92,8 +92,8 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt; int &gt; data_dates;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector&lt; epiworld_double &gt; data_data;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0u;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 0u;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    epiworld_fast_uint k = 0u;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    epiworld_fast_uint n = 0u;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> last_day = -1;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
@@ -106,17 +106,17 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> add(std::vector&lt;epiworld_double&gt; x);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> add(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        epiworld_fast_uint j,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        epiworld_double x</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        );</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    epiworld_double &amp; operator()(</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        epiworld_fast_uint i,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        epiworld_fast_uint j</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        );</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    epiworld_double &amp; operator()(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        epiworld_fast_uint i,</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::string name</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        );</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
@@ -132,8 +132,8 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::vector&lt; epiworld_double &gt; * data = <span class="keyword">nullptr</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nrow() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ncol() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    epiworld_fast_uint nrow() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    epiworld_fast_uint ncol() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> write(std::string fn);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>

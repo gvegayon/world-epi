@@ -98,11 +98,11 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Identifying individuals with degree &gt; 0</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt; unsigned int &gt; non_isolates;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; non_isolates;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt; epiworld_double &gt; weights;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    epiworld_double nedges = 0.0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// std::vector&lt; Agent&lt;TSeq&gt; &gt; * agents = model-&gt;get_agents();</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; agents-&gt;size(); ++i)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; agents-&gt;size(); ++i)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (agents-&gt;operator[](i).get_neighbors().size() &gt; 0u)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
@@ -118,14 +118,14 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Cumulative probs</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    weights[0u] /= nedges;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1u; i &lt; non_isolates.size(); ++i)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 1u; i &lt; non_isolates.size(); ++i)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;         weights[i] /= nedges;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;         weights[i] += weights[i - 1u];</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Only swap if needed</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = non_isolates.size();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    epiworld_fast_uint N = non_isolates.size();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    epiworld_double prob;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> nrewires = floor(proportion * nedges);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">while</span> (nrewires-- &gt; 0)</div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// Picking egos</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        prob = model-&gt;runif();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">int</span> id0 = N - 1;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; N; ++i)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; N; ++i)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (prob &lt;= weights[i])</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                id0 = i;</div>
@@ -143,7 +143,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        prob = model-&gt;runif();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">int</span> id1 = N - 1;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; N; ++i)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; N; ++i)</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (prob &lt;= weights[i])</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                id1 = i;</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (!model-&gt;is_directed())</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// Picking 0&#39;s alter</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n0,n1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            epiworld_fast_uint n0,n1;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; p01 = agents-&gt;operator[](p0.get_neighbors()[id01]-&gt;get_id());</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">for</span> (n0 = 0; n0 &lt; p01.get_neighbors().size(); ++n0)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
@@ -258,14 +258,14 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// Cumulative probs</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    weights[0u] /= nedges;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1u; i &lt; non_isolates.size(); ++i)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 1u; i &lt; non_isolates.size(); ++i)</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;         weights[i] /= nedges;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;         weights[i] += weights[i - 1u];</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// Only swap if needed</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = non_isolates.size();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    epiworld_fast_uint N = non_isolates.size();</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    epiworld_double prob;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> nrewires = floor(proportion * nedges / (</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        agents-&gt;<a class="code" href="class_adj_list.html#a70e14a9f262278d028cecae547382049">is_directed</a>() ? 1.0 : 2.0</div>
@@ -277,7 +277,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// Picking egos</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        prob = model-&gt;runif();</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">int</span> id0 = N - 1;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; N; ++i)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; N; ++i)</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">if</span> (prob &lt;= weights[i])</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            {</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                id0 = i;</div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        prob = model-&gt;runif();</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordtype">int</span> id1 = N - 1;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; N; ++i)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; N; ++i)</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">if</span> (prob &lt;= weights[i])</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            {</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                id1 = i;</div>
@@ -300,8 +300,8 @@ $(function() {
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span> (id1 &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(N))</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            id1 = 0;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        std::map&lt;unsigned int,unsigned int&gt; &amp; p0 = agents-&gt;get_dat()[non_isolates[id0]];</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        std::map&lt;unsigned int,unsigned int&gt; &amp; p1 = agents-&gt;get_dat()[non_isolates[id1]];</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p0 = agents-&gt;get_dat()[non_isolates[id0]];</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p1 = agents-&gt;get_dat()[non_isolates[id1]];</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// Picking alters (relative location in their lists)</span></div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// In this case, these are uniformly distributed within the list</span></div>
@@ -327,8 +327,8 @@ $(function() {
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">if</span> (!agents-&gt;<a class="code" href="class_adj_list.html#a70e14a9f262278d028cecae547382049">is_directed</a>())</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            std::map&lt;unsigned int,unsigned int&gt; &amp; p01 = agents-&gt;get_dat()[id01];</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            std::map&lt;unsigned int,unsigned int&gt; &amp; p11 = agents-&gt;get_dat()[id11];</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p01 = agents-&gt;get_dat()[id01];</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p11 = agents-&gt;get_dat()[id11];</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            std::swap(p01[id0], p11[id1]);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            </div>
@@ -345,7 +345,7 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_adj_list.html">AdjList</a> rgraph_bernoulli(</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    epiworld_fast_uint n,</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    epiworld_double p,</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">bool</span> directed,</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; model</div>
@@ -360,13 +360,13 @@ $(function() {
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        p</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    );</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = d(*model.get_rand_endgine());</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    epiworld_fast_uint m = d(*model.get_rand_endgine());</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    source.resize(m);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    target.resize(m);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">int</span> a,b;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; m; ++i)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; m; ++i)</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        a = floor(model.runif() * n);</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
@@ -395,7 +395,7 @@ $(function() {
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_adj_list.html">AdjList</a> rgraph_bernoulli2(</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    epiworld_fast_uint n,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    epiworld_double p,</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">bool</span> directed,</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; model</div>
@@ -414,7 +414,7 @@ $(function() {
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// elements sampled. If n * n, then each diag element has</span></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// 1/(n^2) chance of sampling</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = d(*model.get_rand_endgine());</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    epiworld_fast_uint m = d(*model.get_rand_endgine());</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    source.resize(m);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    target.resize(m);</div>
@@ -422,7 +422,7 @@ $(function() {
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">double</span> n2 = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n * n);</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">int</span> loc,row,col;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0u; i &lt; m; ++i)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; m; ++i)</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        loc = floor(model.runif() * n2);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        col = floor(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(loc)/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n));</div>
@@ -444,8 +444,8 @@ $(function() {
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_adj_list.html">AdjList</a> rgraph_ring_lattice(</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k,</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    epiworld_fast_uint k,</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">bool</span> directed = <span class="keyword">false</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;) {</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
@@ -456,16 +456,16 @@ $(function() {
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; target;</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="comment">// if (!directed)</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="comment">//     if (k &gt; 1u) k = static_cast&lt; unsigned int &gt;(floor(k / 2.0));</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="comment">//     if (k &gt; 1u) k = static_cast&lt; epiworld_fast_uint &gt;(floor(k / 2.0));</span></div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0; i &lt; n; ++i)</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    {</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 1u; j &lt;= k; ++j)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint j = 1u; j &lt;= k; ++j)</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        {</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="comment">// Next neighbor</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = i + j;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            epiworld_fast_uint l = i + j;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">if</span> (l &gt;= n) l = l - n;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            source.push_back(i);</div>
@@ -481,8 +481,8 @@ $(function() {
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_adj_list.html">AdjList</a> rgraph_smallworld(</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n,</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k,</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    epiworld_fast_uint k,</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    epiworld_double p,</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">bool</span> directed,</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; model</div>

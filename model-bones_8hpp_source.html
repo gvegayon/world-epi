@@ -201,7 +201,7 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    epiworld_double rewire_prop;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    std::map&lt;std::string, epiworld_double &gt; parameters;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ndays;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    epiworld_fast_uint ndays;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="class_progress.html">Progress</a> pb;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    std::vector&lt; UpdateFun&lt;TSeq&gt; &gt;    status_fun = {};</div>
@@ -222,7 +222,7 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">// std::chrono::milliseconds</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    std::chrono::duration&lt;epiworld_double,std::micro&gt; time_elapsed = </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        std::chrono::duration&lt;epiworld_double,std::micro&gt;::zero();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n_replicates = 0u;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    epiworld_fast_uint n_replicates = 0u;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> chrono_start();</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> chrono_end();</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">void</span> set_rand_engine(std::mt19937 &amp; eng);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    std::mt19937 * get_rand_endgine();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> seed(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> seed(epiworld_fast_uint s);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">void</span> set_rand_norm(epiworld_double mean, epiworld_double sd);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">void</span> set_rand_unif(epiworld_double a, epiworld_double b);</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> set_rand_exp(epiworld_double lambda);</div>
@@ -304,13 +304,13 @@ $(function() {
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    epiworld_double rlognormal(epiworld_double mean, epiworld_double shape);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> add_virus(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, epiworld_double preval);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">void</span> add_virus_n(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">void</span> add_virus_n(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, epiworld_fast_uint preval);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">void</span> add_virus_fun(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> v, VirusToAgentFun&lt;TSeq&gt; fun);</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">void</span> add_tool(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, epiworld_double preval);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">void</span> add_tool_n(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">void</span> add_tool_n(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, epiworld_fast_uint preval);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">void</span> add_tool_fun(<a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> t, ToolToAgentFun&lt;TSeq&gt; fun);</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">void</span> add_entity(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, epiworld_double preval);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">void</span> add_entity_n(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> preval);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">void</span> add_entity_n(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, epiworld_fast_uint preval);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">void</span> add_entity_fun(<a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> e, EntityToAgentFun&lt;TSeq&gt; fun);</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">void</span> agents_from_adjlist(</div>
@@ -323,20 +323,20 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">bool</span> is_directed() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    std::vector&lt; Agent&lt;TSeq&gt; &gt; * get_agents();</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordtype">void</span> agents_smallworld(</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 1000,</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 5,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        epiworld_fast_uint n = 1000,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        epiworld_fast_uint k = 5,</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">bool</span> d = <span class="keyword">false</span>,</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        epiworld_double p = .01</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        );</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">void</span> agents_empty_graph(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 1000);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">void</span> agents_empty_graph(epiworld_fast_uint n = 1000);</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">void</span> init(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ndays, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> seed);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">void</span> init(epiworld_fast_uint ndays, epiworld_fast_uint seed);</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">void</span> update_status();</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">void</span> mutate_variant();</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">void</span> next();</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">run</a>(); </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2">run_multiple</a>( </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nexperiments,</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">run_multiple</a>( </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        epiworld_fast_uint nexperiments,</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span>,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt; fun = make_save_run&lt;TSeq&gt;(),</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> = <span class="keyword">true</span>,</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">bool</span> verbose = <span class="keyword">true</span></div>
@@ -344,9 +344,9 @@ $(function() {
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">size_t</span> get_n_variants() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">size_t</span> get_n_tools() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_ndays() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> get_n_replicates() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">void</span> set_ndays(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ndays);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    epiworld_fast_uint get_ndays() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    epiworld_fast_uint get_n_replicates() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">void</span> set_ndays(epiworld_fast_uint ndays);</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">bool</span> get_verbose() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">void</span> verbose_off();</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">void</span> verbose_on();</div>
@@ -373,8 +373,8 @@ $(function() {
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">void</span> write_edgelist(</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        std::vector&lt; unsigned int &gt; &amp; source,</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        std::vector&lt; unsigned int &gt; &amp; target</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        std::vector&lt; epiworld_fast_uint &gt; &amp; source,</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        std::vector&lt; epiworld_fast_uint &gt; &amp; target</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    std::map&lt;std::string, epiworld_double&gt; &amp; params();</div>
@@ -391,16 +391,16 @@ $(function() {
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    epiworld_double add_param(epiworld_double initial_val, std::string pname);</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="keywordtype">void</span> read_params(std::string fn);</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    epiworld_double get_param(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    epiworld_double get_param(epiworld_fast_uint k);</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    epiworld_double get_param(std::string pname);</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    epiworld_double par(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    epiworld_double par(epiworld_fast_uint k);</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    epiworld_double par(std::string pname);</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    epiworld_double </div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        *p0,*p1,*p2,*p3,*p4,*p5,*p6,*p7,*p8,*p9,</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        *p10,*p11,*p12,*p13,*p14,*p15,*p16,*p17,*p18,*p19,</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        *p20,*p21,*p22,*p23,*p24,*p25,*p26,*p27,*p28,*p29,</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        *p30,*p31,*p32,*p33,*p34,*p35,*p36,*p37,*p38,*p39;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> npar_used = 0u;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    epiworld_fast_uint npar_used = 0u;</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordtype">void</span> get_elapsed(</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        std::string unit = <span class="stringliteral">&quot;auto&quot;</span>,</div>
@@ -411,7 +411,7 @@ $(function() {
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">set_user_data</a>(std::vector&lt; std::string &gt; names);</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">void</span> add_user_data(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j, epiworld_double x);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">void</span> add_user_data(epiworld_fast_uint j, epiworld_double x);</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">void</span> add_user_data(std::vector&lt; epiworld_double &gt; x);</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <a class="code" href="class_user_data.html">UserData&lt;TSeq&gt;</a> &amp; get_user_data();</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
@@ -456,11 +456,11 @@ $(function() {
 <div class="ttc" id="aclass_model_html_a2c4ac58e918e9e8dc2e58be6521d8827"><div class="ttname"><a href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model::is_queuing_on</a></div><div class="ttdeci">bool is_queuing_on() const</div><div class="ttdoc">Query if the queuing system is on.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1938</div></div>
 <div class="ttc" id="aclass_model_html_a3cf5b4f14dcd54816785b38894c8088f"><div class="ttname"><a href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model::get_queue</a></div><div class="ttdeci">Queue&lt; TSeq &gt; &amp; get_queue()</div><div class="ttdoc">Retrieve the Queue object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1944</div></div>
 <div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1969</div></div>
+<div class="ttc" id="aclass_model_html_a534bcb0cce1a8d1ffbfc176364a1c9f0"><div class="ttname"><a href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(epiworld_fast_uint nexperiments, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1271</div></div>
 <div class="ttc" id="aclass_model_html_a70f0e1d4c74e1cfc887aca35984c52b6"><div class="ttname"><a href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model::queuing_off</a></div><div class="ttdeci">void queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1932</div></div>
 <div class="ttc" id="aclass_model_html_a825c7fb2498c7693cbf1bfcd0a416ef4"><div class="ttname"><a href="class_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">Model::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1237</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1531</div></div>
 <div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1215</div></div>
-<div class="ttc" id="aclass_model_html_ac1c996c80a2834f6ed010b9c5c9ba6f2"><div class="ttname"><a href="class_model.html#ac1c996c80a2834f6ed010b9c5c9ba6f2">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(unsigned int nexperiments, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1271</div></div>
 <div class="ttc" id="aclass_model_html_adc3b2119335ffa4b0128123be919f454"><div class="ttname"><a href="class_model.html#adc3b2119335ffa4b0128123be919f454">Model::add_global_action</a></div><div class="ttdeci">void add_global_action(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, int date=-99)</div><div class="ttdoc">Set a global action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1888</div></div>
 <div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1864</div></div>
 <div class="ttc" id="aclass_progress_html"><div class="ttname"><a href="class_progress.html">Progress</a></div><div class="ttdoc">A simple progress bar.</div><div class="ttdef"><b>Definition:</b> progress.hpp:11</div></div>

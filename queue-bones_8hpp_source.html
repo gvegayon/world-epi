@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> operator+=(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> operator-=(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    epiworld_fast_int &amp; operator[](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    epiworld_fast_int &amp; operator[](epiworld_fast_uint i);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// void initialize(Model&lt;TSeq&gt; * m, Agent&lt;TSeq&gt; * p);</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> set_model(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * m);</div>
@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">inline</span> epiworld_fast_int &amp; <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">inline</span> epiworld_fast_int &amp; <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::operator[]</a>(epiworld_fast_uint i)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> active[i];</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>

@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_model_s_u_r_v.html">ModelSURV</a>(</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;</a> &amp; model,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::string vname,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prevalence               = 50,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        epiworld_fast_uint prevalence               = 50,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        epiworld_double efficacy_vax          = 0.9,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        epiworld_double latent_period         = 3u,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        epiworld_double infect_period         = 6u,</div>
@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_model_s_u_r_v.html">ModelSURV</a>(</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::string vname,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prevalence               = 50,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        epiworld_fast_uint prevalence               = 50,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        epiworld_double efficacy_vax          = 0.9,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        epiworld_double latent_period         = 3u,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        epiworld_double infect_period         = 6u,</div>
@@ -126,10 +126,10 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_model_s_u_r_v.html#aa64781161966bfd5465f2bf739516814">   66</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ModelSURV</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_model_s_u_r_v.html#aca1a595af7600f4cb37992d9c53d2d59">   66</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ModelSURV</a>(</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;</a> &amp; model,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prevalence,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    epiworld_fast_uint prevalence,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    epiworld_double efficacy_vax,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    epiworld_double latent_period,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    epiworld_double infect_period,</div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    EPI_NEW_UPDATEFUN_LAMBDA(surveillance_update_susceptible, TSeq) {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// This computes the prob of getting any neighbor variant</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nvariants_tmp = 0u;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        epiworld_fast_uint nvariants_tmp = 0u;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; neighbor: p-&gt;get_neighbors()) </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    </div>
@@ -192,7 +192,7 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        epiworld::VirusPtr&lt;TSeq&gt; &amp; v = p-&gt;get_virus(0u); </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        epiworld_double p_die = v-&gt;get_prob_death() * (1.0 - p-&gt;get_death_reduction(v)); </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> days_since_exposed = m-&gt;today() - v-&gt;get_date();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        epiworld_fast_uint days_since_exposed = m-&gt;today() - v-&gt;get_date();</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        epiworld_fast_uint status = p-&gt;get_status();</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// Figuring out latent period</span></div>
@@ -272,7 +272,7 @@ $(function() {
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        {</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// Who is the lucky one</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::floor(EPI_RUNIF() * m-&gt;size()));</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            epiworld_fast_uint i = <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(std::floor(EPI_RUNIF() * m-&gt;size()));</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">if</span> (sampled[i])</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                <span class="keywordflow">continue</span>;</div>
@@ -384,7 +384,7 @@ $(function() {
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ModelSURV</a>(</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prevalence,</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    epiworld_fast_uint prevalence,</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    epiworld_double efficacy_vax,</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    epiworld_double latent_period,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    epiworld_double infect_period,</div>
@@ -422,10 +422,10 @@ $(function() {
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9925</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4546</div></div>
-<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8384</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:7596</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9921</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4542</div></div>
+<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8380</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:7592</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

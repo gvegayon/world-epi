@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2022.10.4)  4 OCT 2022 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2022.10.5)  5 OCT 2022 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1543,14 +1543,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 [62] [63] [64]
-Underfull \hbox (badness 2293) in paragraph at lines 264--265
-[]\T1/phv/m/n/10 void [] (un-signed int nex-per-i-ments, std[]::function$\OML/c
-mm/m/it/10 <$ \T1/phv/m/n/10 void(size[]_[]t, []$\OML/cmm/m/it/10 <$ \T1/phv/m/
-n/10 TSeq $\OML/cmm/m/it/10 >$ $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 )$\OML/cmm/
-m/it/10 >$
- []
-
-
 Underfull \hbox (badness 10000) detected at line 275
 [][][]
  []
@@ -1569,22 +1561,22 @@ Underfull \hbox (badness 10000) detected at line 320
 [][][]
  []
 
-[65] [66]
+[65]
 Underfull \hbox (badness 10000) detected at line 383
 [][][]
  []
 
-[67]
+[66]
 Underfull \hbox (badness 10000) detected at line 472
 [][][]
  []
 
-[68] [69] [70]
+[67] [68] [69]
 Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
 []\T1/phv/m/sl/10 ncols[] 
  []
 
-[71]) (./class_model.tex
+[70]) (./class_model.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1601,15 +1593,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[72] [73]
-Underfull \hbox (badness 2293) in paragraph at lines 264--265
-[]\T1/phv/m/n/10 void [] (un-signed int nex-per-i-ments, std[]::function$\OML/c
-mm/m/it/10 <$ \T1/phv/m/n/10 void(size[]_[]t, []$\OML/cmm/m/it/10 <$ \T1/phv/m/
-n/10 TSeq $\OML/cmm/m/it/10 >$ $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 )$\OML/cmm/
-m/it/10 >$
- []
-
-[74]
+[71] [72] [73]
 Underfull \hbox (badness 10000) detected at line 275
 [][][]
  []
@@ -1625,29 +1609,29 @@ m/it/10 <$ []$<$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/10 >$$>$ $\OMS/cmsy/m/n/10
 
 
 Underfull \hbox (badness 10000) detected at line 320
+[][][]
+ []
+
+[74]
+Underfull \hbox (badness 10000) detected at line 383
 [][][]
  []
 
 [75]
-Underfull \hbox (badness 10000) detected at line 383
-[][][]
- []
-
-[76]
 Underfull \hbox (badness 10000) detected at line 472
 [][][]
  []
 
-[77] [78]
+[76] [77]
 Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
 []\T1/phv/m/sl/10 ncols[] 
  []
 
-[79]
+[78]
 Overfull \vbox (19.13878pt too high) has occurred while \output is active []
 
 
-[80]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r.tex
+[79]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1670,7 +1654,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r__
 inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf, id=3020, 190
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf, id=3016, 190
 .7125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -1684,7 +1668,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf, id=3029, 190.71
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf, id=3024, 190.71
 25pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -1692,7 +1676,7 @@ e (type pdf)
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__gr
 aph.pdf  used on input line 29.
 (pdftex.def)             Requested size: 190.0pt x 167.00684pt.
- [81]) (./class_model_s_e_i_r.tex
+ [80]) (./class_model_s_e_i_r.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1709,12 +1693,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[82] <./class_model_s_e_i_r__inherit__graph.pdf
+[81] <./class_model_s_e_i_r__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r__inherit__graph.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r__inherit__graph.pdf, id=3064, 190.7125pt x 156.585pt>
+<class_model_s_e_i_r__inherit__graph.pdf, id=3060, 190.7125pt x 156.585pt>
 File: class_model_s_e_i_r__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r__inherit__graph.pdf  used on input
@@ -1725,13 +1709,13 @@ Package pdftex.def Info: class_model_s_e_i_r__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r__coll__graph.pdf, id=3072, 190.7125pt x 156.585pt>
+<class_model_s_e_i_r__coll__graph.pdf, id=3068, 190.7125pt x 156.585pt>
 File: class_model_s_e_i_r__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r__coll__graph.pdf  used on input li
 ne 29.
 (pdftex.def)             Requested size: 190.0pt x 156.0064pt.
- [83]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.tex
+ [82]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1750,7 +1734,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  <./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
 <classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=3
-101, 219.82124pt x 178.6675pt>
+096, 219.82124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf 
 Graphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
@@ -1758,13 +1742,13 @@ Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__
 inherit__graph.pdf  used on input line 10.
 (pdftex.def)             Requested size: 219.0pt x 178.00456pt.
 
-[84] <./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf
+[83] <./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c
 _o_n_n__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=3116
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=3112
 , 219.82124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf Gra
 phic file (type pdf)
@@ -1772,13 +1756,7 @@ phic file (type pdf)
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__
 coll__graph.pdf  used on input line 20.
 (pdftex.def)             Requested size: 219.0pt x 178.00456pt.
-
-Underfull \hbox (badness 1107) in paragraph at lines 28--30
-[][] \T1/phv/b/n/10 Model[]SEIRCONN \T1/phv/m/n/10 (std[]::string vname, un-sig
-ned int n, epiworld[]_[]double preva-lence, epiworld[]_[]double
- []
-
-[85]) (./class_model_s_e_i_r_c_o_n_n.tex
+ [84]) (./class_model_s_e_i_r_c_o_n_n.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1796,32 +1774,26 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
-<class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=3141, 214.8025pt x 167.626
+<class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=3137, 214.8025pt x 167.626
 25pt>
 File: class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf  used 
 on input line 10.
 (pdftex.def)             Requested size: 214.0pt x 167.00172pt.
- [86] <./class_model_s_e_i_r_c_o_n_n__coll__graph.pdf
+ [85] <./class_model_s_e_i_r_c_o_n_n__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_c_o_n_n__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=3161, 214.8025pt x 167.62625p
+<class_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=3157, 214.8025pt x 167.62625p
 t>
 File: class_model_s_e_i_r_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_c_o_n_n__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r_c_o_n_n__coll__graph.pdf  used on 
 input line 20.
 (pdftex.def)             Requested size: 214.0pt x 167.00172pt.
-
-Underfull \hbox (badness 1107) in paragraph at lines 28--30
-[][] \T1/phv/b/n/10 Model[]SEIRCONN \T1/phv/m/n/10 (std[]::string vname, un-sig
-ned int n, epiworld[]_[]double preva-lence, epiworld[]_[]double
- []
-
-[87]) (./class_model_s_e_i_r_c_o_n_n_logit.tex
+ [86]) (./class_model_s_e_i_r_c_o_n_n_logit.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1839,7 +1811,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_e_i_r_c_o_n_n_logit__inherit__graph.pdf>
-<class_model_s_e_i_r_c_o_n_n_logit__inherit__graph.pdf, id=3192, 196.735pt x 17
+<class_model_s_e_i_r_c_o_n_n_logit__inherit__graph.pdf, id=3188, 196.735pt x 17
 8.6675pt>
 File: class_model_s_e_i_r_c_o_n_n_logit__inherit__graph.pdf Graphic file (type 
 pdf)
@@ -1852,7 +1824,7 @@ Package pdftex.def Info: class_model_s_e_i_r_c_o_n_n_logit__inherit__graph.pdf
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_c_o_n_n_logit__coll__graph
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf, id=3200, 196.735pt x 178.6
+<class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf, id=3196, 196.735pt x 178.6
 675pt>
 File: class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf Graphic file (type pdf
 )
@@ -1860,13 +1832,13 @@ File: class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf Graphic file (type pdf
 Package pdftex.def Info: class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf  us
 ed on input line 20.
 (pdftex.def)             Requested size: 196.0pt x 177.99911pt.
- [88]
-Underfull \hbox (badness 900) in paragraph at lines 26--27
-[][] \T1/phv/m/n/10 ([]$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/
-10 >$ \T1/phv/m/n/10 &model, std[]::string vname, un-signed int n,
+ [87]
+Underfull \hbox (badness 2903) in paragraph at lines 28--30
+\T1/phv/m/n/10 _[]double reproductive[]_[]number, epiworld[]_[]double prob[]_[]
+transmission, epiworld[]_[]double incubation[]_[]days,
  []
 
-[89] [90]) (./classepiworld_1_1epimodels_1_1_model_s_i_r.tex
+[88] [89]) (./classepiworld_1_1epimodels_1_1_model_s_i_r.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1889,7 +1861,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r__in
 herit__graph.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf, id=3242, 190.7
+<classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf, id=3238, 190.7
 125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf Graphic fi
 le (type pdf)
@@ -1903,7 +1875,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r__co
 ll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf, id=3251, 190.7125
+<classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf, id=3246, 190.7125
 pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf Graphic file 
 (type pdf)
@@ -1911,7 +1883,7 @@ File: classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf Graphic file
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_i_r__coll__grap
 h.pdf  used on input line 29.
 (pdftex.def)             Requested size: 190.0pt x 167.00684pt.
- [91]) (./class_model_s_i_r.tex
+ [90]) (./class_model_s_i_r.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1929,7 +1901,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_r__inherit__graph.pdf>
-<class_model_s_i_r__inherit__graph.pdf, id=3268, 190.7125pt x 156.585pt>
+<class_model_s_i_r__inherit__graph.pdf, id=3264, 190.7125pt x 156.585pt>
 File: class_model_s_i_r__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r__inherit__graph.pdf  used on input l
@@ -1940,13 +1912,13 @@ ine 19.
 pdfTeX warning: pdflatex (file ./class_model_s_i_r__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r__coll__graph.pdf, id=3276, 190.7125pt x 156.585pt>
+<class_model_s_i_r__coll__graph.pdf, id=3272, 190.7125pt x 156.585pt>
 File: class_model_s_i_r__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r__coll__graph.pdf  used on input line
  29.
 (pdftex.def)             Requested size: 190.0pt x 156.0064pt.
- [92]) (./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.tex
+ [91]) (./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1965,7 +1937,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  <./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf>
 <classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=329
-7, 213.79875pt x 178.6675pt>
+3, 213.79875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf Gr
 aphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf>
@@ -1973,8 +1945,8 @@ Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__in
 herit__graph.pdf  used on input line 10.
 (pdftex.def)             Requested size: 213.0pt x 177.99911pt.
 
-[93] <./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf, id=3317, 
+[92] <./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf>
+<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf, id=3313, 
 213.79875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf Graph
 ic file (type pdf)
@@ -1983,12 +1955,7 @@ Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__co
 ll__graph.pdf  used on input line 20.
 (pdftex.def)             Requested size: 213.0pt x 177.99911pt.
 
-Underfull \hbox (badness 1845) in paragraph at lines 28--30
-[][] \T1/phv/b/n/10 Model[]SIRCONN \T1/phv/m/n/10 (std[]::string vname, un-sign
-ed int n, epiworld[]_[]double preva-lence, epiworld[]_[]double
- []
-
-[94]) (./class_model_s_i_r_c_o_n_n.tex
+[93]) (./class_model_s_i_r_c_o_n_n.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2006,31 +1973,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_r_c_o_n_n__inherit__graph.pdf>
-<class_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=3342, 208.78pt x 167.62625pt
+<class_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=3338, 208.78pt x 167.62625pt
 >
 File: class_model_s_i_r_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_c_o_n_n__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_c_o_n_n__inherit__graph.pdf  used on
  input line 10.
 (pdftex.def)             Requested size: 208.0pt x 167.0094pt.
- [95] <./class_model_s_i_r_c_o_n_n__coll__graph.pdf
+ [94] <./class_model_s_i_r_c_o_n_n__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_c_o_n_n__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_c_o_n_n__coll__graph.pdf, id=3364, 208.78pt x 167.62625pt>
+<class_model_s_i_r_c_o_n_n__coll__graph.pdf, id=3358, 208.78pt x 167.62625pt>
 File: class_model_s_i_r_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_c_o_n_n__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_c_o_n_n__coll__graph.pdf  used on in
 put line 20.
 (pdftex.def)             Requested size: 208.0pt x 167.0094pt.
-
-Underfull \hbox (badness 1845) in paragraph at lines 28--30
-[][] \T1/phv/b/n/10 Model[]SIRCONN \T1/phv/m/n/10 (std[]::string vname, un-sign
-ed int n, epiworld[]_[]double preva-lence, epiworld[]_[]double
- []
-
-[96]) (./classepiworld_1_1epimodels_1_1_model_s_i_s.tex
+ [95]) (./classepiworld_1_1epimodels_1_1_model_s_i_s.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2048,7 +2009,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf, id=3396, 190.7
+<classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf, id=3392, 190.7
 125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf Graphic fi
 le (type pdf)
@@ -2056,13 +2017,13 @@ le (type pdf)
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__g
 raph.pdf  used on input line 19.
 (pdftex.def)             Requested size: 190.0pt x 167.00684pt.
- [97] <./classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf
+ [96] <./classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_s__co
 ll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf, id=3409, 190.7125
+<classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf, id=3405, 190.7125
 pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf Graphic file 
 (type pdf)
@@ -2070,7 +2031,7 @@ File: classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf Graphic file
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_i_s__coll__grap
 h.pdf  used on input line 29.
 (pdftex.def)             Requested size: 190.0pt x 167.00684pt.
- [98]) (./class_model_s_i_s.tex
+ [97]) (./class_model_s_i_s.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2088,7 +2049,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_s__inherit__graph.pdf>
-<class_model_s_i_s__inherit__graph.pdf, id=3430, 190.7125pt x 156.585pt>
+<class_model_s_i_s__inherit__graph.pdf, id=3426, 190.7125pt x 156.585pt>
 File: class_model_s_i_s__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s__inherit__graph.pdf  used on input l
@@ -2099,13 +2060,13 @@ ine 19.
 pdfTeX warning: pdflatex (file ./class_model_s_i_s__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_s__coll__graph.pdf, id=3438, 190.7125pt x 156.585pt>
+<class_model_s_i_s__coll__graph.pdf, id=3434, 190.7125pt x 156.585pt>
 File: class_model_s_i_s__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s__coll__graph.pdf  used on input line
  29.
 (pdftex.def)             Requested size: 190.0pt x 156.0064pt.
- [99]) (./classepiworld_1_1epimodels_1_1_model_s_u_r_v.tex
+ [98]) (./classepiworld_1_1epimodels_1_1_model_s_u_r_v.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2123,7 +2084,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf, id=3455, 195
+<classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf, id=3451, 195
 .73125pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -2137,7 +2098,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_u_r_v__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf, id=3463, 195.73
+<classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf, id=3459, 195.73
 125pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -2145,37 +2106,38 @@ e (type pdf)
 Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__gr
 aph.pdf  used on input line 20.
 (pdftex.def)             Requested size: 195.0pt x 178.01003pt.
- [100]
-Underfull \hbox (badness 5203) in paragraph at lines 26--27
-\T1/phv/m/n/10 _[]transm=0.[]5, epiworld[]_[]double prop[]_[]vax[]_[]redux[]_[]
-infect=0.[]5, epiworld[]_[]double surveillance[]_[]prob=0.[]001,
+ [99]
+Underfull \hbox (badness 2452) in paragraph at lines 26--27
+[][] \T1/phv/m/n/10 ([]$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/
+10 >$ \T1/phv/m/n/10 &model, std[]::string vname, epiworld[]_[]fast[]_[]uint pr
+eva-lence=50,
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 26--27
-\T1/phv/m/n/10 epiworld[]_[]double prob[]_[]transmission=1.[]0, epiworld[]_[]do
-uble prob[]_[]death=0.[]001, epiworld[]_[]double prob[]_[]
+Underfull \hbox (badness 1275) in paragraph at lines 26--27
+\T1/phv/m/n/10 epiworld[]_[]double prob[]_[]symptoms=0.[]6, epiworld[]_[]double
+ prop[]_[]vaccinated=0.[]25, epiworld[]_[]double prop[]
  []
 
 
-Underfull \hbox (badness 4995) in paragraph at lines 28--30
-\T1/phv/m/n/10 _[]double latent[]_[]period=3u, epiworld[]_[]double infect[]_[]p
-eriod=6u, epiworld[]_[]double prob[]_[]symptoms=0.[]
+Underfull \hbox (badness 1953) in paragraph at lines 26--27
+\T1/phv/m/n/10 _[]vax[]_[]redux[]_[]transm=0.[]5, epiworld[]_[]double prop[]_[]
+vax[]_[]redux[]_[]infect=0.[]5, epiworld[]_[]double surveillance[]_[]
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 28--30
-\T1/phv/m/n/10 6, epiworld[]_[]double prop[]_[]vaccinated=0.[]25, epiworld[]_[]
-double prop[]_[]vax[]_[]redux[]_[]transm=0.[]5, epiworld[]_[]
+Underfull \hbox (badness 6461) in paragraph at lines 28--30
+\T1/phv/m/n/10 9, epiworld[]_[]double latent[]_[]period=3u, epiworld[]_[]double
+ infect[]_[]period=6u, epiworld[]_[]double prob[]_[]
  []
 
 
-Underfull \hbox (badness 800) in paragraph at lines 28--30
-\T1/phv/m/n/10 double prop[]_[]vax[]_[]redux[]_[]infect=0.[]5, epiworld[]_[]dou
-ble surveillance[]_[]prob=0.[]001, epiworld[]_[]double prob[]_[]
+Underfull \hbox (badness 2671) in paragraph at lines 28--30
+\T1/phv/m/n/10 symptoms=0.[]6, epiworld[]_[]double prop[]_[]vaccinated=0.[]25, 
+epiworld[]_[]double prop[]_[]vax[]_[]redux[]_[]transm=0.[]5,
  []
 
-[101]) (./class_model_s_u_r_v.tex
+[100]) (./class_model_s_u_r_v.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2193,7 +2155,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_u_r_v__inherit__graph.pdf>
-<class_model_s_u_r_v__inherit__graph.pdf, id=3500, 190.7125pt x 167.62625pt>
+<class_model_s_u_r_v__inherit__graph.pdf, id=3495, 190.7125pt x 167.62625pt>
 File: class_model_s_u_r_v__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_u_r_v__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_u_r_v__inherit__graph.pdf  used on input
@@ -2204,43 +2166,44 @@ Package pdftex.def Info: class_model_s_u_r_v__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_u_r_v__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_u_r_v__coll__graph.pdf, id=3508, 190.7125pt x 167.62625pt>
+<class_model_s_u_r_v__coll__graph.pdf, id=3503, 190.7125pt x 167.62625pt>
 File: class_model_s_u_r_v__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_u_r_v__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_u_r_v__coll__graph.pdf  used on input li
 ne 20.
 (pdftex.def)             Requested size: 190.0pt x 167.00684pt.
- [102]
-Underfull \hbox (badness 5203) in paragraph at lines 26--27
-\T1/phv/m/n/10 _[]transm=0.[]5, epiworld[]_[]double prop[]_[]vax[]_[]redux[]_[]
-infect=0.[]5, epiworld[]_[]double surveillance[]_[]prob=0.[]001,
+ [101]
+Underfull \hbox (badness 2452) in paragraph at lines 26--27
+[][] \T1/phv/m/n/10 ([]$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/
+10 >$ \T1/phv/m/n/10 &model, std[]::string vname, epiworld[]_[]fast[]_[]uint pr
+eva-lence=50,
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 26--27
-\T1/phv/m/n/10 epiworld[]_[]double prob[]_[]transmission=1.[]0, epiworld[]_[]do
-uble prob[]_[]death=0.[]001, epiworld[]_[]double prob[]_[]
+Underfull \hbox (badness 1275) in paragraph at lines 26--27
+\T1/phv/m/n/10 epiworld[]_[]double prob[]_[]symptoms=0.[]6, epiworld[]_[]double
+ prop[]_[]vaccinated=0.[]25, epiworld[]_[]double prop[]
  []
 
 
-Underfull \hbox (badness 4995) in paragraph at lines 28--30
-\T1/phv/m/n/10 _[]double latent[]_[]period=3u, epiworld[]_[]double infect[]_[]p
-eriod=6u, epiworld[]_[]double prob[]_[]symptoms=0.[]
+Underfull \hbox (badness 1953) in paragraph at lines 26--27
+\T1/phv/m/n/10 _[]vax[]_[]redux[]_[]transm=0.[]5, epiworld[]_[]double prop[]_[]
+vax[]_[]redux[]_[]infect=0.[]5, epiworld[]_[]double surveillance[]_[]
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 28--30
-\T1/phv/m/n/10 6, epiworld[]_[]double prop[]_[]vaccinated=0.[]25, epiworld[]_[]
-double prop[]_[]vax[]_[]redux[]_[]transm=0.[]5, epiworld[]_[]
+Underfull \hbox (badness 6461) in paragraph at lines 28--30
+\T1/phv/m/n/10 9, epiworld[]_[]double latent[]_[]period=3u, epiworld[]_[]double
+ infect[]_[]period=6u, epiworld[]_[]double prob[]_[]
  []
 
 
-Underfull \hbox (badness 800) in paragraph at lines 28--30
-\T1/phv/m/n/10 double prop[]_[]vax[]_[]redux[]_[]infect=0.[]5, epiworld[]_[]dou
-ble surveillance[]_[]prob=0.[]001, epiworld[]_[]double prob[]_[]
+Underfull \hbox (badness 2671) in paragraph at lines 28--30
+\T1/phv/m/n/10 symptoms=0.[]6, epiworld[]_[]double prop[]_[]vaccinated=0.[]25, 
+epiworld[]_[]double prop[]_[]vax[]_[]redux[]_[]transm=0.[]5,
  []
 
-[103]) (./class_network.tex
+[102]) (./class_network.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2291,7 +2254,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) (./classepiworld_1_1_progress.tex [104]) (./class_progress.tex)
+) (./classepiworld_1_1_progress.tex [103]) (./class_progress.tex)
 (./classepiworld_1_1_queue.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2309,7 +2272,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[105]) (./class_queue.tex
+[104]) (./class_queue.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2326,8 +2289,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[106]) (./classepiworld_1_1_queue_values.tex) (./class_queue_values.tex)
-(./class_rand_graph.tex) (./classepiworld_1_1_s_a_m_p_l_e_t_y_p_e.tex [107])
+[105]) (./classepiworld_1_1_queue_values.tex) (./class_queue_values.tex)
+(./class_rand_graph.tex) (./classepiworld_1_1_s_a_m_p_l_e_t_y_p_e.tex [106])
 (./class_s_a_m_p_l_e_t_y_p_e.tex) (./classepiworld_1_1_tool.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2345,12 +2308,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[108]
+[107]
 Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
 
-[109]) (./class_tool.tex
+[108]) (./class_tool.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2367,7 +2330,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[110]
+[109]
 Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
@@ -2389,7 +2352,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[111]) (./class_tools.tex
+[110]) (./class_tools.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2406,7 +2369,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[112]) (./classepiworld_1_1_tools__const.tex
+[111]) (./classepiworld_1_1_tools__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2427,7 +2390,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Overfull \vbox (5.6108pt too high) has occurred while \output is active []
 
 
-[113]) (./class_tools__const.tex
+[112]) (./class_tools__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2461,12 +2424,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[114]
+[113]
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
-[115]) (./class_user_data.tex
+[114]) (./class_user_data.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2483,12 +2446,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[116]
+[115]
 Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
-[117]) (./structepiworld_1_1vec_hasher.tex
+[116]) (./structepiworld_1_1vec_hasher.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2522,7 +2485,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[118]) (./classepiworld_1_1_virus.tex
+[117]) (./classepiworld_1_1_virus.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2539,7 +2502,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[119]
+[118]
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
@@ -2548,7 +2511,7 @@ Underfull \hbox (badness 10000) detected at line 68
 Overfull \vbox (2.45444pt too high) has occurred while \output is active []
 
 
-[120]) (./class_virus.tex
+[119]) (./class_virus.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2570,7 +2533,7 @@ Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
 
-[121]) (./classepiworld_1_1_viruses.tex
+[120]) (./classepiworld_1_1_viruses.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2587,7 +2550,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[122]) (./class_viruses.tex
+[121]) (./class_viruses.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2604,7 +2567,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[123]) (./classepiworld_1_1_viruses__const.tex
+[122]) (./classepiworld_1_1_viruses__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2621,7 +2584,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[124]) (./class_viruses__const.tex
+[123]) (./class_viruses__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2638,16 +2601,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) [125] [126
-
-]
+) [124]
 Chapter 14.
 (./agent-meat-status_8hpp.tex <./agent-meat-status_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./agent-meat-status_8hpp__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<agent-meat-status_8hpp__incl.pdf, id=4088, 229.85875pt x 167.62625pt>
+<agent-meat-status_8hpp__incl.pdf, id=4079, 229.85875pt x 167.62625pt>
 File: agent-meat-status_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-status_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-status_8hpp__incl.pdf  used on input line 1
@@ -2658,13 +2619,15 @@ Package pdftex.def Info: agent-meat-status_8hpp__incl.pdf  used on input line 1
 pdfTeX warning: pdflatex (file ./agent-meat-status_8hpp__dep__incl.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-status_8hpp__dep__incl.pdf, id=4096, 223.83624pt x 223.83624pt>
+<agent-meat-status_8hpp__dep__incl.pdf, id=4087, 223.83624pt x 223.83624pt>
 File: agent-meat-status_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-status_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-status_8hpp__dep__incl.pdf  used on input l
 ine 22.
 (pdftex.def)             Requested size: 223.0pt x 223.00572pt.
- [127]
+ [125
+
+]
 Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
@@ -2684,7 +2647,7 @@ Underfull \hbox (badness 10000) detected at line 48
 [][][]
  []
 
-) [128] (./refman.ind [129
+) [126] (./refman.ind [127
 
 
 
@@ -2694,7 +2657,7 @@ Underfull \hbox (badness 1565) in paragraph at lines 123--125
 v/m/n/10 TSeq $\OML/cmm/m/it/10 >$\T1/phv/m/n/10 ,
  []
 
-[130])
+[128])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
  (./refman.aux)
@@ -2711,13 +2674,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20196 strings out of 480478
- 384924 string characters out of 5905924
- 641354 words of memory out of 5000000
+ 20194 strings out of 480478
+ 384908 string characters out of 5905924
+ 641345 words of memory out of 5000000
  33966 multiletter control sequences out of 15000+600000
  600841 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,96p,1359b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,96p,1375b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -2730,10 +2693,10 @@ rr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share
 pe1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uh
 vbo8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (138 pages, 612998 bytes).
+Output written on refman.pdf (136 pages, 612542 bytes).
 PDF statistics:
- 4703 PDF objects out of 5155 (max. 8388607)
- 4377 compressed objects within 44 object streams
- 1782 named destinations out of 2073 (max. 500000)
+ 4695 PDF objects out of 5155 (max. 8388607)
+ 4371 compressed objects within 44 object streams
+ 1780 named destinations out of 2073 (max. 500000)
  1821 words of extra memory for PDF output out of 10000 (max. 10000000)
 
