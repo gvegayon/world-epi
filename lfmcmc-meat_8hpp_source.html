@@ -517,7 +517,39 @@ $(function() {
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TData&gt;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="keyword">inline</span> std::vector&lt; epiworld_double &gt; <a class="code" href="class_l_f_m_c_m_c.html">LFMCMC&lt;TData&gt;::get_params_mean</a>()</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;{</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    std::vector&lt; epiworld_double &gt; res(this-&gt;n_parameters, 0.0);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    </div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; n_parameters; ++k)</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    {</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_samples; ++i)</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;            res[k] += (this-&gt;accepted_params[k + n_parameters * i])/</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                <span class="keyword">static_cast&lt;</span> epiworld_double <span class="keyword">&gt;</span>(n_samples);</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    }</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160; </div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;}</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TData&gt;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="keyword">inline</span> std::vector&lt; epiworld_double &gt; <a class="code" href="class_l_f_m_c_m_c.html">LFMCMC&lt;TData&gt;::get_stats_mean</a>()</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;{</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    std::vector&lt; epiworld_double &gt; res(this-&gt;n_statistics, 0.0);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    </div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; n_statistics; ++k)</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_samples; ++i)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            res[k] += (this-&gt;accepted_stats[k + n_statistics * i])/</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                <span class="keyword">static_cast&lt;</span> epiworld_double <span class="keyword">&gt;</span>(n_samples);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    }</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;}</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_l_f_m_c_m_c_html"><div class="ttname"><a href="class_l_f_m_c_m_c.html">LFMCMC</a></div><div class="ttdoc">Likelihood-Free Markov Chain Monte Carlo.</div><div class="ttdef"><b>Definition:</b> lfmcmc-bones.hpp:115</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
