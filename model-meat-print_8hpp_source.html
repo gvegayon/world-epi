@@ -90,7 +90,7 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    printf_epiworld(&quot;Name of the model   : %s\n&quot;, (this-&gt;name == &quot;&quot;) ? std::<span class="keywordtype">string</span>(&quot;(none)&quot;).c_str() : name.c_str());</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    printf_epiworld(&quot;Population size     : %i\n&quot;, static_cast&lt;<span class="keywordtype">int</span>&gt;(size()));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    printf_epiworld(&quot;Number of entitites : %i\n&quot;, static_cast&lt;<span class="keywordtype">int</span>&gt;(entities.size()));</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    printf_epiworld(&quot;Days (duration)     : %i (of %i)\n&quot;, today(), ndays);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    printf_epiworld(&quot;Days (duration)     : %i (of %i)\n&quot;, today(), static_cast&lt;<span class="keywordtype">int</span>&gt;(ndays));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    printf_epiworld(&quot;Number of variants  : %i\n&quot;, static_cast&lt;<span class="keywordtype">int</span>&gt;(db.get_n_variants()));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    if (n_replicates &gt; 0u)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
@@ -101,7 +101,7 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;Last run elapsed t  : %.2f%s\n&quot;</span>, elapsed, abbr.c_str());</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (n_replicates &gt; 1u)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            printf_epiworld(<span class="stringliteral">&quot;Total elapsed t     : %.2f%s (%i runs)\n&quot;</span>, total, abbr.c_str(), n_replicates);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            printf_epiworld(<span class="stringliteral">&quot;Total elapsed t     : %.2f%s (%i runs)\n&quot;</span>, total, abbr.c_str(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n_replicates));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// Elapsed time in speed</span></div>
