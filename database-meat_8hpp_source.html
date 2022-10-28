@@ -766,130 +766,140 @@ $(function() {
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            map[h] = 1;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            map[h]++;</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    }</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordflow">return</span> map;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;}</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase&lt;TSeq&gt;::reproductive_number</a>(</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    std::string fn</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160; </div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="comment">// The target is added</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        std::vector&lt; int &gt; h_target = {</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            transmission_variant[i],</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            transmission_target[i],</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            transmission_date[i]</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        };</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        map[h_target] = 0;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    }</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keyword">auto</span> map = reproductive_number();</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordflow">return</span> map;</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160; </div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    std::ofstream fn_file(fn, std::ios_base::out);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;}</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    fn_file &lt;&lt; <span class="stringliteral">&quot;variant source source_exposure_date rt\n&quot;</span>;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160; </div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; m : map)</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        fn_file &lt;&lt;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            m.first[0u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;            m.first[1u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            m.first[2u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            m.second &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160; </div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;}</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00730"></a><span class="lineno"><a class="line" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">  730</a></span>&#160;<span class="keyword">inline</span> std::vector&lt; epiworld_double &gt; <a class="code" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase&lt;TSeq&gt;::transition_probability</a>(</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordtype">bool</span> print</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keyword">auto</span> status_labels = model-&gt;get_status();</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">size_t</span> n_status = status_labels.size();</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordtype">size_t</span> n_days   = model-&gt;get_ndays();</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    std::vector&lt; epiworld_double &gt; res(n_status * n_status, 0.0);</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    std::vector&lt; epiworld_double &gt; days_to_include(n_status, 0.0);</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> t = 1; t &lt; n_days; ++t)</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    {</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        {</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;            epiworld_double daily_total = hist_total_counts[(t - 1) * n_status + s_i];</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160; </div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;            <span class="keywordflow">if</span> (daily_total == 0)</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase&lt;TSeq&gt;::reproductive_number</a>(</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    std::string fn</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keyword">auto</span> map = reproductive_number();</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    std::ofstream fn_file(fn, std::ios_base::out);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    fn_file &lt;&lt; <span class="stringliteral">&quot;variant source source_exposure_date rt\n&quot;</span>;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; m : map)</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        fn_file &lt;&lt;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            m.first[0u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            m.first[1u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            m.first[2u] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            m.second &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160; </div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;}</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00740"></a><span class="lineno"><a class="line" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">  740</a></span>&#160;<span class="keyword">inline</span> std::vector&lt; epiworld_double &gt; <a class="code" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase&lt;TSeq&gt;::transition_probability</a>(</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordtype">bool</span> print</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keyword">auto</span> status_labels = model-&gt;get_status();</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    <span class="keywordtype">size_t</span> n_status = status_labels.size();</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keywordtype">size_t</span> n_days   = model-&gt;get_ndays();</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    std::vector&lt; epiworld_double &gt; res(n_status * n_status, 0.0);</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    std::vector&lt; epiworld_double &gt; days_to_include(n_status, 0.0);</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160; </div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            days_to_include[s_i] += 1.0; </div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            {</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                epiworld_double entry = hist_transition_matrix[</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                    s_i + s_j * n_status +</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                    t * (n_status * n_status)</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                    ];</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> t = 1; t &lt; n_days; ++t)</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    {</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        {</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            epiworld_double daily_total = hist_total_counts[(t - 1) * n_status + s_i];</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            <span class="keywordflow">if</span> (daily_total == 0)</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                <span class="keywordflow">if</span> (entry &gt; daily_total)</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                        <span class="stringliteral">&quot;The entry in hist_transition_matrix cannot have more elememnts than the total&quot;</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                        );</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160; </div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                res[s_i + s_j * n_status] += (entry / daily_total);</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="preprocessor">                #else</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                    res[s_i + s_j * n_status] += (</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                        hist_transition_matrix[</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                            s_i + s_j * n_status +</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                            t * (n_status * n_status)</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                        ] / daily_total</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                    );</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="preprocessor">                #endif</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            }</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        }</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160; </div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    }</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0; s_j &lt; n_status; ++s_j)</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            res[s_i + s_j * n_status] /= days_to_include[s_i];</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    }</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            days_to_include[s_i] += 1.0; </div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;            {</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                epiworld_double entry = hist_transition_matrix[</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                    s_i + s_j * n_status +</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                    t * (n_status * n_status)</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                    ];</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                <span class="keywordflow">if</span> (entry &gt; daily_total)</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                        <span class="stringliteral">&quot;The entry in hist_transition_matrix cannot have more elememnts than the total&quot;</span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                        );</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                res[s_i + s_j * n_status] += (entry / daily_total);</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="preprocessor">                #else</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                    res[s_i + s_j * n_status] += (</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                        hist_transition_matrix[</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                            s_i + s_j * n_status +</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                            t * (n_status * n_status)</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                        ] / daily_total</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                    );</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            }</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160; </div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <span class="keywordflow">if</span> (print)</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    {   </div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <span class="keywordtype">size_t</span> nchar = 0u;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; l : status_labels)</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;            <span class="keywordflow">if</span> (l.length() &gt; nchar)</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                nchar = l.length();</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        std::string fmt = <span class="stringliteral">&quot; - %-&quot;</span> + std::to_string(nchar) + <span class="stringliteral">&quot;s&quot;</span>;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        </div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\nTransition Probabilities:\n&quot;</span>);</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; n_status; ++s_i)</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        {</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            printf_epiworld(fmt.c_str(), status_labels[s_i].c_str());</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            {</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                <span class="keywordflow">if</span> (std::isnan(res[s_i + s_j * n_status]))</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                {</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;     -&quot;</span>);</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot; % 4.2f&quot;</span>, res[s_i + s_j * n_status]);</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                }</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            }</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            printf_epiworld(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        }</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160; </div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; </div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    }</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160; </div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;} </div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        }</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    }</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; </div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    {</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0; s_j &lt; n_status; ++s_j)</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;            res[s_i + s_j * n_status] /= days_to_include[s_i];</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    }</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160; </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordflow">if</span> (print)</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    {   </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="keywordtype">size_t</span> nchar = 0u;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; l : status_labels)</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            <span class="keywordflow">if</span> (l.length() &gt; nchar)</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                nchar = l.length();</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160; </div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        std::string fmt = <span class="stringliteral">&quot; - %-&quot;</span> + std::to_string(nchar) + <span class="stringliteral">&quot;s&quot;</span>;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\nTransition Probabilities:\n&quot;</span>);</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            printf_epiworld(fmt.c_str(), status_labels[s_i].c_str());</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            {</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                <span class="keywordflow">if</span> (std::isnan(res[s_i + s_j * n_status]))</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                {</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;     -&quot;</span>);</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot; % 4.2f&quot;</span>, res[s_i + s_j * n_status]);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                }</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            }</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            printf_epiworld(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        }</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160; </div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    }</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160; </div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160; </div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;} </div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160; </div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:31</div></div>
-<div class="ttc" id="aclass_data_base_html_a3391ab73b07892c8b66160e61dd294fd"><div class="ttname"><a href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase::transition_probability</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; transition_probability(bool print=true) const</div><div class="ttdoc">Calculates the transition probabilities.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:730</div></div>
+<div class="ttc" id="aclass_data_base_html_a3391ab73b07892c8b66160e61dd294fd"><div class="ttname"><a href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase::transition_probability</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; transition_probability(bool print=true) const</div><div class="ttdoc">Calculates the transition probabilities.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:740</div></div>
 <div class="ttc" id="aclass_data_base_html_a5d43d9fba8e46bee17f529e0ebce670e"><div class="ttname"><a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase::reproductive_number</a></div><div class="ttdeci">MapVec_type&lt; int, int &gt; reproductive_number() const</div><div class="ttdoc">Computes the reproductive number of each case.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:679</div></div>
 <div class="ttc" id="aclass_data_base_html_a833cf232df236cf097ccbaf537ff32ab"><div class="ttname"><a href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase::record_variant</a></div><div class="ttdeci">void record_variant(Virus&lt; TSeq &gt; &amp;v)</div><div class="ttdoc">Registering a new variant.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:136</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
