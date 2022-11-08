@@ -3393,7 +3393,7 @@ $(function() {
 <div class="line"><a name="l03794"></a><span class="lineno"> 3794</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l03795"></a><span class="lineno"> 3795</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l03796"></a><span class="lineno"> 3796</span>&#160;<span class="comment">            if (dat[j].find(i) == dat[j].end())</span></div>
-<div class="line"><a name="l03797"></a><span class="lineno"> 3797</span>&#160;<span class="comment">                dat[j].insert(std::pair&lt;epiworld_fast_uint, epiworld_fast_uint&gt;(j, 1u));</span></div>
+<div class="line"><a name="l03797"></a><span class="lineno"> 3797</span>&#160;<span class="comment">                dat[j].insert(std::pair&lt;epiworld_fast_uint, epiworld_fast_uint&gt;(i, 1u));</span></div>
 <div class="line"><a name="l03798"></a><span class="lineno"> 3798</span>&#160;<span class="comment">            else</span></div>
 <div class="line"><a name="l03799"></a><span class="lineno"> 3799</span>&#160;<span class="comment">                dat[j][i]++;</span></div>
 <div class="line"><a name="l03800"></a><span class="lineno"> 3800</span>&#160;<span class="comment"></span> </div>
@@ -3970,8 +3970,8 @@ $(function() {
 <div class="line"><a name="l04377"></a><span class="lineno"> 4377</span>&#160;<span class="comment">    std::vector&lt; epiworld_fast_uint &gt; source;</span></div>
 <div class="line"><a name="l04378"></a><span class="lineno"> 4378</span>&#160;<span class="comment">    std::vector&lt; epiworld_fast_uint &gt; target;</span></div>
 <div class="line"><a name="l04379"></a><span class="lineno"> 4379</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l04380"></a><span class="lineno"> 4380</span>&#160;<span class="comment">    // if (!directed)</span></div>
-<div class="line"><a name="l04381"></a><span class="lineno"> 4381</span>&#160;<span class="comment">    //     if (k &gt; 1u) k = static_cast&lt; epiworld_fast_uint &gt;(floor(k / 2.0));</span></div>
+<div class="line"><a name="l04380"></a><span class="lineno"> 4380</span>&#160;<span class="comment">    if (!directed)</span></div>
+<div class="line"><a name="l04381"></a><span class="lineno"> 4381</span>&#160;<span class="comment">        if (k &gt; 1u) k = static_cast&lt; epiworld_fast_uint &gt;(floor(k / 2.0));</span></div>
 <div class="line"><a name="l04382"></a><span class="lineno"> 4382</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04383"></a><span class="lineno"> 4383</span>&#160;<span class="comment">    for (epiworld_fast_uint i = 0; i &lt; n; ++i)</span></div>
 <div class="line"><a name="l04384"></a><span class="lineno"> 4384</span>&#160;<span class="comment">    {</span></div>
