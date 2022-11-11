@@ -67,7 +67,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classepiworld_1_1epimodels_1_1_model_s_u_r_v-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">epiworld::epimodels::ModelSURV&lt; TSeq &gt; Class Template Reference</div>  </div>
@@ -94,8 +93,45 @@ Collaboration diagram for epiworld::epimodels::ModelSURV&lt; TSeq &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aca1a595af7600f4cb37992d9c53d2d59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html#aca1a595af7600f4cb37992d9c53d2d59">ModelSURV</a> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint prevalence=50, epiworld_double efficacy_vax=0.9, epiworld_double latent_period=3u, epiworld_double infect_period=6u, epiworld_double prob_symptoms=0.6, epiworld_double prop_vaccinated=0.25, epiworld_double prop_vax_redux_transm=0.5, epiworld_double prop_vax_redux_infect=0.5, epiworld_double surveillance_prob=0.001, epiworld_double prob_transmission=1.0, epiworld_double prob_death=0.001, epiworld_double prob_noreinfect=0.9)</td></tr>
-<tr class="memdesc:aca1a595af7600f4cb37992d9c53d2d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Infected-Removed (SIR) model.  <a href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html#aca1a595af7600f4cb37992d9c53d2d59">More...</a><br /></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Construct a new ModelSURV object</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The <a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a> class simulates a survaillence model where agents can be isolated, even if asyptomatic.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vname</td><td>String. Name of the virus </td></tr>
+    <tr><td class="paramname">prevalence</td><td>Integer. Number of initial cases of the virus. </td></tr>
+    <tr><td class="paramname">efficacy_vax</td><td>Double. Efficacy of the vaccine (1 - P(acquire the disease)). </td></tr>
+    <tr><td class="paramname">latent_period</td><td>Double. Shape parameter of a <code>Gamma(latent_period, 1)</code> distribution. This coincides with the expected number of latent days. </td></tr>
+    <tr><td class="paramname">infect_period</td><td>Double. Shape parameter of a <code>Gamma(infected_period, 1)</code> distribution. This coincides with the expected number of infectious days. </td></tr>
+    <tr><td class="paramname">prob_symptoms</td><td>Double. Probability of generating symptoms. </td></tr>
+    <tr><td class="paramname">prop_vaccinated</td><td>Double. Probability of vaccination. Coincides with the initial prevalence of vaccinated individuals. </td></tr>
+    <tr><td class="paramname">prop_vax_redux_transm</td><td>Double. Factor by which the vaccine reduces transmissibility. </td></tr>
+    <tr><td class="paramname">prop_vax_redux_infect</td><td>Double. Factor by which the vaccine reduces the chances of becoming infected. </td></tr>
+    <tr><td class="paramname">surveillance_prob</td><td>Double. Probability of testing an agent. </td></tr>
+    <tr><td class="paramname">prob_transmission</td><td>Double. Raw transmission probability. </td></tr>
+    <tr><td class="paramname">prob_death</td><td>Double. Raw probability of death for symptomatic individuals. </td></tr>
+    <tr><td class="paramname">prob_noreinfect</td><td>Double. Probability of no re-infection.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This model features the following states:</p>
+<ul>
+<li>Susceptible</li>
+<li>Latent</li>
+<li>Symptomatic</li>
+<li>Symptomatic isolated</li>
+<li>Asymptomatic</li>
+<li>Asymptomatic isolated</li>
+<li>Recovered</li>
+<li>Removed <br  />
+</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>An object of class <code>epiworld_surv</code> </dd></dl>
+</div></td></tr>
+<tr class="memitem:a2e0d39a7528317e75306a60d8c6279ea"><td class="memItemLeft" align="right" valign="top"><a id="a2e0d39a7528317e75306a60d8c6279ea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSURV</b> ()</td></tr>
+<tr class="separator:a2e0d39a7528317e75306a60d8c6279ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1a595af7600f4cb37992d9c53d2d59"><td class="memItemLeft" align="right" valign="top"><a id="aca1a595af7600f4cb37992d9c53d2d59"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSURV</b> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint prevalence=50, epiworld_double efficacy_vax=0.9, epiworld_double latent_period=3u, epiworld_double infect_period=6u, epiworld_double prob_symptoms=0.6, epiworld_double prop_vaccinated=0.25, epiworld_double prop_vax_redux_transm=0.5, epiworld_double prop_vax_redux_infect=0.5, epiworld_double surveillance_prob=0.001, epiworld_double prob_transmission=1.0, epiworld_double prob_death=0.001, epiworld_double prob_noreinfect=0.9)</td></tr>
 <tr class="separator:aca1a595af7600f4cb37992d9c53d2d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f001ca352f4ca127e542aaccff7579"><td class="memItemLeft" align="right" valign="top"><a id="a67f001ca352f4ca127e542aaccff7579"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ModelSURV</b> (std::string vname, epiworld_fast_uint prevalence=50, epiworld_double efficacy_vax=0.9, epiworld_double latent_period=3u, epiworld_double infect_period=6u, epiworld_double prob_symptoms=0.6, epiworld_double prop_vaccinated=0.25, epiworld_double prop_vax_redux_transm=0.5, epiworld_double prop_vax_redux_infect=0.5, epiworld_double surveillance_prob=0.001, epiworld_double prob_transmission=1.0, epiworld_double prob_death=0.001, epiworld_double prob_noreinfect=0.9)</td></tr>
@@ -541,129 +577,6 @@ epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p39</b><
 epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>npar_used</b></td></tr>
 <tr class="separator:a2a6826c26a536bbde758745594e3c6e8 inherit pub_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aca1a595af7600f4cb37992d9c53d2d59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca1a595af7600f4cb37992d9c53d2d59">&#9670;&nbsp;</a></span>ModelSURV()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TSeq &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a>&lt; TSeq &gt;::<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_u_r_v.html">ModelSURV</a>&lt; TSeq &gt; &amp;&#160;</td>
-          <td class="paramname"><em>model</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>vname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_fast_uint&#160;</td>
-          <td class="paramname"><em>prevalence</em> = <code>50</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>efficacy_vax</em> = <code>0.9</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>latent_period</em> = <code>3u</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>infect_period</em> = <code>6u</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_symptoms</em> = <code>0.6</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prop_vaccinated</em> = <code>0.25</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prop_vax_redux_transm</em> = <code>0.5</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prop_vax_redux_infect</em> = <code>0.5</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>surveillance_prob</em> = <code>0.001</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_transmission</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_death</em> = <code>0.001</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_noreinfect</em> = <code>0.9</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Template for a Susceptible-Infected-Removed (SIR) model. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">model</td><td>A Model&lt;TSeq&gt; object where to set up the SIR. </td></tr>
-    <tr><td class="paramname">vname</td><td>std::string Name of the virus </td></tr>
-    <tr><td class="paramname">initial_prevalence</td><td>epiworld_double Initial prevalence </td></tr>
-    <tr><td class="paramname">initial_susceptibility_reduction</td><td>epiworld_double Initial susceptibility_reduction of the immune system </td></tr>
-    <tr><td class="paramname">initial_recovery</td><td>epiworld_double Initial recovery rate of the immune system </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a></li>
 </ul>

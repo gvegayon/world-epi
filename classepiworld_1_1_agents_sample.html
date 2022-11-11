@@ -99,8 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4579358f7dec1d6058ede36918ec7cb0"><td class="memItemLeft" align="right" valign="top"><a id="a4579358f7dec1d6058ede36918ec7cb0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AgentsSample</b> (<a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; &amp;entity_, size_t n, bool truncate=false)</td></tr>
 <tr class="separator:a4579358f7dec1d6058ede36918ec7cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a029f0151a866a9fca5762423f47f9253"><td class="memItemLeft" align="right" valign="top"><a id="a029f0151a866a9fca5762423f47f9253"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AgentsSample</b> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &amp;agent_, size_t n, bool truncate=false)</td></tr>
+<tr class="memitem:a029f0151a866a9fca5762423f47f9253"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_agents_sample.html#a029f0151a866a9fca5762423f47f9253">AgentsSample</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &amp;agent_, size_t n, bool truncate=false)</td></tr>
+<tr class="memdesc:a029f0151a866a9fca5762423f47f9253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from the agent's entities.  <a href="classepiworld_1_1_agents_sample.html#a029f0151a866a9fca5762423f47f9253">More...</a><br /></td></tr>
 <tr class="separator:a029f0151a866a9fca5762423f47f9253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c327f484972e3968cdcf6934ac911af"><td class="memItemLeft" align="right" valign="top"><a id="a2c327f484972e3968cdcf6934ac911af"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
@@ -130,7 +130,69 @@ class epiworld::AgentsSample&lt; TSeq &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a029f0151a866a9fca5762423f47f9253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029f0151a866a9fca5762423f47f9253">&#9670;&nbsp;</a></span>AgentsSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classepiworld_1_1_agents_sample.html">AgentsSample</a>&lt; TSeq &gt;::<a class="el" href="classepiworld_1_1_agents_sample.html">AgentsSample</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &amp;&#160;</td>
+          <td class="paramname"><em>agent_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>truncate</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sample from the agent's entities. </p>
+<p>For example, how many individuals the agent contacts in a given point in time.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TSeq</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agent_</td><td></td></tr>
+    <tr><td class="paramname">n</td><td>Sample size </td></tr>
+    <tr><td class="paramname">truncate</td><td>If the agent has fewer than <code>n</code> connections, then truncate = true will automatically reduce the number of possible samples. Otherwise, if false, then it returns an error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a></li>
 </ul>
 </div><!-- contents -->

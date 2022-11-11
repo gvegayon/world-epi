@@ -27,9 +27,8 @@ Sample of agents.
 \mbox{\Hypertarget{classepiworld_1_1_agents_sample_a4579358f7dec1d6058ede36918ec7cb0}\label{classepiworld_1_1_agents_sample_a4579358f7dec1d6058ede36918ec7cb0}} 
 {\bfseries Agents\+Sample} (\mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ \&entity\+\_\+, size\+\_\+t n, bool truncate=false)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_agents_sample_a029f0151a866a9fca5762423f47f9253}\label{classepiworld_1_1_agents_sample_a029f0151a866a9fca5762423f47f9253}} 
-{\bfseries Agents\+Sample} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ \&agent\+\_\+, size\+\_\+t n, bool truncate=false)
-\item 
+\mbox{\hyperlink{classepiworld_1_1_agents_sample_a029f0151a866a9fca5762423f47f9253}{Agents\+Sample}} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ \&agent\+\_\+, size\+\_\+t n, bool truncate=false)
+\begin{DoxyCompactList}\small\item\em Sample from the agent\textquotesingle{}s entities. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_agents_sample_a2c327f484972e3968cdcf6934ac911af}\label{classepiworld_1_1_agents_sample_a2c327f484972e3968cdcf6934ac911af}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$\+::iterator {\bfseries begin} ()
 \item 
@@ -60,6 +59,36 @@ This class allows sampling agents from Entity$<$\+TSeq$>$ and Model$<$\+TSeq$>$.
 {\em TSeq} & \\
 \hline
 \end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classepiworld_1_1_agents_sample_a029f0151a866a9fca5762423f47f9253}\label{classepiworld_1_1_agents_sample_a029f0151a866a9fca5762423f47f9253}} 
+\index{epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}!AgentsSample@{AgentsSample}}
+\index{AgentsSample@{AgentsSample}!epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{AgentsSample()}{AgentsSample()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1_agents_sample}{Agents\+Sample}}$<$ TSeq $>$\+::\mbox{\hyperlink{classepiworld_1_1_agents_sample}{Agents\+Sample}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ \&}]{agent\+\_\+,  }\item[{size\+\_\+t}]{n,  }\item[{bool}]{truncate = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sample from the agent\textquotesingle{}s entities. 
+
+For example, how many individuals the agent contacts in a given point in time.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TSeq} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+\_\+} & \\
+\hline
+{\em n} & Sample size \\
+\hline
+{\em truncate} & If the agent has fewer than {\ttfamily n} connections, then truncate = true will automatically reduce the number of possible samples. Otherwise, if false, then it returns an error. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
