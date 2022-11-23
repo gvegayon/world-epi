@@ -21,6 +21,8 @@ epiworld\+\_\+double \& {\bfseries operator()} (std\+::string pname)
 \mbox{\Hypertarget{class_model_a40f2aa6db21fb71bc9b591aadd26ce3a}\label{class_model_a40f2aa6db21fb71bc9b591aadd26ce3a}} 
 size\+\_\+t {\bfseries size} () const
 \item 
+void \mbox{\hyperlink{class_model_a4761b43494d081f2f7bd2443ea6cb2db}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (std\+::string fn, int skip)
+\begin{DoxyCompactList}\small\item\em Associate agents-\/entities from a file. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_ac72410adc40abf8c70c3893bb40db21c}\label{class_model_ac72410adc40abf8c70c3893bb40db21c}} 
 size\+\_\+t {\bfseries get\+\_\+n\+\_\+variants} () const
 \item 
@@ -81,7 +83,10 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 void \mbox{\hyperlink{class_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
-\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_a2a8ec13a43f5839f9b06409b990b35b3}\label{class_model_a2a8ec13a43f5839f9b06409b990b35b3}} 
+std\+::string {\bfseries get\+\_\+name} () const
+\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Set the backup object}\par
 {\em {\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. }\begin{DoxyCompactItemize}
 \item 
@@ -651,7 +656,27 @@ Set a global action.
 {\em date} & Integer indicating when the function is called (see details)\\
 \hline
 \end{DoxyParams}
-When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{class_model_a9591eb76c7cf1ed7e1510342ff602d37}\label{class_model_a9591eb76c7cf1ed7e1510342ff602d37}} 
+When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{class_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{class_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!load\_agents\_entities\_ties@{load\_agents\_entities\_ties}}
+\index{load\_agents\_entities\_ties@{load\_agents\_entities\_ties}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{load\_agents\_entities\_ties()}{load\_agents\_entities\_ties()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::load\+\_\+agents\+\_\+entities\+\_\+ties (\begin{DoxyParamCaption}\item[{std\+::string}]{fn,  }\item[{int}]{skip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Associate agents-\/entities from a file. 
+
+The structure of the file should be two columns separated by space. The first column indexing between 0 and nagents-\/1, and the second column between 0 and nentities -\/ 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & Path to the file. \\
+\hline
+{\em skip} & How many rows to skip. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_model_a9591eb76c7cf1ed7e1510342ff602d37}\label{class_model_a9591eb76c7cf1ed7e1510342ff602d37}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!reset@{reset}}
 \index{reset@{reset}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{reset()}{reset()}}

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['today_135',['today',['../classepiworld_1_1_model.html#aa3ce8d5f025e239f8090ab9645f3e917',1,'epiworld::Model::today()'],['../class_model.html#aa3ce8d5f025e239f8090ab9645f3e917',1,'Model::today()']]],
-  ['transition_5fprobability_136',['transition_probability',['../classepiworld_1_1_data_base.html#a3391ab73b07892c8b66160e61dd294fd',1,'epiworld::DataBase::transition_probability()'],['../class_data_base.html#a3391ab73b07892c8b66160e61dd294fd',1,'DataBase::transition_probability()']]]
+  ['sample_5fvirus_5fsingle_133',['sample_virus_single',['../namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e',1,'epiworld::sampler::sample_virus_single()'],['../namespacesampler.html#ab33532e84aba976673b13d0f6758e95b',1,'sampler::sample_virus_single()']]],
+  ['set_5fagents_5fdata_134',['set_agents_data',['../classepiworld_1_1_model.html#a14758e0476fd4a05643ab41190530513',1,'epiworld::Model::set_agents_data()'],['../class_model.html#a14758e0476fd4a05643ab41190530513',1,'Model::set_agents_data()']]],
+  ['set_5fname_135',['set_name',['../classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36',1,'epiworld::Model::set_name()'],['../class_model.html#a453485b4cfe2a51addf33003f8d70c36',1,'Model::set_name()']]],
+  ['set_5fuser_5fdata_136',['set_user_data',['../classepiworld_1_1_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'epiworld::Model::set_user_data()'],['../class_model.html#adc8d49825ecf57ac045a4c93e4d63924',1,'Model::set_user_data()']]]
 ];

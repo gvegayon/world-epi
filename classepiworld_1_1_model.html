@@ -91,6 +91,9 @@ epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>oper
 <tr class="memitem:a40f2aa6db21fb71bc9b591aadd26ce3a"><td class="memItemLeft" align="right" valign="top"><a id="a40f2aa6db21fb71bc9b591aadd26ce3a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
 <tr class="separator:a40f2aa6db21fb71bc9b591aadd26ce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4761b43494d081f2f7bd2443ea6cb2db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a4761b43494d081f2f7bd2443ea6cb2db">load_agents_entities_ties</a> (std::string fn, int skip)</td></tr>
+<tr class="memdesc:a4761b43494d081f2f7bd2443ea6cb2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate agents-entities from a file.  <a href="classepiworld_1_1_model.html#a4761b43494d081f2f7bd2443ea6cb2db">More...</a><br /></td></tr>
+<tr class="separator:a4761b43494d081f2f7bd2443ea6cb2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72410adc40abf8c70c3893bb40db21c"><td class="memItemLeft" align="right" valign="top"><a id="ac72410adc40abf8c70c3893bb40db21c"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_variants</b> () const</td></tr>
 <tr class="separator:ac72410adc40abf8c70c3893bb40db21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +161,9 @@ const std::vector&lt; ToolPtr&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memI
 <tr class="memitem:a453485b4cfe2a51addf33003f8d70c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">set_name</a> (std::string name)</td></tr>
 <tr class="memdesc:a453485b4cfe2a51addf33003f8d70c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name object.  <a href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">More...</a><br /></td></tr>
 <tr class="separator:a453485b4cfe2a51addf33003f8d70c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8ec13a43f5839f9b06409b990b35b3"><td class="memItemLeft" align="right" valign="top"><a id="a2a8ec13a43f5839f9b06409b990b35b3"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> () const</td></tr>
+<tr class="separator:a2a8ec13a43f5839f9b06409b990b35b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Set the backup object</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><code>backup</code> can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. </p>
 </div></td></tr>
@@ -712,6 +718,54 @@ template&lt;typename TSeq &gt; </div>
   </dd>
 </dl>
 <p>When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. </p>
+
+</div>
+</div>
+<a id="a4761b43494d081f2f7bd2443ea6cb2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4761b43494d081f2f7bd2443ea6cb2db">&#9670;&nbsp;</a></span>load_agents_entities_ties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt;::load_agents_entities_ties </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Associate agents-entities from a file. </p>
+<p>The structure of the file should be two columns separated by space. The first column indexing between 0 and nagents-1, and the second column between 0 and nentities - 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>Path to the file. </td></tr>
+    <tr><td class="paramname">skip</td><td>How many rows to skip. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
