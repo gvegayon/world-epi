@@ -4083,7 +4083,7 @@ $(function() {
 <div class="line"><a name="l04514"></a><span class="lineno"> 4514</span>&#160;<span class="comment">    epiworld_fast_uint n,</span></div>
 <div class="line"><a name="l04515"></a><span class="lineno"> 4515</span>&#160;<span class="comment">    epiworld_fast_uint blocksize,</span></div>
 <div class="line"><a name="l04516"></a><span class="lineno"> 4516</span>&#160;<span class="comment">    epiworld_fast_uint ncons,</span></div>
-<div class="line"><a name="l04517"></a><span class="lineno"> 4517</span>&#160;<span class="comment">    Model&lt;TSeq&gt; &amp; model</span></div>
+<div class="line"><a name="l04517"></a><span class="lineno"> 4517</span>&#160;<span class="comment">    Model&lt;TSeq&gt;&amp;</span></div>
 <div class="line"><a name="l04518"></a><span class="lineno"> 4518</span>&#160;<span class="comment">) {</span></div>
 <div class="line"><a name="l04519"></a><span class="lineno"> 4519</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04520"></a><span class="lineno"> 4520</span>&#160;<span class="comment">    std::vector&lt; epiworld_fast_uint &gt; source_;</span></div>
@@ -5066,7 +5066,7 @@ $(function() {
 <div class="line"><a name="l05827"></a><span class="lineno"> 5827</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::clone_population</a>(</div>
 <div class="line"><a name="l05828"></a><span class="lineno"> 5828</span>&#160;    std::vector&lt; <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &gt; &amp; p,</div>
 <div class="line"><a name="l05829"></a><span class="lineno"> 5829</span>&#160;    <span class="keywordtype">bool</span> &amp; d,</div>
-<div class="line"><a name="l05830"></a><span class="lineno"> 5830</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model</div>
+<div class="line"><a name="l05830"></a><span class="lineno"> 5830</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> *</div>
 <div class="line"><a name="l05831"></a><span class="lineno"> 5831</span>&#160;)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l05832"></a><span class="lineno"> 5832</span>&#160; </div>
 <div class="line"><a name="l05833"></a><span class="lineno"> 5833</span>&#160;    <span class="comment">// Copy and clean</span></div>
@@ -7413,7 +7413,7 @@ $(function() {
 <div class="line"><a name="l08242"></a><span class="lineno"> 8242</span>&#160;<span class="comment">inline void Virus&lt;TSeq&gt;::set_prob_death(epiworld_double * prob)</span></div>
 <div class="line"><a name="l08243"></a><span class="lineno"> 8243</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08244"></a><span class="lineno"> 8244</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l08245"></a><span class="lineno"> 8245</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; * p, Virus&lt;TSeq&gt; &amp; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08245"></a><span class="lineno"> 8245</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; *, Virus&lt;TSeq&gt; &amp;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08246"></a><span class="lineno"> 8246</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08247"></a><span class="lineno"> 8247</span>&#160;<span class="comment">            return *prob;</span></div>
 <div class="line"><a name="l08248"></a><span class="lineno"> 8248</span>&#160;<span class="comment">        };</span></div>
@@ -7425,7 +7425,7 @@ $(function() {
 <div class="line"><a name="l08254"></a><span class="lineno"> 8254</span>&#160;<span class="comment">inline void Virus&lt;TSeq&gt;::set_prob_infecting(epiworld_double prob)</span></div>
 <div class="line"><a name="l08255"></a><span class="lineno"> 8255</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08256"></a><span class="lineno"> 8256</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l08257"></a><span class="lineno"> 8257</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; * p, Virus&lt;TSeq&gt; &amp; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08257"></a><span class="lineno"> 8257</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; *, Virus&lt;TSeq&gt; &amp;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08258"></a><span class="lineno"> 8258</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08259"></a><span class="lineno"> 8259</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l08260"></a><span class="lineno"> 8260</span>&#160;<span class="comment">        };</span></div>
@@ -7437,7 +7437,7 @@ $(function() {
 <div class="line"><a name="l08266"></a><span class="lineno"> 8266</span>&#160;<span class="comment">inline void Virus&lt;TSeq&gt;::set_prob_recovery(epiworld_double prob)</span></div>
 <div class="line"><a name="l08267"></a><span class="lineno"> 8267</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08268"></a><span class="lineno"> 8268</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l08269"></a><span class="lineno"> 8269</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; * p, Virus&lt;TSeq&gt; &amp; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08269"></a><span class="lineno"> 8269</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; *, Virus&lt;TSeq&gt; &amp;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08270"></a><span class="lineno"> 8270</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08271"></a><span class="lineno"> 8271</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l08272"></a><span class="lineno"> 8272</span>&#160;<span class="comment">        };</span></div>
@@ -7449,7 +7449,7 @@ $(function() {
 <div class="line"><a name="l08278"></a><span class="lineno"> 8278</span>&#160;<span class="comment">inline void Virus&lt;TSeq&gt;::set_prob_death(epiworld_double prob)</span></div>
 <div class="line"><a name="l08279"></a><span class="lineno"> 8279</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08280"></a><span class="lineno"> 8280</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l08281"></a><span class="lineno"> 8281</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; * p, Virus&lt;TSeq&gt; &amp; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08281"></a><span class="lineno"> 8281</span>&#160;<span class="comment">        [prob](Agent&lt;TSeq&gt; *, Virus&lt;TSeq&gt; &amp;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08282"></a><span class="lineno"> 8282</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08283"></a><span class="lineno"> 8283</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l08284"></a><span class="lineno"> 8284</span>&#160;<span class="comment">        };</span></div>
@@ -8065,7 +8065,7 @@ $(function() {
 <div class="line"><a name="l08937"></a><span class="lineno"> 8937</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08938"></a><span class="lineno"> 8938</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l08939"></a><span class="lineno"> 8939</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun =</span></div>
-<div class="line"><a name="l08940"></a><span class="lineno"> 8940</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08940"></a><span class="lineno"> 8940</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08941"></a><span class="lineno"> 8941</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08942"></a><span class="lineno"> 8942</span>&#160;<span class="comment">            return *prob;</span></div>
 <div class="line"><a name="l08943"></a><span class="lineno"> 8943</span>&#160;<span class="comment">        };</span></div>
@@ -8080,7 +8080,7 @@ $(function() {
 <div class="line"><a name="l08952"></a><span class="lineno"> 8952</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08953"></a><span class="lineno"> 8953</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l08954"></a><span class="lineno"> 8954</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun =</span></div>
-<div class="line"><a name="l08955"></a><span class="lineno"> 8955</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08955"></a><span class="lineno"> 8955</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08956"></a><span class="lineno"> 8956</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08957"></a><span class="lineno"> 8957</span>&#160;<span class="comment">            return *prob;</span></div>
 <div class="line"><a name="l08958"></a><span class="lineno"> 8958</span>&#160;<span class="comment">        };</span></div>
@@ -8095,7 +8095,7 @@ $(function() {
 <div class="line"><a name="l08967"></a><span class="lineno"> 8967</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08968"></a><span class="lineno"> 8968</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l08969"></a><span class="lineno"> 8969</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun =</span></div>
-<div class="line"><a name="l08970"></a><span class="lineno"> 8970</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp; t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08970"></a><span class="lineno"> 8970</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08971"></a><span class="lineno"> 8971</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08972"></a><span class="lineno"> 8972</span>&#160;<span class="comment">            return *prob;</span></div>
 <div class="line"><a name="l08973"></a><span class="lineno"> 8973</span>&#160;<span class="comment">        };</span></div>
@@ -8110,7 +8110,7 @@ $(function() {
 <div class="line"><a name="l08982"></a><span class="lineno"> 8982</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l08983"></a><span class="lineno"> 8983</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l08984"></a><span class="lineno"> 8984</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun =</span></div>
-<div class="line"><a name="l08985"></a><span class="lineno"> 8985</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l08985"></a><span class="lineno"> 8985</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l08986"></a><span class="lineno"> 8986</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l08987"></a><span class="lineno"> 8987</span>&#160;<span class="comment">            return *prob;</span></div>
 <div class="line"><a name="l08988"></a><span class="lineno"> 8988</span>&#160;<span class="comment">        };</span></div>
@@ -8129,7 +8129,7 @@ $(function() {
 <div class="line"><a name="l09001"></a><span class="lineno"> 9001</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l09002"></a><span class="lineno"> 9002</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09003"></a><span class="lineno"> 9003</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l09004"></a><span class="lineno"> 9004</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l09004"></a><span class="lineno"> 9004</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l09005"></a><span class="lineno"> 9005</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l09006"></a><span class="lineno"> 9006</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l09007"></a><span class="lineno"> 9007</span>&#160;<span class="comment">        };</span></div>
@@ -8145,7 +8145,7 @@ $(function() {
 <div class="line"><a name="l09017"></a><span class="lineno"> 9017</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l09018"></a><span class="lineno"> 9018</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09019"></a><span class="lineno"> 9019</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l09020"></a><span class="lineno"> 9020</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l09020"></a><span class="lineno"> 9020</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l09021"></a><span class="lineno"> 9021</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l09022"></a><span class="lineno"> 9022</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l09023"></a><span class="lineno"> 9023</span>&#160;<span class="comment">        };</span></div>
@@ -8161,7 +8161,7 @@ $(function() {
 <div class="line"><a name="l09033"></a><span class="lineno"> 9033</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l09034"></a><span class="lineno"> 9034</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09035"></a><span class="lineno"> 9035</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l09036"></a><span class="lineno"> 9036</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;  t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l09036"></a><span class="lineno"> 9036</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l09037"></a><span class="lineno"> 9037</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l09038"></a><span class="lineno"> 9038</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l09039"></a><span class="lineno"> 9039</span>&#160;<span class="comment">        };</span></div>
@@ -8177,7 +8177,7 @@ $(function() {
 <div class="line"><a name="l09049"></a><span class="lineno"> 9049</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l09050"></a><span class="lineno"> 9050</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09051"></a><span class="lineno"> 9051</span>&#160;<span class="comment">    ToolFun&lt;TSeq&gt; tmpfun = </span></div>
-<div class="line"><a name="l09052"></a><span class="lineno"> 9052</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp; t, Agent&lt;TSeq&gt; * p, VirusPtr&lt;TSeq&gt; v, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l09052"></a><span class="lineno"> 9052</span>&#160;<span class="comment">        [prob](Tool&lt;TSeq&gt; &amp;, Agent&lt;TSeq&gt; *, VirusPtr&lt;TSeq&gt;, Model&lt;TSeq&gt; *)</span></div>
 <div class="line"><a name="l09053"></a><span class="lineno"> 9053</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l09054"></a><span class="lineno"> 9054</span>&#160;<span class="comment">            return prob;</span></div>
 <div class="line"><a name="l09055"></a><span class="lineno"> 9055</span>&#160;<span class="comment">        };</span></div>
