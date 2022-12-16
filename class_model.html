@@ -326,8 +326,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">run</a> ()</td></tr>
 <tr class="memdesc:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
 <tr class="separator:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true)</td></tr>
-<tr class="separator:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662c46a99b4c8ef6427a45c9df64e646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a662c46a99b4c8ef6427a45c9df64e646">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true, int nthreads=1)</td></tr>
+<tr class="separator:a662c46a99b4c8ef6427a45c9df64e646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Rewire the network preserving the degree sequence.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This implementation assumes an undirected network, thus if {(i,j), (k,l)} -&gt; {(i,l), (k,j)}, the reciprocal is also true, i.e., {(j,i), (l,k)} -&gt; {(j,k), (l,i)}.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -798,8 +798,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="a534bcb0cce1a8d1ffbfc176364a1c9f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a534bcb0cce1a8d1ffbfc176364a1c9f0">&#9670;&nbsp;</a></span>run_multiple()</h2>
+<a id="a662c46a99b4c8ef6427a45c9df64e646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662c46a99b4c8ef6427a45c9df64e646">&#9670;&nbsp;</a></span>run_multiple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -831,7 +831,13 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nthreads</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

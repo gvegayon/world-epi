@@ -101,46 +101,47 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_user_data.html">UserData</a>() = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_user_data.html">UserData</a>(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; m) : model(&amp;m) {};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_user_data.html">UserData</a>(std::vector&lt; std::string &gt; names);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> add(std::vector&lt;epiworld_double&gt; x);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> add(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        epiworld_fast_uint j,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        epiworld_double x</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    epiworld_double &amp; operator()(</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        epiworld_fast_uint i,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        epiworld_fast_uint j</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    epiworld_double &amp; operator()(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        epiworld_fast_uint i,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::string name</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::vector&lt; std::string &gt; &amp; get_names();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::vector&lt; int &gt; &amp; get_dates();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt; epiworld_double &gt; &amp; get_data();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> get_all(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt; std::string &gt; * names    = <span class="keyword">nullptr</span>,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::vector&lt; int &gt; * date             = <span class="keyword">nullptr</span>,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::vector&lt; epiworld_double &gt; * data = <span class="keyword">nullptr</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    epiworld_fast_uint nrow() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    epiworld_fast_uint ncol() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> write(std::string fn);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_user_data.html">UserData</a>(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * m) : model(m) {};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_user_data.html">UserData</a>(std::vector&lt; std::string &gt; names);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> add(std::vector&lt;epiworld_double&gt; x);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> add(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        epiworld_fast_uint j,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        epiworld_double x</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    epiworld_double &amp; operator()(</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        epiworld_fast_uint i,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        epiworld_fast_uint j</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    epiworld_double &amp; operator()(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        epiworld_fast_uint i,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::string name</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt; std::string &gt; &amp; get_names();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::vector&lt; int &gt; &amp; get_dates();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt; epiworld_double &gt; &amp; get_data();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> get_all(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::vector&lt; std::string &gt; * names    = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::vector&lt; int &gt; * date             = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::vector&lt; epiworld_double &gt; * data = <span class="keyword">nullptr</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    epiworld_fast_uint nrow() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    epiworld_fast_uint ncol() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> write(std::string fn);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:31</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>
