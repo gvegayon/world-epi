@@ -266,7 +266,7 @@ void {\bfseries next} ()
 \mbox{\Hypertarget{classepiworld_1_1_model_a825c7fb2498c7693cbf1bfcd0a416ef4}\label{classepiworld_1_1_model_a825c7fb2498c7693cbf1bfcd0a416ef4}} 
 void \mbox{\hyperlink{classepiworld_1_1_model_a825c7fb2498c7693cbf1bfcd0a416ef4}{run}} ()
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a534bcb0cce1a8d1ffbfc176364a1c9f0}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint nexperiments, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true)
+void \mbox{\hyperlink{classepiworld_1_1_model_a662c46a99b4c8ef6427a45c9df64e646}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint nexperiments, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true, int nthreads=1)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Rewire the network preserving the degree sequence.}\par
@@ -440,11 +440,11 @@ std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $
 \mbox{\Hypertarget{classepiworld_1_1_model_ae29e3a0872a42368b168b01cb9167885}\label{classepiworld_1_1_model_ae29e3a0872a42368b168b01cb9167885}} 
 \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6aaa793f572e17aefa7576d7200e88dc}\label{classepiworld_1_1_model_a6aaa793f572e17aefa7576d7200e88dc}} 
-void {\bfseries clone\+\_\+population} (std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $>$ \&p, bool \&d, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$m=nullptr) const
+\mbox{\Hypertarget{classepiworld_1_1_model_a89b328107e8d5ce4351c74ad2a86ea47}\label{classepiworld_1_1_model_a89b328107e8d5ce4351c74ad2a86ea47}} 
+void {\bfseries clone\+\_\+population} (std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $>$ \&other\+\_\+population, bool \&other\+\_\+directed, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$other\+\_\+model=nullptr) const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a3d9b9f0fdd85f6cbec1aa4004476ae85}\label{classepiworld_1_1_model_a3d9b9f0fdd85f6cbec1aa4004476ae85}} 
-void {\bfseries clone\+\_\+population} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&m)
+\mbox{\Hypertarget{classepiworld_1_1_model_aba5a848bca7d5f4e72e703cbf0e91f25}\label{classepiworld_1_1_model_aba5a848bca7d5f4e72e703cbf0e91f25}} 
+void {\bfseries clone\+\_\+population} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&other\+\_\+model)
 \end{DoxyCompactItemize}
 \doxysubsection*{Setting and accessing parameters from the model}
 \label{_amgrp61207d51bcc1b661804b11cec5dc845e}%
@@ -694,12 +694,12 @@ Resetting the model will\+:
 \item re-\/distribute tools
 \item re-\/distribute viruses
 \item set the date to 0 
-\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_a534bcb0cce1a8d1ffbfc176364a1c9f0}\label{classepiworld_1_1_model_a534bcb0cce1a8d1ffbfc176364a1c9f0}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_a662c46a99b4c8ef6427a45c9df64e646}\label{classepiworld_1_1_model_a662c46a99b4c8ef6427a45c9df64e646}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!run\_multiple@{run\_multiple}}
 \index{run\_multiple@{run\_multiple}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{run\_multiple()}{run\_multiple()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{epiworld\+\_\+fast\+\_\+uint}]{nexperiments,  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$TSeq$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{epiworld\+\_\+fast\+\_\+uint}]{nexperiments,  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$TSeq$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true},  }\item[{int}]{nthreads = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 \begin{DoxyParams}{Parameters}

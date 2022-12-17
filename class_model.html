@@ -489,12 +489,12 @@ std::vector&lt; <a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; * 
 <tr class="memitem:a36f342658f9c49723c8a93a345b533bc"><td class="memItemLeft" align="right" valign="top"><a id="a36f342658f9c49723c8a93a345b533bc"></a>
 <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;m)</td></tr>
 <tr class="separator:a36f342658f9c49723c8a93a345b533bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aaa793f572e17aefa7576d7200e88dc"><td class="memItemLeft" align="right" valign="top"><a id="a6aaa793f572e17aefa7576d7200e88dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &gt; &amp;p, bool &amp;d, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *m=nullptr) const</td></tr>
-<tr class="separator:a6aaa793f572e17aefa7576d7200e88dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d9b9f0fdd85f6cbec1aa4004476ae85"><td class="memItemLeft" align="right" valign="top"><a id="a3d9b9f0fdd85f6cbec1aa4004476ae85"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;m)</td></tr>
-<tr class="separator:a3d9b9f0fdd85f6cbec1aa4004476ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b328107e8d5ce4351c74ad2a86ea47"><td class="memItemLeft" align="right" valign="top"><a id="a89b328107e8d5ce4351c74ad2a86ea47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &gt; &amp;other_population, bool &amp;other_directed, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *other_model=nullptr) const</td></tr>
+<tr class="separator:a89b328107e8d5ce4351c74ad2a86ea47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memItemLeft" align="right" valign="top"><a id="aba5a848bca7d5f4e72e703cbf0e91f25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;other_model)</td></tr>
+<tr class="separator:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Setting and accessing parameters from the model</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp61207d51bcc1b661804b11cec5dc845e"></a> <a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>

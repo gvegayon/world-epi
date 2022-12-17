@@ -330,8 +330,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">run</a> ()</td></tr>
 <tr class="memdesc:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
 <tr class="separator:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a534bcb0cce1a8d1ffbfc176364a1c9f0">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true)</td></tr>
-<tr class="separator:a534bcb0cce1a8d1ffbfc176364a1c9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662c46a99b4c8ef6427a45c9df64e646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a662c46a99b4c8ef6427a45c9df64e646">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true, int nthreads=1)</td></tr>
+<tr class="separator:a662c46a99b4c8ef6427a45c9df64e646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Rewire the network preserving the degree sequence.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This implementation assumes an undirected network, thus if {(i,j), (k,l)} -&gt; {(i,l), (k,j)}, the reciprocal is also true, i.e., {(j,i), (l,k)} -&gt; {(j,k), (l,i)}.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -493,12 +493,12 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; 
 <tr class="memitem:ae29e3a0872a42368b168b01cb9167885"><td class="memItemLeft" align="right" valign="top"><a id="ae29e3a0872a42368b168b01cb9167885"></a>
 <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;m)</td></tr>
 <tr class="separator:ae29e3a0872a42368b168b01cb9167885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aaa793f572e17aefa7576d7200e88dc"><td class="memItemLeft" align="right" valign="top"><a id="a6aaa793f572e17aefa7576d7200e88dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &gt; &amp;p, bool &amp;d, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m=nullptr) const</td></tr>
-<tr class="separator:a6aaa793f572e17aefa7576d7200e88dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d9b9f0fdd85f6cbec1aa4004476ae85"><td class="memItemLeft" align="right" valign="top"><a id="a3d9b9f0fdd85f6cbec1aa4004476ae85"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;m)</td></tr>
-<tr class="separator:a3d9b9f0fdd85f6cbec1aa4004476ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b328107e8d5ce4351c74ad2a86ea47"><td class="memItemLeft" align="right" valign="top"><a id="a89b328107e8d5ce4351c74ad2a86ea47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &gt; &amp;other_population, bool &amp;other_directed, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *other_model=nullptr) const</td></tr>
+<tr class="separator:a89b328107e8d5ce4351c74ad2a86ea47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memItemLeft" align="right" valign="top"><a id="aba5a848bca7d5f4e72e703cbf0e91f25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;other_model)</td></tr>
+<tr class="separator:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Setting and accessing parameters from the model</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp61207d51bcc1b661804b11cec5dc845e"></a> <a class="el" href="classepiworld_1_1_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
@@ -802,8 +802,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="a534bcb0cce1a8d1ffbfc176364a1c9f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a534bcb0cce1a8d1ffbfc176364a1c9f0">&#9670;&nbsp;</a></span>run_multiple()</h2>
+<a id="a662c46a99b4c8ef6427a45c9df64e646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662c46a99b4c8ef6427a45c9df64e646">&#9670;&nbsp;</a></span>run_multiple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,7 +835,13 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nthreads</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
