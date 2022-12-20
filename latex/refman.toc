@@ -61,16 +61,16 @@
 \contentsline {section}{\numberline {13.5}Agent$<$ TSeq $>$ Class Template Reference}{41}{section.13.5}%
 \contentsline {subsection}{\numberline {13.5.1}Detailed Description}{43}{subsection.13.5.1}%
 \contentsline {subsection}{\numberline {13.5.2}Member Function Documentation}{43}{subsection.13.5.2}%
-\contentsline {subsubsection}{\numberline {13.5.2.1}operator()()}{44}{subsubsection.13.5.2.1}%
+\contentsline {subsubsection}{\numberline {13.5.2.1}get\_entities()}{44}{subsubsection.13.5.2.1}%
 \contentsline {section}{\numberline {13.6}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Agent$<$ TSeq $>$ Class Template Reference}{44}{section.13.6}%
 \contentsline {subsection}{\numberline {13.6.1}Detailed Description}{46}{subsection.13.6.1}%
 \contentsline {subsection}{\numberline {13.6.2}Member Function Documentation}{46}{subsection.13.6.2}%
-\contentsline {subsubsection}{\numberline {13.6.2.1}operator()()}{47}{subsubsection.13.6.2.1}%
+\contentsline {subsubsection}{\numberline {13.6.2.1}get\_entities()}{47}{subsubsection.13.6.2.1}%
 \contentsline {section}{\numberline {13.7}Agents\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample$<$ TSeq $>$ Class Template Reference}{47}{section.13.7}%
 \contentsline {subsection}{\numberline {13.7.1}Detailed Description}{48}{subsection.13.7.1}%
 \contentsline {subsection}{\numberline {13.7.2}Constructor \& Destructor Documentation}{48}{subsection.13.7.2}%
 \contentsline {subsubsection}{\numberline {13.7.2.1}AgentsSample()}{48}{subsubsection.13.7.2.1}%
-\contentsline {section}{\numberline {13.8}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Agents\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample$<$ TSeq $>$ Class Template Reference}{48}{section.13.8}%
+\contentsline {section}{\numberline {13.8}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Agents\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample$<$ TSeq $>$ Class Template Reference}{49}{section.13.8}%
 \contentsline {subsection}{\numberline {13.8.1}Detailed Description}{49}{subsection.13.8.1}%
 \contentsline {subsection}{\numberline {13.8.2}Constructor \& Destructor Documentation}{49}{subsection.13.8.2}%
 \contentsline {subsubsection}{\numberline {13.8.2.1}AgentsSample()}{49}{subsubsection.13.8.2.1}%
@@ -83,18 +83,18 @@
 \contentsline {section}{\numberline {13.10}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base$<$ TSeq $>$ Class Template Reference}{53}{section.13.10}%
 \contentsline {subsection}{\numberline {13.10.1}Detailed Description}{54}{subsection.13.10.1}%
 \contentsline {subsection}{\numberline {13.10.2}Member Function Documentation}{54}{subsection.13.10.2}%
-\contentsline {subsubsection}{\numberline {13.10.2.1}record\_variant()}{54}{subsubsection.13.10.2.1}%
+\contentsline {subsubsection}{\numberline {13.10.2.1}record\_variant()}{55}{subsubsection.13.10.2.1}%
 \contentsline {subsubsection}{\numberline {13.10.2.2}reproductive\_number()}{55}{subsubsection.13.10.2.2}%
 \contentsline {subsubsection}{\numberline {13.10.2.3}transition\_probability()}{55}{subsubsection.13.10.2.3}%
-\contentsline {section}{\numberline {13.11}Entities$<$ TSeq $>$ Class Template Reference}{55}{section.13.11}%
+\contentsline {section}{\numberline {13.11}Entities$<$ TSeq $>$ Class Template Reference}{56}{section.13.11}%
 \contentsline {subsection}{\numberline {13.11.1}Detailed Description}{56}{subsection.13.11.1}%
 \contentsline {section}{\numberline {13.12}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Entities$<$ TSeq $>$ Class Template Reference}{56}{section.13.12}%
-\contentsline {subsection}{\numberline {13.12.1}Detailed Description}{56}{subsection.13.12.1}%
+\contentsline {subsection}{\numberline {13.12.1}Detailed Description}{57}{subsection.13.12.1}%
 \contentsline {section}{\numberline {13.13}Entities\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{57}{section.13.13}%
 \contentsline {subsection}{\numberline {13.13.1}Detailed Description}{57}{subsection.13.13.1}%
 \contentsline {section}{\numberline {13.14}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Entities\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}const$<$ TSeq $>$ Class Template Reference}{58}{section.13.14}%
 \contentsline {subsection}{\numberline {13.14.1}Detailed Description}{58}{subsection.13.14.1}%
-\contentsline {section}{\numberline {13.15}Entity$<$ TSeq $>$ Class Template Reference}{58}{section.13.15}%
+\contentsline {section}{\numberline {13.15}Entity$<$ TSeq $>$ Class Template Reference}{59}{section.13.15}%
 \contentsline {section}{\numberline {13.16}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Entity$<$ TSeq $>$ Class Template Reference}{59}{section.13.16}%
 \contentsline {section}{\numberline {13.17}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::LFMCMC$<$ TData $>$ Class Template Reference}{60}{section.13.17}%
 \contentsline {subsection}{\numberline {13.17.1}Detailed Description}{61}{subsection.13.17.1}%

@@ -15,8 +15,8 @@
 \mbox{\Hypertarget{classepiworld_1_1_virus_a833b1b798d9f1a1d8eb724b454502080}\label{classepiworld_1_1_virus_a833b1b798d9f1a1d8eb724b454502080}} 
 {\bfseries Virus} (std\+::string name=\char`\"{}unknown virus\char`\"{})
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_a548c563e063237d997f08863c7d0db24}\label{classepiworld_1_1_virus_a548c563e063237d997f08863c7d0db24}} 
-void {\bfseries mutate} ()
+\mbox{\Hypertarget{classepiworld_1_1_virus_aea7334d2f610345ee20d41afcd410e9a}\label{classepiworld_1_1_virus_aea7334d2f610345ee20d41afcd410e9a}} 
+void {\bfseries mutate} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_virus_aa14d649b04e30d262d91e96e87789690}\label{classepiworld_1_1_virus_aa14d649b04e30d262d91e96e87789690}} 
 void {\bfseries set\+\_\+mutation} (Mut\+Fun$<$ TSeq $>$ fun)
@@ -32,9 +32,6 @@ void {\bfseries set\+\_\+sequence} (TSeq sequence)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_virus_a0683a4236d510c99452a44fb65352801}\label{classepiworld_1_1_virus_a0683a4236d510c99452a44fb65352801}} 
 void {\bfseries set\+\_\+agent} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$p, epiworld\+\_\+fast\+\_\+uint idx)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_a2dbce3d4acea1a18e735f4089af709cd}\label{classepiworld_1_1_virus_a2dbce3d4acea1a18e735f4089af709cd}} 
-\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries get\+\_\+model} ()
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_virus_ab23f9aac7fc542c0f926014205ef5d2c}\label{classepiworld_1_1_virus_ab23f9aac7fc542c0f926014205ef5d2c}} 
 void {\bfseries set\+\_\+date} (int d)
@@ -70,17 +67,17 @@ epiworld\+\_\+double
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_aad6614ef755a101d2bb52d48504041fd}\label{classepiworld_1_1_virus_aad6614ef755a101d2bb52d48504041fd}} 
-epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+infecting} ()
+\mbox{\Hypertarget{classepiworld_1_1_virus_a6146fe6627df6318880201a4ea34939c}\label{classepiworld_1_1_virus_a6146fe6627df6318880201a4ea34939c}} 
+epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+infecting} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_af922e7e240e4f6cc0c34808723aebdaf}\label{classepiworld_1_1_virus_af922e7e240e4f6cc0c34808723aebdaf}} 
-epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+recovery} ()
+\mbox{\Hypertarget{classepiworld_1_1_virus_a53a92a0af99f4b0cde3f6dd68c0c047b}\label{classepiworld_1_1_virus_a53a92a0af99f4b0cde3f6dd68c0c047b}} 
+epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+recovery} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_a24645f3c7ad9d5b5972e443403c3fb9c}\label{classepiworld_1_1_virus_a24645f3c7ad9d5b5972e443403c3fb9c}} 
-epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+death} ()
+\mbox{\Hypertarget{classepiworld_1_1_virus_acb4c5b1ac24132782e653b44a4daffac}\label{classepiworld_1_1_virus_acb4c5b1ac24132782e653b44a4daffac}} 
+epiworld\+\_\+double {\bfseries get\+\_\+prob\+\_\+death} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_a3cda3024c6046a411ffa7dc18695422d}\label{classepiworld_1_1_virus_a3cda3024c6046a411ffa7dc18695422d}} 
-void {\bfseries post\+\_\+recovery} ()
+\mbox{\Hypertarget{classepiworld_1_1_virus_a95d5785a8ef78e9c7056b8826bf53c45}\label{classepiworld_1_1_virus_a95d5785a8ef78e9c7056b8826bf53c45}} 
+void {\bfseries post\+\_\+recovery} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_virus_a4005d252549d4ed123aea265e7c63da6}\label{classepiworld_1_1_virus_a4005d252549d4ed123aea265e7c63da6}} 
 void {\bfseries set\+\_\+post\+\_\+recovery} (Post\+Recovery\+Fun$<$ TSeq $>$ fun)

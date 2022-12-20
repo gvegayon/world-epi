@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (virus == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    p-&gt;add_virus(*virus); </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    p-&gt;add_virus(*virus, m); </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -117,11 +117,11 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// Die</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        m-&gt;array_double_tmp[n_events++] = </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            v-&gt;get_prob_death() * (1.0 - p-&gt;get_death_reduction(v)); </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            v-&gt;get_prob_death(m) * (1.0 - p-&gt;get_death_reduction(v, m)); </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// Recover</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        m-&gt;array_double_tmp[n_events++] = </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            1.0 - (1.0 - v-&gt;get_prob_recovery()) * (1.0 - p-&gt;get_recovery_enhancer(v)); </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            1.0 - (1.0 - v-&gt;get_prob_recovery(m)) * (1.0 - p-&gt;get_recovery_enhancer(v, m)); </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
@@ -139,12 +139,12 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">size_t</span> which_v = std::ceil(which / 2);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        p-&gt;<a class="code" href="class_agent.html#ad5f1f07d77bc303809af93c49025c434">rm_agent_by_virus</a>(which_v);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        p-&gt;<a class="code" href="class_agent.html#a524fc00d59cbaf68bdbdf94dc14ce816">rm_agent_by_virus</a>(which_v, m);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">size_t</span> which_v = std::floor(which / 2);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        p-&gt;rm_virus(which_v);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        p-&gt;rm_virus(which_v, m);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
@@ -154,8 +154,8 @@ $(function() {
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
-<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:375</div></div>
-<div class="ttc" id="aclass_agent_html_ad5f1f07d77bc303809af93c49025c434"><div class="ttname"><a href="class_agent.html#ad5f1f07d77bc303809af93c49025c434">Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(epiworld_fast_uint virus_idx, epiworld_fast_int status_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:278</div></div>
+<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:496</div></div>
+<div class="ttc" id="aclass_agent_html_a524fc00d59cbaf68bdbdf94dc14ce816"><div class="ttname"><a href="class_agent.html#a524fc00d59cbaf68bdbdf94dc14ce816">Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(epiworld_fast_uint virus_idx, Model&lt; TSeq &gt; *model, epiworld_fast_int status_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:391</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->

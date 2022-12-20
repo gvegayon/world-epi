@@ -159,9 +159,9 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                epiworld_double tmp_transmission = </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    ; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                m-&gt;array_double_tmp[nvariants_tmp]  = tmp_transmission;</div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (which &lt; 0)</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        p-&gt;add_virus(*m-&gt;array_virus_tmp[which]); </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        p-&gt;add_virus(*m-&gt;array_virus_tmp[which], m); </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    };</div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        epiworld::VirusPtr&lt;TSeq&gt; &amp; v = p-&gt;get_virus(0u); </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        epiworld_double p_die = v-&gt;get_prob_death() * (1.0 - p-&gt;get_death_reduction(v)); </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        epiworld_double p_die = v-&gt;get_prob_death(m) * (1.0 - p-&gt;get_death_reduction(v, m)); </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        epiworld_fast_uint days_since_exposed = m-&gt;today() - v-&gt;get_date();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        epiworld_fast_uint status = p-&gt;get_status();</div>
@@ -214,7 +214,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// If past days infected + latent, then bye.</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (days_since_exposed &gt;= v-&gt;get_data()[1u])</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            p-&gt;rm_virus(0);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            p-&gt;rm_virus(0, m);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
@@ -224,9 +224,9 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="comment">// Will be symptomatic?</span></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">if</span> (EPI_RUNIF() &lt; MPAR(2))</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                p-&gt;change_status(<a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::SYMPTOMATIC</a>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                p-&gt;change_status(m, <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::SYMPTOMATIC</a>);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                p-&gt;change_status(<a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ASYMPTOMATIC</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                p-&gt;change_status(m, <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ASYMPTOMATIC</a>);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            </div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
@@ -235,7 +235,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// Otherwise, it can be removed</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> (EPI_RUNIF() &lt; p_die)</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            p-&gt;change_status(<a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::REMOVED</a>, -1);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            p-&gt;change_status(m, <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::REMOVED</a>, -1);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        </div>
@@ -289,11 +289,11 @@ $(function() {
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">if</span> (p-&gt;get_status() == <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ASYMPTOMATIC</a>)</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                {</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    ndetected_asympt += 1.0;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    p-&gt;change_status(<a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED</a>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    p-&gt;change_status(m, <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED</a>);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">else</span> </div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    p-&gt;change_status(<a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED</a>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    p-&gt;change_status(m, <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED</a>);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                }</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            }</div>
@@ -421,10 +421,10 @@ $(function() {
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10432</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4870</div></div>
-<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8904</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8116</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10480</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4871</div></div>
+<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8943</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8151</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

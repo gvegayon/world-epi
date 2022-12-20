@@ -92,12 +92,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a126af31309bec8b73d9ef57c47d088f6"><td class="memItemLeft" align="right" valign="top"><a id="a126af31309bec8b73d9ef57c47d088f6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AgentsSample</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;model_, size_t n, bool truncate=false)</td></tr>
 <tr class="separator:a126af31309bec8b73d9ef57c47d088f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4579358f7dec1d6058ede36918ec7cb0"><td class="memItemLeft" align="right" valign="top"><a id="a4579358f7dec1d6058ede36918ec7cb0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AgentsSample</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &amp;entity_, size_t n, bool truncate=false)</td></tr>
-<tr class="separator:a4579358f7dec1d6058ede36918ec7cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a029f0151a866a9fca5762423f47f9253"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agents_sample.html#a029f0151a866a9fca5762423f47f9253">AgentsSample</a> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;agent_, size_t n, bool truncate=false)</td></tr>
-<tr class="memdesc:a029f0151a866a9fca5762423f47f9253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from the agent's entities.  <a href="class_agents_sample.html#a029f0151a866a9fca5762423f47f9253">More...</a><br /></td></tr>
-<tr class="separator:a029f0151a866a9fca5762423f47f9253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9927c147faf18f90b243d82db1796930"><td class="memItemLeft" align="right" valign="top"><a id="a9927c147faf18f90b243d82db1796930"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AgentsSample</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model, <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &amp;entity_, size_t n, bool truncate=false)</td></tr>
+<tr class="separator:a9927c147faf18f90b243d82db1796930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48aacfb78852f0f6a7db819ff76a09fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agents_sample.html#a48aacfb78852f0f6a7db819ff76a09fb">AgentsSample</a> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model, <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;agent_, size_t n, bool truncate=false)</td></tr>
+<tr class="memdesc:a48aacfb78852f0f6a7db819ff76a09fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from the agent's entities.  <a href="class_agents_sample.html#a48aacfb78852f0f6a7db819ff76a09fb">More...</a><br /></td></tr>
+<tr class="separator:a48aacfb78852f0f6a7db819ff76a09fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c327f484972e3968cdcf6934ac911af"><td class="memItemLeft" align="right" valign="top"><a id="a2c327f484972e3968cdcf6934ac911af"></a>
 std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a2c327f484972e3968cdcf6934ac911af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,8 +127,8 @@ class AgentsSample&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a029f0151a866a9fca5762423f47f9253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029f0151a866a9fca5762423f47f9253">&#9670;&nbsp;</a></span>AgentsSample()</h2>
+<a id="a48aacfb78852f0f6a7db819ff76a09fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48aacfb78852f0f6a7db819ff76a09fb">&#9670;&nbsp;</a></span>AgentsSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +141,12 @@ template&lt;typename TSeq &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_agents_sample.html">AgentsSample</a>&lt; TSeq &gt;::<a class="el" href="class_agents_sample.html">AgentsSample</a> </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;&#160;</td>
           <td class="paramname"><em>agent_</em>, </td>
         </tr>

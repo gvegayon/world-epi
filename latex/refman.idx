@@ -29,15 +29,15 @@
 \indexentry{epiworld::AdjList@{epiworld::AdjList}!read\_edgelist@{read\_edgelist}|hyperpage}{41}
 \indexentry{read\_edgelist@{read\_edgelist}!epiworld::AdjList@{epiworld::AdjList}|hyperpage}{41}
 \indexentry{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}|hyperpage}{41}
-\indexentry{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!operator()@{operator()}|hyperpage}{43}
-\indexentry{operator()@{operator()}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}|hyperpage}{43}
+\indexentry{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!get\_entities@{get\_entities}|hyperpage}{43}
+\indexentry{get\_entities@{get\_entities}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}|hyperpage}{43}
 \indexentry{epiworld::Agent$<$ TSeq $>$@{epiworld::Agent$<$ TSeq $>$}|hyperpage}{44}
-\indexentry{epiworld::Agent$<$ TSeq $>$@{epiworld::Agent$<$ TSeq $>$}!operator()@{operator()}|hyperpage}{46}
-\indexentry{operator()@{operator()}!epiworld::Agent$<$ TSeq $>$@{epiworld::Agent$<$ TSeq $>$}|hyperpage}{46}
+\indexentry{epiworld::Agent$<$ TSeq $>$@{epiworld::Agent$<$ TSeq $>$}!get\_entities@{get\_entities}|hyperpage}{46}
+\indexentry{get\_entities@{get\_entities}!epiworld::Agent$<$ TSeq $>$@{epiworld::Agent$<$ TSeq $>$}|hyperpage}{46}
 \indexentry{AgentsSample$<$ TSeq $>$@{AgentsSample$<$ TSeq $>$}|hyperpage}{47}
 \indexentry{AgentsSample$<$ TSeq $>$@{AgentsSample$<$ TSeq $>$}!AgentsSample@{AgentsSample}|hyperpage}{48}
 \indexentry{AgentsSample@{AgentsSample}!AgentsSample$<$ TSeq $>$@{AgentsSample$<$ TSeq $>$}|hyperpage}{48}
-\indexentry{epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}|hyperpage}{48}
+\indexentry{epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}|hyperpage}{49}
 \indexentry{epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}!AgentsSample@{AgentsSample}|hyperpage}{49}
 \indexentry{AgentsSample@{AgentsSample}!epiworld::AgentsSample$<$ TSeq $>$@{epiworld::AgentsSample$<$ TSeq $>$}|hyperpage}{49}
 \indexentry{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}|hyperpage}{50}
@@ -54,11 +54,11 @@
 \indexentry{reproductive\_number@{reproductive\_number}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}|hyperpage}{55}
 \indexentry{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!transition\_probability@{transition\_probability}|hyperpage}{55}
 \indexentry{transition\_probability@{transition\_probability}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}|hyperpage}{55}
-\indexentry{Entities$<$ TSeq $>$@{Entities$<$ TSeq $>$}|hyperpage}{55}
+\indexentry{Entities$<$ TSeq $>$@{Entities$<$ TSeq $>$}|hyperpage}{56}
 \indexentry{epiworld::Entities$<$ TSeq $>$@{epiworld::Entities$<$ TSeq $>$}|hyperpage}{56}
 \indexentry{Entities\_const$<$ TSeq $>$@{Entities\_const$<$ TSeq $>$}|hyperpage}{57}
 \indexentry{epiworld::Entities\_const$<$ TSeq $>$@{epiworld::Entities\_const$<$ TSeq $>$}|hyperpage}{58}
-\indexentry{Entity$<$ TSeq $>$@{Entity$<$ TSeq $>$}|hyperpage}{58}
+\indexentry{Entity$<$ TSeq $>$@{Entity$<$ TSeq $>$}|hyperpage}{59}
 \indexentry{epiworld::Entity$<$ TSeq $>$@{epiworld::Entity$<$ TSeq $>$}|hyperpage}{59}
 \indexentry{epiworld::LFMCMC$<$ TData $>$@{epiworld::LFMCMC$<$ TData $>$}|hyperpage}{60}
 \indexentry{LFMCMC$<$ TData $>$@{LFMCMC$<$ TData $>$}|hyperpage}{61}

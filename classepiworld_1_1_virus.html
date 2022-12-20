@@ -85,9 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a833b1b798d9f1a1d8eb724b454502080"><td class="memItemLeft" align="right" valign="top"><a id="a833b1b798d9f1a1d8eb724b454502080"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Virus</b> (std::string name=&quot;unknown virus&quot;)</td></tr>
 <tr class="separator:a833b1b798d9f1a1d8eb724b454502080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a548c563e063237d997f08863c7d0db24"><td class="memItemLeft" align="right" valign="top"><a id="a548c563e063237d997f08863c7d0db24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate</b> ()</td></tr>
-<tr class="separator:a548c563e063237d997f08863c7d0db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7334d2f610345ee20d41afcd410e9a"><td class="memItemLeft" align="right" valign="top"><a id="aea7334d2f610345ee20d41afcd410e9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:aea7334d2f610345ee20d41afcd410e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa14d649b04e30d262d91e96e87789690"><td class="memItemLeft" align="right" valign="top"><a id="aa14d649b04e30d262d91e96e87789690"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_mutation</b> (MutFun&lt; TSeq &gt; fun)</td></tr>
 <tr class="separator:aa14d649b04e30d262d91e96e87789690"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,9 +103,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_sequence</b> (TSe
 <tr class="memitem:a0683a4236d510c99452a44fb65352801"><td class="memItemLeft" align="right" valign="top"><a id="a0683a4236d510c99452a44fb65352801"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_agent</b> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *p, epiworld_fast_uint idx)</td></tr>
 <tr class="separator:a0683a4236d510c99452a44fb65352801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dbce3d4acea1a18e735f4089af709cd"><td class="memItemLeft" align="right" valign="top"><a id="a2dbce3d4acea1a18e735f4089af709cd"></a>
-<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>get_model</b> ()</td></tr>
-<tr class="separator:a2dbce3d4acea1a18e735f4089af709cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab23f9aac7fc542c0f926014205ef5d2c"><td class="memItemLeft" align="right" valign="top"><a id="ab23f9aac7fc542c0f926014205ef5d2c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_date</b> (int d)</td></tr>
 <tr class="separator:ab23f9aac7fc542c0f926014205ef5d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,18 +134,18 @@ std::vector&lt; epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" va
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>epiworld_double </dd></dl>
 </div></td></tr>
-<tr class="memitem:aad6614ef755a101d2bb52d48504041fd"><td class="memItemLeft" align="right" valign="top"><a id="aad6614ef755a101d2bb52d48504041fd"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_infecting</b> ()</td></tr>
-<tr class="separator:aad6614ef755a101d2bb52d48504041fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af922e7e240e4f6cc0c34808723aebdaf"><td class="memItemLeft" align="right" valign="top"><a id="af922e7e240e4f6cc0c34808723aebdaf"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_recovery</b> ()</td></tr>
-<tr class="separator:af922e7e240e4f6cc0c34808723aebdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24645f3c7ad9d5b5972e443403c3fb9c"><td class="memItemLeft" align="right" valign="top"><a id="a24645f3c7ad9d5b5972e443403c3fb9c"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_death</b> ()</td></tr>
-<tr class="separator:a24645f3c7ad9d5b5972e443403c3fb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cda3024c6046a411ffa7dc18695422d"><td class="memItemLeft" align="right" valign="top"><a id="a3cda3024c6046a411ffa7dc18695422d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>post_recovery</b> ()</td></tr>
-<tr class="separator:a3cda3024c6046a411ffa7dc18695422d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6146fe6627df6318880201a4ea34939c"><td class="memItemLeft" align="right" valign="top"><a id="a6146fe6627df6318880201a4ea34939c"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_infecting</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a6146fe6627df6318880201a4ea34939c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a92a0af99f4b0cde3f6dd68c0c047b"><td class="memItemLeft" align="right" valign="top"><a id="a53a92a0af99f4b0cde3f6dd68c0c047b"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_recovery</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a53a92a0af99f4b0cde3f6dd68c0c047b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4c5b1ac24132782e653b44a4daffac"><td class="memItemLeft" align="right" valign="top"><a id="acb4c5b1ac24132782e653b44a4daffac"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prob_death</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:acb4c5b1ac24132782e653b44a4daffac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d5785a8ef78e9c7056b8826bf53c45"><td class="memItemLeft" align="right" valign="top"><a id="a95d5785a8ef78e9c7056b8826bf53c45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>post_recovery</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a95d5785a8ef78e9c7056b8826bf53c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4005d252549d4ed123aea265e7c63da6"><td class="memItemLeft" align="right" valign="top"><a id="a4005d252549d4ed123aea265e7c63da6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_post_recovery</b> (PostRecoveryFun&lt; TSeq &gt; fun)</td></tr>
 <tr class="separator:a4005d252549d4ed123aea265e7c63da6"><td class="memSeparator" colspan="2">&#160;</td></tr>

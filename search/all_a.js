@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_28_29_38',['operator()',['../classepiworld_1_1_agent.html#a370107b9e18076bce06f7bffb32f2757',1,'epiworld::Agent::operator()()'],['../class_agent.html#a370107b9e18076bce06f7bffb32f2757',1,'Agent::operator()()']]]
+  ['persontools_39',['PersonTools',['../classepiworld_1_1_person_tools.html',1,'epiworld::PersonTools&lt; TSeq &gt;'],['../class_person_tools.html',1,'PersonTools&lt; TSeq &gt;']]],
+  ['progress_40',['Progress',['../classepiworld_1_1_progress.html',1,'epiworld::Progress'],['../class_progress.html',1,'Progress']]]
 ];

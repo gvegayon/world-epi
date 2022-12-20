@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vcount_140',['vcount',['../classepiworld_1_1_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1',1,'epiworld::AdjList::vcount()'],['../class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1',1,'AdjList::vcount()']]]
+  ['write_5fdata_141',['write_data',['../classepiworld_1_1_model.html#a02135cd989e6fdadaf71d3140fb4a2e8',1,'epiworld::Model::write_data()'],['../class_model.html#a02135cd989e6fdadaf71d3140fb4a2e8',1,'Model::write_data()']]]
 ];

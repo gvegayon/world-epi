@@ -13,7 +13,7 @@
     \subitem {epiworld::AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{39}
   \item {Agent$<$ TSeq $>$}, \hyperpage{41}
-    \subitem {operator()}, \hyperpage{43}
+    \subitem {get\_entities}, \hyperpage{43}
   \item {AgentsSample}
     \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{48}
     \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{49}
@@ -29,17 +29,17 @@
 
   \indexspace
 
-  \item {Entities$<$ TSeq $>$}, \hyperpage{55}
+  \item {Entities$<$ TSeq $>$}, \hyperpage{56}
   \item {Entities\_const$<$ TSeq $>$}, \hyperpage{57}
-  \item {Entity$<$ TSeq $>$}, \hyperpage{58}
+  \item {Entity$<$ TSeq $>$}, \hyperpage{59}
   \item {epiworld::Action$<$ TSeq $>$}, \hyperpage{37}
     \subitem {Action}, \hyperpage{37}
   \item {epiworld::AdjList}, \hyperpage{40}
     \subitem {AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{41}
   \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{44}
-    \subitem {operator()}, \hyperpage{46}
-  \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{48}
+    \subitem {get\_entities}, \hyperpage{46}
+  \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{49}
     \subitem {AgentsSample}, \hyperpage{49}
   \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{53}
     \subitem {record\_variant}, \hyperpage{54}
@@ -86,6 +86,12 @@
   \item {epiworld::Virus$<$ TSeq $>$}, \hyperpage{120}
   \item {epiworld::Viruses$<$ TSeq $>$}, \hyperpage{124}
   \item {epiworld::Viruses\_const$<$ TSeq $>$}, \hyperpage{125}
+
+  \indexspace
+
+  \item {get\_entities}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{43}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{46}
 
   \indexspace
 
@@ -140,12 +146,6 @@
   \indexspace
 
   \item {Network$<$ Nettype, Nodetype, Edgetype $>$}, \hyperpage{104}
-
-  \indexspace
-
-  \item {operator()}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{43}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{46}
 
   \indexspace
 

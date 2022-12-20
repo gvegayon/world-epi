@@ -113,9 +113,9 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                            </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                            ; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
@@ -133,7 +133,7 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">if</span> (which &lt; 0)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                p-&gt;add_virus(*m-&gt;array_virus_tmp[which]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                p-&gt;add_virus(*m-&gt;array_virus_tmp[which], m);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">return</span>; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            };</div>
@@ -202,9 +202,9 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                            </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                        <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                        m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                            v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                            v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                            ; </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    </div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
@@ -222,7 +222,7 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordflow">if</span> (which &lt; 0)</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                p-&gt;add_virus(*m-&gt;array_virus_tmp[which]); </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                p-&gt;add_virus(*m-&gt;array_virus_tmp[which], m); </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
@@ -269,9 +269,9 @@ $(function() {
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                            </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                            v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                            v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                            ; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
@@ -358,9 +358,9 @@ $(function() {
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                            </div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                        <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                        m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                            v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                            v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                            (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                            ; </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
@@ -416,9 +416,9 @@ $(function() {
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                </div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                (1.0 - p-&gt;get_susceptibility_reduction(v)) * </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                v-&gt;get_prob_infecting() * </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                (1.0 - neighbor-&gt;get_transmission_reduction(v)) </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                ; </div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        </div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
@@ -444,7 +444,7 @@ $(function() {
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
-<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:375</div></div>
+<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:496</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="anamespacesampler_html"><div class="ttname"><a href="namespacesampler.html">sampler</a></div><div class="ttdoc">Functions for sampling viruses.</div><div class="ttdef"><b>Definition:</b> agent-meat-virus-sampling.hpp:8</div></div>
