@@ -391,6 +391,42 @@ const std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="me
 <tr class="memitem:a280daf95b8f2f81f19297816ac319a82"><td class="memItemLeft" align="right" valign="top"><a id="a280daf95b8f2f81f19297816ac319a82"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print_status_codes</b> () const</td></tr>
 <tr class="separator:a280daf95b8f2f81f19297816ac319a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Setting and accessing parameters from the model</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
+<p>The <code>par()</code> function members are aliases for <code>get_param()</code>.</p>
+<p>In the case of the function <code>read_params</code>, users can pass a file listing parameters to be included in the model. Each line in the file should have the following structure:</p>
+<div class="fragment"><div class="line">[name of parameter 1]: [value in double]</div>
+<div class="line">[name of parameter 2]: [value in double]</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>The only condition for parameter names is that these do not include a colon.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_val</td><td></td></tr>
+    <tr><td class="paramname">pname</td><td>Name of the parameter to add or to fetch </td></tr>
+    <tr><td class="paramname">fn</td><td>Path to the file containing parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The current value of the parameter in the model. </dd></dl>
+</div></td></tr>
+<tr class="memitem:a412e4addbe3799787dccc43322aa2954"><td class="memItemLeft" align="right" valign="top"><a id="a412e4addbe3799787dccc43322aa2954"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>add_param</b> (epiworld_double initial_val, std::string pname)</td></tr>
+<tr class="separator:a412e4addbe3799787dccc43322aa2954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memItemLeft" align="right" valign="top"><a id="a5c77cd0dbf9bc4eadb94bec62ce9279d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>read_params</b> (std::string fn)</td></tr>
+<tr class="separator:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f232a9fff2c6610f82a7238200e9bde"><td class="memItemLeft" align="right" valign="top"><a id="a2f232a9fff2c6610f82a7238200e9bde"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (epiworld_fast_uint k)</td></tr>
+<tr class="separator:a2f232a9fff2c6610f82a7238200e9bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6350ebba9df34b279a8c36d318311b"><td class="memItemLeft" align="right" valign="top"><a id="a6d6350ebba9df34b279a8c36d318311b"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (std::string pname)</td></tr>
+<tr class="separator:a6d6350ebba9df34b279a8c36d318311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47236bb6be24276293e605a986aa68e"><td class="memItemLeft" align="right" valign="top"><a id="ac47236bb6be24276293e605a986aa68e"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (epiworld_fast_uint k)</td></tr>
+<tr class="separator:ac47236bb6be24276293e605a986aa68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5e71c658245167f80d44ca3859afc9"><td class="memItemLeft" align="right" valign="top"><a id="ada5e71c658245167f80d44ca3859afc9"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (std::string pname)</td></tr>
+<tr class="separator:ada5e71c658245167f80d44ca3859afc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Set the user data object</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -495,166 +531,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> 
 <tr class="memitem:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memItemLeft" align="right" valign="top"><a id="aba5a848bca7d5f4e72e703cbf0e91f25"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;other_model)</td></tr>
 <tr class="separator:aba5a848bca7d5f4e72e703cbf0e91f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Setting and accessing parameters from the model</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp61207d51bcc1b661804b11cec5dc845e"></a> <a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
-<p>The <code>par()</code> function members are aliases for <code>get_param()</code>.</p>
-<p>In the case of the function <code>read_params</code>, users can pass a file listing parameters to be included in the model. Each line in the file should have the following structure:</p>
-<div class="fragment"><div class="line">[name of parameter 1]: [value in double]</div>
-<div class="line">[name of parameter 2]: [value in double]</div>
-<div class="line">...</div>
-</div><!-- fragment --><p>The only condition for parameter names is that these do not include a colon.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">initial_val</td><td></td></tr>
-    <tr><td class="paramname">pname</td><td>Name of the parameter to add or to fetch </td></tr>
-    <tr><td class="paramname">fn</td><td>Path to the file containing parameters </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The current value of the parameter in the model. </dd></dl>
-</td></tr>
-<tr class="memitem:aa2f745ba76db76be973556fce73aced0"><td class="memItemLeft" align="right" valign="top"><a id="aa2f745ba76db76be973556fce73aced0"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p0</b></td></tr>
-<tr class="separator:aa2f745ba76db76be973556fce73aced0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aaf79fb68dcee391fa250a1c97c7ca0"><td class="memItemLeft" align="right" valign="top"><a id="a3aaf79fb68dcee391fa250a1c97c7ca0"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p1</b></td></tr>
-<tr class="separator:a3aaf79fb68dcee391fa250a1c97c7ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07303a360643a91d425eaabc0827d048"><td class="memItemLeft" align="right" valign="top"><a id="a07303a360643a91d425eaabc0827d048"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p2</b></td></tr>
-<tr class="separator:a07303a360643a91d425eaabc0827d048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6bb4cab4c96289d0229a8668cba58ab"><td class="memItemLeft" align="right" valign="top"><a id="ae6bb4cab4c96289d0229a8668cba58ab"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p3</b></td></tr>
-<tr class="separator:ae6bb4cab4c96289d0229a8668cba58ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c319d7b5addced5141da1136de4d3ec"><td class="memItemLeft" align="right" valign="top"><a id="a3c319d7b5addced5141da1136de4d3ec"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p4</b></td></tr>
-<tr class="separator:a3c319d7b5addced5141da1136de4d3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc7dfa806458716c3b39256fd87585c"><td class="memItemLeft" align="right" valign="top"><a id="a6cc7dfa806458716c3b39256fd87585c"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p5</b></td></tr>
-<tr class="separator:a6cc7dfa806458716c3b39256fd87585c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac446cd47d90b84f4de5335b66525fc5f"><td class="memItemLeft" align="right" valign="top"><a id="ac446cd47d90b84f4de5335b66525fc5f"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p6</b></td></tr>
-<tr class="separator:ac446cd47d90b84f4de5335b66525fc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba82634066ea7d2dc93c4f7d90be79c"><td class="memItemLeft" align="right" valign="top"><a id="a6ba82634066ea7d2dc93c4f7d90be79c"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p7</b></td></tr>
-<tr class="separator:a6ba82634066ea7d2dc93c4f7d90be79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ba65ecccdcd73888b0ac64154d7c04"><td class="memItemLeft" align="right" valign="top"><a id="a70ba65ecccdcd73888b0ac64154d7c04"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p8</b></td></tr>
-<tr class="separator:a70ba65ecccdcd73888b0ac64154d7c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac22587b4c247f13ca06e4588262366b7"><td class="memItemLeft" align="right" valign="top"><a id="ac22587b4c247f13ca06e4588262366b7"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p9</b></td></tr>
-<tr class="separator:ac22587b4c247f13ca06e4588262366b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9b8c444f26caf16d796e740e3ac6fb"><td class="memItemLeft" align="right" valign="top"><a id="a9f9b8c444f26caf16d796e740e3ac6fb"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p10</b></td></tr>
-<tr class="separator:a9f9b8c444f26caf16d796e740e3ac6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30e96e2c5855e24fb4d415f4e86d58a9"><td class="memItemLeft" align="right" valign="top"><a id="a30e96e2c5855e24fb4d415f4e86d58a9"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p11</b></td></tr>
-<tr class="separator:a30e96e2c5855e24fb4d415f4e86d58a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1920964e174db4495af92bb065632ff9"><td class="memItemLeft" align="right" valign="top"><a id="a1920964e174db4495af92bb065632ff9"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p12</b></td></tr>
-<tr class="separator:a1920964e174db4495af92bb065632ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec5f2bbcf3a4c85f09692854463dce2"><td class="memItemLeft" align="right" valign="top"><a id="a5ec5f2bbcf3a4c85f09692854463dce2"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p13</b></td></tr>
-<tr class="separator:a5ec5f2bbcf3a4c85f09692854463dce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18a356a81252d3d099ff491db6a89ea4"><td class="memItemLeft" align="right" valign="top"><a id="a18a356a81252d3d099ff491db6a89ea4"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p14</b></td></tr>
-<tr class="separator:a18a356a81252d3d099ff491db6a89ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a1040593a14fcfa8ab61a45de0c83e"><td class="memItemLeft" align="right" valign="top"><a id="a64a1040593a14fcfa8ab61a45de0c83e"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p15</b></td></tr>
-<tr class="separator:a64a1040593a14fcfa8ab61a45de0c83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40b6b413296cd2dde77b27ecad39fd3"><td class="memItemLeft" align="right" valign="top"><a id="ad40b6b413296cd2dde77b27ecad39fd3"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p16</b></td></tr>
-<tr class="separator:ad40b6b413296cd2dde77b27ecad39fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eaecf8e7722f7156554bb05d1852579"><td class="memItemLeft" align="right" valign="top"><a id="a8eaecf8e7722f7156554bb05d1852579"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p17</b></td></tr>
-<tr class="separator:a8eaecf8e7722f7156554bb05d1852579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ccad60c6e42500c49d0cf703d05b76"><td class="memItemLeft" align="right" valign="top"><a id="a37ccad60c6e42500c49d0cf703d05b76"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p18</b></td></tr>
-<tr class="separator:a37ccad60c6e42500c49d0cf703d05b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5fcc5246ae675d8b1c622128bb95403"><td class="memItemLeft" align="right" valign="top"><a id="ae5fcc5246ae675d8b1c622128bb95403"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p19</b></td></tr>
-<tr class="separator:ae5fcc5246ae675d8b1c622128bb95403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ab573e746531f718067d7b9ebed68e"><td class="memItemLeft" align="right" valign="top"><a id="a62ab573e746531f718067d7b9ebed68e"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p20</b></td></tr>
-<tr class="separator:a62ab573e746531f718067d7b9ebed68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae928ccb852aa3bc8983ab909837bbc8"><td class="memItemLeft" align="right" valign="top"><a id="aae928ccb852aa3bc8983ab909837bbc8"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p21</b></td></tr>
-<tr class="separator:aae928ccb852aa3bc8983ab909837bbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b5ddd071a2b2e53dec7f7ade42e040"><td class="memItemLeft" align="right" valign="top"><a id="a08b5ddd071a2b2e53dec7f7ade42e040"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p22</b></td></tr>
-<tr class="separator:a08b5ddd071a2b2e53dec7f7ade42e040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2824c8b4a210e00fe7723660c11680"><td class="memItemLeft" align="right" valign="top"><a id="adf2824c8b4a210e00fe7723660c11680"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p23</b></td></tr>
-<tr class="separator:adf2824c8b4a210e00fe7723660c11680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3a01e04f06c1c767ecccb50d86c61c"><td class="memItemLeft" align="right" valign="top"><a id="a4f3a01e04f06c1c767ecccb50d86c61c"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p24</b></td></tr>
-<tr class="separator:a4f3a01e04f06c1c767ecccb50d86c61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bf594e318eb39744c9c13bd273c1b98"><td class="memItemLeft" align="right" valign="top"><a id="a1bf594e318eb39744c9c13bd273c1b98"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p25</b></td></tr>
-<tr class="separator:a1bf594e318eb39744c9c13bd273c1b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae716038dfcc4f28c3aebdd51056a5b08"><td class="memItemLeft" align="right" valign="top"><a id="ae716038dfcc4f28c3aebdd51056a5b08"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p26</b></td></tr>
-<tr class="separator:ae716038dfcc4f28c3aebdd51056a5b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3aa465eb382a5eb25f40bdab636c4fc"><td class="memItemLeft" align="right" valign="top"><a id="ac3aa465eb382a5eb25f40bdab636c4fc"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p27</b></td></tr>
-<tr class="separator:ac3aa465eb382a5eb25f40bdab636c4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a333245ef765a60f3c29c477a6144ecf4"><td class="memItemLeft" align="right" valign="top"><a id="a333245ef765a60f3c29c477a6144ecf4"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p28</b></td></tr>
-<tr class="separator:a333245ef765a60f3c29c477a6144ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a3b37a8870042dd284fa0b9c59a092"><td class="memItemLeft" align="right" valign="top"><a id="af5a3b37a8870042dd284fa0b9c59a092"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p29</b></td></tr>
-<tr class="separator:af5a3b37a8870042dd284fa0b9c59a092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19072fa40b4e15f42e1f27d57999afae"><td class="memItemLeft" align="right" valign="top"><a id="a19072fa40b4e15f42e1f27d57999afae"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p30</b></td></tr>
-<tr class="separator:a19072fa40b4e15f42e1f27d57999afae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff62498ffc141543860ff2b2992af984"><td class="memItemLeft" align="right" valign="top"><a id="aff62498ffc141543860ff2b2992af984"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p31</b></td></tr>
-<tr class="separator:aff62498ffc141543860ff2b2992af984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65767341d77511b55c507ad4221db543"><td class="memItemLeft" align="right" valign="top"><a id="a65767341d77511b55c507ad4221db543"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p32</b></td></tr>
-<tr class="separator:a65767341d77511b55c507ad4221db543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084d421912c8baa6a2a1d04ab09f8b8a"><td class="memItemLeft" align="right" valign="top"><a id="a084d421912c8baa6a2a1d04ab09f8b8a"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p33</b></td></tr>
-<tr class="separator:a084d421912c8baa6a2a1d04ab09f8b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83877127b96be1175f849f43cb8512d8"><td class="memItemLeft" align="right" valign="top"><a id="a83877127b96be1175f849f43cb8512d8"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p34</b></td></tr>
-<tr class="separator:a83877127b96be1175f849f43cb8512d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12fe04d3ae05ca32135d10c58190cd1e"><td class="memItemLeft" align="right" valign="top"><a id="a12fe04d3ae05ca32135d10c58190cd1e"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p35</b></td></tr>
-<tr class="separator:a12fe04d3ae05ca32135d10c58190cd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e7dffafe56edcc8cc7cc48778f3605c"><td class="memItemLeft" align="right" valign="top"><a id="a8e7dffafe56edcc8cc7cc48778f3605c"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p36</b></td></tr>
-<tr class="separator:a8e7dffafe56edcc8cc7cc48778f3605c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a779eda62b0b080273525dce8150b3770"><td class="memItemLeft" align="right" valign="top"><a id="a779eda62b0b080273525dce8150b3770"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p37</b></td></tr>
-<tr class="separator:a779eda62b0b080273525dce8150b3770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc0da8110d420278a84b906c9fbcddf6"><td class="memItemLeft" align="right" valign="top"><a id="acc0da8110d420278a84b906c9fbcddf6"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p38</b></td></tr>
-<tr class="separator:acc0da8110d420278a84b906c9fbcddf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256cd64788b798e26e70470084978148"><td class="memItemLeft" align="right" valign="top"><a id="a256cd64788b798e26e70470084978148"></a>
-epiworld_double *&#160;</td><td class="memItemRight" valign="bottom"><b>p39</b></td></tr>
-<tr class="separator:a256cd64788b798e26e70470084978148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812bde42aac3e3af8a4633a98d59fe2b"><td class="memItemLeft" align="right" valign="top"><a id="a812bde42aac3e3af8a4633a98d59fe2b"></a>
-epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>npar_used</b> = 0u</td></tr>
-<tr class="separator:a812bde42aac3e3af8a4633a98d59fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a412e4addbe3799787dccc43322aa2954"><td class="memItemLeft" align="right" valign="top"><a id="a412e4addbe3799787dccc43322aa2954"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>add_param</b> (epiworld_double initial_val, std::string pname)</td></tr>
-<tr class="separator:a412e4addbe3799787dccc43322aa2954"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memItemLeft" align="right" valign="top"><a id="a5c77cd0dbf9bc4eadb94bec62ce9279d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>read_params</b> (std::string fn)</td></tr>
-<tr class="separator:a5c77cd0dbf9bc4eadb94bec62ce9279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f232a9fff2c6610f82a7238200e9bde"><td class="memItemLeft" align="right" valign="top"><a id="a2f232a9fff2c6610f82a7238200e9bde"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (epiworld_fast_uint k)</td></tr>
-<tr class="separator:a2f232a9fff2c6610f82a7238200e9bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d6350ebba9df34b279a8c36d318311b"><td class="memItemLeft" align="right" valign="top"><a id="a6d6350ebba9df34b279a8c36d318311b"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param</b> (std::string pname)</td></tr>
-<tr class="separator:a6d6350ebba9df34b279a8c36d318311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac47236bb6be24276293e605a986aa68e"><td class="memItemLeft" align="right" valign="top"><a id="ac47236bb6be24276293e605a986aa68e"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (epiworld_fast_uint k)</td></tr>
-<tr class="separator:ac47236bb6be24276293e605a986aa68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5e71c658245167f80d44ca3859afc9"><td class="memItemLeft" align="right" valign="top"><a id="ada5e71c658245167f80d44ca3859afc9"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (std::string pname)</td></tr>
-<tr class="separator:ada5e71c658245167f80d44ca3859afc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename TSeq&gt;<br />

@@ -342,6 +342,57 @@ const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+status
 void {\bfseries print\+\_\+status\+\_\+codes} () const
 \end{DoxyCompactItemize}
 \end{Indent}
+\begin{Indent}\textbf{ Setting and accessing parameters from the model}\par
+{\em \mbox{\hyperlink{classepiworld_1_1_tools}{Tools}} can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std\+::map$<$$>$ of parameters in the model. Using the {\ttfamily epiworld\+\_\+fast\+\_\+uint} method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the {\ttfamily std\+::string} method involves searching the parameter directly in the std\+::map$<$$>$ member of the model (so it is not recommended.)
+
+The {\ttfamily par()} function members are aliases for {\ttfamily get\+\_\+param()}.
+
+In the case of the function {\ttfamily read\+\_\+params}, users can pass a file listing parameters to be included in the model. Each line in the file should have the following structure\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[name of parameter 1]: [value in double]}
+\DoxyCodeLine{[name of parameter 2]: [value in double]}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+The only condition for parameter names is that these do not include a colon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+val} & \\
+\hline
+{\em pname} & Name of the parameter to add or to fetch \\
+\hline
+{\em fn} & Path to the file containing parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current value of the parameter in the model. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}\label{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}} 
+epiworld\+\_\+double {\bfseries add\+\_\+param} (epiworld\+\_\+double initial\+\_\+val, std\+::string pname)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5c77cd0dbf9bc4eadb94bec62ce9279d}\label{classepiworld_1_1_model_a5c77cd0dbf9bc4eadb94bec62ce9279d}} 
+void {\bfseries read\+\_\+params} (std\+::string fn)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a444710ec5e5854821bd9a3224616d934}\label{classepiworld_1_1_model_a444710ec5e5854821bd9a3224616d934}} 
+epiworld\+\_\+double {\bfseries get\+\_\+param} (epiworld\+\_\+fast\+\_\+uint k)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a6d6350ebba9df34b279a8c36d318311b}\label{classepiworld_1_1_model_a6d6350ebba9df34b279a8c36d318311b}} 
+epiworld\+\_\+double {\bfseries get\+\_\+param} (std\+::string pname)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_af4439163aee96b4817c90d1980d58dfb}\label{classepiworld_1_1_model_af4439163aee96b4817c90d1980d58dfb}} 
+epiworld\+\_\+double {\bfseries par} (epiworld\+\_\+fast\+\_\+uint k)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ada5e71c658245167f80d44ca3859afc9}\label{classepiworld_1_1_model_ada5e71c658245167f80d44ca3859afc9}} 
+epiworld\+\_\+double {\bfseries par} (std\+::string pname)
+\end{DoxyCompactItemize}
+\end{Indent}
 \begin{Indent}\textbf{ Set the user data object}\par
 {\em 
 \begin{DoxyParams}{Parameters}
@@ -445,180 +496,6 @@ void {\bfseries clone\+\_\+population} (std\+::vector$<$ \mbox{\hyperlink{classe
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_aba5a848bca7d5f4e72e703cbf0e91f25}\label{classepiworld_1_1_model_aba5a848bca7d5f4e72e703cbf0e91f25}} 
 void {\bfseries clone\+\_\+population} (const \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \&other\+\_\+model)
-\end{DoxyCompactItemize}
-\doxysubsection*{Setting and accessing parameters from the model}
-\label{_amgrp61207d51bcc1b661804b11cec5dc845e}%
- \mbox{\hyperlink{classepiworld_1_1_tools}{Tools}} can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std\+::map$<$$>$ of parameters in the model. Using the {\ttfamily epiworld\+\_\+fast\+\_\+uint} method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the {\ttfamily std\+::string} method involves searching the parameter directly in the std\+::map$<$$>$ member of the model (so it is not recommended.)
-
-The {\ttfamily par()} function members are aliases for {\ttfamily get\+\_\+param()}.
-
-In the case of the function {\ttfamily read\+\_\+params}, users can pass a file listing parameters to be included in the model. Each line in the file should have the following structure\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{[name of parameter 1]: [value in double]}
-\DoxyCodeLine{[name of parameter 2]: [value in double]}
-\DoxyCodeLine{...}
-
-\end{DoxyCode}
-
-
-The only condition for parameter names is that these do not include a colon.
-
-
-\begin{DoxyParams}{Parameters}
-{\em initial\+\_\+val} & \\
-\hline
-{\em pname} & Name of the parameter to add or to fetch \\
-\hline
-{\em fn} & Path to the file containing parameters \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The current value of the parameter in the model. 
-\end{DoxyReturn}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a563f9bb80b7f90d86a0eeb7e11055c8f}\label{classepiworld_1_1_model_a563f9bb80b7f90d86a0eeb7e11055c8f}} 
-epiworld\+\_\+double $\ast$ {\bfseries p0}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac997538ba98e258e54ccfbefc3c41548}\label{classepiworld_1_1_model_ac997538ba98e258e54ccfbefc3c41548}} 
-epiworld\+\_\+double $\ast$ {\bfseries p1}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9819370790d938b71d855b2fa784b279}\label{classepiworld_1_1_model_a9819370790d938b71d855b2fa784b279}} 
-epiworld\+\_\+double $\ast$ {\bfseries p2}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a879a666061f32d6e5f8b9662239be310}\label{classepiworld_1_1_model_a879a666061f32d6e5f8b9662239be310}} 
-epiworld\+\_\+double $\ast$ {\bfseries p3}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a08b1df7ead404b389627b98dcdd3b059}\label{classepiworld_1_1_model_a08b1df7ead404b389627b98dcdd3b059}} 
-epiworld\+\_\+double $\ast$ {\bfseries p4}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a40ff8973ebe0fa1d91626e67b757c79e}\label{classepiworld_1_1_model_a40ff8973ebe0fa1d91626e67b757c79e}} 
-epiworld\+\_\+double $\ast$ {\bfseries p5}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a09273817b80c1704e4c50b3fc041f3bd}\label{classepiworld_1_1_model_a09273817b80c1704e4c50b3fc041f3bd}} 
-epiworld\+\_\+double $\ast$ {\bfseries p6}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4e3da70bcf1b342bce6ba7b4f1289dc9}\label{classepiworld_1_1_model_a4e3da70bcf1b342bce6ba7b4f1289dc9}} 
-epiworld\+\_\+double $\ast$ {\bfseries p7}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aef5212e40231f12f219f89e4f55a4d56}\label{classepiworld_1_1_model_aef5212e40231f12f219f89e4f55a4d56}} 
-epiworld\+\_\+double $\ast$ {\bfseries p8}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac83602c1feaa564bae8359bfc6575afb}\label{classepiworld_1_1_model_ac83602c1feaa564bae8359bfc6575afb}} 
-epiworld\+\_\+double $\ast$ {\bfseries p9}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aec8441d75f2e962b445b4431f339dc95}\label{classepiworld_1_1_model_aec8441d75f2e962b445b4431f339dc95}} 
-epiworld\+\_\+double $\ast$ {\bfseries p10}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1c5f9a32bb44c68041639d3ebd9da546}\label{classepiworld_1_1_model_a1c5f9a32bb44c68041639d3ebd9da546}} 
-epiworld\+\_\+double $\ast$ {\bfseries p11}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5ed46254b31d8b15ffefbde67aca65f2}\label{classepiworld_1_1_model_a5ed46254b31d8b15ffefbde67aca65f2}} 
-epiworld\+\_\+double $\ast$ {\bfseries p12}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a54c8687e102684a9c59cf605f1bd03ea}\label{classepiworld_1_1_model_a54c8687e102684a9c59cf605f1bd03ea}} 
-epiworld\+\_\+double $\ast$ {\bfseries p13}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a892bee02fe465790f45cf2b124d15310}\label{classepiworld_1_1_model_a892bee02fe465790f45cf2b124d15310}} 
-epiworld\+\_\+double $\ast$ {\bfseries p14}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a8b31404910aa56872f255afd8022c57b}\label{classepiworld_1_1_model_a8b31404910aa56872f255afd8022c57b}} 
-epiworld\+\_\+double $\ast$ {\bfseries p15}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a27d5cda8881467fb532116df1bc77969}\label{classepiworld_1_1_model_a27d5cda8881467fb532116df1bc77969}} 
-epiworld\+\_\+double $\ast$ {\bfseries p16}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a25cc3bfd07b83bbbc1664b211bfcb349}\label{classepiworld_1_1_model_a25cc3bfd07b83bbbc1664b211bfcb349}} 
-epiworld\+\_\+double $\ast$ {\bfseries p17}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac461c40cd12bfbff31e09d7b476bbe8d}\label{classepiworld_1_1_model_ac461c40cd12bfbff31e09d7b476bbe8d}} 
-epiworld\+\_\+double $\ast$ {\bfseries p18}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0cd0351a09698531c884dad8a2b129d4}\label{classepiworld_1_1_model_a0cd0351a09698531c884dad8a2b129d4}} 
-epiworld\+\_\+double $\ast$ {\bfseries p19}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae62889369dfeda611beca0e7ee524e08}\label{classepiworld_1_1_model_ae62889369dfeda611beca0e7ee524e08}} 
-epiworld\+\_\+double $\ast$ {\bfseries p20}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae3ef4ee549cf5a0f44ef413c11b5258c}\label{classepiworld_1_1_model_ae3ef4ee549cf5a0f44ef413c11b5258c}} 
-epiworld\+\_\+double $\ast$ {\bfseries p21}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5ed6df8f12eb6e982f55ab1920270aee}\label{classepiworld_1_1_model_a5ed6df8f12eb6e982f55ab1920270aee}} 
-epiworld\+\_\+double $\ast$ {\bfseries p22}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0144bfa93d1f031955da2ef4c3561d2d}\label{classepiworld_1_1_model_a0144bfa93d1f031955da2ef4c3561d2d}} 
-epiworld\+\_\+double $\ast$ {\bfseries p23}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aa9ae53d4a7f7c4a4ad4385f6bdbac09c}\label{classepiworld_1_1_model_aa9ae53d4a7f7c4a4ad4385f6bdbac09c}} 
-epiworld\+\_\+double $\ast$ {\bfseries p24}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a077345884e0698935366f40fcd5118ef}\label{classepiworld_1_1_model_a077345884e0698935366f40fcd5118ef}} 
-epiworld\+\_\+double $\ast$ {\bfseries p25}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a23ff4f0c1405cd51b99d169454e167fa}\label{classepiworld_1_1_model_a23ff4f0c1405cd51b99d169454e167fa}} 
-epiworld\+\_\+double $\ast$ {\bfseries p26}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aaafe10b2b264787432a44432e8af19d5}\label{classepiworld_1_1_model_aaafe10b2b264787432a44432e8af19d5}} 
-epiworld\+\_\+double $\ast$ {\bfseries p27}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae4d947e2fb01ca385a3f856f445c5323}\label{classepiworld_1_1_model_ae4d947e2fb01ca385a3f856f445c5323}} 
-epiworld\+\_\+double $\ast$ {\bfseries p28}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a846a3241c0bb561b16d4a78917d13d66}\label{classepiworld_1_1_model_a846a3241c0bb561b16d4a78917d13d66}} 
-epiworld\+\_\+double $\ast$ {\bfseries p29}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0b25b84862c8b9e3d34d1506c3902c81}\label{classepiworld_1_1_model_a0b25b84862c8b9e3d34d1506c3902c81}} 
-epiworld\+\_\+double $\ast$ {\bfseries p30}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a26005a1d15282bf6d7b54266d7cb0de1}\label{classepiworld_1_1_model_a26005a1d15282bf6d7b54266d7cb0de1}} 
-epiworld\+\_\+double $\ast$ {\bfseries p31}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5dd7b553268ff46432ba64a6a743d306}\label{classepiworld_1_1_model_a5dd7b553268ff46432ba64a6a743d306}} 
-epiworld\+\_\+double $\ast$ {\bfseries p32}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6832e6c9f1d7697d6dc0d9741dbc154e}\label{classepiworld_1_1_model_a6832e6c9f1d7697d6dc0d9741dbc154e}} 
-epiworld\+\_\+double $\ast$ {\bfseries p33}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6843cc87ce8704aca858595054575593}\label{classepiworld_1_1_model_a6843cc87ce8704aca858595054575593}} 
-epiworld\+\_\+double $\ast$ {\bfseries p34}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_adb84e07118161483d6535a9d0b91cb0d}\label{classepiworld_1_1_model_adb84e07118161483d6535a9d0b91cb0d}} 
-epiworld\+\_\+double $\ast$ {\bfseries p35}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9a42328da23eaa75a6304203af06b1d8}\label{classepiworld_1_1_model_a9a42328da23eaa75a6304203af06b1d8}} 
-epiworld\+\_\+double $\ast$ {\bfseries p36}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a4b66e1dbe47f51f2c2fc89981802a832}\label{classepiworld_1_1_model_a4b66e1dbe47f51f2c2fc89981802a832}} 
-epiworld\+\_\+double $\ast$ {\bfseries p37}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a41292b3fc36a306aa811066e793ef31d}\label{classepiworld_1_1_model_a41292b3fc36a306aa811066e793ef31d}} 
-epiworld\+\_\+double $\ast$ {\bfseries p38}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a09bbc11d779a33f71aeaf66b532510ed}\label{classepiworld_1_1_model_a09bbc11d779a33f71aeaf66b532510ed}} 
-epiworld\+\_\+double $\ast$ {\bfseries p39}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a2a6826c26a536bbde758745594e3c6e8}\label{classepiworld_1_1_model_a2a6826c26a536bbde758745594e3c6e8}} 
-epiworld\+\_\+fast\+\_\+uint {\bfseries npar\+\_\+used} = 0u
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}\label{classepiworld_1_1_model_a412e4addbe3799787dccc43322aa2954}} 
-epiworld\+\_\+double {\bfseries add\+\_\+param} (epiworld\+\_\+double initial\+\_\+val, std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a5c77cd0dbf9bc4eadb94bec62ce9279d}\label{classepiworld_1_1_model_a5c77cd0dbf9bc4eadb94bec62ce9279d}} 
-void {\bfseries read\+\_\+params} (std\+::string fn)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a444710ec5e5854821bd9a3224616d934}\label{classepiworld_1_1_model_a444710ec5e5854821bd9a3224616d934}} 
-epiworld\+\_\+double {\bfseries get\+\_\+param} (epiworld\+\_\+fast\+\_\+uint k)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6d6350ebba9df34b279a8c36d318311b}\label{classepiworld_1_1_model_a6d6350ebba9df34b279a8c36d318311b}} 
-epiworld\+\_\+double {\bfseries get\+\_\+param} (std\+::string pname)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_af4439163aee96b4817c90d1980d58dfb}\label{classepiworld_1_1_model_af4439163aee96b4817c90d1980d58dfb}} 
-epiworld\+\_\+double {\bfseries par} (epiworld\+\_\+fast\+\_\+uint k)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ada5e71c658245167f80d44ca3859afc9}\label{classepiworld_1_1_model_ada5e71c658245167f80d44ca3859afc9}} 
-epiworld\+\_\+double {\bfseries par} (std\+::string pname)
 \end{DoxyCompactItemize}
 
 
