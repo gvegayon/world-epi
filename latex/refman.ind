@@ -14,7 +14,8 @@
     \subitem {read\_edgelist}, \hyperpage{39}
   \item {Agent$<$ TSeq $>$}, \hyperpage{41}
     \subitem {default\_rm\_entity}, \hyperpage{44}
-    \subitem {get\_entities}, \hyperpage{43}
+    \subitem {get\_entities}, \hyperpage{44}
+    \subitem {swap\_neighbors}, \hyperpage{44}
   \item {AgentsSample}
     \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
     \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{50}
@@ -24,13 +25,13 @@
   \indexspace
 
   \item {DataBase$<$ TSeq $>$}, \hyperpage{51}
-    \subitem {record\_variant}, \hyperpage{52}
+    \subitem {record\_variant}, \hyperpage{53}
     \subitem {reproductive\_number}, \hyperpage{53}
     \subitem {transition\_probability}, \hyperpage{53}
   \item {default\_rm\_entity}
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
     \subitem {Entity$<$ TSeq $>$}, \hyperpage{60}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{47}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
     \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{61}
 
   \indexspace
@@ -44,8 +45,8 @@
   \item {epiworld::AdjList}, \hyperpage{40}
     \subitem {AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{41}
-  \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{44}
-    \subitem {default\_rm\_entity}, \hyperpage{47}
+  \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{45}
+    \subitem {default\_rm\_entity}, \hyperpage{48}
     \subitem {get\_entities}, \hyperpage{47}
   \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{49}
     \subitem {AgentsSample}, \hyperpage{50}
@@ -99,7 +100,7 @@
   \indexspace
 
   \item {get\_entities}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{43}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
     \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{47}
 
   \indexspace
@@ -173,7 +174,7 @@
     \subitem {AdjList}, \hyperpage{39}
     \subitem {epiworld::AdjList}, \hyperpage{41}
   \item {record\_variant}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{52}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{55}
   \item {reproductive\_number}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
@@ -201,6 +202,8 @@
   \item {set\_name}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{72}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{80}
+  \item {swap\_neighbors}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
 
   \indexspace
 

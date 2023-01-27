@@ -121,9 +121,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate_variant</b> ()
 <tr class="memitem:a95fba765bb6e9e693c10fd77ecd4aba3"><td class="memItemLeft" align="right" valign="top"><a id="a95fba765bb6e9e693c10fd77ecd4aba3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_neighbor</b> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;p, bool check_source=true, bool check_target=true)</td></tr>
 <tr class="separator:a95fba765bb6e9e693c10fd77ecd4aba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938c535d35ff860eb59505c36a919df0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a938c535d35ff860eb59505c36a919df0">swap_neighbors</a> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;other, size_t n_this, size_t n_other)</td></tr>
+<tr class="memdesc:a938c535d35ff860eb59505c36a919df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps neighbors between the current agent and agent <code>other</code>  <a href="class_agent.html#a938c535d35ff860eb59505c36a919df0">More...</a><br /></td></tr>
+<tr class="separator:a938c535d35ff860eb59505c36a919df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38ff66f215b395896f1eeef8f6c78236"><td class="memItemLeft" align="right" valign="top"><a id="a38ff66f215b395896f1eeef8f6c78236"></a>
 std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbors</b> ()</td></tr>
 <tr class="separator:a38ff66f215b395896f1eeef8f6c78236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad319e9853ebc8c2c20f0b31768745f7f"><td class="memItemLeft" align="right" valign="top"><a id="ad319e9853ebc8c2c20f0b31768745f7f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_neighbors</b> () const</td></tr>
+<tr class="separator:ad319e9853ebc8c2c20f0b31768745f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a636caafd143f5acbcb5d4f726b89d369"><td class="memItemLeft" align="right" valign="top"><a id="a636caafd143f5acbcb5d4f726b89d369"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>change_status</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model, epiworld_fast_uint new_status, epiworld_fast_int queue=0)</td></tr>
 <tr class="separator:a636caafd143f5acbcb5d4f726b89d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,6 +338,60 @@ template&lt;typename TSeq &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a938c535d35ff860eb59505c36a919df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938c535d35ff860eb59505c36a919df0">&#9670;&nbsp;</a></span>swap_neighbors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt;::swap_neighbors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n_other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps neighbors between the current agent and agent <code>other</code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
+    <tr><td class="paramname">n_this</td><td></td></tr>
+    <tr><td class="paramname">n_other</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

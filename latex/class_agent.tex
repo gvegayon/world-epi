@@ -54,8 +54,13 @@ void {\bfseries mutate\+\_\+variant} ()
 \mbox{\Hypertarget{class_agent_a95fba765bb6e9e693c10fd77ecd4aba3}\label{class_agent_a95fba765bb6e9e693c10fd77ecd4aba3}} 
 void {\bfseries add\+\_\+neighbor} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&p, bool check\+\_\+source=true, bool check\+\_\+target=true)
 \item 
+void \mbox{\hyperlink{class_agent_a938c535d35ff860eb59505c36a919df0}{swap\+\_\+neighbors}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&other, size\+\_\+t n\+\_\+this, size\+\_\+t n\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Swaps neighbors between the current agent and agent {\ttfamily other} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_agent_a38ff66f215b395896f1eeef8f6c78236}\label{class_agent_a38ff66f215b395896f1eeef8f6c78236}} 
 std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries get\+\_\+neighbors} ()
+\item 
+\mbox{\Hypertarget{class_agent_ad319e9853ebc8c2c20f0b31768745f7f}\label{class_agent_ad319e9853ebc8c2c20f0b31768745f7f}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+neighbors} () const
 \item 
 \mbox{\Hypertarget{class_agent_a636caafd143f5acbcb5d4f726b89d369}\label{class_agent_a636caafd143f5acbcb5d4f726b89d369}} 
 void {\bfseries change\+\_\+status} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+uint new\+\_\+status, epiworld\+\_\+fast\+\_\+int queue=0)
@@ -264,6 +269,26 @@ The {\ttfamily operator\mbox{[}\mbox{]}} method is with no boundary check, where
 \begin{DoxyReturn}{Returns}
 double\& 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_agent_a938c535d35ff860eb59505c36a919df0}\label{class_agent_a938c535d35ff860eb59505c36a919df0}} 
+\index{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!swap\_neighbors@{swap\_neighbors}}
+\index{swap\_neighbors@{swap\_neighbors}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{swap\_neighbors()}{swap\_neighbors()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$\+::swap\+\_\+neighbors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&}]{other,  }\item[{size\+\_\+t}]{n\+\_\+this,  }\item[{size\+\_\+t}]{n\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swaps neighbors between the current agent and agent {\ttfamily other} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+{\em n\+\_\+this} & \\
+\hline
+{\em n\+\_\+other} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Friends And Related Function Documentation}
