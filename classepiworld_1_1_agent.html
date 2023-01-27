@@ -122,12 +122,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_tools</b> () 
 <tr class="memitem:afadd71ad266ecf1359918605e92da188"><td class="memItemLeft" align="right" valign="top"><a id="afadd71ad266ecf1359918605e92da188"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate_variant</b> ()</td></tr>
 <tr class="separator:afadd71ad266ecf1359918605e92da188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa20c7be29a7e87d9ab3698769f1650da"><td class="memItemLeft" align="right" valign="top"><a id="aa20c7be29a7e87d9ab3698769f1650da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_neighbor</b> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *p, bool check_source=true, bool check_target=true)</td></tr>
-<tr class="separator:aa20c7be29a7e87d9ab3698769f1650da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc849c6339cbb60c1f926073376c130"><td class="memItemLeft" align="right" valign="top"><a id="acbc849c6339cbb60c1f926073376c130"></a>
-std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbors</b> ()</td></tr>
-<tr class="separator:acbc849c6339cbb60c1f926073376c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fba765bb6e9e693c10fd77ecd4aba3"><td class="memItemLeft" align="right" valign="top"><a id="a95fba765bb6e9e693c10fd77ecd4aba3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_neighbor</b> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; &amp;p, bool check_source=true, bool check_target=true)</td></tr>
+<tr class="separator:a95fba765bb6e9e693c10fd77ecd4aba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ff66f215b395896f1eeef8f6c78236"><td class="memItemLeft" align="right" valign="top"><a id="a38ff66f215b395896f1eeef8f6c78236"></a>
+std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbors</b> ()</td></tr>
+<tr class="separator:a38ff66f215b395896f1eeef8f6c78236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a636caafd143f5acbcb5d4f726b89d369"><td class="memItemLeft" align="right" valign="top"><a id="a636caafd143f5acbcb5d4f726b89d369"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>change_status</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model, epiworld_fast_uint new_status, epiworld_fast_int queue=0)</td></tr>
 <tr class="separator:a636caafd143f5acbcb5d4f726b89d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +158,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (<a class="
 <tr class="memitem:a365a3cf04b993495a16ca2d7c9e4834b"><td class="memItemLeft" align="right" valign="top"><a id="a365a3cf04b993495a16ca2d7c9e4834b"></a>
 const <a class="el" href="classepiworld_1_1_entities__const.html">Entities_const</a>&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entities</b> () const</td></tr>
 <tr class="separator:a365a3cf04b993495a16ca2d7c9e4834b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd03e806601fd87dd837a9166efa915"><td class="memItemLeft" align="right" valign="top"><a id="abdd03e806601fd87dd837a9166efa915"></a>
+const <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entity</b> (size_t i) const</td></tr>
+<tr class="separator:abdd03e806601fd87dd837a9166efa915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228668db7884fae8e507ed8fec548c73"><td class="memItemLeft" align="right" valign="top"><a id="a228668db7884fae8e507ed8fec548c73"></a>
+<a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entity</b> (size_t i)</td></tr>
+<tr class="separator:a228668db7884fae8e507ed8fec548c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5247fae534e29a36f747654ad443fa93"><td class="memItemLeft" align="right" valign="top"><a id="a5247fae534e29a36f747654ad443fa93"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_entities</b> () const</td></tr>
+<tr class="separator:a5247fae534e29a36f747654ad443fa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Add/Remove Virus/Tool</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Any of these is ultimately reflected at the end of the iteration.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -280,8 +289,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>default_rm_virus</b> 
 <tr class="memitem:a9d273869be3324c1e3de0ff81bf8c112"><td class="memItemLeft" align="right" valign="top"><a id="a9d273869be3324c1e3de0ff81bf8c112"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>default_rm_tool</b> (<a class="el" href="structepiworld_1_1_action.html">Action</a>&lt; TSeq &gt; &amp;a, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m)</td></tr>
 <tr class="separator:a9d273869be3324c1e3de0ff81bf8c112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ec73f896617a4997dbd2311a11bc835"><td class="memItemLeft" align="right" valign="top"><a id="a7ec73f896617a4997dbd2311a11bc835"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>default_rm_entity</b> (<a class="el" href="structepiworld_1_1_action.html">Action</a>&lt; TSeq &gt; &amp;a, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m)</td></tr>
+<tr class="memitem:a7ec73f896617a4997dbd2311a11bc835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_agent.html#a7ec73f896617a4997dbd2311a11bc835">default_rm_entity</a> (<a class="el" href="structepiworld_1_1_action.html">Action</a>&lt; TSeq &gt; &amp;a, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m)</td></tr>
 <tr class="separator:a7ec73f896617a4997dbd2311a11bc835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -328,6 +336,47 @@ template&lt;typename TSeq &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double&amp; </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a7ec73f896617a4997dbd2311a11bc835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec73f896617a4997dbd2311a11bc835">&#9670;&nbsp;</a></span>default_rm_entity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void default_rm_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structepiworld_1_1_action.html">Action</a>&lt; TSeq &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt; Last entity of the agent</p>
+<p>&lt; Last agent of the entity</p>
 
 </div>
 </div>

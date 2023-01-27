@@ -83,7 +83,7 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// Initializing the counts</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    today_total.resize(m.nstatus);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::fill(today_total.begin(), today_total.end(), 0);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : *m.get_agents())</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : m.get_agents())</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ++today_total[p.get_status()];</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    transition_matrix.resize(m.nstatus * m.nstatus);</div>
