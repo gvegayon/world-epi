@@ -242,38 +242,34 @@ $(function() {
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">size_t</span> get_n_variants() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">size_t</span> get_n_tools() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">set_user_data</a>(std::vector&lt; std::string &gt; names);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> add_user_data(std::vector&lt; epiworld_double &gt; x);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> add_user_data(epiworld_fast_uint j, epiworld_double x);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="class_user_data.html">UserData&lt;TSeq&gt;</a> &amp; get_user_data();</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    MapVec_type&lt;int,int&gt; <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a>(</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        std::string fn</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    std::vector&lt; epiworld_double &gt; <a class="code" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">transition_probability</a>(</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordtype">bool</span> print = <span class="keyword">true</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">set_user_data</a>(std::vector&lt; std::string &gt; names);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">void</span> add_user_data(std::vector&lt; epiworld_double &gt; x);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> add_user_data(epiworld_fast_uint j, epiworld_double x);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="class_user_data.html">UserData&lt;TSeq&gt;</a> &amp; get_user_data();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    MapVec_type&lt;int,int&gt; <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a>(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        std::string fn</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    std::vector&lt; epiworld_double &gt; <a class="code" href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">transition_probability</a>(</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">bool</span> print = <span class="keyword">true</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;};</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:31</div></div>
-<div class="ttc" id="aclass_data_base_html_a3391ab73b07892c8b66160e61dd294fd"><div class="ttname"><a href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase::transition_probability</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; transition_probability(bool print=true) const</div><div class="ttdoc">Calculates the transition probabilities.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:901</div></div>
-<div class="ttc" id="aclass_data_base_html_a5d43d9fba8e46bee17f529e0ebce670e"><div class="ttname"><a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase::reproductive_number</a></div><div class="ttdeci">MapVec_type&lt; int, int &gt; reproductive_number() const</div><div class="ttdoc">Computes the reproductive number of each case.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:833</div></div>
-<div class="ttc" id="aclass_data_base_html_a833cf232df236cf097ccbaf537ff32ab"><div class="ttname"><a href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase::record_variant</a></div><div class="ttdeci">void record_variant(Virus&lt; TSeq &gt; &amp;v)</div><div class="ttdoc">Registering a new variant.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:185</div></div>
+<div class="ttc" id="aclass_data_base_html_a3391ab73b07892c8b66160e61dd294fd"><div class="ttname"><a href="class_data_base.html#a3391ab73b07892c8b66160e61dd294fd">DataBase::transition_probability</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; transition_probability(bool print=true) const</div><div class="ttdoc">Calculates the transition probabilities.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:854</div></div>
+<div class="ttc" id="aclass_data_base_html_a5d43d9fba8e46bee17f529e0ebce670e"><div class="ttname"><a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">DataBase::reproductive_number</a></div><div class="ttdeci">MapVec_type&lt; int, int &gt; reproductive_number() const</div><div class="ttdoc">Computes the reproductive number of each case.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:786</div></div>
+<div class="ttc" id="aclass_data_base_html_a833cf232df236cf097ccbaf537ff32ab"><div class="ttname"><a href="class_data_base.html#a833cf232df236cf097ccbaf537ff32ab">DataBase::record_variant</a></div><div class="ttdeci">void record_variant(Virus&lt; TSeq &gt; &amp;v)</div><div class="ttdoc">Registering a new variant.</div><div class="ttdef"><b>Definition:</b> database-meat.hpp:183</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
-<div class="ttc" id="aclass_model_html_a02135cd989e6fdadaf71d3140fb4a2e8"><div class="ttname"><a href="class_model.html#a02135cd989e6fdadaf71d3140fb4a2e8">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1778</div></div>
-<div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1841</div></div>
-<div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2154</div></div>
+<div class="ttc" id="aclass_model_html_a02135cd989e6fdadaf71d3140fb4a2e8"><div class="ttname"><a href="class_model.html#a02135cd989e6fdadaf71d3140fb4a2e8">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1746</div></div>
+<div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2122</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
