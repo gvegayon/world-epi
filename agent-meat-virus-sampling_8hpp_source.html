@@ -403,48 +403,74 @@ $(function() {
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">// This computes the prob of getting any neighbor variant</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">size_t</span> nvariants_tmp = 0u;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; neighbor: p-&gt;get_neighbors()) </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                 </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; v : neighbor-&gt;get_viruses()) </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        { </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">            #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keywordflow">if</span> (nvariants_tmp &gt;= m-&gt;array_virus_tmp.size())</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Trying to add an extra element to a temporal array outside of the range.&quot;</span>);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <span class="comment">// printf_epiworld(&quot;N used %d\n&quot;, v.use_count());</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                </div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            m-&gt;array_double_tmp[nvariants_tmp] =</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                v-&gt;get_prob_infecting(m) * </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                ; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        } </div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="comment">// No virus to compute</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">if</span> (nvariants_tmp == 0u)</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="comment">// Running the roulette</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordtype">int</span> which = roulette(nvariants_tmp, m);</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">if</span> (which &lt; 0)</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> m-&gt;array_virus_tmp[which]; </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;}</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {   </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">        #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordtype">int</span> _vcount_neigh = 0;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">        #endif                 </span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; v : neighbor-&gt;get_viruses()) </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        { </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">            #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordflow">if</span> (nvariants_tmp &gt;= m-&gt;array_virus_tmp.size())</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Trying to add an extra element to a temporal array outside of the range.&quot;</span>);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <span class="comment">// printf_epiworld(&quot;N used %d\n&quot;, v.use_count());</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            m-&gt;array_double_tmp[nvariants_tmp] =</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                ; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">            #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                (m-&gt;array_double_tmp[nvariants_tmp - 1] &lt; 0.0) |</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                (m-&gt;array_double_tmp[nvariants_tmp - 1] &gt; 1.0)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                )</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                printf_epiworld(</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                    <span class="stringliteral">&quot;[epi-debug] Agent %i&#39;s virus %i has transmission prob outside of [0, 1]: %.4f!\n&quot;</span>,</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(neighbor-&gt;get_id()),</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(_vcount_neigh++),</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    m-&gt;array_double_tmp[nvariants_tmp - 1]</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                    );</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        } </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="comment">// No virus to compute</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">if</span> (nvariants_tmp == 0u)</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    m-&gt;get_db().n_transmissions_potential++;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="comment">// Running the roulette</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordtype">int</span> which = roulette(nvariants_tmp, m);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordflow">if</span> (which &lt; 0)</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    m-&gt;get_db().n_transmissions_today++;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> m-&gt;array_virus_tmp[which]; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
-<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:538</div></div>
+<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:535</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="anamespacesampler_html"><div class="ttname"><a href="namespacesampler.html">sampler</a></div><div class="ttdoc">Functions for sampling viruses.</div><div class="ttdef"><b>Definition:</b> agent-meat-virus-sampling.hpp:8</div></div>

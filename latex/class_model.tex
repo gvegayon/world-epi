@@ -255,7 +255,7 @@ void {\bfseries agents\+\_\+empty\+\_\+graph} (epiworld\+\_\+fast\+\_\+uint n=10
 }\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_model_aa7c0eb512807cade519c11cc19f672ec}\label{class_model_aa7c0eb512807cade519c11cc19f672ec}} 
-void {\bfseries init} (epiworld\+\_\+fast\+\_\+uint ndays, epiworld\+\_\+fast\+\_\+uint seed)
+virtual void {\bfseries init} (epiworld\+\_\+fast\+\_\+uint ndays, epiworld\+\_\+fast\+\_\+uint seed)
 \item 
 \mbox{\Hypertarget{class_model_ae551e7b2be3d8fb3d3d857153681aa94}\label{class_model_ae551e7b2be3d8fb3d3d857153681aa94}} 
 void {\bfseries update\+\_\+status} ()
@@ -267,7 +267,7 @@ void {\bfseries mutate\+\_\+variant} ()
 void {\bfseries next} ()
 \item 
 \mbox{\Hypertarget{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}\label{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}} 
-void \mbox{\hyperlink{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}{run}} ()
+virtual void \mbox{\hyperlink{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}{run}} ()
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_a662c46a99b4c8ef6427a45c9df64e646}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint nexperiments, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true, int nthreads=1)
 \end{DoxyCompactItemize}

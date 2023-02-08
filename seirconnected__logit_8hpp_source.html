@@ -219,11 +219,11 @@ $(function() {
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="keywordflow">if</span> (_tracked_agents_infected-&gt;operator[](which)-&gt;get_n_viruses() == 0)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] date: %i\n&quot;</span>, m-&gt;today());</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epiworld-debug] sim#: %i\n&quot;</span>, m-&gt;get_n_replicates());</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epi-debug] date: %i\n&quot;</span>, m-&gt;today());</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;[epi-debug] sim#: %i\n&quot;</span>, m-&gt;get_n_replicates());</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                        <span class="stringliteral">&quot;[epiworld-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                        <span class="stringliteral">&quot;[epi-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        <span class="stringliteral">&quot;virus to share. The agent&#39;s status is: &quot;</span> +</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operator[](which)-&gt;get_status())</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    );</div>
@@ -394,9 +394,9 @@ $(function() {
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_e_i_r_c_o_n_n_logit_html"><div class="ttname"><a href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit</a></div><div class="ttdef"><b>Definition:</b> seirconnected_logit.hpp:6</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10549</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4828</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8171</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10722</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4902</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8275</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
