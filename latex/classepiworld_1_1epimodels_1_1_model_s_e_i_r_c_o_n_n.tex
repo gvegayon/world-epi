@@ -30,7 +30,9 @@ Collaboration diagram for epiworld\+::epimodels\+::Model\+SEIRCONN$<$ TSeq $>$\+
 \item 
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a60174d7417ba34e18d8f5b9af9d8a806}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a60174d7417ba34e18d8f5b9af9d8a806}} 
 void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a60174d7417ba34e18d8f5b9af9d8a806}{run}} ()
-\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -93,6 +95,29 @@ Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model.
 {\em prob\+\_\+recovery} & Probability of recovery \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}} 
+\index{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

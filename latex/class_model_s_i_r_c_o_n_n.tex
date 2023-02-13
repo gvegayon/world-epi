@@ -31,9 +31,8 @@ Collaboration diagram for Model\+SIRCONN$<$ TSeq $>$\+:
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_aee5279d09cce823996b57fad1f7b03a3}\label{class_model_s_i_r_c_o_n_n_aee5279d09cce823996b57fad1f7b03a3}} 
 void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_aee5279d09cce823996b57fad1f7b03a3}{run}} ()
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}\label{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}} 
-\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries clone\+\_\+ptr} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,6 +83,29 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em prob\+\_\+recovery} & Probability of recovery \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}\label{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

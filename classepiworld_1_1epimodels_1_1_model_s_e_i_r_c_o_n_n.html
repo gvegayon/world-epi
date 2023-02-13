@@ -106,6 +106,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a60174d7417ba34e18d8f5b9af9d8a806">run</a> ()</td></tr>
 <tr class="memdesc:a60174d7417ba34e18d8f5b9af9d8a806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
 <tr class="separator:a60174d7417ba34e18d8f5b9af9d8a806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566a0d12a5987b978d4287ba2969004e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a566a0d12a5987b978d4287ba2969004e">clone_ptr</a> ()</td></tr>
+<tr class="memdesc:a566a0d12a5987b978d4287ba2969004e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advanced usage: Makes a copy of data and returns it as undeleted pointer.  <a href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a566a0d12a5987b978d4287ba2969004e">More...</a><br /></td></tr>
+<tr class="separator:a566a0d12a5987b978d4287ba2969004e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
 <tr class="memitem:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a2d8f67ad467c6d5793a855d2314a39"></a>
 <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> ()</td></tr>
@@ -415,6 +418,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_death_reduction_m
 <tr class="memitem:a1e2f9dae16e1e30fe809a8c7fb995cd6 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a1e2f9dae16e1e30fe809a8c7fb995cd6"></a>
 <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;m)</td></tr>
 <tr class="separator:a1e2f9dae16e1e30fe809a8c7fb995cd6 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9433f423a1c8925f7733bdc8a936e7 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9d9433f423a1c8925f7733bdc8a936e7"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Model</b> ()</td></tr>
+<tr class="separator:a9d9433f423a1c8925f7733bdc8a936e7 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdf6858d14a460049be87918dcd1fdd1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="acdf6858d14a460049be87918dcd1fdd1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;other_population, std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;other_entities, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; *other_model, bool &amp;other_directed) const</td></tr>
 <tr class="separator:acdf6858d14a460049be87918dcd1fdd1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -547,6 +553,41 @@ template&lt;typename TSeq &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a566a0d12a5987b978d4287ba2969004e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566a0d12a5987b978d4287ba2969004e">&#9670;&nbsp;</a></span>clone_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; * <a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN</a>&lt; TSeq &gt;::clone_ptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Advanced usage: Makes a copy of data and returns it as undeleted pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">copy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
 
 </div>
 </div>

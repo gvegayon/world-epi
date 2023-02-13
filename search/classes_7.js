@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['queue_95',['Queue',['../classepiworld_1_1_queue.html',1,'epiworld::Queue&lt; TSeq &gt;'],['../class_queue.html',1,'Queue&lt; TSeq &gt;']]],
-  ['queuevalues_96',['QueueValues',['../classepiworld_1_1_queue_values.html',1,'epiworld::QueueValues'],['../class_queue_values.html',1,'QueueValues']]]
+  ['queue_96',['Queue',['../classepiworld_1_1_queue.html',1,'epiworld::Queue&lt; TSeq &gt;'],['../class_queue.html',1,'Queue&lt; TSeq &gt;']]],
+  ['queuevalues_97',['QueueValues',['../classepiworld_1_1_queue_values.html',1,'epiworld::QueueValues'],['../class_queue_values.html',1,'QueueValues']]]
 ];

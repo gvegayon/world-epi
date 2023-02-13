@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['is_5fdirected_118',['is_directed',['../classepiworld_1_1_adj_list.html#a70e14a9f262278d028cecae547382049',1,'epiworld::AdjList::is_directed()'],['../class_adj_list.html#a70e14a9f262278d028cecae547382049',1,'AdjList::is_directed()']]],
-  ['is_5fqueuing_5fon_119',['is_queuing_on',['../classepiworld_1_1_model.html#a2c4ac58e918e9e8dc2e58be6521d8827',1,'epiworld::Model::is_queuing_on()'],['../class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827',1,'Model::is_queuing_on()']]]
+  ['get_5fentities_117',['get_entities',['../classepiworld_1_1_agent.html#aa8f3cf3ff2cd28ab97b6489b2d5124a8',1,'epiworld::Agent::get_entities()'],['../class_agent.html#aa8f3cf3ff2cd28ab97b6489b2d5124a8',1,'Agent::get_entities()']]],
+  ['get_5fid_118',['get_id',['../classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a',1,'epiworld::Agent::get_id()'],['../class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a',1,'Agent::get_id()']]],
+  ['get_5fqueue_119',['get_queue',['../classepiworld_1_1_model.html#a3cf5b4f14dcd54816785b38894c8088f',1,'epiworld::Model::get_queue()'],['../class_model.html#a3cf5b4f14dcd54816785b38894c8088f',1,'Model::get_queue()']]]
 ];
