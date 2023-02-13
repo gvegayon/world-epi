@@ -259,7 +259,7 @@ $(function() {
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">// How many will we find</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        std::binomial_distribution&lt;&gt; bdist(m-&gt;size(), m-&gt;par(<span class="stringliteral">&quot;Surveilance prob.&quot;</span>));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(*m-&gt;get_rand_endgine());</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(m-&gt;get_rand_endgine());</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordtype">int</span> to_go = nsampled + 1;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
@@ -422,7 +422,7 @@ $(function() {
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
 <div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10722</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4902</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:4900</div></div>
 <div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9098</div></div>
 <div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:8275</div></div>
 </div><!-- fragment --></div><!-- contents -->
