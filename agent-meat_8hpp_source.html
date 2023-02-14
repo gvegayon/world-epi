@@ -677,7 +677,7 @@ $(function() {
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    {</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160; </div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; n: neighbors)    </div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">if</span> (n == p.<a class="code" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>())</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n) == p.<a class="code" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>())</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            {</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                found = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                <span class="keywordflow">break</span>;</div>
@@ -704,7 +704,7 @@ $(function() {
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    {</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160; </div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; n: p.neighbors)</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            <span class="keywordflow">if</span> (n == <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n) == <span class="keywordtype">id</span>)</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            {</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;                found = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                <span class="keywordflow">break</span>;</div>
