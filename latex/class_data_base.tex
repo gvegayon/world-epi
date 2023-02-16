@@ -18,6 +18,9 @@ Statistical data about the process.
 \mbox{\Hypertarget{class_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}\label{class_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}} 
 {\bfseries Data\+Base} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&db)
 \item 
+\mbox{\Hypertarget{class_data_base_aac2b0ae1b030c62b0674a45ea71dd0af}\label{class_data_base_aac2b0ae1b030c62b0674a45ea71dd0af}} 
+\mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&m)=delete
+\item 
 void \mbox{\hyperlink{class_data_base_a833cf232df236cf097ccbaf537ff32ab}{record\+\_\+variant}} (\mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ \&v)
 \begin{DoxyCompactList}\small\item\em Registering a new variant. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_data_base_a40faac70770ad43b91c632f0cabd32c1}\label{class_data_base_a40faac70770ad43b91c632f0cabd32c1}} 
@@ -69,7 +72,16 @@ void {\bfseries add\+\_\+user\+\_\+data} (epiworld\+\_\+fast\+\_\+uint j, epiwor
 \mbox{\hyperlink{class_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
 \item 
 std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{class_data_base_a3391ab73b07892c8b66160e61dd294fd}{transition\+\_\+probability}} (bool print=true) const
-\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_data_base_ab387bebbab95525c452660a7701c457d}{operator==}} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&other) const
+\item 
+\mbox{\Hypertarget{class_data_base_ac5d9c063be411ebe4fb7e2a08468eaf2}\label{class_data_base_ac5d9c063be411ebe4fb7e2a08468eaf2}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&other) const
+\item 
+bool \mbox{\hyperlink{class_data_base_a707b63e79214f82c5efb85fc04ccee11}{operator==}} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&other) const
+\item 
+bool \mbox{\hyperlink{class_data_base_a707b63e79214f82c5efb85fc04ccee11}{operator==}} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&other) const
+\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Get recorded information from the model}\par
 {\em 
 \begin{DoxyParams}{Parameters}
@@ -151,7 +163,50 @@ Statistical data about the process.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{class_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
+\mbox{\Hypertarget{class_data_base_a707b63e79214f82c5efb85fc04ccee11}\label{class_data_base_a707b63e79214f82c5efb85fc04ccee11}} 
+\index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$ $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Date of the transmission event
+
+$<$ Id of the source
+
+$<$ Id of the target
+
+$<$ Id of the variant
+
+$<$ Date when the source acquired the variant\mbox{\Hypertarget{class_data_base_a707b63e79214f82c5efb85fc04ccee11}\label{class_data_base_a707b63e79214f82c5efb85fc04ccee11}} 
+\index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$ $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Date of the transmission event
+
+$<$ Id of the source
+
+$<$ Id of the target
+
+$<$ Id of the variant
+
+$<$ Date when the source acquired the variant\mbox{\Hypertarget{class_data_base_ab387bebbab95525c452660a7701c457d}\label{class_data_base_ab387bebbab95525c452660a7701c457d}} 
+\index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+bool \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Date of the transmission event
+
+$<$ Id of the source
+
+$<$ Id of the target
+
+$<$ Id of the variant
+
+$<$ Date when the source acquired the variant\mbox{\Hypertarget{class_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{class_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
 \index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!record\_variant@{record\_variant}}
 \index{record\_variant@{record\_variant}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}}

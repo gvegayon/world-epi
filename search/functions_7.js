@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['queuing_5foff_128',['queuing_off',['../classepiworld_1_1_model.html#a70f0e1d4c74e1cfc887aca35984c52b6',1,'epiworld::Model::queuing_off()'],['../class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6',1,'Model::queuing_off()']]],
-  ['queuing_5fon_129',['queuing_on',['../classepiworld_1_1_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'epiworld::Model::queuing_on()'],['../class_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'Model::queuing_on()']]]
+  ['operator_3d_3d_129',['operator==',['../classepiworld_1_1_data_base.html#ab387bebbab95525c452660a7701c457d',1,'epiworld::DataBase::operator==()'],['../classepiworld_1_1_agent.html#a31b86ef3d48809ddbabae4e6c40dffee',1,'epiworld::Agent::operator==()'],['../class_agent.html#a31b86ef3d48809ddbabae4e6c40dffee',1,'Agent::operator==()'],['../class_data_base.html#ab387bebbab95525c452660a7701c457d',1,'DataBase::operator==(const DataBase&lt; TSeq &gt; &amp;other) const'],['../class_data_base.html#a707b63e79214f82c5efb85fc04ccee11',1,'DataBase::operator==(const DataBase&lt; std::vector&lt; int &gt;&gt; &amp;other) const'],['../class_data_base.html#a707b63e79214f82c5efb85fc04ccee11',1,'DataBase::operator==(const DataBase&lt; std::vector&lt; int &gt;&gt; &amp;other) const']]]
 ];

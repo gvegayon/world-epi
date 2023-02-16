@@ -18,6 +18,9 @@ Statistical data about the process.
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}\label{classepiworld_1_1_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}} 
 {\bfseries Data\+Base} (const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&db)
 \item 
+\mbox{\Hypertarget{classepiworld_1_1_data_base_ac93b0195d262a1ced7b7a8f432ac7577}\label{classepiworld_1_1_data_base_ac93b0195d262a1ced7b7a8f432ac7577}} 
+\mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&m)=delete
+\item 
 void \mbox{\hyperlink{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}{record\+\_\+variant}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v)
 \begin{DoxyCompactList}\small\item\em Registering a new variant. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a40faac70770ad43b91c632f0cabd32c1}\label{classepiworld_1_1_data_base_a40faac70770ad43b91c632f0cabd32c1}} 
@@ -69,7 +72,12 @@ void {\bfseries add\+\_\+user\+\_\+data} (epiworld\+\_\+fast\+\_\+uint j, epiwor
 \mbox{\hyperlink{classepiworld_1_1_user_data}{User\+Data}}$<$ TSeq $>$ \& {\bfseries get\+\_\+user\+\_\+data} ()
 \item 
 std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{classepiworld_1_1_data_base_a3391ab73b07892c8b66160e61dd294fd}{transition\+\_\+probability}} (bool print=true) const
-\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the transition probabilities. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classepiworld_1_1_data_base_ab387bebbab95525c452660a7701c457d}{operator==}} (const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_data_base_a40521be1b4062b296fd8df1833975b83}\label{classepiworld_1_1_data_base_a40521be1b4062b296fd8df1833975b83}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&other) const
+\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Get recorded information from the model}\par
 {\em 
 \begin{DoxyParams}{Parameters}
@@ -151,7 +159,22 @@ Statistical data about the process.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
+\mbox{\Hypertarget{classepiworld_1_1_data_base_ab387bebbab95525c452660a7701c457d}\label{classepiworld_1_1_data_base_ab387bebbab95525c452660a7701c457d}} 
+\index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+bool \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Date of the transmission event
+
+$<$ Id of the source
+
+$<$ Id of the target
+
+$<$ Id of the variant
+
+$<$ Date when the source acquired the variant\mbox{\Hypertarget{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
 \index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!record\_variant@{record\_variant}}
 \index{record\_variant@{record\_variant}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}}

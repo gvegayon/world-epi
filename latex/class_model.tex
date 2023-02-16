@@ -86,6 +86,12 @@ void \mbox{\hyperlink{class_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+na
 \begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a2a8ec13a43f5839f9b06409b990b35b3}\label{class_model_a2a8ec13a43f5839f9b06409b990b35b3}} 
 std\+::string {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_model_a409e15ff6526550c8610b6a8936d498a}\label{class_model_a409e15ff6526550c8610b6a8936d498a}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&other) const
+\item 
+\mbox{\Hypertarget{class_model_a8238212432a34150f71b90fe70e1aa55}\label{class_model_a8238212432a34150f71b90fe70e1aa55}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&other) const
 \end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Set the backup object}\par
 {\em {\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. }\begin{DoxyCompactItemize}
@@ -110,8 +116,8 @@ void {\bfseries set\+\_\+rand\+\_\+engine} (std\+::mt19937 \&eng)
 \mbox{\Hypertarget{class_model_aa86964269d70d943c217c5e35e8c6382}\label{class_model_aa86964269d70d943c217c5e35e8c6382}} 
 std\+::mt19937 \& {\bfseries get\+\_\+rand\+\_\+endgine} ()
 \item 
-\mbox{\Hypertarget{class_model_aa672695db93849523d55f1dfc9a53bc2}\label{class_model_aa672695db93849523d55f1dfc9a53bc2}} 
-void {\bfseries seed} (epiworld\+\_\+fast\+\_\+uint s)
+\mbox{\Hypertarget{class_model_ac81486b5ae62f4e9492082c98dca65e4}\label{class_model_ac81486b5ae62f4e9492082c98dca65e4}} 
+void {\bfseries seed} (size\+\_\+t s)
 \item 
 \mbox{\Hypertarget{class_model_a19ae15f81d1cf3215b69ea5c17cf6e37}\label{class_model_a19ae15f81d1cf3215b69ea5c17cf6e37}} 
 void {\bfseries set\+\_\+rand\+\_\+norm} (epiworld\+\_\+double mean, epiworld\+\_\+double sd)

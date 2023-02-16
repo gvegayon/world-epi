@@ -99,6 +99,11 @@ const \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \& {\bfseries get\+\_\
 \item 
 \mbox{\Hypertarget{class_agent_a5247fae534e29a36f747654ad443fa93}\label{class_agent_a5247fae534e29a36f747654ad443fa93}} 
 size\+\_\+t {\bfseries get\+\_\+n\+\_\+entities} () const
+\item 
+bool \mbox{\hyperlink{class_agent_a31b86ef3d48809ddbabae4e6c40dffee}{operator==}} (const \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&other) const
+\item 
+\mbox{\Hypertarget{class_agent_a4c16a36d08f71e087f72b9a8fc29ad5c}\label{class_agent_a4c16a36d08f71e087f72b9a8fc29ad5c}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&other) const
 \end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Add/\+Remove Virus/\+Tool}\par
 {\em Any of these is ultimately reflected at the end of the iteration.
@@ -269,7 +274,14 @@ The {\ttfamily operator\mbox{[}\mbox{]}} method is with no boundary check, where
 \begin{DoxyReturn}{Returns}
 double\& 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_agent_a938c535d35ff860eb59505c36a919df0}\label{class_agent_a938c535d35ff860eb59505c36a919df0}} 
+\mbox{\Hypertarget{class_agent_a31b86ef3d48809ddbabae4e6c40dffee}\label{class_agent_a31b86ef3d48809ddbabae4e6c40dffee}} 
+\index{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+bool \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$ Last time the agent was updated.\mbox{\Hypertarget{class_agent_a938c535d35ff860eb59505c36a919df0}\label{class_agent_a938c535d35ff860eb59505c36a919df0}} 
 \index{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!swap\_neighbors@{swap\_neighbors}}
 \index{swap\_neighbors@{swap\_neighbors}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{swap\_neighbors()}{swap\_neighbors()}}

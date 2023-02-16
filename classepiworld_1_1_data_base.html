@@ -88,6 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a148ac9438b0fefbe68ec6896d5d4aa3d"><td class="memItemLeft" align="right" valign="top"><a id="a148ac9438b0fefbe68ec6896d5d4aa3d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DataBase</b> (const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;db)</td></tr>
 <tr class="separator:a148ac9438b0fefbe68ec6896d5d4aa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93b0195d262a1ced7b7a8f432ac7577"><td class="memItemLeft" align="right" valign="top"><a id="ac93b0195d262a1ced7b7a8f432ac7577"></a>
+<a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;m)=delete</td></tr>
+<tr class="separator:ac93b0195d262a1ced7b7a8f432ac7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a833cf232df236cf097ccbaf537ff32ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a833cf232df236cf097ccbaf537ff32ab">record_variant</a> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; &amp;v)</td></tr>
 <tr class="memdesc:a833cf232df236cf097ccbaf537ff32ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registering a new variant.  <a href="classepiworld_1_1_data_base.html#a833cf232df236cf097ccbaf537ff32ab">More...</a><br /></td></tr>
 <tr class="separator:a833cf232df236cf097ccbaf537ff32ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +145,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>add_user_data</b> (ep
 <tr class="memitem:a3391ab73b07892c8b66160e61dd294fd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a3391ab73b07892c8b66160e61dd294fd">transition_probability</a> (bool print=true) const</td></tr>
 <tr class="memdesc:a3391ab73b07892c8b66160e61dd294fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the transition probabilities.  <a href="classepiworld_1_1_data_base.html#a3391ab73b07892c8b66160e61dd294fd">More...</a><br /></td></tr>
 <tr class="separator:a3391ab73b07892c8b66160e61dd294fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab387bebbab95525c452660a7701c457d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#ab387bebbab95525c452660a7701c457d">operator==</a> (const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:ab387bebbab95525c452660a7701c457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40521be1b4062b296fd8df1833975b83"><td class="memItemLeft" align="right" valign="top"><a id="a40521be1b4062b296fd8df1833975b83"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:a40521be1b4062b296fd8df1833975b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Get recorded information from the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -215,6 +223,39 @@ class epiworld::DataBase&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab387bebbab95525c452660a7701c457d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab387bebbab95525c452660a7701c457d">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt; Date of the transmission event</p>
+<p>&lt; Id of the source</p>
+<p>&lt; Id of the target</p>
+<p>&lt; Id of the variant</p>
+<p>&lt; Date when the source acquired the variant</p>
+
+</div>
+</div>
 <a id="a833cf232df236cf097ccbaf537ff32ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a833cf232df236cf097ccbaf537ff32ab">&#9670;&nbsp;</a></span>record_variant()</h2>
 

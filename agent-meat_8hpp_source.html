@@ -943,15 +943,69 @@ $(function() {
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <span class="keywordflow">return</span> n_entities;</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;}</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160; </div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="preprocessor">#undef CHECK_COALESCE_</span></div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160; </div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00875"></a><span class="lineno"><a class="line" href="class_agent.html#a31b86ef3d48809ddbabae4e6c40dffee">  875</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_agent.html#a31b86ef3d48809ddbabae4e6c40dffee">Agent&lt;TSeq&gt;::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <span class="keywordflow">if</span> (n_neighbors != other.n_neighbors)</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_neighbors; ++i)</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    {</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;        <span class="keywordflow">if</span> (neighbors[i] != other.neighbors[i])</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    }</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    </div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    <span class="keywordflow">if</span> (n_entities != other.n_entities)</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160; </div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_entities; ++i)</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    {</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keywordflow">if</span> (entities[i] != other.entities[i])</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    }</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="keywordflow">if</span> (status != other.status)</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160; </div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keywordflow">if</span> (status_prev != other.status_prev)</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160; </div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    <span class="keywordflow">if</span> (status_last_changed != other.status_last_changed) </div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    </div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <span class="keywordflow">if</span> (n_viruses != other.n_viruses)</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160; </div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_viruses; ++i)</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    {</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordflow">if</span> (viruses[i] != other.viruses[i])</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    }</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160; </div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    <span class="keywordflow">if</span> (n_tools != other.n_tools)</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160; </div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_tools; ++i)</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    {</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;        <span class="keywordflow">if</span> (tools[i] != other.tools[i])</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    }   </div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    </div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    </div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;}</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160; </div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="preprocessor">#undef CHECK_COALESCE_</span></div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160; </div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
+<div class="ttc" id="aclass_agent_html_a31b86ef3d48809ddbabae4e6c40dffee"><div class="ttname"><a href="class_agent.html#a31b86ef3d48809ddbabae4e6c40dffee">Agent::operator==</a></div><div class="ttdeci">bool operator==(const Agent&lt; TSeq &gt; &amp;other) const</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:875</div></div>
 <div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:535</div></div>
 <div class="ttc" id="aclass_agent_html_a524fc00d59cbaf68bdbdf94dc14ce816"><div class="ttname"><a href="class_agent.html#a524fc00d59cbaf68bdbdf94dc14ce816">Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(epiworld_fast_uint virus_idx, Model&lt; TSeq &gt; *model, epiworld_fast_int status_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:430</div></div>
 <div class="ttc" id="aclass_agent_html_a938c535d35ff860eb59505c36a919df0"><div class="ttname"><a href="class_agent.html#a938c535d35ff860eb59505c36a919df0">Agent::swap_neighbors</a></div><div class="ttdeci">void swap_neighbors(Agent&lt; TSeq &gt; &amp;other, size_t n_this, size_t n_other)</div><div class="ttdoc">Swaps neighbors between the current agent and agent other</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:656</div></div>
 <div class="ttc" id="aclass_agent_html_aa8f3cf3ff2cd28ab97b6489b2d5124a8"><div class="ttname"><a href="class_agent.html#aa8f3cf3ff2cd28ab97b6489b2d5124a8">Agent::get_entities</a></div><div class="ttdeci">Entities&lt; TSeq &gt; get_entities()</div><div class="ttdoc">Access the j-th column of the agent.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:839</div></div>
-<div class="ttc" id="aclass_entities__const_html"><div class="ttname"><a href="class_entities__const.html">Entities_const</a></div><div class="ttdoc">Set of Entities (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> entities-bones.hpp:98</div></div>
+<div class="ttc" id="aclass_entities__const_html"><div class="ttname"><a href="class_entities__const.html">Entities_const</a></div><div class="ttdoc">Set of Entities (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> entities-bones.hpp:116</div></div>
 <div class="ttc" id="aclass_entities_html"><div class="ttname"><a href="class_entities.html">Entities</a></div><div class="ttdoc">Set of Entities (useful for building iterators)</div><div class="ttdef"><b>Definition:</b> entities-bones.hpp:17</div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:20</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>

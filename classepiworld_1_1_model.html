@@ -164,6 +164,12 @@ const std::vector&lt; ToolPtr&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memI
 <tr class="memitem:a2a8ec13a43f5839f9b06409b990b35b3"><td class="memItemLeft" align="right" valign="top"><a id="a2a8ec13a43f5839f9b06409b990b35b3"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> () const</td></tr>
 <tr class="separator:a2a8ec13a43f5839f9b06409b990b35b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409e15ff6526550c8610b6a8936d498a"><td class="memItemLeft" align="right" valign="top"><a id="a409e15ff6526550c8610b6a8936d498a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:a409e15ff6526550c8610b6a8936d498a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7a6c1576328cf6cf0c869650da475b"><td class="memItemLeft" align="right" valign="top"><a id="a0c7a6c1576328cf6cf0c869650da475b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:a0c7a6c1576328cf6cf0c869650da475b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Set the backup object</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><code>backup</code> can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. </p>
 </div></td></tr>
@@ -185,9 +191,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (
 <tr class="memitem:aa86964269d70d943c217c5e35e8c6382"><td class="memItemLeft" align="right" valign="top"><a id="aa86964269d70d943c217c5e35e8c6382"></a>
 std::mt19937 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
 <tr class="separator:aa86964269d70d943c217c5e35e8c6382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa672695db93849523d55f1dfc9a53bc2"><td class="memItemLeft" align="right" valign="top"><a id="aa672695db93849523d55f1dfc9a53bc2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (epiworld_fast_uint s)</td></tr>
-<tr class="separator:aa672695db93849523d55f1dfc9a53bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81486b5ae62f4e9492082c98dca65e4"><td class="memItemLeft" align="right" valign="top"><a id="ac81486b5ae62f4e9492082c98dca65e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (size_t s)</td></tr>
+<tr class="separator:ac81486b5ae62f4e9492082c98dca65e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memItemLeft" align="right" valign="top"><a id="a19ae15f81d1cf3215b69ea5c17cf6e37"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_norm</b> (epiworld_double mean, epiworld_double sd)</td></tr>
 <tr class="separator:a19ae15f81d1cf3215b69ea5c17cf6e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
