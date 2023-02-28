@@ -13,15 +13,14 @@
     \subitem {epiworld::AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{39}
   \item {Agent$<$ TSeq $>$}, \hyperpage{41}
-    \subitem {default\_rm\_entity}, \hyperpage{45}
+    \subitem {default\_rm\_entity}, \hyperpage{44}
     \subitem {get\_entities}, \hyperpage{44}
-    \subitem {operator==}, \hyperpage{44}
     \subitem {swap\_neighbors}, \hyperpage{44}
   \item {AgentsSample}
-    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{50}
+    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
     \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{51}
   \item {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
-    \subitem {AgentsSample}, \hyperpage{50}
+    \subitem {AgentsSample}, \hyperpage{49}
 
   \indexspace
 
@@ -36,21 +35,21 @@
   \indexspace
 
   \item {DataBase$<$ TSeq $>$}, \hyperpage{52}
-    \subitem {operator==}, \hyperpage{54}
+    \subitem {operator==}, \hyperpage{53, 54}
     \subitem {record\_variant}, \hyperpage{54}
-    \subitem {reproductive\_number}, \hyperpage{55}
+    \subitem {reproductive\_number}, \hyperpage{54}
     \subitem {transition\_probability}, \hyperpage{55}
   \item {default\_rm\_entity}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{45}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
     \subitem {Entity$<$ TSeq $>$}, \hyperpage{62}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{49}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
     \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{63}
 
   \indexspace
 
   \item {Entities$<$ TSeq $>$}, \hyperpage{58}
   \item {Entities\_const$<$ TSeq $>$}, \hyperpage{60}
-  \item {Entity$<$ TSeq $>$}, \hyperpage{62}
+  \item {Entity$<$ TSeq $>$}, \hyperpage{61}
     \subitem {default\_rm\_entity}, \hyperpage{62}
   \item {epiworld::Action$<$ TSeq $>$}, \hyperpage{37}
     \subitem {Action}, \hyperpage{37}
@@ -58,16 +57,15 @@
     \subitem {AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{41}
   \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{45}
-    \subitem {default\_rm\_entity}, \hyperpage{49}
+    \subitem {default\_rm\_entity}, \hyperpage{48}
     \subitem {get\_entities}, \hyperpage{47}
-    \subitem {operator==}, \hyperpage{48}
     \subitem {swap\_neighbors}, \hyperpage{48}
   \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{50}
     \subitem {AgentsSample}, \hyperpage{51}
   \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{55}
     \subitem {operator==}, \hyperpage{57}
     \subitem {record\_variant}, \hyperpage{57}
-    \subitem {reproductive\_number}, \hyperpage{58}
+    \subitem {reproductive\_number}, \hyperpage{57}
     \subitem {transition\_probability}, \hyperpage{58}
   \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{59}
   \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{61}
@@ -179,9 +177,7 @@
   \indexspace
 
   \item {operator==}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53, 54}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
 
   \indexspace
@@ -204,8 +200,8 @@
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
   \item {reproductive\_number}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{55}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{58}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
   \item {reset}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{72}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{81}
