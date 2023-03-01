@@ -57,8 +57,8 @@ std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& {\bfseries params} ()
 \item 
 void \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_abf88e09ca6281a1e083138fef477b3d7}\label{class_model_abf88e09ca6281a1e083138fef477b3d7}} 
-void {\bfseries print} () const
+\mbox{\Hypertarget{class_model_a0ee712a278813e98498e5fba98fbd923}\label{class_model_a0ee712a278813e98498e5fba98fbd923}} 
+void {\bfseries print} (bool lite=false) const
 \item 
 \mbox{\Hypertarget{class_model_a1204f90aa24fd6eb3d84e96c42e60429}\label{class_model_a1204f90aa24fd6eb3d84e96c42e60429}} 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&\& {\bfseries clone} () const
@@ -251,9 +251,6 @@ void {\bfseries agents\+\_\+empty\+\_\+graph} (epiworld\+\_\+fast\+\_\+uint n=10
 \end{DoxyParams}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_aa7c0eb512807cade519c11cc19f672ec}\label{class_model_aa7c0eb512807cade519c11cc19f672ec}} 
-virtual void {\bfseries init} (epiworld\+\_\+fast\+\_\+uint ndays, epiworld\+\_\+fast\+\_\+uint seed)
-\item 
 \mbox{\Hypertarget{class_model_ae551e7b2be3d8fb3d3d857153681aa94}\label{class_model_ae551e7b2be3d8fb3d3d857153681aa94}} 
 void {\bfseries update\+\_\+status} ()
 \item 
@@ -263,10 +260,10 @@ void {\bfseries mutate\+\_\+variant} ()
 \mbox{\Hypertarget{class_model_a0f8b730f9ce77cb330da51ee0599ae82}\label{class_model_a0f8b730f9ce77cb330da51ee0599ae82}} 
 void {\bfseries next} ()
 \item 
-\mbox{\Hypertarget{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}\label{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}} 
-virtual void \mbox{\hyperlink{class_model_a825c7fb2498c7693cbf1bfcd0a416ef4}{run}} ()
+\mbox{\Hypertarget{class_model_a890fcd217e0a034f39f9894fc66bd063}\label{class_model_a890fcd217e0a034f39f9894fc66bd063}} 
+virtual void \mbox{\hyperlink{class_model_a890fcd217e0a034f39f9894fc66bd063}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_model_a662c46a99b4c8ef6427a45c9df64e646}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint nexperiments, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true, int nthreads=1)
+void \mbox{\hyperlink{class_model_a2ca6dc004b17bf5cc451f48419b18635}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint ndays, epiworld\+\_\+fast\+\_\+uint nexperiments, int seed\+\_\+=-\/1, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true, int nthreads=1)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Rewire the network preserving the degree sequence.}\par
@@ -577,16 +574,16 @@ Resetting the model will\+:
 \item re-\/distribute tools
 \item re-\/distribute viruses
 \item set the date to 0 
-\end{DoxyItemize}\mbox{\Hypertarget{class_model_a662c46a99b4c8ef6427a45c9df64e646}\label{class_model_a662c46a99b4c8ef6427a45c9df64e646}} 
+\end{DoxyItemize}\mbox{\Hypertarget{class_model_a2ca6dc004b17bf5cc451f48419b18635}\label{class_model_a2ca6dc004b17bf5cc451f48419b18635}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!run\_multiple@{run\_multiple}}
 \index{run\_multiple@{run\_multiple}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{run\_multiple()}{run\_multiple()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{epiworld\+\_\+fast\+\_\+uint}]{nexperiments,  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$TSeq$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true},  }\item[{int}]{nthreads = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::run\+\_\+multiple (\begin{DoxyParamCaption}\item[{epiworld\+\_\+fast\+\_\+uint}]{ndays,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{nexperiments,  }\item[{int}]{seed\+\_\+ = {\ttfamily -\/1},  }\item[{std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun = {\ttfamily make\+\_\+save\+\_\+run$<$TSeq$>$()},  }\item[{bool}]{reset = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true},  }\item[{int}]{nthreads = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 \begin{DoxyParams}{Parameters}
-{\em nexperiments} & Multiple runs of the simulation \\
+{\em ndays} & Multiple runs of the simulation \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_model_a14758e0476fd4a05643ab41190530513}\label{class_model_a14758e0476fd4a05643ab41190530513}} 

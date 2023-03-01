@@ -131,9 +131,9 @@ std::map&lt; std::string, epiworld_double &gt; &amp;&#160;</td><td class="memIte
 <tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
 <tr class="memdesc:a9591eb76c7cf1ed7e1510342ff602d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the model.  <a href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">More...</a><br /></td></tr>
 <tr class="separator:a9591eb76c7cf1ed7e1510342ff602d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf88e09ca6281a1e083138fef477b3d7"><td class="memItemLeft" align="right" valign="top"><a id="abf88e09ca6281a1e083138fef477b3d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> () const</td></tr>
-<tr class="separator:abf88e09ca6281a1e083138fef477b3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee712a278813e98498e5fba98fbd923"><td class="memItemLeft" align="right" valign="top"><a id="a0ee712a278813e98498e5fba98fbd923"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (bool lite=false) const</td></tr>
+<tr class="separator:a0ee712a278813e98498e5fba98fbd923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1204f90aa24fd6eb3d84e96c42e60429"><td class="memItemLeft" align="right" valign="top"><a id="a1204f90aa24fd6eb3d84e96c42e60429"></a>
 <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const</td></tr>
 <tr class="separator:a1204f90aa24fd6eb3d84e96c42e60429"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,9 +314,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b
   </dd>
 </dl>
 </div></td></tr>
-<tr class="memitem:aa7c0eb512807cade519c11cc19f672ec"><td class="memItemLeft" align="right" valign="top"><a id="aa7c0eb512807cade519c11cc19f672ec"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (epiworld_fast_uint ndays, epiworld_fast_uint seed)</td></tr>
-<tr class="separator:aa7c0eb512807cade519c11cc19f672ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memItemLeft" align="right" valign="top"><a id="ae551e7b2be3d8fb3d3d857153681aa94"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_status</b> ()</td></tr>
 <tr class="separator:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -326,12 +323,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate_variant</b> ()
 <tr class="memitem:a0f8b730f9ce77cb330da51ee0599ae82"><td class="memItemLeft" align="right" valign="top"><a id="a0f8b730f9ce77cb330da51ee0599ae82"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
 <tr class="separator:a0f8b730f9ce77cb330da51ee0599ae82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="memItemLeft" align="right" valign="top"><a id="a825c7fb2498c7693cbf1bfcd0a416ef4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a825c7fb2498c7693cbf1bfcd0a416ef4">run</a> ()</td></tr>
-<tr class="memdesc:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
-<tr class="separator:a825c7fb2498c7693cbf1bfcd0a416ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662c46a99b4c8ef6427a45c9df64e646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a662c46a99b4c8ef6427a45c9df64e646">run_multiple</a> (epiworld_fast_uint nexperiments, std::function&lt; void(size_t, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true, int nthreads=1)</td></tr>
-<tr class="separator:a662c46a99b4c8ef6427a45c9df64e646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890fcd217e0a034f39f9894fc66bd063"><td class="memItemLeft" align="right" valign="top"><a id="a890fcd217e0a034f39f9894fc66bd063"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a890fcd217e0a034f39f9894fc66bd063">run</a> (epiworld_fast_uint ndays, int seed=-1)</td></tr>
+<tr class="memdesc:a890fcd217e0a034f39f9894fc66bd063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
+<tr class="separator:a890fcd217e0a034f39f9894fc66bd063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca6dc004b17bf5cc451f48419b18635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a2ca6dc004b17bf5cc451f48419b18635">run_multiple</a> (epiworld_fast_uint ndays, epiworld_fast_uint nexperiments, int seed_=-1, std::function&lt; void(size_t, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool <a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>=true, bool verbose=true, int nthreads=1)</td></tr>
+<tr class="separator:a2ca6dc004b17bf5cc451f48419b18635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Rewire the network preserving the degree sequence.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This implementation assumes an undirected network, thus if {(i,j), (k,l)} -&gt; {(i,l), (k,j)}, the reciprocal is also true, i.e., {(j,i), (l,k)} -&gt; {(j,k), (l,i)}.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -684,8 +681,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="a662c46a99b4c8ef6427a45c9df64e646"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a662c46a99b4c8ef6427a45c9df64e646">&#9670;&nbsp;</a></span>run_multiple()</h2>
+<a id="a2ca6dc004b17bf5cc451f48419b18635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca6dc004b17bf5cc451f48419b18635">&#9670;&nbsp;</a></span>run_multiple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,7 +696,19 @@ template&lt;typename TSeq &gt; </div>
           <td class="memname">void <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt;::run_multiple </td>
           <td>(</td>
           <td class="paramtype">epiworld_fast_uint&#160;</td>
+          <td class="paramname"><em>ndays</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">epiworld_fast_uint&#160;</td>
           <td class="paramname"><em>nexperiments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seed_</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -739,7 +748,7 @@ template&lt;typename TSeq &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nexperiments</td><td>Multiple runs of the simulation </td></tr>
+    <tr><td class="paramname">ndays</td><td>Multiple runs of the simulation </td></tr>
   </table>
   </dd>
 </dl>
