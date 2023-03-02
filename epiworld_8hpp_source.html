@@ -6645,21 +6645,21 @@ $(function() {
 <div class="line"><a name="l07411"></a><span class="lineno"> 7411</span>&#160;<span class="comment">        this-&gt;seed(seed_);</span></div>
 <div class="line"><a name="l07412"></a><span class="lineno"> 7412</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l07413"></a><span class="lineno"> 7413</span>&#160;<span class="comment">    // Seeds will be reproducible by default</span></div>
-<div class="line"><a name="l07414"></a><span class="lineno"> 7414</span>&#160;<span class="comment">    std::vector&lt; size_t &gt; seeds_n(nexperiments);</span></div>
+<div class="line"><a name="l07414"></a><span class="lineno"> 7414</span>&#160;<span class="comment">    std::vector&lt; int &gt; seeds_n(nexperiments);</span></div>
 <div class="line"><a name="l07415"></a><span class="lineno"> 7415</span>&#160;<span class="comment">    #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l07416"></a><span class="lineno"> 7416</span>&#160;<span class="comment">    std::fill(</span></div>
 <div class="line"><a name="l07417"></a><span class="lineno"> 7417</span>&#160;<span class="comment">        seeds_n.begin(),</span></div>
 <div class="line"><a name="l07418"></a><span class="lineno"> 7418</span>&#160;<span class="comment">        seeds_n.end(),</span></div>
 <div class="line"><a name="l07419"></a><span class="lineno"> 7419</span>&#160;<span class="comment">        std::floor(</span></div>
-<div class="line"><a name="l07420"></a><span class="lineno"> 7420</span>&#160;<span class="comment">            runif() * static_cast&lt;double&gt;(std::numeric_limits&lt;size_t&gt;::max())</span></div>
+<div class="line"><a name="l07420"></a><span class="lineno"> 7420</span>&#160;<span class="comment">            runif() * static_cast&lt;double&gt;(std::numeric_limits&lt;int&gt;::max())</span></div>
 <div class="line"><a name="l07421"></a><span class="lineno"> 7421</span>&#160;<span class="comment">        )</span></div>
 <div class="line"><a name="l07422"></a><span class="lineno"> 7422</span>&#160;<span class="comment">        );</span></div>
 <div class="line"><a name="l07423"></a><span class="lineno"> 7423</span>&#160;<span class="comment">    #else</span></div>
 <div class="line"><a name="l07424"></a><span class="lineno"> 7424</span>&#160;<span class="comment">    for (auto &amp; s : seeds_n)</span></div>
 <div class="line"><a name="l07425"></a><span class="lineno"> 7425</span>&#160;<span class="comment">    {</span></div>
-<div class="line"><a name="l07426"></a><span class="lineno"> 7426</span>&#160;<span class="comment">        s = static_cast&lt;size_t&gt;(</span></div>
+<div class="line"><a name="l07426"></a><span class="lineno"> 7426</span>&#160;<span class="comment">        s = static_cast&lt;int&gt;(</span></div>
 <div class="line"><a name="l07427"></a><span class="lineno"> 7427</span>&#160;<span class="comment">            std::floor(</span></div>
-<div class="line"><a name="l07428"></a><span class="lineno"> 7428</span>&#160;<span class="comment">                runif() * static_cast&lt;double&gt;(std::numeric_limits&lt;size_t&gt;::max())</span></div>
+<div class="line"><a name="l07428"></a><span class="lineno"> 7428</span>&#160;<span class="comment">                runif() * static_cast&lt;double&gt;(std::numeric_limits&lt;int&gt;::max())</span></div>
 <div class="line"><a name="l07429"></a><span class="lineno"> 7429</span>&#160;<span class="comment">                )</span></div>
 <div class="line"><a name="l07430"></a><span class="lineno"> 7430</span>&#160;<span class="comment">        );</span></div>
 <div class="line"><a name="l07431"></a><span class="lineno"> 7431</span>&#160;<span class="comment">    }</span></div>

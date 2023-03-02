@@ -1474,21 +1474,21 @@ $(function() {
 <div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;        this-&gt;seed(seed_);</div>
 <div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160; </div>
 <div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;    <span class="comment">// Seeds will be reproducible by default</span></div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;    std::vector&lt; size_t &gt; seeds_n(nexperiments);</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;    std::vector&lt; int &gt; seeds_n(nexperiments);</div>
 <div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;    std::fill(</div>
 <div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;        seeds_n.begin(),</div>
 <div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;        seeds_n.end(),</div>
 <div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;        std::floor(</div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;            runif() * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::numeric_limits&lt;size_t&gt;::max())</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;            runif() * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::numeric_limits&lt;int&gt;::max())</div>
 <div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;        )</div>
 <div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;        );</div>
 <div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;<span class="preprocessor">    #else</span></div>
 <div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; s : seeds_n)</div>
 <div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;    {</div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;        s = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;        s = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(</div>
 <div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;            std::floor(</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;                runif() * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::numeric_limits&lt;size_t&gt;::max())</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;                runif() * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::numeric_limits&lt;int&gt;::max())</div>
 <div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;                )</div>
 <div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;        );</div>
 <div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    }</div>
