@@ -98,9 +98,9 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt; int &gt; _degree0(agents.size(), 0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt; int &gt; _degree0(agents-&gt;size(), 0);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; _degree0.size(); ++i)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        _degree0[i] = model-&gt;population[i].get_neighbors().size();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        _degree0[i] = model-&gt;get_agents()[i].get_neighbors().size();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Identifying individuals with degree &gt; 0</span></div>
@@ -177,8 +177,8 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// end as well, since we are dealing withi an undirected graph</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// Finding what neighbour is id0</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        model-&gt;population[id0].swap_neighbors(</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            model-&gt;population[id1],</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        model-&gt;get_agents()[id0].swap_neighbors(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            model-&gt;get_agents()[id1],</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            id01,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            id11</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            );</div>
@@ -189,7 +189,7 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> _i = 0u; _i &lt; _degree0.size(); ++_i)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (_degree0[_i] != model-&gt;population[_i].n_neighbors)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (_degree0[_i] != <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(model-&gt;get_agents()[_i].get_n_neighbors()))</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;[epi-debug] Degree does not match afted rewire_degseq.&quot;</span>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">    #endif</span></div>

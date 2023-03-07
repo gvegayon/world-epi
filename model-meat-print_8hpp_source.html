@@ -326,32 +326,32 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        fmt = <span class="stringliteral">&quot;  - (%&quot;</span> + std::to_string(nstatus).length() +</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            std::string(<span class="stringliteral">&quot;d) %-&quot;</span>) + std::to_string(nchar) + <span class="stringliteral">&quot;s : %i\n&quot;</span>;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;\nDistribution of the population at time %i:\n&quot;</span>, today());</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s = 0u; s &lt; nstatus; ++s)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">if</span> (today() != 0)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">if</span> (today() != 0)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\nDistribution of the population at time %i:\n&quot;</span>, today());</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s = 0u; s &lt; nstatus; ++s)</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        {</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            printf_epiworld(</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                fmt.c_str(),</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                s,</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                status_labels[s].c_str(),</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                db.hist_total_counts[s],</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                db.today_total[ s ]</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                );</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                printf_epiworld(</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    fmt.c_str(),</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    s,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    status_labels[s].c_str(),</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    db.hist_total_counts[s],</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                    db.today_total[ s ]</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    );</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">// else</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="comment">// {</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            printf_epiworld(</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                fmt.c_str(),</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                s,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                status_labels[s].c_str(),</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                db.today_total[ s ]</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                );</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="comment">//     printf_epiworld(</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="comment">//         fmt.c_str(),</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="comment">//         s,</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="comment">//         status_labels[s].c_str(),</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="comment">//         db.today_total[ s ]</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="comment">//         );</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="comment">// }</span></div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (today() != 0)</div>
