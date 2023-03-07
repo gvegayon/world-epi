@@ -925,7 +925,7 @@ $(function() {
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="keywordflow">if</span> (i &gt;= n_entities)</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Trying to get to an agent&#39;s entity outside of the range.&quot;</span>);</div>
 <div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">return</span> model-&gt;entities[i];</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">return</span> model-&gt;entities[entities[i]];</div>
 <div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;}</div>
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -934,7 +934,7 @@ $(function() {
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    <span class="keywordflow">if</span> (i &gt;= n_entities)</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Trying to get to an agent&#39;s entity outside of the range.&quot;</span>);</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160; </div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordflow">return</span> model-&gt;entities[i];</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordflow">return</span> model-&gt;entities[entities[i]];</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;}</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
