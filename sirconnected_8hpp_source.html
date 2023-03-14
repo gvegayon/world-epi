@@ -184,7 +184,7 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">/* Listing who is infected */</span> </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : m-&gt;get_agents())</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">if</span> (p.get_status() == <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">if</span> (p.get_state() == <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    m-&gt;tracked_agents_infected.push_back(&amp;p);</div>
@@ -317,9 +317,9 @@ $(function() {
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        };</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// Status</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    model.add_status(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    model.add_status(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    model.add_status(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// Setting up parameters</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    model.add_param(reproductive_number, <span class="stringliteral">&quot;Beta&quot;</span>);</div>
@@ -329,7 +329,7 @@ $(function() {
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    </div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    virus.set_status(1, 2, 2);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    virus.set_state(1, 2, 2);</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    model.add_virus(virus, prevalence);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>

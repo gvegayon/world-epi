@@ -71,8 +71,8 @@ void \mbox{\hyperlink{class_model_adc3b2119335ffa4b0128123be919f454}{add\+\_\+gl
 \mbox{\Hypertarget{class_model_acd6c8412beb06a0f0e143cfd09074362}\label{class_model_acd6c8412beb06a0f0e143cfd09074362}} 
 void {\bfseries run\+\_\+global\+\_\+actions} ()
 \item 
-\mbox{\Hypertarget{class_model_ae5a8909a9e6c74d41e2af9b0e0fd45d2}\label{class_model_ae5a8909a9e6c74d41e2af9b0e0fd45d2}} 
-void {\bfseries clear\+\_\+status\+\_\+set} ()
+\mbox{\Hypertarget{class_model_a84831ba0572d1be16352ecdb3490940a}\label{class_model_a84831ba0572d1be16352ecdb3490940a}} 
+void {\bfseries clear\+\_\+state\+\_\+set} ()
 \item 
 \mbox{\Hypertarget{class_model_af5c3197e72237ff481e7bd07e58dd80a}\label{class_model_af5c3197e72237ff481e7bd07e58dd80a}} 
 const std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+viruses} () const
@@ -251,8 +251,8 @@ void {\bfseries agents\+\_\+empty\+\_\+graph} (epiworld\+\_\+fast\+\_\+uint n=10
 \end{DoxyParams}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_ae551e7b2be3d8fb3d3d857153681aa94}\label{class_model_ae551e7b2be3d8fb3d3d857153681aa94}} 
-void {\bfseries update\+\_\+status} ()
+\mbox{\Hypertarget{class_model_a611dc22360dfb5664ad85accd0f2be82}\label{class_model_a611dc22360dfb5664ad85accd0f2be82}} 
+void {\bfseries update\+\_\+state} ()
 \item 
 \mbox{\Hypertarget{class_model_ae9912f5a26a38ac64e6499ccc4d897cb}\label{class_model_ae9912f5a26a38ac64e6499ccc4d897cb}} 
 void {\bfseries mutate\+\_\+variant} ()
@@ -311,32 +311,32 @@ void {\bfseries write\+\_\+edgelist} (std\+::string fn) const
 void {\bfseries write\+\_\+edgelist} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&source, std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&target) const
 \end{DoxyCompactItemize}
 \end{Indent}
-\begin{Indent}\textbf{ Manage status (states) in the model}\par
-{\em The functions {\ttfamily get\+\_\+status} return the current values for the statuses included in the model.
+\begin{Indent}\textbf{ Manage state (states) in the model}\par
+{\em The functions {\ttfamily get\+\_\+state} return the current values for the states included in the model.
 
 
 \begin{DoxyParams}{Parameters}
-{\em lab} & {\ttfamily std\+::string} Name of the status.\\
+{\em lab} & {\ttfamily std\+::string} Name of the state.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-{\ttfamily add\+\_\+status$\ast$} returns nothing. 
+{\ttfamily add\+\_\+state$\ast$} returns nothing. 
 
-{\ttfamily get\+\_\+status\+\_\+$\ast$} returns a vector of pairs with the statuses and their labels. 
+{\ttfamily get\+\_\+state\+\_\+$\ast$} returns a vector of pairs with the states and their labels. 
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_a0d889d940256492431efc02e868f6b9f}\label{class_model_a0d889d940256492431efc02e868f6b9f}} 
-void {\bfseries add\+\_\+status} (std\+::string lab, Update\+Fun$<$ TSeq $>$ fun=nullptr)
+\mbox{\Hypertarget{class_model_aa4a925f77087c2cc4fe21eb9671b5f49}\label{class_model_aa4a925f77087c2cc4fe21eb9671b5f49}} 
+void {\bfseries add\+\_\+state} (std\+::string lab, Update\+Fun$<$ TSeq $>$ fun=nullptr)
 \item 
-\mbox{\Hypertarget{class_model_a04638c66ef9993f611a50d3da7e2df1d}\label{class_model_a04638c66ef9993f611a50d3da7e2df1d}} 
-const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+status} () const
+\mbox{\Hypertarget{class_model_a2a4345941f861ff94585ed5f42a36650}\label{class_model_a2a4345941f861ff94585ed5f42a36650}} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+state} () const
 \item 
-\mbox{\Hypertarget{class_model_a4f10774b783ba77434998fe54fb47ae7}\label{class_model_a4f10774b783ba77434998fe54fb47ae7}} 
-const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+status\+\_\+fun} () const
+\mbox{\Hypertarget{class_model_a50c2560ee67de2691becdb552431f3c4}\label{class_model_a50c2560ee67de2691becdb552431f3c4}} 
+const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+state\+\_\+fun} () const
 \item 
-\mbox{\Hypertarget{class_model_a280daf95b8f2f81f19297816ac319a82}\label{class_model_a280daf95b8f2f81f19297816ac319a82}} 
-void {\bfseries print\+\_\+status\+\_\+codes} () const
+\mbox{\Hypertarget{class_model_a3615e07c021900ab8f80ad202509f231}\label{class_model_a3615e07c021900ab8f80ad202509f231}} 
+void {\bfseries print\+\_\+state\+\_\+codes} () const
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Setting and accessing parameters from the model}\par
@@ -643,7 +643,7 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 \hline
 {\em fn\+\_\+tool\+\_\+hist} & Filename. History of the tool. \\
 \hline
-{\em fn\+\_\+total\+\_\+hist} & Filename. Aggregated history (status) \\
+{\em fn\+\_\+total\+\_\+hist} & Filename. Aggregated history (state) \\
 \hline
 {\em fn\+\_\+transmission} & Filename. Transmission history. \\
 \hline

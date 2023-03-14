@@ -78,9 +78,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9bbda9f410bea38da0dd4058ee32afaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_action.html#a9bbda9f410bea38da0dd4058ee32afaf">Action</a> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_status_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
-<tr class="memdesc:a9bbda9f410bea38da0dd4058ee32afaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="struct_action.html" title="Action data for update an agent.">Action</a> object.  <a href="struct_action.html#a9bbda9f410bea38da0dd4058ee32afaf">More...</a><br /></td></tr>
-<tr class="separator:a9bbda9f410bea38da0dd4058ee32afaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e0c388994f0eccd07840a6befeb691"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_action.html#ab9e0c388994f0eccd07840a6befeb691">Action</a> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
+<tr class="memdesc:ab9e0c388994f0eccd07840a6befeb691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="struct_action.html" title="Action data for update an agent.">Action</a> object.  <a href="struct_action.html#ab9e0c388994f0eccd07840a6befeb691">More...</a><br /></td></tr>
+<tr class="separator:ab9e0c388994f0eccd07840a6befeb691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -96,9 +96,9 @@ ToolPtr&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tool
 <tr class="memitem:ace2e96ce58c1a2604ac7b5953b87a093"><td class="memItemLeft" align="right" valign="top"><a id="ace2e96ce58c1a2604ac7b5953b87a093"></a>
 <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
 <tr class="separator:ace2e96ce58c1a2604ac7b5953b87a093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f217ed63a2686c44289c7cf44adcd3"><td class="memItemLeft" align="right" valign="top"><a id="af8f217ed63a2686c44289c7cf44adcd3"></a>
-epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>new_status</b></td></tr>
-<tr class="separator:af8f217ed63a2686c44289c7cf44adcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34787fba103835942920cc32172a9c3f"><td class="memItemLeft" align="right" valign="top"><a id="a34787fba103835942920cc32172a9c3f"></a>
+epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>new_state</b></td></tr>
+<tr class="separator:a34787fba103835942920cc32172a9c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd1adb86ddd583cf4ca75fd536d7be4"><td class="memItemLeft" align="right" valign="top"><a id="aacd1adb86ddd583cf4ca75fd536d7be4"></a>
 epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
 <tr class="separator:aacd1adb86ddd583cf4ca75fd536d7be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +124,8 @@ struct Action&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9bbda9f410bea38da0dd4058ee32afaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bbda9f410bea38da0dd4058ee32afaf">&#9670;&nbsp;</a></span>Action()</h2>
+<a id="ab9e0c388994f0eccd07840a6befeb691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e0c388994f0eccd07840a6befeb691">&#9670;&nbsp;</a></span>Action()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +163,7 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_fast_int&#160;</td>
-          <td class="paramname"><em>new_status_</em>, </td>
+          <td class="paramname"><em>new_state_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -211,7 +211,7 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">tool_</td><td><a class="el" href="class_tool.html" title="Tools for defending the agent against the virus.">Tool</a> to add </td></tr>
     <tr><td class="paramname">virus_idx</td><td>Index of virus to be removed (if needed) </td></tr>
     <tr><td class="paramname">tool_idx</td><td>Index of tool to be removed (if needed) </td></tr>
-    <tr><td class="paramname">new_status_</td><td>Next status </td></tr>
+    <tr><td class="paramname">new_state_</td><td>Next state </td></tr>
     <tr><td class="paramname">queue_</td><td>Efect on the queue </td></tr>
     <tr><td class="paramname">call_</td><td>The action call (if needed) </td></tr>
     <tr><td class="paramname">idx_agent_</td><td>Location of agent in object. </td></tr>

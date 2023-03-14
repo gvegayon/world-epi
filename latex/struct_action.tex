@@ -12,7 +12,7 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_action_a9bbda9f410bea38da0dd4058ee32afaf}{Action}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+int new\+\_\+status\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
+\mbox{\hyperlink{struct_action_ab9e0c388994f0eccd07840a6befeb691}{Action}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+int new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{struct_action}{Action}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -29,8 +29,8 @@ Tool\+Ptr$<$ TSeq $>$ {\bfseries tool}
 \mbox{\Hypertarget{struct_action_ace2e96ce58c1a2604ac7b5953b87a093}\label{struct_action_ace2e96ce58c1a2604ac7b5953b87a093}} 
 \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$ {\bfseries entity}
 \item 
-\mbox{\Hypertarget{struct_action_af8f217ed63a2686c44289c7cf44adcd3}\label{struct_action_af8f217ed63a2686c44289c7cf44adcd3}} 
-epiworld\+\_\+fast\+\_\+int {\bfseries new\+\_\+status}
+\mbox{\Hypertarget{struct_action_a34787fba103835942920cc32172a9c3f}\label{struct_action_a34787fba103835942920cc32172a9c3f}} 
+epiworld\+\_\+fast\+\_\+int {\bfseries new\+\_\+state}
 \item 
 \mbox{\Hypertarget{struct_action_aacd1adb86ddd583cf4ca75fd536d7be4}\label{struct_action_aacd1adb86ddd583cf4ca75fd536d7be4}} 
 epiworld\+\_\+fast\+\_\+int {\bfseries queue}
@@ -60,12 +60,12 @@ struct Action$<$ TSeq $>$}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{struct_action_a9bbda9f410bea38da0dd4058ee32afaf}\label{struct_action_a9bbda9f410bea38da0dd4058ee32afaf}} 
+\mbox{\Hypertarget{struct_action_ab9e0c388994f0eccd07840a6befeb691}\label{struct_action_ab9e0c388994f0eccd07840a6befeb691}} 
 \index{Action$<$ TSeq $>$@{Action$<$ TSeq $>$}!Action@{Action}}
 \index{Action@{Action}!Action$<$ TSeq $>$@{Action$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{Action()}{Action()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{struct_action}{Action}}$<$ TSeq $>$\+::\mbox{\hyperlink{struct_action}{Action}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{new\+\_\+status\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{struct_action}{Action}}$<$ TSeq $>$\+::\mbox{\hyperlink{struct_action}{Action}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{new\+\_\+state\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -85,7 +85,7 @@ All the parameters are rather optional.
 \hline
 {\em tool\+\_\+idx} & Index of tool to be removed (if needed) \\
 \hline
-{\em new\+\_\+status\+\_\+} & Next status \\
+{\em new\+\_\+state\+\_\+} & Next state \\
 \hline
 {\em queue\+\_\+} & Efect on the queue \\
 \hline

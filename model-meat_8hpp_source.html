@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    VirusPtr&lt;TSeq&gt; virus_,</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    ToolPtr&lt;TSeq&gt; tool_,</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * entity_,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    epiworld_fast_uint new_status_,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    epiworld_fast_uint new_state_,</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    epiworld_fast_int queue_,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    ActionFun&lt;TSeq&gt; call_,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> idx_agent_,</div>
@@ -224,7 +224,7 @@ $(function() {
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        actions.push_back(</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <a class="code" href="struct_action.html">Action&lt;TSeq&gt;</a>(</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                agent_, virus_, tool_, entity_, new_status_, queue_, call_,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                agent_, virus_, tool_, entity_, new_state_, queue_, call_,</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                idx_agent_, idx_object_</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            ));</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
@@ -238,7 +238,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        A.virus      = virus_;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        A.tool       = tool_;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        A.entity     = entity_;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        A.new_status = new_status_;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        A.new_state = new_state_;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        A.queue      = queue_;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        A.call       = call_;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        A.idx_agent  = idx_agent_;</div>
@@ -266,57 +266,57 @@ $(function() {
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            a.call(a, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Updating status</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>epiworld_fast_int<span class="keyword">&gt;</span>(p-&gt;status) != a.new_status)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Updating state</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>epiworld_fast_int<span class="keyword">&gt;</span>(p-&gt;state) != a.new_state)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (a.new_status &gt;= <span class="keyword">static_cast&lt;</span>epiworld_fast_int<span class="keyword">&gt;</span>(nstatus))</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (a.new_state &gt;= <span class="keyword">static_cast&lt;</span>epiworld_fast_int<span class="keyword">&gt;</span>(nstatus))</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">throw</span> std::range_error(</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="stringliteral">&quot;The proposed status &quot;</span> + std::to_string(a.new_status) + <span class="stringliteral">&quot; is out of range. &quot;</span> +</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    <span class="stringliteral">&quot;The model currently has &quot;</span> + std::to_string(nstatus - 1) + <span class="stringliteral">&quot; statuses.&quot;</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="stringliteral">&quot;The proposed state &quot;</span> + std::to_string(a.new_state) + <span class="stringliteral">&quot; is out of range. &quot;</span> +</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    <span class="stringliteral">&quot;The model currently has &quot;</span> + std::to_string(nstatus - 1) + <span class="stringliteral">&quot; states.&quot;</span>);</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="comment">// Figuring out if we need to undo a change</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">// If the agent has made a change in the status recently, then we</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">// If the agent has made a change in the state recently, then we</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="comment">// need to undo the accounting, e.g., if A-&gt;B was made, we need to</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="comment">// undo it and set B-&gt;A so that the daily accounting is right.</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (p-&gt;status_last_changed == today())</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="comment">// Updating accounting</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                db.update_state(p-&gt;status_prev, p-&gt;status, <span class="keyword">true</span>); <span class="comment">// Undoing</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                db.update_state(p-&gt;status_prev, a.new_status);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                db.update_state(p-&gt;status_prev, p-&gt;state, <span class="keyword">true</span>); <span class="comment">// Undoing</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                db.update_state(p-&gt;status_prev, a.new_state);</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v = 0u; v &lt; p-&gt;n_viruses; ++v)</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;status, p-&gt;status_prev); <span class="comment">// Undoing</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;status_prev, a.new_status);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;state, p-&gt;status_prev); <span class="comment">// Undoing</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;status_prev, a.new_state);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> t = 0u; t &lt; p-&gt;n_tools; ++t)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;status, p-&gt;status_prev); <span class="comment">// Undoing</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;status_prev, a.new_status);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;state, p-&gt;status_prev); <span class="comment">// Undoing</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;status_prev, a.new_state);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                <span class="comment">// Changing to the new status, we won&#39;t update the</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="comment">// previous status in case we need to undo the change</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                p-&gt;status = a.new_status;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                <span class="comment">// Changing to the new state, we won&#39;t update the</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="comment">// previous state in case we need to undo the change</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                p-&gt;state = a.new_state;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="comment">// Updating accounting</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                db.update_state(p-&gt;status, a.new_status);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                db.update_state(p-&gt;state, a.new_state);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v = 0u; v &lt; p-&gt;n_viruses; ++v)</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;status, a.new_status);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    db.update_virus(p-&gt;viruses[v]-&gt;id, p-&gt;state, a.new_state);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> t = 0u; t &lt; p-&gt;n_tools; ++t)</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;status, a.new_status);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    db.update_tool(p-&gt;tools[t]-&gt;id, p-&gt;state, a.new_state);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="comment">// Saving the last status and setting the new one</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                p-&gt;status_prev = p-&gt;status;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                p-&gt;status      = a.new_status;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="comment">// Saving the last state and setting the new one</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                p-&gt;status_prev = p-&gt;state;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                p-&gt;state      = a.new_state;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="comment">// It used to be a day before, but we still</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                p-&gt;status_last_changed = today();</div>
@@ -326,10 +326,10 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">        #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(p-&gt;status) &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(nstatus))</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(p-&gt;state) &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(nstatus))</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                <span class="keywordflow">throw</span> std::range_error(</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="stringliteral">&quot;The new status &quot;</span> + std::to_string(p-&gt;status) + <span class="stringliteral">&quot; is out of range. &quot;</span> +</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    <span class="stringliteral">&quot;The model currently has &quot;</span> + std::to_string(nstatus - 1) + <span class="stringliteral">&quot; statuses.&quot;</span>);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="stringliteral">&quot;The new state &quot;</span> + std::to_string(p-&gt;state) + <span class="stringliteral">&quot; is out of range. &quot;</span> +</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    <span class="stringliteral">&quot;The model currently has &quot;</span> + std::to_string(nstatus - 1) + <span class="stringliteral">&quot; states.&quot;</span>);</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">        #endif</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// Updating queue</span></div>
@@ -1083,17 +1083,17 @@ $(function() {
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <span class="keywordflow">if</span> (preval &lt; 0.0)</div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Prevalence of virus cannot be negative&quot;</span>);</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160; </div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <span class="comment">// Checking the status</span></div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <span class="comment">// Checking the state</span></div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    epiworld_fast_int init_, post_, rm_;</div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    v.get_status(&amp;init_, &amp;post_, &amp;rm_);</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    v.get_state(&amp;init_, &amp;post_, &amp;rm_);</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;    <span class="keywordflow">if</span> (init_ == -99)</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- status.&quot;</span></div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- state.&quot;</span></div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;            );</div>
 <div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (post_ == -99)</div>
 <div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- status.&quot;</span></div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- state.&quot;</span></div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;            );</div>
 <div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;    </div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    <span class="comment">// Recording the variant</span></div>
@@ -1113,15 +1113,15 @@ $(function() {
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160; </div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="comment">// Checking the ids</span></div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    epiworld_fast_int init_, post_, rm_;</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    v.get_status(&amp;init_, &amp;post_, &amp;rm_);</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    v.get_state(&amp;init_, &amp;post_, &amp;rm_);</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160; </div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keywordflow">if</span> (init_ == -99)</div>
 <div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- status.&quot;</span></div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- state.&quot;</span></div>
 <div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;            );</div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (post_ == -99)</div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- status.&quot;</span></div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- state.&quot;</span></div>
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;            );</div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160; </div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <span class="comment">// Setting the id</span></div>
@@ -1141,15 +1141,15 @@ $(function() {
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160; </div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;    <span class="comment">// Checking the ids</span></div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;    epiworld_fast_int init_, post_, rm_;</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;    v.get_status(&amp;init_, &amp;post_, &amp;rm_);</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;    v.get_state(&amp;init_, &amp;post_, &amp;rm_);</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160; </div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    <span class="keywordflow">if</span> (init_ == -99)</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- status.&quot;</span></div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -init- state.&quot;</span></div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;            );</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (post_ == -99)</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- status.&quot;</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;            <span class="stringliteral">&quot;The virus \&quot;&quot;</span> + v.get_name() + <span class="stringliteral">&quot;\&quot; has no -post- state.&quot;</span></div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;            );</div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160; </div>
 <div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <span class="comment">// Setting the id</span></div>
@@ -1400,8 +1400,8 @@ $(function() {
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160; </div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;    <span class="keywordflow">if</span> (nstatus == 0u)</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;            std::string(<span class="stringliteral">&quot;No statuses registered in this model. &quot;</span>) +</div>
-<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            std::string(<span class="stringliteral">&quot;At least one status should be included. See the function -Model::add_status()-&quot;</span>)</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;            std::string(<span class="stringliteral">&quot;No states registered in this model. &quot;</span>) +</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            std::string(<span class="stringliteral">&quot;At least one state should be included. See the function -Model::add_state()-&quot;</span>)</div>
 <div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;            );</div>
 <div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160; </div>
 <div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;    <span class="comment">// Setting up the number of steps</span></div>
@@ -1413,42 +1413,42 @@ $(function() {
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;    array_double_tmp.resize(size()/2, 0.0);</div>
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;    array_virus_tmp.resize(size()/2);</div>
 <div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160; </div>
-<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;    <span class="comment">// Checking whether the proposed status in/out/removed</span></div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;    <span class="comment">// Checking whether the proposed state in/out/removed</span></div>
 <div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;    <span class="comment">// are valid</span></div>
 <div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;    epiworld_fast_int _init, _end, _removed;</div>
 <div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;    <span class="keywordtype">int</span> nstatus_int = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(nstatus);</div>
 <div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; v : viruses)</div>
 <div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;    {</div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;        v-&gt;get_status(&amp;_init, &amp;_end, &amp;_removed);</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;        v-&gt;get_state(&amp;_init, &amp;_end, &amp;_removed);</div>
 <div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;        </div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;        <span class="comment">// Negative unspecified status</span></div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;        <span class="comment">// Negative unspecified state</span></div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        <span class="keywordflow">if</span> (((_init != -99) &amp;&amp; (_init &lt; 0)) || (_init &gt;= nstatus_int))</div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Statuses must be between 0 and &quot;</span> +</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;States must be between 0 and &quot;</span> +</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;                std::to_string(nstatus - 1));</div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160; </div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        <span class="comment">// Negative unspecified status</span></div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        <span class="comment">// Negative unspecified state</span></div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;        <span class="keywordflow">if</span> (((_end != -99) &amp;&amp; (_end &lt; 0)) || (_end &gt;= nstatus_int))</div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Statuses must be between 0 and &quot;</span> +</div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;States must be between 0 and &quot;</span> +</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;                std::to_string(nstatus - 1));</div>
 <div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160; </div>
 <div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;        <span class="keywordflow">if</span> (((_removed != -99) &amp;&amp; (_removed &lt; 0)) || (_removed &gt;= nstatus_int))</div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Statuses must be between 0 and &quot;</span> +</div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;States must be between 0 and &quot;</span> +</div>
 <div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;                std::to_string(nstatus - 1));</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160; </div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;    }</div>
 <div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160; </div>
 <div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; t : tools)</div>
 <div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;    {</div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        t-&gt;get_status(&amp;_init, &amp;_end);</div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        t-&gt;get_state(&amp;_init, &amp;_end);</div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;        </div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        <span class="comment">// Negative unspecified status</span></div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        <span class="comment">// Negative unspecified state</span></div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;        <span class="keywordflow">if</span> (((_init != -99) &amp;&amp; (_init &lt; 0)) || (_init &gt;= nstatus_int))</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Statuses must be between 0 and &quot;</span> +</div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;States must be between 0 and &quot;</span> +</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;                std::to_string(nstatus - 1));</div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160; </div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;        <span class="comment">// Negative unspecified status</span></div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;        <span class="comment">// Negative unspecified state</span></div>
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;        <span class="keywordflow">if</span> (((_end != -99) &amp;&amp; (_end &lt; 0)) || (_end &gt;= nstatus_int))</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;Statuses must be between 0 and &quot;</span> +</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;            <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;States must be between 0 and &quot;</span> +</div>
 <div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;                std::to_string(nstatus - 1));</div>
 <div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160; </div>
 <div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;    }</div>
@@ -1468,7 +1468,7 @@ $(function() {
 <div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160; </div>
 <div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;        <span class="comment">// We can execute these components in whatever order the</span></div>
 <div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;        <span class="comment">// user needs.</span></div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;        this-&gt;update_status();</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;        this-&gt;update_state();</div>
 <div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;    </div>
 <div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;        <span class="comment">// We start with the global actions</span></div>
 <div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;        this-&gt;run_global_actions();</div>
@@ -1672,17 +1672,17 @@ $(function() {
 <div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;}</div>
 <div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160; </div>
 <div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::update_status</a>() {</div>
+<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::update_state</a>() {</div>
 <div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160; </div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;    <span class="comment">// Next status</span></div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;    <span class="comment">// Next state</span></div>
 <div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;    <span class="keywordflow">if</span> (use_queuing)</div>
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;    {</div>
 <div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;        <span class="keywordtype">int</span> i = -1;</div>
 <div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p: population)</div>
 <div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;            <span class="keywordflow">if</span> (queue[++i] &gt; 0)</div>
 <div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;            {</div>
-<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;                <span class="keywordflow">if</span> (status_fun[p.status])</div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;                    status_fun[p.status](&amp;p, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;                <span class="keywordflow">if</span> (status_fun[p.state])</div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;                    status_fun[p.state](&amp;p, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;            }</div>
 <div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160; </div>
 <div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;    }</div>
@@ -1690,8 +1690,8 @@ $(function() {
 <div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;    {</div>
 <div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160; </div>
 <div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p: population)</div>
-<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;            <span class="keywordflow">if</span> (status_fun[p.status])</div>
-<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;                    status_fun[p.status](&amp;p, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;            <span class="keywordflow">if</span> (status_fun[p.state])</div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;                    status_fun[p.state](&amp;p, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160; </div>
 <div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;    }</div>
 <div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160; </div>
@@ -1988,7 +1988,7 @@ $(function() {
 <div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160; </div>
 <div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160; </div>
 <div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_status</a>(</div>
+<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::add_state</a>(</div>
 <div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;    std::string lab, </div>
 <div class="line"><a name="l01948"></a><span class="lineno"> 1948</span>&#160;    UpdateFun&lt;TSeq&gt; fun</div>
 <div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;)</div>
@@ -1997,7 +1997,7 @@ $(function() {
 <div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;    <span class="comment">// Checking it doesn&#39;t match</span></div>
 <div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; s : status_labels)</div>
 <div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;        <span class="keywordflow">if</span> (s == lab)</div>
-<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Status \&quot;&quot;</span> + s + <span class="stringliteral">&quot;\&quot; already registered.&quot;</span>);</div>
+<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;state \&quot;&quot;</span> + s + <span class="stringliteral">&quot;\&quot; already registered.&quot;</span>);</div>
 <div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160; </div>
 <div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;    status_labels.push_back(lab);</div>
 <div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;    status_fun.push_back(fun);</div>
@@ -2008,20 +2008,20 @@ $(function() {
 <div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160; </div>
 <div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; std::string &gt; &amp;</div>
-<div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_status</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_state</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;    <span class="keywordflow">return</span> status_labels;</div>
 <div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;}</div>
 <div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160; </div>
 <div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; UpdateFun&lt;TSeq&gt; &gt; &amp;</div>
-<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_status_fun</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_state_fun</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l01975"></a><span class="lineno"> 1975</span>&#160;    <span class="keywordflow">return</span> status_fun;</div>
 <div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160;}</div>
 <div class="line"><a name="l01977"></a><span class="lineno"> 1977</span>&#160; </div>
 <div class="line"><a name="l01978"></a><span class="lineno"> 1978</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l01979"></a><span class="lineno"> 1979</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::print_status_codes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l01979"></a><span class="lineno"> 1979</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::print_state_codes</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160; </div>
 <div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;    <span class="comment">// Horizontal line</span></div>
@@ -2474,7 +2474,7 @@ $(function() {
 <div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;    VECT_MATCH(</div>
 <div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;        status_labels,</div>
 <div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;        other.status_labels,</div>
-<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;        &quot;status labels don&#39;t match&quot;</div>
+<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;        &quot;state labels don&#39;t match&quot;</div>
 <div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;    )</div>
 <div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160; </div>
 <div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>

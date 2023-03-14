@@ -82,9 +82,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b4d766f062bfbbcca2f7a09e17a1c43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepiworld_1_1_action.html#a4b4d766f062bfbbcca2f7a09e17a1c43">Action</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_status_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
-<tr class="memdesc:a4b4d766f062bfbbcca2f7a09e17a1c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a> object.  <a href="structepiworld_1_1_action.html#a4b4d766f062bfbbcca2f7a09e17a1c43">More...</a><br /></td></tr>
-<tr class="separator:a4b4d766f062bfbbcca2f7a09e17a1c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7b611d79cc86d8772381ed0b7d8922"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepiworld_1_1_action.html#a6d7b611d79cc86d8772381ed0b7d8922">Action</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
+<tr class="memdesc:a6d7b611d79cc86d8772381ed0b7d8922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a> object.  <a href="structepiworld_1_1_action.html#a6d7b611d79cc86d8772381ed0b7d8922">More...</a><br /></td></tr>
+<tr class="separator:a6d7b611d79cc86d8772381ed0b7d8922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -100,9 +100,9 @@ ToolPtr&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tool
 <tr class="memitem:ad5b387cfa208e7b8fea8a67f722e3869"><td class="memItemLeft" align="right" valign="top"><a id="ad5b387cfa208e7b8fea8a67f722e3869"></a>
 <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
 <tr class="separator:ad5b387cfa208e7b8fea8a67f722e3869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a141fbf7fa6e10bb2be68f6eed77c4518"><td class="memItemLeft" align="right" valign="top"><a id="a141fbf7fa6e10bb2be68f6eed77c4518"></a>
-epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>new_status</b></td></tr>
-<tr class="separator:a141fbf7fa6e10bb2be68f6eed77c4518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9708b6ce6f148d28a6076873856d9f90"><td class="memItemLeft" align="right" valign="top"><a id="a9708b6ce6f148d28a6076873856d9f90"></a>
+epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>new_state</b></td></tr>
+<tr class="separator:a9708b6ce6f148d28a6076873856d9f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e95fc273b559f44c8751c1abe388ce"><td class="memItemLeft" align="right" valign="top"><a id="a18e95fc273b559f44c8751c1abe388ce"></a>
 epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
 <tr class="separator:a18e95fc273b559f44c8751c1abe388ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,8 +128,8 @@ struct epiworld::Action&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4b4d766f062bfbbcca2f7a09e17a1c43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b4d766f062bfbbcca2f7a09e17a1c43">&#9670;&nbsp;</a></span>Action()</h2>
+<a id="a6d7b611d79cc86d8772381ed0b7d8922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7b611d79cc86d8772381ed0b7d8922">&#9670;&nbsp;</a></span>Action()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +167,7 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_fast_int&#160;</td>
-          <td class="paramname"><em>new_status_</em>, </td>
+          <td class="paramname"><em>new_state_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -215,7 +215,7 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">tool_</td><td><a class="el" href="classepiworld_1_1_tool.html" title="Tools for defending the agent against the virus.">Tool</a> to add </td></tr>
     <tr><td class="paramname">virus_idx</td><td>Index of virus to be removed (if needed) </td></tr>
     <tr><td class="paramname">tool_idx</td><td>Index of tool to be removed (if needed) </td></tr>
-    <tr><td class="paramname">new_status_</td><td>Next status </td></tr>
+    <tr><td class="paramname">new_state_</td><td>Next state </td></tr>
     <tr><td class="paramname">queue_</td><td>Efect on the queue </td></tr>
     <tr><td class="paramname">call_</td><td>The action call (if needed) </td></tr>
     <tr><td class="paramname">idx_agent_</td><td>Location of agent in object. </td></tr>

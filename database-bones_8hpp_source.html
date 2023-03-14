@@ -119,10 +119,10 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::function&lt;std::vector&lt;int&gt;(<span class="keyword">const</span> TSeq&amp;)&gt; seq_hasher = default_seq_hasher&lt;TSeq&gt;;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::function&lt;std::string(<span class="keyword">const</span> TSeq &amp;)&gt; seq_writer = default_seq_writer&lt;TSeq&gt;;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::vector&lt; std::vector&lt;int&gt; &gt; today_variant;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::vector&lt; std::vector&lt;int&gt; &gt; today_tool;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// {Susceptible, Infected, etc.}</span></div>
@@ -136,19 +136,19 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// Variants history</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::vector&lt; int &gt; hist_variant_date;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::vector&lt; int &gt; hist_variant_id;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_variant_status;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_variant_state;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::vector&lt; int &gt; hist_variant_counts;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Tools history</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt; int &gt; hist_tool_date;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::vector&lt; int &gt; hist_tool_id;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_tool_status;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_tool_state;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::vector&lt; int &gt; hist_tool_counts;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// Overall hist</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::vector&lt; int &gt; hist_total_date;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt; int &gt; hist_total_nvariants_active;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_total_status;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; hist_total_state;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::vector&lt; int &gt; hist_total_counts;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt; int &gt; hist_transition_matrix;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
@@ -164,21 +164,21 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_user_data.html">UserData&lt;TSeq&gt;</a> user_data;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> update_state(</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        epiworld_fast_uint new_status,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        epiworld_fast_uint new_state,</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">bool</span> undo = <span class="keyword">false</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> update_virus(</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        epiworld_fast_uint virus_id,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        epiworld_fast_uint new_status</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        epiworld_fast_uint new_state</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> update_tool(</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        epiworld_fast_uint tool_id,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        epiworld_fast_uint new_status</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        epiworld_fast_uint new_state</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    );</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> record_transition(epiworld_fast_uint from, epiworld_fast_uint to, <span class="keywordtype">bool</span> undo);</div>
@@ -210,26 +210,26 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">int</span> get_today_total(std::string what) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">int</span> get_today_total(epiworld_fast_uint what) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> get_today_total(</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::vector&lt; std::string &gt; * status = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::vector&lt; std::string &gt; * state = <span class="keyword">nullptr</span>,</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        std::vector&lt; int &gt; * counts = <span class="keyword">nullptr</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> get_today_variant(</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        std::vector&lt; std::string &gt; &amp; status,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        std::vector&lt; std::string &gt; &amp; state,</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        std::vector&lt; int &gt; &amp; <span class="keywordtype">id</span>,</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        std::vector&lt; int &gt; &amp; counts</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> get_hist_total(</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        std::vector&lt; int &gt; * date,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        std::vector&lt; std::string &gt; * status,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        std::vector&lt; std::string &gt; * state,</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        std::vector&lt; int &gt; * counts</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> get_hist_variant(</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::vector&lt; int &gt; &amp; date,</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        std::vector&lt; int &gt; &amp; <span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        std::vector&lt; std::string &gt; &amp; status,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        std::vector&lt; std::string &gt; &amp; state,</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        std::vector&lt; int &gt; &amp; counts</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>

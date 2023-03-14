@@ -90,13 +90,13 @@ Algorithm</h1>
 <li>Create global events (e.g., surveillance).</li>
 <li>Set up the population: small world network (default).</li>
 <li>Set up rewiring (optional).</li>
-<li>Set statuses (arbitrary number of them).</li>
+<li>Set states (arbitrary number of them).</li>
 </ul>
 <p>Run</p>
 <ol type="1">
 <li>Distribute the tool(s) and virus(es)</li>
 <li>For each t in 1 -&gt; Duration:<ul>
-<li>Update status for susceptible/infected/removed(?)</li>
+<li>Update state for susceptible/infected/removed(?)</li>
 <li>Mutate virus(es) (each individual)</li>
 <li>Run global actions (e.g., surveillance)</li>
 <li>Run rewiring algorithm</li>
@@ -261,7 +261,7 @@ Preliminary results</h2>
 <div class="line">  cbind(sim = as.character(s_levels[1]), hist1),</div>
 <div class="line">  cbind(sim = as.character(s_levels[2]), hist2)</div>
 <div class="line">  )</div>
-</div><!-- fragment --><div class="fragment"><div class="line">ggplot(hist_comb, aes(x = date, y = counts + 1, colour = status, linetype=sim)) +</div>
+</div><!-- fragment --><div class="fragment"><div class="line">ggplot(hist_comb, aes(x = date, y = counts + 1, colour = state, linetype=sim)) +</div>
 <div class="line">  geom_line() +</div>
 <div class="line">  # scale_y_log10() +</div>
 <div class="line">  labs(y = &quot;Counts (log)&quot;)</div>

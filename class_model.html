@@ -142,9 +142,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>get_elapsed</b> (std:
 <tr class="memitem:acd6c8412beb06a0f0e143cfd09074362"><td class="memItemLeft" align="right" valign="top"><a id="acd6c8412beb06a0f0e143cfd09074362"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run_global_actions</b> ()</td></tr>
 <tr class="separator:acd6c8412beb06a0f0e143cfd09074362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5a8909a9e6c74d41e2af9b0e0fd45d2"><td class="memItemLeft" align="right" valign="top"><a id="ae5a8909a9e6c74d41e2af9b0e0fd45d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_status_set</b> ()</td></tr>
-<tr class="separator:ae5a8909a9e6c74d41e2af9b0e0fd45d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84831ba0572d1be16352ecdb3490940a"><td class="memItemLeft" align="right" valign="top"><a id="a84831ba0572d1be16352ecdb3490940a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_state_set</b> ()</td></tr>
+<tr class="separator:a84831ba0572d1be16352ecdb3490940a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5c3197e72237ff481e7bd07e58dd80a"><td class="memItemLeft" align="right" valign="top"><a id="af5c3197e72237ff481e7bd07e58dd80a"></a>
 const std::vector&lt; VirusPtr&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_viruses</b> () const</td></tr>
 <tr class="separator:af5c3197e72237ff481e7bd07e58dd80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,9 +310,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_empty_graph</b
   </dd>
 </dl>
 </div></td></tr>
-<tr class="memitem:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memItemLeft" align="right" valign="top"><a id="ae551e7b2be3d8fb3d3d857153681aa94"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update_status</b> ()</td></tr>
-<tr class="separator:ae551e7b2be3d8fb3d3d857153681aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611dc22360dfb5664ad85accd0f2be82"><td class="memItemLeft" align="right" valign="top"><a id="a611dc22360dfb5664ad85accd0f2be82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update_state</b> ()</td></tr>
+<tr class="separator:a611dc22360dfb5664ad85accd0f2be82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9912f5a26a38ac64e6499ccc4d897cb"><td class="memItemLeft" align="right" valign="top"><a id="ae9912f5a26a38ac64e6499ccc4d897cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate_variant</b> ()</td></tr>
 <tr class="separator:ae9912f5a26a38ac64e6499ccc4d897cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -364,30 +364,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (s
 <tr class="memitem:aa55810dfd8a6506bae94ab42cbe165c5"><td class="memItemLeft" align="right" valign="top"><a id="aa55810dfd8a6506bae94ab42cbe165c5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::vector&lt; epiworld_fast_uint &gt; &amp;source, std::vector&lt; epiworld_fast_uint &gt; &amp;target) const</td></tr>
 <tr class="separator:aa55810dfd8a6506bae94ab42cbe165c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Manage status (states) in the model</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>The functions <code>get_status</code> return the current values for the statuses included in the model.</p>
+<tr><td colspan="2"><div class="groupHeader">Manage state (states) in the model</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The functions <code>get_state</code> return the current values for the states included in the model.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lab</td><td><code>std::string</code> Name of the status.</td></tr>
+    <tr><td class="paramname">lab</td><td><code>std::string</code> Name of the state.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>add_status*</code> returns nothing. </dd>
+<dl class="section return"><dt>Returns</dt><dd><code>add_state*</code> returns nothing. </dd>
 <dd>
-<code>get_status_*</code> returns a vector of pairs with the statuses and their labels. </dd></dl>
+<code>get_state_*</code> returns a vector of pairs with the states and their labels. </dd></dl>
 </div></td></tr>
-<tr class="memitem:a0d889d940256492431efc02e868f6b9f"><td class="memItemLeft" align="right" valign="top"><a id="a0d889d940256492431efc02e868f6b9f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_status</b> (std::string lab, UpdateFun&lt; TSeq &gt; fun=nullptr)</td></tr>
-<tr class="separator:a0d889d940256492431efc02e868f6b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04638c66ef9993f611a50d3da7e2df1d"><td class="memItemLeft" align="right" valign="top"><a id="a04638c66ef9993f611a50d3da7e2df1d"></a>
-const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_status</b> () const</td></tr>
-<tr class="separator:a04638c66ef9993f611a50d3da7e2df1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f10774b783ba77434998fe54fb47ae7"><td class="memItemLeft" align="right" valign="top"><a id="a4f10774b783ba77434998fe54fb47ae7"></a>
-const std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_status_fun</b> () const</td></tr>
-<tr class="separator:a4f10774b783ba77434998fe54fb47ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a280daf95b8f2f81f19297816ac319a82"><td class="memItemLeft" align="right" valign="top"><a id="a280daf95b8f2f81f19297816ac319a82"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_status_codes</b> () const</td></tr>
-<tr class="separator:a280daf95b8f2f81f19297816ac319a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a925f77087c2cc4fe21eb9671b5f49"><td class="memItemLeft" align="right" valign="top"><a id="aa4a925f77087c2cc4fe21eb9671b5f49"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_state</b> (std::string lab, UpdateFun&lt; TSeq &gt; fun=nullptr)</td></tr>
+<tr class="separator:aa4a925f77087c2cc4fe21eb9671b5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4345941f861ff94585ed5f42a36650"><td class="memItemLeft" align="right" valign="top"><a id="a2a4345941f861ff94585ed5f42a36650"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> () const</td></tr>
+<tr class="separator:a2a4345941f861ff94585ed5f42a36650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c2560ee67de2691becdb552431f3c4"><td class="memItemLeft" align="right" valign="top"><a id="a50c2560ee67de2691becdb552431f3c4"></a>
+const std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_fun</b> () const</td></tr>
+<tr class="separator:a50c2560ee67de2691becdb552431f3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3615e07c021900ab8f80ad202509f231"><td class="memItemLeft" align="right" valign="top"><a id="a3615e07c021900ab8f80ad202509f231"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print_state_codes</b> () const</td></tr>
+<tr class="separator:a3615e07c021900ab8f80ad202509f231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Setting and accessing parameters from the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a> can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std::map&lt;&gt; of parameters in the model. Using the <code>epiworld_fast_uint</code> method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the <code>std::string</code> method involves searching the parameter directly in the std::map&lt;&gt; member of the model (so it is not recommended.)</p>
 <p>The <code>par()</code> function members are aliases for <code>get_param()</code>.</p>
@@ -914,7 +914,7 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">fn_variant_hist</td><td>Filename. History of the variant. </td></tr>
     <tr><td class="paramname">fn_tool_info</td><td>Filename. Information about the tool. </td></tr>
     <tr><td class="paramname">fn_tool_hist</td><td>Filename. History of the tool. </td></tr>
-    <tr><td class="paramname">fn_total_hist</td><td>Filename. Aggregated history (status) </td></tr>
+    <tr><td class="paramname">fn_total_hist</td><td>Filename. Aggregated history (state) </td></tr>
     <tr><td class="paramname">fn_transmission</td><td>Filename. Transmission history. </td></tr>
     <tr><td class="paramname">fn_transition</td><td>Filename. Markov transition history. </td></tr>
     <tr><td class="paramname">fn_reproductive_number</td><td>Filename. Case by case reproductive number </td></tr>

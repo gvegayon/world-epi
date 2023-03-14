@@ -164,7 +164,7 @@ $(function() {
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">/* Listing who is infected */</span> </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : m-&gt;get_agents())</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">if</span> (p.get_status() == <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::INFECTED</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">if</span> (p.get_state() == <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::INFECTED</a>)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        _tracked_agents_infected-&gt;push_back(&amp;p);</div>
@@ -225,7 +225,7 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                        <span class="stringliteral">&quot;[epi-debug] The agent &quot;</span> + std::to_string(which) + <span class="stringliteral">&quot; has no &quot;</span>+</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        <span class="stringliteral">&quot;virus to share. The agent&#39;s status is: &quot;</span> +</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operator[](which)-&gt;get_status())</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        std::to_string(_tracked_agents_infected-&gt;operator[](which)-&gt;get_state())</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    );</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">                #endif</span></div>
@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            tracked_agents_check_init(m);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keyword">auto</span> status = p-&gt;get_status();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keyword">auto</span> status = p-&gt;get_state();</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">if</span> (status == <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::EXPOSED</a>)</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            {</div>
@@ -264,7 +264,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    _tracked_agents_infected_next-&gt;push_back(p);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    *_tracked_ninfected_next += 1;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    p-&gt;change_status(m, <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::INFECTED</a>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    p-&gt;change_state(m, <a class="code" href="class_model_s_e_i_r_c_o_n_n_logit.html">ModelSEIRCONNLogit&lt;TSeq&gt;::INFECTED</a>);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
@@ -330,10 +330,10 @@ $(function() {
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    model.add_param(incubation_days, <span class="stringliteral">&quot;Avg. Incubation days&quot;</span>);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// Status</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    model.add_status(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    model.add_status(<span class="stringliteral">&quot;Exposed&quot;</span>, update_infected);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    model.add_status(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    model.add_status(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>, update_infected);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// Adding agent&#39;s parameters</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    model.set_agents_data(covars, logit_params.size());</div>
@@ -345,7 +345,7 @@ $(function() {
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    virus.set_status(1,3,3);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    virus.set_state(1,3,3);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    model.add_virus(virus, prevalence);</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// Adding updating function</span></div>

@@ -80,7 +80,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> *  p = a.agent;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    VirusPtr&lt;TSeq&gt; v = a.virus;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    CHECK_COALESCE_(a.new_status, v-&gt;status_init, p-&gt;get_status())</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    CHECK_COALESCE_(a.new_state, v-&gt;status_init, p-&gt;get_state())</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    CHECK_COALESCE_(a.queue, v-&gt;queue_init, 1)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Has a agent? If so, we need to register the transmission</span></div>
@@ -123,9 +123,9 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    p-&gt;viruses[n_viruses]-&gt;set_date(m-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m-&gt;get_db().today_variant.at(v-&gt;get_id()).at(p-&gt;status)++;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m-&gt;get_db().today_variant.at(v-&gt;get_id()).at(p-&gt;state)++;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m-&gt;get_db().today_variant[v-&gt;get_id()][p-&gt;status]++;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m-&gt;get_db().today_variant[v-&gt;get_id()][p-&gt;state]++;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
@@ -137,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p = a.agent;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ToolPtr&lt;TSeq&gt; t = a.tool;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    CHECK_COALESCE_(a.new_status, t-&gt;status_init, p-&gt;get_status())</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    CHECK_COALESCE_(a.new_state, t-&gt;status_init, p-&gt;get_state())</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    CHECK_COALESCE_(a.queue, t-&gt;queue_init, <a class="code" href="class_queue_values.html">QueueValues</a>::NoOne)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Update tool accounting</span></div>
@@ -154,7 +154,7 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    p-&gt;tools[n_tools]-&gt;set_date(m-&gt;today());</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    p-&gt;tools[n_tools]-&gt;set_agent(p, n_tools);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    m-&gt;get_db().today_tool[t-&gt;get_id()][p-&gt;status]++;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    m-&gt;get_db().today_tool[t-&gt;get_id()][p-&gt;state]++;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p    = a.agent;    </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    VirusPtr&lt;TSeq&gt; &amp; v = a.agent-&gt;viruses[a.virus-&gt;pos_in_agent];</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    CHECK_COALESCE_(a.new_status, v-&gt;status_post, p-&gt;get_status())</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    CHECK_COALESCE_(a.new_state, v-&gt;status_post, p-&gt;get_state())</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    CHECK_COALESCE_(a.queue, v-&gt;queue_post, -<a class="code" href="class_queue_values.html">QueueValues</a>::Everyone)</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    if (--p-&gt;n_viruses &gt; 0)</div>
@@ -192,7 +192,7 @@ $(function() {
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p   = a.agent;    </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ToolPtr&lt;TSeq&gt; &amp; t = a.agent-&gt;tools[a.tool-&gt;pos_in_agent];</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    CHECK_COALESCE_(a.new_status, t-&gt;status_post, p-&gt;get_status())</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    CHECK_COALESCE_(a.new_state, t-&gt;status_post, p-&gt;get_state())</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    CHECK_COALESCE_(a.queue, t-&gt;queue_post, <a class="code" href="class_queue_values.html">QueueValues</a>::NoOne)</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    if (--p-&gt;n_tools &gt; 0)</div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> *  p = a.agent;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * e = a.entity;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    CHECK_COALESCE_(a.new_status, e-&gt;status_post, p-&gt;get_status())</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    CHECK_COALESCE_(a.new_state, e-&gt;status_post, p-&gt;get_state())</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    CHECK_COALESCE_(a.queue, e-&gt;queue_post, <a class="code" href="class_queue_values.html">QueueValues</a>::NoOne)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// Checking the agent and the entity are not linked</span></div>
@@ -280,7 +280,7 @@ $(function() {
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">size_t</span> idx_agent_in_entity = a.idx_agent;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">size_t</span> idx_entity_in_agent = a.idx_object;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    CHECK_COALESCE_(a.new_status, e-&gt;status_post, p-&gt;get_status())</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    CHECK_COALESCE_(a.new_state, e-&gt;status_post, p-&gt;get_state())</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    CHECK_COALESCE_(a.queue, e-&gt;queue_post, QueueValues::NoOne)</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">if</span> (--p-&gt;n_entities &gt; 0)</div>

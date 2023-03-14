@@ -156,15 +156,15 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">if</span> (exclude_agent_bool-&gt;size() == 0u)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    exclude_agent_bool-&gt;resize(m-&gt;get_status().size(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    exclude_agent_bool-&gt;resize(m-&gt;get_state().size(), <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> s : *exclude_agent_bool_idx)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        <span class="keywordflow">if</span> (s &gt;= exclude_agent_bool-&gt;size())</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                            <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                std::string(<span class="stringliteral">&quot;You are trying to exclude a status that is out of range: &quot;</span>) +</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                std::string(<span class="stringliteral">&quot;You are trying to exclude a state that is out of range: &quot;</span>) +</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                std::to_string(s) + std::string(<span class="stringliteral">&quot;. There are only &quot;</span>) +</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                std::to_string(exclude_agent_bool-&gt;size()) + </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                std::string(<span class="stringliteral">&quot; statuses in the model.&quot;</span>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                std::string(<span class="stringliteral">&quot; states in the model.&quot;</span>)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                );</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                        exclude_agent_bool-&gt;operator[](s) = <span class="keyword">true</span>;</div>
@@ -186,8 +186,8 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; neighbor: p-&gt;get_neighbors()) </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    <span class="comment">// If the status is in the list, exclude it</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">if</span> (exclude_agent_bool-&gt;operator[](neighbor-&gt;get_status()))</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    <span class="comment">// If the state is in the list, exclude it</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">if</span> (exclude_agent_bool-&gt;operator[](neighbor-&gt;get_state()))</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                            </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; v : neighbor-&gt;get_viruses()) </div>
@@ -311,15 +311,15 @@ $(function() {
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                <span class="keywordflow">if</span> (exclude_agent_bool-&gt;size() == 0u)</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                {</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    exclude_agent_bool-&gt;resize(m-&gt;get_status().size(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    exclude_agent_bool-&gt;resize(m-&gt;get_state().size(), <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> s : *exclude_agent_bool_idx)</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    {</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        <span class="keywordflow">if</span> (s &gt;= exclude_agent_bool-&gt;size())</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                            <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                std::string(<span class="stringliteral">&quot;You are trying to exclude a status that is out of range: &quot;</span>) +</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                std::string(<span class="stringliteral">&quot;You are trying to exclude a state that is out of range: &quot;</span>) +</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                std::to_string(s) + std::string(<span class="stringliteral">&quot;. There are only &quot;</span>) +</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                std::to_string(exclude_agent_bool-&gt;size()) + </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                                std::string(<span class="stringliteral">&quot; statuses in the model.&quot;</span>)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                                std::string(<span class="stringliteral">&quot; states in the model.&quot;</span>)</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                );</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        exclude_agent_bool-&gt;operator[](s) = <span class="keyword">true</span>;</div>
@@ -341,8 +341,8 @@ $(function() {
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; neighbor: p-&gt;get_neighbors()) </div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                {</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    <span class="comment">// If the status is in the list, exclude it</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="keywordflow">if</span> (exclude_agent_bool-&gt;operator[](neighbor-&gt;get_status()))</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    <span class="comment">// If the state is in the list, exclude it</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="keywordflow">if</span> (exclude_agent_bool-&gt;operator[](neighbor-&gt;get_state()))</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                            </div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; v : neighbor-&gt;get_viruses()) </div>

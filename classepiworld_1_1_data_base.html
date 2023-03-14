@@ -150,7 +150,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr><td colspan="2"><div class="groupHeader">Get recorded information from the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">what</td><td>std::string, The status, e.g., 0, 1, 2, ... </td></tr>
+    <tr><td class="paramname">what</td><td>std::string, The state, e.g., 0, 1, 2, ... </td></tr>
   </table>
   </dd>
 </dl>
@@ -170,18 +170,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (s
 <tr class="memitem:a1ef5bc8fbaabf3f5b2506de0f1b9b3f4"><td class="memItemLeft" align="right" valign="top"><a id="a1ef5bc8fbaabf3f5b2506de0f1b9b3f4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (epiworld_fast_uint what) const</td></tr>
 <tr class="separator:a1ef5bc8fbaabf3f5b2506de0f1b9b3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b1dca383655f87d2dd65346477617da"><td class="memItemLeft" align="right" valign="top"><a id="a6b1dca383655f87d2dd65346477617da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (std::vector&lt; std::string &gt; *status=nullptr, std::vector&lt; int &gt; *counts=nullptr) const</td></tr>
-<tr class="separator:a6b1dca383655f87d2dd65346477617da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef7aba9f05266b41954fef89ed594f1f"><td class="memItemLeft" align="right" valign="top"><a id="aef7aba9f05266b41954fef89ed594f1f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_variant</b> (std::vector&lt; std::string &gt; &amp;status, std::vector&lt; int &gt; &amp;id, std::vector&lt; int &gt; &amp;counts) const</td></tr>
-<tr class="separator:aef7aba9f05266b41954fef89ed594f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9f54d9ecc383db0f391c24fa22fd1d4"><td class="memItemLeft" align="right" valign="top"><a id="ac9f54d9ecc383db0f391c24fa22fd1d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_total</b> (std::vector&lt; int &gt; *date, std::vector&lt; std::string &gt; *status, std::vector&lt; int &gt; *counts) const</td></tr>
-<tr class="separator:ac9f54d9ecc383db0f391c24fa22fd1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a241a3cc333ef0200dc1775de5c0beee4"><td class="memItemLeft" align="right" valign="top"><a id="a241a3cc333ef0200dc1775de5c0beee4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_variant</b> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;id, std::vector&lt; std::string &gt; &amp;status, std::vector&lt; int &gt; &amp;counts) const</td></tr>
-<tr class="separator:a241a3cc333ef0200dc1775de5c0beee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955d50821777e0815707e34d64916ceb"><td class="memItemLeft" align="right" valign="top"><a id="a955d50821777e0815707e34d64916ceb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (std::vector&lt; std::string &gt; *state=nullptr, std::vector&lt; int &gt; *counts=nullptr) const</td></tr>
+<tr class="separator:a955d50821777e0815707e34d64916ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d73eed01afa0605fbcd14fb66467e7"><td class="memItemLeft" align="right" valign="top"><a id="a01d73eed01afa0605fbcd14fb66467e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_variant</b> (std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;id, std::vector&lt; int &gt; &amp;counts) const</td></tr>
+<tr class="separator:a01d73eed01afa0605fbcd14fb66467e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274a3571fca8e7274748f32307203cc5"><td class="memItemLeft" align="right" valign="top"><a id="a274a3571fca8e7274748f32307203cc5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_total</b> (std::vector&lt; int &gt; *date, std::vector&lt; std::string &gt; *state, std::vector&lt; int &gt; *counts) const</td></tr>
+<tr class="separator:a274a3571fca8e7274748f32307203cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac948e1dc1b9004a97e44416991746f"><td class="memItemLeft" align="right" valign="top"><a id="afac948e1dc1b9004a97e44416991746f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_variant</b> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;id, std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;counts) const</td></tr>
+<tr class="separator:afac948e1dc1b9004a97e44416991746f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5d43d9fba8e46bee17f529e0ebce670e"><td class="memItemLeft" align="right" valign="top">MapVec_type&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a> () const</td></tr>
 <tr class="memdesc:a5d43d9fba8e46bee17f529e0ebce670e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the reproductive number of each case.  <a href="classepiworld_1_1_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">More...</a><br /></td></tr>

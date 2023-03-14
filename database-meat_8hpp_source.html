@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    today_total.resize(model-&gt;nstatus);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::fill(today_total.begin(), today_total.end(), 0);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : model-&gt;get_agents())</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ++today_total[p.get_status()];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ++today_total[p.get_state()];</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    transition_matrix.resize(model-&gt;nstatus * model-&gt;nstatus);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::fill(transition_matrix.begin(), transition_matrix.end(), 0);</div>
@@ -90,12 +90,12 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    hist_variant_date.clear();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    hist_variant_id.clear();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    hist_variant_status.clear();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    hist_variant_state.clear();</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    hist_variant_counts.clear();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    hist_tool_date.clear();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    hist_tool_id.clear();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    hist_tool_status.clear();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    hist_tool_state.clear();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    hist_tool_counts.clear();    </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    today_variant.resize(get_n_variants());</div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::fill(today_tool.begin(), today_tool.begin(), std::vector&lt;int&gt;(model-&gt;nstatus, 0));</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    hist_total_date.clear();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    hist_total_status.clear();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    hist_total_state.clear();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    hist_total_nvariants_active.clear();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    hist_total_counts.clear();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    hist_transition_matrix.clear();</div>
@@ -135,9 +135,9 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    tool_origin_date(db.tool_origin_date),</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    seq_hasher(db.seq_hasher),</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    seq_writer(db.seq_writer),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    today_variant(db.today_variant),</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    today_tool(db.today_tool),</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// {Susceptible, Infected, etc.}</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    today_total(db.today_total),</div>
@@ -147,17 +147,17 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Variants history</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    hist_variant_date(db.hist_variant_date),</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    hist_variant_id(db.hist_variant_id),</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    hist_variant_status(db.hist_variant_status),</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    hist_variant_state(db.hist_variant_state),</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    hist_variant_counts(db.hist_variant_counts),</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Tools history</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    hist_tool_date(db.hist_tool_date),</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    hist_tool_id(db.hist_tool_id),</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    hist_tool_status(db.hist_tool_status),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    hist_tool_state(db.hist_tool_state),</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    hist_tool_counts(db.hist_tool_counts),</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Overall hist</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    hist_total_date(db.hist_total_date),</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    hist_total_nvariants_active(db.hist_total_nvariants_active),</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    hist_total_status(db.hist_total_status),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    hist_total_state(db.hist_total_state),</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    hist_total_counts(db.hist_total_counts),</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    hist_transition_matrix(db.hist_transition_matrix),</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// Transmission network</span></div>
@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// Checking whether the sums correspond</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::vector&lt; int &gt; _today_total_cp(today_total.size(), 0);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : model-&gt;population)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        _today_total_cp[p.get_status()]++;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        _today_total_cp[p.get_state()]++;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    EPI_DEBUG_VECTOR_MATCH_INT(</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        _today_total_cp, today_total,</div>
@@ -210,24 +210,24 @@ $(function() {
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, <span class="stringliteral">&quot;DataBase::record hist_total_date should be of length 0.&quot;</span>)</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        if (hist_total_nvariants_active.size() != 0)</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_total_nvariants_active should be of length 0.&quot;)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        if (hist_total_status.size() != 0)</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_total_status should be of length 0.&quot;)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        if (hist_total_state.size() != 0)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_total_state should be of length 0.&quot;)</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        if (hist_total_counts.size() != 0)</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_total_counts should be of length 0.&quot;)</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        if (hist_variant_date.size() != 0)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_variant_date should be of length 0.&quot;)</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        if (hist_variant_id.size() != 0)</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_variant_id should be of length 0.&quot;)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        if (hist_variant_status.size() != 0)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_variant_status should be of length 0.&quot;)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        if (hist_variant_state.size() != 0)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_variant_state should be of length 0.&quot;)</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        if (hist_variant_counts.size() != 0)</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_variant_counts should be of length 0.&quot;)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        if (hist_tool_date.size() != 0)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_tool_date should be of length 0.&quot;)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        if (hist_tool_id.size() != 0)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_tool_id should be of length 0.&quot;)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        if (hist_tool_status.size() != 0)</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_tool_status should be of length 0.&quot;)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        if (hist_tool_state.size() != 0)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_tool_state should be of length 0.&quot;)</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        if (hist_tool_counts.size() != 0)</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            EPI_DEBUG_ERROR(std::logic_error, &quot;<a class="code" href="class_data_base.html">DataBase</a>::record hist_tool_counts should be of length 0.&quot;)</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
@@ -246,7 +246,7 @@ $(function() {
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                hist_variant_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                hist_variant_id.push_back(p.second);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                hist_variant_status.push_back(s);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                hist_variant_state.push_back(s);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                hist_variant_counts.push_back(today_variant[p.second][s]);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            }</div>
@@ -262,7 +262,7 @@ $(function() {
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                hist_tool_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                hist_tool_id.push_back(p.second);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                hist_tool_status.push_back(s);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                hist_tool_state.push_back(s);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                hist_tool_counts.push_back(today_tool[p.second][s]);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            hist_total_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            hist_total_nvariants_active.push_back(today_total_nvariants_active);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            hist_total_status.push_back(s);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            hist_total_state.push_back(s);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            hist_total_counts.push_back(today_total[s]);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
@@ -389,9 +389,9 @@ $(function() {
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">if</span> (v.get_agent() != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="comment">// Correcting math</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            epiworld_fast_uint tmp_status = v.get_agent()-&gt;get_status();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            today_variant[old_id][tmp_status]--;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            today_variant[new_id][tmp_status]++;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            epiworld_fast_uint tmp_state = v.get_agent()-&gt;get_state();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            today_variant[old_id][tmp_state]--;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            today_variant[new_id][tmp_state]++;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
@@ -465,9 +465,9 @@ $(function() {
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">if</span> (t.get_agent() != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        {</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="comment">// Correcting math</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            epiworld_fast_uint tmp_status = t.get_agent()-&gt;get_status();</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            today_tool[old_id][tmp_status]--;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            today_tool[new_id][tmp_status]++;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            epiworld_fast_uint tmp_state = t.get_agent()-&gt;get_state();</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            today_tool[old_id][tmp_state]--;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            today_tool[new_id][tmp_state]++;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        }</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
@@ -486,25 +486,25 @@ $(function() {
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::update_state</a>(</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        epiworld_fast_uint new_status,</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        epiworld_fast_uint new_state,</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordtype">bool</span> undo</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;) {</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">if</span> (undo)</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    {</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        today_total[prev_status]++;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        today_total[new_status]--;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        today_total[prev_state]++;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        today_total[new_state]--;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        </div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        today_total[prev_status]--;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        today_total[new_status]++;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        today_total[prev_state]--;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        today_total[new_state]++;</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    record_transition(prev_status, new_status, undo);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    record_transition(prev_state, new_state, undo);</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    </div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
@@ -512,12 +512,12 @@ $(function() {
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::update_virus</a>(</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        epiworld_fast_uint virus_id,</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        epiworld_fast_uint new_status</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        epiworld_fast_uint new_state</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;) {</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    today_variant[virus_id][prev_status]--;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    today_variant[virus_id][new_status]++;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    today_variant[virus_id][prev_state]--;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    today_variant[virus_id][new_state]++;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    </div>
@@ -526,13 +526,13 @@ $(function() {
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::update_tool</a>(</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        epiworld_fast_uint tool_id,</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        epiworld_fast_uint prev_status,</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        epiworld_fast_uint new_status</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        epiworld_fast_uint prev_state,</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        epiworld_fast_uint new_state</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;) {</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    today_tool[tool_id][prev_status]--;    </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    today_tool[tool_id][new_status]++;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    today_tool[tool_id][prev_state]--;    </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    today_tool[tool_id][new_state]++;</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
@@ -583,12 +583,12 @@ $(function() {
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::get_today_total</a>(</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    std::vector&lt; std::string &gt; * status,</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    std::vector&lt; std::string &gt; * state,</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    std::vector&lt; int &gt; * counts</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">if</span> (status != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        (*status) = model-&gt;status_labels;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">if</span> (state != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        (*state) = model-&gt;status_labels;</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordflow">if</span> (counts != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        *counts = today_total;</div>
@@ -597,13 +597,13 @@ $(function() {
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160; </div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::get_today_variant</a>(</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    std::vector&lt; std::string &gt; &amp; status,</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    std::vector&lt; std::string &gt; &amp; state,</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    std::vector&lt; int &gt; &amp; <span class="keywordtype">id</span>,</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    std::vector&lt; int &gt; &amp; counts</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;      </div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    status.resize(today_variant.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    state.resize(today_variant.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordtype">id</span>.resize(today_variant.size(), 0);</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    counts.resize(today_variant.size(),0);</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
@@ -611,7 +611,7 @@ $(function() {
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint v = 0u; v &lt; today_variant.size(); ++v)</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;status_labels.size(); ++s)</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        {</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            status[n]   = model-&gt;status_labels[s];</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            state[n]   = model-&gt;status_labels[s];</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            <span class="keywordtype">id</span>[n]       = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(v);</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;            counts[n++] = today_variant[v][s];</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160; </div>
@@ -622,7 +622,7 @@ $(function() {
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::get_hist_total</a>(</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    std::vector&lt; int &gt; * date,</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    std::vector&lt; std::string &gt; * status,</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    std::vector&lt; std::string &gt; * state,</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    std::vector&lt; int &gt; * counts</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="keyword"></span>{</div>
@@ -630,11 +630,11 @@ $(function() {
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordflow">if</span> (date != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        *date = hist_total_date;</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordflow">if</span> (status != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordflow">if</span> (state != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    {</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        status-&gt;resize(hist_total_status.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; hist_total_status.size(); ++i)</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            status-&gt;operator[](i) = model-&gt;status_labels[hist_total_status[i]];</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        state-&gt;resize(hist_total_state.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; hist_total_state.size(); ++i)</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            state-&gt;operator[](i) = model-&gt;status_labels[hist_total_state[i]];</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    }</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordflow">if</span> (counts != <span class="keyword">nullptr</span>)</div>
@@ -648,7 +648,7 @@ $(function() {
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_data_base.html">DataBase&lt;TSeq&gt;::get_hist_variant</a>(</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    std::vector&lt; int &gt; &amp; date,</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    std::vector&lt; int &gt; &amp; <span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    std::vector&lt; std::string &gt; &amp; status,</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    std::vector&lt; std::string &gt; &amp; state,</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    std::vector&lt; int &gt; &amp; counts</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160; </div>
@@ -657,9 +657,9 @@ $(function() {
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    labels = model-&gt;status_labels;</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    </div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keywordtype">id</span> = hist_variant_id;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    status.resize(hist_variant_status.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; hist_variant_status.size(); ++i)</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        status[i] = labels[hist_variant_status[i]];</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    state.resize(hist_variant_state.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0u; i &lt; hist_variant_state.size(); ++i)</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        state[i] = labels[hist_variant_state[i]];</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    counts = hist_variant_counts;</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
@@ -713,9 +713,9 @@ $(function() {
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        </div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        file_variant &lt;&lt;</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="preprocessor">            #ifdef _OPENMP</span></div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span>&lt;&lt; <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;status &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span>&lt;&lt; <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;state &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;<span class="preprocessor">            #else</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;status &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;state &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;<span class="preprocessor">            #endif</span></div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160; </div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0; i &lt; hist_variant_id.size(); ++i)</div>
@@ -725,7 +725,7 @@ $(function() {
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="preprocessor">                #endif</span></div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                hist_variant_date[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                hist_variant_id[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                model-&gt;status_labels[hist_variant_status[i]] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                model-&gt;status_labels[hist_variant_state[i]] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                hist_variant_counts[i] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    }</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160; </div>
@@ -762,7 +762,7 @@ $(function() {
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor">            #ifdef _OPENMP</span></div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span> &lt;&lt; </div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;status &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;state &quot;</span> &lt;&lt; <span class="stringliteral">&quot;n\n&quot;</span>;</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0; i &lt; hist_tool_id.size(); ++i)</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            file_tool_hist &lt;&lt;</div>
@@ -771,7 +771,7 @@ $(function() {
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="preprocessor">                #endif</span></div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                hist_tool_date[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                hist_tool_id[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                model-&gt;status_labels[hist_tool_status[i]] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                model-&gt;status_labels[hist_tool_state[i]] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;                hist_tool_counts[i] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    }</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
@@ -783,7 +783,7 @@ $(function() {
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="preprocessor">            #ifdef _OPENMP</span></div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span> &lt;&lt; </div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;nvariants &quot;</span> &lt;&lt; <span class="stringliteral">&quot;status &quot;</span> &lt;&lt; <span class="stringliteral">&quot;counts\n&quot;</span>;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;nvariants &quot;</span> &lt;&lt; <span class="stringliteral">&quot;state &quot;</span> &lt;&lt; <span class="stringliteral">&quot;counts\n&quot;</span>;</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint i = 0; i &lt; hist_total_date.size(); ++i)</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            file_total &lt;&lt;</div>
@@ -792,7 +792,7 @@ $(function() {
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">                #endif</span></div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                hist_total_date[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                hist_total_nvariants_active[i] &lt;&lt; <span class="stringliteral">&quot; \&quot;&quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                model-&gt;status_labels[hist_total_status[i]] &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span> &lt;&lt; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                model-&gt;status_labels[hist_total_state[i]] &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span> &lt;&lt; </div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                hist_total_counts[i] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    }</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160; </div>
@@ -990,30 +990,30 @@ $(function() {
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keywordtype">bool</span> print</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160; </div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">auto</span> status_labels = model-&gt;get_status();</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keywordtype">size_t</span> n_status = status_labels.size();</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">auto</span> status_labels = model-&gt;get_state();</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keywordtype">size_t</span> n_state = status_labels.size();</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="keywordtype">size_t</span> n_days   = model-&gt;get_ndays();</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    std::vector&lt; epiworld_double &gt; res(n_status * n_status, 0.0);</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    std::vector&lt; epiworld_double &gt; days_to_include(n_status, 0.0);</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    std::vector&lt; epiworld_double &gt; res(n_state * n_state, 0.0);</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    std::vector&lt; epiworld_double &gt; days_to_include(n_state, 0.0);</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160; </div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> t = 1; t &lt; n_days; ++t)</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    {</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_state; ++s_i)</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        {</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            epiworld_double daily_total = hist_total_counts[(t - 1) * n_status + s_i];</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            epiworld_double daily_total = hist_total_counts[(t - 1) * n_state + s_i];</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160; </div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;            <span class="keywordflow">if</span> (daily_total == 0)</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160; </div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            days_to_include[s_i] += 1.0; </div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160; </div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_state; ++s_j)</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            {</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                epiworld_double entry = hist_transition_matrix[</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                    s_i + s_j * n_status +</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                    t * (n_status * n_status)</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                    s_i + s_j * n_state +</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                    t * (n_state * n_state)</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                    ];</div>
 <div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160; </div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                <span class="keywordflow">if</span> (entry &gt; daily_total)</div>
@@ -1021,12 +1021,12 @@ $(function() {
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                        <span class="stringliteral">&quot;The entry in hist_transition_matrix cannot have more elememnts than the total&quot;</span></div>
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;                        );</div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160; </div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                res[s_i + s_j * n_status] += (entry / daily_total);</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                res[s_i + s_j * n_state] += (entry / daily_total);</div>
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="preprocessor">                #else</span></div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                    res[s_i + s_j * n_status] += (</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                    res[s_i + s_j * n_state] += (</div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                        hist_transition_matrix[</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                            s_i + s_j * n_status +</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                            t * (n_status * n_status)</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                            s_i + s_j * n_state +</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                            t * (n_state * n_state)</div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                        ] / daily_total</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;                    );</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="preprocessor">                #endif</span></div>
@@ -1036,10 +1036,10 @@ $(function() {
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160; </div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    }</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160; </div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0; s_i &lt; n_state; ++s_i)</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    {</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0; s_j &lt; n_status; ++s_j)</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;            res[s_i + s_j * n_status] /= days_to_include[s_i];</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0; s_j &lt; n_state; ++s_j)</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;            res[s_i + s_j * n_state] /= days_to_include[s_i];</div>
 <div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    }</div>
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160; </div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <span class="keywordflow">if</span> (print)</div>
@@ -1053,16 +1053,16 @@ $(function() {
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;        std::string fmt = <span class="stringliteral">&quot; - %-&quot;</span> + std::to_string(nchar) + <span class="stringliteral">&quot;s&quot;</span>;</div>
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        </div>
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;        printf_epiworld(<span class="stringliteral">&quot;\nTransition Probabilities:\n&quot;</span>);</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; n_status; ++s_i)</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; n_state; ++s_i)</div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        {</div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;            printf_epiworld(fmt.c_str(), status_labels[s_i].c_str());</div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_status; ++s_j)</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; n_state; ++s_j)</div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;            {</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                <span class="keywordflow">if</span> (std::isnan(res[s_i + s_j * n_status]))</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                <span class="keywordflow">if</span> (std::isnan(res[s_i + s_j * n_state]))</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                {</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot;     -&quot;</span>);</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot; % 4.2f&quot;</span>, res[s_i + s_j * n_status]);</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                    printf_epiworld(<span class="stringliteral">&quot; % 4.2f&quot;</span>, res[s_i + s_j * n_state]);</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;                }</div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;            }</div>
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;            printf_epiworld(<span class="stringliteral">&quot;\n&quot;</span>);</div>
@@ -1155,9 +1155,9 @@ $(function() {
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;        )</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160; </div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;        hist_variant_status,</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;        other.hist_variant_status,</div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_variant_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;        hist_variant_state,</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;        other.hist_variant_state,</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_variant_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;        )</div>
 <div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160; </div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    VECT_MATCH(</div>
@@ -1180,9 +1180,9 @@ $(function() {
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;        )</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160; </div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;        hist_tool_status,</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;        other.hist_tool_status,</div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_tool_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;        hist_tool_state,</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;        other.hist_tool_state,</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_tool_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;        )</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160; </div>
 <div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;    VECT_MATCH(</div>
@@ -1205,9 +1205,9 @@ $(function() {
 <div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;        )</div>
 <div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160; </div>
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;        hist_total_status,</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;        other.hist_total_status,</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_total_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;        hist_total_state,</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;        other.hist_total_state,</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_total_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;        )</div>
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160; </div>
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    VECT_MATCH(</div>
@@ -1222,7 +1222,7 @@ $(function() {
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_transition_matrix[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;        )</div>
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160; </div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
 <div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;        today_variant.size() != other.today_variant.size(),</div>
 <div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;        <span class="stringliteral">&quot;DataBase:: today_variant don&#39;t match.&quot;</span></div>
@@ -1236,7 +1236,7 @@ $(function() {
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;            )</div>
 <div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;    }</div>
 <div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160; </div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    <span class="keywordflow">if</span> (today_tool.size() != other.today_tool.size())</div>
 <div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;    </div>
@@ -1368,9 +1368,9 @@ $(function() {
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;    )</div>
 <div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160; </div>
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;        hist_variant_status,</div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;        other.hist_variant_status,</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_variant_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;        hist_variant_state,</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;        other.hist_variant_state,</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_variant_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    )</div>
 <div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160; </div>
 <div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;    VECT_MATCH(</div>
@@ -1393,9 +1393,9 @@ $(function() {
 <div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;    )</div>
 <div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160; </div>
 <div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;        hist_tool_status,</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;        other.hist_tool_status,</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_tool_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;        hist_tool_state,</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;        other.hist_tool_state,</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_tool_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;    )</div>
 <div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160; </div>
 <div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;    VECT_MATCH(</div>
@@ -1418,9 +1418,9 @@ $(function() {
 <div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;    )</div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160; </div>
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;        hist_total_status,</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        other.hist_total_status,</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_total_status[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;        hist_total_state,</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        other.hist_total_state,</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_total_state[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;    )</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160; </div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;    VECT_MATCH(</div>
@@ -1435,7 +1435,7 @@ $(function() {
 <div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;        <span class="stringliteral">&quot;DataBase:: hist_transition_matrix[i] don&#39;t match&quot;</span></div>
 <div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;    )</div>
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160; </div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
 <div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;        today_variant.size() != other.today_variant.size(),</div>
 <div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;        <span class="stringliteral">&quot;DataBase:: today_variant.size() don&#39;t match.&quot;</span></div>
@@ -1449,7 +1449,7 @@ $(function() {
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;            )</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    }</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160; </div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;    <span class="comment">// {Variant 1: {Status 1, Status 2, etc.}, Variant 2: {...}, ...}</span></div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;    <span class="comment">// {Variant 1: {state 1, state 2, etc.}, Variant 2: {...}, ...}</span></div>
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;        today_tool.size() != other.today_tool.size(),</div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;        <span class="stringliteral">&quot;DataBase:: today_tool.size() don&#39;t match.&quot;</span></div>

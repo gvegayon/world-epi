@@ -134,12 +134,12 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; 
 <tr class="memitem:ad319e9853ebc8c2c20f0b31768745f7f"><td class="memItemLeft" align="right" valign="top"><a id="ad319e9853ebc8c2c20f0b31768745f7f"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_neighbors</b> () const</td></tr>
 <tr class="separator:ad319e9853ebc8c2c20f0b31768745f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636caafd143f5acbcb5d4f726b89d369"><td class="memItemLeft" align="right" valign="top"><a id="a636caafd143f5acbcb5d4f726b89d369"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>change_status</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model, epiworld_fast_uint new_status, epiworld_fast_int queue=0)</td></tr>
-<tr class="separator:a636caafd143f5acbcb5d4f726b89d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcdad7ff87189cc4a2b0543620312da3"><td class="memItemLeft" align="right" valign="top"><a id="adcdad7ff87189cc4a2b0543620312da3"></a>
-const epiworld_fast_uint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_status</b> () const</td></tr>
-<tr class="separator:adcdad7ff87189cc4a2b0543620312da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920ebf32d7dd2b3097117208d6b83a91"><td class="memItemLeft" align="right" valign="top"><a id="a920ebf32d7dd2b3097117208d6b83a91"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>change_state</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model, epiworld_fast_uint new_state, epiworld_fast_int queue=0)</td></tr>
+<tr class="separator:a920ebf32d7dd2b3097117208d6b83a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19eaa14f8a8fcc337ce9890a670bf67a"><td class="memItemLeft" align="right" valign="top"><a id="a19eaa14f8a8fcc337ce9890a670bf67a"></a>
+const epiworld_fast_uint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> () const</td></tr>
+<tr class="separator:a19eaa14f8a8fcc337ce9890a670bf67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dda8431f4fcf1527fce531b236f8a4c"><td class="memItemLeft" align="right" valign="top"><a id="a1dda8431f4fcf1527fce531b236f8a4c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="separator:a1dda8431f4fcf1527fce531b236f8a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,7 +185,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
   <table class="params">
     <tr><td class="paramname">tool</td><td><a class="el" href="classepiworld_1_1_tool.html" title="Tools for defending the agent against the virus.">Tool</a> to add </td></tr>
     <tr><td class="paramname">virus</td><td><a class="el" href="classepiworld_1_1_virus.html" title="Virus.">Virus</a> to add </td></tr>
-    <tr><td class="paramname">status_new</td><td>Status after the change </td></tr>
+    <tr><td class="paramname">status_new</td><td>state after the change </td></tr>
     <tr><td class="paramname">queue</td><td></td></tr>
   </table>
   </dd>

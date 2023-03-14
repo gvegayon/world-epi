@@ -24,7 +24,7 @@ Setup
 \item Create global events (e.\+g., surveillance).
 \item Set up the population\+: small world network (default).
 \item Set up rewiring (optional).
-\item Set statuses (arbitrary number of them).
+\item Set states (arbitrary number of them).
 \end{DoxyItemize}
 
 Run
@@ -34,7 +34,7 @@ Run
 \item Distribute the tool(s) and virus(es)
 \item For each t in 1 -\/$>$ Duration\+:
 \begin{DoxyItemize}
-\item Update status for susceptible/infected/removed(?)
+\item Update state for susceptible/infected/removed(?)
 \item Mutate virus(es) (each individual)
 \item Run global actions (e.\+g., surveillance)
 \item Run rewiring algorithm
@@ -219,7 +219,7 @@ Along update\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{ggplot(hist\_comb, aes(x = date, y = counts + 1, colour = status, linetype=sim)) +}
+\DoxyCodeLine{ggplot(hist\_comb, aes(x = date, y = counts + 1, colour = state, linetype=sim)) +}
 \DoxyCodeLine{  geom\_line() +}
 \DoxyCodeLine{  \# scale\_y\_log10() +}
 \DoxyCodeLine{  labs(y = "{}Counts (log)"{})}

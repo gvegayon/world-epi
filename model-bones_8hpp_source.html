@@ -231,7 +231,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        VirusPtr&lt;TSeq&gt; virus_,</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        ToolPtr&lt;TSeq&gt; tool_,</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * entity_,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        epiworld_fast_uint new_status_,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        epiworld_fast_uint new_state_,</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        epiworld_fast_int queue_,</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        ActionFun&lt;TSeq&gt; call_,</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordtype">int</span> idx_agent_,</div>
@@ -327,7 +327,7 @@ $(function() {
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        );</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">void</span> agents_empty_graph(epiworld_fast_uint n = 1000);</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">void</span> update_status();</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">void</span> update_state();</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">void</span> mutate_variant();</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">void</span> next();</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">run</a>(</div>
@@ -386,10 +386,10 @@ $(function() {
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp;&amp; clone() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordtype">void</span> add_status(std::string lab, UpdateFun&lt;TSeq&gt; fun = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keyword">const</span> std::vector&lt; std::string &gt; &amp; get_status() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keyword">const</span> std::vector&lt; UpdateFun&lt;TSeq&gt; &gt; &amp; get_status_fun() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">void</span> print_status_codes() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordtype">void</span> add_state(std::string lab, UpdateFun&lt;TSeq&gt; fun = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keyword">const</span> std::vector&lt; std::string &gt; &amp; get_state() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keyword">const</span> std::vector&lt; UpdateFun&lt;TSeq&gt; &gt; &amp; get_state_fun() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">void</span> print_state_codes() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    epiworld_double add_param(epiworld_double initial_val, std::string pname);</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordtype">void</span> read_params(std::string fn);</div>
@@ -418,7 +418,7 @@ $(function() {
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <span class="keywordtype">void</span> run_global_actions();</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160; </div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <span class="keywordtype">void</span> clear_status_set();</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <span class="keywordtype">void</span> clear_state_set();</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a1cbe26a38285095c62d1971251a6c3db">queuing_on</a>(); </div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">queuing_off</a>(); </div>
