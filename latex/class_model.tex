@@ -9,6 +9,16 @@ Core class of epiworld.
 
 {\ttfamily \#include $<$model-\/bones.\+hpp$>$}
 
+
+
+Collaboration diagram for Model$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_model__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,7 +92,7 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 \item 
 void \mbox{\hyperlink{class_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
+void \mbox{\hyperlink{class_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string \mbox{\hyperlink{class_model_a343ab95f43273186d42d6df618695283}{name}})
 \begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a2a8ec13a43f5839f9b06409b990b35b3}\label{class_model_a2a8ec13a43f5839f9b06409b990b35b3}} 
 std\+::string {\bfseries get\+\_\+name} () const
@@ -357,8 +367,8 @@ In the case of the function {\ttfamily read\+\_\+params}, users can pass a file 
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[name of parameter 1]: [value in double]}
-\DoxyCodeLine{[name of parameter 2]: [value in double]}
+\DoxyCodeLine{[\mbox{\hyperlink{class_model_a343ab95f43273186d42d6df618695283}{name}} of parameter 1]: [value in double]}
+\DoxyCodeLine{[\mbox{\hyperlink{class_model_a343ab95f43273186d42d6df618695283}{name}} of parameter 2]: [value in double]}
 \DoxyCodeLine{...}
 
 \end{DoxyCode}
@@ -460,6 +470,179 @@ void {\bfseries set\+\_\+recovery\+\_\+enhancer\+\_\+mixer} (Mixer\+Fun$<$ TSeq 
 void {\bfseries set\+\_\+death\+\_\+reduction\+\_\+mixer} (Mixer\+Fun$<$ TSeq $>$ fun)
 \end{DoxyCompactItemize}
 \end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a9137e9ff2178859962203b6e2b18472f}\label{class_model_a9137e9ff2178859962203b6e2b18472f}} 
+void {\bfseries dist\+\_\+tools} ()
+\item 
+\mbox{\Hypertarget{class_model_ac2cc437ae91612c3a56f24943651fef9}\label{class_model_ac2cc437ae91612c3a56f24943651fef9}} 
+void {\bfseries dist\+\_\+virus} ()
+\item 
+\mbox{\Hypertarget{class_model_aeacf2267c574f1d19d1f6577ed668d6c}\label{class_model_aeacf2267c574f1d19d1f6577ed668d6c}} 
+void {\bfseries chrono\+\_\+start} ()
+\item 
+\mbox{\Hypertarget{class_model_aea7a2d08458c63e06589e13ee6f1ffdd}\label{class_model_aea7a2d08458c63e06589e13ee6f1ffdd}} 
+void {\bfseries chrono\+\_\+end} ()
+\item 
+void \mbox{\hyperlink{class_model_add329fe1a52fc2cc6052974b5a118d46}{actions\+\_\+add}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+uint new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{struct_action}{Action}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a2125fc528ee1532733b7532f3d0e290a}{actions\+\_\+run}} ()
+\begin{DoxyCompactList}\small\item\em Executes the stored action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a343ab95f43273186d42d6df618695283}\label{class_model_a343ab95f43273186d42d6df618695283}} 
+std\+::string \mbox{\hyperlink{class_model_a343ab95f43273186d42d6df618695283}{name}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name of the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_a4e953a53a4d2e634020cdaeb10174e73}\label{class_model_a4e953a53a4d2e634020cdaeb10174e73}} 
+\mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ {\bfseries db} = \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$TSeq$>$($\ast$this)
+\item 
+\mbox{\Hypertarget{class_model_aa2e8096530578ddc19a4cddd41b64b6b}\label{class_model_aa2e8096530578ddc19a4cddd41b64b6b}} 
+std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $>$ {\bfseries population} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_aa51857ac1fbe45ee38a6fb82d61b06db}\label{class_model_aa51857ac1fbe45ee38a6fb82d61b06db}} 
+bool {\bfseries using\+\_\+backup} = true
+\item 
+\mbox{\Hypertarget{class_model_a6427a37a707986d7a5077cb171d8a897}\label{class_model_a6427a37a707986d7a5077cb171d8a897}} 
+std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $>$ {\bfseries population\+\_\+backup} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_aa65606e8b14a1c24670c27aa4caec9a0}\label{class_model_aa65606e8b14a1c24670c27aa4caec9a0}} 
+bool {\bfseries directed} = false
+\item 
+\mbox{\Hypertarget{class_model_a0a43082d43228a28fd6eade5d421d2af}\label{class_model_a0a43082d43228a28fd6eade5d421d2af}} 
+std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ {\bfseries viruses} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_aa866aee83267c45912b625e1646c60ea}\label{class_model_aa866aee83267c45912b625e1646c60ea}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{class_model_aa866aee83267c45912b625e1646c60ea}{prevalence\+\_\+virus}} = \{\}
+\begin{DoxyCompactList}\small\item\em Initial prevalence\+\_\+virus of each virus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_abb11c642f9fc2c9da185d10204713e59}\label{class_model_abb11c642f9fc2c9da185d10204713e59}} 
+std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+virus\+\_\+as\+\_\+proportion} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_aee13d84947486f5b681b4bf2953a9b1f}\label{class_model_aee13d84947486f5b681b4bf2953a9b1f}} 
+std\+::vector$<$ Virus\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries viruses\+\_\+dist\+\_\+funs} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a97053424f048ff1ce301f1c611b73faf}\label{class_model_a97053424f048ff1ce301f1c611b73faf}} 
+std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ {\bfseries tools} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a20a4b167cc762b74094f0ddbb206cec6}\label{class_model_a20a4b167cc762b74094f0ddbb206cec6}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries prevalence\+\_\+tool} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_af5078b768950793792751f2cf1c53114}\label{class_model_af5078b768950793792751f2cf1c53114}} 
+std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+tool\+\_\+as\+\_\+proportion} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_acb0549bca1596afb91d6368a8cbe3208}\label{class_model_acb0549bca1596afb91d6368a8cbe3208}} 
+std\+::vector$<$ Tool\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries tools\+\_\+dist\+\_\+funs} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}\label{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}} 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a337d978e14ca116b438b6916976ac868}\label{class_model_a337d978e14ca116b438b6916976ac868}} 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_ae5e2775dc7f107a5e6660bcb70f73108}\label{class_model_ae5e2775dc7f107a5e6660bcb70f73108}} 
+std\+::mt19937 {\bfseries engine}
+\item 
+\mbox{\Hypertarget{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}\label{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}} 
+std\+::uniform\+\_\+real\+\_\+distribution {\bfseries runifd} = std\+::uniform\+\_\+real\+\_\+distribution$<$$>$ (0.\+0, 1.\+0)
+\item 
+\mbox{\Hypertarget{class_model_ab7545b52c050d063f7825f0486cc2043}\label{class_model_ab7545b52c050d063f7825f0486cc2043}} 
+std\+::normal\+\_\+distribution {\bfseries rnormd} = std\+::normal\+\_\+distribution$<$$>$(0.\+0)
+\item 
+\mbox{\Hypertarget{class_model_a0663cf19b56db8b624991f8bf4538c9b}\label{class_model_a0663cf19b56db8b624991f8bf4538c9b}} 
+std\+::gamma\+\_\+distribution {\bfseries rgammad} = std\+::gamma\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}\label{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}} 
+std\+::lognormal\+\_\+distribution {\bfseries rlognormald} = std\+::lognormal\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}\label{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}} 
+std\+::exponential\+\_\+distribution {\bfseries rexpd} = std\+::exponential\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{class_model_ac660f47b4f5536857d0c2b5900873bc5}\label{class_model_ac660f47b4f5536857d0c2b5900873bc5}} 
+std\+::function$<$ void(std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$$>$ $\ast$, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$, epiworld\+\_\+double)$>$ {\bfseries rewire\+\_\+fun}
+\item 
+\mbox{\Hypertarget{class_model_af50c1f20945da08ad0876c76d6f86db4}\label{class_model_af50c1f20945da08ad0876c76d6f86db4}} 
+epiworld\+\_\+double {\bfseries rewire\+\_\+prop} = 0.\+0
+\item 
+\mbox{\Hypertarget{class_model_a03255ed044c0d552a39b853946ec6889}\label{class_model_a03255ed044c0d552a39b853946ec6889}} 
+std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ {\bfseries parameters}
+\item 
+\mbox{\Hypertarget{class_model_afdfcb8cf5f61d8bc1cad2aa8dfdf451a}\label{class_model_afdfcb8cf5f61d8bc1cad2aa8dfdf451a}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries ndays}
+\item 
+\mbox{\Hypertarget{class_model_a54f190613fbf52cfc98fd5485cd504f1}\label{class_model_a54f190613fbf52cfc98fd5485cd504f1}} 
+\mbox{\hyperlink{class_progress}{Progress}} {\bfseries pb}
+\item 
+\mbox{\Hypertarget{class_model_ad7dc909470413d5fcd9cdffd18c460e9}\label{class_model_ad7dc909470413d5fcd9cdffd18c460e9}} 
+std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ {\bfseries status\+\_\+fun} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a17271315c55a0b1b7125beaed108b2a7}\label{class_model_a17271315c55a0b1b7125beaed108b2a7}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries status\+\_\+labels} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a779e425890bd145927de8153c4ffcb84}\label{class_model_a779e425890bd145927de8153c4ffcb84}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries nstatus} = 0u
+\item 
+\mbox{\Hypertarget{class_model_a6c100511d359070faac99c29c6aeaf28}\label{class_model_a6c100511d359070faac99c29c6aeaf28}} 
+bool {\bfseries verbose} = true
+\item 
+\mbox{\Hypertarget{class_model_a73e8867f802901870104919588a05892}\label{class_model_a73e8867f802901870104919588a05892}} 
+int {\bfseries current\+\_\+date} = 0
+\item 
+\mbox{\Hypertarget{class_model_a747953c6566c29b4f3a3c0dab82da31b}\label{class_model_a747953c6566c29b4f3a3c0dab82da31b}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ {\bfseries time\+\_\+start}
+\item 
+\mbox{\Hypertarget{class_model_a63d827c599da32083d8c245dae6fd670}\label{class_model_a63d827c599da32083d8c245dae6fd670}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ {\bfseries time\+\_\+end}
+\item 
+std\+::chrono\+::duration$<$ epiworld\+\_\+double, std\+::micro $>$ {\bfseries time\+\_\+elapsed}
+\item 
+\mbox{\Hypertarget{class_model_a75b7ec9ee592b08aa5d0b0b0d2029f1a}\label{class_model_a75b7ec9ee592b08aa5d0b0b0d2029f1a}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries n\+\_\+replicates} = 0u
+\item 
+\mbox{\Hypertarget{class_model_a6ac090f95680eae094c69917bbde7fde}\label{class_model_a6ac090f95680eae094c69917bbde7fde}} 
+std\+::vector$<$ std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ $>$ {\bfseries global\+\_\+action\+\_\+functions}
+\item 
+\mbox{\Hypertarget{class_model_ad84c1533a03bc46765c37d7e4e93f080}\label{class_model_ad84c1533a03bc46765c37d7e4e93f080}} 
+std\+::vector$<$ int $>$ {\bfseries global\+\_\+action\+\_\+dates}
+\item 
+\mbox{\Hypertarget{class_model_a96fecc72236e7ff1cce109a910fb62c0}\label{class_model_a96fecc72236e7ff1cce109a910fb62c0}} 
+\mbox{\hyperlink{class_queue}{Queue}}$<$ TSeq $>$ {\bfseries queue}
+\item 
+\mbox{\Hypertarget{class_model_a5b6d261133f7580c61f71a8f762bbd22}\label{class_model_a5b6d261133f7580c61f71a8f762bbd22}} 
+bool {\bfseries use\+\_\+queuing} = true
+\item 
+\mbox{\Hypertarget{class_model_ade8a191a8d236fd27ed4d2af631bfc66}\label{class_model_ade8a191a8d236fd27ed4d2af631bfc66}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_action}{Action}}$<$ TSeq $>$ $>$ \mbox{\hyperlink{class_model_ade8a191a8d236fd27ed4d2af631bfc66}{actions}} = \{\}
+\begin{DoxyCompactList}\small\item\em Variables used to keep track of the actions to be made regarding viruses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_ab5242fbbb029c4772e03b6aa41fff80b}\label{class_model_ab5242fbbb029c4772e03b6aa41fff80b}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries nactions} = 0u
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Auxiliary variables for Agents\+Sample$<$TSeq$>$ iterators}\par
+{\em These variables+objects are used by the Agents\+Sample$<$\+TSeq$>$ class for building efficient iterators over agents. The idea is to reduce the memory allocation, so only during the first call of Agents\+Sample$<$\+TSeq$>$\+::\+Agents\+Sample(\+Model$<$\+TSeq$>$) these vectors are allocated. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a5f4929330bb4b831b821a8fb8fd6d0cb}\label{class_model_a5f4929330bb4b831b821a8fb8fd6d0cb}} 
+std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries sampled\+\_\+population}
+\item 
+\mbox{\Hypertarget{class_model_a547a8e75852b1d309680c408f7c044bc}\label{class_model_a547a8e75852b1d309680c408f7c044bc}} 
+size\+\_\+t {\bfseries sampled\+\_\+population\+\_\+n} = 0u
+\item 
+\mbox{\Hypertarget{class_model_af2311eb8bc8db661f03617eab25ffda0}\label{class_model_af2311eb8bc8db661f03617eab25ffda0}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries population\+\_\+left}
+\item 
+\mbox{\Hypertarget{class_model_a1b972dbec11262c4a4d6fb6bb8d07e25}\label{class_model_a1b972dbec11262c4a4d6fb6bb8d07e25}} 
+size\+\_\+t {\bfseries population\+\_\+left\+\_\+n} = 0u
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Agents features}\par
+{\em Optionally, a model can include an external data source pointing to agents information. The data can then be access through the {\ttfamily Agent\+::operator()} method. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_ad2ce09df79ea0eddc590c2e256fbfa39}\label{class_model_ad2ce09df79ea0eddc590c2e256fbfa39}} 
+double $\ast$ {\bfseries population\+\_\+data} = nullptr
+\item 
+\mbox{\Hypertarget{class_model_a4000c807b6e9643c6edb365375b3c5dd}\label{class_model_a4000c807b6e9643c6edb365375b3c5dd}} 
+size\+\_\+t {\bfseries population\+\_\+data\+\_\+n\+\_\+features} = 0u
+\end{DoxyCompactItemize}
+\end{Indent}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -479,12 +662,26 @@ class {\bfseries Queue$<$ TSeq $>$}
 \label{_amgrp67ee6851908e1ae3beb62101cd96087d}%
 These functions combine the effects tools have to deliver a single effect. For example, wearing a mask, been vaccinated, and the immune system combine together to jointly reduce the susceptibility for a given virus. \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_model_af2a02636b903fb61e1747f697129e95c}\label{class_model_af2a02636b903fb61e1747f697129e95c}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries susceptibility\+\_\+reduction\+\_\+mixer} = susceptibility\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{class_model_a9107f45ad6f3941b89b49de983e25423}\label{class_model_a9107f45ad6f3941b89b49de983e25423}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries transmission\+\_\+reduction\+\_\+mixer} = transmission\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{class_model_adc285c97f19d98257441b7329687e4b2}\label{class_model_adc285c97f19d98257441b7329687e4b2}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries recovery\+\_\+enhancer\+\_\+mixer} = recovery\+\_\+enhancer\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{class_model_a3758808ac1dd043ef483b88a85b4baa7}\label{class_model_a3758808ac1dd043ef483b88a85b4baa7}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries death\+\_\+reduction\+\_\+mixer} = death\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
 \mbox{\Hypertarget{class_model_a12df19c247eec2a54843fa969b01ca3e}\label{class_model_a12df19c247eec2a54843fa969b01ca3e}} 
 std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries array\+\_\+double\+\_\+tmp}
 \item 
 \mbox{\Hypertarget{class_model_abad161de5921dd9a93a981ee97f5b6cf}\label{class_model_abad161de5921dd9a93a981ee97f5b6cf}} 
 std\+::vector$<$ \mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries array\+\_\+virus\+\_\+tmp}
 \item 
+virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_afd0c24e19b0a104e03d96ab4333725e5}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a3e9cf2b4070a2eacb9f5cf3aadeafbe6}\label{class_model_a3e9cf2b4070a2eacb9f5cf3aadeafbe6}} 
 {\bfseries Model} ()
 \item 
@@ -527,6 +724,54 @@ The model class provides the wrapper that puts together {\ttfamily \mbox{\hyperl
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_add329fe1a52fc2cc6052974b5a118d46}\label{class_model_add329fe1a52fc2cc6052974b5a118d46}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!actions\_add@{actions\_add}}
+\index{actions\_add@{actions\_add}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{actions\_add()}{actions\_add()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{new\+\_\+state\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Construct a new \mbox{\hyperlink{struct_action}{Action}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+\_\+} & \mbox{\hyperlink{class_agent}{Agent}} over which the action will be called \\
+\hline
+{\em virus\+\_\+} & \mbox{\hyperlink{class_virus}{Virus}} pointer included in the action \\
+\hline
+{\em tool\+\_\+} & \mbox{\hyperlink{class_tool}{Tool}} pointer included in the action \\
+\hline
+{\em entity\+\_\+} & \mbox{\hyperlink{class_entity}{Entity}} pointer included in the action \\
+\hline
+{\em new\+\_\+state\+\_\+} & New state of the agent \\
+\hline
+{\em call\+\_\+} & Function the action will call \\
+\hline
+{\em queue\+\_\+} & Change in the queue \\
+\hline
+{\em idx\+\_\+agent\+\_\+} & Location of agent in object. \\
+\hline
+{\em idx\+\_\+object\+\_\+} & Location of object in agent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_model_a2125fc528ee1532733b7532f3d0e290a}\label{class_model_a2125fc528ee1532733b7532f3d0e290a}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!actions\_run@{actions\_run}}
+\index{actions\_run@{actions\_run}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{actions\_run()}{actions\_run()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+run\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Executes the stored action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+\_\+} & \mbox{\hyperlink{class_model}{Model}} over which it will be executed. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_model_adc3b2119335ffa4b0128123be919f454}\label{class_model_adc3b2119335ffa4b0128123be919f454}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!add\_global\_action@{add\_global\_action}}
 \index{add\_global\_action@{add\_global\_action}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
@@ -545,7 +790,23 @@ Set a global action.
 {\em date} & Integer indicating when the function is called (see details)\\
 \hline
 \end{DoxyParams}
-When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{class_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{class_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
+When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{class_model_afd0c24e19b0a104e03d96ab4333725e5}\label{class_model_afd0c24e19b0a104e03d96ab4333725e5}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{class_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!load\_agents\_entities\_ties@{load\_agents\_entities\_ties}}
 \index{load\_agents\_entities\_ties@{load\_agents\_entities\_ties}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{load\_agents\_entities\_ties()}{load\_agents\_entities\_ties()}}
@@ -661,6 +922,22 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 {\em fn\+\_\+reproductive\+\_\+number} & Filename. Case by case reproductive number \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_model_a10176edc2bf524086ff44c961e70a146}\label{class_model_a10176edc2bf524086ff44c961e70a146}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!time\_elapsed@{time\_elapsed}}
+\index{time\_elapsed@{time\_elapsed}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{time\_elapsed}{time\_elapsed}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::chrono\+::duration$<$epiworld\+\_\+double,std\+::micro$>$ \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::time\+\_\+elapsed\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{        std::chrono::duration<epiworld\_double,std::micro>::zero()}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

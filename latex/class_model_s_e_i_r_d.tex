@@ -1,0 +1,84 @@
+\hypertarget{class_model_s_e_i_r_d}{}\doxysection{Model\+SEIRD$<$ TSeq $>$ Class Template Reference}
+\label{class_model_s_e_i_r_d}\index{ModelSEIRD$<$ TSeq $>$@{ModelSEIRD$<$ TSeq $>$}}
+
+
+Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed-\/\+Deceased (SEIRD) model.  
+
+
+
+
+{\ttfamily \#include $<$seird.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+SEIRD$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{class_model_s_e_i_r_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+SEIRD$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{class_model_s_e_i_r_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_afc308a759765e2d6cd8aeb180a6777cf}\label{class_model_s_e_i_r_d_afc308a759765e2d6cd8aeb180a6777cf}} 
+{\bfseries Model\+SEIRD} (\mbox{\hyperlink{class_model_s_e_i_r_d}{Model\+SEIRD}}$<$ TSeq $>$ \&model, std\+::string vname)
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a940ac11be7b9a5a67423d3a1851f159f}\label{class_model_s_e_i_r_d_a940ac11be7b9a5a67423d3a1851f159f}} 
+{\bfseries Model\+SEIRD} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double incu\+\_\+shape, epiworld\+\_\+double incu\+\_\+rate, epiworld\+\_\+double infe\+\_\+shape, epiworld\+\_\+double infe\+\_\+rate, epiworld\+\_\+double p\+\_\+hosp, epiworld\+\_\+double p\+\_\+hosp\+\_\+rec, epiworld\+\_\+double p\+\_\+hosp\+\_\+die, epiworld\+\_\+double p\+\_\+transmission, epiworld\+\_\+double p\+\_\+transmission\+\_\+entity, size\+\_\+t n\+\_\+entities, size\+\_\+t n\+\_\+interactions)
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a6e8acdd8def42db6db4ac7db14b93741}\label{class_model_s_e_i_r_d_a6e8acdd8def42db6db4ac7db14b93741}} 
+{\bfseries Model\+SEIRD} (std\+::string fn, std\+::string vname)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a3777697e2cd67f64f897cdb3099805bb}\label{class_model_s_e_i_r_d_a3777697e2cd67f64f897cdb3099805bb}} 
+enum {\bfseries S} \{ \newline
+{\bfseries Susceptible}
+, {\bfseries Exposed}
+, {\bfseries Infected}
+, {\bfseries Hospitalized}
+, \newline
+{\bfseries Recovered}
+, {\bfseries Deceased}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a81cc3d3ee14663f2e9b09f6570dc431d}\label{class_model_s_e_i_r_d_a81cc3d3ee14663f2e9b09f6570dc431d}} 
+static void {\bfseries update\+\_\+exposed} (\mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$p, \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$ $\ast$m)
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a4f826c24876572677a4501e4088df0b0}\label{class_model_s_e_i_r_d_a4f826c24876572677a4501e4088df0b0}} 
+static void {\bfseries update\+\_\+infected} (\mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$p, \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$ $\ast$m)
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a280c4658258da6d70a9c65eb5f6102e4}\label{class_model_s_e_i_r_d_a280c4658258da6d70a9c65eb5f6102e4}} 
+static void {\bfseries update\+\_\+hospitalized} (\mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$p, \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$ $\ast$m)
+\item 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a134018a802a975b8abdb57d5eb98ac56}\label{class_model_s_e_i_r_d_a134018a802a975b8abdb57d5eb98ac56}} 
+static void \mbox{\hyperlink{class_model_s_e_i_r_d_a134018a802a975b8abdb57d5eb98ac56}{contact}} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$m)
+\begin{DoxyCompactList}\small\item\em Transmission by contact outside home. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq = int$>$\newline
+class Model\+SEIRD$<$ TSeq $>$}
+
+Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed-\/\+Deceased (SEIRD) model. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/epiworld/models/seird.\+hpp\end{DoxyCompactItemize}

@@ -9,6 +9,16 @@ Core class of epiworld.
 
 {\ttfamily \#include $<$epiworld.\+hpp$>$}
 
+
+
+Collaboration diagram for epiworld\+::Model$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classepiworld_1_1_model__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,7 +92,7 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 \item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string name)
+void \mbox{\hyperlink{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}})
 \begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a2a8ec13a43f5839f9b06409b990b35b3}\label{classepiworld_1_1_model_a2a8ec13a43f5839f9b06409b990b35b3}} 
 std\+::string {\bfseries get\+\_\+name} () const
@@ -357,8 +367,8 @@ In the case of the function {\ttfamily read\+\_\+params}, users can pass a file 
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[name of parameter 1]: [value in double]}
-\DoxyCodeLine{[name of parameter 2]: [value in double]}
+\DoxyCodeLine{[\mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}} of parameter 1]: [value in double]}
+\DoxyCodeLine{[\mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}} of parameter 2]: [value in double]}
 \DoxyCodeLine{...}
 
 \end{DoxyCode}
@@ -460,6 +470,179 @@ void {\bfseries set\+\_\+recovery\+\_\+enhancer\+\_\+mixer} (Mixer\+Fun$<$ TSeq 
 void {\bfseries set\+\_\+death\+\_\+reduction\+\_\+mixer} (Mixer\+Fun$<$ TSeq $>$ fun)
 \end{DoxyCompactItemize}
 \end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a9137e9ff2178859962203b6e2b18472f}\label{classepiworld_1_1_model_a9137e9ff2178859962203b6e2b18472f}} 
+void {\bfseries dist\+\_\+tools} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac2cc437ae91612c3a56f24943651fef9}\label{classepiworld_1_1_model_ac2cc437ae91612c3a56f24943651fef9}} 
+void {\bfseries dist\+\_\+virus} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aeacf2267c574f1d19d1f6577ed668d6c}\label{classepiworld_1_1_model_aeacf2267c574f1d19d1f6577ed668d6c}} 
+void {\bfseries chrono\+\_\+start} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aea7a2d08458c63e06589e13ee6f1ffdd}\label{classepiworld_1_1_model_aea7a2d08458c63e06589e13ee6f1ffdd}} 
+void {\bfseries chrono\+\_\+end} ()
+\item 
+void \mbox{\hyperlink{classepiworld_1_1_model_add329fe1a52fc2cc6052974b5a118d46}{actions\+\_\+add}} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+uint new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{structepiworld_1_1_action}{Action}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classepiworld_1_1_model_a2125fc528ee1532733b7532f3d0e290a}{actions\+\_\+run}} ()
+\begin{DoxyCompactList}\small\item\em Executes the stored action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}\label{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}} 
+std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name of the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a2efad071714b244d8f03ff306f7c7f98}\label{classepiworld_1_1_model_a2efad071714b244d8f03ff306f7c7f98}} 
+\mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ {\bfseries db} = \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$TSeq$>$($\ast$this)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a00ab66f33007f0b5e8c10461ecb435af}\label{classepiworld_1_1_model_a00ab66f33007f0b5e8c10461ecb435af}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $>$ {\bfseries population} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a523fed6e35e7b26bd305bbf222b5a994}\label{classepiworld_1_1_model_a523fed6e35e7b26bd305bbf222b5a994}} 
+bool {\bfseries using\+\_\+backup} = true
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_afcf9750b42269a09ae8897d6e989d3e4}\label{classepiworld_1_1_model_afcf9750b42269a09ae8897d6e989d3e4}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $>$ {\bfseries population\+\_\+backup} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a36a96643c2597a53a50f55098eaea289}\label{classepiworld_1_1_model_a36a96643c2597a53a50f55098eaea289}} 
+bool {\bfseries directed} = false
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_adb49c02bf8c9ec3f1b61372c714aa11b}\label{classepiworld_1_1_model_adb49c02bf8c9ec3f1b61372c714aa11b}} 
+std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ {\bfseries viruses} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}\label{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}{prevalence\+\_\+virus}} = \{\}
+\begin{DoxyCompactList}\small\item\em Initial prevalence\+\_\+virus of each virus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a6281922fcfa2dcd4735be9867ede6298}\label{classepiworld_1_1_model_a6281922fcfa2dcd4735be9867ede6298}} 
+std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+virus\+\_\+as\+\_\+proportion} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a400c05d6e39888304b53e1bb259c6a82}\label{classepiworld_1_1_model_a400c05d6e39888304b53e1bb259c6a82}} 
+std\+::vector$<$ Virus\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries viruses\+\_\+dist\+\_\+funs} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5da04a2eaeef911f7643364a93211f4c}\label{classepiworld_1_1_model_a5da04a2eaeef911f7643364a93211f4c}} 
+std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ {\bfseries tools} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a64b1004c37c16f6711daab9e7e4eff73}\label{classepiworld_1_1_model_a64b1004c37c16f6711daab9e7e4eff73}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries prevalence\+\_\+tool} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5536c1f684c9877815aca79ed4a9e9ef}\label{classepiworld_1_1_model_a5536c1f684c9877815aca79ed4a9e9ef}} 
+std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+tool\+\_\+as\+\_\+proportion} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aabd5a7b23f4ffebef28149b0b221f487}\label{classepiworld_1_1_model_aabd5a7b23f4ffebef28149b0b221f487}} 
+std\+::vector$<$ Tool\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries tools\+\_\+dist\+\_\+funs} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a3673b660997806fb8a62c84fd3465b4e}\label{classepiworld_1_1_model_a3673b660997806fb8a62c84fd3465b4e}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a69c9f8223fb218ca0c5fa1c8ed77ac7d}\label{classepiworld_1_1_model_a69c9f8223fb218ca0c5fa1c8ed77ac7d}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a3682697edb973e1d1961632d0eb09b95}\label{classepiworld_1_1_model_a3682697edb973e1d1961632d0eb09b95}} 
+std\+::mt19937 {\bfseries engine}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac6e3cf369ccd0e3b7ab5f5d37ab8f8c7}\label{classepiworld_1_1_model_ac6e3cf369ccd0e3b7ab5f5d37ab8f8c7}} 
+std\+::uniform\+\_\+real\+\_\+distribution {\bfseries runifd} = std\+::uniform\+\_\+real\+\_\+distribution$<$$>$ (0.\+0, 1.\+0)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_abcb3d881826aa03f5d688869749fc336}\label{classepiworld_1_1_model_abcb3d881826aa03f5d688869749fc336}} 
+std\+::normal\+\_\+distribution {\bfseries rnormd} = std\+::normal\+\_\+distribution$<$$>$(0.\+0)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a05f4a306af56ad4e6902663243cd6e90}\label{classepiworld_1_1_model_a05f4a306af56ad4e6902663243cd6e90}} 
+std\+::gamma\+\_\+distribution {\bfseries rgammad} = std\+::gamma\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a7089d3aab9f5b61ab86fd116828616ff}\label{classepiworld_1_1_model_a7089d3aab9f5b61ab86fd116828616ff}} 
+std\+::lognormal\+\_\+distribution {\bfseries rlognormald} = std\+::lognormal\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ad7f1305f7dcdf8d032f897ec867da21d}\label{classepiworld_1_1_model_ad7f1305f7dcdf8d032f897ec867da21d}} 
+std\+::exponential\+\_\+distribution {\bfseries rexpd} = std\+::exponential\+\_\+distribution$<$$>$()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a127cc182f4251ece712cfadf80b59ecf}\label{classepiworld_1_1_model_a127cc182f4251ece712cfadf80b59ecf}} 
+std\+::function$<$ void(std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$$>$ $\ast$, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$, epiworld\+\_\+double)$>$ {\bfseries rewire\+\_\+fun}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a823dcea94b5fbea32ec1b9255a17c255}\label{classepiworld_1_1_model_a823dcea94b5fbea32ec1b9255a17c255}} 
+epiworld\+\_\+double {\bfseries rewire\+\_\+prop} = 0.\+0
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aa12b76b07e9f8bf9c44cb236b97e854a}\label{classepiworld_1_1_model_aa12b76b07e9f8bf9c44cb236b97e854a}} 
+std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ {\bfseries parameters}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a7c0a628b4e5393cf43c524a8ca275455}\label{classepiworld_1_1_model_a7c0a628b4e5393cf43c524a8ca275455}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries ndays}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a8bc00b89364afdcf59755257635bb338}\label{classepiworld_1_1_model_a8bc00b89364afdcf59755257635bb338}} 
+\mbox{\hyperlink{classepiworld_1_1_progress}{Progress}} {\bfseries pb}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a5e551df72701c6a20a3343dda06cac15}\label{classepiworld_1_1_model_a5e551df72701c6a20a3343dda06cac15}} 
+std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ {\bfseries status\+\_\+fun} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac7779a593e4ffd8501c104c122915878}\label{classepiworld_1_1_model_ac7779a593e4ffd8501c104c122915878}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries status\+\_\+labels} = \{\}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0080cb25324759be2f327240540dd655}\label{classepiworld_1_1_model_a0080cb25324759be2f327240540dd655}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries nstatus} = 0u
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a952efb9c3e4149e41c8b6d833d2a95f3}\label{classepiworld_1_1_model_a952efb9c3e4149e41c8b6d833d2a95f3}} 
+bool {\bfseries verbose} = true
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0ff607fd1daab12ef81bf6004f571b5e}\label{classepiworld_1_1_model_a0ff607fd1daab12ef81bf6004f571b5e}} 
+int {\bfseries current\+\_\+date} = 0
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a70b58d7c80797debaef43f18a7c940f7}\label{classepiworld_1_1_model_a70b58d7c80797debaef43f18a7c940f7}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ {\bfseries time\+\_\+start}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a3ca20f976330b065307b6a2cf025eedb}\label{classepiworld_1_1_model_a3ca20f976330b065307b6a2cf025eedb}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ {\bfseries time\+\_\+end}
+\item 
+std\+::chrono\+::duration$<$ epiworld\+\_\+double, std\+::micro $>$ {\bfseries time\+\_\+elapsed}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a11638b0eb6184de152068ba08dc647c8}\label{classepiworld_1_1_model_a11638b0eb6184de152068ba08dc647c8}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries n\+\_\+replicates} = 0u
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aac3256d9cbe22a7851be4c67f0e7a20f}\label{classepiworld_1_1_model_aac3256d9cbe22a7851be4c67f0e7a20f}} 
+std\+::vector$<$ std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ $>$ {\bfseries global\+\_\+action\+\_\+functions}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a1da72cea71596483ba57324b67946c54}\label{classepiworld_1_1_model_a1da72cea71596483ba57324b67946c54}} 
+std\+::vector$<$ int $>$ {\bfseries global\+\_\+action\+\_\+dates}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aafe0a7d4556f54fe5b14a43d80461fd2}\label{classepiworld_1_1_model_aafe0a7d4556f54fe5b14a43d80461fd2}} 
+\mbox{\hyperlink{classepiworld_1_1_queue}{Queue}}$<$ TSeq $>$ {\bfseries queue}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ad072059540375302e93464aa7baf963d}\label{classepiworld_1_1_model_ad072059540375302e93464aa7baf963d}} 
+bool {\bfseries use\+\_\+queuing} = true
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a22b3e1c4266fc09b1cf8bbed79878500}\label{classepiworld_1_1_model_a22b3e1c4266fc09b1cf8bbed79878500}} 
+std\+::vector$<$ \mbox{\hyperlink{structepiworld_1_1_action}{Action}}$<$ TSeq $>$ $>$ \mbox{\hyperlink{classepiworld_1_1_model_a22b3e1c4266fc09b1cf8bbed79878500}{actions}} = \{\}
+\begin{DoxyCompactList}\small\item\em Variables used to keep track of the actions to be made regarding viruses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a994eb7411c49370eb64e28ca0cb330e2}\label{classepiworld_1_1_model_a994eb7411c49370eb64e28ca0cb330e2}} 
+epiworld\+\_\+fast\+\_\+uint {\bfseries nactions} = 0u
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Auxiliary variables for Agents\+Sample$<$TSeq$>$ iterators}\par
+{\em These variables+objects are used by the Agents\+Sample$<$\+TSeq$>$ class for building efficient iterators over agents. The idea is to reduce the memory allocation, so only during the first call of Agents\+Sample$<$\+TSeq$>$\+::\+Agents\+Sample(\+Model$<$\+TSeq$>$) these vectors are allocated. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_adad639f67976ed5a7c29a8cba6e0e284}\label{classepiworld_1_1_model_adad639f67976ed5a7c29a8cba6e0e284}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries sampled\+\_\+population}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a035a69b3d4994756868612d77d170398}\label{classepiworld_1_1_model_a035a69b3d4994756868612d77d170398}} 
+size\+\_\+t {\bfseries sampled\+\_\+population\+\_\+n} = 0u
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a8ebde3add1d21162060fd2faf91e0fcd}\label{classepiworld_1_1_model_a8ebde3add1d21162060fd2faf91e0fcd}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries population\+\_\+left}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a383eda6cc92745449a857b106aca75b0}\label{classepiworld_1_1_model_a383eda6cc92745449a857b106aca75b0}} 
+size\+\_\+t {\bfseries population\+\_\+left\+\_\+n} = 0u
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Agents features}\par
+{\em Optionally, a model can include an external data source pointing to agents information. The data can then be access through the {\ttfamily Agent\+::operator()} method. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a1fec0fdd94e1573d4eaeb57a5795b466}\label{classepiworld_1_1_model_a1fec0fdd94e1573d4eaeb57a5795b466}} 
+double $\ast$ {\bfseries population\+\_\+data} = nullptr
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a8adf8e7ea44b0ec13857a574677c92c8}\label{classepiworld_1_1_model_a8adf8e7ea44b0ec13857a574677c92c8}} 
+size\+\_\+t {\bfseries population\+\_\+data\+\_\+n\+\_\+features} = 0u
+\end{DoxyCompactItemize}
+\end{Indent}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -479,12 +662,26 @@ class {\bfseries Queue$<$ TSeq $>$}
 \label{_amgrp67ee6851908e1ae3beb62101cd96087d}%
 These functions combine the effects tools have to deliver a single effect. For example, wearing a mask, been vaccinated, and the immune system combine together to jointly reduce the susceptibility for a given virus. \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a95689bcd4787c43547cdec0699546fa1}\label{classepiworld_1_1_model_a95689bcd4787c43547cdec0699546fa1}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries susceptibility\+\_\+reduction\+\_\+mixer} = susceptibility\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ab221bfbb2f8f2bb5a936862ceaf265e3}\label{classepiworld_1_1_model_ab221bfbb2f8f2bb5a936862ceaf265e3}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries transmission\+\_\+reduction\+\_\+mixer} = transmission\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a423acce843f32f096e073c62896ebc71}\label{classepiworld_1_1_model_a423acce843f32f096e073c62896ebc71}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries recovery\+\_\+enhancer\+\_\+mixer} = recovery\+\_\+enhancer\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a874b087ef2a3ede628a918a9344c6395}\label{classepiworld_1_1_model_a874b087ef2a3ede628a918a9344c6395}} 
+Mixer\+Fun$<$ TSeq $>$ {\bfseries death\+\_\+reduction\+\_\+mixer} = death\+\_\+reduction\+\_\+mixer\+\_\+default$<$TSeq$>$
+\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a85c4d2b9fb36014ddf7aea1c5730dad8}\label{classepiworld_1_1_model_a85c4d2b9fb36014ddf7aea1c5730dad8}} 
 std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries array\+\_\+double\+\_\+tmp}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_aeb21deba7e0952d68f24ace44726595d}\label{classepiworld_1_1_model_aeb21deba7e0952d68f24ace44726595d}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries array\+\_\+virus\+\_\+tmp}
 \item 
+virtual \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a3e9cf2b4070a2eacb9f5cf3aadeafbe6}\label{classepiworld_1_1_model_a3e9cf2b4070a2eacb9f5cf3aadeafbe6}} 
 {\bfseries Model} ()
 \item 
@@ -527,6 +724,54 @@ The model class provides the wrapper that puts together {\ttfamily \mbox{\hyperl
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classepiworld_1_1_model_add329fe1a52fc2cc6052974b5a118d46}\label{classepiworld_1_1_model_add329fe1a52fc2cc6052974b5a118d46}} 
+\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!actions\_add@{actions\_add}}
+\index{actions\_add@{actions\_add}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{actions\_add()}{actions\_add()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{new\+\_\+state\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Construct a new \mbox{\hyperlink{structepiworld_1_1_action}{Action}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}} over which the action will be called \\
+\hline
+{\em virus\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_virus}{Virus}} pointer included in the action \\
+\hline
+{\em tool\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_tool}{Tool}} pointer included in the action \\
+\hline
+{\em entity\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}} pointer included in the action \\
+\hline
+{\em new\+\_\+state\+\_\+} & New state of the agent \\
+\hline
+{\em call\+\_\+} & Function the action will call \\
+\hline
+{\em queue\+\_\+} & Change in the queue \\
+\hline
+{\em idx\+\_\+agent\+\_\+} & Location of agent in object. \\
+\hline
+{\em idx\+\_\+object\+\_\+} & Location of object in agent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classepiworld_1_1_model_a2125fc528ee1532733b7532f3d0e290a}\label{classepiworld_1_1_model_a2125fc528ee1532733b7532f3d0e290a}} 
+\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!actions\_run@{actions\_run}}
+\index{actions\_run@{actions\_run}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{actions\_run()}{actions\_run()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+run\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Executes the stored action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_model}{Model}} over which it will be executed. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classepiworld_1_1_model_adc3b2119335ffa4b0128123be919f454}\label{classepiworld_1_1_model_adc3b2119335ffa4b0128123be919f454}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!add\_global\_action@{add\_global\_action}}
 \index{add\_global\_action@{add\_global\_action}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
@@ -545,7 +790,27 @@ Set a global action.
 {\em date} & Integer indicating when the function is called (see details)\\
 \hline
 \end{DoxyParams}
-When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
+When date is less than zero, then the function is called at the end of every day. Otherwise, the function will be called only at the end of the indicated date. \mbox{\Hypertarget{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}\label{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}} 
+\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{Model\+SIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{Model\+SEIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{epiworld\+::epimodels\+::\+Model\+SEIRCONN$<$ TSeq $>$}}, and \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{epiworld\+::epimodels\+::\+Model\+SIRCONN$<$ TSeq $>$}}.
+
+\mbox{\Hypertarget{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!load\_agents\_entities\_ties@{load\_agents\_entities\_ties}}
 \index{load\_agents\_entities\_ties@{load\_agents\_entities\_ties}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{load\_agents\_entities\_ties()}{load\_agents\_entities\_ties()}}
@@ -661,6 +926,22 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 {\em fn\+\_\+reproductive\+\_\+number} & Filename. Case by case reproductive number \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classepiworld_1_1_model_a155eff2a248a804518b553684e62e609}\label{classepiworld_1_1_model_a155eff2a248a804518b553684e62e609}} 
+\index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!time\_elapsed@{time\_elapsed}}
+\index{time\_elapsed@{time\_elapsed}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{time\_elapsed}{time\_elapsed}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::chrono\+::duration$<$epiworld\+\_\+double,std\+::micro$>$ \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$\+::time\+\_\+elapsed\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{        std::chrono::duration<epiworld\_double,std::micro>::zero()}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
