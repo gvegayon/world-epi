@@ -3248,7 +3248,7 @@ $(function() {
 <div class="line"><a name="l03622"></a><span class="lineno"> 3622</span>&#160;<span class="comment">        std::ofstream file_transmission(fn_transmission, std::ios_base::out);</span></div>
 <div class="line"><a name="l03623"></a><span class="lineno"> 3623</span>&#160;<span class="comment">        file_transmission &lt;&lt;</span></div>
 <div class="line"><a name="l03624"></a><span class="lineno"> 3624</span>&#160;<span class="comment">            #ifdef _OPENMP</span></div>
-<div class="line"><a name="l03625"></a><span class="lineno"> 3625</span>&#160;<span class="comment">            EPI_GET_THREAD_ID() &lt;&lt; &quot; &quot; &lt;&lt;</span></div>
+<div class="line"><a name="l03625"></a><span class="lineno"> 3625</span>&#160;<span class="comment">            &quot;thread &quot; &lt;&lt; </span></div>
 <div class="line"><a name="l03626"></a><span class="lineno"> 3626</span>&#160;<span class="comment">            #endif</span></div>
 <div class="line"><a name="l03627"></a><span class="lineno"> 3627</span>&#160;<span class="comment">            &quot;date &quot; &lt;&lt; &quot;variant &quot; &lt;&lt; &quot;source_exposure_date &quot; &lt;&lt; &quot;source &quot; &lt;&lt; &quot;target\n&quot;;</span></div>
 <div class="line"><a name="l03628"></a><span class="lineno"> 3628</span>&#160;<span class="comment"></span> </div>
@@ -4006,7 +4006,7 @@ $(function() {
 <div class="line"><a name="l04380"></a><span class="lineno"> 4380</span>&#160;<span class="comment">        // minus 1;</span></div>
 <div class="line"><a name="l04381"></a><span class="lineno"> 4381</span>&#160;<span class="comment">        if (!found)</span></div>
 <div class="line"><a name="l04382"></a><span class="lineno"> 4382</span>&#160;<span class="comment">            gentime.push_back(-1);</span></div>
-<div class="line"><a name="l04383"></a><span class="lineno"> 4383</span>&#160;<span class="comment">            </span></div>
+<div class="line"><a name="l04383"></a><span class="lineno"> 4383</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04384"></a><span class="lineno"> 4384</span>&#160;<span class="comment">    }</span></div>
 <div class="line"><a name="l04385"></a><span class="lineno"> 4385</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04386"></a><span class="lineno"> 4386</span>&#160;<span class="comment">    agent_id.shrink_to_fit();</span></div>

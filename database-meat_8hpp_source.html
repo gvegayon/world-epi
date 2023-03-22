@@ -802,7 +802,7 @@ $(function() {
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        std::ofstream file_transmission(fn_transmission, std::ios_base::out);</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        file_transmission &lt;&lt;</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="preprocessor">            #ifdef _OPENMP</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            EPI_GET_THREAD_ID() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span> &lt;&lt; </div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="preprocessor">            #endif</span></div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;variant &quot;</span> &lt;&lt; <span class="stringliteral">&quot;source_exposure_date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;source &quot;</span> &lt;&lt; <span class="stringliteral">&quot;target\n&quot;</span>;</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
@@ -1560,7 +1560,7 @@ $(function() {
 <div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;        <span class="comment">// minus 1;</span></div>
 <div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;        <span class="keywordflow">if</span> (!found)</div>
 <div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;            gentime.push_back(-1);</div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;            </div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160; </div>
 <div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;    }</div>
 <div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160; </div>
 <div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;    agent_id.shrink_to_fit();</div>
