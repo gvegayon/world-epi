@@ -133,9 +133,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>verbose_on</b> ()</td
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a> () const</td></tr>
 <tr class="memdesc:aa3ce8d5f025e239f8090ab9645f3e917"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current time of the model. <br /></td></tr>
 <tr class="separator:aa3ce8d5f025e239f8090ab9645f3e917"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02135cd989e6fdadaf71d3140fb4a2e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a02135cd989e6fdadaf71d3140fb4a2e8">write_data</a> (std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number) const</td></tr>
-<tr class="memdesc:a02135cd989e6fdadaf71d3140fb4a2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper of <code>DataBase::write_data</code>  <a href="classepiworld_1_1_model.html#a02135cd989e6fdadaf71d3140fb4a2e8">More...</a><br /></td></tr>
-<tr class="separator:a02135cd989e6fdadaf71d3140fb4a2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe51a56419087566d858f0739918c795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#abe51a56419087566d858f0739918c795">write_data</a> (std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</td></tr>
+<tr class="memdesc:abe51a56419087566d858f0739918c795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper of <code>DataBase::write_data</code>  <a href="classepiworld_1_1_model.html#abe51a56419087566d858f0739918c795">More...</a><br /></td></tr>
+<tr class="separator:abe51a56419087566d858f0739918c795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c6f310249ec2e9c089ca0970606ed4f"><td class="memItemLeft" align="right" valign="top"><a id="a3c6f310249ec2e9c089ca0970606ed4f"></a>
 std::map&lt; std::string, epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b> ()</td></tr>
 <tr class="separator:a3c6f310249ec2e9c089ca0970606ed4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,7 +419,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_state_codes</b>
 <div class="fragment"><div class="line">[<a class="code" href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">name</a> of parameter 1]: [value in double]</div>
 <div class="line">[<a class="code" href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">name</a> of parameter 2]: [value in double]</div>
 <div class="line">...</div>
-<div class="ttc" id="aclassepiworld_1_1_model_html_a4af72bcd59626f5c6cb52fc10fc30c04"><div class="ttname"><a href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">epiworld::Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5546</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html_a4af72bcd59626f5c6cb52fc10fc30c04"><div class="ttname"><a href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">epiworld::Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:5551</div></div>
 </div><!-- fragment --><p>The only condition for parameter names is that these do not include a colon.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1213,8 +1213,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="a02135cd989e6fdadaf71d3140fb4a2e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02135cd989e6fdadaf71d3140fb4a2e8">&#9670;&nbsp;</a></span>write_data()</h2>
+<a id="abe51a56419087566d858f0739918c795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe51a56419087566d858f0739918c795">&#9670;&nbsp;</a></span>write_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1270,7 +1270,13 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>fn_reproductive_number</em>&#160;</td>
+          <td class="paramname"><em>fn_reproductive_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fn_generation_time</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
