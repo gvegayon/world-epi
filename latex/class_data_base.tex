@@ -75,6 +75,8 @@ bool \mbox{\hyperlink{class_data_base_ab387bebbab95525c452660a7701c457d}{operato
 \mbox{\Hypertarget{class_data_base_ac5d9c063be411ebe4fb7e2a08468eaf2}\label{class_data_base_ac5d9c063be411ebe4fb7e2a08468eaf2}} 
 bool {\bfseries operator!=} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$ \&other) const
 \item 
+void \mbox{\hyperlink{class_data_base_a17a16f7aa666f4852b40324cf89cd449}{generation\+\_\+time}} (std\+::vector$<$ int $>$ \&agent\+\_\+id, std\+::vector$<$ int $>$ \&virus\+\_\+id, std\+::vector$<$ int $>$ \&time, std\+::vector$<$ int $>$ \&gentime) const
+\item 
 bool \mbox{\hyperlink{class_data_base_a707b63e79214f82c5efb85fc04ccee11}{operator==}} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&other) const
 \item 
 bool \mbox{\hyperlink{class_data_base_a707b63e79214f82c5efb85fc04ccee11}{operator==}} (const \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ std\+::vector$<$ int $>$$>$ \&other) const
@@ -160,6 +162,18 @@ Statistical data about the process.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_base_a17a16f7aa666f4852b40324cf89cd449}\label{class_data_base_a17a16f7aa666f4852b40324cf89cd449}} 
+\index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!generation\_time@{generation\_time}}
+\index{generation\_time@{generation\_time}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{generation\_time()}{generation\_time()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$\+::generation\+\_\+time (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{agent\+\_\+id,  }\item[{std\+::vector$<$ int $>$ \&}]{virus\+\_\+id,  }\item[{std\+::vector$<$ int $>$ \&}]{time,  }\item[{std\+::vector$<$ int $>$ \&}]{gentime }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the generating time 
+\begin{DoxyParams}{Parameters}
+{\em agent\+\_\+id,virus\+\_\+id,time,gentime} & vectors where to save the values agent\+\_\+id \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_data_base_a707b63e79214f82c5efb85fc04ccee11}\label{class_data_base_a707b63e79214f82c5efb85fc04ccee11}} 
 \index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!operator==@{operator==}}
 \index{operator==@{operator==}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}

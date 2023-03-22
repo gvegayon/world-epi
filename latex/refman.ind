@@ -43,9 +43,10 @@
   \indexspace
 
   \item {DataBase$<$ TSeq $>$}, \hyperpage{52}
-    \subitem {operator==}, \hyperpage{53, 54}
+    \subitem {generation\_time}, \hyperpage{53}
+    \subitem {operator==}, \hyperpage{54}
     \subitem {record\_variant}, \hyperpage{54}
-    \subitem {reproductive\_number}, \hyperpage{54}
+    \subitem {reproductive\_number}, \hyperpage{55}
     \subitem {transition\_probability}, \hyperpage{55}
   \item {default\_rm\_entity}
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
@@ -57,7 +58,7 @@
 
   \item {Entities$<$ TSeq $>$}, \hyperpage{58}
   \item {Entities\_const$<$ TSeq $>$}, \hyperpage{60}
-  \item {Entity$<$ TSeq $>$}, \hyperpage{61}
+  \item {Entity$<$ TSeq $>$}, \hyperpage{62}
     \subitem {default\_rm\_entity}, \hyperpage{62}
   \item {epiworld::Action$<$ TSeq $>$}, \hyperpage{37}
     \subitem {Action}, \hyperpage{37}
@@ -73,7 +74,7 @@
   \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{55}
     \subitem {operator==}, \hyperpage{57}
     \subitem {record\_variant}, \hyperpage{57}
-    \subitem {reproductive\_number}, \hyperpage{57}
+    \subitem {reproductive\_number}, \hyperpage{58}
     \subitem {transition\_probability}, \hyperpage{58}
   \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{59}
   \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{61}
@@ -128,6 +129,8 @@
 
   \indexspace
 
+  \item {generation\_time}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
   \item {get\_entities}
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
     \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{47}
@@ -196,7 +199,7 @@
   \indexspace
 
   \item {operator==}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53, 54}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
 
   \indexspace
@@ -219,8 +222,8 @@
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
   \item {reproductive\_number}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{55}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{58}
   \item {reset}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{75}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{87}
