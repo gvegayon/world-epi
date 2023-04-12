@@ -824,7 +824,7 @@ $(function() {
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        std::ofstream file_transition(fn_transition, std::ios_base::out);</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        file_transition &lt;&lt;</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">            #ifdef _OPENMP</span></div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            EPI_GET_THREAD_ID() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            <span class="stringliteral">&quot;thread &quot;</span> &lt;&lt; </div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">            #endif</span></div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;from &quot;</span> &lt;&lt; <span class="stringliteral">&quot;to &quot;</span> &lt;&lt; <span class="stringliteral">&quot;counts\n&quot;</span>;</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
