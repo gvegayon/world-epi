@@ -246,7 +246,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">                 * https://gcc.gnu.org/bugzilla/show_bug.cgi?id=63176</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">                 * </span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">                 */</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> (which == _m-&gt;tracked_ninfected)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> (which == <span class="keyword">static_cast&lt;</span>epiworld_fast_uint<span class="keyword">&gt;</span>(_m-&gt;tracked_ninfected))</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    --which;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="comment">// Infecting the individual</span></div>
