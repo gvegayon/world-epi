@@ -3,7 +3,7 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_adj_list_ad7d13bf20d09f06e64cfb3efea04d3b9}{Adj\+List}} (const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&source, const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&target, int size, bool directed)
+\mbox{\hyperlink{class_adj_list_ab5db009a48beaaed1076f23517e0a8cd}{Adj\+List}} (const std\+::vector$<$ int $>$ \&source, const std\+::vector$<$ int $>$ \&target, int size, bool directed)
 \begin{DoxyCompactList}\small\item\em Construct a new Adj List object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_adj_list_a64e3ee6798567b26884dc388bbce3ab7}\label{class_adj_list_a64e3ee6798567b26884dc388bbce3ab7}} 
 {\bfseries Adj\+List} (\mbox{\hyperlink{class_adj_list}{Adj\+List}} \&\&a)
@@ -16,8 +16,8 @@
 \item 
 void \mbox{\hyperlink{class_adj_list_aa08631a4605cc3037f017bb437a96ef0}{read\+\_\+edgelist}} (std\+::string fn, int size, int skip=0, bool directed=true)
 \begin{DoxyCompactList}\small\item\em Read an edgelist. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_adj_list_a7d410594f6bc47b6ac5f71bf416f42a4}\label{class_adj_list_a7d410594f6bc47b6ac5f71bf416f42a4}} 
-std\+::map$<$ epiworld\+\_\+fast\+\_\+uint, epiworld\+\_\+fast\+\_\+uint $>$ {\bfseries operator()} (epiworld\+\_\+fast\+\_\+uint i) const
+\mbox{\Hypertarget{class_adj_list_a86dab98fc6c7528faea384d4a22ffd90}\label{class_adj_list_a86dab98fc6c7528faea384d4a22ffd90}} 
+std\+::map$<$ int, int $>$ {\bfseries operator()} (epiworld\+\_\+fast\+\_\+uint i) const
 \item 
 \mbox{\Hypertarget{class_adj_list_a64f7d6d243e37f7496eee5e16592d94b}\label{class_adj_list_a64f7d6d243e37f7496eee5e16592d94b}} 
 void {\bfseries print} (epiworld\+\_\+fast\+\_\+uint limit=20u) const
@@ -28,8 +28,8 @@ size\+\_\+t \mbox{\hyperlink{class_adj_list_a2bf3a057863c9dfb958d44ff370690d1}{v
 \mbox{\Hypertarget{class_adj_list_a776cefb7cc85d544e4eb9e61aaa46f83}\label{class_adj_list_a776cefb7cc85d544e4eb9e61aaa46f83}} 
 size\+\_\+t \mbox{\hyperlink{class_adj_list_a776cefb7cc85d544e4eb9e61aaa46f83}{ecount}} () const
 \begin{DoxyCompactList}\small\item\em Number of edges/arcs/ties in the network. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_adj_list_acb3f10d388a417efcbb40c670db09103}\label{class_adj_list_acb3f10d388a417efcbb40c670db09103}} 
-std\+::vector$<$ std\+::map$<$ epiworld\+\_\+fast\+\_\+uint, epiworld\+\_\+fast\+\_\+uint $>$ $>$ \& {\bfseries get\+\_\+dat} ()
+\mbox{\Hypertarget{class_adj_list_aa551a4c335246b704986812bed0e8b86}\label{class_adj_list_aa551a4c335246b704986812bed0e8b86}} 
+std\+::vector$<$ std\+::map$<$ int, int $>$ $>$ \& {\bfseries get\+\_\+dat} ()
 \item 
 \mbox{\Hypertarget{class_adj_list_a70e14a9f262278d028cecae547382049}\label{class_adj_list_a70e14a9f262278d028cecae547382049}} 
 bool \mbox{\hyperlink{class_adj_list_a70e14a9f262278d028cecae547382049}{is\+\_\+directed}} () const
@@ -37,11 +37,11 @@ bool \mbox{\hyperlink{class_adj_list_a70e14a9f262278d028cecae547382049}{is\+\_\+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_adj_list_ad7d13bf20d09f06e64cfb3efea04d3b9}\label{class_adj_list_ad7d13bf20d09f06e64cfb3efea04d3b9}} 
+\mbox{\Hypertarget{class_adj_list_ab5db009a48beaaed1076f23517e0a8cd}\label{class_adj_list_ab5db009a48beaaed1076f23517e0a8cd}} 
 \index{AdjList@{AdjList}!AdjList@{AdjList}}
 \index{AdjList@{AdjList}!AdjList@{AdjList}}
 \doxysubsubsection{\texorpdfstring{AdjList()}{AdjList()}}
-{\footnotesize\ttfamily Adj\+List\+::\+Adj\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&}]{source,  }\item[{const std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \&}]{target,  }\item[{int}]{size,  }\item[{bool}]{directed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Adj\+List\+::\+Adj\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{source,  }\item[{const std\+::vector$<$ int $>$ \&}]{target,  }\item[{int}]{size,  }\item[{bool}]{directed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

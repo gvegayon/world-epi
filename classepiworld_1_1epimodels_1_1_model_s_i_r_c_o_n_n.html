@@ -95,12 +95,12 @@ Collaboration diagram for epiworld::epimodels::ModelSIRCONN&lt; TSeq &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef8d98615b0c81df4d3c4e23c6c83e30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#aef8d98615b0c81df4d3c4e23c6c83e30">ModelSIRCONN</a> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
-<tr class="memdesc:aef8d98615b0c81df4d3c4e23c6c83e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Infected-Removed (SIR) model.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#aef8d98615b0c81df4d3c4e23c6c83e30">More...</a><br /></td></tr>
-<tr class="separator:aef8d98615b0c81df4d3c4e23c6c83e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ba8475134dbd9f79aa1aedf94bfbf92"><td class="memItemLeft" align="right" valign="top"><a id="a7ba8475134dbd9f79aa1aedf94bfbf92"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSIRCONN</b> (std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double reproductive_number, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
-<tr class="separator:a7ba8475134dbd9f79aa1aedf94bfbf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a4d6b31d74b4b978ddeed1ded69107"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107">ModelSIRCONN</a> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
+<tr class="memdesc:ad8a4d6b31d74b4b978ddeed1ded69107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Infected-Removed (SIR) model.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107">More...</a><br /></td></tr>
+<tr class="separator:ad8a4d6b31d74b4b978ddeed1ded69107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd91ab03b437152a6f769f518a6c006"><td class="memItemLeft" align="right" valign="top"><a id="affd91ab03b437152a6f769f518a6c006"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSIRCONN</b> (std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double prob_transmission, epiworld_double prob_recovery)</td></tr>
+<tr class="separator:affd91ab03b437152a6f769f518a6c006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf2c5f5267935acc277aafadf70c4b8e"><td class="memItemLeft" align="right" valign="top"><a id="acf2c5f5267935acc277aafadf70c4b8e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#acf2c5f5267935acc277aafadf70c4b8e">run</a> (epiworld_fast_uint ndays, int seed=-1)</td></tr>
 <tr class="memdesc:acf2c5f5267935acc277aafadf70c4b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
@@ -290,6 +290,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_from_adjlist</
 <tr class="memitem:adbea0aa9c6059d05f78e857fccc5ed8a inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="adbea0aa9c6059d05f78e857fccc5ed8a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_from_adjlist</b> (<a class="el" href="classepiworld_1_1_adj_list.html">AdjList</a> al)</td></tr>
 <tr class="separator:adbea0aa9c6059d05f78e857fccc5ed8a inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a817a90e37402ecefd56e0e9c34c77197 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a817a90e37402ecefd56e0e9c34c77197"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_from_edgelist</b> (const std::vector&lt; int &gt; &amp;source, const std::vector&lt; int &gt; &amp;target, int size, bool directed)</td></tr>
+<tr class="separator:a817a90e37402ecefd56e0e9c34c77197 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e65d452cd5ccf2aff1f53dd454faa0e inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9e65d452cd5ccf2aff1f53dd454faa0e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_directed</b> () const</td></tr>
 <tr class="separator:a9e65d452cd5ccf2aff1f53dd454faa0e inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -641,8 +644,8 @@ MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bo
 <tr class="separator:a874b087ef2a3ede628a918a9344c6395 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aef8d98615b0c81df4d3c4e23c6c83e30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef8d98615b0c81df4d3c4e23c6c83e30">&#9670;&nbsp;</a></span>ModelSIRCONN()</h2>
+<a id="ad8a4d6b31d74b4b978ddeed1ded69107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a4d6b31d74b4b978ddeed1ded69107">&#9670;&nbsp;</a></span>ModelSIRCONN()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +683,7 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>reproductive_number</em>, </td>
+          <td class="paramname"><em>contact_rate</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -713,7 +716,7 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">model</td><td>A Model&lt;TSeq&gt; object where to set up the SIR. </td></tr>
     <tr><td class="paramname">vname</td><td>std::string Name of the virus </td></tr>
     <tr><td class="paramname">prevalence</td><td>Initial prevalence (proportion) </td></tr>
-    <tr><td class="paramname">reproductive_number</td><td>Reproductive number (beta) </td></tr>
+    <tr><td class="paramname">contact_rate</td><td>Average number of contacts (interactions) per step. </td></tr>
     <tr><td class="paramname">prob_transmission</td><td>Probability of transmission </td></tr>
     <tr><td class="paramname">prob_recovery</td><td>Probability of recovery </td></tr>
   </table>

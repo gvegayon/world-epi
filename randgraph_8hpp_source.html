@@ -296,8 +296,8 @@ $(function() {
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (id1 &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(N))</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            id1 = 0;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p0 = agents-&gt;get_dat()[non_isolates[id0]];</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p1 = agents-&gt;get_dat()[non_isolates[id1]];</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        std::map&lt;int,int&gt; &amp; p0 = agents-&gt;get_dat()[non_isolates[id0]];</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        std::map&lt;int,int&gt; &amp; p1 = agents-&gt;get_dat()[non_isolates[id1]];</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">// Picking alters (relative location in their lists)</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="comment">// In this case, these are uniformly distributed within the list</span></div>
@@ -323,8 +323,8 @@ $(function() {
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> (!agents-&gt;<a class="code" href="class_adj_list.html#a70e14a9f262278d028cecae547382049">is_directed</a>())</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p01 = agents-&gt;get_dat()[id01];</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            std::map&lt;epiworld_fast_uint,epiworld_fast_uint&gt; &amp; p11 = agents-&gt;get_dat()[id11];</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            std::map&lt;int,int&gt; &amp; p01 = agents-&gt;get_dat()[id01];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            std::map&lt;int,int&gt; &amp; p11 = agents-&gt;get_dat()[id11];</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            std::swap(p01[id0], p11[id1]);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            </div>
@@ -362,8 +362,8 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; model</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;) {</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; source;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; target;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::vector&lt; int &gt; source;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    std::vector&lt; int &gt; target;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">// Checking the density (how many)</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    std::binomial_distribution&lt;&gt; d(</div>
@@ -393,8 +393,8 @@ $(function() {
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                b = 0u;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        source[i] = a;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        target[i] = b;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        source[i] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        target[i] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b);</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
@@ -463,20 +463,20 @@ $(function() {
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">if</span> ((n - 1u) &lt; k)</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;k can be at most n - 1.&quot;</span>);</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; source;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; target;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    std::vector&lt; int &gt; source;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    std::vector&lt; int &gt; target;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (!directed)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">if</span> (k &gt; 1u) k = <span class="keyword">static_cast&lt;</span> epiworld_fast_uint <span class="keyword">&gt;</span>(floor(k / 2.0));</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">if</span> (k &gt; 1u) k = <span class="keyword">static_cast&lt;</span> <span class="keywordtype">size_t</span> <span class="keyword">&gt;</span>(floor(k / 2.0));</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">for</span> (epiworld_fast_uint i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; ++i)</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    {</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint j = 1u; j &lt;= k; ++j)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 1u; j &lt;= k; ++j)</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        {</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <span class="comment">// Next neighbor</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            epiworld_fast_uint l = i + j;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordtype">size_t</span> l = i + j;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordflow">if</span> (l &gt;= n) l = l - n;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            source.push_back(i);</div>
