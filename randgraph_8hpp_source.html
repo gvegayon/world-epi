@@ -412,8 +412,8 @@ $(function() {
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; model</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;) {</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; source;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; target;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    std::vector&lt; int &gt; source;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    std::vector&lt; int &gt; target;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="comment">// Checking the density (how many)</span></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    std::binomial_distribution&lt;&gt; d(</div>
@@ -518,8 +518,8 @@ $(function() {
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>&amp;</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;) {</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; source_;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; target_;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    std::vector&lt; int &gt; source_;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    std::vector&lt; int &gt; target_;</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordtype">size_t</span> i = 0u;</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordtype">size_t</span> cum_node_count = 0u;</div>
@@ -540,8 +540,8 @@ $(function() {
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                <span class="keywordflow">if</span> ((i + k) &gt;= n)</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                source_.push_back(j + i);</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                target_.push_back(k + i);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                source_.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(j + i));</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                target_.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(k + i));</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            }</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            <span class="comment">// No more nodes left to build connections</span></div>
@@ -560,8 +560,8 @@ $(function() {
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0u; j &lt; max_cons; ++j)</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            {</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                source_.push_back(i + j - blocksize);</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                target_.push_back(i + j);</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                source_.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i + j - blocksize));</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                target_.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i + j));</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            }</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        }</div>
