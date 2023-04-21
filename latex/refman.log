@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.4.20)  20 APR 2023 05:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.4.21)  21 APR 2023 05:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2643,11 +2643,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 
-Underfull \hbox (badness 10000) detected at line 71
+Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
 
-[135]) (./class_virus.tex
+[135] [136]) (./class_virus.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2664,8 +2664,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[136]
-Underfull \hbox (badness 10000) detected at line 77
+
+Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
@@ -2675,8 +2675,9 @@ us_ac0e64cc22fdfc1f26c2d1f27272b498c}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.133 
-      ]) (./classepiworld_1_1_viruses.tex
+l.127 \mbox
+           {\Hypertarget{class_virus_a921990d5e27c19a60c46fb53c8c3b575}\labe...
+]) (./classepiworld_1_1_viruses.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2727,10 +2728,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Overfull \vbox (5.6108pt too high) has occurred while \output is active []
-
-
 [140]) (./class_viruses__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2757,7 +2754,7 @@ Chapter 14.
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__incl.pdf, id=4911, 229.85875pt x 167.62625pt>
+<agent-meat-state_8hpp__incl.pdf, id=4913, 229.85875pt x 167.62625pt>
 File: agent-meat-state_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
@@ -2768,7 +2765,7 @@ Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__dep__incl.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__dep__incl.pdf, id=4919, 223.83624pt x 223.83624pt>
+<agent-meat-state_8hpp__dep__incl.pdf, id=4921, 223.83624pt x 223.83624pt>
 File: agent-meat-state_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__dep__incl.pdf  used on input li
@@ -2829,10 +2826,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20687 strings out of 480478
- 405261 string characters out of 5905924
- 657849 words of memory out of 5000000
- 34209 multiletter control sequences out of 15000+600000
+ 20691 strings out of 480478
+ 405469 string characters out of 5905924
+ 657959 words of memory out of 5000000
+ 34211 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,96p,938b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2849,10 +2846,10 @@ e1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
 8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (157 pages, 713676 bytes).
+Output written on refman.pdf (157 pages, 713617 bytes).
 PDF statistics:
- 5636 PDF objects out of 6186 (max. 8388607)
- 5238 compressed objects within 53 object streams
- 2023 named destinations out of 2073 (max. 500000)
+ 5638 PDF objects out of 6186 (max. 8388607)
+ 5240 compressed objects within 53 object streams
+ 2025 named destinations out of 2073 (max. 500000)
  2171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

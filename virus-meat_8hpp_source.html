@@ -640,7 +640,21 @@ $(function() {
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;}</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;template&lt;typename TSeq&gt;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;inline <span class="keywordtype">void</span> <a class="code" href="class_virus.html">Virus</a>&lt;TSeq&gt;::print()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Virus          : %s\n&quot;</span>, virus_name-&gt;c_str());</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_init    : %i\n&quot;</span>, status_init);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_post    : %i\n&quot;</span>, status_post);</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_removed : %i\n&quot;</span>, status_removed);</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_init     : %i\n&quot;</span>, queue_init);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_post     : %i\n&quot;</span>, queue_post);</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_removed  : %i\n&quot;</span>, queue_removed);</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;}</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
