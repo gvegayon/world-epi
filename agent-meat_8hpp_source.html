@@ -894,17 +894,17 @@ $(function() {
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;<span class="comment">// inline double &amp; Agent&lt;TSeq&gt;::operator()(size_t j)</span></div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="comment">// {</span></div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">//     if (model-&gt;population_data_n_features &lt;= j)</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">//     if (model-&gt;agents_data_n_features &lt;= j)</span></div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;<span class="comment">//         throw std::logic_error(&quot;The requested feature of the agent is out of range.&quot;);</span></div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment">//     return *(model-&gt;population_data + j * model-&gt;size() + id);</span></div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment">//     return *(model-&gt;agents_data + j * model-&gt;size() + id);</span></div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160; </div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="comment">// }</span></div>
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="comment">// template&lt;typename TSeq&gt;</span></div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="comment">// inline double &amp; Agent&lt;TSeq&gt;::operator[](size_t j)</span></div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="comment">// {</span></div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">//     return *(model-&gt;population_data + j * model-&gt;size() + id);</span></div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">//     return *(model-&gt;agents_data + j * model-&gt;size() + id);</span></div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;<span class="comment">// }</span></div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>

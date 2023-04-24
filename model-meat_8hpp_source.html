@@ -517,8 +517,8 @@ $(function() {
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">if</span> (use_queuing)</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        queue.model = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    population_data = model.population_data;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    population_data_n_features = model.population_data_n_features;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    agents_data = model.agents_data;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    agents_data_n_features = model.agents_data_n_features;</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="comment">// Finally, seeds are resetted automatically based on the original</span></div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="comment">// engine</span></div>
@@ -535,8 +535,8 @@ $(function() {
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    name(std::move(model.name)),</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    db(std::move(model.db)),</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    population(std::move(model.population)),</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    population_data(std::move(model.population_data)),</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    population_data_n_features(std::move(model.population_data_n_features)),</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    agents_data(std::move(model.agents_data)),</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    agents_data_n_features(std::move(model.agents_data_n_features)),</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    directed(std::move(model.directed)),</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="comment">// Virus</span></div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    viruses(std::move(model.viruses)),</div>
@@ -659,8 +659,8 @@ $(function() {
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    db.model = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    db.user_data.model = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    population_data            = m.population_data;</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    population_data_n_features = m.population_data_n_features;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    agents_data            = m.agents_data;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    agents_data_n_features = m.agents_data_n_features;</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="comment">// Figure out the queuing</span></div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keywordflow">if</span> (use_queuing)</div>
@@ -2395,8 +2395,8 @@ $(function() {
 <div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l02351"></a><span class="lineno"><a class="line" href="class_model.html#a14758e0476fd4a05643ab41190530513"> 2351</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a14758e0476fd4a05643ab41190530513">Model&lt;TSeq&gt;::set_agents_data</a>(<span class="keywordtype">double</span> * data_, <span class="keywordtype">size_t</span> ncols_)</div>
 <div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;{</div>
-<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;    population_data = data_;</div>
-<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;    population_data_n_features = ncols_;</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;    agents_data = data_;</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;    agents_data_n_features = ncols_;</div>
 <div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;}</div>
 <div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160; </div>
 <div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -2447,13 +2447,13 @@ $(function() {
 <div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;    }</div>
 <div class="line"><a name="l02403"></a><span class="lineno"> 2403</span>&#160; </div>
 <div class="line"><a name="l02404"></a><span class="lineno"> 2404</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;        population_data != other.population_data,</div>
-<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;        <span class="stringliteral">&quot;Model:: population_data don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;        agents_data != other.agents_data,</div>
+<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;        <span class="stringliteral">&quot;Model:: agents_data don&#39;t match&quot;</span></div>
 <div class="line"><a name="l02407"></a><span class="lineno"> 2407</span>&#160;    )</div>
 <div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160; </div>
 <div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;        population_data_n_features != other.population_data_n_features,</div>
-<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: population_data_n_features don&#39;t match&quot;</div>
+<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;        agents_data_n_features != other.agents_data_n_features,</div>
+<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: agents_data_n_features don&#39;t match&quot;</div>
 <div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;    )</div>
 <div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160; </div>
 <div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>

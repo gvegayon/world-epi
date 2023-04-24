@@ -42,8 +42,7 @@ std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_ac9b8b86d1cebb262c7189ff4f34d1bf2}\label{class_model_s_i_r_c_o_n_n_ac9b8b86d1cebb262c7189ff4f34d1bf2}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries tracked\+\_\+agents\+\_\+infected\+\_\+next} = \{\}
 \item 
-\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a9d555d4a4081f92f32156f57c6f51a5c}\label{class_model_s_i_r_c_o_n_n_a9d555d4a4081f92f32156f57c6f51a5c}} 
-bool {\bfseries tracked\+\_\+started} = false
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries tracked\+\_\+agents\+\_\+weight}
 \item 
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_aac030bab8f500a8dd0bd0d237f79e6df}\label{class_model_s_i_r_c_o_n_n_aac030bab8f500a8dd0bd0d237f79e6df}} 
 int {\bfseries tracked\+\_\+ninfected} = 0
@@ -107,6 +106,24 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a68d8103966ba0786d22a123e80fa6736}\label{class_model_s_i_r_c_o_n_n_a68d8103966ba0786d22a123e80fa6736}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!tracked\_agents\_weight@{tracked\_agents\_weight}}
+\index{tracked\_agents\_weight@{tracked\_agents\_weight}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{tracked\_agents\_weight}{tracked\_agents\_weight}}
+{\footnotesize\ttfamily template$<$typename TSeq  = EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ$>$ \\
+std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::tracked\+\_\+agents\+\_\+weight}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\}}
+\DoxyCodeLine{    std::vector< epiworld\_double >        tracked\_agents\_weight\_next   = \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} tracked\_started = \textcolor{keyword}{false}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

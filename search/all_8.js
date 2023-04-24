@@ -13,6 +13,7 @@ var searchData=
   ['modelseird_41',['ModelSEIRD',['../classepiworld_1_1epimodels_1_1_model_s_e_i_r_d.html',1,'epiworld::epimodels::ModelSEIRD&lt; TSeq &gt;'],['../class_model_s_e_i_r_d.html',1,'ModelSEIRD&lt; TSeq &gt;']]],
   ['modelsir_42',['ModelSIR',['../classepiworld_1_1epimodels_1_1_model_s_i_r.html',1,'epiworld::epimodels::ModelSIR&lt; TSeq &gt;'],['../class_model_s_i_r.html',1,'ModelSIR&lt; TSeq &gt;']]],
   ['modelsirconn_43',['ModelSIRCONN',['../classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html',1,'epiworld::epimodels::ModelSIRCONN&lt; TSeq &gt;'],['../classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107',1,'epiworld::epimodels::ModelSIRCONN::ModelSIRCONN()'],['../class_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107',1,'ModelSIRCONN::ModelSIRCONN()'],['../class_model_s_i_r_c_o_n_n.html',1,'ModelSIRCONN&lt; TSeq &gt;']]],
-  ['modelsis_44',['ModelSIS',['../classepiworld_1_1epimodels_1_1_model_s_i_s.html',1,'epiworld::epimodels::ModelSIS&lt; TSeq &gt;'],['../class_model_s_i_s.html',1,'ModelSIS&lt; TSeq &gt;']]],
-  ['modelsurv_45',['ModelSURV',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v.html',1,'epiworld::epimodels::ModelSURV&lt; TSeq &gt;'],['../class_model_s_u_r_v.html',1,'ModelSURV&lt; TSeq &gt;']]]
+  ['modelsirlogit_44',['ModelSIRLogit',['../class_model_s_i_r_logit.html',1,'ModelSIRLogit&lt; TSeq &gt;'],['../class_model_s_i_r_logit.html#a8e7e827694516ea91a612ba0231fb40a',1,'ModelSIRLogit::ModelSIRLogit()']]],
+  ['modelsis_45',['ModelSIS',['../classepiworld_1_1epimodels_1_1_model_s_i_s.html',1,'epiworld::epimodels::ModelSIS&lt; TSeq &gt;'],['../class_model_s_i_s.html',1,'ModelSIS&lt; TSeq &gt;']]],
+  ['modelsurv_46',['ModelSURV',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v.html',1,'epiworld::epimodels::ModelSURV&lt; TSeq &gt;'],['../class_model_s_u_r_v.html',1,'ModelSURV&lt; TSeq &gt;']]]
 ];

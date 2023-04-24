@@ -441,9 +441,8 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">epiworld::Agen
 <tr class="memitem:adda182c6a460addb89f8afa5c4f8ecfc"><td class="memItemLeft" align="right" valign="top"><a id="adda182c6a460addb89f8afa5c4f8ecfc"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">epiworld::Agent</a>&lt; TSeq &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_infected_next</b> = {}</td></tr>
 <tr class="separator:adda182c6a460addb89f8afa5c4f8ecfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b45698565e355bd7f83ddafc299fc5"><td class="memItemLeft" align="right" valign="top"><a id="a36b45698565e355bd7f83ddafc299fc5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_started</b> = false</td></tr>
-<tr class="separator:a36b45698565e355bd7f83ddafc299fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5645baba1ff10d3219f7d9c8d845e3e1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_weight</b></td></tr>
+<tr class="separator:a5645baba1ff10d3219f7d9c8d845e3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c9da7b1afda6471184c416130eb7c4"><td class="memItemLeft" align="right" valign="top"><a id="ad9c9da7b1afda6471184c416130eb7c4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_ninfected</b> = 0</td></tr>
 <tr class="separator:ad9c9da7b1afda6471184c416130eb7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -624,12 +623,12 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a383eda6cc92745449a857b106aca75b0 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a383eda6cc92745449a857b106aca75b0"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>population_left_n</b></td></tr>
 <tr class="separator:a383eda6cc92745449a857b106aca75b0 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fec0fdd94e1573d4eaeb57a5795b466 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a1fec0fdd94e1573d4eaeb57a5795b466"></a>
-double *&#160;</td><td class="memItemRight" valign="bottom"><b>population_data</b></td></tr>
-<tr class="separator:a1fec0fdd94e1573d4eaeb57a5795b466 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8adf8e7ea44b0ec13857a574677c92c8 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a8adf8e7ea44b0ec13857a574677c92c8"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>population_data_n_features</b></td></tr>
-<tr class="separator:a8adf8e7ea44b0ec13857a574677c92c8 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c1e032f07424d0856dbe2cf0a6279f inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a40c1e032f07424d0856dbe2cf0a6279f"></a>
+double *&#160;</td><td class="memItemRight" valign="bottom"><b>agents_data</b></td></tr>
+<tr class="separator:a40c1e032f07424d0856dbe2cf0a6279f inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c019339f2478db90361144afc66fea0 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a7c019339f2478db90361144afc66fea0"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>agents_data_n_features</b></td></tr>
+<tr class="separator:a7c019339f2478db90361144afc66fea0 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95689bcd4787c43547cdec0699546fa1 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a95689bcd4787c43547cdec0699546fa1"></a>
 MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>susceptibility_reduction_mixer</b></td></tr>
 <tr class="separator:a95689bcd4787c43547cdec0699546fa1 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -758,6 +757,27 @@ template&lt;typename TSeq &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html#afd0c24e19b0a104e03d96ab4333725e5">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
 
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5645baba1ff10d3219f7d9c8d845e3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5645baba1ff10d3219f7d9c8d845e3e1">&#9670;&nbsp;</a></span>tracked_agents_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; epiworld_double &gt; <a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">epiworld::epimodels::ModelSIRCONN</a>&lt; TSeq &gt;::tracked_agents_weight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {}</div>
+<div class="line">    std::vector&lt; epiworld_double &gt;        tracked_agents_weight_next   = {}</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> tracked_started = <span class="keyword">false</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
