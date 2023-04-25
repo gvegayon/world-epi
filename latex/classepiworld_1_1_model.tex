@@ -92,6 +92,12 @@ const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} (
 \item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a14758e0476fd4a05643ab41190530513}{set\+\_\+agents\+\_\+data}} (double $\ast$data\+\_\+, size\+\_\+t ncols\+\_\+)
 \begin{DoxyCompactList}\small\item\em Set the agents data object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_ac0e640f091d556ab8f6183b05ff064d4}\label{classepiworld_1_1_model_ac0e640f091d556ab8f6183b05ff064d4}} 
+double $\ast$ {\bfseries get\+\_\+agents\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a187ec4d7304dd20b7ef39c18a88fd3ee}\label{classepiworld_1_1_model_a187ec4d7304dd20b7ef39c18a88fd3ee}} 
+size\+\_\+t {\bfseries get\+\_\+agents\+\_\+data\+\_\+ncols} ()
+\item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a453485b4cfe2a51addf33003f8d70c36}{set\+\_\+name}} (std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}})
 \begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a2a8ec13a43f5839f9b06409b990b35b3}\label{classepiworld_1_1_model_a2a8ec13a43f5839f9b06409b990b35b3}} 
@@ -642,8 +648,8 @@ size\+\_\+t {\bfseries population\+\_\+left\+\_\+n} = 0u
 \mbox{\Hypertarget{classepiworld_1_1_model_a40c1e032f07424d0856dbe2cf0a6279f}\label{classepiworld_1_1_model_a40c1e032f07424d0856dbe2cf0a6279f}} 
 double $\ast$ {\bfseries agents\+\_\+data} = nullptr
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a7c019339f2478db90361144afc66fea0}\label{classepiworld_1_1_model_a7c019339f2478db90361144afc66fea0}} 
-size\+\_\+t {\bfseries agents\+\_\+data\+\_\+n\+\_\+features} = 0u
+\mbox{\Hypertarget{classepiworld_1_1_model_a4f8f6e4e43eb5ac562c3c267928c810f}\label{classepiworld_1_1_model_a4f8f6e4e43eb5ac562c3c267928c810f}} 
+size\+\_\+t {\bfseries agents\+\_\+data\+\_\+ncols} = 0u
 \end{DoxyCompactItemize}
 \end{Indent}
 \doxysubsection*{Friends}
@@ -811,7 +817,7 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}{Model\+SIRLogit$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{Model\+SIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{Model\+SEIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{epiworld\+::epimodels\+::\+Model\+SEIRCONN$<$ TSeq $>$}}, and \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{epiworld\+::epimodels\+::\+Model\+SIRCONN$<$ TSeq $>$}}.
+Reimplemented in \mbox{\hyperlink{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}{Model\+SIRLogit$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{Model\+SIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{Model\+SEIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}{epiworld\+::epimodels\+::\+Model\+SIRLogit$<$ TSeq $>$}}, \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{epiworld\+::epimodels\+::\+Model\+SEIRCONN$<$ TSeq $>$}}, and \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{epiworld\+::epimodels\+::\+Model\+SIRCONN$<$ TSeq $>$}}.
 
 \mbox{\Hypertarget{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}\label{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!load\_agents\_entities\_ties@{load\_agents\_entities\_ties}}

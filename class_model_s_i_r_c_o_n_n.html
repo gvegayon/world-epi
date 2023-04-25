@@ -181,6 +181,12 @@ const std::vector&lt; ToolPtr&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;&#160;</td><td
 <tr class="memitem:a14758e0476fd4a05643ab41190530513 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a14758e0476fd4a05643ab41190530513">set_agents_data</a> (double *data_, size_t ncols_)</td></tr>
 <tr class="memdesc:a14758e0476fd4a05643ab41190530513 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the agents data object.  <a href="classepiworld_1_1_model.html#a14758e0476fd4a05643ab41190530513">More...</a><br /></td></tr>
 <tr class="separator:a14758e0476fd4a05643ab41190530513 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e640f091d556ab8f6183b05ff064d4 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac0e640f091d556ab8f6183b05ff064d4"></a>
+double *&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents_data</b> ()</td></tr>
+<tr class="separator:ac0e640f091d556ab8f6183b05ff064d4 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187ec4d7304dd20b7ef39c18a88fd3ee inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a187ec4d7304dd20b7ef39c18a88fd3ee"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents_data_ncols</b> ()</td></tr>
+<tr class="separator:a187ec4d7304dd20b7ef39c18a88fd3ee inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">set_name</a> (std::string <a class="el" href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">name</a>)</td></tr>
 <tr class="memdesc:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name object.  <a href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">More...</a><br /></td></tr>
 <tr class="separator:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,8 +443,15 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">epiworld::Agen
 <tr class="memitem:ac9b8b86d1cebb262c7189ff4f34d1bf2"><td class="memItemLeft" align="right" valign="top"><a id="ac9b8b86d1cebb262c7189ff4f34d1bf2"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">epiworld::Agent</a>&lt; TSeq &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_infected_next</b> = {}</td></tr>
 <tr class="separator:ac9b8b86d1cebb262c7189ff4f34d1bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d8103966ba0786d22a123e80fa6736"><td class="memItemLeft" align="right" valign="top">std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_weight</b></td></tr>
+<tr class="memitem:a68d8103966ba0786d22a123e80fa6736"><td class="memItemLeft" align="right" valign="top"><a id="a68d8103966ba0786d22a123e80fa6736"></a>
+std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_weight</b> = {}</td></tr>
 <tr class="separator:a68d8103966ba0786d22a123e80fa6736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9baabc2828061f469144e26213af5b3a"><td class="memItemLeft" align="right" valign="top"><a id="a9baabc2828061f469144e26213af5b3a"></a>
+std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_weight_next</b> = {}</td></tr>
+<tr class="separator:a9baabc2828061f469144e26213af5b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d555d4a4081f92f32156f57c6f51a5c"><td class="memItemLeft" align="right" valign="top"><a id="a9d555d4a4081f92f32156f57c6f51a5c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_started</b> = false</td></tr>
+<tr class="separator:a9d555d4a4081f92f32156f57c6f51a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac030bab8f500a8dd0bd0d237f79e6df"><td class="memItemLeft" align="right" valign="top"><a id="aac030bab8f500a8dd0bd0d237f79e6df"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_ninfected</b> = 0</td></tr>
 <tr class="separator:aac030bab8f500a8dd0bd0d237f79e6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -622,9 +635,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>population_left_n</
 <tr class="memitem:a40c1e032f07424d0856dbe2cf0a6279f inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a40c1e032f07424d0856dbe2cf0a6279f"></a>
 double *&#160;</td><td class="memItemRight" valign="bottom"><b>agents_data</b></td></tr>
 <tr class="separator:a40c1e032f07424d0856dbe2cf0a6279f inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c019339f2478db90361144afc66fea0 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a7c019339f2478db90361144afc66fea0"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>agents_data_n_features</b></td></tr>
-<tr class="separator:a7c019339f2478db90361144afc66fea0 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8f6e4e43eb5ac562c3c267928c810f inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a4f8f6e4e43eb5ac562c3c267928c810f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>agents_data_ncols</b></td></tr>
+<tr class="separator:a4f8f6e4e43eb5ac562c3c267928c810f inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95689bcd4787c43547cdec0699546fa1 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a95689bcd4787c43547cdec0699546fa1"></a>
 MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>susceptibility_reduction_mixer</b></td></tr>
 <tr class="separator:a95689bcd4787c43547cdec0699546fa1 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -753,27 +766,6 @@ template&lt;typename TSeq &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html#afd0c24e19b0a104e03d96ab4333725e5">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a68d8103966ba0786d22a123e80fa6736"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d8103966ba0786d22a123e80fa6736">&#9670;&nbsp;</a></span>tracked_agents_weight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; epiworld_double &gt; <a class="el" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt;::tracked_agents_weight</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {}</div>
-<div class="line">    std::vector&lt; epiworld_double &gt;        tracked_agents_weight_next   = {}</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> tracked_started = <span class="keyword">false</span></div>
-</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -894,7 +894,7 @@ $(function() {
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;<span class="comment">// inline double &amp; Agent&lt;TSeq&gt;::operator()(size_t j)</span></div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="comment">// {</span></div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">//     if (model-&gt;agents_data_n_features &lt;= j)</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">//     if (model-&gt;agents_data_ncols &lt;= j)</span></div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;<span class="comment">//         throw std::logic_error(&quot;The requested feature of the agent is out of range.&quot;);</span></div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment">//     return *(model-&gt;agents_data + j * model-&gt;size() + id);</span></div>

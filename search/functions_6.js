@@ -5,5 +5,5 @@ var searchData=
   ['modelseirconn_141',['ModelSEIRCONN',['../classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a316c5945aba7ccf10fc542bfa54426b5',1,'epiworld::epimodels::ModelSEIRCONN::ModelSEIRCONN()'],['../class_model_s_e_i_r_c_o_n_n.html#a316c5945aba7ccf10fc542bfa54426b5',1,'ModelSEIRCONN::ModelSEIRCONN()']]],
   ['modelseirconnlogit_142',['ModelSEIRCONNLogit',['../class_model_s_e_i_r_c_o_n_n_logit.html#a497d6d6d6ffb19b53a404974d4c0696f',1,'ModelSEIRCONNLogit']]],
   ['modelsirconn_143',['ModelSIRCONN',['../classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107',1,'epiworld::epimodels::ModelSIRCONN::ModelSIRCONN()'],['../class_model_s_i_r_c_o_n_n.html#ad8a4d6b31d74b4b978ddeed1ded69107',1,'ModelSIRCONN::ModelSIRCONN()']]],
-  ['modelsirlogit_144',['ModelSIRLogit',['../class_model_s_i_r_logit.html#a8e7e827694516ea91a612ba0231fb40a',1,'ModelSIRLogit']]]
+  ['modelsirlogit_144',['ModelSIRLogit',['../classepiworld_1_1epimodels_1_1_model_s_i_r_logit.html#aea1bfe91bb5cf6729f7ac803e8c79a98',1,'epiworld::epimodels::ModelSIRLogit::ModelSIRLogit()'],['../class_model_s_i_r_logit.html#aea1bfe91bb5cf6729f7ac803e8c79a98',1,'ModelSIRLogit::ModelSIRLogit()']]]
 ];

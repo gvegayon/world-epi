@@ -9,7 +9,7 @@ var searchData=
   ['modelseird_99',['ModelSEIRD',['../classepiworld_1_1epimodels_1_1_model_s_e_i_r_d.html',1,'epiworld::epimodels::ModelSEIRD&lt; TSeq &gt;'],['../class_model_s_e_i_r_d.html',1,'ModelSEIRD&lt; TSeq &gt;']]],
   ['modelsir_100',['ModelSIR',['../classepiworld_1_1epimodels_1_1_model_s_i_r.html',1,'epiworld::epimodels::ModelSIR&lt; TSeq &gt;'],['../class_model_s_i_r.html',1,'ModelSIR&lt; TSeq &gt;']]],
   ['modelsirconn_101',['ModelSIRCONN',['../classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html',1,'epiworld::epimodels::ModelSIRCONN&lt; TSeq &gt;'],['../class_model_s_i_r_c_o_n_n.html',1,'ModelSIRCONN&lt; TSeq &gt;']]],
-  ['modelsirlogit_102',['ModelSIRLogit',['../class_model_s_i_r_logit.html',1,'']]],
+  ['modelsirlogit_102',['ModelSIRLogit',['../classepiworld_1_1epimodels_1_1_model_s_i_r_logit.html',1,'epiworld::epimodels::ModelSIRLogit&lt; TSeq &gt;'],['../class_model_s_i_r_logit.html',1,'ModelSIRLogit&lt; TSeq &gt;']]],
   ['modelsis_103',['ModelSIS',['../classepiworld_1_1epimodels_1_1_model_s_i_s.html',1,'epiworld::epimodels::ModelSIS&lt; TSeq &gt;'],['../class_model_s_i_s.html',1,'ModelSIS&lt; TSeq &gt;']]],
   ['modelsurv_104',['ModelSURV',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v.html',1,'epiworld::epimodels::ModelSURV&lt; TSeq &gt;'],['../class_model_s_u_r_v.html',1,'ModelSURV&lt; TSeq &gt;']]]
 ];
