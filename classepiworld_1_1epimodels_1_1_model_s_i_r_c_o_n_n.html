@@ -105,6 +105,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#acf2c5f5267935acc277aafadf70c4b8e">run</a> (epiworld_fast_uint ndays, int seed=-1)</td></tr>
 <tr class="memdesc:acf2c5f5267935acc277aafadf70c4b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
 <tr class="separator:acf2c5f5267935acc277aafadf70c4b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5928623ff6a69b6eb6733dc3eb1516f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a5928623ff6a69b6eb6733dc3eb1516f5">reset</a> ()</td></tr>
+<tr class="memdesc:a5928623ff6a69b6eb6733dc3eb1516f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the model.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a5928623ff6a69b6eb6733dc3eb1516f5">More...</a><br /></td></tr>
+<tr class="separator:a5928623ff6a69b6eb6733dc3eb1516f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a37cb3d22a04f9f620fbbd7a2c7904227">clone_ptr</a> ()</td></tr>
 <tr class="memdesc:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advanced usage: Makes a copy of data and returns it as undeleted pointer.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a37cb3d22a04f9f620fbbd7a2c7904227">More...</a><br /></td></tr>
 <tr class="separator:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,9 +158,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a3c6f310249ec2e9c089ca0970606ed4f inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3c6f310249ec2e9c089ca0970606ed4f"></a>
 std::map&lt; std::string, epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b> ()</td></tr>
 <tr class="separator:a3c6f310249ec2e9c089ca0970606ed4f inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
-<tr class="memdesc:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the model.  <a href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">More...</a><br /></td></tr>
-<tr class="separator:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee712a278813e98498e5fba98fbd923 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0ee712a278813e98498e5fba98fbd923"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (bool lite=false) const</td></tr>
 <tr class="separator:a0ee712a278813e98498e5fba98fbd923 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,9 +346,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (s
 <tr class="memitem:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa4a925f77087c2cc4fe21eb9671b5f49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_state</b> (std::string lab, UpdateFun&lt; EPI_DEFAULT_TSEQ &gt; fun=nullptr)</td></tr>
 <tr class="separator:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4345941f861ff94585ed5f42a36650 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a2a4345941f861ff94585ed5f42a36650"></a>
-const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> () const</td></tr>
-<tr class="separator:a2a4345941f861ff94585ed5f42a36650 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af372433843a655e8d93f6ee3e7498bc1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="af372433843a655e8d93f6ee3e7498bc1"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_states</b> () const</td></tr>
+<tr class="separator:af372433843a655e8d93f6ee3e7498bc1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c2560ee67de2691becdb552431f3c4 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a50c2560ee67de2691becdb552431f3c4"></a>
 const std::vector&lt; UpdateFun&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_fun</b> () const</td></tr>
 <tr class="separator:a50c2560ee67de2691becdb552431f3c4 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,9 +453,6 @@ std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="
 <tr class="memitem:ab42c50542094c5418e1262fd1ab9133d"><td class="memItemLeft" align="right" valign="top"><a id="ab42c50542094c5418e1262fd1ab9133d"></a>
 std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_agents_weight_next</b> = {}</td></tr>
 <tr class="separator:ab42c50542094c5418e1262fd1ab9133d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b45698565e355bd7f83ddafc299fc5"><td class="memItemLeft" align="right" valign="top"><a id="a36b45698565e355bd7f83ddafc299fc5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_started</b> = false</td></tr>
-<tr class="separator:a36b45698565e355bd7f83ddafc299fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c9da7b1afda6471184c416130eb7c4"><td class="memItemLeft" align="right" valign="top"><a id="ad9c9da7b1afda6471184c416130eb7c4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tracked_ninfected</b> = 0</td></tr>
 <tr class="separator:ad9c9da7b1afda6471184c416130eb7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -581,9 +578,9 @@ epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>ndays</
 <tr class="memitem:a5e551df72701c6a20a3343dda06cac15 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a5e551df72701c6a20a3343dda06cac15"></a>
 std::vector&lt; UpdateFun&lt; EPI_DEFAULT_TSEQ &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_fun</b></td></tr>
 <tr class="separator:a5e551df72701c6a20a3343dda06cac15 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7779a593e4ffd8501c104c122915878 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac7779a593e4ffd8501c104c122915878"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_labels</b></td></tr>
-<tr class="separator:ac7779a593e4ffd8501c104c122915878 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49297ff1640a8f6e7c8ff6b8bce6b65 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa49297ff1640a8f6e7c8ff6b8bce6b65"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>states_labels</b></td></tr>
+<tr class="separator:aa49297ff1640a8f6e7c8ff6b8bce6b65 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0080cb25324759be2f327240540dd655 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0080cb25324759be2f327240540dd655"></a>
 epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>nstatus</b></td></tr>
 <tr class="separator:a0080cb25324759be2f327240540dd655 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -769,6 +766,41 @@ template&lt;typename TSeq &gt; </div>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html#afd0c24e19b0a104e03d96ab4333725e5">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a5928623ff6a69b6eb6733dc3eb1516f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5928623ff6a69b6eb6733dc3eb1516f5">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt;::reset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the model. </p>
+<p>Resetting the model will:</p><ul>
+<li>clear the database</li>
+<li>restore the population (if <code>set_backup()</code> was called before)</li>
+<li>re-distribute tools</li>
+<li>re-distribute viruses</li>
+<li>set the date to 0 </li>
+</ul>
+
+<p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
 
 </div>
 </div>

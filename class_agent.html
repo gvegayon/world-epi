@@ -154,8 +154,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_virus</b> (std::s
 <tr class="memitem:acca4a2fbcfcdf32f144b84e394d37f4c"><td class="memItemLeft" align="right" valign="top"><a id="acca4a2fbcfcdf32f144b84e394d37f4c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model, bool compressed=false) const</td></tr>
 <tr class="separator:acca4a2fbcfcdf32f144b84e394d37f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8f3cf3ff2cd28ab97b6489b2d5124a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entities.html">Entities</a>&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#aa8f3cf3ff2cd28ab97b6489b2d5124a8">get_entities</a> ()</td></tr>
-<tr class="memdesc:aa8f3cf3ff2cd28ab97b6489b2d5124a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the j-th column of the agent.  <a href="class_agent.html#aa8f3cf3ff2cd28ab97b6489b2d5124a8">More...</a><br /></td></tr>
+<tr class="memitem:aa8f3cf3ff2cd28ab97b6489b2d5124a8"><td class="memItemLeft" align="right" valign="top"><a id="aa8f3cf3ff2cd28ab97b6489b2d5124a8"></a>
+<a class="el" href="class_entities.html">Entities</a>&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entities</b> ()</td></tr>
 <tr class="separator:aa8f3cf3ff2cd28ab97b6489b2d5124a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365a3cf04b993495a16ca2d7c9e4834b"><td class="memItemLeft" align="right" valign="top"><a id="a365a3cf04b993495a16ca2d7c9e4834b"></a>
 const <a class="el" href="class_entities__const.html">Entities_const</a>&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entities</b> () const</td></tr>
@@ -249,6 +249,19 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_recove
 <tr class="memitem:a0afb8fa7d97f10b757de1f73e97b4e62"><td class="memItemLeft" align="right" valign="top"><a id="a0afb8fa7d97f10b757de1f73e97b4e62"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_death_reduction</b> (VirusPtr&lt; TSeq &gt; v, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
 <tr class="separator:a0afb8fa7d97f10b757de1f73e97b4e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a370107b9e18076bce06f7bffb32f2757"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a> (size_t j)</td></tr>
+<tr class="memdesc:a370107b9e18076bce06f7bffb32f2757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the j-th column of the agent.  <a href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">More...</a><br /></td></tr>
+<tr class="separator:a370107b9e18076bce06f7bffb32f2757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba198fb7cce382c8607cede2d04e1f41"><td class="memItemLeft" align="right" valign="top"><a id="aba198fb7cce382c8607cede2d04e1f41"></a>
+double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t j)</td></tr>
+<tr class="separator:aba198fb7cce382c8607cede2d04e1f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646a64552ed10f2b8d69c789def144fb"><td class="memItemLeft" align="right" valign="top"><a id="a646a64552ed10f2b8d69c789def144fb"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (size_t j) const</td></tr>
+<tr class="separator:a646a64552ed10f2b8d69c789def144fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34cd7c7ea94a5e54543b65f8e98b703"><td class="memItemLeft" align="right" valign="top"><a id="aa34cd7c7ea94a5e54543b65f8e98b703"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t j) const</td></tr>
+<tr class="separator:aa34cd7c7ea94a5e54543b65f8e98b703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -312,8 +325,8 @@ class Agent&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa8f3cf3ff2cd28ab97b6489b2d5124a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8f3cf3ff2cd28ab97b6489b2d5124a8">&#9670;&nbsp;</a></span>get_entities()</h2>
+<a id="a370107b9e18076bce06f7bffb32f2757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370107b9e18076bce06f7bffb32f2757">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +337,11 @@ template&lt;typename TSeq &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_entities.html">Entities</a>&lt; TSeq &gt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt;::get_entities</td>
+          <td class="memname">double &amp; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>

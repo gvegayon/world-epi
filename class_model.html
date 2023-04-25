@@ -135,7 +135,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a3c6f310249ec2e9c089ca0970606ed4f"><td class="memItemLeft" align="right" valign="top"><a id="a3c6f310249ec2e9c089ca0970606ed4f"></a>
 std::map&lt; std::string, epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b> ()</td></tr>
 <tr class="separator:a3c6f310249ec2e9c089ca0970606ed4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
+<tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
 <tr class="memdesc:a9591eb76c7cf1ed7e1510342ff602d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the model.  <a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">More...</a><br /></td></tr>
 <tr class="separator:a9591eb76c7cf1ed7e1510342ff602d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee712a278813e98498e5fba98fbd923"><td class="memItemLeft" align="right" valign="top"><a id="a0ee712a278813e98498e5fba98fbd923"></a>
@@ -408,9 +408,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (s
 <tr class="memitem:aa4a925f77087c2cc4fe21eb9671b5f49"><td class="memItemLeft" align="right" valign="top"><a id="aa4a925f77087c2cc4fe21eb9671b5f49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_state</b> (std::string lab, UpdateFun&lt; TSeq &gt; fun=nullptr)</td></tr>
 <tr class="separator:aa4a925f77087c2cc4fe21eb9671b5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4345941f861ff94585ed5f42a36650"><td class="memItemLeft" align="right" valign="top"><a id="a2a4345941f861ff94585ed5f42a36650"></a>
-const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> () const</td></tr>
-<tr class="separator:a2a4345941f861ff94585ed5f42a36650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af372433843a655e8d93f6ee3e7498bc1"><td class="memItemLeft" align="right" valign="top"><a id="af372433843a655e8d93f6ee3e7498bc1"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_states</b> () const</td></tr>
+<tr class="separator:af372433843a655e8d93f6ee3e7498bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c2560ee67de2691becdb552431f3c4"><td class="memItemLeft" align="right" valign="top"><a id="a50c2560ee67de2691becdb552431f3c4"></a>
 const std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_fun</b> () const</td></tr>
 <tr class="separator:a50c2560ee67de2691becdb552431f3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -625,9 +625,9 @@ epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>ndays</
 <tr class="memitem:ad7dc909470413d5fcd9cdffd18c460e9"><td class="memItemLeft" align="right" valign="top"><a id="ad7dc909470413d5fcd9cdffd18c460e9"></a>
 std::vector&lt; UpdateFun&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_fun</b> = {}</td></tr>
 <tr class="separator:ad7dc909470413d5fcd9cdffd18c460e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17271315c55a0b1b7125beaed108b2a7"><td class="memItemLeft" align="right" valign="top"><a id="a17271315c55a0b1b7125beaed108b2a7"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_labels</b> = {}</td></tr>
-<tr class="separator:a17271315c55a0b1b7125beaed108b2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658a1f7bc9a3fa727788353e44a309f0"><td class="memItemLeft" align="right" valign="top"><a id="a658a1f7bc9a3fa727788353e44a309f0"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>states_labels</b> = {}</td></tr>
+<tr class="separator:a658a1f7bc9a3fa727788353e44a309f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a779e425890bd145927de8153c4ffcb84"><td class="memItemLeft" align="right" valign="top"><a id="a779e425890bd145927de8153c4ffcb84"></a>
 epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>nstatus</b> = 0u</td></tr>
 <tr class="separator:a779e425890bd145927de8153c4ffcb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1042,7 +1042,7 @@ template&lt;typename TSeq &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -149,7 +149,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a3c6f310249ec2e9c089ca0970606ed4f inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3c6f310249ec2e9c089ca0970606ed4f"></a>
 std::map&lt; std::string, epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b> ()</td></tr>
 <tr class="separator:a3c6f310249ec2e9c089ca0970606ed4f inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
+<tr class="memitem:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a> ()</td></tr>
 <tr class="memdesc:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the model.  <a href="classepiworld_1_1_model.html#a9591eb76c7cf1ed7e1510342ff602d37">More...</a><br /></td></tr>
 <tr class="separator:a9591eb76c7cf1ed7e1510342ff602d37 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee712a278813e98498e5fba98fbd923 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0ee712a278813e98498e5fba98fbd923"></a>
@@ -344,9 +344,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (s
 <tr class="memitem:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa4a925f77087c2cc4fe21eb9671b5f49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_state</b> (std::string lab, UpdateFun&lt; int &gt; fun=nullptr)</td></tr>
 <tr class="separator:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4345941f861ff94585ed5f42a36650 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a2a4345941f861ff94585ed5f42a36650"></a>
-const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> () const</td></tr>
-<tr class="separator:a2a4345941f861ff94585ed5f42a36650 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af372433843a655e8d93f6ee3e7498bc1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="af372433843a655e8d93f6ee3e7498bc1"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_states</b> () const</td></tr>
+<tr class="separator:af372433843a655e8d93f6ee3e7498bc1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c2560ee67de2691becdb552431f3c4 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a50c2560ee67de2691becdb552431f3c4"></a>
 const std::vector&lt; UpdateFun&lt; int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_fun</b> () const</td></tr>
 <tr class="separator:a50c2560ee67de2691becdb552431f3c4 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -562,9 +562,9 @@ epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>ndays</
 <tr class="memitem:a5e551df72701c6a20a3343dda06cac15 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a5e551df72701c6a20a3343dda06cac15"></a>
 std::vector&lt; UpdateFun&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_fun</b></td></tr>
 <tr class="separator:a5e551df72701c6a20a3343dda06cac15 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7779a593e4ffd8501c104c122915878 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac7779a593e4ffd8501c104c122915878"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status_labels</b></td></tr>
-<tr class="separator:ac7779a593e4ffd8501c104c122915878 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49297ff1640a8f6e7c8ff6b8bce6b65 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa49297ff1640a8f6e7c8ff6b8bce6b65"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>states_labels</b></td></tr>
+<tr class="separator:aa49297ff1640a8f6e7c8ff6b8bce6b65 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0080cb25324759be2f327240540dd655 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0080cb25324759be2f327240540dd655"></a>
 epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>nstatus</b></td></tr>
 <tr class="separator:a0080cb25324759be2f327240540dd655 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>

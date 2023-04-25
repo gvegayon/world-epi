@@ -65,7 +65,7 @@ void \mbox{\hyperlink{classepiworld_1_1_model_abe51a56419087566d858f0739918c795}
 \mbox{\Hypertarget{classepiworld_1_1_model_a3c6f310249ec2e9c089ca0970606ed4f}\label{classepiworld_1_1_model_a3c6f310249ec2e9c089ca0970606ed4f}} 
 std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& {\bfseries params} ()
 \item 
-void \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
+virtual void \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a0ee712a278813e98498e5fba98fbd923}\label{classepiworld_1_1_model_a0ee712a278813e98498e5fba98fbd923}} 
 void {\bfseries print} (bool lite=false) const
@@ -357,8 +357,8 @@ void {\bfseries write\+\_\+edgelist} (std\+::vector$<$ epiworld\+\_\+fast\+\_\+u
 \mbox{\Hypertarget{classepiworld_1_1_model_aa4a925f77087c2cc4fe21eb9671b5f49}\label{classepiworld_1_1_model_aa4a925f77087c2cc4fe21eb9671b5f49}} 
 void {\bfseries add\+\_\+state} (std\+::string lab, Update\+Fun$<$ TSeq $>$ fun=nullptr)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a2a4345941f861ff94585ed5f42a36650}\label{classepiworld_1_1_model_a2a4345941f861ff94585ed5f42a36650}} 
-const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+state} () const
+\mbox{\Hypertarget{classepiworld_1_1_model_af372433843a655e8d93f6ee3e7498bc1}\label{classepiworld_1_1_model_af372433843a655e8d93f6ee3e7498bc1}} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+\_\+states} () const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a50c2560ee67de2691becdb552431f3c4}\label{classepiworld_1_1_model_a50c2560ee67de2691becdb552431f3c4}} 
 const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+state\+\_\+fun} () const
@@ -585,8 +585,8 @@ epiworld\+\_\+fast\+\_\+uint {\bfseries ndays} = 0
 \mbox{\Hypertarget{classepiworld_1_1_model_a5e551df72701c6a20a3343dda06cac15}\label{classepiworld_1_1_model_a5e551df72701c6a20a3343dda06cac15}} 
 std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ {\bfseries status\+\_\+fun} = \{\}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac7779a593e4ffd8501c104c122915878}\label{classepiworld_1_1_model_ac7779a593e4ffd8501c104c122915878}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries status\+\_\+labels} = \{\}
+\mbox{\Hypertarget{classepiworld_1_1_model_aa49297ff1640a8f6e7c8ff6b8bce6b65}\label{classepiworld_1_1_model_aa49297ff1640a8f6e7c8ff6b8bce6b65}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries states\+\_\+labels} = \{\}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a0080cb25324759be2f327240540dd655}\label{classepiworld_1_1_model_a0080cb25324759be2f327240540dd655}} 
 epiworld\+\_\+fast\+\_\+uint {\bfseries nstatus} = 0u
@@ -844,7 +844,7 @@ The structure of the file should be two columns separated by space. The first co
 \index{reset@{reset}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{reset()}{reset()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -857,7 +857,11 @@ Resetting the model will\+:
 \item re-\/distribute tools
 \item re-\/distribute viruses
 \item set the date to 0 
-\end{DoxyItemize}\mbox{\Hypertarget{classepiworld_1_1_model_a2ca6dc004b17bf5cc451f48419b18635}\label{classepiworld_1_1_model_a2ca6dc004b17bf5cc451f48419b18635}} 
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}{Model\+SIRLogit$<$ TSeq $>$}}, \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}{Model\+SIRCONN$<$ TSeq $>$}}, \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}{epiworld\+::epimodels\+::\+Model\+SIRLogit$<$ TSeq $>$}}, and \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}{epiworld\+::epimodels\+::\+Model\+SIRCONN$<$ TSeq $>$}}.
+
+\mbox{\Hypertarget{classepiworld_1_1_model_a2ca6dc004b17bf5cc451f48419b18635}\label{classepiworld_1_1_model_a2ca6dc004b17bf5cc451f48419b18635}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!run\_multiple@{run\_multiple}}
 \index{run\_multiple@{run\_multiple}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{run\_multiple()}{run\_multiple()}}

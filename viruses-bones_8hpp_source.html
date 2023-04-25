@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">typename</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt;::iterator begin();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">typename</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt;::iterator end();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    VirusPtr&lt;TSeq&gt; &amp; operator()(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    VirusPtr&lt;TSeq&gt; &amp; <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> i);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    VirusPtr&lt;TSeq&gt; &amp; operator[](<span class="keywordtype">size_t</span> i);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">size_t</span> size() <span class="keyword">const</span> noexcept;</div>
@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typename</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt;::const_iterator begin() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">typename</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt;::const_iterator end() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; operator()(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> i);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; operator[](<span class="keywordtype">size_t</span> i);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">size_t</span> size() <span class="keyword">const</span> noexcept;</div>
@@ -220,6 +220,7 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
+<div class="ttc" id="aclass_agent_html_a370107b9e18076bce06f7bffb32f2757"><div class="ttname"><a href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">Agent::operator()</a></div><div class="ttdeci">double &amp; operator()(size_t j)</div><div class="ttdoc">Access the j-th column of the agent.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:845</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="aclass_viruses__const_html"><div class="ttname"><a href="class_viruses__const.html">Viruses_const</a></div><div class="ttdoc">Set of Viruses (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> viruses-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_viruses_html"><div class="ttname"><a href="class_viruses.html">Viruses</a></div><div class="ttdoc">Set of viruses (useful for building iterators)</div><div class="ttdef"><b>Definition:</b> viruses-bones.hpp:16</div></div>

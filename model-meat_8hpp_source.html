@@ -480,7 +480,7 @@ $(function() {
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    ndays(model.ndays),</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    pb(model.pb),</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    status_fun(model.status_fun),</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    status_labels(model.status_labels),</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    states_labels(model.states_labels),</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    nstatus(model.nstatus),</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    verbose(model.verbose),</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    current_date(model.current_date),</div>
@@ -569,7 +569,7 @@ $(function() {
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    ndays(model.ndays),</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    pb(std::move(model.pb)),</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    status_fun(std::move(model.status_fun)),</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    status_labels(std::move(model.status_labels)),</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    states_labels(std::move(model.states_labels)),</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    nstatus(model.nstatus),</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    verbose(model.verbose),</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    current_date(std::move(model.current_date)),</div>
@@ -641,7 +641,7 @@ $(function() {
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    pb         = m.pb;</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    status_fun    = m.status_fun;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    status_labels = m.status_labels;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    states_labels = m.states_labels;</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    nstatus       = m.nstatus;</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    verbose     = m.verbose;</div>
@@ -2085,11 +2085,11 @@ $(function() {
 <div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;{</div>
 <div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160; </div>
 <div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;    <span class="comment">// Checking it doesn&#39;t match</span></div>
-<div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; s : status_labels)</div>
+<div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; s : states_labels)</div>
 <div class="line"><a name="l02044"></a><span class="lineno"> 2044</span>&#160;        <span class="keywordflow">if</span> (s == lab)</div>
 <div class="line"><a name="l02045"></a><span class="lineno"> 2045</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;state \&quot;&quot;</span> + s + <span class="stringliteral">&quot;\&quot; already registered.&quot;</span>);</div>
 <div class="line"><a name="l02046"></a><span class="lineno"> 2046</span>&#160; </div>
-<div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    status_labels.push_back(lab);</div>
+<div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    states_labels.push_back(lab);</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;    status_fun.push_back(fun);</div>
 <div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160;    nstatus++;</div>
 <div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160; </div>
@@ -2098,9 +2098,9 @@ $(function() {
 <div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160; </div>
 <div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; std::string &gt; &amp;</div>
-<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_state</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;<a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_states</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;    <span class="keywordflow">return</span> status_labels;</div>
+<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;    <span class="keywordflow">return</span> states_labels;</div>
 <div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;}</div>
 <div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160; </div>
 <div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -2122,7 +2122,7 @@ $(function() {
 <div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;\n%s\nSTATUS CODES\n\n&quot;</span>, line.c_str());</div>
 <div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160; </div>
 <div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;    epiworld_fast_uint nchar = 0u;</div>
-<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : status_labels)</div>
+<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : states_labels)</div>
 <div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;        <span class="keywordflow">if</span> (p.length() &gt; nchar)</div>
 <div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;            nchar = p.length();</div>
 <div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;    </div>
@@ -2133,7 +2133,7 @@ $(function() {
 <div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;        printf_epiworld(</div>
 <div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;            fmt.c_str(),</div>
 <div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;            i,</div>
-<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;            (status_labels[i] + <span class="stringliteral">&quot; (S)&quot;</span>).c_str()</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;            (states_labels[i] + <span class="stringliteral">&quot; (S)&quot;</span>).c_str()</div>
 <div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;        );</div>
 <div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160; </div>
 <div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;    }</div>
@@ -2573,8 +2573,8 @@ $(function() {
 <div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;    )</div>
 <div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;    </div>
 <div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;        status_labels,</div>
-<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;        other.status_labels,</div>
+<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;        states_labels,</div>
+<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;        other.states_labels,</div>
 <div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;        &quot;state labels don&#39;t match&quot;</div>
 <div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;    )</div>
 <div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160; </div>
@@ -2635,7 +2635,7 @@ $(function() {
 <div class="ttc" id="aclass_model_html_a4761b43494d081f2f7bd2443ea6cb2db"><div class="ttname"><a href="class_model.html#a4761b43494d081f2f7bd2443ea6cb2db">Model::load_agents_entities_ties</a></div><div class="ttdeci">void load_agents_entities_ties(std::string fn, int skip)</div><div class="ttdoc">Associate agents-entities from a file.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1250</div></div>
 <div class="ttc" id="aclass_model_html_a70f0e1d4c74e1cfc887aca35984c52b6"><div class="ttname"><a href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model::queuing_off</a></div><div class="ttdeci">void queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2321</div></div>
 <div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1432</div></div>
-<div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1924</div></div>
+<div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1924</div></div>
 <div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1410</div></div>
 <div class="ttc" id="aclass_model_html_aa866aee83267c45912b625e1646c60ea"><div class="ttname"><a href="class_model.html#aa866aee83267c45912b625e1646c60ea">Model::prevalence_virus</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; prevalence_virus</div><div class="ttdoc">Initial prevalence_virus of each virus.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:129</div></div>
 <div class="ttc" id="aclass_model_html_abe51a56419087566d858f0739918c795"><div class="ttname"><a href="class_model.html#abe51a56419087566d858f0739918c795">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1860</div></div>

@@ -86,8 +86,9 @@ bool {\bfseries has\+\_\+virus} (std\+::string name) const
 \mbox{\Hypertarget{class_agent_acca4a2fbcfcdf32f144b84e394d37f4c}\label{class_agent_acca4a2fbcfcdf32f144b84e394d37f4c}} 
 void {\bfseries print} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, bool compressed=false) const
 \item 
-\mbox{\hyperlink{class_entities}{Entities}}$<$ TSeq $>$ \mbox{\hyperlink{class_agent_aa8f3cf3ff2cd28ab97b6489b2d5124a8}{get\+\_\+entities}} ()
-\begin{DoxyCompactList}\small\item\em Access the j-\/th column of the agent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_aa8f3cf3ff2cd28ab97b6489b2d5124a8}\label{class_agent_aa8f3cf3ff2cd28ab97b6489b2d5124a8}} 
+\mbox{\hyperlink{class_entities}{Entities}}$<$ TSeq $>$ {\bfseries get\+\_\+entities} ()
+\item 
 \mbox{\Hypertarget{class_agent_a365a3cf04b993495a16ca2d7c9e4834b}\label{class_agent_a365a3cf04b993495a16ca2d7c9e4834b}} 
 const \mbox{\hyperlink{class_entities__const}{Entities\+\_\+const}}$<$ TSeq $>$ {\bfseries get\+\_\+entities} () const
 \item 
@@ -186,6 +187,21 @@ epiworld\+\_\+double {\bfseries get\+\_\+recovery\+\_\+enhancer} (Virus\+Ptr$<$ 
 epiworld\+\_\+double {\bfseries get\+\_\+death\+\_\+reduction} (Virus\+Ptr$<$ TSeq $>$ v, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \end{DoxyCompactItemize}
 \end{Indent}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+double \& \mbox{\hyperlink{class_agent_a370107b9e18076bce06f7bffb32f2757}{operator()}} (size\+\_\+t j)
+\begin{DoxyCompactList}\small\item\em Access the j-\/th column of the agent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_aba198fb7cce382c8607cede2d04e1f41}\label{class_agent_aba198fb7cce382c8607cede2d04e1f41}} 
+double \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t j)
+\item 
+\mbox{\Hypertarget{class_agent_a646a64552ed10f2b8d69c789def144fb}\label{class_agent_a646a64552ed10f2b8d69c789def144fb}} 
+double {\bfseries operator()} (size\+\_\+t j) const
+\item 
+\mbox{\Hypertarget{class_agent_aa34cd7c7ea94a5e54543b65f8e98b703}\label{class_agent_aa34cd7c7ea94a5e54543b65f8e98b703}} 
+double {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t j) const
+\end{DoxyCompactItemize}
+
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -252,12 +268,12 @@ class Agent$<$ TSeq $>$}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_agent_aa8f3cf3ff2cd28ab97b6489b2d5124a8}\label{class_agent_aa8f3cf3ff2cd28ab97b6489b2d5124a8}} 
-\index{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!get\_entities@{get\_entities}}
-\index{get\_entities@{get\_entities}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{get\_entities()}{get\_entities()}}
+\mbox{\Hypertarget{class_agent_a370107b9e18076bce06f7bffb32f2757}\label{class_agent_a370107b9e18076bce06f7bffb32f2757}} 
+\index{Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Agent$<$ TSeq $>$@{Agent$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{class_entities}{Entities}}$<$ TSeq $>$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$\+::get\+\_\+entities\hspace{0.3cm}{\ttfamily [inline]}}
+double \& \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$\+::operator() (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
