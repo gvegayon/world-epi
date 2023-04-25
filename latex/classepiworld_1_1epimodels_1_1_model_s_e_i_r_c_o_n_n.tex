@@ -31,6 +31,8 @@ Collaboration diagram for epiworld\+::epimodels\+::Model\+SEIRCONN$<$ TSeq $>$\+
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_ab4030f826e24cf03e7407f1f597c2388}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_ab4030f826e24cf03e7407f1f597c2388}} 
 void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_ab4030f826e24cf03e7407f1f597c2388}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a47b673ddf14c4c984f6cf2cf06f4b4c0}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a566a0d12a5987b978d4287ba2969004e}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -41,9 +43,6 @@ std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a5dc9784785e254b95390b4f279e4f6ca}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a5dc9784785e254b95390b4f279e4f6ca}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld\+::\+Agent}}$<$$>$ $\ast$ $>$ {\bfseries tracked\+\_\+agents\+\_\+infected\+\_\+next} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a2b5d4ca796b64c6f03eaa49330d63a5d}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a2b5d4ca796b64c6f03eaa49330d63a5d}} 
-bool {\bfseries tracked\+\_\+started} = false
 \item 
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a9cda3380977f15af1d1d7a1e89e3c889}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a9cda3380977f15af1d1d7a1e89e3c889}} 
 int {\bfseries tracked\+\_\+ninfected} = 0
@@ -118,6 +117,28 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a47b673ddf14c4c984f6cf2cf06f4b4c0}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n_a47b673ddf14c4c984f6cf2cf06f4b4c0}} 
+\index{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}!reset@{reset}}
+\index{reset@{reset}!epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the model. 
+
+Resetting the model will\+:
+\begin{DoxyItemize}
+\item clear the database
+\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
+\item re-\/distribute tools
+\item re-\/distribute viruses
+\item set the date to 0 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
 
 
