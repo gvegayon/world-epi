@@ -228,6 +228,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_gamma</b> (e
 <tr class="memitem:a8cf9a25074a14cdaa24413653cb5a3d1"><td class="memItemLeft" align="right" valign="top"><a id="a8cf9a25074a14cdaa24413653cb5a3d1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_lognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
 <tr class="separator:a8cf9a25074a14cdaa24413653cb5a3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51953df1008aa472db90b61cc1b54a5"><td class="memItemLeft" align="right" valign="top"><a id="aa51953df1008aa472db90b61cc1b54a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_binom</b> (int n, epiworld_double p)</td></tr>
+<tr class="separator:aa51953df1008aa472db90b61cc1b54a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cabf2d1052237ca7ad1b8145dcabc58"><td class="memItemLeft" align="right" valign="top"><a id="a9cabf2d1052237ca7ad1b8145dcabc58"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>runif</b> ()</td></tr>
 <tr class="separator:a9cabf2d1052237ca7ad1b8145dcabc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,6 +261,12 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal
 <tr class="memitem:a015fb51d30cc963e8dcff3dd33790d41"><td class="memItemLeft" align="right" valign="top"><a id="a015fb51d30cc963e8dcff3dd33790d41"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
 <tr class="separator:a015fb51d30cc963e8dcff3dd33790d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a92fc33f393dfd897b2474193dfa4c"><td class="memItemLeft" align="right" valign="top"><a id="a71a92fc33f393dfd897b2474193dfa4c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rbinom</b> ()</td></tr>
+<tr class="separator:a71a92fc33f393dfd897b2474193dfa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8c455dc72dd95a0f87eb7456d7e2bd"><td class="memItemLeft" align="right" valign="top"><a id="a4a8c455dc72dd95a0f87eb7456d7e2bd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rbinom</b> (int n, epiworld_double p)</td></tr>
+<tr class="separator:a4a8c455dc72dd95a0f87eb7456d7e2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Add Virus/Tool to the model</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>This is done before the model has been initialized.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -598,21 +607,18 @@ std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; 
 <tr class="memitem:ae5e2775dc7f107a5e6660bcb70f73108"><td class="memItemLeft" align="right" valign="top"><a id="ae5e2775dc7f107a5e6660bcb70f73108"></a>
 std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
 <tr class="separator:ae5e2775dc7f107a5e6660bcb70f73108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57aa5428270d201ea4b75df1ef4f7a6"><td class="memItemLeft" align="right" valign="top"><a id="ac57aa5428270d201ea4b75df1ef4f7a6"></a>
-std::uniform_real_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>runifd</b> = std::uniform_real_distribution&lt;&gt; (0.0, 1.0)</td></tr>
+<tr class="memitem:ac57aa5428270d201ea4b75df1ef4f7a6"><td class="memItemLeft" align="right" valign="top">std::uniform_real_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>runifd</b></td></tr>
 <tr class="separator:ac57aa5428270d201ea4b75df1ef4f7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7545b52c050d063f7825f0486cc2043"><td class="memItemLeft" align="right" valign="top"><a id="ab7545b52c050d063f7825f0486cc2043"></a>
-std::normal_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rnormd</b> = std::normal_distribution&lt;&gt;(0.0)</td></tr>
+<tr class="memitem:ab7545b52c050d063f7825f0486cc2043"><td class="memItemLeft" align="right" valign="top">std::normal_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rnormd</b></td></tr>
 <tr class="separator:ab7545b52c050d063f7825f0486cc2043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0663cf19b56db8b624991f8bf4538c9b"><td class="memItemLeft" align="right" valign="top"><a id="a0663cf19b56db8b624991f8bf4538c9b"></a>
-std::gamma_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rgammad</b> = std::gamma_distribution&lt;&gt;()</td></tr>
+<tr class="memitem:a0663cf19b56db8b624991f8bf4538c9b"><td class="memItemLeft" align="right" valign="top">std::gamma_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rgammad</b></td></tr>
 <tr class="separator:a0663cf19b56db8b624991f8bf4538c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b19990554c5ef6a10e4bcc7cd4c5c04"><td class="memItemLeft" align="right" valign="top"><a id="a3b19990554c5ef6a10e4bcc7cd4c5c04"></a>
-std::lognormal_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormald</b> = std::lognormal_distribution&lt;&gt;()</td></tr>
+<tr class="memitem:a3b19990554c5ef6a10e4bcc7cd4c5c04"><td class="memItemLeft" align="right" valign="top">std::lognormal_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormald</b></td></tr>
 <tr class="separator:a3b19990554c5ef6a10e4bcc7cd4c5c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a94be1c0b9b32abb00890ddcec4d4aa"><td class="memItemLeft" align="right" valign="top"><a id="a1a94be1c0b9b32abb00890ddcec4d4aa"></a>
-std::exponential_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rexpd</b> = std::exponential_distribution&lt;&gt;()</td></tr>
+<tr class="memitem:a1a94be1c0b9b32abb00890ddcec4d4aa"><td class="memItemLeft" align="right" valign="top">std::exponential_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rexpd</b></td></tr>
 <tr class="separator:a1a94be1c0b9b32abb00890ddcec4d4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3242127ab7ca8fb026103d7edfe3d0"><td class="memItemLeft" align="right" valign="top">std::binomial_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rbinomd</b></td></tr>
+<tr class="separator:a1a3242127ab7ca8fb026103d7edfe3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac660f47b4f5536857d0c2b5900873bc5"><td class="memItemLeft" align="right" valign="top"><a id="ac660f47b4f5536857d0c2b5900873bc5"></a>
 std::function&lt; void(std::vector&lt; <a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt;&gt; *, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *, epiworld_double)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rewire_fun</b></td></tr>
 <tr class="separator:ac660f47b4f5536857d0c2b5900873bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1318,6 +1324,162 @@ template&lt;typename TSeq &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1a3242127ab7ca8fb026103d7edfe3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3242127ab7ca8fb026103d7edfe3d0">&#9670;&nbsp;</a></span>rbinomd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::binomial_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::rbinomd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::binomial_distribution&lt;&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1a94be1c0b9b32abb00890ddcec4d4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a94be1c0b9b32abb00890ddcec4d4aa">&#9670;&nbsp;</a></span>rexpd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::exponential_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::rexpd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::exponential_distribution&lt;&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0663cf19b56db8b624991f8bf4538c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0663cf19b56db8b624991f8bf4538c9b">&#9670;&nbsp;</a></span>rgammad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::gamma_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::rgammad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::gamma_distribution&lt;&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3b19990554c5ef6a10e4bcc7cd4c5c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b19990554c5ef6a10e4bcc7cd4c5c04">&#9670;&nbsp;</a></span>rlognormald</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::lognormal_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::rlognormald</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::lognormal_distribution&lt;&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab7545b52c050d063f7825f0486cc2043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7545b52c050d063f7825f0486cc2043">&#9670;&nbsp;</a></span>rnormd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::normal_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::rnormd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::normal_distribution&lt;&gt;(0.0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac57aa5428270d201ea4b75df1ef4f7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57aa5428270d201ea4b75df1ef4f7a6">&#9670;&nbsp;</a></span>runifd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uniform_real_distribution <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::runifd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::uniform_real_distribution&lt;&gt; (0.0, 1.0)</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a10176edc2bf524086ff44c961e70a146"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10176edc2bf524086ff44c961e70a146">&#9670;&nbsp;</a></span>time_elapsed</h2>
 

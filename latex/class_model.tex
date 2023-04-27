@@ -156,6 +156,9 @@ void {\bfseries set\+\_\+rand\+\_\+gamma} (epiworld\+\_\+double alpha, epiworld\
 \mbox{\Hypertarget{class_model_a8cf9a25074a14cdaa24413653cb5a3d1}\label{class_model_a8cf9a25074a14cdaa24413653cb5a3d1}} 
 void {\bfseries set\+\_\+rand\+\_\+lognormal} (epiworld\+\_\+double mean, epiworld\+\_\+double shape)
 \item 
+\mbox{\Hypertarget{class_model_aa51953df1008aa472db90b61cc1b54a5}\label{class_model_aa51953df1008aa472db90b61cc1b54a5}} 
+void {\bfseries set\+\_\+rand\+\_\+binom} (int n, epiworld\+\_\+double p)
+\item 
 \mbox{\Hypertarget{class_model_a9cabf2d1052237ca7ad1b8145dcabc58}\label{class_model_a9cabf2d1052237ca7ad1b8145dcabc58}} 
 epiworld\+\_\+double {\bfseries runif} ()
 \item 
@@ -185,6 +188,12 @@ epiworld\+\_\+double {\bfseries rlognormal} ()
 \item 
 \mbox{\Hypertarget{class_model_a015fb51d30cc963e8dcff3dd33790d41}\label{class_model_a015fb51d30cc963e8dcff3dd33790d41}} 
 epiworld\+\_\+double {\bfseries rlognormal} (epiworld\+\_\+double mean, epiworld\+\_\+double shape)
+\item 
+\mbox{\Hypertarget{class_model_a71a92fc33f393dfd897b2474193dfa4c}\label{class_model_a71a92fc33f393dfd897b2474193dfa4c}} 
+int {\bfseries rbinom} ()
+\item 
+\mbox{\Hypertarget{class_model_a4a8c455dc72dd95a0f87eb7456d7e2bd}\label{class_model_a4a8c455dc72dd95a0f87eb7456d7e2bd}} 
+int {\bfseries rbinom} (int n, epiworld\+\_\+double p)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Add Virus/\+Tool to the model}\par
@@ -558,20 +567,17 @@ std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfser
 \mbox{\Hypertarget{class_model_ae5e2775dc7f107a5e6660bcb70f73108}\label{class_model_ae5e2775dc7f107a5e6660bcb70f73108}} 
 std\+::mt19937 {\bfseries engine}
 \item 
-\mbox{\Hypertarget{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}\label{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}} 
-std\+::uniform\+\_\+real\+\_\+distribution {\bfseries runifd} = std\+::uniform\+\_\+real\+\_\+distribution$<$$>$ (0.\+0, 1.\+0)
+std\+::uniform\+\_\+real\+\_\+distribution {\bfseries runifd}
 \item 
-\mbox{\Hypertarget{class_model_ab7545b52c050d063f7825f0486cc2043}\label{class_model_ab7545b52c050d063f7825f0486cc2043}} 
-std\+::normal\+\_\+distribution {\bfseries rnormd} = std\+::normal\+\_\+distribution$<$$>$(0.\+0)
+std\+::normal\+\_\+distribution {\bfseries rnormd}
 \item 
-\mbox{\Hypertarget{class_model_a0663cf19b56db8b624991f8bf4538c9b}\label{class_model_a0663cf19b56db8b624991f8bf4538c9b}} 
-std\+::gamma\+\_\+distribution {\bfseries rgammad} = std\+::gamma\+\_\+distribution$<$$>$()
+std\+::gamma\+\_\+distribution {\bfseries rgammad}
 \item 
-\mbox{\Hypertarget{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}\label{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}} 
-std\+::lognormal\+\_\+distribution {\bfseries rlognormald} = std\+::lognormal\+\_\+distribution$<$$>$()
+std\+::lognormal\+\_\+distribution {\bfseries rlognormald}
 \item 
-\mbox{\Hypertarget{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}\label{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}} 
-std\+::exponential\+\_\+distribution {\bfseries rexpd} = std\+::exponential\+\_\+distribution$<$$>$()
+std\+::exponential\+\_\+distribution {\bfseries rexpd}
+\item 
+std\+::binomial\+\_\+distribution {\bfseries rbinomd}
 \item 
 \mbox{\Hypertarget{class_model_ac660f47b4f5536857d0c2b5900873bc5}\label{class_model_ac660f47b4f5536857d0c2b5900873bc5}} 
 std\+::function$<$ void(std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$$>$ $\ast$, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$, epiworld\+\_\+double)$>$ {\bfseries rewire\+\_\+fun}
@@ -940,6 +946,84 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}\label{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rbinomd@{rbinomd}}
+\index{rbinomd@{rbinomd}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{rbinomd}{rbinomd}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::binomial\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::rbinomd\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::binomial\_distribution<>()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}\label{class_model_a1a94be1c0b9b32abb00890ddcec4d4aa}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rexpd@{rexpd}}
+\index{rexpd@{rexpd}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{rexpd}{rexpd}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::exponential\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::rexpd\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::exponential\_distribution<>()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_model_a0663cf19b56db8b624991f8bf4538c9b}\label{class_model_a0663cf19b56db8b624991f8bf4538c9b}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rgammad@{rgammad}}
+\index{rgammad@{rgammad}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{rgammad}{rgammad}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::gamma\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::rgammad\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::gamma\_distribution<>()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}\label{class_model_a3b19990554c5ef6a10e4bcc7cd4c5c04}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rlognormald@{rlognormald}}
+\index{rlognormald@{rlognormald}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{rlognormald}{rlognormald}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::lognormal\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::rlognormald\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::lognormal\_distribution<>()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_model_ab7545b52c050d063f7825f0486cc2043}\label{class_model_ab7545b52c050d063f7825f0486cc2043}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rnormd@{rnormd}}
+\index{rnormd@{rnormd}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{rnormd}{rnormd}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::normal\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::rnormd\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::normal\_distribution<>(0.0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}\label{class_model_ac57aa5428270d201ea4b75df1ef4f7a6}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!runifd@{runifd}}
+\index{runifd@{runifd}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{runifd}{runifd}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::uniform\+\_\+real\+\_\+distribution \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::runifd\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::uniform\_real\_distribution<> (0.0, 1.0)}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_model_a10176edc2bf524086ff44c961e70a146}\label{class_model_a10176edc2bf524086ff44c961e70a146}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!time\_elapsed@{time\_elapsed}}
 \index{time\_elapsed@{time\_elapsed}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}

@@ -238,6 +238,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_gamma</b> (e
 <tr class="memitem:a8cf9a25074a14cdaa24413653cb5a3d1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a8cf9a25074a14cdaa24413653cb5a3d1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_lognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
 <tr class="separator:a8cf9a25074a14cdaa24413653cb5a3d1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51953df1008aa472db90b61cc1b54a5 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa51953df1008aa472db90b61cc1b54a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_binom</b> (int n, epiworld_double p)</td></tr>
+<tr class="separator:aa51953df1008aa472db90b61cc1b54a5 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cabf2d1052237ca7ad1b8145dcabc58 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9cabf2d1052237ca7ad1b8145dcabc58"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>runif</b> ()</td></tr>
 <tr class="separator:a9cabf2d1052237ca7ad1b8145dcabc58 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,6 +271,12 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal
 <tr class="memitem:a015fb51d30cc963e8dcff3dd33790d41 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a015fb51d30cc963e8dcff3dd33790d41"></a>
 epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>rlognormal</b> (epiworld_double mean, epiworld_double shape)</td></tr>
 <tr class="separator:a015fb51d30cc963e8dcff3dd33790d41 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a92fc33f393dfd897b2474193dfa4c inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a71a92fc33f393dfd897b2474193dfa4c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rbinom</b> ()</td></tr>
+<tr class="separator:a71a92fc33f393dfd897b2474193dfa4c inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8c455dc72dd95a0f87eb7456d7e2bd inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a4a8c455dc72dd95a0f87eb7456d7e2bd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rbinom</b> (int n, epiworld_double p)</td></tr>
+<tr class="separator:a4a8c455dc72dd95a0f87eb7456d7e2bd inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1e9be2e50d761a4f0ca8d6ece9bb22 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3a1e9be2e50d761a4f0ca8d6ece9bb22"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus</b> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; int &gt; v, epiworld_double preval)</td></tr>
 <tr class="separator:a3a1e9be2e50d761a4f0ca8d6ece9bb22 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -581,6 +590,9 @@ std::lognormal_distribution&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:ad7f1305f7dcdf8d032f897ec867da21d inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ad7f1305f7dcdf8d032f897ec867da21d"></a>
 std::exponential_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rexpd</b></td></tr>
 <tr class="separator:ad7f1305f7dcdf8d032f897ec867da21d inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94125c634aa917c3a33e00ff90fdab29 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a94125c634aa917c3a33e00ff90fdab29"></a>
+std::binomial_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rbinomd</b></td></tr>
+<tr class="separator:a94125c634aa917c3a33e00ff90fdab29 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127cc182f4251ece712cfadf80b59ecf inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a127cc182f4251ece712cfadf80b59ecf"></a>
 std::function&lt; void(std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; int &gt;&gt; *, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; int &gt; *, epiworld_double)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rewire_fun</b></td></tr>
 <tr class="separator:a127cc182f4251ece712cfadf80b59ecf inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
