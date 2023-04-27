@@ -14005,7 +14005,7 @@ $(function() {
 <div class="line"><a name="l15213"></a><span class="lineno">15213</span>&#160;            {</div>
 <div class="line"><a name="l15214"></a><span class="lineno">15214</span>&#160;                <span class="comment">// Now selecting who is transmitting the disease</span></div>
 <div class="line"><a name="l15215"></a><span class="lineno">15215</span>&#160;                <span class="keywordtype">int</span> which = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l15216"></a><span class="lineno">15216</span>&#160;                    std::floor(_m-&gt;size() * m-&gt;runif())</div>
+<div class="line"><a name="l15216"></a><span class="lineno">15216</span>&#160;                    std::floor(m-&gt;size() * m-&gt;runif())</div>
 <div class="line"><a name="l15217"></a><span class="lineno">15217</span>&#160;                );</div>
 <div class="line"><a name="l15218"></a><span class="lineno">15218</span>&#160; </div>
 <div class="line"><a name="l15219"></a><span class="lineno">15219</span>&#160;                <span class="comment">/* There is a bug in which runif() returns 1.0. It is rare, but</span></div>
@@ -14015,7 +14015,7 @@ $(function() {
 <div class="line"><a name="l15223"></a><span class="lineno">15223</span>&#160;<span class="comment">                 * https://gcc.gnu.org/bugzilla/show_bug.cgi?id=63176</span></div>
 <div class="line"><a name="l15224"></a><span class="lineno">15224</span>&#160;<span class="comment">                 * </span></div>
 <div class="line"><a name="l15225"></a><span class="lineno">15225</span>&#160;<span class="comment">                 */</span></div>
-<div class="line"><a name="l15226"></a><span class="lineno">15226</span>&#160;                <span class="keywordflow">if</span> (which == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(_m-&gt;size()))</div>
+<div class="line"><a name="l15226"></a><span class="lineno">15226</span>&#160;                <span class="keywordflow">if</span> (which == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;size()))</div>
 <div class="line"><a name="l15227"></a><span class="lineno">15227</span>&#160;                    --which;</div>
 <div class="line"><a name="l15228"></a><span class="lineno">15228</span>&#160; </div>
 <div class="line"><a name="l15229"></a><span class="lineno">15229</span>&#160;                <span class="comment">// Can&#39;t sample itself</span></div>
