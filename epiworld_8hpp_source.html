@@ -8651,8 +8651,8 @@ $(function() {
 <div class="line"><a name="l09461"></a><span class="lineno"> 9461</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt;        probability_of_death_fun     = nullptr;</span></div>
 <div class="line"><a name="l09462"></a><span class="lineno"> 9462</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09463"></a><span class="lineno"> 9463</span>&#160;<span class="comment">    // Setup parameters</span></div>
-<div class="line"><a name="l09464"></a><span class="lineno"> 9464</span>&#160;<span class="comment">    std::vector&lt; epiworld_double * &gt; params;</span></div>
-<div class="line"><a name="l09465"></a><span class="lineno"> 9465</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; data;</span></div>
+<div class="line"><a name="l09464"></a><span class="lineno"> 9464</span>&#160;<span class="comment">    std::vector&lt; epiworld_double * &gt; params = {};</span></div>
+<div class="line"><a name="l09465"></a><span class="lineno"> 9465</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; data = {};</span></div>
 <div class="line"><a name="l09466"></a><span class="lineno"> 9466</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l09467"></a><span class="lineno"> 9467</span>&#160;<span class="comment">    epiworld_fast_int status_init    = -99; ///&lt; Change of state when added to agent.</span></div>
 <div class="line"><a name="l09468"></a><span class="lineno"> 9468</span>&#160;<span class="comment">    epiworld_fast_int status_post    = -99; ///&lt; Change of state when removed from agent.</span></div>
@@ -14029,7 +14029,7 @@ $(function() {
 <div class="line"><a name="l15237"></a><span class="lineno">15237</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l15238"></a><span class="lineno">15238</span>&#160; </div>
 <div class="line"><a name="l15239"></a><span class="lineno">15239</span>&#160;                <span class="comment">// If the neighbor is infected, then proceed</span></div>
-<div class="line"><a name="l15240"></a><span class="lineno">15240</span>&#160;                <span class="keyword">auto</span> neighbor = m-&gt;get_agents()[which];</div>
+<div class="line"><a name="l15240"></a><span class="lineno">15240</span>&#160;                <span class="keyword">auto</span> &amp; neighbor = m-&gt;get_agents()[which];</div>
 <div class="line"><a name="l15241"></a><span class="lineno">15241</span>&#160;                <span class="keywordflow">if</span> (neighbor.get_state() == <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">ModelSIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
 <div class="line"><a name="l15242"></a><span class="lineno">15242</span>&#160;                {</div>
 <div class="line"><a name="l15243"></a><span class="lineno">15243</span>&#160; </div>
@@ -14335,7 +14335,7 @@ $(function() {
 <div class="line"><a name="l15559"></a><span class="lineno">15559</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l15560"></a><span class="lineno">15560</span>&#160; </div>
 <div class="line"><a name="l15561"></a><span class="lineno">15561</span>&#160;                <span class="comment">// If the neighbor is infected, then proceed</span></div>
-<div class="line"><a name="l15562"></a><span class="lineno">15562</span>&#160;                <span class="keyword">auto</span> neighbor = m-&gt;get_agents()[which];</div>
+<div class="line"><a name="l15562"></a><span class="lineno">15562</span>&#160;                <span class="keyword">auto</span> &amp; neighbor = m-&gt;get_agents()[which];</div>
 <div class="line"><a name="l15563"></a><span class="lineno">15563</span>&#160;                <span class="keywordflow">if</span> (neighbor.get_state() == <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>)</div>
 <div class="line"><a name="l15564"></a><span class="lineno">15564</span>&#160;                {</div>
 <div class="line"><a name="l15565"></a><span class="lineno">15565</span>&#160; </div>
