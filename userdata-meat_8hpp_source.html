@@ -149,7 +149,7 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_user_data.html">UserData&lt;TSeq&gt;::get_all</a>(</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::vector&lt; std::string &gt; * names,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt; int &gt; * dates,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt; int &gt; * date,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::vector&lt; epiworld_double &gt; * data</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;) </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
@@ -157,8 +157,8 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (names != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        names = &amp;this-&gt;data_names;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (dates != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        dates = &amp;this-&gt;data_dates;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (date != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        date = &amp;this-&gt;data_dates;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (data != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        data = &amp;this-&gt;data_data;</div>

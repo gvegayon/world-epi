@@ -546,7 +546,19 @@ $(function() {
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;}</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160; </div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_tool.html">Tool&lt;TSeq&gt;::print</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160; </div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Tool           : %s\n&quot;</span>, tool_name-&gt;c_str());</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_init    : %i\n&quot;</span>, status_init);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_post    : %i\n&quot;</span>, status_post);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_init     : %i\n&quot;</span>, queue_init);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_post     : %i\n&quot;</span>, queue_post);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:81</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>

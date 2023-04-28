@@ -90,7 +90,7 @@
   \item {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
 		\hyperpage{98}
     \subitem {clone\_ptr}, \hyperpage{100}
-    \subitem {ModelSEIRCONN}, \hyperpage{100}
+    \subitem {ModelSEIRCONN}, \hyperpage{99}
     \subitem {reset}, \hyperpage{100}
   \item {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, \hyperpage{105}
   \item {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, \hyperpage{109}
@@ -192,7 +192,7 @@
     \subitem {update\_infected\_seir}, \hyperpage{98}
   \item {ModelSEIRCONN}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{100}
+		\hyperpage{99}
     \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{102}
   \item {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{101}
     \subitem {clone\_ptr}, \hyperpage{103}

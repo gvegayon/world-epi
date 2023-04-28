@@ -763,7 +763,7 @@ $(function() {
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        std::ofstream file_variant_info(fn_variant_info, std::ios_base::out);</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        file_variant_info &lt;&lt;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="preprocessor">        #ifdef _OPENMP</span></div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="preprocessor">        #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <span class="stringliteral">&quot;thread&quot;</span> &lt;&lt; <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;variant_name &quot;</span> &lt;&lt; <span class="stringliteral">&quot;variant_sequence &quot;</span> &lt;&lt; <span class="stringliteral">&quot;date_recorded &quot;</span> &lt;&lt; <span class="stringliteral">&quot;parent\n&quot;</span>;</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="preprocessor">        #else</span></div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="stringliteral">&quot;id &quot;</span> &lt;&lt; <span class="stringliteral">&quot;variant_name &quot;</span> &lt;&lt; <span class="stringliteral">&quot;variant_sequence &quot;</span> &lt;&lt; <span class="stringliteral">&quot;date_recorded &quot;</span> &lt;&lt; <span class="stringliteral">&quot;parent\n&quot;</span>;</div>
@@ -773,7 +773,7 @@ $(function() {
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        {</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = v.second;</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            file_variant_info &lt;&lt;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="preprocessor">                #ifdef _OPENMP</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;                EPI_GET_THREAD_ID() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="preprocessor">                #endif</span></div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; \&quot;&quot;</span> &lt;&lt;</div>
