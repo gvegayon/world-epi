@@ -349,15 +349,15 @@ $(function() {
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (use_queuing)</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">if</span> (a.queue == QueueValues::Everyone)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">if</span> (a.queue == <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::Everyone</a>)</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                queue += p;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == -QueueValues::Everyone)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == -<a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::Everyone</a>)</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                queue -= p;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == QueueValues::OnlySelf)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::OnlySelf</a>)</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                queue[p-&gt;<a class="code" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>()]++;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == -QueueValues::OnlySelf)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue == -<a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::OnlySelf</a>)</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                queue[p-&gt;<a class="code" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>()]--;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue != QueueValues::NoOne)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.queue != <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>)</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <span class="stringliteral">&quot;The proposed queue change is not valid. Queue values can be {-2, -1, 0, 1, 2}.&quot;</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    );</div>

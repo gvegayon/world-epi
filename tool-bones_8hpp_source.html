@@ -112,8 +112,8 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    epiworld_fast_int status_init = -99;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    epiworld_fast_int status_post = -99;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    epiworld_fast_int queue_init = QueueValues::NoOne; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    epiworld_fast_int queue_post = QueueValues::NoOne; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    epiworld_fast_int queue_init = <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    epiworld_fast_int queue_post = <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> set_agent(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p, <span class="keywordtype">size_t</span> idx);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
@@ -172,6 +172,7 @@ $(function() {
 <div class="ttc" id="aclass_model_html_a343ab95f43273186d42d6df618695283"><div class="ttname"><a href="class_model.html#a343ab95f43273186d42d6df618695283">Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:88</div></div>
 <div class="ttc" id="aclass_model_html_a3cf5b4f14dcd54816785b38894c8088f"><div class="ttname"><a href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model::get_queue</a></div><div class="ttdeci">Queue&lt; TSeq &gt; &amp; get_queue()</div><div class="ttdoc">Retrieve the Queue object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2370</div></div>
 <div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2429</div></div>
+<div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:16</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
 <div class="ttc" id="astruct_action_html"><div class="ttname"><a href="struct_action.html">Action</a></div><div class="ttdoc">Action data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:108</div></div>
