@@ -126,6 +126,15 @@ void {\bfseries get\+\_\+hist\+\_\+transition\+\_\+matrix} (std\+::vector$<$ std
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{class_data_base_ab83229341b3a8b9ca9ebb26674fea98d}{get\+\_\+transmissions}} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&source, std\+::vector$<$ int $>$ \&target, std\+::vector$<$ int $>$ \&variant, std\+::vector$<$ int $>$ \&source\+\_\+exposure\+\_\+date) const
+\begin{DoxyCompactList}\small\item\em Get the transmissions object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_base_a060e0c131ca61fba059198563c870b99}\label{class_data_base_a060e0c131ca61fba059198563c870b99}} 
+void {\bfseries get\+\_\+transmissions} (int $\ast$date, int $\ast$source, int $\ast$target, int $\ast$variant, int $\ast$source\+\_\+exposure\+\_\+date) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
 Map\+Vec\+\_\+type$<$ int, int $>$ \mbox{\hyperlink{class_data_base_a5d43d9fba8e46bee17f529e0ebce670e}{reproductive\+\_\+number}} () const
 \begin{DoxyCompactList}\small\item\em Computes the reproductive number of each case. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_data_base_a24076459592eecd983344be203773770}\label{class_data_base_a24076459592eecd983344be203773770}} 
@@ -185,6 +194,30 @@ void \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$\+::generation\+\
 Calculates the generating time 
 \begin{DoxyParams}{Parameters}
 {\em agent\+\_\+id,virus\+\_\+id,time,gentime} & vectors where to save the values agent\+\_\+id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_data_base_ab83229341b3a8b9ca9ebb26674fea98d}\label{class_data_base_ab83229341b3a8b9ca9ebb26674fea98d}} 
+\index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!get\_transmissions@{get\_transmissions}}
+\index{get\_transmissions@{get\_transmissions}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{get\_transmissions()}{get\_transmissions()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$\+::get\+\_\+transmissions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{date,  }\item[{std\+::vector$<$ int $>$ \&}]{source,  }\item[{std\+::vector$<$ int $>$ \&}]{target,  }\item[{std\+::vector$<$ int $>$ \&}]{variant,  }\item[{std\+::vector$<$ int $>$ \&}]{source\+\_\+exposure\+\_\+date }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the transmissions object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \\
+\hline
+{\em source} & \\
+\hline
+{\em target} & \\
+\hline
+{\em variant} & \\
+\hline
+{\em source\+\_\+exposure\+\_\+date} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_data_base_a707b63e79214f82c5efb85fc04ccee11}\label{class_data_base_a707b63e79214f82c5efb85fc04ccee11}} 

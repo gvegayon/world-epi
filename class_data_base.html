@@ -189,6 +189,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_tool</b> (st
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_transition_matrix</b> (std::vector&lt; std::string &gt; &amp;state_from, std::vector&lt; std::string &gt; &amp;state_to, std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;counts, bool skip_zeros) const</td></tr>
 <tr class="separator:a1c952a7084d8936d6ce4f43db5ac525d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab83229341b3a8b9ca9ebb26674fea98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_base.html#ab83229341b3a8b9ca9ebb26674fea98d">get_transmissions</a> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;source, std::vector&lt; int &gt; &amp;target, std::vector&lt; int &gt; &amp;variant, std::vector&lt; int &gt; &amp;source_exposure_date) const</td></tr>
+<tr class="memdesc:ab83229341b3a8b9ca9ebb26674fea98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transmissions object.  <a href="class_data_base.html#ab83229341b3a8b9ca9ebb26674fea98d">More...</a><br /></td></tr>
+<tr class="separator:ab83229341b3a8b9ca9ebb26674fea98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060e0c131ca61fba059198563c870b99"><td class="memItemLeft" align="right" valign="top"><a id="a060e0c131ca61fba059198563c870b99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_transmissions</b> (int *date, int *source, int *target, int *variant, int *source_exposure_date) const</td></tr>
+<tr class="separator:a060e0c131ca61fba059198563c870b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5d43d9fba8e46bee17f529e0ebce670e"><td class="memItemLeft" align="right" valign="top">MapVec_type&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a> () const</td></tr>
 <tr class="memdesc:a5d43d9fba8e46bee17f529e0ebce670e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the reproductive number of each case.  <a href="class_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">More...</a><br /></td></tr>
 <tr class="separator:a5d43d9fba8e46bee17f529e0ebce670e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,6 +289,74 @@ template&lt;typename TSeq &gt; </div>
 <p>Calculates the generating time </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">agent_id,virus_id,time,gentime</td><td>vectors where to save the values agent_id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab83229341b3a8b9ca9ebb26674fea98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83229341b3a8b9ca9ebb26674fea98d">&#9670;&nbsp;</a></span>get_transmissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_data_base.html">DataBase</a>&lt; TSeq &gt;::get_transmissions </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_exposure_date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the transmissions object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td></td></tr>
+    <tr><td class="paramname">source</td><td></td></tr>
+    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">variant</td><td></td></tr>
+    <tr><td class="paramname">source_exposure_date</td><td></td></tr>
   </table>
   </dd>
 </dl>
