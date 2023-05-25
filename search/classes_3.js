@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lfmcmc_93',['LFMCMC',['../classepiworld_1_1_l_f_m_c_m_c.html',1,'epiworld::LFMCMC&lt; TData &gt;'],['../class_l_f_m_c_m_c.html',1,'LFMCMC&lt; TData &gt;']]]
+  ['globalaction_96',['GlobalAction',['../classepiworld_1_1_global_action.html',1,'epiworld::GlobalAction&lt; TSeq &gt;'],['../class_global_action.html',1,'GlobalAction&lt; TSeq &gt;']]]
 ];

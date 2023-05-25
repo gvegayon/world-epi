@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['tool_113',['Tool',['../classepiworld_1_1_tool.html',1,'epiworld::Tool&lt; TSeq &gt;'],['../class_tool.html',1,'Tool&lt; TSeq &gt;']]],
-  ['tools_114',['Tools',['../classepiworld_1_1_tools.html',1,'epiworld::Tools&lt; TSeq &gt;'],['../class_tools.html',1,'Tools&lt; TSeq &gt;']]],
-  ['tools_5fconst_115',['Tools_const',['../classepiworld_1_1_tools__const.html',1,'epiworld::Tools_const&lt; TSeq &gt;'],['../class_tools__const.html',1,'Tools_const&lt; TSeq &gt;']]]
+  ['sampletype_116',['SAMPLETYPE',['../classepiworld_1_1_s_a_m_p_l_e_t_y_p_e.html',1,'epiworld::SAMPLETYPE'],['../class_s_a_m_p_l_e_t_y_p_e.html',1,'SAMPLETYPE']]]
 ];

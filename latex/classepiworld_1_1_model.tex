@@ -76,8 +76,23 @@ void {\bfseries print} (bool lite=false) const
 \mbox{\Hypertarget{classepiworld_1_1_model_acff738dcd85c99e96ca206d8239ceb21}\label{classepiworld_1_1_model_acff738dcd85c99e96ca206d8239ceb21}} 
 void {\bfseries get\+\_\+elapsed} (std\+::string unit=\char`\"{}auto\char`\"{}, epiworld\+\_\+double $\ast$last\+\_\+elapsed=nullptr, epiworld\+\_\+double $\ast$total\+\_\+elapsed=nullptr, std\+::string $\ast$unit\+\_\+abbr=nullptr, bool print=true) const
 \item 
-void \mbox{\hyperlink{classepiworld_1_1_model_adc3b2119335ffa4b0128123be919f454}{add\+\_\+global\+\_\+action}} (std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun, int date=-\/99)
+void \mbox{\hyperlink{classepiworld_1_1_model_a9902f0a3d6b5d9c92697664d42f4065d}{add\+\_\+global\+\_\+action}} (std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun, std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}}=\char`\"{}A global action\char`\"{}, int date=-\/99)
 \begin{DoxyCompactList}\small\item\em Set a global action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a99e807f46530c2fcd348f8c5045b65a7}\label{classepiworld_1_1_model_a99e807f46530c2fcd348f8c5045b65a7}} 
+void {\bfseries add\+\_\+global\+\_\+action} (\mbox{\hyperlink{classepiworld_1_1_global_action}{Global\+Action}}$<$ TSeq $>$ action)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a29b9d20fac28d3471dd8645d85d8b4b0}\label{classepiworld_1_1_model_a29b9d20fac28d3471dd8645d85d8b4b0}} 
+\mbox{\hyperlink{classepiworld_1_1_global_action}{Global\+Action}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1_model_a29b9d20fac28d3471dd8645d85d8b4b0}{get\+\_\+global\+\_\+action}} (std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}})
+\begin{DoxyCompactList}\small\item\em Retrieve a global action by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a9a16f2185dac11a48be6fcf3bd78f1da}\label{classepiworld_1_1_model_a9a16f2185dac11a48be6fcf3bd78f1da}} 
+\mbox{\hyperlink{classepiworld_1_1_global_action}{Global\+Action}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1_model_a9a16f2185dac11a48be6fcf3bd78f1da}{get\+\_\+global\+\_\+action}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Retrieve a global action by index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_aa3203517e3af426b4a8c53d0344e9587}\label{classepiworld_1_1_model_aa3203517e3af426b4a8c53d0344e9587}} 
+void \mbox{\hyperlink{classepiworld_1_1_model_aa3203517e3af426b4a8c53d0344e9587}{rm\+\_\+global\+\_\+action}} (std\+::string \mbox{\hyperlink{classepiworld_1_1_model_a4af72bcd59626f5c6cb52fc10fc30c04}{name}})
+\begin{DoxyCompactList}\small\item\em Remove a global action by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a50500d8031d91521d0a46efe801f6c3d}\label{classepiworld_1_1_model_a50500d8031d91521d0a46efe801f6c3d}} 
+void \mbox{\hyperlink{classepiworld_1_1_model_a50500d8031d91521d0a46efe801f6c3d}{rm\+\_\+global\+\_\+action}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Remove a global action by index. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_acd6c8412beb06a0f0e143cfd09074362}\label{classepiworld_1_1_model_acd6c8412beb06a0f0e143cfd09074362}} 
 void {\bfseries run\+\_\+global\+\_\+actions} ()
 \item 
@@ -620,11 +635,8 @@ std\+::chrono\+::duration$<$ epiworld\+\_\+double, std\+::micro $>$ {\bfseries t
 \mbox{\Hypertarget{classepiworld_1_1_model_a11638b0eb6184de152068ba08dc647c8}\label{classepiworld_1_1_model_a11638b0eb6184de152068ba08dc647c8}} 
 epiworld\+\_\+fast\+\_\+uint {\bfseries n\+\_\+replicates} = 0u
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aac3256d9cbe22a7851be4c67f0e7a20f}\label{classepiworld_1_1_model_aac3256d9cbe22a7851be4c67f0e7a20f}} 
-std\+::vector$<$ std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ $>$ {\bfseries global\+\_\+action\+\_\+functions}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a1da72cea71596483ba57324b67946c54}\label{classepiworld_1_1_model_a1da72cea71596483ba57324b67946c54}} 
-std\+::vector$<$ int $>$ {\bfseries global\+\_\+action\+\_\+dates}
+\mbox{\Hypertarget{classepiworld_1_1_model_a89de260fba547379b1dcc434b82cd1c7}\label{classepiworld_1_1_model_a89de260fba547379b1dcc434b82cd1c7}} 
+std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_global_action}{Global\+Action}}$<$ TSeq $>$ $>$ {\bfseries global\+\_\+actions}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_aafe0a7d4556f54fe5b14a43d80461fd2}\label{classepiworld_1_1_model_aafe0a7d4556f54fe5b14a43d80461fd2}} 
 \mbox{\hyperlink{classepiworld_1_1_queue}{Queue}}$<$ TSeq $>$ {\bfseries queue}
@@ -793,12 +805,12 @@ Executes the stored action.
 {\em model\+\_\+} & \mbox{\hyperlink{classepiworld_1_1_model}{Model}} over which it will be executed. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_adc3b2119335ffa4b0128123be919f454}\label{classepiworld_1_1_model_adc3b2119335ffa4b0128123be919f454}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a9902f0a3d6b5d9c92697664d42f4065d}\label{classepiworld_1_1_model_a9902f0a3d6b5d9c92697664d42f4065d}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!add\_global\_action@{add\_global\_action}}
 \index{add\_global\_action@{add\_global\_action}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{add\_global\_action()}{add\_global\_action()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::add\+\_\+global\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun,  }\item[{int}]{date = {\ttfamily -\/99} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::add\+\_\+global\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$)$>$}]{fun,  }\item[{std\+::string}]{name = {\ttfamily \char`\"{}A~global~action\char`\"{}},  }\item[{int}]{date = {\ttfamily -\/99} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -807,6 +819,8 @@ Set a global action.
 
 \begin{DoxyParams}{Parameters}
 {\em fun} & A function to be called on the prescribed date \\
+\hline
+{\em name} & Name of the action. \\
 \hline
 {\em date} & Integer indicating when the function is called (see details)\\
 \hline
