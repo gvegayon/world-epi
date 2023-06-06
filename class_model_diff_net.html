@@ -97,12 +97,12 @@ Collaboration diagram for ModelDiffNet&lt; TSeq &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37dd3c21c96e29414e4c5ad1651aac27"><td class="memItemLeft" align="right" valign="top"><a id="a37dd3c21c96e29414e4c5ad1651aac27"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelDiffNet</b> (<a class="el" href="class_model_diff_net.html">ModelDiffNet</a>&lt; TSeq &gt; &amp;model, std::string innovation_name, epiworld_double prevalence, epiworld_double prob_adopt, bool normalize_exposure, std::vector&lt; double &gt; params)</td></tr>
-<tr class="separator:a37dd3c21c96e29414e4c5ad1651aac27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93db489cb24fa263ea37277d334651ac"><td class="memItemLeft" align="right" valign="top"><a id="a93db489cb24fa263ea37277d334651ac"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelDiffNet</b> (std::string innovation_name, epiworld_double prevalence, epiworld_double prob_adopt, bool normalize_exposure, std::vector&lt; double &gt; params)</td></tr>
-<tr class="separator:a93db489cb24fa263ea37277d334651ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a16c67282eabbe900b1ee93f688f1a"><td class="memItemLeft" align="right" valign="top"><a id="a55a16c67282eabbe900b1ee93f688f1a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelDiffNet</b> (<a class="el" href="class_model_diff_net.html">ModelDiffNet</a>&lt; TSeq &gt; &amp;model, std::string innovation_name, epiworld_double prevalence, epiworld_double prob_adopt, bool normalize_exposure=true, double *agents_data=nullptr, size_t data_ncols=0u, std::vector&lt; size_t &gt; data_cols={}, std::vector&lt; double &gt; params={})</td></tr>
+<tr class="separator:a55a16c67282eabbe900b1ee93f688f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2b7ca1b7d1cc3cb0a7351669a682fd"><td class="memItemLeft" align="right" valign="top"><a id="aeb2b7ca1b7d1cc3cb0a7351669a682fd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelDiffNet</b> (std::string innovation_name, epiworld_double prevalence, epiworld_double prob_adopt, bool normalize_exposure=true, double *agents_data=nullptr, size_t data_ncols=0u, std::vector&lt; size_t &gt; data_cols={}, std::vector&lt; double &gt; params={})</td></tr>
+<tr class="separator:aeb2b7ca1b7d1cc3cb0a7351669a682fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; int &gt;</a></td></tr>
 <tr class="memitem:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a2d8f67ad467c6d5793a855d2314a39"></a>
 <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> ()</td></tr>
@@ -208,9 +208,9 @@ const std::vector&lt; ToolPtr&lt; int &gt; &gt; &amp;&#160;</td><td class="memIt
 <tr class="memitem:ac0e640f091d556ab8f6183b05ff064d4 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac0e640f091d556ab8f6183b05ff064d4"></a>
 double *&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents_data</b> ()</td></tr>
 <tr class="separator:ac0e640f091d556ab8f6183b05ff064d4 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187ec4d7304dd20b7ef39c18a88fd3ee inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a187ec4d7304dd20b7ef39c18a88fd3ee"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents_data_ncols</b> ()</td></tr>
-<tr class="separator:a187ec4d7304dd20b7ef39c18a88fd3ee inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d83abb85c1966898361f2fffcd77ed inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a09d83abb85c1966898361f2fffcd77ed"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents_data_ncols</b> () const</td></tr>
+<tr class="separator:a09d83abb85c1966898361f2fffcd77ed inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">set_name</a> (std::string <a class="el" href="classepiworld_1_1_model.html#a4af72bcd59626f5c6cb52fc10fc30c04">name</a>)</td></tr>
 <tr class="memdesc:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name object.  <a href="classepiworld_1_1_model.html#a453485b4cfe2a51addf33003f8d70c36">More...</a><br /></td></tr>
 <tr class="separator:a453485b4cfe2a51addf33003f8d70c36 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,9 +373,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rewire</b> ()</td></t
 <tr class="memitem:a93fc0b94d8d9abe2c8f491f06358d8b7 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a93fc0b94d8d9abe2c8f491f06358d8b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::string fn) const</td></tr>
 <tr class="separator:a93fc0b94d8d9abe2c8f491f06358d8b7 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49a60baf2d6cec2d33c7bb4d50c8e0c1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a49a60baf2d6cec2d33c7bb4d50c8e0c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::vector&lt; epiworld_fast_uint &gt; &amp;source, std::vector&lt; epiworld_fast_uint &gt; &amp;target) const</td></tr>
-<tr class="separator:a49a60baf2d6cec2d33c7bb4d50c8e0c1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1673a3703c74384eade35ca25cdc750 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ab1673a3703c74384eade35ca25cdc750"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_edgelist</b> (std::vector&lt; int &gt; &amp;source, std::vector&lt; int &gt; &amp;target) const</td></tr>
+<tr class="separator:ab1673a3703c74384eade35ca25cdc750 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa4a925f77087c2cc4fe21eb9671b5f49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_state</b> (std::string lab, UpdateFun&lt; int &gt; fun=nullptr)</td></tr>
 <tr class="separator:aa4a925f77087c2cc4fe21eb9671b5f49 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -477,6 +477,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aec2412f2a51ec9330e2262455a0d6407"><td class="memItemLeft" align="right" valign="top"><a id="aec2412f2a51ec9330e2262455a0d6407"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>normalize_exposure</b> = true</td></tr>
 <tr class="separator:aec2412f2a51ec9330e2262455a0d6407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ba9bbdc190c783dc75b25b697362f"><td class="memItemLeft" align="right" valign="top"><a id="ac92ba9bbdc190c783dc75b25b697362f"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_cols</b></td></tr>
+<tr class="separator:ac92ba9bbdc190c783dc75b25b697362f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aaaa7b359f5c215d6ebe38cca86e682"><td class="memItemLeft" align="right" valign="top"><a id="a2aaaa7b359f5c215d6ebe38cca86e682"></a>
 std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
 <tr class="separator:a2aaaa7b359f5c215d6ebe38cca86e682"><td class="memSeparator" colspan="2">&#160;</td></tr>
