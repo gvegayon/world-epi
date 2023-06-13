@@ -9481,7 +9481,7 @@ $(function() {
 <div class="line"><a name="l10366"></a><span class="lineno">10366</span>&#160;<span class="comment">    if (incubation_fun)</span></div>
 <div class="line"><a name="l10367"></a><span class="lineno">10367</span>&#160;<span class="comment">        return incubation_fun(agent, *this, model);</span></div>
 <div class="line"><a name="l10368"></a><span class="lineno">10368</span>&#160;<span class="comment">        </span></div>
-<div class="line"><a name="l10369"></a><span class="lineno">10369</span>&#160;<span class="comment">    return EPI_DEFAULT_VIRUS_INCUBATION;</span></div>
+<div class="line"><a name="l10369"></a><span class="lineno">10369</span>&#160;<span class="comment">    return EPI_DEFAULT_INCUBATION_DAYS;</span></div>
 <div class="line"><a name="l10370"></a><span class="lineno">10370</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10371"></a><span class="lineno">10371</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l10372"></a><span class="lineno">10372</span>&#160;<span class="comment"></span> </div>
@@ -15092,7 +15092,7 @@ $(function() {
 <div class="line"><a name="l16386"></a><span class="lineno">16386</span>&#160;                <span class="keyword">auto</span> &amp; v = p-&gt;get_virus(0u);</div>
 <div class="line"><a name="l16387"></a><span class="lineno">16387</span>&#160; </div>
 <div class="line"><a name="l16388"></a><span class="lineno">16388</span>&#160;                <span class="comment">// Does the agent become infected?</span></div>
-<div class="line"><a name="l16389"></a><span class="lineno">16389</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v.get_incubation(m)))</div>
+<div class="line"><a name="l16389"></a><span class="lineno">16389</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</div>
 <div class="line"><a name="l16390"></a><span class="lineno">16390</span>&#160;                {</div>
 <div class="line"><a name="l16391"></a><span class="lineno">16391</span>&#160; </div>
 <div class="line"><a name="l16392"></a><span class="lineno">16392</span>&#160;                    p-&gt;change_state(m, <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>);</div>

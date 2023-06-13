@@ -266,7 +266,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keyword">auto</span> &amp; v = p-&gt;get_virus(0u);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="comment">// Does the agent become infected?</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v.get_incubation(m)))</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                {</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    p-&gt;change_state(m, <a class="code" href="class_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN&lt;TSeq&gt;::INFECTED</a>);</div>
