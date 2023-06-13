@@ -109,11 +109,11 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        epiworld_double incu_rate,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        epiworld_double infe_shape,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        epiworld_double infe_rate,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        epiworld_double p_hosp,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        epiworld_double p_hosp_rec,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        epiworld_double p_hosp_die,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        epiworld_double p_transmission,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        epiworld_double p_transmission_entity,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        epiworld_double hospitalization_rate,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        epiworld_double hospitalization_recover_rate,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        epiworld_double hospitalization_decease_rate,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        epiworld_double transmission_entity_rate,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">size_t</span> n_entities,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">size_t</span> n_interactions</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    );</div>
@@ -138,11 +138,11 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="stringliteral">&quot;Gamma rate (incubation)&quot;</span>,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="stringliteral">&quot;Gamma shape (infected)&quot;</span>,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="stringliteral">&quot;Gamma rate (infected)&quot;</span>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="stringliteral">&quot;Hospitalization prob.&quot;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="stringliteral">&quot;Prob. hosp. recovers&quot;</span>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="stringliteral">&quot;Prob. hosp. dies&quot;</span>,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="stringliteral">&quot;Infectiousness&quot;</span>,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="stringliteral">&quot;Infectiousness in entity&quot;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="stringliteral">&quot;Hospitalization rate&quot;</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="stringliteral">&quot;Recovery rate (hosp.)&quot;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="stringliteral">&quot;Decease rate (hosp)&quot;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="stringliteral">&quot;Transmission rate&quot;</span>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="stringliteral">&quot;Transmission rate (entity)&quot;</span>,</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="stringliteral">&quot;Prevalence&quot;</span>,</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="stringliteral">&quot;N entities&quot;</span>,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="stringliteral">&quot;N interactions&quot;</span></div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// Creating the virus</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> virus(vname);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Infectiousness&quot;</span>));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    virus.set_state(S::Exposed, S::Recovered);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    virus.set_queue(<a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::OnlySelf</a>, -99LL);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    virus.get_data() = {0.0, 0.0F};</div>
@@ -222,11 +222,11 @@ $(function() {
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    epiworld_double incu_rate,</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    epiworld_double infe_shape,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    epiworld_double infe_rate,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    epiworld_double p_hosp,</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    epiworld_double p_hosp_rec,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    epiworld_double p_hosp_die,</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    epiworld_double p_transmission,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    epiworld_double p_transmission_entity,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    epiworld_double hospitalization_rate,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    epiworld_double hospitalization_recover_rate,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    epiworld_double hospitalization_decease_rate,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    epiworld_double transmission_entity_rate,</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">size_t</span> n_entities,</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">size_t</span> n_interactions</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;) {</div>
@@ -236,11 +236,11 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    this-&gt;add_param(incu_rate, <span class="stringliteral">&quot;Gamma rate (incubation) &quot;</span>);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    this-&gt;add_param(infe_shape, <span class="stringliteral">&quot;Gamma shape (infected)&quot;</span>);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    this-&gt;add_param(infe_rate, <span class="stringliteral">&quot;Gamma rate (infected)&quot;</span>);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    this-&gt;add_param(p_hosp, <span class="stringliteral">&quot;Hospitalization prob.&quot;</span>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    this-&gt;add_param(p_hosp_rec, <span class="stringliteral">&quot;Prob. hosp. recovers&quot;</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    this-&gt;add_param(p_hosp_rec, <span class="stringliteral">&quot;Prob. hosp. dies&quot;</span>);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    this-&gt;add_param(p_transmission, <span class="stringliteral">&quot;Infectiousness&quot;</span>);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    this-&gt;add_param(p_transmission_entity, <span class="stringliteral">&quot;Infectiousness in entity&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    this-&gt;add_param(hospitalization_rate, <span class="stringliteral">&quot;Hospitalization rate&quot;</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    this-&gt;add_param(hospitalization_recover_rate, <span class="stringliteral">&quot;Recovery rate (hosp.)&quot;</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    this-&gt;add_param(hospitalization_recover_rate, <span class="stringliteral">&quot;Decease rate (hosp)&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    this-&gt;add_param(transmission_rate, <span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    this-&gt;add_param(transmission_entity_rate, <span class="stringliteral">&quot;Transmission rate (entity)&quot;</span>);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    this-&gt;add_param(prevalence, <span class="stringliteral">&quot;Prevalence&quot;</span>);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    this-&gt;add_param(<span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(n_entities), <span class="stringliteral">&quot;N entities&quot;</span>);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    this-&gt;add_param(<span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(n_interactions), <span class="stringliteral">&quot;N interactions&quot;</span>);</div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">// Prob of becoming hospitalized</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        v-&gt;get_data()[2u] = (</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            m-&gt;runif() &lt; m-&gt;par(<span class="stringliteral">&quot;Hospitalization prob.&quot;</span>)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            m-&gt;runif() &lt; m-&gt;par(<span class="stringliteral">&quot;Hospitalization rate&quot;</span>)</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            ) ? 100.0 : -100.0;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
@@ -343,8 +343,8 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="comment">// Computing the recovery probability</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">auto</span> v = p-&gt;get_virus(0u);</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">auto</span> probs = {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        m-&gt;par(<span class="stringliteral">&quot;Prob. hosp. recovers&quot;</span>),</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        m-&gt;par(<span class="stringliteral">&quot;Prob. hosp. dies&quot;</span>)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        m-&gt;par(<span class="stringliteral">&quot;Recovery rate (hosp.)&quot;</span>),</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        m-&gt;par(<span class="stringliteral">&quot;Decease rate (hosp)&quot;</span>)</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        };</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">int</span> which = epiworld::roulette(probs, m);</div>
@@ -389,7 +389,7 @@ $(function() {
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="comment">// Is the individual getting the infection?</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordtype">double</span> p_infection = 1.0 - std::pow(</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            1.0 - m-&gt;par(<span class="stringliteral">&quot;Infectiousness in entity&quot;</span>), n_viruses</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            1.0 - m-&gt;par(<span class="stringliteral">&quot;Transmission rate (entity)&quot;</span>), n_viruses</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        );</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">if</span> (m-&gt;runif() &gt;= p_infection)</div>

@@ -95,12 +95,12 @@ Collaboration diagram for epiworld::epimodels::ModelSEIRCONN&lt; TSeq &gt;:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a316c5945aba7ccf10fc542bfa54426b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a316c5945aba7ccf10fc542bfa54426b5">ModelSEIRCONN</a> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double prob_transmission, epiworld_double incubation_days, epiworld_double prob_recovery)</td></tr>
-<tr class="memdesc:a316c5945aba7ccf10fc542bfa54426b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Exposed-Infected-Removed (SEIR) model.  <a href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a316c5945aba7ccf10fc542bfa54426b5">More...</a><br /></td></tr>
-<tr class="separator:a316c5945aba7ccf10fc542bfa54426b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923353c67fb4f4619003a3d858b6c992"><td class="memItemLeft" align="right" valign="top"><a id="a923353c67fb4f4619003a3d858b6c992"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSEIRCONN</b> (std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double prob_transmission, epiworld_double incubation_days, epiworld_double prob_recovery)</td></tr>
-<tr class="separator:a923353c67fb4f4619003a3d858b6c992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30438ed783cd6ad854885b016209bc44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a30438ed783cd6ad854885b016209bc44">ModelSEIRCONN</a> (<a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html">ModelSEIRCONN</a>&lt; TSeq &gt; &amp;model, std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double transmission_rate, epiworld_double avg_incubation_days, epiworld_double recovery_rate)</td></tr>
+<tr class="memdesc:a30438ed783cd6ad854885b016209bc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template for a Susceptible-Exposed-Infected-Removed (SEIR) model.  <a href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#a30438ed783cd6ad854885b016209bc44">More...</a><br /></td></tr>
+<tr class="separator:a30438ed783cd6ad854885b016209bc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b109b60af6b9ad6e8d762ea09b4e8c"><td class="memItemLeft" align="right" valign="top"><a id="a28b109b60af6b9ad6e8d762ea09b4e8c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModelSEIRCONN</b> (std::string vname, epiworld_fast_uint n, epiworld_double prevalence, epiworld_double contact_rate, epiworld_double transmission_rate, epiworld_double avg_incubation_days, epiworld_double recovery_rate)</td></tr>
+<tr class="separator:a28b109b60af6b9ad6e8d762ea09b4e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4030f826e24cf03e7407f1f597c2388"><td class="memItemLeft" align="right" valign="top"><a id="ab4030f826e24cf03e7407f1f597c2388"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n.html#ab4030f826e24cf03e7407f1f597c2388">run</a> (epiworld_fast_uint ndays, int seed=-1)</td></tr>
 <tr class="memdesc:ab4030f826e24cf03e7407f1f597c2388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the simulation (after initialization) <br /></td></tr>
@@ -678,8 +678,8 @@ MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bo
 <tr class="separator:a874b087ef2a3ede628a918a9344c6395 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a316c5945aba7ccf10fc542bfa54426b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a316c5945aba7ccf10fc542bfa54426b5">&#9670;&nbsp;</a></span>ModelSEIRCONN()</h2>
+<a id="a30438ed783cd6ad854885b016209bc44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30438ed783cd6ad854885b016209bc44">&#9670;&nbsp;</a></span>ModelSEIRCONN()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -723,19 +723,19 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_transmission</em>, </td>
+          <td class="paramname"><em>transmission_rate</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>incubation_days</em>, </td>
+          <td class="paramname"><em>avg_incubation_days</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">epiworld_double&#160;</td>
-          <td class="paramname"><em>prob_recovery</em>&#160;</td>
+          <td class="paramname"><em>recovery_rate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -757,8 +757,8 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">vname</td><td>std::string Name of the virus </td></tr>
     <tr><td class="paramname">prevalence</td><td>Initial prevalence (proportion) </td></tr>
     <tr><td class="paramname">contact_rate</td><td>Average number of contacts (interactions) per step. </td></tr>
-    <tr><td class="paramname">prob_transmission</td><td>Probability of transmission </td></tr>
-    <tr><td class="paramname">prob_recovery</td><td>Probability of recovery </td></tr>
+    <tr><td class="paramname">transmission_rate</td><td>Probability of transmission </td></tr>
+    <tr><td class="paramname">recovery_rate</td><td>Probability of recovery </td></tr>
   </table>
   </dd>
 </dl>

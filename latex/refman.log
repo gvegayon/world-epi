@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.6.13)  13 JUN 2023 04:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.6.13)  13 JUN 2023 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,13 +2045,7 @@ File: class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf Graphic file (type pdf
 Package pdftex.def Info: class_model_s_e_i_r_c_o_n_n_logit__coll__graph.pdf  us
 ed on input line 20.
 (pdftex.def)             Requested size: 196.0pt x 177.99911pt.
- [111]
-Underfull \hbox (badness 2903) in paragraph at lines 28--30
-\T1/phv/m/n/10 _[]double reproductive[]_[]number, epiworld[]_[]double prob[]_[]
-transmission, epiworld[]_[]double incubation[]_[]days,
- []
-
-[112]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r_d.tex
+ [111] [112]) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r_d.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2097,9 +2091,15 @@ Package pdftex.def Info: classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__coll__
 graph.pdf  used on input line 29.
 (pdftex.def)             Requested size: 196.0pt x 166.99916pt.
 
-Underfull \hbox (badness 1838) in paragraph at lines 38--41
-\T1/phv/m/n/10 _[]double incu[]_[]rate, epiworld[]_[]double infe[]_[]shape, epi
-world[]_[]double infe[]_[]rate, epiworld[]_[]double p[]_[]hosp,
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+\T1/phv/m/n/10 _[]rate, epiworld[]_[]double hospitalization[]_[]recover[]_[]rat
+e, epiworld[]_[]double hospitalization[]_[]decease[]_[]rate,
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 38--41
+\T1/phv/m/n/10 epiworld[]_[]double transmission[]_[]rate, epiworld[]_[]double t
+ransmission[]_[]entity[]_[]rate, size[]_[]t n[]_[]entities, size[]_[]t
  []
 
 [113]) (./class_model_s_e_i_r_d.tex
@@ -2138,9 +2138,15 @@ Package pdftex.def Info: class_model_s_e_i_r_d__coll__graph.pdf  used on input
 line 29.
 (pdftex.def)             Requested size: 192.0pt x 155.99922pt.
  [114]
-Underfull \hbox (badness 1838) in paragraph at lines 38--41
-\T1/phv/m/n/10 _[]double incu[]_[]rate, epiworld[]_[]double infe[]_[]shape, epi
-world[]_[]double infe[]_[]rate, epiworld[]_[]double p[]_[]hosp,
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+\T1/phv/m/n/10 _[]rate, epiworld[]_[]double hospitalization[]_[]recover[]_[]rat
+e, epiworld[]_[]double hospitalization[]_[]decease[]_[]rate,
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 38--41
+\T1/phv/m/n/10 epiworld[]_[]double transmission[]_[]rate, epiworld[]_[]double t
+ransmission[]_[]entity[]_[]rate, size[]_[]t n[]_[]entities, size[]_[]t
  []
 
 ) (./classepiworld_1_1epimodels_1_1_model_s_i_r.tex
@@ -3082,7 +3088,7 @@ Here is how much of TeX's memory you used:
  34396 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,96p,985b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,96p,992b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -3096,7 +3102,7 @@ e1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
 8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (175 pages, 808583 bytes).
+Output written on refman.pdf (175 pages, 809170 bytes).
 PDF statistics:
  6351 PDF objects out of 7423 (max. 8388607)
  5891 compressed objects within 59 object streams

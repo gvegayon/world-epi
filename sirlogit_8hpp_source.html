@@ -96,8 +96,8 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt; double &gt; coefs_recover,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt; size_t &gt; coef_infect_cols,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::vector&lt; size_t &gt; coef_recover_cols,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        epiworld_double prob_infect,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        epiworld_double prob_recover,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        epiworld_double recovery_rate,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        epiworld_double prevalence</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    );</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -109,8 +109,8 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::vector&lt; double &gt; coefs_recover,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt; size_t &gt; coef_infect_cols,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::vector&lt; size_t &gt; coef_recover_cols,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        epiworld_double prob_infect,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        epiworld_double prob_recover,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        epiworld_double recovery_rate,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        epiworld_double prevalence</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    );</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_model_s_i_r_logit.html#a8157235d17ab0b4a429e2e7b17385f38">  140</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_i_r_logit.html">ModelSIRLogit&lt;TSeq&gt;::ModelSIRLogit</a>(</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_model_s_i_r_logit.html#ac2529763b3f72163846c88d2985a57fc">  140</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_i_r_logit.html">ModelSIRLogit&lt;TSeq&gt;::ModelSIRLogit</a>(</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="class_model_s_i_r_logit.html">ModelSIRLogit&lt;TSeq&gt;</a> &amp; model,</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    std::string vname,</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">double</span> * data,</div>
@@ -199,8 +199,8 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    std::vector&lt; double &gt; coefs_recover,</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    std::vector&lt; size_t &gt; coef_infect_cols,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    std::vector&lt; size_t &gt; coef_recover_cols,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    epiworld_double prob_infect,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    epiworld_double prob_recover,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    epiworld_double recovery_rate,</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    epiworld_double prevalence</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    )</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
@@ -316,8 +316,8 @@ $(function() {
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// Setting up parameters</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// model.add_param(contact_rate, &quot;Contact rate&quot;);</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    model.add_param(prob_infect, <span class="stringliteral">&quot;Prob. Infection&quot;</span>);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    model.add_param(prob_recover, <span class="stringliteral">&quot;Prob. Recovery&quot;</span>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    model.add_param(transmission_rate, <span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    model.add_param(recovery_rate, <span class="stringliteral">&quot;Recovery rate&quot;</span>);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// model.add_param(prob_reinfection, &quot;Prob. Reinfection&quot;);</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
@@ -328,8 +328,8 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="class_model_s_i_r_logit.html">ModelSIRLogit&lt;TSeq&gt;::RECOVERED</a></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        );</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Prob. Infection&quot;</span>));</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Prob. Recovery&quot;</span>));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">// virus.set_prob</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
@@ -350,8 +350,8 @@ $(function() {
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    std::vector&lt; double &gt; coefs_recover,</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    std::vector&lt; size_t &gt; coef_infect_cols,</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    std::vector&lt; size_t &gt; coef_recover_cols,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    epiworld_double prob_infect,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    epiworld_double prob_recover,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    epiworld_double recovery_rate,</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    epiworld_double prevalence</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    )</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
@@ -365,8 +365,8 @@ $(function() {
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        coefs_recover,</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        coef_infect_cols,</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        coef_recover_cols,</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        prob_infect,</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        prob_recover,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        transmission_rate,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        recovery_rate,</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        prevalence</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    );</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
