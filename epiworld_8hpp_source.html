@@ -589,9 +589,9 @@ $(function() {
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="comment">inline int roulette(std::vector&lt; epiworld_double &gt; &amp; probs, Model&lt;TSeq&gt; * m)</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="comment">inline int roulette(std::vector&lt; float &gt; &amp; probs, Model&lt;TSeq&gt; * m)</span></div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="comment">{</span></div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;<span class="comment">    return roulette&lt;TSeq, epiworld_double&gt;(probs, m);</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;<span class="comment">    return roulette&lt;TSeq, float&gt;(probs, m);</span></div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment"></span> </div>
@@ -9166,7 +9166,7 @@ $(function() {
 <div class="line"><a name="l10013"></a><span class="lineno">10013</span>&#160;<span class="comment">    void mutate(Model&lt;TSeq&gt; * model);</span></div>
 <div class="line"><a name="l10014"></a><span class="lineno">10014</span>&#160;<span class="comment">    void set_mutation(MutFun&lt;TSeq&gt; fun);</span></div>
 <div class="line"><a name="l10015"></a><span class="lineno">10015</span>&#160;<span class="comment">    </span></div>
-<div class="line"><a name="l10016"></a><span class="lineno">10016</span>&#160;<span class="comment">    const TSeq* get_sequence();</span></div>
+<div class="line"><a name="l10016"></a><span class="lineno">10016</span>&#160;<span class="comment">    std::shared_ptr&lt;TSeq&gt; get_sequence();</span></div>
 <div class="line"><a name="l10017"></a><span class="lineno">10017</span>&#160;<span class="comment">    void set_sequence(TSeq sequence);</span></div>
 <div class="line"><a name="l10018"></a><span class="lineno">10018</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l10019"></a><span class="lineno">10019</span>&#160;<span class="comment">    Agent&lt;TSeq&gt; * get_agent();</span></div>
@@ -9352,10 +9352,10 @@ $(function() {
 <div class="line"><a name="l10237"></a><span class="lineno">10237</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l10238"></a><span class="lineno">10238</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10239"></a><span class="lineno">10239</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
-<div class="line"><a name="l10240"></a><span class="lineno">10240</span>&#160;<span class="comment">inline const TSeq * Virus&lt;TSeq&gt;::get_sequence()</span></div>
+<div class="line"><a name="l10240"></a><span class="lineno">10240</span>&#160;<span class="comment">inline std::shared_ptr&lt;TSeq&gt; Virus&lt;TSeq&gt;::get_sequence()</span></div>
 <div class="line"><a name="l10241"></a><span class="lineno">10241</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l10242"></a><span class="lineno">10242</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l10243"></a><span class="lineno">10243</span>&#160;<span class="comment">    return &amp;(*baseline_sequence);</span></div>
+<div class="line"><a name="l10243"></a><span class="lineno">10243</span>&#160;<span class="comment">    return baseline_sequence;</span></div>
 <div class="line"><a name="l10244"></a><span class="lineno">10244</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10245"></a><span class="lineno">10245</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l10246"></a><span class="lineno">10246</span>&#160;<span class="comment"></span> </div>
