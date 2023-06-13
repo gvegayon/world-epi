@@ -85,8 +85,12 @@ epiworld\+::\+Update\+Fun$<$TSeq$>$ \mbox{\hyperlink{classepiworld_1_1epimodels_
 \DoxyCodeLine{        \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld::Agent<TSeq>}} * p,}
 \DoxyCodeLine{        \mbox{\hyperlink{classepiworld_1_1_model}{epiworld::Model<TSeq>}} * m}
 \DoxyCodeLine{    ) -\/> \textcolor{keywordtype}{void} \{}
+\DoxyCodeLine{}
 \DoxyCodeLine{        }
-\DoxyCodeLine{        \textcolor{keywordflow}{if} (m-\/>runif() < 1.0/(m-\/>par(\textcolor{stringliteral}{"{}Incubation days"{}})))}
+\DoxyCodeLine{        \textcolor{keyword}{auto} v = p-\/>get\_virus(0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        }
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (m-\/>runif() < 1.0/(v-\/>get\_incubation(m)))}
 \DoxyCodeLine{            p-\/>change\_state(m, \mbox{\hyperlink{class_model_s_e_i_r}{ModelSEIR<TSeq>::INFECTED}});}
 \DoxyCodeLine{}
 \DoxyCodeLine{        \textcolor{keywordflow}{return};    }
