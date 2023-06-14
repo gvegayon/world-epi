@@ -33,8 +33,8 @@ size\+\_\+t {\bfseries size} () const
 \item 
 void \mbox{\hyperlink{classepiworld_1_1_model_a4761b43494d081f2f7bd2443ea6cb2db}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (std\+::string fn, int skip)
 \begin{DoxyCompactList}\small\item\em Associate agents-\/entities from a file. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac72410adc40abf8c70c3893bb40db21c}\label{classepiworld_1_1_model_ac72410adc40abf8c70c3893bb40db21c}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+variants} () const
+\mbox{\Hypertarget{classepiworld_1_1_model_ab7d63eb898445d3d30167c14ddec0c3d}\label{classepiworld_1_1_model_ab7d63eb898445d3d30167c14ddec0c3d}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+viruses} () const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a50aa99abe9d9b997ebce22f90a05009c}\label{classepiworld_1_1_model_a50aa99abe9d9b997ebce22f90a05009c}} 
 size\+\_\+t {\bfseries get\+\_\+n\+\_\+tools} () const
@@ -60,7 +60,7 @@ void {\bfseries verbose\+\_\+on} ()
 \mbox{\Hypertarget{classepiworld_1_1_model_aa3ce8d5f025e239f8090ab9645f3e917}\label{classepiworld_1_1_model_aa3ce8d5f025e239f8090ab9645f3e917}} 
 int \mbox{\hyperlink{classepiworld_1_1_model_aa3ce8d5f025e239f8090ab9645f3e917}{today}} () const
 \begin{DoxyCompactList}\small\item\em The current time of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classepiworld_1_1_model_abe51a56419087566d858f0739918c795}{write\+\_\+data}} (std\+::string fn\+\_\+variant\+\_\+info, std\+::string fn\+\_\+variant\+\_\+hist, std\+::string fn\+\_\+tool\+\_\+info, std\+::string fn\+\_\+tool\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition, std\+::string fn\+\_\+reproductive\+\_\+number, std\+::string fn\+\_\+generation\+\_\+time) const
+void \mbox{\hyperlink{classepiworld_1_1_model_a573869d1fe944d8a8345dc4a5bfc31bc}{write\+\_\+data}} (std\+::string fn\+\_\+virus\+\_\+info, std\+::string fn\+\_\+virus\+\_\+hist, std\+::string fn\+\_\+tool\+\_\+info, std\+::string fn\+\_\+tool\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition, std\+::string fn\+\_\+reproductive\+\_\+number, std\+::string fn\+\_\+generation\+\_\+time) const
 \begin{DoxyCompactList}\small\item\em Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a3c6f310249ec2e9c089ca0970606ed4f}\label{classepiworld_1_1_model_a3c6f310249ec2e9c089ca0970606ed4f}} 
 std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& {\bfseries params} ()
@@ -321,8 +321,8 @@ void {\bfseries agents\+\_\+empty\+\_\+graph} (epiworld\+\_\+fast\+\_\+uint n=10
 \mbox{\Hypertarget{classepiworld_1_1_model_a611dc22360dfb5664ad85accd0f2be82}\label{classepiworld_1_1_model_a611dc22360dfb5664ad85accd0f2be82}} 
 void {\bfseries update\+\_\+state} ()
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ae9912f5a26a38ac64e6499ccc4d897cb}\label{classepiworld_1_1_model_ae9912f5a26a38ac64e6499ccc4d897cb}} 
-void {\bfseries mutate\+\_\+variant} ()
+\mbox{\Hypertarget{classepiworld_1_1_model_aef12362683a22619ee49ac6c75c66078}\label{classepiworld_1_1_model_aef12362683a22619ee49ac6c75c66078}} 
+void {\bfseries mutate\+\_\+virus} ()
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a0f8b730f9ce77cb330da51ee0599ae82}\label{classepiworld_1_1_model_a0f8b730f9ce77cb330da51ee0599ae82}} 
 void {\bfseries next} ()
@@ -944,12 +944,12 @@ Set the name object.
 {\em name} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_model_abe51a56419087566d858f0739918c795}\label{classepiworld_1_1_model_abe51a56419087566d858f0739918c795}} 
+\mbox{\Hypertarget{classepiworld_1_1_model_a573869d1fe944d8a8345dc4a5bfc31bc}\label{classepiworld_1_1_model_a573869d1fe944d8a8345dc4a5bfc31bc}} 
 \index{epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}!write\_data@{write\_data}}
 \index{write\_data@{write\_data}!epiworld::Model$<$ TSeq $>$@{epiworld::Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{write\_data()}{write\_data()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+variant\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+variant\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition,  }\item[{std\+::string}]{fn\+\_\+reproductive\+\_\+number,  }\item[{std\+::string}]{fn\+\_\+generation\+\_\+time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{fn\+\_\+virus\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+virus\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+info,  }\item[{std\+::string}]{fn\+\_\+tool\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+total\+\_\+hist,  }\item[{std\+::string}]{fn\+\_\+transmission,  }\item[{std\+::string}]{fn\+\_\+transition,  }\item[{std\+::string}]{fn\+\_\+reproductive\+\_\+number,  }\item[{std\+::string}]{fn\+\_\+generation\+\_\+time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -957,9 +957,9 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 
 
 \begin{DoxyParams}{Parameters}
-{\em fn\+\_\+variant\+\_\+info} & Filename. Information about the variant. \\
+{\em fn\+\_\+virus\+\_\+info} & Filename. Information about the virus. \\
 \hline
-{\em fn\+\_\+variant\+\_\+hist} & Filename. History of the variant. \\
+{\em fn\+\_\+virus\+\_\+hist} & Filename. History of the virus. \\
 \hline
 {\em fn\+\_\+tool\+\_\+info} & Filename. Information about the tool. \\
 \hline

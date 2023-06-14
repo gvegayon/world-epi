@@ -158,7 +158,7 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Number of entities  : %i\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(entities.size()));</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Days (duration)     : %i (of %i)\n&quot;</span>, today(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ndays));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Number of variants  : %i\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(db.get_n_variants()));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Number of viruses  : %i\n&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(db.get_n_viruses()));</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (n_replicates &gt; 0u)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::string abbr;</div>
@@ -218,17 +218,17 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;\nVirus(es):\n&quot;</span>);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">size_t</span> n_variants_model = viruses.size();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_variants_model; ++i)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">size_t</span> n_viruses_model = viruses.size();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_viruses_model; ++i)</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {    </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> ((n_variants_model &gt; 10) &amp;&amp; (i &gt;= 10))</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> ((n_viruses_model &gt; 10) &amp;&amp; (i &gt;= 10))</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            printf_epiworld(<span class="stringliteral">&quot; ...and %li more variants...\n&quot;</span>, n_variants_model - i);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            printf_epiworld(<span class="stringliteral">&quot; ...and %li more viruses...\n&quot;</span>, n_viruses_model - i);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> (i &lt; n_variants_model)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> (i &lt; n_viruses_model)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        {</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">if</span> (prevalence_virus_as_proportion[i])</div>

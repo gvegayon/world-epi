@@ -212,7 +212,7 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// Drawing from the set</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">int</span> nvariants_tmp = 0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">int</span> nviruses_tmp = 0;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ndraw; ++i)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="comment">// Now selecting who is transmitting the disease</span></div>
@@ -243,18 +243,18 @@ $(function() {
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    { </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">                        #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        <span class="keywordflow">if</span> (nvariants_tmp &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;array_virus_tmp.size()))</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        <span class="keywordflow">if</span> (nviruses_tmp &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m-&gt;array_virus_tmp.size()))</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Trying to add an extra element to a temporal array outside of the range.&quot;</span>);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">                        #endif</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                            </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        <span class="comment">/* And it is a function of susceptibility_reduction as well */</span> </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        m-&gt;array_double_tmp[nvariants_tmp] =</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        m-&gt;array_double_tmp[nviruses_tmp] =</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                            (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                            v-&gt;get_prob_infecting(m) * </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                            (1.0 - neighbor.get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                            ; </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        m-&gt;array_virus_tmp[nvariants_tmp++] = &amp;(*v);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        m-&gt;array_virus_tmp[nviruses_tmp++] = &amp;(*v);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    } </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
@@ -262,11 +262,11 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">// No virus to compute</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (nvariants_tmp == 0u)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (nviruses_tmp == 0u)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// Running the roulette</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordtype">int</span> which = roulette(nvariants_tmp, m);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordtype">int</span> which = roulette(nviruses_tmp, m);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">if</span> (which &lt; 0)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">return</span>;</div>
@@ -396,10 +396,10 @@ $(function() {
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html_a37cb3d22a04f9f620fbbd7a2c7904227"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html#a37cb3d22a04f9f620fbbd7a2c7904227">ModelSIRCONN::clone_ptr</a></div><div class="ttdeci">Model&lt; TSeq &gt; * clone_ptr()</div><div class="ttdoc">Advanced usage: Makes a copy of data and returns it as undeleted pointer.</div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:98</div></div>
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html_a5928623ff6a69b6eb6733dc3eb1516f5"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html#a5928623ff6a69b6eb6733dc3eb1516f5">ModelSIRCONN::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:81</div></div>
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html_acf2c5f5267935acc277aafadf70c4b8e"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html#acf2c5f5267935acc277aafadf70c4b8e">ModelSIRCONN::run</a></div><div class="ttdeci">void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:63</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13086</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14185</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6022</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10089</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13102</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14201</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6026</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10099</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -49,7 +49,7 @@
     \subitem {generation\_time}, \hyperpage{54}
     \subitem {get\_transmissions}, \hyperpage{54}
     \subitem {operator==}, \hyperpage{54, 55}
-    \subitem {record\_variant}, \hyperpage{55}
+    \subitem {record\_virus}, \hyperpage{55}
     \subitem {reproductive\_number}, \hyperpage{56}
     \subitem {transition\_probability}, \hyperpage{56}
   \item {default\_rm\_entity}
@@ -79,7 +79,7 @@
     \subitem {generation\_time}, \hyperpage{58}
     \subitem {get\_transmissions}, \hyperpage{59}
     \subitem {operator==}, \hyperpage{59}
-    \subitem {record\_variant}, \hyperpage{59}
+    \subitem {record\_virus}, \hyperpage{59}
     \subitem {reproductive\_number}, \hyperpage{60}
     \subitem {transition\_probability}, \hyperpage{60}
   \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{61}
@@ -267,7 +267,7 @@
   \item {read\_edgelist}
     \subitem {AdjList}, \hyperpage{39}
     \subitem {epiworld::AdjList}, \hyperpage{41}
-  \item {record\_variant}
+  \item {record\_virus}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{55}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{59}
   \item {reproductive\_number}

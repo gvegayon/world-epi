@@ -18,7 +18,7 @@ Statistical data about the process.
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}\label{classepiworld_1_1_data_base_a148ac9438b0fefbe68ec6896d5d4aa3d}} 
 {\bfseries Data\+Base} (const \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$ \&db)
 \item 
-void \mbox{\hyperlink{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}{record\+\_\+variant}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v)
+void \mbox{\hyperlink{classepiworld_1_1_data_base_a7961eba429b909eff0e0fa966ee81011}{record\+\_\+virus}} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v)
 \begin{DoxyCompactList}\small\item\em Registering a new variant. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a40faac70770ad43b91c632f0cabd32c1}\label{classepiworld_1_1_data_base_a40faac70770ad43b91c632f0cabd32c1}} 
 void {\bfseries record\+\_\+tool} (\mbox{\hyperlink{classepiworld_1_1_tool}{Tool}}$<$ TSeq $>$ \&t)
@@ -44,14 +44,14 @@ const std\+::vector$<$ int $>$ \& {\bfseries get\+\_\+nexposed} () const
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a743d5061724b6cb3c8d669195fc995be}\label{classepiworld_1_1_data_base_a743d5061724b6cb3c8d669195fc995be}} 
 size\+\_\+t {\bfseries size} () const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a0c4dff99eecd986feaedda103ace0ccb}\label{classepiworld_1_1_data_base_a0c4dff99eecd986feaedda103ace0ccb}} 
-void {\bfseries write\+\_\+data} (std\+::string fn\+\_\+variant\+\_\+info, std\+::string fn\+\_\+variant\+\_\+hist, std\+::string fn\+\_\+tool\+\_\+info, std\+::string fn\+\_\+tool\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition, std\+::string fn\+\_\+reproductive\+\_\+number, std\+::string fn\+\_\+generation\+\_\+time) const
+\mbox{\Hypertarget{classepiworld_1_1_data_base_ad6e2991cc53669a6e15b9da5bb1a6d65}\label{classepiworld_1_1_data_base_ad6e2991cc53669a6e15b9da5bb1a6d65}} 
+void {\bfseries write\+\_\+data} (std\+::string fn\+\_\+virus\+\_\+info, std\+::string fn\+\_\+virus\+\_\+hist, std\+::string fn\+\_\+tool\+\_\+info, std\+::string fn\+\_\+tool\+\_\+hist, std\+::string fn\+\_\+total\+\_\+hist, std\+::string fn\+\_\+transmission, std\+::string fn\+\_\+transition, std\+::string fn\+\_\+reproductive\+\_\+number, std\+::string fn\+\_\+generation\+\_\+time) const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_aef4f24579f104462c11d4a40dee3506f}\label{classepiworld_1_1_data_base_aef4f24579f104462c11d4a40dee3506f}} 
-void {\bfseries record\+\_\+transmission} (int i, int j, int variant, int i\+\_\+expo\+\_\+date)
+\mbox{\Hypertarget{classepiworld_1_1_data_base_ad4f17453e8aa41a2e5dcd3762390ecbc}\label{classepiworld_1_1_data_base_ad4f17453e8aa41a2e5dcd3762390ecbc}} 
+void {\bfseries record\+\_\+transmission} (int i, int j, int virus, int i\+\_\+expo\+\_\+date)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a2e8fb265733ecbdcd30cfdb4af331e3c}\label{classepiworld_1_1_data_base_a2e8fb265733ecbdcd30cfdb4af331e3c}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+variants} () const
+\mbox{\Hypertarget{classepiworld_1_1_data_base_ace337931bf21b1bc080fbf6e374d5d1c}\label{classepiworld_1_1_data_base_ace337931bf21b1bc080fbf6e374d5d1c}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+viruses} () const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a4e61509ecd31d16fa4f7b235c7989251}\label{classepiworld_1_1_data_base_a4e61509ecd31d16fa4f7b235c7989251}} 
 size\+\_\+t {\bfseries get\+\_\+n\+\_\+tools} () const
@@ -84,13 +84,13 @@ bool {\bfseries operator!=} (const \mbox{\hyperlink{classepiworld_1_1_data_base}
 \begin{DoxyReturn}{Returns}
 In {\ttfamily get\+\_\+today\+\_\+total}, the current counts of {\ttfamily what}. 
 
-In {\ttfamily get\+\_\+today\+\_\+variant}, the current counts of {\ttfamily what} for each variant. 
+In {\ttfamily get\+\_\+today\+\_\+virus}, the current counts of {\ttfamily what} for each virus. 
 
 In {\ttfamily get\+\_\+hist\+\_\+total}, the time series of {\ttfamily what} 
 
-In {\ttfamily get\+\_\+hist\+\_\+variant}, the time series of what for each variant. 
+In {\ttfamily get\+\_\+hist\+\_\+virus}, the time series of what for each virus. 
 
-In {\ttfamily get\+\_\+hist\+\_\+total\+\_\+date} and {\ttfamily get\+\_\+hist\+\_\+variant\+\_\+date} the corresponding date 
+In {\ttfamily get\+\_\+hist\+\_\+total\+\_\+date} and {\ttfamily get\+\_\+hist\+\_\+virus\+\_\+date} the corresponding date 
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
@@ -103,14 +103,14 @@ int {\bfseries get\+\_\+today\+\_\+total} (epiworld\+\_\+fast\+\_\+uint what) co
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a955d50821777e0815707e34d64916ceb}\label{classepiworld_1_1_data_base_a955d50821777e0815707e34d64916ceb}} 
 void {\bfseries get\+\_\+today\+\_\+total} (std\+::vector$<$ std\+::string $>$ $\ast$state=nullptr, std\+::vector$<$ int $>$ $\ast$counts=nullptr) const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a01d73eed01afa0605fbcd14fb66467e7}\label{classepiworld_1_1_data_base_a01d73eed01afa0605fbcd14fb66467e7}} 
-void {\bfseries get\+\_\+today\+\_\+variant} (std\+::vector$<$ std\+::string $>$ \&state, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ int $>$ \&counts) const
+\mbox{\Hypertarget{classepiworld_1_1_data_base_a92e3111f8ea87e1c73d9254ea00dab63}\label{classepiworld_1_1_data_base_a92e3111f8ea87e1c73d9254ea00dab63}} 
+void {\bfseries get\+\_\+today\+\_\+virus} (std\+::vector$<$ std\+::string $>$ \&state, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ int $>$ \&counts) const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a274a3571fca8e7274748f32307203cc5}\label{classepiworld_1_1_data_base_a274a3571fca8e7274748f32307203cc5}} 
 void {\bfseries get\+\_\+hist\+\_\+total} (std\+::vector$<$ int $>$ $\ast$date, std\+::vector$<$ std\+::string $>$ $\ast$state, std\+::vector$<$ int $>$ $\ast$counts) const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_afac948e1dc1b9004a97e44416991746f}\label{classepiworld_1_1_data_base_afac948e1dc1b9004a97e44416991746f}} 
-void {\bfseries get\+\_\+hist\+\_\+variant} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ std\+::string $>$ \&state, std\+::vector$<$ int $>$ \&counts) const
+\mbox{\Hypertarget{classepiworld_1_1_data_base_a0106e84e9a1221a5217e5e21f3f14a8b}\label{classepiworld_1_1_data_base_a0106e84e9a1221a5217e5e21f3f14a8b}} 
+void {\bfseries get\+\_\+hist\+\_\+virus} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ std\+::string $>$ \&state, std\+::vector$<$ int $>$ \&counts) const
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_data_base_ae5071b8dbd92e223d8b1c93428a7ddb1}\label{classepiworld_1_1_data_base_ae5071b8dbd92e223d8b1c93428a7ddb1}} 
 void {\bfseries get\+\_\+hist\+\_\+tool} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&id, std\+::vector$<$ std\+::string $>$ \&state, std\+::vector$<$ int $>$ \&counts) const
@@ -122,10 +122,10 @@ void {\bfseries get\+\_\+hist\+\_\+transition\+\_\+matrix} (std\+::vector$<$ std
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classepiworld_1_1_data_base_ab83229341b3a8b9ca9ebb26674fea98d}{get\+\_\+transmissions}} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&source, std\+::vector$<$ int $>$ \&target, std\+::vector$<$ int $>$ \&variant, std\+::vector$<$ int $>$ \&source\+\_\+exposure\+\_\+date) const
+void \mbox{\hyperlink{classepiworld_1_1_data_base_a2b855969ae8aca805a8ee1713519c52d}{get\+\_\+transmissions}} (std\+::vector$<$ int $>$ \&date, std\+::vector$<$ int $>$ \&source, std\+::vector$<$ int $>$ \&target, std\+::vector$<$ int $>$ \&virus, std\+::vector$<$ int $>$ \&source\+\_\+exposure\+\_\+date) const
 \begin{DoxyCompactList}\small\item\em Get the transmissions object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_data_base_a060e0c131ca61fba059198563c870b99}\label{classepiworld_1_1_data_base_a060e0c131ca61fba059198563c870b99}} 
-void {\bfseries get\+\_\+transmissions} (int $\ast$date, int $\ast$source, int $\ast$target, int $\ast$variant, int $\ast$source\+\_\+exposure\+\_\+date) const
+\mbox{\Hypertarget{classepiworld_1_1_data_base_a27e7711d13db3beaf7d555a71ce9eaca}\label{classepiworld_1_1_data_base_a27e7711d13db3beaf7d555a71ce9eaca}} 
+void {\bfseries get\+\_\+transmissions} (int $\ast$date, int $\ast$source, int $\ast$target, int $\ast$virus, int $\ast$source\+\_\+exposure\+\_\+date) const
 \end{DoxyCompactItemize}
 
 \textbf{ }\par
@@ -192,12 +192,12 @@ Calculates the generating time
 {\em agent\+\_\+id,virus\+\_\+id,time,gentime} & vectors where to save the values agent\+\_\+id \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classepiworld_1_1_data_base_ab83229341b3a8b9ca9ebb26674fea98d}\label{classepiworld_1_1_data_base_ab83229341b3a8b9ca9ebb26674fea98d}} 
+\mbox{\Hypertarget{classepiworld_1_1_data_base_a2b855969ae8aca805a8ee1713519c52d}\label{classepiworld_1_1_data_base_a2b855969ae8aca805a8ee1713519c52d}} 
 \index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!get\_transmissions@{get\_transmissions}}
 \index{get\_transmissions@{get\_transmissions}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{get\_transmissions()}{get\_transmissions()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::get\+\_\+transmissions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{date,  }\item[{std\+::vector$<$ int $>$ \&}]{source,  }\item[{std\+::vector$<$ int $>$ \&}]{target,  }\item[{std\+::vector$<$ int $>$ \&}]{variant,  }\item[{std\+::vector$<$ int $>$ \&}]{source\+\_\+exposure\+\_\+date }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::get\+\_\+transmissions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{date,  }\item[{std\+::vector$<$ int $>$ \&}]{source,  }\item[{std\+::vector$<$ int $>$ \&}]{target,  }\item[{std\+::vector$<$ int $>$ \&}]{virus,  }\item[{std\+::vector$<$ int $>$ \&}]{source\+\_\+exposure\+\_\+date }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -211,7 +211,7 @@ Get the transmissions object.
 \hline
 {\em target} & \\
 \hline
-{\em variant} & \\
+{\em virus} & \\
 \hline
 {\em source\+\_\+exposure\+\_\+date} & \\
 \hline
@@ -231,12 +231,12 @@ $<$ Id of the targ
 
 $<$ Id of the varia
 
-$<$ Date when the source acquired the varia\mbox{\Hypertarget{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}\label{classepiworld_1_1_data_base_a833cf232df236cf097ccbaf537ff32ab}} 
-\index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!record\_variant@{record\_variant}}
-\index{record\_variant@{record\_variant}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{record\_variant()}{record\_variant()}}
+$<$ Date when the source acquired the varia\mbox{\Hypertarget{classepiworld_1_1_data_base_a7961eba429b909eff0e0fa966ee81011}\label{classepiworld_1_1_data_base_a7961eba429b909eff0e0fa966ee81011}} 
+\index{epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}!record\_virus@{record\_virus}}
+\index{record\_virus@{record\_virus}!epiworld::DataBase$<$ TSeq $>$@{epiworld::DataBase$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{record\_virus()}{record\_virus()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::record\+\_\+variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classepiworld_1_1_data_base}{Data\+Base}}$<$ TSeq $>$\+::record\+\_\+virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -244,7 +244,7 @@ Registering a new variant.
 
 
 \begin{DoxyParams}{Parameters}
-{\em v} & Pointer to the new variant. Since variants are originated in the agent, the numbers simply move around. From the parent variant to the new variant. And the total number of infected does not change. \\
+{\em v} & Pointer to the new virus. Since viruses are originated in the agent, the numbers simply move around. From the parent virus to the new virus. And the total number of infected does not change. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classepiworld_1_1_data_base_a5d43d9fba8e46bee17f529e0ebce670e}\label{classepiworld_1_1_data_base_a5d43d9fba8e46bee17f529e0ebce670e}} 

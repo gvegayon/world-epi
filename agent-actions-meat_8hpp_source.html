@@ -123,9 +123,9 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    p-&gt;viruses[n_viruses]-&gt;set_date(m-&gt;<a class="code" href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">today</a>());</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m-&gt;get_db().today_variant.at(v-&gt;get_id()).at(p-&gt;state)++;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m-&gt;get_db().today_virus.at(v-&gt;get_id()).at(p-&gt;state)++;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m-&gt;get_db().today_variant[v-&gt;get_id()][p-&gt;state]++;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m-&gt;get_db().today_virus[v-&gt;get_id()][p-&gt;state]++;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>

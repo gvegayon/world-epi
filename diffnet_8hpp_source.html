@@ -137,10 +137,10 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Measuring exposure</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// If the neighbor is infected, then proceed</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">size_t</span> nvariants = m-&gt;get_n_variants();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt; Virus&lt;TSeq&gt;* &gt; innovations(nvariants, {});</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt; bool &gt; stored(nvariants, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt; double &gt; exposure(nvariants, 0.0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">size_t</span> nviruses = m-&gt;get_n_viruses();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt; Virus&lt;TSeq&gt;* &gt; innovations(nviruses, {});</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt; bool &gt; stored(nviruses, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt; double &gt; exposure(nviruses, 0.0);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="class_model_diff_net.html">ModelDiffNet&lt;TSeq&gt;</a> * diffmodel = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_model_diff_net.html">ModelDiffNet&lt;TSeq&gt;</a>*<span class="keyword">&gt;</span>(m);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">// Computing probability of adoption</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; nvariants; ++i)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; nviruses; ++i)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (diffmodel-&gt;normalize_exposure)</div>
@@ -272,10 +272,10 @@ $(function() {
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:63</div></div>
 <div class="ttc" id="aclass_model_diff_net_html"><div class="ttname"><a href="class_model_diff_net.html">ModelDiffNet</a></div><div class="ttdoc">Template for a Network Diffusion Model.</div><div class="ttdef"><b>Definition:</b> diffnet.hpp:15</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13086</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14185</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6022</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10089</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13102</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14201</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6026</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10099</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

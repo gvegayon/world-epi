@@ -88,9 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a148ac9438b0fefbe68ec6896d5d4aa3d"><td class="memItemLeft" align="right" valign="top"><a id="a148ac9438b0fefbe68ec6896d5d4aa3d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DataBase</b> (const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt; &amp;db)</td></tr>
 <tr class="separator:a148ac9438b0fefbe68ec6896d5d4aa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a833cf232df236cf097ccbaf537ff32ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a833cf232df236cf097ccbaf537ff32ab">record_variant</a> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; &amp;v)</td></tr>
-<tr class="memdesc:a833cf232df236cf097ccbaf537ff32ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registering a new variant.  <a href="classepiworld_1_1_data_base.html#a833cf232df236cf097ccbaf537ff32ab">More...</a><br /></td></tr>
-<tr class="separator:a833cf232df236cf097ccbaf537ff32ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7961eba429b909eff0e0fa966ee81011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a7961eba429b909eff0e0fa966ee81011">record_virus</a> (<a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; &amp;v)</td></tr>
+<tr class="memdesc:a7961eba429b909eff0e0fa966ee81011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registering a new variant.  <a href="classepiworld_1_1_data_base.html#a7961eba429b909eff0e0fa966ee81011">More...</a><br /></td></tr>
+<tr class="separator:a7961eba429b909eff0e0fa966ee81011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40faac70770ad43b91c632f0cabd32c1"><td class="memItemLeft" align="right" valign="top"><a id="a40faac70770ad43b91c632f0cabd32c1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>record_tool</b> (<a class="el" href="classepiworld_1_1_tool.html">Tool</a>&lt; TSeq &gt; &amp;t)</td></tr>
 <tr class="separator:a40faac70770ad43b91c632f0cabd32c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,15 +115,15 @@ const std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="
 <tr class="memitem:a743d5061724b6cb3c8d669195fc995be"><td class="memItemLeft" align="right" valign="top"><a id="a743d5061724b6cb3c8d669195fc995be"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
 <tr class="separator:a743d5061724b6cb3c8d669195fc995be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4dff99eecd986feaedda103ace0ccb"><td class="memItemLeft" align="right" valign="top"><a id="a0c4dff99eecd986feaedda103ace0ccb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_data</b> (std::string fn_variant_info, std::string fn_variant_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</td></tr>
-<tr class="separator:a0c4dff99eecd986feaedda103ace0ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef4f24579f104462c11d4a40dee3506f"><td class="memItemLeft" align="right" valign="top"><a id="aef4f24579f104462c11d4a40dee3506f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>record_transmission</b> (int i, int j, int variant, int i_expo_date)</td></tr>
-<tr class="separator:aef4f24579f104462c11d4a40dee3506f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e8fb265733ecbdcd30cfdb4af331e3c"><td class="memItemLeft" align="right" valign="top"><a id="a2e8fb265733ecbdcd30cfdb4af331e3c"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_variants</b> () const</td></tr>
-<tr class="separator:a2e8fb265733ecbdcd30cfdb4af331e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e2991cc53669a6e15b9da5bb1a6d65"><td class="memItemLeft" align="right" valign="top"><a id="ad6e2991cc53669a6e15b9da5bb1a6d65"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_data</b> (std::string fn_virus_info, std::string fn_virus_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</td></tr>
+<tr class="separator:ad6e2991cc53669a6e15b9da5bb1a6d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f17453e8aa41a2e5dcd3762390ecbc"><td class="memItemLeft" align="right" valign="top"><a id="ad4f17453e8aa41a2e5dcd3762390ecbc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>record_transmission</b> (int i, int j, int virus, int i_expo_date)</td></tr>
+<tr class="separator:ad4f17453e8aa41a2e5dcd3762390ecbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace337931bf21b1bc080fbf6e374d5d1c"><td class="memItemLeft" align="right" valign="top"><a id="ace337931bf21b1bc080fbf6e374d5d1c"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_viruses</b> () const</td></tr>
+<tr class="separator:ace337931bf21b1bc080fbf6e374d5d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e61509ecd31d16fa4f7b235c7989251"><td class="memItemLeft" align="right" valign="top"><a id="a4e61509ecd31d16fa4f7b235c7989251"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_tools</b> () const</td></tr>
 <tr class="separator:a4e61509ecd31d16fa4f7b235c7989251"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,13 +156,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>In <code>get_today_total</code>, the current counts of <code>what</code>. </dd>
 <dd>
-In <code>get_today_variant</code>, the current counts of <code>what</code> for each variant. </dd>
+In <code>get_today_virus</code>, the current counts of <code>what</code> for each virus. </dd>
 <dd>
 In <code>get_hist_total</code>, the time series of <code>what</code> </dd>
 <dd>
-In <code>get_hist_variant</code>, the time series of what for each variant. </dd>
+In <code>get_hist_virus</code>, the time series of what for each virus. </dd>
 <dd>
-In <code>get_hist_total_date</code> and <code>get_hist_variant_date</code> the corresponding date </dd></dl>
+In <code>get_hist_total_date</code> and <code>get_hist_virus_date</code> the corresponding date </dd></dl>
 </div></td></tr>
 <tr class="memitem:a69c71eb460b142fb092e5035742760e8"><td class="memItemLeft" align="right" valign="top"><a id="a69c71eb460b142fb092e5035742760e8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (std::string what) const</td></tr>
@@ -173,15 +173,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (e
 <tr class="memitem:a955d50821777e0815707e34d64916ceb"><td class="memItemLeft" align="right" valign="top"><a id="a955d50821777e0815707e34d64916ceb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_total</b> (std::vector&lt; std::string &gt; *state=nullptr, std::vector&lt; int &gt; *counts=nullptr) const</td></tr>
 <tr class="separator:a955d50821777e0815707e34d64916ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d73eed01afa0605fbcd14fb66467e7"><td class="memItemLeft" align="right" valign="top"><a id="a01d73eed01afa0605fbcd14fb66467e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_variant</b> (std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;id, std::vector&lt; int &gt; &amp;counts) const</td></tr>
-<tr class="separator:a01d73eed01afa0605fbcd14fb66467e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e3111f8ea87e1c73d9254ea00dab63"><td class="memItemLeft" align="right" valign="top"><a id="a92e3111f8ea87e1c73d9254ea00dab63"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_today_virus</b> (std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;id, std::vector&lt; int &gt; &amp;counts) const</td></tr>
+<tr class="separator:a92e3111f8ea87e1c73d9254ea00dab63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a274a3571fca8e7274748f32307203cc5"><td class="memItemLeft" align="right" valign="top"><a id="a274a3571fca8e7274748f32307203cc5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_total</b> (std::vector&lt; int &gt; *date, std::vector&lt; std::string &gt; *state, std::vector&lt; int &gt; *counts) const</td></tr>
 <tr class="separator:a274a3571fca8e7274748f32307203cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afac948e1dc1b9004a97e44416991746f"><td class="memItemLeft" align="right" valign="top"><a id="afac948e1dc1b9004a97e44416991746f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_variant</b> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;id, std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;counts) const</td></tr>
-<tr class="separator:afac948e1dc1b9004a97e44416991746f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0106e84e9a1221a5217e5e21f3f14a8b"><td class="memItemLeft" align="right" valign="top"><a id="a0106e84e9a1221a5217e5e21f3f14a8b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_virus</b> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;id, std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;counts) const</td></tr>
+<tr class="separator:a0106e84e9a1221a5217e5e21f3f14a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5071b8dbd92e223d8b1c93428a7ddb1"><td class="memItemLeft" align="right" valign="top"><a id="ae5071b8dbd92e223d8b1c93428a7ddb1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_tool</b> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;id, std::vector&lt; std::string &gt; &amp;state, std::vector&lt; int &gt; &amp;counts) const</td></tr>
 <tr class="separator:ae5071b8dbd92e223d8b1c93428a7ddb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,12 +189,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_tool</b> (st
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_hist_transition_matrix</b> (std::vector&lt; std::string &gt; &amp;state_from, std::vector&lt; std::string &gt; &amp;state_to, std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;counts, bool skip_zeros) const</td></tr>
 <tr class="separator:a1c952a7084d8936d6ce4f43db5ac525d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ab83229341b3a8b9ca9ebb26674fea98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#ab83229341b3a8b9ca9ebb26674fea98d">get_transmissions</a> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;source, std::vector&lt; int &gt; &amp;target, std::vector&lt; int &gt; &amp;variant, std::vector&lt; int &gt; &amp;source_exposure_date) const</td></tr>
-<tr class="memdesc:ab83229341b3a8b9ca9ebb26674fea98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transmissions object.  <a href="classepiworld_1_1_data_base.html#ab83229341b3a8b9ca9ebb26674fea98d">More...</a><br /></td></tr>
-<tr class="separator:ab83229341b3a8b9ca9ebb26674fea98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060e0c131ca61fba059198563c870b99"><td class="memItemLeft" align="right" valign="top"><a id="a060e0c131ca61fba059198563c870b99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_transmissions</b> (int *date, int *source, int *target, int *variant, int *source_exposure_date) const</td></tr>
-<tr class="separator:a060e0c131ca61fba059198563c870b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b855969ae8aca805a8ee1713519c52d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a2b855969ae8aca805a8ee1713519c52d">get_transmissions</a> (std::vector&lt; int &gt; &amp;date, std::vector&lt; int &gt; &amp;source, std::vector&lt; int &gt; &amp;target, std::vector&lt; int &gt; &amp;virus, std::vector&lt; int &gt; &amp;source_exposure_date) const</td></tr>
+<tr class="memdesc:a2b855969ae8aca805a8ee1713519c52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transmissions object.  <a href="classepiworld_1_1_data_base.html#a2b855969ae8aca805a8ee1713519c52d">More...</a><br /></td></tr>
+<tr class="separator:a2b855969ae8aca805a8ee1713519c52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e7711d13db3beaf7d555a71ce9eaca"><td class="memItemLeft" align="right" valign="top"><a id="a27e7711d13db3beaf7d555a71ce9eaca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_transmissions</b> (int *date, int *source, int *target, int *virus, int *source_exposure_date) const</td></tr>
+<tr class="separator:a27e7711d13db3beaf7d555a71ce9eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a5d43d9fba8e46bee17f529e0ebce670e"><td class="memItemLeft" align="right" valign="top">MapVec_type&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">reproductive_number</a> () const</td></tr>
 <tr class="memdesc:a5d43d9fba8e46bee17f529e0ebce670e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the reproductive number of each case.  <a href="classepiworld_1_1_data_base.html#a5d43d9fba8e46bee17f529e0ebce670e">More...</a><br /></td></tr>
@@ -295,8 +295,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="ab83229341b3a8b9ca9ebb26674fea98d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab83229341b3a8b9ca9ebb26674fea98d">&#9670;&nbsp;</a></span>get_transmissions()</h2>
+<a id="a2b855969ae8aca805a8ee1713519c52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b855969ae8aca805a8ee1713519c52d">&#9670;&nbsp;</a></span>get_transmissions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +328,7 @@ template&lt;typename TSeq &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>variant</em>, </td>
+          <td class="paramname"><em>virus</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -355,7 +355,7 @@ template&lt;typename TSeq &gt; </div>
     <tr><td class="paramname">date</td><td></td></tr>
     <tr><td class="paramname">source</td><td></td></tr>
     <tr><td class="paramname">target</td><td></td></tr>
-    <tr><td class="paramname">variant</td><td></td></tr>
+    <tr><td class="paramname">virus</td><td></td></tr>
     <tr><td class="paramname">source_exposure_date</td><td></td></tr>
   </table>
   </dd>
@@ -396,8 +396,8 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<a id="a833cf232df236cf097ccbaf537ff32ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a833cf232df236cf097ccbaf537ff32ab">&#9670;&nbsp;</a></span>record_variant()</h2>
+<a id="a7961eba429b909eff0e0fa966ee81011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7961eba429b909eff0e0fa966ee81011">&#9670;&nbsp;</a></span>record_virus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +408,7 @@ template&lt;typename TSeq &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt;::record_variant </td>
+          <td class="memname">void <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; TSeq &gt;::record_virus </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -425,7 +425,7 @@ template&lt;typename TSeq &gt; </div>
 <p>Registering a new variant. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>Pointer to the new variant. Since variants are originated in the agent, the numbers simply move around. From the parent variant to the new variant. And the total number of infected does not change. </td></tr>
+    <tr><td class="paramname">v</td><td>Pointer to the new virus. Since viruses are originated in the agent, the numbers simply move around. From the parent virus to the new virus. And the total number of infected does not change. </td></tr>
   </table>
   </dd>
 </dl>
