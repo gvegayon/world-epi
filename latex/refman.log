@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.6.14)  14 JUN 2023 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.6.14)  14 JUN 2023 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2820,12 +2820,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
+
+Overfull \vbox (10.83002pt too high) has occurred while \output is active []
+
+
 [150]
 Underfull \hbox (badness 10000) detected at line 72
 [][][]
  []
 
-) (./structepiworld_1_1vec_hasher.tex
+
+Overfull \vbox (4.70511pt too high) has occurred while \output is active []
+
+
+[151]) (./structepiworld_1_1vec_hasher.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2842,7 +2850,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[151]) (./structvec_hasher.tex
+) (./structvec_hasher.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2986,7 +2994,7 @@ Chapter 14.
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__incl.pdf, id=5565, 229.85875pt x 167.62625pt>
+<agent-meat-state_8hpp__incl.pdf, id=5571, 229.85875pt x 167.62625pt>
 File: agent-meat-state_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
@@ -2997,7 +3005,7 @@ Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__dep__incl.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__dep__incl.pdf, id=5573, 223.83624pt x 223.83624pt>
+<agent-meat-state_8hpp__dep__incl.pdf, id=5579, 223.83624pt x 223.83624pt>
 File: agent-meat-state_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__dep__incl.pdf  used on input li
@@ -3082,10 +3090,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 21086 strings out of 480478
- 421517 string characters out of 5905924
- 675553 words of memory out of 5000000
- 34412 multiletter control sequences out of 15000+600000
+ 21098 strings out of 480478
+ 422205 string characters out of 5905924
+ 675883 words of memory out of 5000000
+ 34418 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,96p,992b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3102,10 +3110,10 @@ e1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
 8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (175 pages, 811855 bytes).
+Output written on refman.pdf (175 pages, 812748 bytes).
 PDF statistics:
- 6386 PDF objects out of 7423 (max. 8388607)
- 5925 compressed objects within 60 object streams
- 2211 named destinations out of 2487 (max. 500000)
+ 6393 PDF objects out of 7423 (max. 8388607)
+ 5932 compressed objects within 60 object streams
+ 2217 named destinations out of 2487 (max. 500000)
  2531 words of extra memory for PDF output out of 10000 (max. 10000000)
 
