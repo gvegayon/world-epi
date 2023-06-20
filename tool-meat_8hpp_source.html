@@ -443,8 +443,8 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    epiworld_fast_int end</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;)</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;{</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    status_init = init;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    status_post = end;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    state_init = init;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    state_post = end;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -464,10 +464,10 @@ $(function() {
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;)</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">if</span> (init != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        *init = status_init;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        *init = state_init;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">if</span> (post != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        *post = status_post;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        *post = state_post;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
@@ -503,10 +503,10 @@ $(function() {
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">if</span> (tool_name != other.tool_name)</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    </div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">if</span> (status_init != other.status_init)</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">if</span> (state_init != other.state_init)</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">if</span> (status_post != other.status_post)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">if</span> (state_post != other.state_post)</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">if</span> (queue_init != other.queue_init)</div>
@@ -529,10 +529,10 @@ $(function() {
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">if</span> (tool_name != other.tool_name)</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    </div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordflow">if</span> (status_init != other.status_init)</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordflow">if</span> (state_init != other.state_init)</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">if</span> (status_post != other.status_post)</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">if</span> (state_post != other.state_post)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">if</span> (queue_init != other.queue_init)</div>
@@ -552,8 +552,8 @@ $(function() {
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160; </div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Tool           : %s\n&quot;</span>, tool_name-&gt;c_str());</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Id             : %s\n&quot;</span>, (<span class="keywordtype">id</span> &lt; 0)? std::string(<span class="stringliteral">&quot;(empty)&quot;</span>).c_str() : std::to_string(<span class="keywordtype">id</span>).c_str());</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_init    : %i\n&quot;</span>, status_init);</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_post    : %i\n&quot;</span>, status_post);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;state_init    : %i\n&quot;</span>, state_init);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;state_post    : %i\n&quot;</span>, state_post);</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_init     : %i\n&quot;</span>, queue_init);</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_post     : %i\n&quot;</span>, queue_post);</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>

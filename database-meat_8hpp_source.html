@@ -78,7 +78,7 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// Initializing the counts</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    today_total.resize(model-&gt;nstatus);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    today_total.resize(model-&gt;nstates);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::fill(today_total.begin(), today_total.end(), 0);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : model-&gt;get_agents())</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ++today_total[p.get_state()];</div>
@@ -97,10 +97,10 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    transition_matrix.resize(model-&gt;nstatus * model-&gt;nstatus);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    transition_matrix.resize(model-&gt;nstates * model-&gt;nstates);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::fill(transition_matrix.begin(), transition_matrix.end(), 0);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        transition_matrix[s + s * model-&gt;nstatus] = today_total[s];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s = 0u; s &lt; model-&gt;nstates; ++s)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        transition_matrix[s + s * model-&gt;nstates] = today_total[s];</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    hist_virus_date.clear();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    hist_virus_id.clear();</div>
@@ -113,10 +113,10 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    hist_tool_counts.clear();    </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    today_virus.resize(get_n_viruses());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::fill(today_virus.begin(), today_virus.begin(), std::vector&lt;int&gt;(model-&gt;nstatus, 0));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::fill(today_virus.begin(), today_virus.begin(), std::vector&lt;int&gt;(model-&gt;nstates, 0));</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    today_tool.resize(get_n_tools());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::fill(today_tool.begin(), today_tool.begin(), std::vector&lt;int&gt;(model-&gt;nstatus, 0));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::fill(today_tool.begin(), today_tool.begin(), std::vector&lt;int&gt;(model-&gt;nstates, 0));</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    hist_total_date.clear();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    hist_total_state.clear();</div>
@@ -253,7 +253,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : virus_id)</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        {</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstates; ++s)</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            {</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                hist_virus_date.push_back(model-&gt;today());</div>
@@ -269,7 +269,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; p : tool_id)</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstates; ++s)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            {</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                hist_tool_date.push_back(model-&gt;today());</div>
@@ -282,7 +282,7 @@ $(function() {
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Recording the overall history</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstatus; ++s)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">for</span> (epiworld_fast_uint s = 0u; s &lt; model-&gt;nstates; ++s)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            hist_total_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            hist_total_nviruses_active.push_back(today_total_nviruses_active);</div>
@@ -294,22 +294,22 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            hist_transition_matrix.push_back(cell);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">// Now the diagonal must reflect the state</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; model-&gt;nstatus; ++s_i)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_i = 0u; s_i &lt; model-&gt;nstates; ++s_i)</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; model-&gt;nstatus; ++s_j)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s_j = 0u; s_j &lt; model-&gt;nstates; ++s_j)</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordflow">if</span> ((s_i != s_j) &amp;&amp; (transition_matrix[s_i + s_j * model-&gt;nstatus] &gt; 0))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordflow">if</span> ((s_i != s_j) &amp;&amp; (transition_matrix[s_i + s_j * model-&gt;nstates] &gt; 0))</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    transition_matrix[s_j + s_j * model-&gt;nstatus] +=</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        transition_matrix[s_i + s_j * model-&gt;nstatus];</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    transition_matrix[s_j + s_j * model-&gt;nstates] +=</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        transition_matrix[s_i + s_j * model-&gt;nstates];</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    transition_matrix[s_i + s_j * model-&gt;nstatus] = 0;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    transition_matrix[s_i + s_j * model-&gt;nstates] = 0;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;         </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            }</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">            #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (transition_matrix[s_i + s_i * model-&gt;nstatus] != </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (transition_matrix[s_i + s_i * model-&gt;nstates] != </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                today_total[s_i])</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    <span class="stringliteral">&quot;The diagonal of the updated transition Matrix should match the daily totals&quot;</span></div>
@@ -349,7 +349,7 @@ $(function() {
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        virus_parent_id.push_back(v.get_id()); <span class="comment">// Must be -99</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        </div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        today_virus.push_back({});</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        today_virus[new_id].resize(model-&gt;nstatus, 0);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        today_virus[new_id].resize(model-&gt;nstates, 0);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;       </div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">// Updating the variant</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        v.set_id(new_id);</div>
@@ -378,7 +378,7 @@ $(function() {
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            virus_parent_id.push_back(old_id);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            </div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            today_virus.push_back({});</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            today_virus[new_id].resize(model-&gt;nstatus, 0);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            today_virus[new_id].resize(model-&gt;nstates, 0);</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        </div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="comment">// Updating the variant</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            v.set_id(new_id);</div>
@@ -433,7 +433,7 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        tool_origin_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                </div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        today_tool.push_back({});</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        today_tool[new_id].resize(model-&gt;nstatus, 0);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        today_tool[new_id].resize(model-&gt;nstates, 0);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="comment">// Updating the tool</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        t.set_id(new_id);</div>
@@ -456,7 +456,7 @@ $(function() {
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            tool_origin_date.push_back(model-&gt;today());</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    </div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            today_tool.push_back({});</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            today_tool[new_id].resize(model-&gt;nstatus, 0);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            today_tool[new_id].resize(model-&gt;nstates, 0);</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="comment">// Updating the tool</span></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            t.set_id(new_id);</div>
@@ -560,18 +560,18 @@ $(function() {
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">if</span> (undo)</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    {   </div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        transition_matrix[to * model-&gt;nstatus + from]--;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        transition_matrix[from * model-&gt;nstatus + from]++;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        transition_matrix[to * model-&gt;nstates + from]--;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        transition_matrix[from * model-&gt;nstates + from]++;</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        transition_matrix[to * model-&gt;nstatus + from]++;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        transition_matrix[from * model-&gt;nstatus + from]--;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        transition_matrix[to * model-&gt;nstates + from]++;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        transition_matrix[from * model-&gt;nstates + from]--;</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    }</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;<span class="preprocessor">    #ifdef EPI_DEBUG</span></div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">if</span> (transition_matrix[from * model-&gt;nstatus + from] &lt; 0)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">if</span> (transition_matrix[from * model-&gt;nstates + from] &lt; 0)</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;An entry in transition matrix is negative.&quot;</span>);</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
@@ -727,7 +727,7 @@ $(function() {
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    date.reserve(n);</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    counts.reserve(n);</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordtype">size_t</span> n_status = model-&gt;nstatus;</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordtype">size_t</span> n_states = model-&gt;nstates;</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">size_t</span> n_steps  = model-&gt;get_ndays();</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="comment">// If n is zero, then we are done</span></div>
@@ -736,14 +736,14 @@ $(function() {
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> step = 0u; step &lt;= n_steps; ++step) <span class="comment">// The final step counts</span></div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    {</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0u; j &lt; n_status; ++j) <span class="comment">// Column major storage</span></div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0u; j &lt; n_states; ++j) <span class="comment">// Column major storage</span></div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        {</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_status; ++i)</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; n_states; ++i)</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            {</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                <span class="comment">// Retrieving the value of the day</span></div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                <span class="keywordtype">int</span> v = hist_transition_matrix[</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    step * n_status * n_status + <span class="comment">// Day of the data</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                    j * n_status +               <span class="comment">// Column (to)</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    step * n_states * n_states + <span class="comment">// Day of the data</span></div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                    j * n_states +               <span class="comment">// Column (to)</span></div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                    i                            <span class="comment">// Row (from)</span></div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                    ];</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
@@ -753,7 +753,7 @@ $(function() {
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                                </div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                state_from.push_back(model-&gt;states_labels[i]);</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                state_to.push_back(model-&gt;states_labels[j]);</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                date.push_back(hist_total_date[step * n_status]);</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                date.push_back(hist_total_date[step * n_states]);</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                counts.push_back(v);</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            }</div>
@@ -1048,7 +1048,7 @@ $(function() {
 <div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="preprocessor">            #endif</span></div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;            <span class="stringliteral">&quot;date &quot;</span> &lt;&lt; <span class="stringliteral">&quot;from &quot;</span> &lt;&lt; <span class="stringliteral">&quot;to &quot;</span> &lt;&lt; <span class="stringliteral">&quot;counts\n&quot;</span>;</div>
 <div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160; </div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        <span class="keywordtype">int</span> ns = model-&gt;nstatus;</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        <span class="keywordtype">int</span> ns = model-&gt;nstates;</div>
 <div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160; </div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= model-&gt;today(); ++i)</div>
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        {</div>

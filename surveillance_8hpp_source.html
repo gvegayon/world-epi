@@ -77,7 +77,7 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_model_s_u_r_v.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_model_s_u_r_v.html">ModelSURV</a> : <span class="keyword">public</span> <a class="code" href="classepiworld_1_1_model.html">epiworld::Model</a>&lt;TSeq&gt; {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// Status</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// state</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SUSCEPTIBLE           = 0;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> LATENT                = 1;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SYMPTOMATIC           = 2;</div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        epiworld_double p_die = v-&gt;get_prob_death(m) * (1.0 - p-&gt;get_death_reduction(v, m)); </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        epiworld_fast_uint days_since_exposed = m-&gt;today() - v-&gt;get_date();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        epiworld_fast_uint status = p-&gt;get_state();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        epiworld_fast_uint state = p-&gt;get_state();</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">// Figuring out latent period</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (v-&gt;get_data().size() == 0u)</div>
@@ -219,7 +219,7 @@ $(function() {
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">// If it is infected, then it can be asymptomatic or symptomatic</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (status == <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::LATENT</a>)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (state == <a class="code" href="class_model_s_u_r_v.html">ModelSURV&lt;TSeq&gt;::LATENT</a>)</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="comment">// Will be symptomatic?</span></div>

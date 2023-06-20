@@ -579,9 +579,9 @@ $(function() {
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    epiworld_fast_int removed</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;)</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;{</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    status_init    = init;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    status_post    = end;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    status_removed = removed;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    state_init    = init;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    state_post    = end;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    state_removed = removed;</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;}</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; </div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
@@ -607,13 +607,13 @@ $(function() {
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;{</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordflow">if</span> (init != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        *init = status_init;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        *init = state_init;</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordflow">if</span> (end != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        *end = status_post;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        *end = state_post;</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span> (removed != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        *removed = status_removed;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        *removed = state_removed;</div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160; </div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;}</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
@@ -664,18 +664,18 @@ $(function() {
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        )</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    </div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        status_init != other.status_init,</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_init don&#39;t match&quot;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        state_init != other.state_init,</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_init don&#39;t match&quot;</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        )</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160; </div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        status_post != other.status_post,</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_post don&#39;t match&quot;</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        state_post != other.state_post,</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_post don&#39;t match&quot;</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        )</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        status_removed != other.status_removed,</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_removed don&#39;t match&quot;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        state_removed != other.state_removed,</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_removed don&#39;t match&quot;</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        )</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
@@ -712,18 +712,18 @@ $(function() {
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    )</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    </div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        status_init != other.status_init,</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_init don&#39;t match&quot;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        state_init != other.state_init,</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_init don&#39;t match&quot;</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    )</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        status_post != other.status_post,</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_post don&#39;t match&quot;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        state_post != other.state_post,</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_post don&#39;t match&quot;</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    )</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160; </div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        status_removed != other.status_removed,</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: status_removed don&#39;t match&quot;</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        state_removed != other.state_removed,</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        &quot;<a class="code" href="class_virus.html">Virus</a>:: state_removed don&#39;t match&quot;</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    )</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
@@ -751,9 +751,9 @@ $(function() {
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Virus          : %s\n&quot;</span>, virus_name-&gt;c_str());</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;Id             : %s\n&quot;</span>, (<span class="keywordtype">id</span> &lt; 0)? std::string(<span class="stringliteral">&quot;(empty)&quot;</span>).c_str() : std::to_string(<span class="keywordtype">id</span>).c_str());</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_init    : %i\n&quot;</span>, status_init);</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_post    : %i\n&quot;</span>, status_post);</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;status_removed : %i\n&quot;</span>, status_removed);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;state_init    : %i\n&quot;</span>, state_init);</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;state_post    : %i\n&quot;</span>, state_post);</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;state_removed : %i\n&quot;</span>, state_removed);</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_init     : %i\n&quot;</span>, queue_init);</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_post     : %i\n&quot;</span>, queue_post);</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    printf_epiworld(<span class="stringliteral">&quot;queue_removed  : %i\n&quot;</span>, queue_removed);</div>
