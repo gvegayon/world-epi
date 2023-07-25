@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['database_95',['DataBase',['../class_data_base.html',1,'DataBase&lt; TSeq &gt;'],['../classepiworld_1_1_data_base.html',1,'epiworld::DataBase&lt; TSeq &gt;']]]
+  ['database_96',['DataBase',['../class_data_base.html',1,'DataBase&lt; TSeq &gt;'],['../classepiworld_1_1_data_base.html',1,'epiworld::DataBase&lt; TSeq &gt;']]]
 ];
