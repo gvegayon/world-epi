@@ -15577,12 +15577,12 @@ $(function() {
 <div class="line"><a name="l16902"></a><span class="lineno">16902</span>&#160;<span class="comment">    // Adding statuses</span></div>
 <div class="line"><a name="l16903"></a><span class="lineno">16903</span>&#160;<span class="comment">    model.add_state(&quot;Susceptible&quot;, epiworld::default_update_susceptible&lt;TSeq&gt;);</span></div>
 <div class="line"><a name="l16904"></a><span class="lineno">16904</span>&#160;<span class="comment">    model.add_state(&quot;Infected&quot;, epiworld::default_update_exposed&lt;TSeq&gt;);</span></div>
-<div class="line"><a name="l16905"></a><span class="lineno">16905</span>&#160;<span class="comment">    model.add_state(&quot;Deceased&quot;)</span></div>
+<div class="line"><a name="l16905"></a><span class="lineno">16905</span>&#160;<span class="comment">    model.add_state(&quot;Deceased&quot;);</span></div>
 <div class="line"><a name="l16906"></a><span class="lineno">16906</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l16907"></a><span class="lineno">16907</span>&#160;<span class="comment">    // Setting up parameters</span></div>
 <div class="line"><a name="l16908"></a><span class="lineno">16908</span>&#160;<span class="comment">    model.add_param(transmission_rate, &quot;Transmission rate&quot;);</span></div>
 <div class="line"><a name="l16909"></a><span class="lineno">16909</span>&#160;<span class="comment">    model.add_param(recovery_rate, &quot;Recovery rate&quot;);</span></div>
-<div class="line"><a name="l16910"></a><span class="lineno">16910</span>&#160;<span class="comment">    model.add_param(death_rate, &quot;Death rate&quot;)</span></div>
+<div class="line"><a name="l16910"></a><span class="lineno">16910</span>&#160;<span class="comment">    model.add_param(death_rate, &quot;Death rate&quot;);</span></div>
 <div class="line"><a name="l16911"></a><span class="lineno">16911</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l16912"></a><span class="lineno">16912</span>&#160;<span class="comment">    // Preparing the virus -------------------------------------------</span></div>
 <div class="line"><a name="l16913"></a><span class="lineno">16913</span>&#160;<span class="comment">    epiworld::Virus&lt;TSeq&gt; virus(vname);</span></div>
@@ -15604,7 +15604,7 @@ $(function() {
 <div class="line"><a name="l16929"></a><span class="lineno">16929</span>&#160;<span class="comment">    epiworld_double prevalence,</span></div>
 <div class="line"><a name="l16930"></a><span class="lineno">16930</span>&#160;<span class="comment">    epiworld_double transmission_rate,</span></div>
 <div class="line"><a name="l16931"></a><span class="lineno">16931</span>&#160;<span class="comment">    epiworld_double recovery_rate,</span></div>
-<div class="line"><a name="l16932"></a><span class="lineno">16932</span>&#160;<span class="comment">    epiworld_double death_rate,</span></div>
+<div class="line"><a name="l16932"></a><span class="lineno">16932</span>&#160;<span class="comment">    epiworld_double death_rate</span></div>
 <div class="line"><a name="l16933"></a><span class="lineno">16933</span>&#160;<span class="comment">    )</span></div>
 <div class="line"><a name="l16934"></a><span class="lineno">16934</span>&#160;<span class="comment">{</span></div>
 <div class="line"><a name="l16935"></a><span class="lineno">16935</span>&#160;<span class="comment"></span> </div>
