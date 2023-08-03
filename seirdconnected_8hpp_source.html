@@ -348,57 +348,56 @@ $(function() {
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    virus.set_state(</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::EXPOSED</a>,</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::RECOVERED</a>,</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::RECOVERED</a>,</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::DECEASED</a></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        );</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Prob. Transmission&quot;</span>));</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Prob. Recovery&quot;</span>));</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    virus.set_incubation(&amp;model(<span class="stringliteral">&quot;Avg. Incubation days&quot;</span>));</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    virus.set_prob_death(&amp;model(<span class="stringliteral">&quot;Death rate&quot;</span>));</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    model.add_virus(virus, prevalence);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// Adding the empty population</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    model.agents_empty_graph(n);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Exposed-Infected-Removed-Deceased (SEIRD) (connected)&quot;</span>);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::ModelSEIRDCONN</a>(</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    epiworld_fast_uint n,</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    epiworld_double prevalence,</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    epiworld_double contact_rate,</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    epiworld_double transmission_rate,</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    epiworld_double avg_incubation_days,</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    epiworld_double recovery_rate,</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    epiworld_double death_rate</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    )</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN</a>(</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        *<span class="keyword">this</span>,</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        vname,</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        n,</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        prevalence,</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        contact_rate,</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        transmission_rate,</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        avg_incubation_days,</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        recovery_rate,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        death_rate</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    );</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::DECEASED</a></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        );</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Prob. Transmission&quot;</span>));</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Prob. Recovery&quot;</span>));</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    virus.set_incubation(&amp;model(<span class="stringliteral">&quot;Avg. Incubation days&quot;</span>));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    virus.set_prob_death(&amp;model(<span class="stringliteral">&quot;Death rate&quot;</span>));</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// Adding the empty population</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    model.agents_empty_graph(n);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Exposed-Infected-Removed-Deceased (SEIRD) (connected)&quot;</span>);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::ModelSEIRDCONN</a>(</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    epiworld_double prevalence,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    epiworld_double contact_rate,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    epiworld_double avg_incubation_days,</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    epiworld_double recovery_rate,</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    epiworld_double death_rate</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    )</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN</a>(</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        *<span class="keyword">this</span>,</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        vname,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        n,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        prevalence,</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        contact_rate,</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        transmission_rate,</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        avg_incubation_days,</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        recovery_rate,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        death_rate</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1491</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2040</div></div>
