@@ -15590,7 +15590,7 @@ $(function() {
 <div class="line"><a name="l16915"></a><span class="lineno">16915</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l16916"></a><span class="lineno">16916</span>&#160;<span class="comment">    // Preparing the virus -------------------------------------------</span></div>
 <div class="line"><a name="l16917"></a><span class="lineno">16917</span>&#160;<span class="comment">    epiworld::Virus&lt;TSeq&gt; virus(vname);</span></div>
-<div class="line"><a name="l16918"></a><span class="lineno">16918</span>&#160;<span class="comment">    virus.set_state(1,0,0);</span></div>
+<div class="line"><a name="l16918"></a><span class="lineno">16918</span>&#160;<span class="comment">    virus.set_state(1,0,2);</span></div>
 <div class="line"><a name="l16919"></a><span class="lineno">16919</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l16920"></a><span class="lineno">16920</span>&#160;<span class="comment">    virus.set_prob_infecting(&amp;model(&quot;Transmission rate&quot;));</span></div>
 <div class="line"><a name="l16921"></a><span class="lineno">16921</span>&#160;<span class="comment">    virus.set_prob_recovery(&amp;model(&quot;Recovery rate&quot;));</span></div>
@@ -16974,7 +16974,7 @@ $(function() {
 <div class="line"><a name="l18394"></a><span class="lineno">18394</span>&#160;    virus.set_state(</div>
 <div class="line"><a name="l18395"></a><span class="lineno">18395</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::EXPOSED</a>,</div>
 <div class="line"><a name="l18396"></a><span class="lineno">18396</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::RECOVERED</a>,</div>
-<div class="line"><a name="l18397"></a><span class="lineno">18397</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::RECOVERED</a></div>
+<div class="line"><a name="l18397"></a><span class="lineno">18397</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::DECEASED</a></div>
 <div class="line"><a name="l18398"></a><span class="lineno">18398</span>&#160;        );</div>
 <div class="line"><a name="l18399"></a><span class="lineno">18399</span>&#160; </div>
 <div class="line"><a name="l18400"></a><span class="lineno">18400</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Prob. Transmission&quot;</span>));</div>
