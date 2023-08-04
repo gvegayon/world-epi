@@ -16708,7 +16708,7 @@ $(function() {
 <div class="line"><a name="l18117"></a><span class="lineno">18117</span>&#160;<span class="comment">    static const int SUSCEPTIBLE = 0;</span></div>
 <div class="line"><a name="l18118"></a><span class="lineno">18118</span>&#160;<span class="comment">    static const int EXPOSED     = 1;</span></div>
 <div class="line"><a name="l18119"></a><span class="lineno">18119</span>&#160;<span class="comment">    static const int INFECTED    = 2;</span></div>
-<div class="line"><a name="l18120"></a><span class="lineno">18120</span>&#160;<span class="comment">    static const int RECOVERED   = 3;</span></div>
+<div class="line"><a name="l18120"></a><span class="lineno">18120</span>&#160;<span class="comment">    static const int REMOVED     = 3;</span></div>
 <div class="line"><a name="l18121"></a><span class="lineno">18121</span>&#160;<span class="comment">    static const int DECEASED    = 4;</span></div>
 <div class="line"><a name="l18122"></a><span class="lineno">18122</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l18123"></a><span class="lineno">18123</span>&#160;<span class="comment"></span> </div>
@@ -16949,7 +16949,7 @@ $(function() {
 <div class="line"><a name="l18369"></a><span class="lineno">18369</span>&#160;                return ;</div>
 <div class="line"><a name="l18370"></a><span class="lineno">18370</span>&#160; </div>
 <div class="line"><a name="l18371"></a><span class="lineno">18371</span>&#160;            } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l18372"></a><span class="lineno">18372</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;This function can only be applied to exposed or infected individuals. (SEIR)&quot;</span>) ;</div>
+<div class="line"><a name="l18372"></a><span class="lineno">18372</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;This function can only be applied to exposed or infected individuals. (SEIRD)&quot;</span>) ;</div>
 <div class="line"><a name="l18373"></a><span class="lineno">18373</span>&#160; </div>
 <div class="line"><a name="l18374"></a><span class="lineno">18374</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l18375"></a><span class="lineno">18375</span>&#160; </div>
@@ -16966,7 +16966,7 @@ $(function() {
 <div class="line"><a name="l18386"></a><span class="lineno">18386</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
 <div class="line"><a name="l18387"></a><span class="lineno">18387</span>&#160;    model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>, update_infected);</div>
 <div class="line"><a name="l18388"></a><span class="lineno">18388</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
-<div class="line"><a name="l18389"></a><span class="lineno">18389</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l18389"></a><span class="lineno">18389</span>&#160;    model.add_state(<span class="stringliteral">&quot;Removed&quot;</span>);</div>
 <div class="line"><a name="l18390"></a><span class="lineno">18390</span>&#160;    model.add_state(<span class="stringliteral">&quot;Deceased&quot;</span>);</div>
 <div class="line"><a name="l18391"></a><span class="lineno">18391</span>&#160; </div>
 <div class="line"><a name="l18392"></a><span class="lineno">18392</span>&#160; </div>
@@ -16974,7 +16974,7 @@ $(function() {
 <div class="line"><a name="l18394"></a><span class="lineno">18394</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
 <div class="line"><a name="l18395"></a><span class="lineno">18395</span>&#160;    virus.set_state(</div>
 <div class="line"><a name="l18396"></a><span class="lineno">18396</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::EXPOSED</a>,</div>
-<div class="line"><a name="l18397"></a><span class="lineno">18397</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::RECOVERED</a>,</div>
+<div class="line"><a name="l18397"></a><span class="lineno">18397</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::REMOVED</a>,</div>
 <div class="line"><a name="l18398"></a><span class="lineno">18398</span>&#160;        <a class="code" href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN&lt;TSeq&gt;::DECEASED</a></div>
 <div class="line"><a name="l18399"></a><span class="lineno">18399</span>&#160;        );</div>
 <div class="line"><a name="l18400"></a><span class="lineno">18400</span>&#160; </div>
