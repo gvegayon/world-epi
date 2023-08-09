@@ -17,5 +17,5 @@ var searchData=
   ['modelsis_120',['ModelSIS',['../classepiworld_1_1epimodels_1_1_model_s_i_s.html',1,'epiworld::epimodels::ModelSIS&lt; TSeq &gt;'],['../class_model_s_i_s.html',1,'ModelSIS&lt; TSeq &gt;']]],
   ['modelsisd_121',['ModelSISD',['../classepiworld_1_1epimodels_1_1_model_s_i_s_d.html',1,'epiworld::epimodels::ModelSISD&lt; TSeq &gt;'],['../class_model_s_i_s_d.html',1,'ModelSISD&lt; TSeq &gt;']]],
   ['modelsurv_122',['ModelSURV',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v.html',1,'epiworld::epimodels::ModelSURV&lt; TSeq &gt;'],['../class_model_s_u_r_v.html',1,'ModelSURV&lt; TSeq &gt;']]],
-  ['modelsurvd_123',['ModelSURVD',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v_d.html',1,'epiworld::epimodels::ModelSURVD&lt; TSeq &gt;'],['../class_model_s_u_r_v_d.html',1,'ModelSURVD&lt; TSeq &gt;']]]
+  ['modelsurvd_123',['ModelSURVD',['../classepiworld_1_1epimodels_1_1_model_s_u_r_v_d.html',1,'epiworld::epimodels']]]
 ];

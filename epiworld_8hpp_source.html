@@ -16144,14 +16144,14 @@ $(function() {
 <div class="line"><a name="l17530"></a><span class="lineno">17530</span>&#160;        }</div>
 <div class="line"><a name="l17531"></a><span class="lineno">17531</span>&#160; </div>
 <div class="line"><a name="l17532"></a><span class="lineno">17532</span>&#160;        <span class="comment">// If it is infected, then it can be asymptomatic or symptomatic</span></div>
-<div class="line"><a name="l17533"></a><span class="lineno">17533</span>&#160;        <span class="keywordflow">if</span> (state == <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::LATENT</a>)</div>
+<div class="line"><a name="l17533"></a><span class="lineno">17533</span>&#160;        <span class="keywordflow">if</span> (state == ModelSURVD&lt;TSeq&gt;::LATENT)</div>
 <div class="line"><a name="l17534"></a><span class="lineno">17534</span>&#160;        {</div>
 <div class="line"><a name="l17535"></a><span class="lineno">17535</span>&#160; </div>
 <div class="line"><a name="l17536"></a><span class="lineno">17536</span>&#160;            <span class="comment">// Will be symptomatic?</span></div>
 <div class="line"><a name="l17537"></a><span class="lineno">17537</span>&#160;            <span class="keywordflow">if</span> (EPI_RUNIF() &lt; m-&gt;par(<span class="stringliteral">&quot;Prob of symptoms&quot;</span>))</div>
-<div class="line"><a name="l17538"></a><span class="lineno">17538</span>&#160;                p-&gt;change_state(m, <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC</a>);</div>
+<div class="line"><a name="l17538"></a><span class="lineno">17538</span>&#160;                p-&gt;change_state(m, ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC);</div>
 <div class="line"><a name="l17539"></a><span class="lineno">17539</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l17540"></a><span class="lineno">17540</span>&#160;                p-&gt;change_state(m, <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC</a>);</div>
+<div class="line"><a name="l17540"></a><span class="lineno">17540</span>&#160;                p-&gt;change_state(m, ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC);</div>
 <div class="line"><a name="l17541"></a><span class="lineno">17541</span>&#160;            </div>
 <div class="line"><a name="l17542"></a><span class="lineno">17542</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l17543"></a><span class="lineno">17543</span>&#160; </div>
@@ -16160,7 +16160,7 @@ $(function() {
 <div class="line"><a name="l17546"></a><span class="lineno">17546</span>&#160;        <span class="comment">// Otherwise, it can be removed</span></div>
 <div class="line"><a name="l17547"></a><span class="lineno">17547</span>&#160;        <span class="keywordflow">if</span> (EPI_RUNIF() &lt; p_die)</div>
 <div class="line"><a name="l17548"></a><span class="lineno">17548</span>&#160;        {</div>
-<div class="line"><a name="l17549"></a><span class="lineno">17549</span>&#160;            p-&gt;change_state(m, <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::REMOVED</a>, -1);</div>
+<div class="line"><a name="l17549"></a><span class="lineno">17549</span>&#160;            p-&gt;change_state(m, ModelSURVD&lt;TSeq&gt;::REMOVED, -1);</div>
 <div class="line"><a name="l17550"></a><span class="lineno">17550</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l17551"></a><span class="lineno">17551</span>&#160;        }</div>
 <div class="line"><a name="l17552"></a><span class="lineno">17552</span>&#160;        </div>
@@ -16211,14 +16211,14 @@ $(function() {
 <div class="line"><a name="l17597"></a><span class="lineno">17597</span>&#160;            {</div>
 <div class="line"><a name="l17598"></a><span class="lineno">17598</span>&#160; </div>
 <div class="line"><a name="l17599"></a><span class="lineno">17599</span>&#160;                ndetected += 1.0;</div>
-<div class="line"><a name="l17600"></a><span class="lineno">17600</span>&#160;                <span class="keywordflow">if</span> (p-&gt;get_state() == <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC</a>)</div>
+<div class="line"><a name="l17600"></a><span class="lineno">17600</span>&#160;                <span class="keywordflow">if</span> (p-&gt;get_state() == ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC)</div>
 <div class="line"><a name="l17601"></a><span class="lineno">17601</span>&#160;                {</div>
 <div class="line"><a name="l17602"></a><span class="lineno">17602</span>&#160;                    ndetected_asympt += 1.0;</div>
-<div class="line"><a name="l17603"></a><span class="lineno">17603</span>&#160;                    p-&gt;change_state(m, <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED</a>);</div>
+<div class="line"><a name="l17603"></a><span class="lineno">17603</span>&#160;                    p-&gt;change_state(m, ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED);</div>
 <div class="line"><a name="l17604"></a><span class="lineno">17604</span>&#160;                }</div>
 <div class="line"><a name="l17605"></a><span class="lineno">17605</span>&#160;                <span class="keywordflow">else</span> </div>
 <div class="line"><a name="l17606"></a><span class="lineno">17606</span>&#160;                {</div>
-<div class="line"><a name="l17607"></a><span class="lineno">17607</span>&#160;                    p-&gt;change_state(m, <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED</a>);</div>
+<div class="line"><a name="l17607"></a><span class="lineno">17607</span>&#160;                    p-&gt;change_state(m, ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED);</div>
 <div class="line"><a name="l17608"></a><span class="lineno">17608</span>&#160;                }</div>
 <div class="line"><a name="l17609"></a><span class="lineno">17609</span>&#160; </div>
 <div class="line"><a name="l17610"></a><span class="lineno">17610</span>&#160;            }</div>
@@ -16233,7 +16233,7 @@ $(function() {
 <div class="line"><a name="l17619"></a><span class="lineno">17619</span>&#160;                <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(nsampled),</div>
 <div class="line"><a name="l17620"></a><span class="lineno">17620</span>&#160;                ndetected,</div>
 <div class="line"><a name="l17621"></a><span class="lineno">17621</span>&#160;                ndetected_asympt,</div>
-<div class="line"><a name="l17622"></a><span class="lineno">17622</span>&#160;                <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(totals[<a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC</a>])</div>
+<div class="line"><a name="l17622"></a><span class="lineno">17622</span>&#160;                <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(totals[ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC])</div>
 <div class="line"><a name="l17623"></a><span class="lineno">17623</span>&#160;            }</div>
 <div class="line"><a name="l17624"></a><span class="lineno">17624</span>&#160;            );</div>
 <div class="line"><a name="l17625"></a><span class="lineno">17625</span>&#160; </div>
@@ -16275,11 +16275,11 @@ $(function() {
 <div class="line"><a name="l17661"></a><span class="lineno">17661</span>&#160;    {</div>
 <div class="line"><a name="l17662"></a><span class="lineno">17662</span>&#160;        <span class="comment">// No chance of infecting</span></div>
 <div class="line"><a name="l17663"></a><span class="lineno">17663</span>&#160;        epiworld_fast_uint  s = p-&gt;get_state();</div>
-<div class="line"><a name="l17664"></a><span class="lineno">17664</span>&#160;        <span class="keywordflow">if</span> (s == <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::LATENT</a>)</div>
+<div class="line"><a name="l17664"></a><span class="lineno">17664</span>&#160;        <span class="keywordflow">if</span> (s == ModelSURVD&lt;TSeq&gt;::LATENT)</div>
 <div class="line"><a name="l17665"></a><span class="lineno">17665</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(0.0);</div>
-<div class="line"><a name="l17666"></a><span class="lineno">17666</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED</a>)</div>
+<div class="line"><a name="l17666"></a><span class="lineno">17666</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == ModelSURVD&lt;TSeq&gt;::SYMPTOMATIC_ISOLATED)</div>
 <div class="line"><a name="l17667"></a><span class="lineno">17667</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(0.0);</div>
-<div class="line"><a name="l17668"></a><span class="lineno">17668</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED</a>)</div>
+<div class="line"><a name="l17668"></a><span class="lineno">17668</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == ModelSURVD&lt;TSeq&gt;::ASYMPTOMATIC_ISOLATED)</div>
 <div class="line"><a name="l17669"></a><span class="lineno">17669</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(0.0);</div>
 <div class="line"><a name="l17670"></a><span class="lineno">17670</span>&#160; </div>
 <div class="line"><a name="l17671"></a><span class="lineno">17671</span>&#160;        <span class="comment">// Otherwise</span></div>
@@ -16307,7 +16307,7 @@ $(function() {
 <div class="line"><a name="l17693"></a><span class="lineno">17693</span>&#160;}</div>
 <div class="line"><a name="l17694"></a><span class="lineno">17694</span>&#160; </div>
 <div class="line"><a name="l17695"></a><span class="lineno">17695</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l17696"></a><span class="lineno">17696</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD&lt;TSeq&gt;::ModelSURVD</a>(</div>
+<div class="line"><a name="l17696"></a><span class="lineno">17696</span>&#160;<span class="keyword">inline</span> ModelSURVD&lt;TSeq&gt;::ModelSURVD(</div>
 <div class="line"><a name="l17697"></a><span class="lineno">17697</span>&#160;    std::string vname,</div>
 <div class="line"><a name="l17698"></a><span class="lineno">17698</span>&#160;    epiworld_fast_uint prevalence,</div>
 <div class="line"><a name="l17699"></a><span class="lineno">17699</span>&#160;    epiworld_double efficacy_vax,</div>
@@ -16324,7 +16324,7 @@ $(function() {
 <div class="line"><a name="l17710"></a><span class="lineno">17710</span>&#160;    )</div>
 <div class="line"><a name="l17711"></a><span class="lineno">17711</span>&#160;{</div>
 <div class="line"><a name="l17712"></a><span class="lineno">17712</span>&#160; </div>
-<div class="line"><a name="l17713"></a><span class="lineno">17713</span>&#160;    <a class="code" href="class_model_s_u_r_v_d.html">ModelSURVD</a>(</div>
+<div class="line"><a name="l17713"></a><span class="lineno">17713</span>&#160;    ModelSURVD(</div>
 <div class="line"><a name="l17714"></a><span class="lineno">17714</span>&#160;        *<span class="keyword">this</span>,</div>
 <div class="line"><a name="l17715"></a><span class="lineno">17715</span>&#160;        vname,</div>
 <div class="line"><a name="l17716"></a><span class="lineno">17716</span>&#160;        prevalence,</div>
@@ -17630,7 +17630,6 @@ $(function() {
 <div class="ttc" id="aclass_model_s_e_i_r_d_c_o_n_n_html"><div class="ttname"><a href="class_model_s_e_i_r_d_c_o_n_n.html">ModelSEIRDCONN</a></div><div class="ttdef"><b>Definition:</b> seirdconnected.hpp:6</div></div>
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:6</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html">ModelSIRDCONN</a></div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:6</div></div>
-<div class="ttc" id="aclass_model_s_u_r_v_d_html"><div class="ttname"><a href="class_model_s_u_r_v_d.html">ModelSURVD</a></div><div class="ttdef"><b>Definition:</b> surveillanced.hpp:5</div></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_tools__const_html"><div class="ttname"><a href="class_tools__const.html">Tools_const</a></div><div class="ttdoc">Set of Tools (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> tools-bones.hpp:117</div></div>
