@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.8.9)  9 AUG 2023 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2023.8.15)  15 AUG 2023 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2116,12 +2116,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 e, epiworld[]_[]double hospitalization[]_[]decease[]_[]rate,
  []
 
-
-Underfull \hbox (badness 1325) in paragraph at lines 38--41
-\T1/phv/m/n/10 epiworld[]_[]double transmission[]_[]rate, epiworld[]_[]double t
-ransmission[]_[]entity[]_[]rate, size[]_[]t n[]_[]entities, size[]_[]t
- []
-
 [113]) (./class_model_s_e_i_r_d.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2161,12 +2155,6 @@ line 29.
 Underfull \hbox (badness 10000) in paragraph at lines 38--41
 \T1/phv/m/n/10 _[]rate, epiworld[]_[]double hospitalization[]_[]recover[]_[]rat
 e, epiworld[]_[]double hospitalization[]_[]decease[]_[]rate,
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 38--41
-\T1/phv/m/n/10 epiworld[]_[]double transmission[]_[]rate, epiworld[]_[]double t
-ransmission[]_[]entity[]_[]rate, size[]_[]t n[]_[]entities, size[]_[]t
  []
 
 ) (./classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n.tex
@@ -3455,7 +3443,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  21457 strings out of 480478
- 437515 string characters out of 5905925
+ 437515 string characters out of 5905924
  686798 words of memory out of 5000000
  34616 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
@@ -3474,7 +3462,7 @@ e1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
 8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (192 pages, 934000 bytes).
+Output written on refman.pdf (192 pages, 934029 bytes).
 PDF statistics:
  7016 PDF objects out of 7423 (max. 8388607)
  6483 compressed objects within 65 object streams
