@@ -259,9 +259,9 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">// Adding statuses</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, epiworld::default_update_susceptible&lt;TSeq&gt;);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>, model.update_exposed_seir);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, model.update_infected);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>, update_infected);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    model.add_state(<span class="stringliteral">&quot;Removed&quot;</span>);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    model.add_state(<span class="stringliteral">&quot;Deceased&quot;</span>);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
