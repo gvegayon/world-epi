@@ -199,44 +199,40 @@
 \contentsline {subsubsection}{\numberline {13.29.1.1}ModelSEIRCONNLogit()}{112}{subsubsection.13.29.1.1}%
 \contentsline {section}{\numberline {13.30}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRD$<$ TSeq $>$ Class Template Reference}{113}{section.13.30}%
 \contentsline {subsection}{\numberline {13.30.1}Detailed Description}{114}{subsection.13.30.1}%
-\contentsline {subsection}{\numberline {13.30.2}Member Data Documentation}{114}{subsection.13.30.2}%
-\contentsline {subsubsection}{\numberline {13.30.2.1}update\_exposed\_seir}{114}{subsubsection.13.30.2.1}%
-\contentsline {section}{\numberline {13.31}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRD$<$ TSeq $>$ Class Template Reference}{115}{section.13.31}%
-\contentsline {subsection}{\numberline {13.31.1}Detailed Description}{116}{subsection.13.31.1}%
-\contentsline {subsection}{\numberline {13.31.2}Member Data Documentation}{116}{subsection.13.31.2}%
-\contentsline {subsubsection}{\numberline {13.31.2.1}update\_exposed\_seir}{116}{subsubsection.13.31.2.1}%
-\contentsline {section}{\numberline {13.32}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRDCONN$<$ TSeq $>$ Class Template Reference}{117}{section.13.32}%
-\contentsline {subsection}{\numberline {13.32.1}Constructor \& Destructor Documentation}{118}{subsection.13.32.1}%
-\contentsline {subsubsection}{\numberline {13.32.1.1}ModelSEIRDCONN()}{118}{subsubsection.13.32.1.1}%
+\contentsline {section}{\numberline {13.31}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRD$<$ TSeq $>$ Class Template Reference}{114}{section.13.31}%
+\contentsline {subsection}{\numberline {13.31.1}Detailed Description}{115}{subsection.13.31.1}%
+\contentsline {section}{\numberline {13.32}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRDCONN$<$ TSeq $>$ Class Template Reference}{116}{section.13.32}%
+\contentsline {subsection}{\numberline {13.32.1}Constructor \& Destructor Documentation}{117}{subsection.13.32.1}%
+\contentsline {subsubsection}{\numberline {13.32.1.1}ModelSEIRDCONN()}{117}{subsubsection.13.32.1.1}%
 \contentsline {subsection}{\numberline {13.32.2}Member Function Documentation}{118}{subsection.13.32.2}%
 \contentsline {subsubsection}{\numberline {13.32.2.1}clone\_ptr()}{118}{subsubsection.13.32.2.1}%
-\contentsline {subsubsection}{\numberline {13.32.2.2}reset()}{120}{subsubsection.13.32.2.2}%
-\contentsline {section}{\numberline {13.33}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRDCONN$<$ TSeq $>$ Class Template Reference}{120}{section.13.33}%
-\contentsline {subsection}{\numberline {13.33.1}Constructor \& Destructor Documentation}{121}{subsection.13.33.1}%
-\contentsline {subsubsection}{\numberline {13.33.1.1}ModelSEIRDCONN()}{122}{subsubsection.13.33.1.1}%
-\contentsline {subsection}{\numberline {13.33.2}Member Function Documentation}{122}{subsection.13.33.2}%
-\contentsline {subsubsection}{\numberline {13.33.2.1}clone\_ptr()}{122}{subsubsection.13.33.2.1}%
+\contentsline {subsubsection}{\numberline {13.32.2.2}reset()}{118}{subsubsection.13.32.2.2}%
+\contentsline {section}{\numberline {13.33}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEIRDCONN$<$ TSeq $>$ Class Template Reference}{119}{section.13.33}%
+\contentsline {subsection}{\numberline {13.33.1}Constructor \& Destructor Documentation}{120}{subsection.13.33.1}%
+\contentsline {subsubsection}{\numberline {13.33.1.1}ModelSEIRDCONN()}{120}{subsubsection.13.33.1.1}%
+\contentsline {subsection}{\numberline {13.33.2}Member Function Documentation}{120}{subsection.13.33.2}%
+\contentsline {subsubsection}{\numberline {13.33.2.1}clone\_ptr()}{120}{subsubsection.13.33.2.1}%
 \contentsline {subsubsection}{\numberline {13.33.2.2}reset()}{122}{subsubsection.13.33.2.2}%
-\contentsline {section}{\numberline {13.34}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIR$<$ TSeq $>$ Class Template Reference}{123}{section.13.34}%
-\contentsline {subsection}{\numberline {13.34.1}Detailed Description}{124}{subsection.13.34.1}%
-\contentsline {section}{\numberline {13.35}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIR$<$ TSeq $>$ Class Template Reference}{124}{section.13.35}%
-\contentsline {subsection}{\numberline {13.35.1}Detailed Description}{125}{subsection.13.35.1}%
-\contentsline {section}{\numberline {13.36}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRCONN$<$ TSeq $>$ Class Template Reference}{126}{section.13.36}%
-\contentsline {subsection}{\numberline {13.36.1}Constructor \& Destructor Documentation}{127}{subsection.13.36.1}%
-\contentsline {subsubsection}{\numberline {13.36.1.1}ModelSIRCONN()}{127}{subsubsection.13.36.1.1}%
-\contentsline {subsection}{\numberline {13.36.2}Member Function Documentation}{127}{subsection.13.36.2}%
+\contentsline {section}{\numberline {13.34}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIR$<$ TSeq $>$ Class Template Reference}{122}{section.13.34}%
+\contentsline {subsection}{\numberline {13.34.1}Detailed Description}{123}{subsection.13.34.1}%
+\contentsline {section}{\numberline {13.35}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIR$<$ TSeq $>$ Class Template Reference}{123}{section.13.35}%
+\contentsline {subsection}{\numberline {13.35.1}Detailed Description}{124}{subsection.13.35.1}%
+\contentsline {section}{\numberline {13.36}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRCONN$<$ TSeq $>$ Class Template Reference}{125}{section.13.36}%
+\contentsline {subsection}{\numberline {13.36.1}Constructor \& Destructor Documentation}{126}{subsection.13.36.1}%
+\contentsline {subsubsection}{\numberline {13.36.1.1}ModelSIRCONN()}{126}{subsubsection.13.36.1.1}%
+\contentsline {subsection}{\numberline {13.36.2}Member Function Documentation}{126}{subsection.13.36.2}%
 \contentsline {subsubsection}{\numberline {13.36.2.1}clone\_ptr()}{127}{subsubsection.13.36.2.1}%
-\contentsline {subsubsection}{\numberline {13.36.2.2}reset()}{128}{subsubsection.13.36.2.2}%
+\contentsline {subsubsection}{\numberline {13.36.2.2}reset()}{127}{subsubsection.13.36.2.2}%
 \contentsline {section}{\numberline {13.37}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRCONN$<$ TSeq $>$ Class Template Reference}{128}{section.13.37}%
 \contentsline {subsection}{\numberline {13.37.1}Constructor \& Destructor Documentation}{129}{subsection.13.37.1}%
 \contentsline {subsubsection}{\numberline {13.37.1.1}ModelSIRCONN()}{129}{subsubsection.13.37.1.1}%
 \contentsline {subsection}{\numberline {13.37.2}Member Function Documentation}{129}{subsection.13.37.2}%
-\contentsline {subsubsection}{\numberline {13.37.2.1}clone\_ptr()}{130}{subsubsection.13.37.2.1}%
+\contentsline {subsubsection}{\numberline {13.37.2.1}clone\_ptr()}{129}{subsubsection.13.37.2.1}%
 \contentsline {subsubsection}{\numberline {13.37.2.2}reset()}{130}{subsubsection.13.37.2.2}%
 \contentsline {section}{\numberline {13.38}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRD$<$ TSeq $>$ Class Template Reference}{130}{section.13.38}%
 \contentsline {subsection}{\numberline {13.38.1}Detailed Description}{131}{subsection.13.38.1}%
-\contentsline {section}{\numberline {13.39}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRD$<$ TSeq $>$ Class Template Reference}{132}{section.13.39}%
-\contentsline {subsection}{\numberline {13.39.1}Detailed Description}{133}{subsection.13.39.1}%
+\contentsline {section}{\numberline {13.39}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRD$<$ TSeq $>$ Class Template Reference}{131}{section.13.39}%
+\contentsline {subsection}{\numberline {13.39.1}Detailed Description}{132}{subsection.13.39.1}%
 \contentsline {section}{\numberline {13.40}epiworld\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::epimodels\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIRDCONN$<$ TSeq $>$ Class Template Reference}{133}{section.13.40}%
 \contentsline {subsection}{\numberline {13.40.1}Constructor \& Destructor Documentation}{134}{subsection.13.40.1}%
 \contentsline {subsubsection}{\numberline {13.40.1.1}ModelSIRDCONN()}{134}{subsubsection.13.40.1.1}%

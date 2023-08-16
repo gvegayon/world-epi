@@ -36,7 +36,7 @@
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
 		\hyperpage{118}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{127}
+		\hyperpage{126}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
 		\hyperpage{135}
     \subitem {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
@@ -44,7 +44,7 @@
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{80}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{94}
     \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{110}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{122}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{120}
     \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{129}
     \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{137}
     \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{143}
@@ -102,17 +102,16 @@
     \subitem {ModelSEIRCONN}, \hyperpage{107}
     \subitem {reset}, \hyperpage{108}
   \item {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, \hyperpage{113}
-    \subitem {update\_exposed\_seir}, \hyperpage{114}
   \item {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{117}
+		\hyperpage{116}
     \subitem {clone\_ptr}, \hyperpage{118}
-    \subitem {ModelSEIRDCONN}, \hyperpage{118}
-    \subitem {reset}, \hyperpage{120}
-  \item {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, \hyperpage{123}
+    \subitem {ModelSEIRDCONN}, \hyperpage{117}
+    \subitem {reset}, \hyperpage{118}
+  \item {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, \hyperpage{122}
   \item {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{126}
-    \subitem {clone\_ptr}, \hyperpage{127}
-    \subitem {ModelSIRCONN}, \hyperpage{127}
+		\hyperpage{125}
+    \subitem {clone\_ptr}, \hyperpage{126}
+    \subitem {ModelSIRCONN}, \hyperpage{126}
     \subitem {reset}, \hyperpage{127}
   \item {epiworld::epimodels::ModelSIRD$<$ TSeq $>$}, \hyperpage{130}
   \item {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
@@ -234,26 +233,25 @@
     \subitem {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{112}
   \item {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{111}
     \subitem {ModelSEIRCONNLogit}, \hyperpage{112}
-  \item {ModelSEIRD$<$ TSeq $>$}, \hyperpage{115}
-    \subitem {update\_exposed\_seir}, \hyperpage{116}
+  \item {ModelSEIRD$<$ TSeq $>$}, \hyperpage{114}
   \item {ModelSEIRDCONN}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{118}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{121}
-  \item {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{120}
-    \subitem {clone\_ptr}, \hyperpage{122}
-    \subitem {ModelSEIRDCONN}, \hyperpage{121}
+		\hyperpage{117}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{120}
+  \item {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{119}
+    \subitem {clone\_ptr}, \hyperpage{120}
+    \subitem {ModelSEIRDCONN}, \hyperpage{120}
     \subitem {reset}, \hyperpage{122}
-  \item {ModelSIR$<$ TSeq $>$}, \hyperpage{124}
+  \item {ModelSIR$<$ TSeq $>$}, \hyperpage{123}
   \item {ModelSIRCONN}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{127}
+		\hyperpage{126}
     \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{129}
   \item {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{128}
     \subitem {clone\_ptr}, \hyperpage{129}
     \subitem {ModelSIRCONN}, \hyperpage{129}
-    \subitem {reset}, \hyperpage{130}
-  \item {ModelSIRD$<$ TSeq $>$}, \hyperpage{132}
+    \subitem {reset}, \hyperpage{129}
+  \item {ModelSIRD$<$ TSeq $>$}, \hyperpage{131}
   \item {ModelSIRDCONN}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
 		\hyperpage{134}
@@ -315,7 +313,7 @@
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
 		\hyperpage{108}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{120}
+		\hyperpage{118}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
 		\hyperpage{127}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
@@ -326,7 +324,7 @@
     \subitem {Model$<$ TSeq $>$}, \hyperpage{94}
     \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{110}
     \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{122}
-    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{130}
+    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{129}
     \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{138}
     \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{144}
   \item {rexpd}
@@ -385,10 +383,7 @@
   \item {update\_exposed\_seir}
     \subitem {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, 
 		\hyperpage{103}
-    \subitem {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, 
-		\hyperpage{114}
     \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{105}
-    \subitem {ModelSEIRD$<$ TSeq $>$}, \hyperpage{116}
   \item {update\_infected\_seir}
     \subitem {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, 
 		\hyperpage{103}
