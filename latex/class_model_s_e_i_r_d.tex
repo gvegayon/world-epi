@@ -41,8 +41,7 @@ Collaboration diagram for Model\+SEIRD$<$ TSeq $>$\+:
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_s_e_i_r_d_a242bd9dd2f25a689a70cd71b576061c9}\label{class_model_s_e_i_r_d_a242bd9dd2f25a689a70cd71b576061c9}} 
-epiworld\+::\+Update\+Fun$<$ TSeq $>$ {\bfseries update\+\_\+susceptible}
+epiworld\+::\+Update\+Fun$<$ TSeq $>$ {\bfseries update\+\_\+exposed\+\_\+seir}
 \item 
 \mbox{\Hypertarget{class_model_s_e_i_r_d_a93e3c03218c59b504001c2b79fa77616}\label{class_model_s_e_i_r_d_a93e3c03218c59b504001c2b79fa77616}} 
 epiworld\+::\+Update\+Fun$<$ TSeq $>$ {\bfseries update\+\_\+infected}
@@ -73,6 +72,34 @@ Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed-\/\+Deceased (SE
 {\em death\+\_\+rate} & epiworld\+\_\+double Death rate of the virus. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_model_s_e_i_r_d_a68a053ac9d069499381e44f72711a103}\label{class_model_s_e_i_r_d_a68a053ac9d069499381e44f72711a103}} 
+\index{ModelSEIRD$<$ TSeq $>$@{ModelSEIRD$<$ TSeq $>$}!update\_exposed\_seir@{update\_exposed\_seir}}
+\index{update\_exposed\_seir@{update\_exposed\_seir}!ModelSEIRD$<$ TSeq $>$@{ModelSEIRD$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{update\_exposed\_seir}{update\_exposed\_seir}}
+{\footnotesize\ttfamily template$<$typename TSeq  = int$>$ \\
+epiworld\+::\+Update\+Fun$<$TSeq$>$ \mbox{\hyperlink{class_model_s_e_i_r_d}{Model\+SEIRD}}$<$ TSeq $>$\+::update\+\_\+exposed\+\_\+seir}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](}
+\DoxyCodeLine{    \mbox{\hyperlink{classepiworld_1_1_agent}{epiworld::Agent<TSeq>}} * p,}
+\DoxyCodeLine{    \mbox{\hyperlink{classepiworld_1_1_model}{epiworld::Model<TSeq>}} * m}
+\DoxyCodeLine{  ) -\/> \textcolor{keywordtype}{void} \{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keyword}{auto} v = p-\/>get\_virus(0);}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (m-\/>runif() < 1.0/(v-\/>get\_incubation(m)))}
+\DoxyCodeLine{      p-\/>change\_state(m, \mbox{\hyperlink{class_model_s_e_i_r_d}{ModelSEIRD<TSeq>::INFECTED}});}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordflow}{return};    }
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
