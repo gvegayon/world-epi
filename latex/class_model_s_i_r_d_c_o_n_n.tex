@@ -29,13 +29,14 @@ Collaboration diagram for Model\+SIRDCONN$<$ TSeq $>$\+:
 {\bfseries Model\+SIRDCONN} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
 \item 
 \mbox{\Hypertarget{class_model_s_i_r_d_c_o_n_n_af705745be5950c5ad74bf32c687baead}\label{class_model_s_i_r_d_c_o_n_n_af705745be5950c5ad74bf32c687baead}} 
-void \mbox{\hyperlink{class_model_s_i_r_d_c_o_n_n_af705745be5950c5ad74bf32c687baead}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
-\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_model_s_i_r_d_c_o_n_n_a5bce75596d60db830630274e58283984}{reset}} ()
-\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_d_c_o_n_n_a2349e4616cb10b88424058970e5d0b18}{clone\+\_\+ptr}} ()
-\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+void {\bfseries run} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_d_c_o_n_n_a5bce75596d60db830630274e58283984}\label{class_model_s_i_r_d_c_o_n_n_a5bce75596d60db830630274e58283984}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_d_c_o_n_n_a2349e4616cb10b88424058970e5d0b18}\label{class_model_s_i_r_d_c_o_n_n_a2349e4616cb10b88424058970e5d0b18}} 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries clone\+\_\+ptr} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -67,51 +68,6 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em death\+\_\+rate} & Probability of death \\
 \hline
 \end{DoxyParams}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_model_s_i_r_d_c_o_n_n_a2349e4616cb10b88424058970e5d0b18}\label{class_model_s_i_r_d_c_o_n_n_a2349e4616cb10b88424058970e5d0b18}} 
-\index{ModelSIRDCONN$<$ TSeq $>$@{ModelSIRDCONN$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
-\index{clone\_ptr@{clone\_ptr}!ModelSIRDCONN$<$ TSeq $>$@{ModelSIRDCONN$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_d_c_o_n_n}{Model\+SIRDCONN}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
-Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em copy} & \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
-
-\mbox{\Hypertarget{class_model_s_i_r_d_c_o_n_n_a5bce75596d60db830630274e58283984}\label{class_model_s_i_r_d_c_o_n_n_a5bce75596d60db830630274e58283984}} 
-\index{ModelSIRDCONN$<$ TSeq $>$@{ModelSIRDCONN$<$ TSeq $>$}!reset@{reset}}
-\index{reset@{reset}!ModelSIRDCONN$<$ TSeq $>$@{ModelSIRDCONN$<$ TSeq $>$}}
-\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model_s_i_r_d_c_o_n_n}{Model\+SIRDCONN}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
-Reset the model. 
-
-Resetting the model will\+:
-\begin{DoxyItemize}
-\item clear the database
-\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
-\item re-\/distribute tools
-\item re-\/distribute viruses
-\item set the date to 0 
-\end{DoxyItemize}
-
-Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
