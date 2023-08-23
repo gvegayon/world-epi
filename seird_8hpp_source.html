@@ -106,21 +106,21 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    epiworld_double death_rate</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  );</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  epiworld::UpdateFun&lt;TSeq&gt; update_exposed_seir = [](</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    epiworld::Agent&lt;TSeq&gt; * p,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    epiworld::Model&lt;TSeq&gt; * m</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  ) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Getting the virus</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">auto</span> v = p-&gt;get_virus(0);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Does the agent become infected?</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      p-&gt;change_state(m, ModelSEIRD&lt;TSeq&gt;::INFECTED);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span>;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  };</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">// epiworld::UpdateFun&lt;TSeq&gt; update_exposed_seir = [](</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//   epiworld::Agent&lt;TSeq&gt; * p,</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//   epiworld::Model&lt;TSeq&gt; * m</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// ) -&gt; void {</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//   </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//   // Getting the virus</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//   auto v = p-&gt;get_virus(0);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//   </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//   // Does the agent become infected?</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//   if (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//     p-&gt;change_state(m, ModelSEIRD&lt;TSeq&gt;::INFECTED);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">//   </span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">//   return;    </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// };</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// </span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  epiworld::UpdateFun&lt;TSeq&gt; update_infected = [](</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    epiworld::Agent&lt;TSeq&gt; * p, epiworld::Model&lt;TSeq&gt; * m</div>
@@ -223,7 +223,7 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="comment">// Adding statuses</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, epiworld::default_update_susceptible&lt;TSeq&gt;);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>, model.update_exposed_seir);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  model.add_state(<span class="stringliteral">&quot;Exposed&quot;</span>,  epiworld::default_update_exposed&lt;TSeq&gt;);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, model.update_infected);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  model.add_state(<span class="stringliteral">&quot;Removed&quot;</span>);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  model.add_state(<span class="stringliteral">&quot;Deceased&quot;</span>);</div>
