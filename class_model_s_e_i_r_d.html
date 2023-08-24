@@ -486,6 +486,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a68a053ac9d069499381e44f72711a103"><td class="memItemLeft" align="right" valign="top">epiworld::UpdateFun&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>update_exposed_seir</b></td></tr>
+<tr class="separator:a68a053ac9d069499381e44f72711a103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e3c03218c59b504001c2b79fa77616"><td class="memItemLeft" align="right" valign="top"><a id="a93e3c03218c59b504001c2b79fa77616"></a>
 epiworld::UpdateFun&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>update_infected</b></td></tr>
 <tr class="separator:a93e3c03218c59b504001c2b79fa77616"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -699,7 +701,41 @@ class ModelSEIRD&lt; TSeq &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a68a053ac9d069499381e44f72711a103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a053ac9d069499381e44f72711a103">&#9670;&nbsp;</a></span>update_exposed_seir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq  = int&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">epiworld::UpdateFun&lt;TSeq&gt; <a class="el" href="class_model_s_e_i_r_d.html">ModelSEIRD</a>&lt; TSeq &gt;::update_exposed_seir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= [](</div>
+<div class="line">    <a class="code" href="classepiworld_1_1_agent.html">epiworld::Agent&lt;TSeq&gt;</a> * p,</div>
+<div class="line">    <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m</div>
+<div class="line">  ) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">auto</span> v = p-&gt;get_virus(0);</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</div>
+<div class="line">      p-&gt;change_state(m, <a class="code" href="class_model_s_e_i_r_d.html">ModelSEIRD&lt;TSeq&gt;::INFECTED</a>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclass_model_s_e_i_r_d_html"><div class="ttname"><a href="class_model_s_e_i_r_d.html">ModelSEIRD</a></div><div class="ttdoc">Template for a Susceptible-Exposed-Infected-Removed-Deceased (SEIRD) model.</div><div class="ttdef"><b>Definition:</b> seird.hpp:17</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13127</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6046</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/epiworld/models/<a class="el" href="seird_8hpp_source.html">seird.hpp</a></li>
 </ul>
 </div><!-- contents -->
