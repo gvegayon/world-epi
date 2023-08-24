@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['persontools_115',['PersonTools',['../class_person_tools.html',1,'']]],
-  ['progress_116',['Progress',['../class_progress.html',1,'']]]
+  ['persontools_122',['PersonTools',['../classepiworld_1_1_person_tools.html',1,'epiworld::PersonTools&lt; TSeq &gt;'],['../class_person_tools.html',1,'PersonTools&lt; TSeq &gt;']]],
+  ['progress_123',['Progress',['../classepiworld_1_1_progress.html',1,'epiworld::Progress'],['../class_progress.html',1,'Progress']]]
 ];

@@ -1,0 +1,88 @@
+\hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net}{}\doxysection{epiworld\+::epimodels\+::Model\+Diff\+Net$<$ TSeq $>$ Class Template Reference}
+\label{classepiworld_1_1epimodels_1_1_model_diff_net}\index{epiworld::epimodels::ModelDiffNet$<$ TSeq $>$@{epiworld::epimodels::ModelDiffNet$<$ TSeq $>$}}
+
+
+Template for a \mbox{\hyperlink{class_network}{Network}} Diffusion \mbox{\hyperlink{classepiworld_1_1_model}{Model}}.  
+
+
+
+
+{\ttfamily \#include $<$epiworld.\+hpp$>$}
+
+
+
+Inheritance diagram for epiworld\+::epimodels\+::Model\+Diff\+Net$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classepiworld_1_1epimodels_1_1_model_diff_net__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for epiworld\+::epimodels\+::Model\+Diff\+Net$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classepiworld_1_1epimodels_1_1_model_diff_net__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_a55a16c67282eabbe900b1ee93f688f1a}\label{classepiworld_1_1epimodels_1_1_model_diff_net_a55a16c67282eabbe900b1ee93f688f1a}} 
+{\bfseries Model\+Diff\+Net} (\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_diff_net}{Model\+Diff\+Net}}$<$ TSeq $>$ \&model, std\+::string innovation\+\_\+name, epiworld\+\_\+double prevalence, epiworld\+\_\+double prob\+\_\+adopt, bool normalize\+\_\+exposure=true, double $\ast$agents\+\_\+data=nullptr, size\+\_\+t data\+\_\+ncols=0u, std\+::vector$<$ size\+\_\+t $>$ data\+\_\+cols=\{\}, std\+::vector$<$ double $>$ params=\{\})
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_aeb2b7ca1b7d1cc3cb0a7351669a682fd}\label{classepiworld_1_1epimodels_1_1_model_diff_net_aeb2b7ca1b7d1cc3cb0a7351669a682fd}} 
+{\bfseries Model\+Diff\+Net} (std\+::string innovation\+\_\+name, epiworld\+\_\+double prevalence, epiworld\+\_\+double prob\+\_\+adopt, bool normalize\+\_\+exposure=true, double $\ast$agents\+\_\+data=nullptr, size\+\_\+t data\+\_\+ncols=0u, std\+::vector$<$ size\+\_\+t $>$ data\+\_\+cols=\{\}, std\+::vector$<$ double $>$ params=\{\})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_a5b177d5c1273b38521eafc4482ba305e}\label{classepiworld_1_1epimodels_1_1_model_diff_net_a5b177d5c1273b38521eafc4482ba305e}} 
+bool {\bfseries normalize\+\_\+exposure} = true
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_a7809d205edf9188a9e352cac1b0c48c4}\label{classepiworld_1_1epimodels_1_1_model_diff_net_a7809d205edf9188a9e352cac1b0c48c4}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries data\+\_\+cols}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_a5010ea137063abecfdffe0ffd137165a}\label{classepiworld_1_1epimodels_1_1_model_diff_net_a5010ea137063abecfdffe0ffd137165a}} 
+std\+::vector$<$ double $>$ {\bfseries params}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_a21159c5f7cb7ffecb7f26e6a1b981b11}\label{classepiworld_1_1epimodels_1_1_model_diff_net_a21159c5f7cb7ffecb7f26e6a1b981b11}} 
+static const int {\bfseries NONADOPTER} = 0
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_diff_net_aefbe0160dcf0367f0409564449fc00c3}\label{classepiworld_1_1epimodels_1_1_model_diff_net_aefbe0160dcf0367f0409564449fc00c3}} 
+static const int {\bfseries ADOPTER} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq = int$>$\newline
+class epiworld\+::epimodels\+::\+Model\+Diff\+Net$<$ TSeq $>$}
+
+Template for a \mbox{\hyperlink{class_network}{Network}} Diffusion \mbox{\hyperlink{classepiworld_1_1_model}{Model}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & A Model$<$\+TSeq$>$ object where to set up the SIR. \\
+\hline
+{\em vname} & std\+::string Name of the virus \\
+\hline
+{\em initial\+\_\+prevalence} & epiworld\+\_\+double Initial prevalence \\
+\hline
+{\em initial\+\_\+efficacy} & epiworld\+\_\+double Initial susceptibility\+\_\+reduction of the immune system \\
+\hline
+{\em initial\+\_\+recovery} & epiworld\+\_\+double Initial recovery rate of the immune system \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+epiworld.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+\hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{}\doxysection{epiworld\+::epimodels\+::Model\+SIRLogit$<$ TSeq $>$ Class Template Reference}
+\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}\index{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}}
+
+
+Inheritance diagram for epiworld\+::epimodels\+::Model\+SIRLogit$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classepiworld_1_1epimodels_1_1_model_s_i_r_logit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for epiworld\+::epimodels\+::Model\+SIRLogit$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classepiworld_1_1epimodels_1_1_model_s_i_r_logit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_ac2529763b3f72163846c88d2985a57fc}{Model\+SIRLogit}} (\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$ \&model, std\+::string vname, double $\ast$data, size\+\_\+t ncols, std\+::vector$<$ double $>$ coefs\+\_\+infect, std\+::vector$<$ double $>$ coefs\+\_\+recover, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+infect\+\_\+cols, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+recover\+\_\+cols, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double prevalence)
+\begin{DoxyCompactList}\small\item\em Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a2514d6f8f6fac51487be8e1a29acf6a4}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a2514d6f8f6fac51487be8e1a29acf6a4}} 
+{\bfseries Model\+SIRLogit} (std\+::string vname, double $\ast$data, size\+\_\+t ncols, std\+::vector$<$ double $>$ coefs\+\_\+infect, std\+::vector$<$ double $>$ coefs\+\_\+recover, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+infect\+\_\+cols, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+recover\+\_\+cols, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double prevalence)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}} 
+void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_ae4edf6a6e55647a453b3e343536f5f7d}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_ae4edf6a6e55647a453b3e343536f5f7d}} 
+std\+::vector$<$ double $>$ {\bfseries coefs\+\_\+infect}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a3f7c806624aa38d0ab67b0c76d022baf}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a3f7c806624aa38d0ab67b0c76d022baf}} 
+std\+::vector$<$ double $>$ {\bfseries coefs\+\_\+recover}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a0ea13ebb7748f8f7a987fce02c60633c}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a0ea13ebb7748f8f7a987fce02c60633c}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+infect\+\_\+cols}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a8e7f4aba1c7c6a8bec258ff898bf4ed6}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a8e7f4aba1c7c6a8bec258ff898bf4ed6}} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+recover\+\_\+cols}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_ac2529763b3f72163846c88d2985a57fc}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_ac2529763b3f72163846c88d2985a57fc}} 
+\index{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}!ModelSIRLogit@{ModelSIRLogit}}
+\index{ModelSIRLogit@{ModelSIRLogit}!epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{ModelSIRLogit()}{ModelSIRLogit()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$\+::\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{double $\ast$}]{data,  }\item[{size\+\_\+t}]{ncols,  }\item[{std\+::vector$<$ double $>$}]{coefs\+\_\+infect,  }\item[{std\+::vector$<$ double $>$}]{coefs\+\_\+recover,  }\item[{std\+::vector$<$ size\+\_\+t $>$}]{coef\+\_\+infect\+\_\+cols,  }\item[{std\+::vector$<$ size\+\_\+t $>$}]{coef\+\_\+recover\+\_\+cols,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate,  }\item[{epiworld\+\_\+double}]{prevalence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vname} & Name of the virus. \\
+\hline
+{\em coefs\+\_\+infect} & Double ptr. Infection coefficients. \\
+\hline
+{\em coefs\+\_\+recover} & Double ptr. Recovery coefficients. \\
+\hline
+{\em ncoef\+\_\+infect} & Unsigned int. Number of infection coefficients. \\
+\hline
+{\em ncoef\+\_\+recover} & Unsigned int. Number of recovery coefficients. \\
+\hline
+{\em coef\+\_\+infect\+\_\+cols} & Vector$<$unsigned int$>$. Ids of infection vars. \\
+\hline
+{\em coef\+\_\+recover\+\_\+cols} & Vector$<$unsigned int$>$. Ids of recover vars.\\
+\hline
+{\em model} & A Model$<$\+TSeq$>$ object where to set up the SIR. \\
+\hline
+{\em vname} & std\+::string Name of the virus \\
+\hline
+{\em prevalence} & Initial prevalence (proportion) \\
+\hline
+{\em contact\+\_\+rate} & Average number of contacts (interactions) per step. \\
+\hline
+{\em prob\+\_\+transmission} & Probability of transmission \\
+\hline
+{\em prob\+\_\+recovery} & Probability of recovery \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}} 
+\index{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}} 
+\index{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}!reset@{reset}}
+\index{reset@{reset}!epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the model. 
+
+Resetting the model will\+:
+\begin{DoxyItemize}
+\item clear the database
+\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
+\item re-\/distribute tools
+\item re-\/distribute viruses
+\item set the date to 0 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+epiworld.\+hpp\end{DoxyCompactItemize}

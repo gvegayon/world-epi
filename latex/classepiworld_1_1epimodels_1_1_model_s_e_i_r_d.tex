@@ -1,0 +1,77 @@
+\hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d}{}\doxysection{epiworld\+::epimodels\+::Model\+SEIRD$<$ TSeq $>$ Class Template Reference}
+\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d}\index{epiworld::epimodels::ModelSEIRD$<$ TSeq $>$@{epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}}
+
+
+Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed-\/\+Deceased (SEIRD) model.  
+
+
+
+
+{\ttfamily \#include $<$epiworld.\+hpp$>$}
+
+
+
+Inheritance diagram for epiworld\+::epimodels\+::Model\+SEIRD$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for epiworld\+::epimodels\+::Model\+SEIRD$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_aa3cab7da0ed59f7b3cfb3c7494397a01}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_aa3cab7da0ed59f7b3cfb3c7494397a01}} 
+{\bfseries Model\+SEIRD} (\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d}{Model\+SEIRD}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_a903d3167f93a680ee78c920792496ab7}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_a903d3167f93a680ee78c920792496ab7}} 
+{\bfseries Model\+SEIRD} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_a2caefb1eb6b4936dfba87d775ea98206}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_a2caefb1eb6b4936dfba87d775ea98206}} 
+epiworld\+::\+Update\+Fun$<$ TSeq $>$ {\bfseries update\+\_\+infected}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq = int$>$\newline
+class epiworld\+::epimodels\+::\+Model\+SEIRD$<$ TSeq $>$}
+
+Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed-\/\+Deceased (SEIRD) model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & A Model$<$\+TSeq$>$ object where to set up the SIR. \\
+\hline
+{\em vname} & std\+::string Name of the virus \\
+\hline
+{\em prevalence} & epiworld\+\_\+double Initial prevalence the immune system \\
+\hline
+{\em transmission\+\_\+rate} & epiworld\+\_\+double Transmission rate of the virus \\
+\hline
+{\em avg\+\_\+incubation\+\_\+days} & epiworld\+\_\+double Average incubation days of the virus \\
+\hline
+{\em recovery\+\_\+rate} & epiworld\+\_\+double Recovery rate of the virus. \\
+\hline
+{\em death\+\_\+rate} & epiworld\+\_\+double Death rate of the virus. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+epiworld.\+hpp\end{DoxyCompactItemize}

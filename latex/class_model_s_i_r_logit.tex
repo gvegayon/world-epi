@@ -29,14 +29,12 @@ Collaboration diagram for Model\+SIRLogit$<$ TSeq $>$\+:
 {\bfseries Model\+SIRLogit} (std\+::string vname, double $\ast$data, size\+\_\+t ncols, std\+::vector$<$ double $>$ coefs\+\_\+infect, std\+::vector$<$ double $>$ coefs\+\_\+recover, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+infect\+\_\+cols, std\+::vector$<$ size\+\_\+t $>$ coef\+\_\+recover\+\_\+cols, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double prevalence)
 \item 
 \mbox{\Hypertarget{class_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}\label{class_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}} 
-void {\bfseries run} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
-\item 
-\mbox{\Hypertarget{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}\label{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}} 
-\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries clone\+\_\+ptr} ()
-\item 
-\mbox{\Hypertarget{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}\label{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}} 
-void {\bfseries reset} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_model_s_i_r_logit_a5cac131f2c08238587ccaab94bf922f1}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,6 +50,7 @@ std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+infect\+\_\+cols}
 \mbox{\Hypertarget{class_model_s_i_r_logit_a2cca685f79b55b26cdec9befa76e30f7}\label{class_model_s_i_r_logit_a2cca685f79b55b26cdec9befa76e30f7}} 
 std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+recover\+\_\+cols}
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -95,6 +94,51 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em prob\+\_\+recovery} & Probability of recovery \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}\label{class_model_s_i_r_logit_a14cddb580e197f642f19da2d3432e6b1}} 
+\index{ModelSIRLogit$<$ TSeq $>$@{ModelSIRLogit$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!ModelSIRLogit$<$ TSeq $>$@{ModelSIRLogit$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}\label{class_model_s_i_r_logit_a489cfc1b888742db37cba5ffdd1f19a2}} 
+\index{ModelSIRLogit$<$ TSeq $>$@{ModelSIRLogit$<$ TSeq $>$}!reset@{reset}}
+\index{reset@{reset}!ModelSIRLogit$<$ TSeq $>$@{ModelSIRLogit$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_i_r_logit}{Model\+SIRLogit}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the model. 
+
+Resetting the model will\+:
+\begin{DoxyItemize}
+\item clear the database
+\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
+\item re-\/distribute tools
+\item re-\/distribute viruses
+\item set the date to 0 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

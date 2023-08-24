@@ -29,14 +29,13 @@ Collaboration diagram for Model\+SIRCONN$<$ TSeq $>$\+:
 {\bfseries Model\+SIRCONN} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate)
 \item 
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_acf2c5f5267935acc277aafadf70c4b8e}\label{class_model_s_i_r_c_o_n_n_acf2c5f5267935acc277aafadf70c4b8e}} 
-void {\bfseries run} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
-\item 
-\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}\label{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}} 
-void {\bfseries reset} ()
-\item 
-\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}\label{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}} 
-\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ {\bfseries clone\+\_\+ptr} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_acf2c5f5267935acc277aafadf70c4b8e}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -66,6 +65,51 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em recovery\+\_\+rate} & Probability of recovery \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}\label{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}\label{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!reset@{reset}}
+\index{reset@{reset}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the model. 
+
+Resetting the model will\+:
+\begin{DoxyItemize}
+\item clear the database
+\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
+\item re-\/distribute tools
+\item re-\/distribute viruses
+\item set the date to 0 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

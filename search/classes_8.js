@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_117',['Queue',['../class_queue.html',1,'']]]
+  ['queue_124',['Queue',['../classepiworld_1_1_queue.html',1,'epiworld::Queue&lt; TSeq &gt;'],['../class_queue.html',1,'Queue&lt; TSeq &gt;']]]
 ];

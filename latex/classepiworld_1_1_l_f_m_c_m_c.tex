@@ -1,0 +1,146 @@
+\hypertarget{classepiworld_1_1_l_f_m_c_m_c}{}\doxysection{epiworld\+::LFMCMC$<$ TData $>$ Class Template Reference}
+\label{classepiworld_1_1_l_f_m_c_m_c}\index{epiworld::LFMCMC$<$ TData $>$@{epiworld::LFMCMC$<$ TData $>$}}
+
+
+Likelihood-\/\+Free Markov Chain Monte Carlo.  
+
+
+
+
+{\ttfamily \#include $<$epiworld.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a8a7cfb90e5556c0fbe43cbba453e6a0f}\label{classepiworld_1_1_l_f_m_c_m_c_a8a7cfb90e5556c0fbe43cbba453e6a0f}} 
+void {\bfseries run} (std\+::vector$<$ epiworld\+\_\+double $>$ param\+\_\+init, size\+\_\+t n\+\_\+samples\+\_\+, epiworld\+\_\+double epsilon\+\_\+)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a464459876b16628fdf35199b6e749da0}\label{classepiworld_1_1_l_f_m_c_m_c_a464459876b16628fdf35199b6e749da0}} 
+{\bfseries LFMCMC} (TData \&observed\+\_\+data\+\_\+)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a613a25a931c0a536f014652bbdc42d92}\label{classepiworld_1_1_l_f_m_c_m_c_a613a25a931c0a536f014652bbdc42d92}} 
+void {\bfseries set\+\_\+observed\+\_\+data} (TData \&observed\+\_\+data\+\_\+)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a736d4534764b7f9cbfcf8c158ac12491}\label{classepiworld_1_1_l_f_m_c_m_c_a736d4534764b7f9cbfcf8c158ac12491}} 
+void {\bfseries set\+\_\+proposal\+\_\+fun} (LFMCMCProposal\+Fun$<$ TData $>$ fun)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_af52f8b554d4370146a51218e880c04e3}\label{classepiworld_1_1_l_f_m_c_m_c_af52f8b554d4370146a51218e880c04e3}} 
+void {\bfseries set\+\_\+simulation\+\_\+fun} (LFMCMCSim\+Fun$<$ TData $>$ fun)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a2b4e83802e717bad2b6a4aaa5308ea2d}\label{classepiworld_1_1_l_f_m_c_m_c_a2b4e83802e717bad2b6a4aaa5308ea2d}} 
+void {\bfseries set\+\_\+summary\+\_\+fun} (LFMCMCSummary\+Fun$<$ TData $>$ fun)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a4b96f9837e8eddeca52524124438b6cd}\label{classepiworld_1_1_l_f_m_c_m_c_a4b96f9837e8eddeca52524124438b6cd}} 
+void {\bfseries set\+\_\+kernel\+\_\+fun} (LFMCMCKernel\+Fun$<$ TData $>$ fun)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a875fe480cc67902bb5ed70586d04291c}\label{classepiworld_1_1_l_f_m_c_m_c_a875fe480cc67902bb5ed70586d04291c}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+samples} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ac0721823dab4e247cfc018f2673a73b6}\label{classepiworld_1_1_l_f_m_c_m_c_ac0721823dab4e247cfc018f2673a73b6}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+statistics} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a349a5b9e80578431e398604702dad7ba}\label{classepiworld_1_1_l_f_m_c_m_c_a349a5b9e80578431e398604702dad7ba}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+parameters} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ae417afbc75d351386ed1e4a125c8bd1f}\label{classepiworld_1_1_l_f_m_c_m_c_ae417afbc75d351386ed1e4a125c8bd1f}} 
+epiworld\+\_\+double {\bfseries get\+\_\+epsilon} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ac3e9ab54ce0c2ca3d2f9517ec5e488f8}\label{classepiworld_1_1_l_f_m_c_m_c_ac3e9ab54ce0c2ca3d2f9517ec5e488f8}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+now} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ad349baeafc387ac0a1316c66987f8973}\label{classepiworld_1_1_l_f_m_c_m_c_ad349baeafc387ac0a1316c66987f8973}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+prev} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a075a03c6347b1555d5cd065ae21caa28}\label{classepiworld_1_1_l_f_m_c_m_c_a075a03c6347b1555d5cd065ae21caa28}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_afe130e3e38585b23543e7514c1485d60}\label{classepiworld_1_1_l_f_m_c_m_c_afe130e3e38585b23543e7514c1485d60}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+statistics\+\_\+obs} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a64105311147921358b15e6f69c4d3af9}\label{classepiworld_1_1_l_f_m_c_m_c_a64105311147921358b15e6f69c4d3af9}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+statistics\+\_\+hist} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a39e2ea2be64bb555631a474299a017ac}\label{classepiworld_1_1_l_f_m_c_m_c_a39e2ea2be64bb555631a474299a017ac}} 
+const std\+::vector$<$ bool $>$ \& {\bfseries get\+\_\+statistics\+\_\+accepted} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a89d72e5017ad111f6376f69a1106cc40}\label{classepiworld_1_1_l_f_m_c_m_c_a89d72e5017ad111f6376f69a1106cc40}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+posterior\+\_\+lf\+\_\+prob} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_aebd559e5a3ec0fdcfb0bca490f594b60}\label{classepiworld_1_1_l_f_m_c_m_c_aebd559e5a3ec0fdcfb0bca490f594b60}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+drawn\+\_\+prob} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_afcb7883ec19bbff18efb8e9bff454c53}\label{classepiworld_1_1_l_f_m_c_m_c_afcb7883ec19bbff18efb8e9bff454c53}} 
+std\+::vector$<$ TData $>$ $\ast$ {\bfseries get\+\_\+sampled\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a7e626ab23d03daac688c7ce51e44ba23}\label{classepiworld_1_1_l_f_m_c_m_c_a7e626ab23d03daac688c7ce51e44ba23}} 
+void {\bfseries set\+\_\+par\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a41c23ee776d92f51e4b277e40006a199}\label{classepiworld_1_1_l_f_m_c_m_c_a41c23ee776d92f51e4b277e40006a199}} 
+void {\bfseries set\+\_\+stats\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a9c1ce51dde9257c5c08a34f19baa6e60}\label{classepiworld_1_1_l_f_m_c_m_c_a9c1ce51dde9257c5c08a34f19baa6e60}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+params\+\_\+mean} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a43e3232efd453703869544b6876ee9ae}\label{classepiworld_1_1_l_f_m_c_m_c_a43e3232efd453703869544b6876ee9ae}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+stats\+\_\+mean} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_adf46ba06d7e03b3f71aa5d9e0de44c78}\label{classepiworld_1_1_l_f_m_c_m_c_adf46ba06d7e03b3f71aa5d9e0de44c78}} 
+void {\bfseries print} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Random number generation}\par
+{\em 
+\begin{DoxyParams}{Parameters}
+{\em eng} & \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a00c0ccfbe011fd425bcbfa379ca3dcdb}\label{classepiworld_1_1_l_f_m_c_m_c_a00c0ccfbe011fd425bcbfa379ca3dcdb}} 
+void {\bfseries set\+\_\+rand\+\_\+engine} (std\+::mt19937 \&eng)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_af0a68ab9639d2138aee317aaa2568eda}\label{classepiworld_1_1_l_f_m_c_m_c_af0a68ab9639d2138aee317aaa2568eda}} 
+std\+::mt19937 \& {\bfseries get\+\_\+rand\+\_\+endgine} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a0b20fa3baaa5473ef414fcf316a8598c}\label{classepiworld_1_1_l_f_m_c_m_c_a0b20fa3baaa5473ef414fcf316a8598c}} 
+void {\bfseries seed} (epiworld\+\_\+fast\+\_\+uint s)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a78ce129b42d2c54c4e65d26d7ab62af4}\label{classepiworld_1_1_l_f_m_c_m_c_a78ce129b42d2c54c4e65d26d7ab62af4}} 
+void {\bfseries set\+\_\+rand\+\_\+gamma} (epiworld\+\_\+double alpha, epiworld\+\_\+double beta)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_aa08a4486ccf2a1baef67f47e72ea55c2}\label{classepiworld_1_1_l_f_m_c_m_c_aa08a4486ccf2a1baef67f47e72ea55c2}} 
+epiworld\+\_\+double {\bfseries runif} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ae0f76300aafd9a7144c2974ec3dec201}\label{classepiworld_1_1_l_f_m_c_m_c_ae0f76300aafd9a7144c2974ec3dec201}} 
+epiworld\+\_\+double {\bfseries rnorm} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a9c11e5f7a375ba7d4bc6b1e6dadf8610}\label{classepiworld_1_1_l_f_m_c_m_c_a9c11e5f7a375ba7d4bc6b1e6dadf8610}} 
+epiworld\+\_\+double {\bfseries rgamma} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a22c0e8acc3a8a5ce362b6135d884cd85}\label{classepiworld_1_1_l_f_m_c_m_c_a22c0e8acc3a8a5ce362b6135d884cd85}} 
+epiworld\+\_\+double {\bfseries runif} (epiworld\+\_\+double lb, epiworld\+\_\+double ub)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_a758f32d2ec8de7da436b87e261290ef6}\label{classepiworld_1_1_l_f_m_c_m_c_a758f32d2ec8de7da436b87e261290ef6}} 
+epiworld\+\_\+double {\bfseries rnorm} (epiworld\+\_\+double mean, epiworld\+\_\+double sd)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_l_f_m_c_m_c_ad808bc052f81024c91c109df8caf61d1}\label{classepiworld_1_1_l_f_m_c_m_c_ad808bc052f81024c91c109df8caf61d1}} 
+epiworld\+\_\+double {\bfseries rgamma} (epiworld\+\_\+double alpha, epiworld\+\_\+double beta)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TData$>$\newline
+class epiworld\+::\+LFMCMC$<$ TData $>$}
+
+Likelihood-\/\+Free Markov Chain Monte Carlo. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TData} & Type of data that is generated \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+epiworld.\+hpp\end{DoxyCompactItemize}
