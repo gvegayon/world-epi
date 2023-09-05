@@ -5954,7 +5954,7 @@ $(function() {
 <div class="line"><a name="l06754"></a><span class="lineno"> 6754</span>&#160;<span class="comment">        std::string reproductive = &quot;&quot;;</span></div>
 <div class="line"><a name="l06755"></a><span class="lineno"> 6755</span>&#160;<span class="comment">        std::string generation = &quot;&quot;;</span></div>
 <div class="line"><a name="l06756"></a><span class="lineno"> 6756</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l06757"></a><span class="lineno"> 6757</span>&#160;<span class="comment">        char buff[128];</span></div>
+<div class="line"><a name="l06757"></a><span class="lineno"> 6757</span>&#160;<span class="comment">        char buff[fmt.size()*2 + 1u];</span></div>
 <div class="line"><a name="l06758"></a><span class="lineno"> 6758</span>&#160;<span class="comment">        if (what_to_save[0u])</span></div>
 <div class="line"><a name="l06759"></a><span class="lineno"> 6759</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l06760"></a><span class="lineno"> 6760</span>&#160;<span class="comment">            virus_info = fmt + std::string(&quot;_virus_info.csv&quot;);</span></div>
