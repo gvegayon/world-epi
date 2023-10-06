@@ -735,7 +735,7 @@ template&lt;typename TSeq  = int&gt; </div>
 <div class="line">    ) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line"> </div>
 <div class="line">        </div>
-<div class="line">        <span class="keyword">auto</span> v = p-&gt;get_virus(0);</div>
+<div class="line">        <span class="keyword">auto</span> v = p-&gt;get_virus();</div>
 <div class="line"> </div>
 <div class="line">        </div>
 <div class="line">        <span class="keywordflow">if</span> (m-&gt;runif() &lt; 1.0/(v-&gt;get_incubation(m)))</div>
@@ -768,7 +768,7 @@ template&lt;typename TSeq  = int&gt; </div>
 <div class="line">    ) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        </div>
 <div class="line">        <span class="keywordflow">if</span> (m-&gt;runif() &lt; (m-&gt;par(<span class="stringliteral">&quot;Recovery rate&quot;</span>)))</div>
-<div class="line">            p-&gt;rm_virus(0, m);</div>
+<div class="line">            p-&gt;rm_virus(m);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">return</span>;    </div>
 <div class="line">    }</div>

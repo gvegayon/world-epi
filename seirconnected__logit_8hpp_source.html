@@ -278,7 +278,7 @@ $(function() {
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                {</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    *_tracked_ninfected_next -= 1;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    p-&gt;rm_virus(0, m);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    p-&gt;rm_virus(m);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                }</div>
@@ -346,7 +346,7 @@ $(function() {
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    virus.set_state(1,3,3);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    model.set_virus(virus, prevalence);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    model.add_virus(virus, prevalence);</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// Adding updating function</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    model.add_global_action(global_accounting, <span class="stringliteral">&quot;Accounting&quot;</span>, -1);</div>

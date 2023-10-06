@@ -318,74 +318,73 @@ $(function() {
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="comment">// Which roulette happen?</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordtype">size_t</span> which_v = std::floor(which / 2);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                p-&gt;rm_virus(m);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                return ;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;This function can only be applied to infected individuals. (SIR)&quot;</span>) ;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        };</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">// state</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// Setting up parameters</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    model.add_param(contact_rate, <span class="stringliteral">&quot;Contact rate&quot;</span>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    model.add_param(transmission_rate, <span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    model.add_param(recovery_rate, <span class="stringliteral">&quot;Recovery rate&quot;</span>);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">// model.add_param(prob_reinfection, &quot;Prob. Reinfection&quot;);</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    virus.set_state(1, 2, 2);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    model.set_virus(virus, prevalence);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    model.agents_empty_graph(n);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Infected-Removed (SIR) (connected)&quot;</span>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN&lt;TSeq&gt;::ModelSIRCONN</a>(</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    std::string vname,</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    epiworld_fast_uint n,</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    epiworld_double prevalence,</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    epiworld_double contact_rate,</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    epiworld_double transmission_rate,</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    epiworld_double recovery_rate</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    )</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>(</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        *<span class="keyword">this</span>,</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        vname,</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        n,</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        prevalence,</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        contact_rate,</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        transmission_rate,</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        recovery_rate</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    );</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                p-&gt;rm_virus(m);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                return ;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;This function can only be applied to infected individuals. (SIR)&quot;</span>) ;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        };</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// state</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// Setting up parameters</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    model.add_param(contact_rate, <span class="stringliteral">&quot;Contact rate&quot;</span>);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    model.add_param(transmission_rate, <span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    model.add_param(recovery_rate, <span class="stringliteral">&quot;Recovery rate&quot;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">// model.add_param(prob_reinfection, &quot;Prob. Reinfection&quot;);</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    virus.set_state(1, 2, 2);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    model.agents_empty_graph(n);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Infected-Removed (SIR) (connected)&quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN&lt;TSeq&gt;::ModelSIRCONN</a>(</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    epiworld_double prevalence,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    epiworld_double contact_rate,</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    epiworld_double recovery_rate</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    )</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>(</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        *<span class="keyword">this</span>,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        vname,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        n,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        prevalence,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        contact_rate,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        transmission_rate,</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        recovery_rate</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1480</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2027</div></div>

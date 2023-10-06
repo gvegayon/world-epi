@@ -102,7 +102,7 @@ epiworld\+::\+Update\+Fun$<$TSeq$>$ \mbox{\hyperlink{class_model_s_e_i_r}{Model\
 \DoxyCodeLine{    ) -\/> \textcolor{keywordtype}{void} \{}
 \DoxyCodeLine{}
 \DoxyCodeLine{        }
-\DoxyCodeLine{        \textcolor{keyword}{auto} v = p-\/>get\_virus(0);}
+\DoxyCodeLine{        \textcolor{keyword}{auto} v = p-\/>get\_virus();}
 \DoxyCodeLine{}
 \DoxyCodeLine{        }
 \DoxyCodeLine{        \textcolor{keywordflow}{if} (m-\/>runif() < 1.0/(v-\/>get\_incubation(m)))}
@@ -127,7 +127,7 @@ epiworld\+::\+Update\+Fun$<$TSeq$>$ \mbox{\hyperlink{class_model_s_e_i_r}{Model\
 \DoxyCodeLine{    ) -\/> \textcolor{keywordtype}{void} \{}
 \DoxyCodeLine{        }
 \DoxyCodeLine{        \textcolor{keywordflow}{if} (m-\/>runif() < (m-\/>par(\textcolor{stringliteral}{"{}Recovery rate"{}})))}
-\DoxyCodeLine{            p-\/>rm\_virus(0, m);}
+\DoxyCodeLine{            p-\/>rm\_virus(m);}
 \DoxyCodeLine{}
 \DoxyCodeLine{        \textcolor{keywordflow}{return};    }
 \DoxyCodeLine{    \}}
