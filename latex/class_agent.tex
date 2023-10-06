@@ -24,17 +24,8 @@
 \mbox{\Hypertarget{class_agent_a3763f12b56e8dd7f0e23bbca4f183c8a}\label{class_agent_a3763f12b56e8dd7f0e23bbca4f183c8a}} 
 int \mbox{\hyperlink{class_agent_a3763f12b56e8dd7f0e23bbca4f183c8a}{get\+\_\+id}} () const
 \begin{DoxyCompactList}\small\item\em Id of the individual. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_agent_a0b0854727b04527df217dbcd58d06da3}\label{class_agent_a0b0854727b04527df217dbcd58d06da3}} 
-Virus\+Ptr$<$ TSeq $>$ \& {\bfseries get\+\_\+virus} (int i)
-\item 
-\mbox{\Hypertarget{class_agent_aebdf8baf591c656db232285efa5c3b61}\label{class_agent_aebdf8baf591c656db232285efa5c3b61}} 
-\mbox{\hyperlink{class_viruses}{Viruses}}$<$ TSeq $>$ {\bfseries get\+\_\+viruses} ()
-\item 
-\mbox{\Hypertarget{class_agent_aa96833b0d870ae03ba8aedd48f71f8c2}\label{class_agent_aa96833b0d870ae03ba8aedd48f71f8c2}} 
-const \mbox{\hyperlink{class_viruses__const}{Viruses\+\_\+const}}$<$ TSeq $>$ {\bfseries get\+\_\+viruses} () const
-\item 
-\mbox{\Hypertarget{class_agent_a199ee0afdc74d8b58bd798846a9c79b6}\label{class_agent_a199ee0afdc74d8b58bd798846a9c79b6}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+viruses} () const noexcept
+\mbox{\Hypertarget{class_agent_a0f2d66b33bb7bf851ba2aba9823326a6}\label{class_agent_a0f2d66b33bb7bf851ba2aba9823326a6}} 
+Virus\+Ptr$<$ TSeq $>$ \& {\bfseries get\+\_\+virus} ()
 \item 
 \mbox{\Hypertarget{class_agent_a90924c460be887085d7229181a067367}\label{class_agent_a90924c460be887085d7229181a067367}} 
 Tool\+Ptr$<$ TSeq $>$ \& {\bfseries get\+\_\+tool} (int i)
@@ -135,11 +126,11 @@ void {\bfseries add\+\_\+tool} (Tool\+Ptr$<$ TSeq $>$ tool, \mbox{\hyperlink{cla
 \mbox{\Hypertarget{class_agent_a7dfca6c47e453c80fad5be65e73dd6f3}\label{class_agent_a7dfca6c47e453c80fad5be65e73dd6f3}} 
 void {\bfseries add\+\_\+tool} (\mbox{\hyperlink{class_tool}{Tool}}$<$ TSeq $>$ tool, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
-\mbox{\Hypertarget{class_agent_acceba6629b09cbf37e3fb2dfb0dd992b}\label{class_agent_acceba6629b09cbf37e3fb2dfb0dd992b}} 
-void {\bfseries add\+\_\+virus} (Virus\+Ptr$<$ TSeq $>$ virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
+\mbox{\Hypertarget{class_agent_a8c2cf3e4212a59b33d7f653a8491f977}\label{class_agent_a8c2cf3e4212a59b33d7f653a8491f977}} 
+void {\bfseries set\+\_\+virus} (Virus\+Ptr$<$ TSeq $>$ virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
-\mbox{\Hypertarget{class_agent_a33ef08a9394c71efa3dc27fc47905596}\label{class_agent_a33ef08a9394c71efa3dc27fc47905596}} 
-void {\bfseries add\+\_\+virus} (\mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
+\mbox{\Hypertarget{class_agent_aee46f1dc6b850d5244e05ef7dde7f4ba}\label{class_agent_aee46f1dc6b850d5244e05ef7dde7f4ba}} 
+void {\bfseries set\+\_\+virus} (\mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
 \mbox{\Hypertarget{class_agent_acffc29fea0f297cb222506127a9fbd57}\label{class_agent_acffc29fea0f297cb222506127a9fbd57}} 
 void {\bfseries add\+\_\+entity} (\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \&entity, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
@@ -150,11 +141,8 @@ void {\bfseries rm\+\_\+tool} (epiworld\+\_\+fast\+\_\+uint tool\+\_\+idx, \mbox
 \mbox{\Hypertarget{class_agent_ac40b55110691dfd28c1e101e538531d9}\label{class_agent_ac40b55110691dfd28c1e101e538531d9}} 
 void {\bfseries rm\+\_\+tool} (Tool\+Ptr$<$ TSeq $>$ \&tool, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
-\mbox{\Hypertarget{class_agent_a925606a4af9dce151800e93ccdf6f35b}\label{class_agent_a925606a4af9dce151800e93ccdf6f35b}} 
-void {\bfseries rm\+\_\+virus} (epiworld\+\_\+fast\+\_\+uint virus\+\_\+idx, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
-\item 
-\mbox{\Hypertarget{class_agent_ae0461af70def1bc1c103c3fe37f6a959}\label{class_agent_ae0461af70def1bc1c103c3fe37f6a959}} 
-void {\bfseries rm\+\_\+virus} (Virus\+Ptr$<$ TSeq $>$ \&virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
+\mbox{\Hypertarget{class_agent_ad75dabf9691ca668ca9aeb3e68944c78}\label{class_agent_ad75dabf9691ca668ca9aeb3e68944c78}} 
+void {\bfseries rm\+\_\+virus} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
 \mbox{\Hypertarget{class_agent_a9850f643f8db451eb5bb56ecb43f0348}\label{class_agent_a9850f643f8db451eb5bb56ecb43f0348}} 
 void {\bfseries rm\+\_\+entity} (epiworld\+\_\+fast\+\_\+uint entity\+\_\+idx, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
@@ -162,11 +150,8 @@ void {\bfseries rm\+\_\+entity} (epiworld\+\_\+fast\+\_\+uint entity\+\_\+idx, \
 \mbox{\Hypertarget{class_agent_a4f4b256dcc62a7a3717f18114b33df43}\label{class_agent_a4f4b256dcc62a7a3717f18114b33df43}} 
 void {\bfseries rm\+\_\+entity} (\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \&entity, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \item 
-\mbox{\Hypertarget{class_agent_af96646694c43473a09e89dd96abe7949}\label{class_agent_af96646694c43473a09e89dd96abe7949}} 
-void \mbox{\hyperlink{class_agent_af96646694c43473a09e89dd96abe7949}{rm\+\_\+agent\+\_\+by\+\_\+virus}} (epiworld\+\_\+fast\+\_\+uint virus\+\_\+idx, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_agent}{Agent}} removed by virus. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_agent_abfa0a4594816cb949af1546c5de21677}\label{class_agent_abfa0a4594816cb949af1546c5de21677}} 
-void \mbox{\hyperlink{class_agent_abfa0a4594816cb949af1546c5de21677}{rm\+\_\+agent\+\_\+by\+\_\+virus}} (Virus\+Ptr$<$ TSeq $>$ \&virus, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
+\mbox{\Hypertarget{class_agent_af401cfc8d95fc04e015ada240e169bc5}\label{class_agent_af401cfc8d95fc04e015ada240e169bc5}} 
+void \mbox{\hyperlink{class_agent_af401cfc8d95fc04e015ada240e169bc5}{rm\+\_\+agent\+\_\+by\+\_\+virus}} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, epiworld\+\_\+fast\+\_\+int state\+\_\+new=-\/99, epiworld\+\_\+fast\+\_\+int queue=-\/99)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_agent}{Agent}} removed by virus. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Get the rates (multipliers) for the agent}\par
@@ -216,12 +201,6 @@ class {\bfseries Model$<$ TSeq $>$}
 \item 
 \mbox{\Hypertarget{class_agent_abdfac6506b42b0ae094136b7b2cb9a8d}\label{class_agent_abdfac6506b42b0ae094136b7b2cb9a8d}} 
 class {\bfseries Virus$<$ TSeq $>$}
-\item 
-\mbox{\Hypertarget{class_agent_ab32fa944af324b3a7d9d2659bf7707e5}\label{class_agent_ab32fa944af324b3a7d9d2659bf7707e5}} 
-class {\bfseries Viruses$<$ TSeq $>$}
-\item 
-\mbox{\Hypertarget{class_agent_ad9f952e5dff1ad13e61850a308724d23}\label{class_agent_ad9f952e5dff1ad13e61850a308724d23}} 
-class {\bfseries Viruses\+\_\+const$<$ TSeq $>$}
 \item 
 \mbox{\Hypertarget{class_agent_ad2c21dac3d31f0bb261ca72aaebddced}\label{class_agent_ad2c21dac3d31f0bb261ca72aaebddced}} 
 class {\bfseries Tool$<$ TSeq $>$}

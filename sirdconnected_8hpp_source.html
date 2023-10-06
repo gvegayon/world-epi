@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> (which &lt; 0)</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            p-&gt;add_virus(*m-&gt;array_virus_tmp[which], m);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            p-&gt;set_virus(*m-&gt;array_virus_tmp[which], m);</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">return</span>; </div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
@@ -331,7 +331,7 @@ $(function() {
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;              {</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                </div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordtype">size_t</span> which_v = std::ceil(which / 2);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                p-&gt;<a class="code" href="classepiworld_1_1_agent.html#af96646694c43473a09e89dd96abe7949">rm_agent_by_virus</a>(which_v, m);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                p-&gt;<a class="code" href="classepiworld_1_1_agent.html#af401cfc8d95fc04e015ada240e169bc5">rm_agent_by_virus</a>(which_v, m);</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;              } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                </div>
@@ -370,7 +370,7 @@ $(function() {
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    virus.set_prob_death(&amp;model(<span class="stringliteral">&quot;Death rate&quot;</span>));</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    model.set_virus(virus, prevalence);</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
@@ -412,17 +412,17 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
-<div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1491</div></div>
-<div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2040</div></div>
+<div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1480</div></div>
+<div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2027</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html">ModelSIRDCONN</a></div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:6</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html_a2349e4616cb10b88424058970e5d0b18"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html#a2349e4616cb10b88424058970e5d0b18">ModelSIRDCONN::clone_ptr</a></div><div class="ttdeci">Model&lt; TSeq &gt; * clone_ptr()</div><div class="ttdoc">Advanced usage: Makes a copy of data and returns it as undeleted pointer.</div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:99</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html_a5bce75596d60db830630274e58283984"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html#a5bce75596d60db830630274e58283984">ModelSIRDCONN::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:82</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html_af705745be5950c5ad74bf32c687baead"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html#af705745be5950c5ad74bf32c687baead">ModelSIRDCONN::run</a></div><div class="ttdeci">void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:64</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13127</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14226</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_af96646694c43473a09e89dd96abe7949"><div class="ttname"><a href="classepiworld_1_1_agent.html#af96646694c43473a09e89dd96abe7949">epiworld::Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(epiworld_fast_uint virus_idx, Model&lt; TSeq &gt; *model, epiworld_fast_int state_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14121</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13085</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14028</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_af401cfc8d95fc04e015ada240e169bc5"><div class="ttname"><a href="classepiworld_1_1_agent.html#af401cfc8d95fc04e015ada240e169bc5">epiworld::Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(Model&lt; TSeq &gt; *model, epiworld_fast_int state_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13969</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6046</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10124</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10111</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

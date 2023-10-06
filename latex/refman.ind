@@ -19,14 +19,14 @@
     \subitem {epiworld::AdjList}, \hyperpage{40}
     \subitem {read\_edgelist}, \hyperpage{39}
   \item {Agent$<$ TSeq $>$}, \hyperpage{41}
-    \subitem {default\_rm\_entity}, \hyperpage{45}
+    \subitem {default\_rm\_entity}, \hyperpage{44}
     \subitem {operator()}, \hyperpage{44}
     \subitem {swap\_neighbors}, \hyperpage{44}
   \item {AgentsSample}
-    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{50}
+    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
     \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{51}
   \item {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
-    \subitem {AgentsSample}, \hyperpage{50}
+    \subitem {AgentsSample}, \hyperpage{49}
 
   \indexspace
 
@@ -59,7 +59,7 @@
     \subitem {reproductive\_number}, \hyperpage{56}
     \subitem {transition\_probability}, \hyperpage{56}
   \item {default\_rm\_entity}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{45}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
     \subitem {Entity$<$ TSeq $>$}, \hyperpage{64}
     \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
     \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{66}
@@ -77,7 +77,7 @@
     \subitem {read\_edgelist}, \hyperpage{41}
   \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{45}
     \subitem {default\_rm\_entity}, \hyperpage{48}
-    \subitem {operator()}, \hyperpage{48}
+    \subitem {operator()}, \hyperpage{47}
     \subitem {swap\_neighbors}, \hyperpage{48}
   \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{50}
     \subitem {AgentsSample}, \hyperpage{51}
@@ -282,7 +282,7 @@
 
   \item {operator()}
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{47}
   \item {operator==}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54, 55}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{59}
