@@ -533,7 +533,7 @@ void {\bfseries chrono\+\_\+start} ()
 \mbox{\Hypertarget{class_model_aea7a2d08458c63e06589e13ee6f1ffdd}\label{class_model_aea7a2d08458c63e06589e13ee6f1ffdd}} 
 void {\bfseries chrono\+\_\+end} ()
 \item 
-void \mbox{\hyperlink{class_model_add329fe1a52fc2cc6052974b5a118d46}{actions\+\_\+add}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+uint new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
+void \mbox{\hyperlink{class_model_a199717c4e845a754966ce31730e8e711}{actions\+\_\+add}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+int new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{struct_action}{Action}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_a2125fc528ee1532733b7532f3d0e290a}{actions\+\_\+run}} ()
 \begin{DoxyCompactList}\small\item\em Executes the stored action. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -730,6 +730,9 @@ virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlin
 \mbox{\Hypertarget{class_model_a35c40fed08b203315bfa59c84ac43b51}\label{class_model_a35c40fed08b203315bfa59c84ac43b51}} 
 {\bfseries Model} (const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&m)
 \item 
+\mbox{\Hypertarget{class_model_a8e041e48687fe642251687de5f8b58d9}\label{class_model_a8e041e48687fe642251687de5f8b58d9}} 
+{\bfseries Model} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&m)
+\item 
 \mbox{\Hypertarget{class_model_a145212e2d93fb70cea4f1cf05c130d3f}\label{class_model_a145212e2d93fb70cea4f1cf05c130d3f}} 
 {\bfseries Model} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&\&m)
 \item 
@@ -763,12 +766,12 @@ The model class provides the wrapper that puts together {\ttfamily \mbox{\hyperl
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_model_add329fe1a52fc2cc6052974b5a118d46}\label{class_model_add329fe1a52fc2cc6052974b5a118d46}} 
+\mbox{\Hypertarget{class_model_a199717c4e845a754966ce31730e8e711}\label{class_model_a199717c4e845a754966ce31730e8e711}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!actions\_add@{actions\_add}}
 \index{actions\_add@{actions\_add}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{actions\_add()}{actions\_add()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{new\+\_\+state\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$}]{agent\+\_\+,  }\item[{Virus\+Ptr$<$ TSeq $>$}]{virus\+\_\+,  }\item[{Tool\+Ptr$<$ TSeq $>$}]{tool\+\_\+,  }\item[{\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$}]{entity\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{new\+\_\+state\+\_\+,  }\item[{epiworld\+\_\+fast\+\_\+int}]{queue\+\_\+,  }\item[{Action\+Fun$<$ TSeq $>$}]{call\+\_\+,  }\item[{int}]{idx\+\_\+agent\+\_\+,  }\item[{int}]{idx\+\_\+object\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 
 
