@@ -34,11 +34,11 @@ size\+\_\+t {\bfseries size} () const
 void \mbox{\hyperlink{class_model_a4761b43494d081f2f7bd2443ea6cb2db}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (std\+::string fn, int skip)
 \begin{DoxyCompactList}\small\item\em Associate agents-\/entities from a file. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_ab7d63eb898445d3d30167c14ddec0c3d}\label{class_model_ab7d63eb898445d3d30167c14ddec0c3d}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+viruses} () const
-\item 
+size\+\_\+t \mbox{\hyperlink{class_model_ab7d63eb898445d3d30167c14ddec0c3d}{get\+\_\+n\+\_\+viruses}} () const
+\begin{DoxyCompactList}\small\item\em Number of viruses in the model. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a50aa99abe9d9b997ebce22f90a05009c}\label{class_model_a50aa99abe9d9b997ebce22f90a05009c}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+tools} () const
-\item 
+size\+\_\+t \mbox{\hyperlink{class_model_a50aa99abe9d9b997ebce22f90a05009c}{get\+\_\+n\+\_\+tools}} () const
+\begin{DoxyCompactList}\small\item\em Number of tools in the model. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a16d7138ec8dfbf6567e24f81234720a7}\label{class_model_a16d7138ec8dfbf6567e24f81234720a7}} 
 epiworld\+\_\+fast\+\_\+uint {\bfseries get\+\_\+ndays} () const
 \item 
@@ -406,6 +406,22 @@ const std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+state\
 void {\bfseries print\+\_\+state\+\_\+codes} () const
 \end{DoxyCompactItemize}
 \end{Indent}
+\begin{Indent}\textbf{ Initial states}\par
+{\em These functions are called before the simulation starts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Vector of proportions for each state. \\
+\hline
+{\em queue\+\_\+} & Vector of queue for each state. \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_aa5f96776b900aaec00f2eda5a324bb85}\label{class_model_aa5f96776b900aaec00f2eda5a324bb85}} 
+virtual void {\bfseries initial\+\_\+states} (std\+::vector$<$ double $>$, std\+::vector$<$ int $>$)
+\end{DoxyCompactItemize}
+\end{Indent}
 \begin{Indent}\textbf{ Setting and accessing parameters from the model}\par
 {\em \mbox{\hyperlink{class_tools}{Tools}} can incorporate parameters included in the model. Internally, parameters in the tool are stored as pointers to an std\+::map$<$$>$ of parameters in the model. Using the {\ttfamily epiworld\+\_\+fast\+\_\+uint} method directly fetches the parameters in the order these were added to the tool. Accessing parameters via the {\ttfamily std\+::string} method involves searching the parameter directly in the std\+::map$<$$>$ member of the model (so it is not recommended.)
 
@@ -619,10 +635,12 @@ epiworld\+\_\+fast\+\_\+uint {\bfseries ndays} = 0
 \mbox{\hyperlink{class_progress}{Progress}} {\bfseries pb}
 \item 
 \mbox{\Hypertarget{class_model_a2175c4bfbc6f8b8e0146f08162b03dbb}\label{class_model_a2175c4bfbc6f8b8e0146f08162b03dbb}} 
-std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ {\bfseries state\+\_\+fun} = \{\}
-\item 
+std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \mbox{\hyperlink{class_model_a2175c4bfbc6f8b8e0146f08162b03dbb}{state\+\_\+fun}} = \{\}
+\begin{DoxyCompactList}\small\item\em Functions to update states. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_a658a1f7bc9a3fa727788353e44a309f0}\label{class_model_a658a1f7bc9a3fa727788353e44a309f0}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries states\+\_\+labels} = \{\}
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_model_a658a1f7bc9a3fa727788353e44a309f0}{states\+\_\+labels}} = \{\}
+\begin{DoxyCompactList}\small\item\em Labels of the states. \end{DoxyCompactList}\item 
+std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{class_model_a6a3e893c076226874afbf0c0b20804ac}{initial\+\_\+states\+\_\+fun}} = nullptr
 \item 
 \mbox{\Hypertarget{class_model_a6bcf7811b11ba56f4f53707e2924b109}\label{class_model_a6bcf7811b11ba56f4f53707e2924b109}} 
 epiworld\+\_\+fast\+\_\+uint {\bfseries nstates} = 0u
@@ -969,7 +987,15 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}\label{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}} 
+\mbox{\Hypertarget{class_model_a6a3e893c076226874afbf0c0b20804ac}\label{class_model_a6a3e893c076226874afbf0c0b20804ac}} 
+\index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!initial\_states\_fun@{initial\_states\_fun}}
+\index{initial\_states\_fun@{initial\_states\_fun}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states\_fun}{initial\_states\_fun}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+std\+::function$<$void(\mbox{\hyperlink{class_model}{Model}}$<$TSeq$>$$\ast$)$>$ \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::initial\+\_\+states\+\_\+fun = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to distribute states. Goes along with the function ~\newline
+ \mbox{\Hypertarget{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}\label{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rbinomd@{rbinomd}}
 \index{rbinomd@{rbinomd}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{rbinomd}{rbinomd}}
