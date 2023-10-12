@@ -180,6 +180,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_state_set</b> (
 <tr class="memitem:af5c3197e72237ff481e7bd07e58dd80a"><td class="memItemLeft" align="right" valign="top"><a id="af5c3197e72237ff481e7bd07e58dd80a"></a>
 const std::vector&lt; VirusPtr&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_viruses</b> () const</td></tr>
 <tr class="separator:af5c3197e72237ff481e7bd07e58dd80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ac0d8781c52c1542514f077c85b4f8"><td class="memItemLeft" align="right" valign="top"><a id="a73ac0d8781c52c1542514f077c85b4f8"></a>
+const std::vector&lt; epiworld_double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_prevalence_virus</b> () const</td></tr>
+<tr class="separator:a73ac0d8781c52c1542514f077c85b4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811d39484a0fb211e2ffe4e075908937"><td class="memItemLeft" align="right" valign="top"><a id="a811d39484a0fb211e2ffe4e075908937"></a>
+const std::vector&lt; bool &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_prevalence_virus_as_proportion</b> () const</td></tr>
+<tr class="separator:a811d39484a0fb211e2ffe4e075908937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6762c8a7316a363b12d5a092447fdf"><td class="memItemLeft" align="right" valign="top"><a id="a0b6762c8a7316a363b12d5a092447fdf"></a>
 const std::vector&lt; ToolPtr&lt; TSeq &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_tools</b> () const</td></tr>
 <tr class="separator:a0b6762c8a7316a363b12d5a092447fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +216,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <tr class="memitem:a8238212432a34150f71b90fe70e1aa55"><td class="memItemLeft" align="right" valign="top"><a id="a8238212432a34150f71b90fe70e1aa55"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; &amp;other) const</td></tr>
 <tr class="separator:a8238212432a34150f71b90fe70e1aa55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2125fc528ee1532733b7532f3d0e290a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">actions_run</a> ()</td></tr>
+<tr class="memdesc:a2125fc528ee1532733b7532f3d0e290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the stored action.  <a href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">More...</a><br /></td></tr>
+<tr class="separator:a2125fc528ee1532733b7532f3d0e290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Set the backup object</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><code>backup</code> can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. </p>
 </div></td></tr>
@@ -595,9 +604,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>chrono_end</b> ()</td
 <tr class="memitem:a199717c4e845a754966ce31730e8e711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a199717c4e845a754966ce31730e8e711">actions_add</a> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
 <tr class="memdesc:a199717c4e845a754966ce31730e8e711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="struct_action.html" title="Action data for update an agent.">Action</a> object.  <a href="class_model.html#a199717c4e845a754966ce31730e8e711">More...</a><br /></td></tr>
 <tr class="separator:a199717c4e845a754966ce31730e8e711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2125fc528ee1532733b7532f3d0e290a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">actions_run</a> ()</td></tr>
-<tr class="memdesc:a2125fc528ee1532733b7532f3d0e290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the stored action.  <a href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">More...</a><br /></td></tr>
-<tr class="separator:a2125fc528ee1532733b7532f3d0e290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -689,7 +695,7 @@ std::vector&lt; UpdateFun&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" 
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a658a1f7bc9a3fa727788353e44a309f0">states_labels</a> = {}</td></tr>
 <tr class="memdesc:a658a1f7bc9a3fa727788353e44a309f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Labels of the states. <br /></td></tr>
 <tr class="separator:a658a1f7bc9a3fa727788353e44a309f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3e893c076226874afbf0c0b20804ac"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a6a3e893c076226874afbf0c0b20804ac">initial_states_fun</a> = nullptr</td></tr>
+<tr class="memitem:a6a3e893c076226874afbf0c0b20804ac"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a6a3e893c076226874afbf0c0b20804ac">initial_states_fun</a></td></tr>
 <tr class="separator:a6a3e893c076226874afbf0c0b20804ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bcf7811b11ba56f4f53707e2924b109"><td class="memItemLeft" align="right" valign="top"><a id="a6bcf7811b11ba56f4f53707e2924b109"></a>
 epiworld_fast_uint&#160;</td><td class="memItemRight" valign="bottom"><b>nstates</b> = 0u</td></tr>
@@ -942,7 +948,7 @@ template&lt;typename TSeq &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1391,7 +1397,7 @@ template&lt;typename TSeq &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::function&lt;void(<a class="el" href="class_model.html">Model</a>&lt;TSeq&gt;*)&gt; <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::initial_states_fun = nullptr</td>
+          <td class="memname">std::function&lt;void(<a class="el" href="class_model.html">Model</a>&lt;TSeq&gt;*)&gt; <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt;::initial_states_fun</td>
         </tr>
       </table>
   </td>
@@ -1400,7 +1406,10 @@ template&lt;typename TSeq &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Function to distribute states. Goes along with the function <br  />
+<b>Initial value:</b><div class="fragment"><div class="line">= [](<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * )</div>
+<div class="line">    -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
+</div><!-- fragment --><p>Function to distribute states. Goes along with the function <br  />
  </p>
 
 </div>

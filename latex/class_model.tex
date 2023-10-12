@@ -102,6 +102,12 @@ void {\bfseries clear\+\_\+state\+\_\+set} ()
 \mbox{\Hypertarget{class_model_af5c3197e72237ff481e7bd07e58dd80a}\label{class_model_af5c3197e72237ff481e7bd07e58dd80a}} 
 const std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+viruses} () const
 \item 
+\mbox{\Hypertarget{class_model_a73ac0d8781c52c1542514f077c85b4f8}\label{class_model_a73ac0d8781c52c1542514f077c85b4f8}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+prevalence\+\_\+virus} () const
+\item 
+\mbox{\Hypertarget{class_model_a811d39484a0fb211e2ffe4e075908937}\label{class_model_a811d39484a0fb211e2ffe4e075908937}} 
+const std\+::vector$<$ bool $>$ \& {\bfseries get\+\_\+prevalence\+\_\+virus\+\_\+as\+\_\+proportion} () const
+\item 
 \mbox{\Hypertarget{class_model_a0b6762c8a7316a363b12d5a092447fdf}\label{class_model_a0b6762c8a7316a363b12d5a092447fdf}} 
 const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} () const
 \item 
@@ -129,7 +135,9 @@ bool {\bfseries operator==} (const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq
 \item 
 \mbox{\Hypertarget{class_model_a8238212432a34150f71b90fe70e1aa55}\label{class_model_a8238212432a34150f71b90fe70e1aa55}} 
 bool {\bfseries operator!=} (const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&other) const
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_a2125fc528ee1532733b7532f3d0e290a}{actions\+\_\+run}} ()
+\begin{DoxyCompactList}\small\item\em Executes the stored action. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Set the backup object}\par
 {\em {\ttfamily backup} can be used to restore the entire object after a run. This can be useful if the user wishes to have individuals start with the same network from the beginning. }\begin{DoxyCompactItemize}
 \item 
@@ -550,9 +558,7 @@ void {\bfseries chrono\+\_\+start} ()
 void {\bfseries chrono\+\_\+end} ()
 \item 
 void \mbox{\hyperlink{class_model_a199717c4e845a754966ce31730e8e711}{actions\+\_\+add}} (\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$agent\+\_\+, Virus\+Ptr$<$ TSeq $>$ virus\+\_\+, Tool\+Ptr$<$ TSeq $>$ tool\+\_\+, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $\ast$entity\+\_\+, epiworld\+\_\+fast\+\_\+int new\+\_\+state\+\_\+, epiworld\+\_\+fast\+\_\+int queue\+\_\+, Action\+Fun$<$ TSeq $>$ call\+\_\+, int idx\+\_\+agent\+\_\+, int idx\+\_\+object\+\_\+)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{struct_action}{Action}} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_model_a2125fc528ee1532733b7532f3d0e290a}{actions\+\_\+run}} ()
-\begin{DoxyCompactList}\small\item\em Executes the stored action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{struct_action}{Action}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -640,7 +646,7 @@ std\+::vector$<$ Update\+Fun$<$ TSeq $>$ $>$ \mbox{\hyperlink{class_model_a2175c
 \mbox{\Hypertarget{class_model_a658a1f7bc9a3fa727788353e44a309f0}\label{class_model_a658a1f7bc9a3fa727788353e44a309f0}} 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_model_a658a1f7bc9a3fa727788353e44a309f0}{states\+\_\+labels}} = \{\}
 \begin{DoxyCompactList}\small\item\em Labels of the states. \end{DoxyCompactList}\item 
-std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{class_model_a6a3e893c076226874afbf0c0b20804ac}{initial\+\_\+states\+\_\+fun}} = nullptr
+std\+::function$<$ void(\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ \mbox{\hyperlink{class_model_a6a3e893c076226874afbf0c0b20804ac}{initial\+\_\+states\+\_\+fun}}
 \item 
 \mbox{\Hypertarget{class_model_a6bcf7811b11ba56f4f53707e2924b109}\label{class_model_a6bcf7811b11ba56f4f53707e2924b109}} 
 epiworld\+\_\+fast\+\_\+uint {\bfseries nstates} = 0u
@@ -821,7 +827,7 @@ Construct a new \mbox{\hyperlink{struct_action}{Action}} object.
 \index{actions\_run@{actions\_run}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{actions\_run()}{actions\_run()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+run\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+void \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::actions\+\_\+run\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -992,8 +998,14 @@ Wrapper of {\ttfamily Data\+Base\+::write\+\_\+data}
 \index{initial\_states\_fun@{initial\_states\_fun}!Model$<$ TSeq $>$@{Model$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{initial\_states\_fun}{initial\_states\_fun}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-std\+::function$<$void(\mbox{\hyperlink{class_model}{Model}}$<$TSeq$>$$\ast$)$>$ \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::initial\+\_\+states\+\_\+fun = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+std\+::function$<$void(\mbox{\hyperlink{class_model}{Model}}$<$TSeq$>$$\ast$)$>$ \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$\+::initial\+\_\+states\+\_\+fun\hspace{0.3cm}{\ttfamily [protected]}}
 
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\mbox{\hyperlink{class_model}{Model<TSeq>}} * )}
+\DoxyCodeLine{    -\/> \textcolor{keywordtype}{void} \{\}}
+
+\end{DoxyCode}
 Function to distribute states. Goes along with the function ~\newline
  \mbox{\Hypertarget{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}\label{class_model_a1a3242127ab7ca8fb026103d7edfe3d0}} 
 \index{Model$<$ TSeq $>$@{Model$<$ TSeq $>$}!rbinomd@{rbinomd}}
