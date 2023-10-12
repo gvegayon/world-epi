@@ -28,14 +28,14 @@ Collaboration diagram for Model\+SEIRDCONN$<$ TSeq $>$\+:
 \mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_a38b1f55ff5cf899abdfb177d6e1b4025}\label{class_model_s_e_i_r_d_c_o_n_n_a38b1f55ff5cf899abdfb177d6e1b4025}} 
 {\bfseries Model\+SEIRDCONN} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
 \item 
-\mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_ae62a9af5618092b146ff71a880693259}\label{class_model_s_e_i_r_d_c_o_n_n_ae62a9af5618092b146ff71a880693259}} 
-void \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_ae62a9af5618092b146ff71a880693259}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_ac2449275a5ef139c76b214e5b6c32274}\label{class_model_s_e_i_r_d_c_o_n_n_ac2449275a5ef139c76b214e5b6c32274}} 
+\mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n}{Model\+SEIRDCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_ac2449275a5ef139c76b214e5b6c32274}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_ad200c530984fa95857269625d43ad0cd}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_a6b32c03ed27bde9d0c5049727425c33f}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_afb78813ad43e51aa702463446f6c2afb}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n}{Model\+SEIRDCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n_a78bef7b072828f937b4821cd63112b79}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
 \begin{DoxyCompactList}\small\item\em Set up the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -110,12 +110,12 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
-\mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_afb78813ad43e51aa702463446f6c2afb}\label{class_model_s_e_i_r_d_c_o_n_n_afb78813ad43e51aa702463446f6c2afb}} 
+\mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_a78bef7b072828f937b4821cd63112b79}\label{class_model_s_e_i_r_d_c_o_n_n_a78bef7b072828f937b4821cd63112b79}} 
 \index{ModelSEIRDCONN$<$ TSeq $>$@{ModelSEIRDCONN$<$ TSeq $>$}!initial\_states@{initial\_states}}
 \index{initial\_states@{initial\_states}!ModelSEIRDCONN$<$ TSeq $>$@{ModelSEIRDCONN$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n}{Model\+SEIRDCONN}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n}{Model\+SEIRDCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r_d_c_o_n_n}{Model\+SEIRDCONN}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -130,6 +130,10 @@ Set up the initial states of the model.
 \end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
 \mbox{\Hypertarget{class_model_s_e_i_r_d_c_o_n_n_ad200c530984fa95857269625d43ad0cd}\label{class_model_s_e_i_r_d_c_o_n_n_ad200c530984fa95857269625d43ad0cd}} 
 \index{ModelSEIRDCONN$<$ TSeq $>$@{ModelSEIRDCONN$<$ TSeq $>$}!reset@{reset}}
 \index{reset@{reset}!ModelSEIRDCONN$<$ TSeq $>$@{ModelSEIRDCONN$<$ TSeq $>$}}

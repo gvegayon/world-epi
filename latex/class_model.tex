@@ -51,11 +51,11 @@ void {\bfseries set\+\_\+ndays} (epiworld\+\_\+fast\+\_\+uint ndays)
 \mbox{\Hypertarget{class_model_a0dc4944af1e71a36f16085edbc130762}\label{class_model_a0dc4944af1e71a36f16085edbc130762}} 
 bool {\bfseries get\+\_\+verbose} () const
 \item 
-\mbox{\Hypertarget{class_model_ab960a8950b9321bd97dd16440204d174}\label{class_model_ab960a8950b9321bd97dd16440204d174}} 
-void {\bfseries verbose\+\_\+off} ()
+\mbox{\Hypertarget{class_model_a73d58eb7d5cf38e7eff4414797725572}\label{class_model_a73d58eb7d5cf38e7eff4414797725572}} 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries verbose\+\_\+off} ()
 \item 
-\mbox{\Hypertarget{class_model_a10381a7683008e29918e30e742bf088f}\label{class_model_a10381a7683008e29918e30e742bf088f}} 
-void {\bfseries verbose\+\_\+on} ()
+\mbox{\Hypertarget{class_model_ae1ba21a7cbde9e93e8f9a24098b23857}\label{class_model_ae1ba21a7cbde9e93e8f9a24098b23857}} 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries verbose\+\_\+on} ()
 \item 
 \mbox{\Hypertarget{class_model_aa3ce8d5f025e239f8090ab9645f3e917}\label{class_model_aa3ce8d5f025e239f8090ab9645f3e917}} 
 int \mbox{\hyperlink{class_model_aa3ce8d5f025e239f8090ab9645f3e917}{today}} () const
@@ -67,8 +67,8 @@ std\+::map$<$ std\+::string, epiworld\+\_\+double $>$ \& {\bfseries params} ()
 \item 
 virtual void \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_a0ee712a278813e98498e5fba98fbd923}\label{class_model_a0ee712a278813e98498e5fba98fbd923}} 
-void {\bfseries print} (bool lite=false) const
+\mbox{\Hypertarget{class_model_a87c3560a2127ebafe7b56d3a2c05132b}\label{class_model_a87c3560a2127ebafe7b56d3a2c05132b}} 
+const \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries print} (bool lite=false) const
 \item 
 \mbox{\Hypertarget{class_model_a1204f90aa24fd6eb3d84e96c42e60429}\label{class_model_a1204f90aa24fd6eb3d84e96c42e60429}} 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&\& {\bfseries clone} () const
@@ -307,8 +307,8 @@ std\+::vector$<$ \mbox{\hyperlink{class_viruses}{Viruses}}$<$ TSeq $>$ $>$ \mbox
 \mbox{\Hypertarget{class_model_ab0169e85b4be2f060c5a05b1928791a2}\label{class_model_ab0169e85b4be2f060c5a05b1928791a2}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+entities} ()
 \item 
-\mbox{\Hypertarget{class_model_a1246f44a227f645bca2be2ffced014f1}\label{class_model_a1246f44a227f645bca2be2ffced014f1}} 
-void {\bfseries agents\+\_\+smallworld} (epiworld\+\_\+fast\+\_\+uint n=1000, epiworld\+\_\+fast\+\_\+uint k=5, bool d=false, epiworld\+\_\+double p=.\+01)
+\mbox{\Hypertarget{class_model_acdff2a300e73b98540f5eba198143aa1}\label{class_model_acdff2a300e73b98540f5eba198143aa1}} 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries agents\+\_\+smallworld} (epiworld\+\_\+fast\+\_\+uint n=1000, epiworld\+\_\+fast\+\_\+uint k=5, bool d=false, epiworld\+\_\+double p=.\+01)
 \item 
 \mbox{\Hypertarget{class_model_aac3de29f3e2522a850f9e8b6762124c0}\label{class_model_aac3de29f3e2522a850f9e8b6762124c0}} 
 void {\bfseries agents\+\_\+empty\+\_\+graph} (epiworld\+\_\+fast\+\_\+uint n=1000)
@@ -335,8 +335,8 @@ void {\bfseries mutate\+\_\+virus} ()
 \mbox{\Hypertarget{class_model_a0f8b730f9ce77cb330da51ee0599ae82}\label{class_model_a0f8b730f9ce77cb330da51ee0599ae82}} 
 void {\bfseries next} ()
 \item 
-\mbox{\Hypertarget{class_model_a890fcd217e0a034f39f9894fc66bd063}\label{class_model_a890fcd217e0a034f39f9894fc66bd063}} 
-virtual void \mbox{\hyperlink{class_model_a890fcd217e0a034f39f9894fc66bd063}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\mbox{\Hypertarget{class_model_aa7d8311e60c5a6683f52868f4d1c099e}\label{class_model_aa7d8311e60c5a6683f52868f4d1c099e}} 
+virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_aa7d8311e60c5a6683f52868f4d1c099e}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
 \begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_model_a2ca6dc004b17bf5cc451f48419b18635}{run\+\_\+multiple}} (epiworld\+\_\+fast\+\_\+uint ndays, epiworld\+\_\+fast\+\_\+uint nexperiments, int seed\+\_\+=-\/1, std\+::function$<$ void(size\+\_\+t, \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$)$>$ fun=make\+\_\+save\+\_\+run$<$ TSeq $>$(), bool \mbox{\hyperlink{class_model_a9591eb76c7cf1ed7e1510342ff602d37}{reset}}=true, bool verbose=true, int nthreads=1)
 \end{DoxyCompactItemize}
@@ -426,8 +426,8 @@ void {\bfseries print\+\_\+state\+\_\+codes} () const
 \end{DoxyParams}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_aa5f96776b900aaec00f2eda5a324bb85}\label{class_model_aa5f96776b900aaec00f2eda5a324bb85}} 
-virtual void {\bfseries initial\+\_\+states} (std\+::vector$<$ double $>$, std\+::vector$<$ int $>$)
+\mbox{\Hypertarget{class_model_ace40883daebf6436b7ca8099334dc7c3}\label{class_model_ace40883daebf6436b7ca8099334dc7c3}} 
+virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries initial\+\_\+states} (std\+::vector$<$ double $>$, std\+::vector$<$ int $>$)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Setting and accessing parameters from the model}\par

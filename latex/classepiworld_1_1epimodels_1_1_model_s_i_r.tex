@@ -37,7 +37,9 @@ Collaboration diagram for epiworld\+::epimodels\+::Model\+SIR$<$ TSeq $>$\+:
 \item 
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}} 
 {\bfseries Model\+SIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -60,6 +62,32 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em initial\+\_\+recovery} & epiworld\+\_\+double Initial recovery\+\_\+rate rate of the immune system \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}} 
+\index{epiworld::epimodels::ModelSIR$<$ TSeq $>$@{epiworld::epimodels::ModelSIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!epiworld::epimodels::ModelSIR$<$ TSeq $>$@{epiworld::epimodels::ModelSIR$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with a single element\+:
+\begin{DoxyItemize}
+\item The proportion of non-\/infected individuals who have recovered. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ int $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

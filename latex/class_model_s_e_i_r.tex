@@ -38,7 +38,7 @@ Collaboration diagram for Model\+SEIR$<$ TSeq $>$\+:
 \mbox{\Hypertarget{class_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}\label{class_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}} 
 {\bfseries Model\+SEIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
 \item 
-void \mbox{\hyperlink{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\mbox{\hyperlink{class_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
 \begin{DoxyCompactList}\small\item\em Set up the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -89,12 +89,12 @@ Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}\label{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}} 
+\mbox{\Hypertarget{class_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}\label{class_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}} 
 \index{ModelSEIR$<$ TSeq $>$@{ModelSEIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
 \index{initial\_states@{initial\_states}!ModelSEIR$<$ TSeq $>$@{ModelSEIR$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -109,6 +109,10 @@ Set up the initial states of the model.
 \end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ int $>$}}.
+
 
 
 \doxysubsection{Member Data Documentation}

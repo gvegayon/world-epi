@@ -38,7 +38,7 @@ Collaboration diagram for Model\+SIR$<$ TSeq $>$\+:
 \mbox{\Hypertarget{class_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}\label{class_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}} 
 {\bfseries Model\+SIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate)
 \item 
-void \mbox{\hyperlink{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\mbox{\hyperlink{class_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
 \begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -65,12 +65,12 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}\label{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}} 
+\mbox{\Hypertarget{class_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}\label{class_model_s_i_r_ae9715bbaac20e858f14c28dbbbad6dcd}} 
 \index{ModelSIR$<$ TSeq $>$@{ModelSIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
 \index{initial\_states@{initial\_states}!ModelSIR$<$ TSeq $>$@{ModelSIR$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-void \mbox{\hyperlink{class_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -84,6 +84,10 @@ Set the initial states of the model.
 \end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ int $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

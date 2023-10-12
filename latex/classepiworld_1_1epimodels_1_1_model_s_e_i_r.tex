@@ -37,7 +37,9 @@ Collaboration diagram for epiworld\+::epimodels\+::Model\+SEIR$<$ TSeq $>$\+:
 \item 
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}} 
 {\bfseries Model\+SEIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set up the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,6 +86,33 @@ Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model.
 {\em recovery\+\_\+rate} & epiworld\+\_\+double Recovery rate of the virus. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}\label{classepiworld_1_1epimodels_1_1_model_s_e_i_r_a12d232b04bf988fa60ba3483d73e79b5}} 
+\index{epiworld::epimodels::ModelSEIR$<$ TSeq $>$@{epiworld::epimodels::ModelSEIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!epiworld::epimodels::ModelSEIR$<$ TSeq $>$@{epiworld::epimodels::ModelSEIR$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set up the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with the following values\+:
+\begin{DoxyItemize}
+\item 0\+: Proportion of non-\/infected agents who are removed.
+\item 1\+: Proportion of exposed agents to be set as infected. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ int $>$}}.
+
 
 
 \doxysubsection{Member Data Documentation}
