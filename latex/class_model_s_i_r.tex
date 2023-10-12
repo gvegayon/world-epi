@@ -38,9 +38,8 @@ Collaboration diagram for Model\+SIR$<$ TSeq $>$\+:
 \mbox{\Hypertarget{class_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}\label{class_model_s_i_r_a315f49a99c3b1d68ad26489495f46834}} 
 {\bfseries Model\+SIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate)
 \item 
-\mbox{\Hypertarget{class_model_s_i_r_ad6f86e0f6aa3fa07e8df9d09c57b2037}\label{class_model_s_i_r_ad6f86e0f6aa3fa07e8df9d09c57b2037}} 
-void {\bfseries initial\+\_\+states} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -61,6 +60,28 @@ Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.
 {\em initial\+\_\+efficacy} & epiworld\+\_\+double Initial susceptibility\+\_\+reduction of the immune system \\
 \hline
 {\em initial\+\_\+recovery} & epiworld\+\_\+double Initial recovery\+\_\+rate rate of the immune system \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}\label{class_model_s_i_r_add6b7af95b87bef7f661f0ec90945821}} 
+\index{ModelSIR$<$ TSeq $>$@{ModelSIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!ModelSIR$<$ TSeq $>$@{ModelSIR$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_i_r}{Model\+SIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with a single element\+:
+\begin{DoxyItemize}
+\item The proportion of non-\/infected individuals who have recovered. 
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 

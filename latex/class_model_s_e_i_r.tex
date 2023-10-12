@@ -37,7 +37,9 @@ Collaboration diagram for Model\+SEIR$<$ TSeq $>$\+:
 \item 
 \mbox{\Hypertarget{class_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}\label{class_model_s_e_i_r_a4c5761c8cd3952f3da21512293afec99}} 
 {\bfseries Model\+SEIR} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set up the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,6 +84,29 @@ Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model.
 {\em avg\+\_\+incubation\+\_\+days} & epiworld\+\_\+double Average incubation days of the virus. \\
 \hline
 {\em recovery\+\_\+rate} & epiworld\+\_\+double Recovery rate of the virus. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}\label{class_model_s_e_i_r_a749d2d7b995dd385712e7ea8a35ebe28}} 
+\index{ModelSEIR$<$ TSeq $>$@{ModelSEIR$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!ModelSEIR$<$ TSeq $>$@{ModelSEIR$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_e_i_r}{Model\+SEIR}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with the following values\+:
+\begin{DoxyItemize}
+\item 0\+: Proportion of non-\/infected agents who are removed.
+\item 1\+: Proportion of exposed agents to be set as infected. 
+\end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
 
