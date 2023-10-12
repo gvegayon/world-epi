@@ -21,14 +21,17 @@ Sample of agents.
 \mbox{\Hypertarget{class_agents_sample_a72a5fbd68c783534d832c2a805fb721c}\label{class_agents_sample_a72a5fbd68c783534d832c2a805fb721c}} 
 \mbox{\hyperlink{class_agents_sample_a72a5fbd68c783534d832c2a805fb721c}{Agents\+Sample}} (\mbox{\hyperlink{class_agents_sample}{Agents\+Sample}}$<$ TSeq $>$ \&\&a)=delete
 \begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_agents_sample_a126af31309bec8b73d9ef57c47d088f6}\label{class_agents_sample_a126af31309bec8b73d9ef57c47d088f6}} 
-{\bfseries Agents\+Sample} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&model\+\_\+, size\+\_\+t n, bool truncate=false)
+\mbox{\Hypertarget{class_agents_sample_a0346bc5fe9a288446c0ff50d1de43334}\label{class_agents_sample_a0346bc5fe9a288446c0ff50d1de43334}} 
+{\bfseries Agents\+Sample} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \&model\+\_\+, size\+\_\+t n, std\+::vector$<$ size\+\_\+t $>$ states\+\_\+=\{\}, bool truncate=false)
 \item 
-\mbox{\Hypertarget{class_agents_sample_a9927c147faf18f90b243d82db1796930}\label{class_agents_sample_a9927c147faf18f90b243d82db1796930}} 
-{\bfseries Agents\+Sample} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \&entity\+\_\+, size\+\_\+t n, bool truncate=false)
+\mbox{\Hypertarget{class_agents_sample_aa14709fc031f7e0f417139c6250a7024}\label{class_agents_sample_aa14709fc031f7e0f417139c6250a7024}} 
+{\bfseries Agents\+Sample} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \&entity\+\_\+, size\+\_\+t n, std\+::vector$<$ size\+\_\+t $>$ states\+\_\+=\{\}, bool truncate=false)
 \item 
-\mbox{\hyperlink{class_agents_sample_a48aacfb78852f0f6a7db819ff76a09fb}{Agents\+Sample}} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&agent\+\_\+, size\+\_\+t n, bool truncate=false)
+\mbox{\hyperlink{class_agents_sample_ab8e3535dfa8256b0e5eaaf4946b0407a}{Agents\+Sample}} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&agent\+\_\+, size\+\_\+t n, std\+::vector$<$ size\+\_\+t $>$ states\+\_\+=\{\}, bool truncate=false)
 \begin{DoxyCompactList}\small\item\em Sample from the agent\textquotesingle{}s entities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agents_sample_a84e40b54cc0e98aabd4af8cf5b030302}\label{class_agents_sample_a84e40b54cc0e98aabd4af8cf5b030302}} 
+void {\bfseries set\+\_\+state} (int s)
+\item 
 \mbox{\Hypertarget{class_agents_sample_a2c327f484972e3968cdcf6934ac911af}\label{class_agents_sample_a2c327f484972e3968cdcf6934ac911af}} 
 std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$\+::iterator {\bfseries begin} ()
 \item 
@@ -62,12 +65,12 @@ This class allows sampling agents from Entity$<$\+TSeq$>$ and Model$<$\+TSeq$>$.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_agents_sample_a48aacfb78852f0f6a7db819ff76a09fb}\label{class_agents_sample_a48aacfb78852f0f6a7db819ff76a09fb}} 
+\mbox{\Hypertarget{class_agents_sample_ab8e3535dfa8256b0e5eaaf4946b0407a}\label{class_agents_sample_ab8e3535dfa8256b0e5eaaf4946b0407a}} 
 \index{AgentsSample$<$ TSeq $>$@{AgentsSample$<$ TSeq $>$}!AgentsSample@{AgentsSample}}
 \index{AgentsSample@{AgentsSample}!AgentsSample$<$ TSeq $>$@{AgentsSample$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{AgentsSample()}{AgentsSample()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{class_agents_sample}{Agents\+Sample}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_agents_sample}{Agents\+Sample}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$}]{model,  }\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&}]{agent\+\_\+,  }\item[{size\+\_\+t}]{n,  }\item[{bool}]{truncate = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_agents_sample}{Agents\+Sample}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_agents_sample}{Agents\+Sample}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$}]{model,  }\item[{\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \&}]{agent\+\_\+,  }\item[{size\+\_\+t}]{n,  }\item[{std\+::vector$<$ size\+\_\+t $>$}]{states\+\_\+ = {\ttfamily \{\}},  }\item[{bool}]{truncate = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
