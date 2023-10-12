@@ -34,7 +34,9 @@ void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_acf2c5f5267935acc277aafadf70c4b8
 void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{clone\+\_\+ptr}} ()
-\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_abaa17ce4d249250f4fbe64d54c3863a8}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -88,6 +90,25 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_abaa17ce4d249250f4fbe64d54c3863a8}\label{class_model_s_i_r_c_o_n_n_abaa17ce4d249250f4fbe64d54c3863a8}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with a single element\+:
+\begin{DoxyItemize}
+\item The proportion of non-\/infected individuals who have recovered. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}\label{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f5}} 
 \index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!reset@{reset}}
 \index{reset@{reset}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
@@ -112,6 +133,7 @@ Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e15
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/epiworld/models/sirconnected.\+hpp\end{DoxyCompactItemize}
+include/epiworld/models/sirconnected.\+hpp\item 
+include/epiworld/models/sird.\+hpp\end{DoxyCompactItemize}

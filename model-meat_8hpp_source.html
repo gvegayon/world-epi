@@ -2556,299 +2556,300 @@ $(function() {
 <div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;}</div>
 <div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160; </div>
 <div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02514"></a><span class="lineno"><a class="line" href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6"> 2514</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model&lt;TSeq&gt;::queuing_off</a>()</div>
+<div class="line"><a name="l02514"></a><span class="lineno"><a class="line" href="class_model.html#a8822ff230b2c4804d0ae28db014520d1"> 2514</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#a8822ff230b2c4804d0ae28db014520d1">Model&lt;TSeq&gt;::queuing_off</a>()</div>
 <div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;{</div>
 <div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;    use_queuing = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;}</div>
-<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160; </div>
-<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02520"></a><span class="lineno"><a class="line" href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827"> 2520</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model&lt;TSeq&gt;::is_queuing_on</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;    <span class="keywordflow">return</span> use_queuing;</div>
-<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;}</div>
-<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160; </div>
-<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02526"></a><span class="lineno"><a class="line" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f"> 2526</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model&lt;TSeq&gt;::get_queue</a>()</div>
-<div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;{</div>
-<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;    <span class="keywordflow">return</span> queue;</div>
-<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;}</div>
-<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160; </div>
-<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_viruses</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;    <span class="keywordflow">return</span> viruses;</div>
-<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160;}</div>
-<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160; </div>
-<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; epiworld_double &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_prevalence_virus</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;    <span class="keywordflow">return</span> prevalence_virus;</div>
-<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;}</div>
-<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160; </div>
-<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; bool &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_prevalence_virus_as_proportion</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;    <span class="keywordflow">return</span> prevalence_virus_as_proportion;</div>
-<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;}</div>
-<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160; </div>
-<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;<span class="keyword">const</span> std::vector&lt; ToolPtr&lt;TSeq&gt; &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_tools</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;    <span class="keywordflow">return</span> tools;</div>
-<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160;}</div>
-<div class="line"><a name="l02554"></a><span class="lineno"> 2554</span>&#160; </div>
-<div class="line"><a name="l02555"></a><span class="lineno"> 2555</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02556"></a><span class="lineno"> 2556</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_virus</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l02557"></a><span class="lineno"> 2557</span>&#160;{</div>
-<div class="line"><a name="l02558"></a><span class="lineno"> 2558</span>&#160; </div>
-<div class="line"><a name="l02559"></a><span class="lineno"> 2559</span>&#160;    <span class="keywordflow">if</span> (viruses.size() &lt;= <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160;        <span class="keywordflow">throw</span> std::length_error(<span class="stringliteral">&quot;The specified id for the virus is out of range&quot;</span>);</div>
-<div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160; </div>
-<div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160;    <span class="keywordflow">return</span> *viruses[id];</div>
-<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160; </div>
-<div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160;}</div>
-<div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160; </div>
-<div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02567"></a><span class="lineno"> 2567</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_tool</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;{</div>
-<div class="line"><a name="l02569"></a><span class="lineno"> 2569</span>&#160; </div>
-<div class="line"><a name="l02570"></a><span class="lineno"> 2570</span>&#160;    <span class="keywordflow">if</span> (tools.size() &lt;= <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l02571"></a><span class="lineno"> 2571</span>&#160;        <span class="keywordflow">throw</span> std::length_error(<span class="stringliteral">&quot;The specified id for the tools is out of range&quot;</span>);</div>
-<div class="line"><a name="l02572"></a><span class="lineno"> 2572</span>&#160; </div>
-<div class="line"><a name="l02573"></a><span class="lineno"> 2573</span>&#160;    <span class="keywordflow">return</span> *tools[id];</div>
-<div class="line"><a name="l02574"></a><span class="lineno"> 2574</span>&#160; </div>
-<div class="line"><a name="l02575"></a><span class="lineno"> 2575</span>&#160;}</div>
-<div class="line"><a name="l02576"></a><span class="lineno"> 2576</span>&#160; </div>
+<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;}</div>
+<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160; </div>
+<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02521"></a><span class="lineno"><a class="line" href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827"> 2521</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model&lt;TSeq&gt;::is_queuing_on</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;    <span class="keywordflow">return</span> use_queuing;</div>
+<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;}</div>
+<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160; </div>
+<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02527"></a><span class="lineno"><a class="line" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f"> 2527</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model&lt;TSeq&gt;::get_queue</a>()</div>
+<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;{</div>
+<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;    <span class="keywordflow">return</span> queue;</div>
+<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;}</div>
+<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160; </div>
+<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; VirusPtr&lt;TSeq&gt; &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_viruses</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160;    <span class="keywordflow">return</span> viruses;</div>
+<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;}</div>
+<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160; </div>
+<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; epiworld_double &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_prevalence_virus</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;    <span class="keywordflow">return</span> prevalence_virus;</div>
+<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160;}</div>
+<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160; </div>
+<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt; bool &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_prevalence_virus_as_proportion</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;    <span class="keywordflow">return</span> prevalence_virus_as_proportion;</div>
+<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;}</div>
+<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160; </div>
+<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;<span class="keyword">const</span> std::vector&lt; ToolPtr&lt;TSeq&gt; &gt; &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_tools</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160;    <span class="keywordflow">return</span> tools;</div>
+<div class="line"><a name="l02554"></a><span class="lineno"> 2554</span>&#160;}</div>
+<div class="line"><a name="l02555"></a><span class="lineno"> 2555</span>&#160; </div>
+<div class="line"><a name="l02556"></a><span class="lineno"> 2556</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02557"></a><span class="lineno"> 2557</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_virus</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l02558"></a><span class="lineno"> 2558</span>&#160;{</div>
+<div class="line"><a name="l02559"></a><span class="lineno"> 2559</span>&#160; </div>
+<div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160;    <span class="keywordflow">if</span> (viruses.size() &lt;= <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160;        <span class="keywordflow">throw</span> std::length_error(<span class="stringliteral">&quot;The specified id for the virus is out of range&quot;</span>);</div>
+<div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160; </div>
+<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;    <span class="keywordflow">return</span> *viruses[id];</div>
+<div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160; </div>
+<div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160;}</div>
+<div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160; </div>
+<div class="line"><a name="l02567"></a><span class="lineno"> 2567</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_tool</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l02569"></a><span class="lineno"> 2569</span>&#160;{</div>
+<div class="line"><a name="l02570"></a><span class="lineno"> 2570</span>&#160; </div>
+<div class="line"><a name="l02571"></a><span class="lineno"> 2571</span>&#160;    <span class="keywordflow">if</span> (tools.size() &lt;= <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l02572"></a><span class="lineno"> 2572</span>&#160;        <span class="keywordflow">throw</span> std::length_error(<span class="stringliteral">&quot;The specified id for the tools is out of range&quot;</span>);</div>
+<div class="line"><a name="l02573"></a><span class="lineno"> 2573</span>&#160; </div>
+<div class="line"><a name="l02574"></a><span class="lineno"> 2574</span>&#160;    <span class="keywordflow">return</span> *tools[id];</div>
+<div class="line"><a name="l02575"></a><span class="lineno"> 2575</span>&#160; </div>
+<div class="line"><a name="l02576"></a><span class="lineno"> 2576</span>&#160;}</div>
 <div class="line"><a name="l02577"></a><span class="lineno"> 2577</span>&#160; </div>
-<div class="line"><a name="l02578"></a><span class="lineno"> 2578</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02579"></a><span class="lineno"><a class="line" href="class_model.html#a14758e0476fd4a05643ab41190530513"> 2579</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a14758e0476fd4a05643ab41190530513">Model&lt;TSeq&gt;::set_agents_data</a>(<span class="keywordtype">double</span> * data_, <span class="keywordtype">size_t</span> ncols_)</div>
-<div class="line"><a name="l02580"></a><span class="lineno"> 2580</span>&#160;{</div>
-<div class="line"><a name="l02581"></a><span class="lineno"> 2581</span>&#160;    agents_data = data_;</div>
-<div class="line"><a name="l02582"></a><span class="lineno"> 2582</span>&#160;    agents_data_ncols = ncols_;</div>
-<div class="line"><a name="l02583"></a><span class="lineno"> 2583</span>&#160;}</div>
-<div class="line"><a name="l02584"></a><span class="lineno"> 2584</span>&#160; </div>
-<div class="line"><a name="l02585"></a><span class="lineno"> 2585</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02586"></a><span class="lineno"> 2586</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">double</span> * <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_agents_data</a>() {</div>
-<div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;    <span class="keywordflow">return</span> this-&gt;agents_data;</div>
-<div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160;}</div>
-<div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160; </div>
-<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_agents_data_ncols</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;    <span class="keywordflow">return</span> this-&gt;agents_data_ncols;</div>
-<div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;}</div>
-<div class="line"><a name="l02594"></a><span class="lineno"> 2594</span>&#160; </div>
+<div class="line"><a name="l02578"></a><span class="lineno"> 2578</span>&#160; </div>
+<div class="line"><a name="l02579"></a><span class="lineno"> 2579</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02580"></a><span class="lineno"><a class="line" href="class_model.html#a14758e0476fd4a05643ab41190530513"> 2580</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a14758e0476fd4a05643ab41190530513">Model&lt;TSeq&gt;::set_agents_data</a>(<span class="keywordtype">double</span> * data_, <span class="keywordtype">size_t</span> ncols_)</div>
+<div class="line"><a name="l02581"></a><span class="lineno"> 2581</span>&#160;{</div>
+<div class="line"><a name="l02582"></a><span class="lineno"> 2582</span>&#160;    agents_data = data_;</div>
+<div class="line"><a name="l02583"></a><span class="lineno"> 2583</span>&#160;    agents_data_ncols = ncols_;</div>
+<div class="line"><a name="l02584"></a><span class="lineno"> 2584</span>&#160;}</div>
+<div class="line"><a name="l02585"></a><span class="lineno"> 2585</span>&#160; </div>
+<div class="line"><a name="l02586"></a><span class="lineno"> 2586</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">double</span> * <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_agents_data</a>() {</div>
+<div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160;    <span class="keywordflow">return</span> this-&gt;agents_data;</div>
+<div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160;}</div>
+<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160; </div>
+<div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_agents_data_ncols</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;    <span class="keywordflow">return</span> this-&gt;agents_data_ncols;</div>
+<div class="line"><a name="l02594"></a><span class="lineno"> 2594</span>&#160;}</div>
 <div class="line"><a name="l02595"></a><span class="lineno"> 2595</span>&#160; </div>
-<div class="line"><a name="l02596"></a><span class="lineno"> 2596</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02597"></a><span class="lineno"><a class="line" href="class_model.html#a453485b4cfe2a51addf33003f8d70c36"> 2597</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model&lt;TSeq&gt;::set_name</a>(std::string name)</div>
-<div class="line"><a name="l02598"></a><span class="lineno"> 2598</span>&#160;{</div>
-<div class="line"><a name="l02599"></a><span class="lineno"> 2599</span>&#160;    this-&gt;name = name;</div>
-<div class="line"><a name="l02600"></a><span class="lineno"> 2600</span>&#160;}</div>
-<div class="line"><a name="l02601"></a><span class="lineno"> 2601</span>&#160; </div>
-<div class="line"><a name="l02602"></a><span class="lineno"> 2602</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02603"></a><span class="lineno"> 2603</span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_name</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l02604"></a><span class="lineno"> 2604</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02605"></a><span class="lineno"> 2605</span>&#160;    <span class="keywordflow">return</span> this-&gt;name;</div>
-<div class="line"><a name="l02606"></a><span class="lineno"> 2606</span>&#160;}</div>
-<div class="line"><a name="l02607"></a><span class="lineno"> 2607</span>&#160; </div>
-<div class="line"><a name="l02608"></a><span class="lineno"> 2608</span>&#160;<span class="preprocessor">#define VECT_MATCH(a, b, c) \</span></div>
-<div class="line"><a name="l02609"></a><span class="lineno"> 2609</span>&#160;<span class="preprocessor">    EPI_DEBUG_FAIL_AT_TRUE(a.size() != b.size(), c) \</span></div>
-<div class="line"><a name="l02610"></a><span class="lineno"> 2610</span>&#160;<span class="preprocessor">    for (size_t __i = 0u; __i &lt; a.size(); ++__i) \</span></div>
-<div class="line"><a name="l02611"></a><span class="lineno"> 2611</span>&#160;<span class="preprocessor">    {\</span></div>
-<div class="line"><a name="l02612"></a><span class="lineno"> 2612</span>&#160;<span class="preprocessor">        EPI_DEBUG_FAIL_AT_TRUE(a[__i] != b[__i], c) \</span></div>
-<div class="line"><a name="l02613"></a><span class="lineno"> 2613</span>&#160;<span class="preprocessor">    }</span></div>
-<div class="line"><a name="l02614"></a><span class="lineno"> 2614</span>&#160; </div>
-<div class="line"><a name="l02615"></a><span class="lineno"> 2615</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02616"></a><span class="lineno"> 2616</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; other)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02617"></a><span class="lineno"> 2617</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l02618"></a><span class="lineno"> 2618</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(name != other.<a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>, <span class="stringliteral">&quot;names don&#39;t match&quot;</span>)</div>
-<div class="line"><a name="l02619"></a><span class="lineno"> 2619</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(db != other.db, &quot;database don&#39;t match&quot;)</div>
-<div class="line"><a name="l02620"></a><span class="lineno"> 2620</span>&#160; </div>
-<div class="line"><a name="l02621"></a><span class="lineno"> 2621</span>&#160;    VECT_MATCH(population, other.population, &quot;population doesn&#39;t match&quot;)</div>
-<div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160; </div>
-<div class="line"><a name="l02623"></a><span class="lineno"> 2623</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02624"></a><span class="lineno"> 2624</span>&#160;        using_backup != other.using_backup,</div>
-<div class="line"><a name="l02625"></a><span class="lineno"> 2625</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: using_backup don&#39;t match&quot;</div>
-<div class="line"><a name="l02626"></a><span class="lineno"> 2626</span>&#160;        )</div>
-<div class="line"><a name="l02627"></a><span class="lineno"> 2627</span>&#160;    </div>
-<div class="line"><a name="l02628"></a><span class="lineno"> 2628</span>&#160;    if ((population_backup.size() != 0) &amp; (other.population_backup.size() != 0))</div>
-<div class="line"><a name="l02629"></a><span class="lineno"> 2629</span>&#160;    {</div>
-<div class="line"><a name="l02630"></a><span class="lineno"> 2630</span>&#160; </div>
-<div class="line"><a name="l02631"></a><span class="lineno"> 2631</span>&#160;        <span class="comment">// False is population_backup.size() != other.population_backup.size()</span></div>
-<div class="line"><a name="l02632"></a><span class="lineno"> 2632</span>&#160;        <span class="keywordflow">if</span> (population_backup.size() != other.population_backup.size())</div>
-<div class="line"><a name="l02633"></a><span class="lineno"> 2633</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02634"></a><span class="lineno"> 2634</span>&#160; </div>
-<div class="line"><a name="l02635"></a><span class="lineno"> 2635</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; population_backup.size(); ++i)</div>
-<div class="line"><a name="l02636"></a><span class="lineno"> 2636</span>&#160;        {</div>
-<div class="line"><a name="l02637"></a><span class="lineno"> 2637</span>&#160;            <span class="keywordflow">if</span> (population_backup[i] != other.population_backup[i])</div>
-<div class="line"><a name="l02638"></a><span class="lineno"> 2638</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02639"></a><span class="lineno"> 2639</span>&#160;        }</div>
-<div class="line"><a name="l02640"></a><span class="lineno"> 2640</span>&#160;        </div>
-<div class="line"><a name="l02641"></a><span class="lineno"> 2641</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((population_backup.size() == 0) &amp; (other.population_backup.size() != 0)) {</div>
-<div class="line"><a name="l02642"></a><span class="lineno"> 2642</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02643"></a><span class="lineno"> 2643</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((population_backup.size() != 0) &amp; (other.population_backup.size() == 0))</div>
-<div class="line"><a name="l02644"></a><span class="lineno"> 2644</span>&#160;    {</div>
-<div class="line"><a name="l02645"></a><span class="lineno"> 2645</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02646"></a><span class="lineno"> 2646</span>&#160;    }</div>
-<div class="line"><a name="l02647"></a><span class="lineno"> 2647</span>&#160; </div>
-<div class="line"><a name="l02648"></a><span class="lineno"> 2648</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02649"></a><span class="lineno"> 2649</span>&#160;        agents_data != other.agents_data,</div>
-<div class="line"><a name="l02650"></a><span class="lineno"> 2650</span>&#160;        <span class="stringliteral">&quot;Model:: agents_data don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02651"></a><span class="lineno"> 2651</span>&#160;    )</div>
-<div class="line"><a name="l02652"></a><span class="lineno"> 2652</span>&#160; </div>
-<div class="line"><a name="l02653"></a><span class="lineno"> 2653</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02654"></a><span class="lineno"> 2654</span>&#160;        agents_data_ncols != other.agents_data_ncols,</div>
-<div class="line"><a name="l02655"></a><span class="lineno"> 2655</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: agents_data_ncols don&#39;t match&quot;</div>
-<div class="line"><a name="l02656"></a><span class="lineno"> 2656</span>&#160;    )</div>
-<div class="line"><a name="l02657"></a><span class="lineno"> 2657</span>&#160; </div>
-<div class="line"><a name="l02658"></a><span class="lineno"> 2658</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02659"></a><span class="lineno"> 2659</span>&#160;        directed != other.directed,</div>
-<div class="line"><a name="l02660"></a><span class="lineno"> 2660</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: directed don&#39;t match&quot;</div>
-<div class="line"><a name="l02661"></a><span class="lineno"> 2661</span>&#160;    )</div>
-<div class="line"><a name="l02662"></a><span class="lineno"> 2662</span>&#160;    </div>
-<div class="line"><a name="l02663"></a><span class="lineno"> 2663</span>&#160;    <span class="comment">// Viruses -----------------------------------------------------------------</span></div>
-<div class="line"><a name="l02664"></a><span class="lineno"> 2664</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02665"></a><span class="lineno"> 2665</span>&#160;        viruses.size() != other.viruses.size(),</div>
-<div class="line"><a name="l02666"></a><span class="lineno"> 2666</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: viruses.size() don&#39;t match&quot;</div>
-<div class="line"><a name="l02667"></a><span class="lineno"> 2667</span>&#160;        )</div>
-<div class="line"><a name="l02668"></a><span class="lineno"> 2668</span>&#160; </div>
-<div class="line"><a name="l02669"></a><span class="lineno"> 2669</span>&#160;    for (<span class="keywordtype">size_t</span> i = 0u; i &lt; viruses.size(); ++i)</div>
-<div class="line"><a name="l02670"></a><span class="lineno"> 2670</span>&#160;    {</div>
-<div class="line"><a name="l02671"></a><span class="lineno"> 2671</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02672"></a><span class="lineno"> 2672</span>&#160;            *viruses[i] != *other.viruses[i],</div>
-<div class="line"><a name="l02673"></a><span class="lineno"> 2673</span>&#160;            <span class="stringliteral">&quot;Model:: *viruses[i] don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02674"></a><span class="lineno"> 2674</span>&#160;        )</div>
-<div class="line"><a name="l02675"></a><span class="lineno"> 2675</span>&#160;            </div>
-<div class="line"><a name="l02676"></a><span class="lineno"> 2676</span>&#160;    }</div>
-<div class="line"><a name="l02677"></a><span class="lineno"> 2677</span>&#160; </div>
-<div class="line"><a name="l02678"></a><span class="lineno"> 2678</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;        prevalence_virus,</div>
-<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;        other.<a class="code" href="class_model.html#aa866aee83267c45912b625e1646c60ea">prevalence_virus</a>,</div>
-<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;        <span class="stringliteral">&quot;virus prevalence don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;    )</div>
-<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160; </div>
-<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;        prevalence_virus_as_proportion,</div>
-<div class="line"><a name="l02686"></a><span class="lineno"> 2686</span>&#160;        other.prevalence_virus_as_proportion,</div>
-<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;        &quot;virus prevalence as prop don&#39;t match&quot;</div>
-<div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;    )</div>
-<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;    </div>
-<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;    <span class="comment">// Tools -------------------------------------------------------------------</span></div>
-<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;        tools.size() != other.tools.size(),</div>
-<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: tools.size() don&#39;t match&quot;</div>
-<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;        )</div>
-<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;        </div>
-<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;    for (<span class="keywordtype">size_t</span> i = 0u; i &lt; tools.size(); ++i)</div>
-<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;    {</div>
-<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;            *tools[i] != *other.tools[i],</div>
-<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;            <span class="stringliteral">&quot;Model:: *tools[i] don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;        )</div>
-<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;            </div>
-<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;    }</div>
-<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160; </div>
-<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;        prevalence_tool, </div>
-<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;        other.prevalence_tool, </div>
-<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;        <span class="stringliteral">&quot;tools prevalence don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;    )</div>
-<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160; </div>
-<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;        prevalence_tool_as_proportion, </div>
-<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;        other.prevalence_tool_as_proportion, </div>
-<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;        &quot;tools as prop don&#39;t match&quot;</div>
-<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;    )</div>
-<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;    </div>
-<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;        entities,</div>
-<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;        other.entities,</div>
-<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;        &quot;entities don&#39;t match&quot;</div>
-<div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;    )</div>
-<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160; </div>
-<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;    if ((entities_backup.size() != 0) &amp; (other.entities_backup.size() != 0))</div>
-<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;    {</div>
-<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;        </div>
-<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; entities_backup.size(); ++i)</div>
-<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;        {</div>
-<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160; </div>
-<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;            EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;                entities_backup[i] != other.entities_backup[i],</div>
-<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;                <span class="stringliteral">&quot;Model:: entities_backup[i] don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;            )</div>
-<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160; </div>
-<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160;        }</div>
-<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160;        </div>
-<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((entities_backup.size() == 0) &amp; (other.entities_backup.size() != 0)) {</div>
-<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(<span class="keyword">true</span>, <span class="stringliteral">&quot;entities_backup don&#39;t match&quot;</span>)</div>
-<div class="line"><a name="l02738"></a><span class="lineno"> 2738</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((entities_backup.size() != 0) &amp; (other.entities_backup.size() == 0))</div>
-<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;    {</div>
-<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(<span class="keyword">true</span>, <span class="stringliteral">&quot;entities_backup don&#39;t match&quot;</span>)</div>
-<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160;    }</div>
-<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160; </div>
-<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;        rewire_prop != other.rewire_prop,</div>
-<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160;        <span class="stringliteral">&quot;Model:: rewire_prop don&#39;t match&quot;</span></div>
-<div class="line"><a name="l02746"></a><span class="lineno"> 2746</span>&#160;    )</div>
-<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;        </div>
-<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160;        parameters.size() != other.parameters.size(),</div>
-<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: () don&#39;t match&quot;</div>
-<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160;    )</div>
-<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160; </div>
-<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;        parameters != other.parameters,</div>
-<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: parameters don&#39;t match&quot;</div>
-<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;    )</div>
-<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160; </div>
-<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;        ndays != other.ndays,</div>
-<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: ndays don&#39;t match&quot;</div>
-<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;    )</div>
-<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;    </div>
-<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;    VECT_MATCH(</div>
-<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160;        states_labels,</div>
-<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;        other.states_labels,</div>
-<div class="line"><a name="l02766"></a><span class="lineno"> 2766</span>&#160;        &quot;state labels don&#39;t match&quot;</div>
-<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;    )</div>
-<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160; </div>
-<div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;        nstates != other.nstates,</div>
-<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: nstates don&#39;t match&quot;</div>
-<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;    )</div>
-<div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;    </div>
-<div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02775"></a><span class="lineno"> 2775</span>&#160;        verbose != other.verbose,</div>
-<div class="line"><a name="l02776"></a><span class="lineno"> 2776</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: verbose don&#39;t match&quot;</div>
-<div class="line"><a name="l02777"></a><span class="lineno"> 2777</span>&#160;    )</div>
-<div class="line"><a name="l02778"></a><span class="lineno"> 2778</span>&#160; </div>
-<div class="line"><a name="l02779"></a><span class="lineno"> 2779</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;        current_date != other.current_date,</div>
-<div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: current_date don&#39;t match&quot;</div>
-<div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;    )</div>
-<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160; </div>
-<div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160;    VECT_MATCH(global_actions, other.global_actions, &quot;global action don&#39;t match&quot;);</div>
-<div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160; </div>
-<div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02787"></a><span class="lineno"> 2787</span>&#160;        queue != other.queue,</div>
-<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: queue don&#39;t match&quot;</div>
-<div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;    )</div>
-<div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;    </div>
-<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160; </div>
-<div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
-<div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;        use_queuing != other.use_queuing,</div>
-<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: use_queuing don&#39;t match&quot;</div>
-<div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;    )</div>
-<div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;    </div>
-<div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;    return true;</div>
-<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160; </div>
-<div class="line"><a name="l02799"></a><span class="lineno"> 2799</span>&#160;}</div>
-<div class="line"><a name="l02800"></a><span class="lineno"> 2800</span>&#160; </div>
-<div class="line"><a name="l02801"></a><span class="lineno"> 2801</span>&#160;<span class="preprocessor">#undef VECT_MATCH</span></div>
-<div class="line"><a name="l02802"></a><span class="lineno"> 2802</span>&#160;<span class="preprocessor">#undef DURCAST</span></div>
-<div class="line"><a name="l02803"></a><span class="lineno"> 2803</span>&#160;<span class="preprocessor">#undef CASES_PAR</span></div>
-<div class="line"><a name="l02804"></a><span class="lineno"> 2804</span>&#160;<span class="preprocessor">#undef CASE_PAR</span></div>
-<div class="line"><a name="l02805"></a><span class="lineno"> 2805</span>&#160;<span class="preprocessor">#undef CHECK_INIT</span></div>
-<div class="line"><a name="l02806"></a><span class="lineno"> 2806</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02596"></a><span class="lineno"> 2596</span>&#160; </div>
+<div class="line"><a name="l02597"></a><span class="lineno"> 2597</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02598"></a><span class="lineno"><a class="line" href="class_model.html#a453485b4cfe2a51addf33003f8d70c36"> 2598</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model&lt;TSeq&gt;::set_name</a>(std::string name)</div>
+<div class="line"><a name="l02599"></a><span class="lineno"> 2599</span>&#160;{</div>
+<div class="line"><a name="l02600"></a><span class="lineno"> 2600</span>&#160;    this-&gt;name = name;</div>
+<div class="line"><a name="l02601"></a><span class="lineno"> 2601</span>&#160;}</div>
+<div class="line"><a name="l02602"></a><span class="lineno"> 2602</span>&#160; </div>
+<div class="line"><a name="l02603"></a><span class="lineno"> 2603</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02604"></a><span class="lineno"> 2604</span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="class_model.html">Model&lt;TSeq&gt;::get_name</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l02605"></a><span class="lineno"> 2605</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02606"></a><span class="lineno"> 2606</span>&#160;    <span class="keywordflow">return</span> this-&gt;name;</div>
+<div class="line"><a name="l02607"></a><span class="lineno"> 2607</span>&#160;}</div>
+<div class="line"><a name="l02608"></a><span class="lineno"> 2608</span>&#160; </div>
+<div class="line"><a name="l02609"></a><span class="lineno"> 2609</span>&#160;<span class="preprocessor">#define VECT_MATCH(a, b, c) \</span></div>
+<div class="line"><a name="l02610"></a><span class="lineno"> 2610</span>&#160;<span class="preprocessor">    EPI_DEBUG_FAIL_AT_TRUE(a.size() != b.size(), c) \</span></div>
+<div class="line"><a name="l02611"></a><span class="lineno"> 2611</span>&#160;<span class="preprocessor">    for (size_t __i = 0u; __i &lt; a.size(); ++__i) \</span></div>
+<div class="line"><a name="l02612"></a><span class="lineno"> 2612</span>&#160;<span class="preprocessor">    {\</span></div>
+<div class="line"><a name="l02613"></a><span class="lineno"> 2613</span>&#160;<span class="preprocessor">        EPI_DEBUG_FAIL_AT_TRUE(a[__i] != b[__i], c) \</span></div>
+<div class="line"><a name="l02614"></a><span class="lineno"> 2614</span>&#160;<span class="preprocessor">    }</span></div>
+<div class="line"><a name="l02615"></a><span class="lineno"> 2615</span>&#160; </div>
+<div class="line"><a name="l02616"></a><span class="lineno"> 2616</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l02617"></a><span class="lineno"> 2617</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> &amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l02618"></a><span class="lineno"> 2618</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l02619"></a><span class="lineno"> 2619</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(name != other.<a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>, <span class="stringliteral">&quot;names don&#39;t match&quot;</span>)</div>
+<div class="line"><a name="l02620"></a><span class="lineno"> 2620</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(db != other.db, &quot;database don&#39;t match&quot;)</div>
+<div class="line"><a name="l02621"></a><span class="lineno"> 2621</span>&#160; </div>
+<div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160;    VECT_MATCH(population, other.population, &quot;population doesn&#39;t match&quot;)</div>
+<div class="line"><a name="l02623"></a><span class="lineno"> 2623</span>&#160; </div>
+<div class="line"><a name="l02624"></a><span class="lineno"> 2624</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02625"></a><span class="lineno"> 2625</span>&#160;        using_backup != other.using_backup,</div>
+<div class="line"><a name="l02626"></a><span class="lineno"> 2626</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: using_backup don&#39;t match&quot;</div>
+<div class="line"><a name="l02627"></a><span class="lineno"> 2627</span>&#160;        )</div>
+<div class="line"><a name="l02628"></a><span class="lineno"> 2628</span>&#160;    </div>
+<div class="line"><a name="l02629"></a><span class="lineno"> 2629</span>&#160;    if ((population_backup.size() != 0) &amp; (other.population_backup.size() != 0))</div>
+<div class="line"><a name="l02630"></a><span class="lineno"> 2630</span>&#160;    {</div>
+<div class="line"><a name="l02631"></a><span class="lineno"> 2631</span>&#160; </div>
+<div class="line"><a name="l02632"></a><span class="lineno"> 2632</span>&#160;        <span class="comment">// False is population_backup.size() != other.population_backup.size()</span></div>
+<div class="line"><a name="l02633"></a><span class="lineno"> 2633</span>&#160;        <span class="keywordflow">if</span> (population_backup.size() != other.population_backup.size())</div>
+<div class="line"><a name="l02634"></a><span class="lineno"> 2634</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02635"></a><span class="lineno"> 2635</span>&#160; </div>
+<div class="line"><a name="l02636"></a><span class="lineno"> 2636</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; population_backup.size(); ++i)</div>
+<div class="line"><a name="l02637"></a><span class="lineno"> 2637</span>&#160;        {</div>
+<div class="line"><a name="l02638"></a><span class="lineno"> 2638</span>&#160;            <span class="keywordflow">if</span> (population_backup[i] != other.population_backup[i])</div>
+<div class="line"><a name="l02639"></a><span class="lineno"> 2639</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02640"></a><span class="lineno"> 2640</span>&#160;        }</div>
+<div class="line"><a name="l02641"></a><span class="lineno"> 2641</span>&#160;        </div>
+<div class="line"><a name="l02642"></a><span class="lineno"> 2642</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((population_backup.size() == 0) &amp; (other.population_backup.size() != 0)) {</div>
+<div class="line"><a name="l02643"></a><span class="lineno"> 2643</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02644"></a><span class="lineno"> 2644</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((population_backup.size() != 0) &amp; (other.population_backup.size() == 0))</div>
+<div class="line"><a name="l02645"></a><span class="lineno"> 2645</span>&#160;    {</div>
+<div class="line"><a name="l02646"></a><span class="lineno"> 2646</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02647"></a><span class="lineno"> 2647</span>&#160;    }</div>
+<div class="line"><a name="l02648"></a><span class="lineno"> 2648</span>&#160; </div>
+<div class="line"><a name="l02649"></a><span class="lineno"> 2649</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02650"></a><span class="lineno"> 2650</span>&#160;        agents_data != other.agents_data,</div>
+<div class="line"><a name="l02651"></a><span class="lineno"> 2651</span>&#160;        <span class="stringliteral">&quot;Model:: agents_data don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02652"></a><span class="lineno"> 2652</span>&#160;    )</div>
+<div class="line"><a name="l02653"></a><span class="lineno"> 2653</span>&#160; </div>
+<div class="line"><a name="l02654"></a><span class="lineno"> 2654</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02655"></a><span class="lineno"> 2655</span>&#160;        agents_data_ncols != other.agents_data_ncols,</div>
+<div class="line"><a name="l02656"></a><span class="lineno"> 2656</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: agents_data_ncols don&#39;t match&quot;</div>
+<div class="line"><a name="l02657"></a><span class="lineno"> 2657</span>&#160;    )</div>
+<div class="line"><a name="l02658"></a><span class="lineno"> 2658</span>&#160; </div>
+<div class="line"><a name="l02659"></a><span class="lineno"> 2659</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02660"></a><span class="lineno"> 2660</span>&#160;        directed != other.directed,</div>
+<div class="line"><a name="l02661"></a><span class="lineno"> 2661</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: directed don&#39;t match&quot;</div>
+<div class="line"><a name="l02662"></a><span class="lineno"> 2662</span>&#160;    )</div>
+<div class="line"><a name="l02663"></a><span class="lineno"> 2663</span>&#160;    </div>
+<div class="line"><a name="l02664"></a><span class="lineno"> 2664</span>&#160;    <span class="comment">// Viruses -----------------------------------------------------------------</span></div>
+<div class="line"><a name="l02665"></a><span class="lineno"> 2665</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02666"></a><span class="lineno"> 2666</span>&#160;        viruses.size() != other.viruses.size(),</div>
+<div class="line"><a name="l02667"></a><span class="lineno"> 2667</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: viruses.size() don&#39;t match&quot;</div>
+<div class="line"><a name="l02668"></a><span class="lineno"> 2668</span>&#160;        )</div>
+<div class="line"><a name="l02669"></a><span class="lineno"> 2669</span>&#160; </div>
+<div class="line"><a name="l02670"></a><span class="lineno"> 2670</span>&#160;    for (<span class="keywordtype">size_t</span> i = 0u; i &lt; viruses.size(); ++i)</div>
+<div class="line"><a name="l02671"></a><span class="lineno"> 2671</span>&#160;    {</div>
+<div class="line"><a name="l02672"></a><span class="lineno"> 2672</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02673"></a><span class="lineno"> 2673</span>&#160;            *viruses[i] != *other.viruses[i],</div>
+<div class="line"><a name="l02674"></a><span class="lineno"> 2674</span>&#160;            <span class="stringliteral">&quot;Model:: *viruses[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02675"></a><span class="lineno"> 2675</span>&#160;        )</div>
+<div class="line"><a name="l02676"></a><span class="lineno"> 2676</span>&#160;            </div>
+<div class="line"><a name="l02677"></a><span class="lineno"> 2677</span>&#160;    }</div>
+<div class="line"><a name="l02678"></a><span class="lineno"> 2678</span>&#160; </div>
+<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;        prevalence_virus,</div>
+<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;        other.<a class="code" href="class_model.html#aa866aee83267c45912b625e1646c60ea">prevalence_virus</a>,</div>
+<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;        <span class="stringliteral">&quot;virus prevalence don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160;    )</div>
+<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160; </div>
+<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02686"></a><span class="lineno"> 2686</span>&#160;        prevalence_virus_as_proportion,</div>
+<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;        other.prevalence_virus_as_proportion,</div>
+<div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;        &quot;virus prevalence as prop don&#39;t match&quot;</div>
+<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;    )</div>
+<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;    </div>
+<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;    <span class="comment">// Tools -------------------------------------------------------------------</span></div>
+<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;        tools.size() != other.tools.size(),</div>
+<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: tools.size() don&#39;t match&quot;</div>
+<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;        )</div>
+<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;        </div>
+<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;    for (<span class="keywordtype">size_t</span> i = 0u; i &lt; tools.size(); ++i)</div>
+<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;    {</div>
+<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;            *tools[i] != *other.tools[i],</div>
+<div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;            <span class="stringliteral">&quot;Model:: *tools[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;        )</div>
+<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;            </div>
+<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;    }</div>
+<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160; </div>
+<div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;        prevalence_tool, </div>
+<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;        other.prevalence_tool, </div>
+<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;        <span class="stringliteral">&quot;tools prevalence don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;    )</div>
+<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160; </div>
+<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;        prevalence_tool_as_proportion, </div>
+<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;        other.prevalence_tool_as_proportion, </div>
+<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;        &quot;tools as prop don&#39;t match&quot;</div>
+<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;    )</div>
+<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;    </div>
+<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;        entities,</div>
+<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;        other.entities,</div>
+<div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;        &quot;entities don&#39;t match&quot;</div>
+<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;    )</div>
+<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160; </div>
+<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;    if ((entities_backup.size() != 0) &amp; (other.entities_backup.size() != 0))</div>
+<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;    {</div>
+<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;        </div>
+<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; entities_backup.size(); ++i)</div>
+<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;        {</div>
+<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160; </div>
+<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;            EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;                entities_backup[i] != other.entities_backup[i],</div>
+<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;                <span class="stringliteral">&quot;Model:: entities_backup[i] don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;            )</div>
+<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160; </div>
+<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160;        }</div>
+<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;        </div>
+<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((entities_backup.size() == 0) &amp; (other.entities_backup.size() != 0)) {</div>
+<div class="line"><a name="l02738"></a><span class="lineno"> 2738</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(<span class="keyword">true</span>, <span class="stringliteral">&quot;entities_backup don&#39;t match&quot;</span>)</div>
+<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((entities_backup.size() != 0) &amp; (other.entities_backup.size() == 0))</div>
+<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;    {</div>
+<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160;        EPI_DEBUG_FAIL_AT_TRUE(<span class="keyword">true</span>, <span class="stringliteral">&quot;entities_backup don&#39;t match&quot;</span>)</div>
+<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160;    }</div>
+<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160; </div>
+<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160;        rewire_prop != other.rewire_prop,</div>
+<div class="line"><a name="l02746"></a><span class="lineno"> 2746</span>&#160;        <span class="stringliteral">&quot;Model:: rewire_prop don&#39;t match&quot;</span></div>
+<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;    )</div>
+<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;        </div>
+<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;        parameters.size() != other.parameters.size(),</div>
+<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: () don&#39;t match&quot;</div>
+<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160;    )</div>
+<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160; </div>
+<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;        parameters != other.parameters,</div>
+<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: parameters don&#39;t match&quot;</div>
+<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;    )</div>
+<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160; </div>
+<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;        ndays != other.ndays,</div>
+<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: ndays don&#39;t match&quot;</div>
+<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;    )</div>
+<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;    </div>
+<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160;    VECT_MATCH(</div>
+<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;        states_labels,</div>
+<div class="line"><a name="l02766"></a><span class="lineno"> 2766</span>&#160;        other.states_labels,</div>
+<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;        &quot;state labels don&#39;t match&quot;</div>
+<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;    )</div>
+<div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160; </div>
+<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;        nstates != other.nstates,</div>
+<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: nstates don&#39;t match&quot;</div>
+<div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;    )</div>
+<div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;    </div>
+<div class="line"><a name="l02775"></a><span class="lineno"> 2775</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02776"></a><span class="lineno"> 2776</span>&#160;        verbose != other.verbose,</div>
+<div class="line"><a name="l02777"></a><span class="lineno"> 2777</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: verbose don&#39;t match&quot;</div>
+<div class="line"><a name="l02778"></a><span class="lineno"> 2778</span>&#160;    )</div>
+<div class="line"><a name="l02779"></a><span class="lineno"> 2779</span>&#160; </div>
+<div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02781"></a><span class="lineno"> 2781</span>&#160;        current_date != other.current_date,</div>
+<div class="line"><a name="l02782"></a><span class="lineno"> 2782</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: current_date don&#39;t match&quot;</div>
+<div class="line"><a name="l02783"></a><span class="lineno"> 2783</span>&#160;    )</div>
+<div class="line"><a name="l02784"></a><span class="lineno"> 2784</span>&#160; </div>
+<div class="line"><a name="l02785"></a><span class="lineno"> 2785</span>&#160;    VECT_MATCH(global_actions, other.global_actions, &quot;global action don&#39;t match&quot;);</div>
+<div class="line"><a name="l02786"></a><span class="lineno"> 2786</span>&#160; </div>
+<div class="line"><a name="l02787"></a><span class="lineno"> 2787</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;        queue != other.queue,</div>
+<div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: queue don&#39;t match&quot;</div>
+<div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160;    )</div>
+<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;    </div>
+<div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160; </div>
+<div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
+<div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;        use_queuing != other.use_queuing,</div>
+<div class="line"><a name="l02795"></a><span class="lineno"> 2795</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: use_queuing don&#39;t match&quot;</div>
+<div class="line"><a name="l02796"></a><span class="lineno"> 2796</span>&#160;    )</div>
+<div class="line"><a name="l02797"></a><span class="lineno"> 2797</span>&#160;    </div>
+<div class="line"><a name="l02798"></a><span class="lineno"> 2798</span>&#160;    return true;</div>
+<div class="line"><a name="l02799"></a><span class="lineno"> 2799</span>&#160; </div>
+<div class="line"><a name="l02800"></a><span class="lineno"> 2800</span>&#160;}</div>
+<div class="line"><a name="l02801"></a><span class="lineno"> 2801</span>&#160; </div>
+<div class="line"><a name="l02802"></a><span class="lineno"> 2802</span>&#160;<span class="preprocessor">#undef VECT_MATCH</span></div>
+<div class="line"><a name="l02803"></a><span class="lineno"> 2803</span>&#160;<span class="preprocessor">#undef DURCAST</span></div>
+<div class="line"><a name="l02804"></a><span class="lineno"> 2804</span>&#160;<span class="preprocessor">#undef CASES_PAR</span></div>
+<div class="line"><a name="l02805"></a><span class="lineno"> 2805</span>&#160;<span class="preprocessor">#undef CASE_PAR</span></div>
+<div class="line"><a name="l02806"></a><span class="lineno"> 2806</span>&#160;<span class="preprocessor">#undef CHECK_INIT</span></div>
+<div class="line"><a name="l02807"></a><span class="lineno"> 2807</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_adj_list_html"><div class="ttname"><a href="class_adj_list.html">AdjList</a></div><div class="ttdef"><b>Definition:</b> adjlist-bones.hpp:4</div></div>
 <div class="ttc" id="aclass_adj_list_html_a2bf3a057863c9dfb958d44ff370690d1"><div class="ttname"><a href="class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1">AdjList::vcount</a></div><div class="ttdeci">size_t vcount() const</div><div class="ttdoc">Number of vertices/nodes in the network.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:203</div></div>
 <div class="ttc" id="aclass_adj_list_html_aa08631a4605cc3037f017bb437a96ef0"><div class="ttname"><a href="class_adj_list.html#aa08631a4605cc3037f017bb437a96ef0">AdjList::read_edgelist</a></div><div class="ttdeci">void read_edgelist(std::string fn, int size, int skip=0, bool directed=true)</div><div class="ttdoc">Read an edgelist.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:92</div></div>
@@ -2860,23 +2861,23 @@ $(function() {
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a077f3c2f03c119d038909cb34aa1aade"><div class="ttname"><a href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">Model::get_agents</a></div><div class="ttdeci">std::vector&lt; Agent&lt; TSeq &gt; &gt; &amp; get_agents()</div><div class="ttdoc">Returns a reference to the vector of agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:601</div></div>
 <div class="ttc" id="aclass_model_html_a0dcfddf7f242497cb5ae30c3e602394d"><div class="ttname"><a href="class_model.html#a0dcfddf7f242497cb5ae30c3e602394d">Model::get_agents_viruses</a></div><div class="ttdeci">std::vector&lt; Viruses_const&lt; TSeq &gt; &gt; get_agents_viruses() const</div><div class="ttdoc">Returns a const vector with the viruses of the agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:617</div></div>
-<div class="ttc" id="aclass_model_html_a14758e0476fd4a05643ab41190530513"><div class="ttname"><a href="class_model.html#a14758e0476fd4a05643ab41190530513">Model::set_agents_data</a></div><div class="ttdeci">void set_agents_data(double *data_, size_t ncols_)</div><div class="ttdoc">Set the agents data object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2579</div></div>
+<div class="ttc" id="aclass_model_html_a14758e0476fd4a05643ab41190530513"><div class="ttname"><a href="class_model.html#a14758e0476fd4a05643ab41190530513">Model::set_agents_data</a></div><div class="ttdeci">void set_agents_data(double *data_, size_t ncols_)</div><div class="ttdoc">Set the agents data object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2580</div></div>
 <div class="ttc" id="aclass_model_html_a199717c4e845a754966ce31730e8e711"><div class="ttname"><a href="class_model.html#a199717c4e845a754966ce31730e8e711">Model::actions_add</a></div><div class="ttdeci">void actions_add(Agent&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, Entity&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</div><div class="ttdoc">Construct a new Action object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:153</div></div>
 <div class="ttc" id="aclass_model_html_a1cbe26a38285095c62d1971251a6c3db"><div class="ttname"><a href="class_model.html#a1cbe26a38285095c62d1971251a6c3db">Model::queuing_on</a></div><div class="ttdeci">void queuing_on()</div><div class="ttdoc">Activates the queuing system (default.)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2508</div></div>
 <div class="ttc" id="aclass_model_html_a2125fc528ee1532733b7532f3d0e290a"><div class="ttname"><a href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">Model::actions_run</a></div><div class="ttdeci">void actions_run()</div><div class="ttdoc">Executes the stored action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:204</div></div>
 <div class="ttc" id="aclass_model_html_a2175c4bfbc6f8b8e0146f08162b03dbb"><div class="ttname"><a href="class_model.html#a2175c4bfbc6f8b8e0146f08162b03dbb">Model::state_fun</a></div><div class="ttdeci">std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; state_fun</div><div class="ttdoc">Functions to update states.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:172</div></div>
 <div class="ttc" id="aclass_model_html_a29b9d20fac28d3471dd8645d85d8b4b0"><div class="ttname"><a href="class_model.html#a29b9d20fac28d3471dd8645d85d8b4b0">Model::get_global_action</a></div><div class="ttdeci">GlobalAction&lt; TSeq &gt; &amp; get_global_action(std::string name)</div><div class="ttdoc">Retrieve a global action by name.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2435</div></div>
-<div class="ttc" id="aclass_model_html_a2c4ac58e918e9e8dc2e58be6521d8827"><div class="ttname"><a href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model::is_queuing_on</a></div><div class="ttdeci">bool is_queuing_on() const</div><div class="ttdoc">Query if the queuing system is on.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2520</div></div>
+<div class="ttc" id="aclass_model_html_a2c4ac58e918e9e8dc2e58be6521d8827"><div class="ttname"><a href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model::is_queuing_on</a></div><div class="ttdeci">bool is_queuing_on() const</div><div class="ttdoc">Query if the queuing system is on.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2521</div></div>
 <div class="ttc" id="aclass_model_html_a2ca6dc004b17bf5cc451f48419b18635"><div class="ttname"><a href="class_model.html#a2ca6dc004b17bf5cc451f48419b18635">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(epiworld_fast_uint ndays, epiworld_fast_uint nexperiments, int seed_=-1, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true, int nthreads=1)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1570</div></div>
 <div class="ttc" id="aclass_model_html_a343ab95f43273186d42d6df618695283"><div class="ttname"><a href="class_model.html#a343ab95f43273186d42d6df618695283">Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:98</div></div>
-<div class="ttc" id="aclass_model_html_a3cf5b4f14dcd54816785b38894c8088f"><div class="ttname"><a href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model::get_queue</a></div><div class="ttdeci">Queue&lt; TSeq &gt; &amp; get_queue()</div><div class="ttdoc">Retrieve the Queue object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2526</div></div>
-<div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2597</div></div>
+<div class="ttc" id="aclass_model_html_a3cf5b4f14dcd54816785b38894c8088f"><div class="ttname"><a href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">Model::get_queue</a></div><div class="ttdeci">Queue&lt; TSeq &gt; &amp; get_queue()</div><div class="ttdoc">Retrieve the Queue object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2527</div></div>
+<div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2598</div></div>
 <div class="ttc" id="aclass_model_html_a4761b43494d081f2f7bd2443ea6cb2db"><div class="ttname"><a href="class_model.html#a4761b43494d081f2f7bd2443ea6cb2db">Model::load_agents_entities_ties</a></div><div class="ttdeci">void load_agents_entities_ties(std::string fn, int skip)</div><div class="ttdoc">Associate agents-entities from a file.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1279</div></div>
 <div class="ttc" id="aclass_model_html_a50aa99abe9d9b997ebce22f90a05009c"><div class="ttname"><a href="class_model.html#a50aa99abe9d9b997ebce22f90a05009c">Model::get_n_tools</a></div><div class="ttdeci">size_t get_n_tools() const</div><div class="ttdoc">Number of tools in the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1844</div></div>
 <div class="ttc" id="aclass_model_html_a573869d1fe944d8a8345dc4a5bfc31bc"><div class="ttname"><a href="class_model.html#a573869d1fe944d8a8345dc4a5bfc31bc">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_virus_info, std::string fn_virus_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1913</div></div>
 <div class="ttc" id="aclass_model_html_a658a1f7bc9a3fa727788353e44a309f0"><div class="ttname"><a href="class_model.html#a658a1f7bc9a3fa727788353e44a309f0">Model::states_labels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; states_labels</div><div class="ttdoc">Labels of the states.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:173</div></div>
 <div class="ttc" id="aclass_model_html_a6a3e893c076226874afbf0c0b20804ac"><div class="ttname"><a href="class_model.html#a6a3e893c076226874afbf0c0b20804ac">Model::initial_states_fun</a></div><div class="ttdeci">std::function&lt; void(Model&lt; TSeq &gt; *)&gt; initial_states_fun</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:176</div></div>
-<div class="ttc" id="aclass_model_html_a70f0e1d4c74e1cfc887aca35984c52b6"><div class="ttname"><a href="class_model.html#a70f0e1d4c74e1cfc887aca35984c52b6">Model::queuing_off</a></div><div class="ttdeci">void queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2514</div></div>
+<div class="ttc" id="aclass_model_html_a8822ff230b2c4804d0ae28db014520d1"><div class="ttname"><a href="class_model.html#a8822ff230b2c4804d0ae28db014520d1">Model::queuing_off</a></div><div class="ttdeci">Model&lt; TSeq &gt; &amp; queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2514</div></div>
 <div class="ttc" id="aclass_model_html_a890fcd217e0a034f39f9894fc66bd063"><div class="ttname"><a href="class_model.html#a890fcd217e0a034f39f9894fc66bd063">Model::run</a></div><div class="ttdeci">virtual void run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1461</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2017</div></div>
 <div class="ttc" id="aclass_model_html_a98edc1600684faeecc9d7f101c141d06"><div class="ttname"><a href="class_model.html#a98edc1600684faeecc9d7f101c141d06">Model::get_agents_states</a></div><div class="ttdeci">std::vector&lt; epiworld_fast_uint &gt; get_agents_states() const</div><div class="ttdoc">Returns a vector with the states of the agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:607</div></div>

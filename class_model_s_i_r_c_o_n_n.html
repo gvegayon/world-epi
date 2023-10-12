@@ -106,6 +106,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_s_i_r_c_o_n_n.html#a37cb3d22a04f9f620fbbd7a2c7904227">clone_ptr</a> ()</td></tr>
 <tr class="memdesc:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advanced usage: Makes a copy of data and returns it as undeleted pointer.  <a href="class_model_s_i_r_c_o_n_n.html#a37cb3d22a04f9f620fbbd7a2c7904227">More...</a><br /></td></tr>
 <tr class="separator:a37cb3d22a04f9f620fbbd7a2c7904227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa17ce4d249250f4fbe64d54c3863a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_s_i_r_c_o_n_n.html#abaa17ce4d249250f4fbe64d54c3863a8">initial_states</a> (std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</td></tr>
+<tr class="memdesc:abaa17ce4d249250f4fbe64d54c3863a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial states of the model.  <a href="class_model_s_i_r_c_o_n_n.html#abaa17ce4d249250f4fbe64d54c3863a8">More...</a><br /></td></tr>
+<tr class="separator:abaa17ce4d249250f4fbe64d54c3863a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
 <tr class="memitem:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a2d8f67ad467c6d5793a855d2314a39"></a>
 <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> ()</td></tr>
@@ -787,6 +790,55 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
+<a id="abaa17ce4d249250f4fbe64d54c3863a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa17ce4d249250f4fbe64d54c3863a8">&#9670;&nbsp;</a></span>initial_states()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt;::initial_states </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>proportions_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>queue_</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the initial states of the model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">proportions_</td><td>Double vector with a single element:<ul>
+<li>The proportion of non-infected individuals who have recovered. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5928623ff6a69b6eb6733dc3eb1516f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5928623ff6a69b6eb6733dc3eb1516f5">&#9670;&nbsp;</a></span>reset()</h2>
 
@@ -822,8 +874,9 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/epiworld/models/<a class="el" href="sirconnected_8hpp_source.html">sirconnected.hpp</a></li>
+<li>include/epiworld/models/<a class="el" href="sird_8hpp_source.html">sird.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
