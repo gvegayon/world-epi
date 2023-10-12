@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        epiworld_double death_rate</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    );</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">initial_states</a>(</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">initial_states</a>(</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::vector&lt; double &gt; proportions_,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::vector&lt; int &gt; queue_ = {}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    );</div>
@@ -166,7 +166,7 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model_s_i_r_c_o_n_n.html#abaa17ce4d249250f4fbe64d54c3863a8">ModelSIRCONN&lt;TSeq&gt;::initial_states</a>(</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">  113</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">ModelSIRD&lt;TSeq&gt;::initial_states</a>(</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::vector&lt; double &gt; proportions_,</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::vector&lt; int &gt;  </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;) {</div>
@@ -181,9 +181,8 @@ $(function() {
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
-<div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html_abaa17ce4d249250f4fbe64d54c3863a8"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html#abaa17ce4d249250f4fbe64d54c3863a8">ModelSIRCONN::initial_states</a></div><div class="ttdeci">void initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:305</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_html"><div class="ttname"><a href="class_model_s_i_r_d.html">ModelSIRD</a></div><div class="ttdoc">Template for a Susceptible-Infected-Removed-Deceased (SIRD) model.</div><div class="ttdef"><b>Definition:</b> sird.hpp:16</div></div>
-<div class="ttc" id="aclass_model_s_i_r_d_html_a1db04f61078c9f5a52fca4761a589cf4"><div class="ttname"><a href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">ModelSIRD::initial_states</a></div><div class="ttdeci">void initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div></div>
+<div class="ttc" id="aclass_model_s_i_r_d_html_a1db04f61078c9f5a52fca4761a589cf4"><div class="ttname"><a href="class_model_s_i_r_d.html#a1db04f61078c9f5a52fca4761a589cf4">ModelSIRD::initial_states</a></div><div class="ttdeci">void initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div><div class="ttdef"><b>Definition:</b> sird.hpp:113</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6053</div></div>
 <div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10105</div></div>
 </div><!-- fragment --></div><!-- contents -->
