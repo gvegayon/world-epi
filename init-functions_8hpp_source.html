@@ -159,7 +159,7 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        tot += v;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (tot != 1.0)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (tot &gt;= 1.0)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="stringliteral">&quot;The proportions must sum up to 1.&quot;</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            );</div>
@@ -208,7 +208,7 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// Setting up the initial states</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_deceased)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            agent-&gt;rm_agent(model);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            agent-&gt;change_state(model, 3, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// Running the actions</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        model-&gt;actions_run();</div>
@@ -296,7 +296,105 @@ $(function() {
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> fun;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keyword">inline</span> std::function&lt;void(<a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a>*)&gt; create_init_function_seird(</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    std::vector&lt; double &gt; proportions_</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">// Checking widths</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">if</span> (proportions_.size() != 3u) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;-proportions_- must have three entries.&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">// proportions_ are values between 0 and 1, otherwise error</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; v : proportions_)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">if</span> ((v &lt; 0.0) || (v &gt; 1.0))</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="stringliteral">&quot;-proportions_- must have values between 0 and 1.&quot;</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                );</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// Last first two terms shouldn&#39;t add up to more than 1</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">if</span> ((proportions_[1u] + proportions_[2u]) &gt; 1.0)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="stringliteral">&quot;The last two terms of -proportions_- must add up to less than 1.&quot;</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            );</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    std::function&lt;void(<a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a>*)&gt; fun = </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        [proportions_] (<a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * model) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// Figuring out information about the viruses</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">double</span> tot = 0.0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp; vpreval = model-&gt;get_prevalence_virus();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp; vprop   = model-&gt;get_prevalence_virus_as_proportion();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordtype">double</span> n   = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(model-&gt;size());</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; model-&gt;get_n_viruses(); ++i)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">if</span> (vprop[i])</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                tot += vpreval[i];</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                tot += vpreval[i] / n;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="comment">// Putting the total into context</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordtype">double</span> tot_left = 1.0 - tot;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="comment">// Since susceptible and infected are &quot;fixed,&quot;</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="comment">// we only need to change recovered</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordtype">size_t</span> nexposed   = proportions_[0u] * tot * n;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordtype">size_t</span> nrecovered = proportions_[1u] * tot_left * n;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordtype">size_t</span> ndeceased  = proportions_[2u] * tot_left * n;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <a class="code" href="classepiworld_1_1_agents_sample.html">epiworld::AgentsSample&lt;TSeq&gt;</a> sample_suscept(</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            *model,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            nrecovered,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            {0u},</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            true</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            );</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// Setting up the initial states</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_suscept)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            agent-&gt;change_state(model, 3, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <a class="code" href="classepiworld_1_1_agents_sample.html">epiworld::AgentsSample&lt;TSeq&gt;</a> sample_exposed(</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            *model,</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            nexposed,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            {1u},</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            true</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            );</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="comment">// Setting up the initial states</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_exposed)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            agent-&gt;change_state(model, 2, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// Running the actions</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="comment">// Setting the initial states for the deceased</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="classepiworld_1_1_agents_sample.html">epiworld::AgentsSample&lt;TSeq&gt;</a> sample_deceased(</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            *model,</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            ndeceased,</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            {0u},</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            true</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            );</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="comment">// Setting up the initial states</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_deceased)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            agent-&gt;change_state(model, 4, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="comment">// Running the actions</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    };</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span> fun;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:16</div></div>
 <div class="ttc" id="aclassepiworld_1_1_agents_sample_html"><div class="ttname"><a href="classepiworld_1_1_agents_sample.html">epiworld::AgentsSample</a></div><div class="ttdoc">Sample of agents.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14592</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6053</div></div>

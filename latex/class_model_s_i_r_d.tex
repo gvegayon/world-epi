@@ -32,14 +32,17 @@ Collaboration diagram for Model\+SIRD$<$ TSeq $>$\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_model_s_i_r_d_a92cab572b7f648ee192aa38614f21bbf}\label{class_model_s_i_r_d_a92cab572b7f648ee192aa38614f21bbf}} 
-{\bfseries Model\+SIRD} (\mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
-\item 
-\mbox{\Hypertarget{class_model_s_i_r_d_a0aa34eb694b5f09a92a5b1e9e84bd640}\label{class_model_s_i_r_d_a0aa34eb694b5f09a92a5b1e9e84bd640}} 
-{\bfseries Model\+SIRD} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
-\item 
 \mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_d_ae195cf56a18f88b46c5f39ccbc529a84}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
 \begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_s_i_r_d_a92cab572b7f648ee192aa38614f21bbf}{Model\+SIRD}} (\mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Constructs a new SIRD model with the given parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_s_i_r_d_a0aa34eb694b5f09a92a5b1e9e84bd640}\label{class_model_s_i_r_d_a0aa34eb694b5f09a92a5b1e9e84bd640}} 
+{\bfseries Model\+SIRD} (std\+::string vname, epiworld\+\_\+double prevalence, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, epiworld\+\_\+double death\+\_\+rate)
+\end{DoxyCompactItemize}
+
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -49,19 +52,31 @@ class Model\+SIRD$<$ TSeq $>$}
 
 Template for a Susceptible-\/\+Infected-\/\+Removed-\/\+Deceased (SIRD) model. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_d_a92cab572b7f648ee192aa38614f21bbf}\label{class_model_s_i_r_d_a92cab572b7f648ee192aa38614f21bbf}} 
+\index{ModelSIRD$<$ TSeq $>$@{ModelSIRD$<$ TSeq $>$}!ModelSIRD@{ModelSIRD}}
+\index{ModelSIRD@{ModelSIRD}!ModelSIRD$<$ TSeq $>$@{ModelSIRD$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{ModelSIRD()}{ModelSIRD()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_i_r_d}{Model\+SIRD}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate,  }\item[{epiworld\+\_\+double}]{death\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new SIRD model with the given parameters. 
+
 
 \begin{DoxyParams}{Parameters}
-{\em model} & A Model$<$\+TSeq$>$ object where to set up the SIRD. \\
+{\em model} & The SIRD model to copy from. \\
 \hline
-{\em vname} & std\+::string Name of the virus \\
+{\em vname} & The name of the vertex associated with this model. \\
 \hline
-{\em initial\+\_\+prevalence} & epiworld\+\_\+double Initial prevalence \\
+{\em prevalence} & The initial prevalence of the disease in the population. \\
 \hline
-{\em initial\+\_\+efficacy} & epiworld\+\_\+double Initial susceptibility\+\_\+reduction of the immune system \\
+{\em transmission\+\_\+rate} & The rate at which the disease spreads from infected to susceptible individuals. \\
 \hline
-{\em initial\+\_\+recovery} & epiworld\+\_\+double Initial recovery\+\_\+rate rate of the immune system \\
+{\em recovery\+\_\+rate} & The rate at which infected individuals recover and become immune. \\
 \hline
-{\em initial\+\_\+death} & epiworld\+\_\+double Initial death\+\_\+rate of the immune system \\
+{\em death\+\_\+rate} & The rate at which infected individuals die. \\
 \hline
 \end{DoxyParams}
 
