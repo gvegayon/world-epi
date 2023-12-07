@@ -126,8 +126,8 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            agent-&gt;change_state(model, 2, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// Running the actions</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// Running the events</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        model-&gt;events_run();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -210,8 +210,8 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_deceased)</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            agent-&gt;change_state(model, 3, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// Running the actions</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// Running the events</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        model-&gt;events_run();</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
@@ -286,8 +286,8 @@ $(function() {
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_exposed)</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            agent-&gt;change_state(model, 2, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// Running the actions</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// Running the events</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        model-&gt;events_run();</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
@@ -367,8 +367,8 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_exposed)</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            agent-&gt;change_state(model, 2, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// Running the actions</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// Running the events</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        model-&gt;events_run();</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="comment">// Setting the initial states for the deceased</span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="classepiworld_1_1_agents_sample.html">epiworld::AgentsSample&lt;TSeq&gt;</a> sample_deceased(</div>
@@ -382,8 +382,8 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; agent : sample_deceased)</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            agent-&gt;change_state(model, 4, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="comment">// Running the actions</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        model-&gt;actions_run();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="comment">// Running the events</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        model-&gt;events_run();</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>

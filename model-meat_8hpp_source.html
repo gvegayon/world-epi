@@ -204,7 +204,7 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_model.html#a199717c4e845a754966ce31730e8e711">  153</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a199717c4e845a754966ce31730e8e711">Model&lt;TSeq&gt;::actions_add</a>(</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_model.html#a5ed705d4e368beb431fd8d1cf1d1f2d2">  153</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a5ed705d4e368beb431fd8d1cf1d1f2d2">Model&lt;TSeq&gt;::events_add</a>(</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * agent_,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    VirusPtr&lt;TSeq&gt; virus_,</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    ToolPtr&lt;TSeq&gt; tool_,</div>
@@ -223,11 +223,11 @@ $(function() {
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Actions cannot be zero!!&quot;</span>);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (nactions &gt; actions.size())</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (nactions &gt; events.size())</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        actions.emplace_back(</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="struct_action.html">Action&lt;TSeq&gt;</a>(</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        events.emplace_back(</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a>(</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                agent_, virus_, tool_, entity_, new_state_, queue_, call_,</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                idx_agent_, idx_object_</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            ));</div>
@@ -236,7 +236,7 @@ $(function() {
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">else</span> </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="struct_action.html">Action&lt;TSeq&gt;</a> &amp; A = actions.at(nactions - 1u);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a> &amp; A = events.at(nactions - 1u);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        A.agent      = agent_;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        A.virus      = virus_;</div>
@@ -255,14 +255,14 @@ $(function() {
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">  204</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">Model&lt;TSeq&gt;::actions_run</a>()</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_model.html#a800647b05836b20054f1f2049a41787f">  204</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a800647b05836b20054f1f2049a41787f">Model&lt;TSeq&gt;::events_run</a>()</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;{</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="comment">// Making the call</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">size_t</span> nactions_tmp = 0;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">while</span> (nactions_tmp &lt; nactions)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">size_t</span> nevents_tmp = 0;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">while</span> (nevents_tmp &lt; nactions)</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="struct_action.html">Action&lt;TSeq&gt;</a> &amp; a = actions[nactions_tmp++];</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a> &amp; a = events[nevents_tmp++];</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p  = a.agent;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">        #ifdef EPI_DEBUG</span></div>
@@ -448,7 +448,7 @@ $(function() {
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    nstates(model.nstates),</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    verbose(model.verbose),</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    current_date(model.current_date),</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    global_actions(model.global_actions),</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    globalevents(model.globalevents),</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    queue(model.queue),</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    use_queuing(model.use_queuing),</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    array_double_tmp(model.array_double_tmp.size()),</div>
@@ -533,7 +533,7 @@ $(function() {
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    nstates(model.nstates),</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    verbose(model.verbose),</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    current_date(std::move(model.current_date)),</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    global_actions(std::move(model.global_actions)),</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    globalevents(std::move(model.globalevents)),</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    queue(std::move(model.queue)),</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    use_queuing(model.use_queuing),</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    array_double_tmp(model.array_double_tmp.size()),</div>
@@ -608,7 +608,7 @@ $(function() {
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    current_date = m.current_date;</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160; </div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    global_actions = m.global_actions;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    globalevents = m.globalevents;</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; </div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    queue       = m.queue;</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    use_queuing = m.use_queuing;</div>
@@ -843,8 +843,8 @@ $(function() {
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        }</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="comment">// Apply the actions</span></div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        actions_run();</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="comment">// Apply the events</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        events_run();</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    }</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;}</div>
@@ -903,8 +903,8 @@ $(function() {
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        }</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        <span class="comment">// Apply the actions</span></div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        actions_run();</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        <span class="comment">// Apply the events</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        events_run();</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    }</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160; </div>
@@ -960,8 +960,8 @@ $(function() {
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160; </div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="comment">//         }</span></div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160; </div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="comment">//         // Apply the actions</span></div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment">//         actions_run();</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="comment">//         // Apply the events</span></div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment">//         events_run();</span></div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160; </div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;<span class="comment">//     }</span></div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
@@ -1591,8 +1591,8 @@ $(function() {
 <div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;        <span class="comment">// user needs.</span></div>
 <div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;        this-&gt;update_state();</div>
 <div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;    </div>
-<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;        <span class="comment">// We start with the global actions</span></div>
-<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;        this-&gt;run_global_actions();</div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;        <span class="comment">// We start with the Global events</span></div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;        this-&gt;run_globalevents();</div>
 <div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160; </div>
 <div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;        <span class="comment">// In this case we are applying degree sequence rewiring</span></div>
 <div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;        <span class="comment">// to change the network just a bit.</span></div>
@@ -1834,7 +1834,7 @@ $(function() {
 <div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160; </div>
 <div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;    }</div>
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160; </div>
-<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;    actions_run();</div>
+<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;    events_run();</div>
 <div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;    </div>
 <div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;}</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160; </div>
@@ -2457,15 +2457,15 @@ $(function() {
 <div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;}</div>
 <div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160; </div>
 <div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02415"></a><span class="lineno"><a class="line" href="class_model.html#a9902f0a3d6b5d9c92697664d42f4065d"> 2415</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a9902f0a3d6b5d9c92697664d42f4065d">Model&lt;TSeq&gt;::add_global_action</a>(</div>
+<div class="line"><a name="l02415"></a><span class="lineno"><a class="line" href="class_model.html#a51ab3b98ed8ce29868974d88680c5f26"> 2415</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a51ab3b98ed8ce29868974d88680c5f26">Model&lt;TSeq&gt;::add_globalevent</a>(</div>
 <div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;    std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt; fun,</div>
 <div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;    std::string name,</div>
 <div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;    <span class="keywordtype">int</span> date</div>
 <div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160;)</div>
 <div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;{</div>
 <div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160; </div>
-<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;    global_actions.push_back(</div>
-<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;        <a class="code" href="class_global_action.html">GlobalAction&lt;TSeq&gt;</a>(</div>
+<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;    globalevents.push_back(</div>
+<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;        <a class="code" href="class_global_event.html">GlobalEvent&lt;TSeq&gt;</a>(</div>
 <div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;            fun,</div>
 <div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;            name,</div>
 <div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;            date</div>
@@ -2475,20 +2475,20 @@ $(function() {
 <div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;}</div>
 <div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160; </div>
 <div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a9902f0a3d6b5d9c92697664d42f4065d">Model&lt;TSeq&gt;::add_global_action</a>(</div>
-<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    <a class="code" href="class_global_action.html">GlobalAction&lt;TSeq&gt;</a> action</div>
+<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#a51ab3b98ed8ce29868974d88680c5f26">Model&lt;TSeq&gt;::add_globalevent</a>(</div>
+<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;    <a class="code" href="class_global_event.html">GlobalEvent&lt;TSeq&gt;</a> action</div>
 <div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;)</div>
 <div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;{</div>
-<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;    global_actions.push_back(action);</div>
+<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;    globalevents.push_back(action);</div>
 <div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;}</div>
 <div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160; </div>
 <div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02441"></a><span class="lineno"><a class="line" href="class_model.html#a29b9d20fac28d3471dd8645d85d8b4b0"> 2441</a></span>&#160;<a class="code" href="class_global_action.html">GlobalAction&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#a29b9d20fac28d3471dd8645d85d8b4b0">Model&lt;TSeq&gt;::get_global_action</a>(</div>
+<div class="line"><a name="l02441"></a><span class="lineno"><a class="line" href="class_model.html#af72c43814a4c8fac7bb5da1b1c16ebb2"> 2441</a></span>&#160;<a class="code" href="class_global_event.html">GlobalEvent&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#af72c43814a4c8fac7bb5da1b1c16ebb2">Model&lt;TSeq&gt;::get_globalevent</a>(</div>
 <div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;    std::string name</div>
 <div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;)</div>
 <div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;{</div>
 <div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160; </div>
-<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; a : global_actions)</div>
+<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; a : globalevents)</div>
 <div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;        <span class="keywordflow">if</span> (a.name == name)</div>
 <div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;            <span class="keywordflow">return</span> a;</div>
 <div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160; </div>
@@ -2497,30 +2497,30 @@ $(function() {
 <div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;}</div>
 <div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160; </div>
 <div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02455"></a><span class="lineno"><a class="line" href="class_model.html#a9a16f2185dac11a48be6fcf3bd78f1da"> 2455</a></span>&#160;<a class="code" href="class_global_action.html">GlobalAction&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#a29b9d20fac28d3471dd8645d85d8b4b0">Model&lt;TSeq&gt;::get_global_action</a>(</div>
+<div class="line"><a name="l02455"></a><span class="lineno"><a class="line" href="class_model.html#a9e6b1a3b0c34c3a12688cf973f0db365"> 2455</a></span>&#160;<a class="code" href="class_global_event.html">GlobalEvent&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model.html#af72c43814a4c8fac7bb5da1b1c16ebb2">Model&lt;TSeq&gt;::get_globalevent</a>(</div>
 <div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;    <span class="keywordtype">size_t</span> index</div>
 <div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;)</div>
 <div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;{</div>
 <div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160; </div>
-<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;    <span class="keywordflow">if</span> (index &gt;= global_actions.size())</div>
+<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;    <span class="keywordflow">if</span> (index &gt;= globalevents.size())</div>
 <div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;The index &quot;</span> + std::to_string(index) + <span class="stringliteral">&quot; is out of range.&quot;</span>);</div>
 <div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160; </div>
-<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;    <span class="keywordflow">return</span> global_actions[index];</div>
+<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;    <span class="keywordflow">return</span> globalevents[index];</div>
 <div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160; </div>
 <div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;}</div>
 <div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160; </div>
 <div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;<span class="comment">// Remove implementation</span></div>
 <div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02469"></a><span class="lineno"><a class="line" href="class_model.html#aa3203517e3af426b4a8c53d0344e9587"> 2469</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#aa3203517e3af426b4a8c53d0344e9587">Model&lt;TSeq&gt;::rm_global_action</a>(</div>
+<div class="line"><a name="l02469"></a><span class="lineno"><a class="line" href="class_model.html#acbf306d7d9264817761a04caf83ad46f"> 2469</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#acbf306d7d9264817761a04caf83ad46f">Model&lt;TSeq&gt;::rm_globalevent</a>(</div>
 <div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;    std::string name</div>
 <div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;)</div>
 <div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;{</div>
 <div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160; </div>
-<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = global_actions.begin(); it != global_actions.end(); ++it)</div>
+<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = globalevents.begin(); it != globalevents.end(); ++it)</div>
 <div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;    {</div>
 <div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;        <span class="keywordflow">if</span> (it-&gt;get_name() == name)</div>
 <div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;        {</div>
-<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;            global_actions.erase(it);</div>
+<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;            globalevents.erase(it);</div>
 <div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;        }</div>
 <div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;    }</div>
@@ -2531,26 +2531,26 @@ $(function() {
 <div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160; </div>
 <div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;<span class="comment">// Same as above, but the index implementation</span></div>
 <div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02489"></a><span class="lineno"><a class="line" href="class_model.html#a50500d8031d91521d0a46efe801f6c3d"> 2489</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#aa3203517e3af426b4a8c53d0344e9587">Model&lt;TSeq&gt;::rm_global_action</a>(</div>
+<div class="line"><a name="l02489"></a><span class="lineno"><a class="line" href="class_model.html#a08cb2ccc447a0cc5812d77a974cdf88f"> 2489</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html#acbf306d7d9264817761a04caf83ad46f">Model&lt;TSeq&gt;::rm_globalevent</a>(</div>
 <div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;    <span class="keywordtype">size_t</span> index</div>
 <div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;)</div>
 <div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;{</div>
 <div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160; </div>
-<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;    <span class="keywordflow">if</span> (index &gt;= global_actions.size())</div>
+<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;    <span class="keywordflow">if</span> (index &gt;= globalevents.size())</div>
 <div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;The index &quot;</span> + std::to_string(index) + <span class="stringliteral">&quot; is out of range.&quot;</span>);</div>
 <div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160; </div>
-<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;    global_actions.erase(global_actions.begin() + index);</div>
+<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;    globalevents.erase(globalevents.begin() + index);</div>
 <div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160; </div>
 <div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;}</div>
 <div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160; </div>
 <div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::run_global_actions</a>()</div>
+<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_model.html">Model&lt;TSeq&gt;::run_globalevents</a>()</div>
 <div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;{</div>
 <div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160; </div>
-<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; action: global_actions)</div>
+<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; action: globalevents)</div>
 <div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;    {</div>
 <div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;        action(<span class="keyword">this</span>, today());</div>
-<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;        actions_run();</div>
+<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;        events_run();</div>
 <div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;    }</div>
 <div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160; </div>
 <div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;}</div>
@@ -2833,7 +2833,7 @@ $(function() {
 <div class="line"><a name="l02788"></a><span class="lineno"> 2788</span>&#160;        &quot;<a class="code" href="class_model.html">Model</a>:: current_date don&#39;t match&quot;</div>
 <div class="line"><a name="l02789"></a><span class="lineno"> 2789</span>&#160;    )</div>
 <div class="line"><a name="l02790"></a><span class="lineno"> 2790</span>&#160; </div>
-<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;    VECT_MATCH(global_actions, other.global_actions, &quot;global action don&#39;t match&quot;);</div>
+<div class="line"><a name="l02791"></a><span class="lineno"> 2791</span>&#160;    VECT_MATCH(globalevents, other.globalevents, &quot;global action don&#39;t match&quot;);</div>
 <div class="line"><a name="l02792"></a><span class="lineno"> 2792</span>&#160; </div>
 <div class="line"><a name="l02793"></a><span class="lineno"> 2793</span>&#160;    EPI_DEBUG_FAIL_AT_TRUE(</div>
 <div class="line"><a name="l02794"></a><span class="lineno"> 2794</span>&#160;        queue != other.queue,</div>
@@ -2863,16 +2863,13 @@ $(function() {
 <div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:428</div></div>
 <div class="ttc" id="aclass_data_base_html"><div class="ttname"><a href="class_data_base.html">DataBase</a></div><div class="ttdoc">Statistical data about the process.</div><div class="ttdef"><b>Definition:</b> database-bones.hpp:34</div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:20</div></div>
-<div class="ttc" id="aclass_global_action_html"><div class="ttname"><a href="class_global_action.html">GlobalAction</a></div><div class="ttdoc">Template for a Global Action.</div><div class="ttdef"><b>Definition:</b> globalactions-bones.hpp:15</div></div>
+<div class="ttc" id="aclass_global_event_html"><div class="ttname"><a href="class_global_event.html">GlobalEvent</a></div><div class="ttdoc">Template for a Global Event.</div><div class="ttdef"><b>Definition:</b> globalevent-bones.hpp:15</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a077f3c2f03c119d038909cb34aa1aade"><div class="ttname"><a href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">Model::get_agents</a></div><div class="ttdeci">std::vector&lt; Agent&lt; TSeq &gt; &gt; &amp; get_agents()</div><div class="ttdoc">Returns a reference to the vector of agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:601</div></div>
 <div class="ttc" id="aclass_model_html_a0dcfddf7f242497cb5ae30c3e602394d"><div class="ttname"><a href="class_model.html#a0dcfddf7f242497cb5ae30c3e602394d">Model::get_agents_viruses</a></div><div class="ttdeci">std::vector&lt; Viruses_const&lt; TSeq &gt; &gt; get_agents_viruses() const</div><div class="ttdoc">Returns a const vector with the viruses of the agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:617</div></div>
 <div class="ttc" id="aclass_model_html_a14758e0476fd4a05643ab41190530513"><div class="ttname"><a href="class_model.html#a14758e0476fd4a05643ab41190530513">Model::set_agents_data</a></div><div class="ttdeci">void set_agents_data(double *data_, size_t ncols_)</div><div class="ttdoc">Set the agents data object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2586</div></div>
-<div class="ttc" id="aclass_model_html_a199717c4e845a754966ce31730e8e711"><div class="ttname"><a href="class_model.html#a199717c4e845a754966ce31730e8e711">Model::actions_add</a></div><div class="ttdeci">void actions_add(Agent&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, Entity&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</div><div class="ttdoc">Construct a new Action object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:153</div></div>
 <div class="ttc" id="aclass_model_html_a1cbe26a38285095c62d1971251a6c3db"><div class="ttname"><a href="class_model.html#a1cbe26a38285095c62d1971251a6c3db">Model::queuing_on</a></div><div class="ttdeci">void queuing_on()</div><div class="ttdoc">Activates the queuing system (default.)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2514</div></div>
-<div class="ttc" id="aclass_model_html_a2125fc528ee1532733b7532f3d0e290a"><div class="ttname"><a href="class_model.html#a2125fc528ee1532733b7532f3d0e290a">Model::actions_run</a></div><div class="ttdeci">void actions_run()</div><div class="ttdoc">Executes the stored action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:204</div></div>
 <div class="ttc" id="aclass_model_html_a2175c4bfbc6f8b8e0146f08162b03dbb"><div class="ttname"><a href="class_model.html#a2175c4bfbc6f8b8e0146f08162b03dbb">Model::state_fun</a></div><div class="ttdeci">std::vector&lt; UpdateFun&lt; TSeq &gt; &gt; state_fun</div><div class="ttdoc">Functions to update states.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:172</div></div>
-<div class="ttc" id="aclass_model_html_a29b9d20fac28d3471dd8645d85d8b4b0"><div class="ttname"><a href="class_model.html#a29b9d20fac28d3471dd8645d85d8b4b0">Model::get_global_action</a></div><div class="ttdeci">GlobalAction&lt; TSeq &gt; &amp; get_global_action(std::string name)</div><div class="ttdoc">Retrieve a global action by name.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2441</div></div>
 <div class="ttc" id="aclass_model_html_a2c4ac58e918e9e8dc2e58be6521d8827"><div class="ttname"><a href="class_model.html#a2c4ac58e918e9e8dc2e58be6521d8827">Model::is_queuing_on</a></div><div class="ttdeci">bool is_queuing_on() const</div><div class="ttdoc">Query if the queuing system is on.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2527</div></div>
 <div class="ttc" id="aclass_model_html_a2ca6dc004b17bf5cc451f48419b18635"><div class="ttname"><a href="class_model.html#a2ca6dc004b17bf5cc451f48419b18635">Model::run_multiple</a></div><div class="ttdeci">void run_multiple(epiworld_fast_uint ndays, epiworld_fast_uint nexperiments, int seed_=-1, std::function&lt; void(size_t, Model&lt; TSeq &gt; *)&gt; fun=make_save_run&lt; TSeq &gt;(), bool reset=true, bool verbose=true, int nthreads=1)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1574</div></div>
 <div class="ttc" id="aclass_model_html_a343ab95f43273186d42d6df618695283"><div class="ttname"><a href="class_model.html#a343ab95f43273186d42d6df618695283">Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:98</div></div>
@@ -2880,26 +2877,29 @@ $(function() {
 <div class="ttc" id="aclass_model_html_a453485b4cfe2a51addf33003f8d70c36"><div class="ttname"><a href="class_model.html#a453485b4cfe2a51addf33003f8d70c36">Model::set_name</a></div><div class="ttdeci">void set_name(std::string name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2604</div></div>
 <div class="ttc" id="aclass_model_html_a4761b43494d081f2f7bd2443ea6cb2db"><div class="ttname"><a href="class_model.html#a4761b43494d081f2f7bd2443ea6cb2db">Model::load_agents_entities_ties</a></div><div class="ttdeci">void load_agents_entities_ties(std::string fn, int skip)</div><div class="ttdoc">Associate agents-entities from a file.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1281</div></div>
 <div class="ttc" id="aclass_model_html_a50aa99abe9d9b997ebce22f90a05009c"><div class="ttname"><a href="class_model.html#a50aa99abe9d9b997ebce22f90a05009c">Model::get_n_tools</a></div><div class="ttdeci">size_t get_n_tools() const</div><div class="ttdoc">Number of tools in the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1848</div></div>
+<div class="ttc" id="aclass_model_html_a51ab3b98ed8ce29868974d88680c5f26"><div class="ttname"><a href="class_model.html#a51ab3b98ed8ce29868974d88680c5f26">Model::add_globalevent</a></div><div class="ttdeci">void add_globalevent(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, std::string name=&quot;A global action&quot;, int date=-99)</div><div class="ttdoc">Set a global action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2415</div></div>
 <div class="ttc" id="aclass_model_html_a573869d1fe944d8a8345dc4a5bfc31bc"><div class="ttname"><a href="class_model.html#a573869d1fe944d8a8345dc4a5bfc31bc">Model::write_data</a></div><div class="ttdeci">void write_data(std::string fn_virus_info, std::string fn_virus_hist, std::string fn_tool_info, std::string fn_tool_hist, std::string fn_total_hist, std::string fn_transmission, std::string fn_transition, std::string fn_reproductive_number, std::string fn_generation_time) const</div><div class="ttdoc">Wrapper of DataBase::write_data</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1919</div></div>
+<div class="ttc" id="aclass_model_html_a5ed705d4e368beb431fd8d1cf1d1f2d2"><div class="ttname"><a href="class_model.html#a5ed705d4e368beb431fd8d1cf1d1f2d2">Model::events_add</a></div><div class="ttdeci">void events_add(Agent&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, Entity&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</div><div class="ttdoc">Construct a new Event object.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:153</div></div>
 <div class="ttc" id="aclass_model_html_a658a1f7bc9a3fa727788353e44a309f0"><div class="ttname"><a href="class_model.html#a658a1f7bc9a3fa727788353e44a309f0">Model::states_labels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; states_labels</div><div class="ttdoc">Labels of the states.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:173</div></div>
 <div class="ttc" id="aclass_model_html_a6a3e893c076226874afbf0c0b20804ac"><div class="ttname"><a href="class_model.html#a6a3e893c076226874afbf0c0b20804ac">Model::initial_states_fun</a></div><div class="ttdeci">std::function&lt; void(Model&lt; TSeq &gt; *)&gt; initial_states_fun</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:176</div></div>
+<div class="ttc" id="aclass_model_html_a800647b05836b20054f1f2049a41787f"><div class="ttname"><a href="class_model.html#a800647b05836b20054f1f2049a41787f">Model::events_run</a></div><div class="ttdeci">void events_run()</div><div class="ttdoc">Executes the stored action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:204</div></div>
 <div class="ttc" id="aclass_model_html_a8822ff230b2c4804d0ae28db014520d1"><div class="ttname"><a href="class_model.html#a8822ff230b2c4804d0ae28db014520d1">Model::queuing_off</a></div><div class="ttdeci">Model&lt; TSeq &gt; &amp; queuing_off()</div><div class="ttdoc">Deactivates the queuing system.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2520</div></div>
 <div class="ttc" id="aclass_model_html_a9591eb76c7cf1ed7e1510342ff602d37"><div class="ttname"><a href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">Model::reset</a></div><div class="ttdeci">virtual void reset()</div><div class="ttdoc">Reset the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2023</div></div>
 <div class="ttc" id="aclass_model_html_a98edc1600684faeecc9d7f101c141d06"><div class="ttname"><a href="class_model.html#a98edc1600684faeecc9d7f101c141d06">Model::get_agents_states</a></div><div class="ttdeci">std::vector&lt; epiworld_fast_uint &gt; get_agents_states() const</div><div class="ttdoc">Returns a vector with the states of the agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:607</div></div>
-<div class="ttc" id="aclass_model_html_a9902f0a3d6b5d9c92697664d42f4065d"><div class="ttname"><a href="class_model.html#a9902f0a3d6b5d9c92697664d42f4065d">Model::add_global_action</a></div><div class="ttdeci">void add_global_action(std::function&lt; void(Model&lt; TSeq &gt; *)&gt; fun, std::string name=&quot;A global action&quot;, int date=-99)</div><div class="ttdoc">Set a global action.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2415</div></div>
-<div class="ttc" id="aclass_model_html_aa3203517e3af426b4a8c53d0344e9587"><div class="ttname"><a href="class_model.html#aa3203517e3af426b4a8c53d0344e9587">Model::rm_global_action</a></div><div class="ttdeci">void rm_global_action(std::string name)</div><div class="ttdoc">Remove a global action by name.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2469</div></div>
 <div class="ttc" id="aclass_model_html_aa3ce8d5f025e239f8090ab9645f3e917"><div class="ttname"><a href="class_model.html#aa3ce8d5f025e239f8090ab9645f3e917">Model::today</a></div><div class="ttdeci">int today() const</div><div class="ttdoc">The current time of the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1441</div></div>
 <div class="ttc" id="aclass_model_html_aa7d8311e60c5a6683f52868f4d1c099e"><div class="ttname"><a href="class_model.html#aa7d8311e60c5a6683f52868f4d1c099e">Model::run</a></div><div class="ttdeci">virtual Model&lt; TSeq &gt; &amp; run(epiworld_fast_uint ndays, int seed=-1)</div><div class="ttdoc">Runs the simulation (after initialization)</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1463</div></div>
 <div class="ttc" id="aclass_model_html_aa866aee83267c45912b625e1646c60ea"><div class="ttname"><a href="class_model.html#aa866aee83267c45912b625e1646c60ea">Model::prevalence_virus</a></div><div class="ttdeci">std::vector&lt; epiworld_double &gt; prevalence_virus</div><div class="ttdoc">Initial prevalence_virus of each virus.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:138</div></div>
 <div class="ttc" id="aclass_model_html_ab7d63eb898445d3d30167c14ddec0c3d"><div class="ttname"><a href="class_model.html#ab7d63eb898445d3d30167c14ddec0c3d">Model::get_n_viruses</a></div><div class="ttdeci">size_t get_n_viruses() const</div><div class="ttdoc">Number of viruses in the model.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:1843</div></div>
+<div class="ttc" id="aclass_model_html_acbf306d7d9264817761a04caf83ad46f"><div class="ttname"><a href="class_model.html#acbf306d7d9264817761a04caf83ad46f">Model::rm_globalevent</a></div><div class="ttdeci">void rm_globalevent(std::string name)</div><div class="ttdoc">Remove a global action by name.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2469</div></div>
 <div class="ttc" id="aclass_model_html_adc8d49825ecf57ac045a4c93e4d63924"><div class="ttname"><a href="class_model.html#adc8d49825ecf57ac045a4c93e4d63924">Model::set_user_data</a></div><div class="ttdeci">void set_user_data(std::vector&lt; std::string &gt; names)</div><div class="ttdoc">[@</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2391</div></div>
+<div class="ttc" id="aclass_model_html_af72c43814a4c8fac7bb5da1b1c16ebb2"><div class="ttname"><a href="class_model.html#af72c43814a4c8fac7bb5da1b1c16ebb2">Model::get_globalevent</a></div><div class="ttdeci">GlobalEvent&lt; TSeq &gt; &amp; get_globalevent(std::string name)</div><div class="ttdoc">Retrieve a global action by name.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:2441</div></div>
 <div class="ttc" id="aclass_model_html_afd0c24e19b0a104e03d96ab4333725e5"><div class="ttname"><a href="class_model.html#afd0c24e19b0a104e03d96ab4333725e5">Model::clone_ptr</a></div><div class="ttdeci">virtual Model&lt; TSeq &gt; * clone_ptr()</div><div class="ttdoc">Advanced usage: Makes a copy of data and returns it as undeleted pointer.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:354</div></div>
 <div class="ttc" id="aclass_progress_html"><div class="ttname"><a href="class_progress.html">Progress</a></div><div class="ttdoc">A simple progress bar.</div><div class="ttdef"><b>Definition:</b> progress.hpp:11</div></div>
 <div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:16</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
 <div class="ttc" id="aclass_user_data_html"><div class="ttname"><a href="class_user_data.html">UserData</a></div><div class="ttdoc">Personalized data by the user.</div><div class="ttdef"><b>Definition:</b> userdata-bones.hpp:17</div></div>
 <div class="ttc" id="aclass_virus_html"><div class="ttname"><a href="class_virus.html">Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> virus-bones.hpp:24</div></div>
-<div class="ttc" id="astruct_action_html"><div class="ttname"><a href="struct_action.html">Action</a></div><div class="ttdoc">Action data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:120</div></div>
+<div class="ttc" id="astruct_event_html"><div class="ttname"><a href="struct_event.html">Event</a></div><div class="ttdoc">Event data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:120</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

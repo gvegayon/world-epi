@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>epiworld: epiworld::GlobalAction&lt; TSeq &gt; Class Template Reference</title>
+<title>epiworld: GlobalEvent&lt; TSeq &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,64 +60,60 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>epiworld</b></li><li class="navelem"><a class="el" href="classepiworld_1_1_global_action.html">GlobalAction</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classepiworld_1_1_global_action-members.html">List of all members</a>  </div>
+<a href="class_global_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">epiworld::GlobalAction&lt; TSeq &gt; Class Template Reference</div>  </div>
+<div class="title">GlobalEvent&lt; TSeq &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Template for a Global <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a>.  
- <a href="classepiworld_1_1_global_action.html#details">More...</a></p>
+<p>Template for a Global <a class="el" href="struct_event.html" title="Event data for update an agent.">Event</a>.  
+ <a href="class_global_event.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="globalevent-bones_8hpp_source.html">globalevent-bones.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a328ad5e76c2bb00fdd9fece5be8ca35c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_global_action.html#a328ad5e76c2bb00fdd9fece5be8ca35c">GlobalAction</a> (GlobalFun&lt; TSeq &gt; fun, std::string name, int day=-99)</td></tr>
-<tr class="memdesc:a328ad5e76c2bb00fdd9fece5be8ca35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Global <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a> object.  <a href="classepiworld_1_1_global_action.html#a328ad5e76c2bb00fdd9fece5be8ca35c">More...</a><br /></td></tr>
-<tr class="separator:a328ad5e76c2bb00fdd9fece5be8ca35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6348682086ac112578996d258bf403d"><td class="memItemLeft" align="right" valign="top"><a id="af6348682086ac112578996d258bf403d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m, int day)</td></tr>
-<tr class="separator:af6348682086ac112578996d258bf403d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adba22614d20b004d54dbfd824d1d2c36"><td class="memItemLeft" align="right" valign="top"><a id="adba22614d20b004d54dbfd824d1d2c36"></a>
+<tr class="memitem:adcf23ab92de3942e2b9a78a619f3f82a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_event.html#adcf23ab92de3942e2b9a78a619f3f82a">GlobalEvent</a> (GlobalFun&lt; TSeq &gt; fun, std::string name, int day=-99)</td></tr>
+<tr class="memdesc:adcf23ab92de3942e2b9a78a619f3f82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Global <a class="el" href="struct_event.html" title="Event data for update an agent.">Event</a> object.  <a href="class_global_event.html#adcf23ab92de3942e2b9a78a619f3f82a">More...</a><br /></td></tr>
+<tr class="separator:adcf23ab92de3942e2b9a78a619f3f82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337964e8a2bef3344f62c6412739730d"><td class="memItemLeft" align="right" valign="top"><a id="a337964e8a2bef3344f62c6412739730d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *m, int day)</td></tr>
+<tr class="separator:a337964e8a2bef3344f62c6412739730d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6298b7c0c3cac3d4e464ca1b9d023b"><td class="memItemLeft" align="right" valign="top"><a id="a9b6298b7c0c3cac3d4e464ca1b9d023b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_name</b> (std::string name)</td></tr>
-<tr class="separator:adba22614d20b004d54dbfd824d1d2c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7442b76ead5e57b2ea6ba8e5e80b58f3"><td class="memItemLeft" align="right" valign="top"><a id="a7442b76ead5e57b2ea6ba8e5e80b58f3"></a>
+<tr class="separator:a9b6298b7c0c3cac3d4e464ca1b9d023b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f817b45941cd5848b3746f250e33904"><td class="memItemLeft" align="right" valign="top"><a id="a1f817b45941cd5848b3746f250e33904"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> () const</td></tr>
-<tr class="separator:a7442b76ead5e57b2ea6ba8e5e80b58f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be69814e822ca6752efc52f196a3a8a"><td class="memItemLeft" align="right" valign="top"><a id="a4be69814e822ca6752efc52f196a3a8a"></a>
+<tr class="separator:a1f817b45941cd5848b3746f250e33904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf054e3094241fc08e42f1268a8258cb"><td class="memItemLeft" align="right" valign="top"><a id="abf054e3094241fc08e42f1268a8258cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_day</b> (int day)</td></tr>
-<tr class="separator:a4be69814e822ca6752efc52f196a3a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb57e22988de1ec144bbbce8a4126735"><td class="memItemLeft" align="right" valign="top"><a id="abb57e22988de1ec144bbbce8a4126735"></a>
+<tr class="separator:abf054e3094241fc08e42f1268a8258cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a7d3dd7d50a5b41f55269a7164967b"><td class="memItemLeft" align="right" valign="top"><a id="ae2a7d3dd7d50a5b41f55269a7164967b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_day</b> () const</td></tr>
-<tr class="separator:abb57e22988de1ec144bbbce8a4126735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e46429ec96c4de2f6c7e7821d89619"><td class="memItemLeft" align="right" valign="top"><a id="a86e46429ec96c4de2f6c7e7821d89619"></a>
+<tr class="separator:ae2a7d3dd7d50a5b41f55269a7164967b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260f9cde741f890e3af4eff503117fa6"><td class="memItemLeft" align="right" valign="top"><a id="a260f9cde741f890e3af4eff503117fa6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> () const</td></tr>
-<tr class="separator:a86e46429ec96c4de2f6c7e7821d89619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea0ae82b28d7fdbba7bb08cd5400890d"><td class="memItemLeft" align="right" valign="top"><a id="aea0ae82b28d7fdbba7bb08cd5400890d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classepiworld_1_1_global_action.html">GlobalAction</a>&lt; TSeq &gt; &amp;other) const</td></tr>
-<tr class="separator:aea0ae82b28d7fdbba7bb08cd5400890d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dfd690cf2ffa84186d168654cc65943"><td class="memItemLeft" align="right" valign="top"><a id="a1dfd690cf2ffa84186d168654cc65943"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classepiworld_1_1_global_action.html">GlobalAction</a>&lt; TSeq &gt; &amp;other) const</td></tr>
-<tr class="separator:a1dfd690cf2ffa84186d168654cc65943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a260f9cde741f890e3af4eff503117fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb8bf6aae3a76aebd7fc748048173e0"><td class="memItemLeft" align="right" valign="top"><a id="a4cb8bf6aae3a76aebd7fc748048173e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_global_event.html">GlobalEvent</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:a4cb8bf6aae3a76aebd7fc748048173e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8860915bb244bd6c2ab7359fa4018dc"><td class="memItemLeft" align="right" valign="top"><a id="ad8860915bb244bd6c2ab7359fa4018dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_global_event.html">GlobalEvent</a>&lt; TSeq &gt; &amp;other) const</td></tr>
+<tr class="separator:ad8860915bb244bd6c2ab7359fa4018dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename TSeq&gt;<br />
-class epiworld::GlobalAction&lt; TSeq &gt;</h3>
+class GlobalEvent&lt; TSeq &gt;</h3>
 
-<p>Template for a Global <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a>. </p>
-<p>Global actions are functions that Model&lt;TSeq&gt; executes at the end of a day. </p>
+<p>Template for a Global <a class="el" href="struct_event.html" title="Event data for update an agent.">Event</a>. </p>
+<p>Global events are functions that Model&lt;TSeq&gt; executes at the end of a day. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a328ad5e76c2bb00fdd9fece5be8ca35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a328ad5e76c2bb00fdd9fece5be8ca35c">&#9670;&nbsp;</a></span>GlobalAction()</h2>
+<a id="adcf23ab92de3942e2b9a78a619f3f82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf23ab92de3942e2b9a78a619f3f82a">&#9670;&nbsp;</a></span>GlobalEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +124,7 @@ template&lt;typename TSeq &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classepiworld_1_1_global_action.html">GlobalAction</a>&lt; TSeq &gt;::<a class="el" href="classepiworld_1_1_global_action.html">GlobalAction</a> </td>
+          <td class="memname"><a class="el" href="class_global_event.html">GlobalEvent</a>&lt; TSeq &gt;::<a class="el" href="class_global_event.html">GlobalEvent</a> </td>
           <td>(</td>
           <td class="paramtype">GlobalFun&lt; TSeq &gt;&#160;</td>
           <td class="paramname"><em>fun</em>, </td>
@@ -158,7 +154,7 @@ template&lt;typename TSeq &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new Global <a class="el" href="structepiworld_1_1_action.html" title="Action data for update an agent.">Action</a> object. </p>
+<p>Construct a new Global <a class="el" href="struct_event.html" title="Event data for update an agent.">Event</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fun</td><td>A function that takes a Model&lt;TSeq&gt; * as argument and returns void. </td></tr>
@@ -170,8 +166,9 @@ template&lt;typename TSeq &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>include/epiworld/<a class="el" href="globalevent-bones_8hpp_source.html">globalevent-bones.hpp</a></li>
+<li>include/epiworld/<a class="el" href="globalevent-meat_8hpp_source.html">globalevent-meat.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

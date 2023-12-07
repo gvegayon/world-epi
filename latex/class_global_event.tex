@@ -1,0 +1,77 @@
+\hypertarget{class_global_event}{}\doxysection{Global\+Event$<$ TSeq $>$ Class Template Reference}
+\label{class_global_event}\index{GlobalEvent$<$ TSeq $>$@{GlobalEvent$<$ TSeq $>$}}
+
+
+Template for a Global \mbox{\hyperlink{struct_event}{Event}}.  
+
+
+
+
+{\ttfamily \#include $<$globalevent-\/bones.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_global_event_adcf23ab92de3942e2b9a78a619f3f82a}{Global\+Event}} (Global\+Fun$<$ TSeq $>$ fun, std\+::string name, int day=-\/99)
+\begin{DoxyCompactList}\small\item\em Construct a new Global \mbox{\hyperlink{struct_event}{Event}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_global_event_a337964e8a2bef3344f62c6412739730d}\label{class_global_event_a337964e8a2bef3344f62c6412739730d}} 
+void {\bfseries operator()} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$m, int day)
+\item 
+\mbox{\Hypertarget{class_global_event_a9b6298b7c0c3cac3d4e464ca1b9d023b}\label{class_global_event_a9b6298b7c0c3cac3d4e464ca1b9d023b}} 
+void {\bfseries set\+\_\+name} (std\+::string name)
+\item 
+\mbox{\Hypertarget{class_global_event_a1f817b45941cd5848b3746f250e33904}\label{class_global_event_a1f817b45941cd5848b3746f250e33904}} 
+std\+::string {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_global_event_abf054e3094241fc08e42f1268a8258cb}\label{class_global_event_abf054e3094241fc08e42f1268a8258cb}} 
+void {\bfseries set\+\_\+day} (int day)
+\item 
+\mbox{\Hypertarget{class_global_event_ae2a7d3dd7d50a5b41f55269a7164967b}\label{class_global_event_ae2a7d3dd7d50a5b41f55269a7164967b}} 
+int {\bfseries get\+\_\+day} () const
+\item 
+\mbox{\Hypertarget{class_global_event_a260f9cde741f890e3af4eff503117fa6}\label{class_global_event_a260f9cde741f890e3af4eff503117fa6}} 
+void {\bfseries print} () const
+\item 
+\mbox{\Hypertarget{class_global_event_a4cb8bf6aae3a76aebd7fc748048173e0}\label{class_global_event_a4cb8bf6aae3a76aebd7fc748048173e0}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_global_event}{Global\+Event}}$<$ TSeq $>$ \&other) const
+\item 
+\mbox{\Hypertarget{class_global_event_ad8860915bb244bd6c2ab7359fa4018dc}\label{class_global_event_ad8860915bb244bd6c2ab7359fa4018dc}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_global_event}{Global\+Event}}$<$ TSeq $>$ \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq$>$\newline
+class Global\+Event$<$ TSeq $>$}
+
+Template for a Global \mbox{\hyperlink{struct_event}{Event}}. 
+
+Global events are functions that Model$<$\+TSeq$>$ executes at the end of a day. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_global_event_adcf23ab92de3942e2b9a78a619f3f82a}\label{class_global_event_adcf23ab92de3942e2b9a78a619f3f82a}} 
+\index{GlobalEvent$<$ TSeq $>$@{GlobalEvent$<$ TSeq $>$}!GlobalEvent@{GlobalEvent}}
+\index{GlobalEvent@{GlobalEvent}!GlobalEvent$<$ TSeq $>$@{GlobalEvent$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{GlobalEvent()}{GlobalEvent()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_global_event}{Global\+Event}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_global_event}{Global\+Event}} (\begin{DoxyParamCaption}\item[{Global\+Fun$<$ TSeq $>$}]{fun,  }\item[{std\+::string}]{name,  }\item[{int}]{day = {\ttfamily -\/99} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Global \mbox{\hyperlink{struct_event}{Event}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fun} & A function that takes a Model$<$\+TSeq$>$ $\ast$ as argument and returns void. \\
+\hline
+{\em name} & A descriptive name for the action. \\
+\hline
+{\em day} & The day when the action will be executed. If negative, it will be executed every day. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/epiworld/globalevent-\/bones.\+hpp\item 
+include/epiworld/globalevent-\/meat.\+hpp\end{DoxyCompactItemize}
