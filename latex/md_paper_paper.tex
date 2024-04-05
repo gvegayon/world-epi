@@ -1,0 +1,108 @@
+simulations George G. Vega Yon, Ph.\+D. 2024-\/04-\/05
+
+{\ttfamily epiworld} is a fast and flexible agent-\/based modeling (ABM) framework for epidemiological simulations. Designed in C++, it can simulate large populations with complex interactions. The framework is designed to be modular, allowing users to extend and modify the model to suit their needs quickly.\hypertarget{md_paper_paper_autotoc_md27}{}\doxysection{Features}\label{md_paper_paper_autotoc_md27}
+{\bfseries{Header-\/only}}\+: epiworld is a header-\/only template library, making it easy to integrate into existing projects. It is distributed as a collection of files and as \href{https://github.com/UofUEpiBio/epiworld/blob/master/epiworld.hpp}{\texttt{ a single header file}}.
+
+{\bfseries{A framework}}\+: epiworld is designed to be a flexible framework for building epidemiological simulations. It provides a set of core components that can be easily extended and modified to suit the user’s needs.
+
+{\bfseries{Fast}}\+: epiworld is designed for speed. It is implemented in C++ and uses efficient data structures and algorithms to ensure simulations dash. Furthermore, epiworld is designed to take advantage of multi-\/core processors, allowing simulations to be run in parallel (see the \href{\#speed-benchmark}{\texttt{ benchmark section}} for more details).
+
+{\bfseries{Complex disease dynamics}}\+: epiworld supports complex disease dynamics, including the evolution of the disease over time. For instance, diseases can accumulate mutations.
+
+{\bfseries{Open-\/source}}\+: With funding from the Centers for Disease Control and Prevention \mbox{[}CDC\mbox{]}, epiworld is open-\/source and available under the MIT license, meaning it is entirely free. The source code is available on \href{https://github.com/UofUEpiBio/epiworld}{\texttt{ Git\+Hub}}.\hypertarget{md_paper_paper_autotoc_md28}{}\doxysection{Example use cases}\label{md_paper_paper_autotoc_md28}
+As a framework, {\ttfamily epiworld} can simulate various epidemiological scenarios. This section provides some possible use cases for the package\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Geographically informed models}}\+: With the ability to model complex interactions between agents, the library can simulate geographically informed models featuring multiple regions with different populations and individuals moving between regions.
+\item {\bfseries{Non-\/pharmaceutical interventions (NPIs)}}\+: The library has been used to simulate NPIs featuring masking and social distancing. Furthermore, its architecture allows for deploying interventions that are reactive to the model’s state, such as a mask mandate that only activates when the prevalence of the disease reaches a certain threshold.
+\item {\bfseries{Vaccination strategies}}\+: The library can simulate different vaccination strategies, including prioritizing certain groups for vaccination, varying the vaccination rate, and modeling the impact of vaccine hesitancy.
+\item {\bfseries{Disease evolution}}\+: The library can simulate the evolution of the disease over time, including the emergence of new variants and the impact of these variants on the spread of the disease.
+\item {\bfseries{Population comorbidities}}\+: The library can model the impact of population comorbidities on the spread of the disease, including how different comorbidities affect the transmission and severity of the disease.
+\end{DoxyItemize}\hypertarget{md_paper_paper_autotoc_md29}{}\doxysection{Appendix}\label{md_paper_paper_autotoc_md29}
+\hypertarget{md_paper_paper_autotoc_md30}{}\doxysubsection{Code example}\label{md_paper_paper_autotoc_md30}
+The following code snippet shows a simple example of how to use epiworld to simulate an epidemic, particularly the Susceptible-\/\+Infected-\/\+Recovered model \mbox{[}SIR\mbox{]}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include "{}epiworld.hpp"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{using namespace epiworld;}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // epiworld already comes with a couple}
+\DoxyCodeLine{    // of models, like the SIR}
+\DoxyCodeLine{    epimodels::ModelSIR<> hello(}
+\DoxyCodeLine{        "{}COVID-\/19"{}, // Name of the virus}
+\DoxyCodeLine{        0.01,        // Initial prevalence}
+\DoxyCodeLine{        0.9,        // Transmission probability}
+\DoxyCodeLine{        0.3         // Recovery probability}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // We can simulate agents using a small-\/world network}
+\DoxyCodeLine{    // with 100,000 individuals, in this case}
+\DoxyCodeLine{    hello.agents\_smallworld(100000, 4L, false, .01);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Running the model and printing the results}
+\DoxyCodeLine{    // Setting the number of days (100) and seed (122)}
+\DoxyCodeLine{    hello.run(100, 122);}
+\DoxyCodeLine{    hello.print();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The output could look something like the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\DoxyCodeLine{Running the model...}
+\DoxyCodeLine{||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| done.}
+\DoxyCodeLine{ done.}
+\DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\DoxyCodeLine{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\DoxyCodeLine{SIMULATION STUDY}
+\DoxyCodeLine{}
+\DoxyCodeLine{Name of the model   : Susceptible-\/Infected-\/Recovered (SIR)}
+\DoxyCodeLine{Population size     : 100000}
+\DoxyCodeLine{Agents' data        : (none)}
+\DoxyCodeLine{Number of entities  : 0}
+\DoxyCodeLine{Days (duration)     : 100 (of 100)}
+\DoxyCodeLine{Number of viruses   : 1}
+\DoxyCodeLine{Last run elapsed t  : 103.00ms}
+\DoxyCodeLine{Last run speed      : 96.34 million agents x day / second}
+\DoxyCodeLine{Rewiring            : off}
+\DoxyCodeLine{}
+\DoxyCodeLine{Global events:}
+\DoxyCodeLine{ (none)}
+\DoxyCodeLine{}
+\DoxyCodeLine{Virus(es):}
+\DoxyCodeLine{ -\/ COVID-\/19 (baseline prevalence: 1.00\%)}
+\DoxyCodeLine{}
+\DoxyCodeLine{Tool(s):}
+\DoxyCodeLine{ (none)}
+\DoxyCodeLine{}
+\DoxyCodeLine{Model parameters:}
+\DoxyCodeLine{ -\/ Recovery rate     : 0.3000}
+\DoxyCodeLine{ -\/ Transmission rate : 0.9000}
+\DoxyCodeLine{}
+\DoxyCodeLine{Distribution of the population at time 100:}
+\DoxyCodeLine{  -\/ (0) Susceptible :  99000 -\/> 2565}
+\DoxyCodeLine{  -\/ (1) Infected    :   1000 -\/> 366}
+\DoxyCodeLine{  -\/ (2) Recovered   :      0 -\/> 97069}
+\DoxyCodeLine{}
+\DoxyCodeLine{Transition Probabilities:}
+\DoxyCodeLine{ -\/ Susceptible  0.96  0.04  0.00}
+\DoxyCodeLine{ -\/ Infected     0.00  0.70  0.30}
+\DoxyCodeLine{ -\/ Recovered    0.00  0.00  1.00}
+
+\end{DoxyCode}
+\hypertarget{md_paper_paper_autotoc_md31}{}\doxysubsection{Speed benchmark}\label{md_paper_paper_autotoc_md31}
+\hypertarget{md_paper_paper_autotoc_md32}{}\doxysubsection{Implementation}\label{md_paper_paper_autotoc_md32}
+ 

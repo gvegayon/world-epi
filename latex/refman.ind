@@ -1,463 +1,464 @@
 \begin{theindex}
 
   \item {add\_globalevent}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{79}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{93}
-  \item {AdjList}, \hyperpage{35}
-    \subitem {AdjList}, \hyperpage{35}
-    \subitem {epiworld::AdjList}, \hyperpage{37}
-    \subitem {read\_edgelist}, \hyperpage{36}
-  \item {Agent$<$ TSeq $>$}, \hyperpage{38}
-    \subitem {default\_rm\_entity}, \hyperpage{41}
-    \subitem {operator()}, \hyperpage{40}
-    \subitem {swap\_neighbors}, \hyperpage{41}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+  \item {AdjList}, \hyperpage{39}
+    \subitem {AdjList}, \hyperpage{39}
+    \subitem {epiworld::AdjList}, \hyperpage{41}
+    \subitem {read\_edgelist}, \hyperpage{40}
+  \item {Agent$<$ TSeq $>$}, \hyperpage{42}
+    \subitem {default\_rm\_entity}, \hyperpage{45}
+    \subitem {operator()}, \hyperpage{44}
+    \subitem {swap\_neighbors}, \hyperpage{45}
   \item {AgentsSample}
-    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{46}
-    \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{48}
-  \item {AgentsSample$<$ TSeq $>$}, \hyperpage{45}
-    \subitem {AgentsSample}, \hyperpage{46}
+    \subitem {AgentsSample$<$ TSeq $>$}, \hyperpage{50}
+    \subitem {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{52}
+  \item {AgentsSample$<$ TSeq $>$}, \hyperpage{49}
+    \subitem {AgentsSample}, \hyperpage{50}
 
   \indexspace
 
   \item {clone\_ptr}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{109}
+		\hyperpage{113}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{124}
+		\hyperpage{128}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{134}
+		\hyperpage{138}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{144}
-    \subitem {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
-		\hyperpage{150}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{79}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{93}
-    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{112}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{127}
-    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{137}
-    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{147}
-    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{153}
-
-  \indexspace
-
-  \item {DataBase$<$ TSeq $>$}, \hyperpage{48}
-    \subitem {generation\_time}, \hyperpage{50}
-    \subitem {get\_transmissions}, \hyperpage{51}
-    \subitem {operator==}, \hyperpage{51, 52}
-    \subitem {record\_virus}, \hyperpage{52}
-    \subitem {reproductive\_number}, \hyperpage{52}
-    \subitem {transition\_probability}, \hyperpage{53}
-  \item {default\_rm\_entity}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{41}
-    \subitem {Entity$<$ TSeq $>$}, \hyperpage{61}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{45}
-    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{62}
-
-  \indexspace
-
-  \item {Entities$<$ TSeq $>$}, \hyperpage{57}
-  \item {Entities\_const$<$ TSeq $>$}, \hyperpage{59}
-  \item {Entity$<$ TSeq $>$}, \hyperpage{61}
-    \subitem {default\_rm\_entity}, \hyperpage{61}
-  \item {epiworld::AdjList}, \hyperpage{36}
-    \subitem {AdjList}, \hyperpage{37}
-    \subitem {read\_edgelist}, \hyperpage{37}
-  \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{42}
-    \subitem {default\_rm\_entity}, \hyperpage{45}
-    \subitem {operator()}, \hyperpage{44}
-    \subitem {swap\_neighbors}, \hyperpage{44}
-  \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{47}
-    \subitem {AgentsSample}, \hyperpage{48}
-  \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{53}
-    \subitem {generation\_time}, \hyperpage{55}
-    \subitem {get\_transmissions}, \hyperpage{56}
-    \subitem {operator==}, \hyperpage{56}
-    \subitem {record\_virus}, \hyperpage{56}
-    \subitem {reproductive\_number}, \hyperpage{57}
-    \subitem {transition\_probability}, \hyperpage{57}
-  \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{58}
-  \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{60}
-  \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{62}
-    \subitem {default\_rm\_entity}, \hyperpage{62}
-  \item {epiworld::epimodels::ModelDiffNet$<$ TSeq $>$}, \hyperpage{99}
-  \item {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, \hyperpage{102}
-    \subitem {initial\_states}, \hyperpage{104}
-    \subitem {update\_exposed\_seir}, \hyperpage{104}
-    \subitem {update\_infected\_seir}, \hyperpage{104}
-  \item {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{108}
-    \subitem {clone\_ptr}, \hyperpage{109}
-    \subitem {initial\_states}, \hyperpage{110}
-    \subitem {ModelSEIRCONN}, \hyperpage{109}
-    \subitem {reset}, \hyperpage{110}
-  \item {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, \hyperpage{115}
-    \subitem {ModelSEIRD}, \hyperpage{117, 118}
-    \subitem {update\_exposed\_seir}, \hyperpage{118}
-  \item {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{122}
-    \subitem {clone\_ptr}, \hyperpage{124}
-    \subitem {initial\_states}, \hyperpage{124}
-    \subitem {ModelSEIRDCONN}, \hyperpage{123}
-    \subitem {reset}, \hyperpage{124}
-  \item {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, \hyperpage{128}
-    \subitem {initial\_states}, \hyperpage{129}
-  \item {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{132}
-    \subitem {clone\_ptr}, \hyperpage{134}
-    \subitem {initial\_states}, \hyperpage{134}
-    \subitem {ModelSIRCONN}, \hyperpage{133}
-    \subitem {reset}, \hyperpage{134}
-  \item {epiworld::epimodels::ModelSIRD$<$ TSeq $>$}, \hyperpage{138}
-    \subitem {initial\_states}, \hyperpage{140}
-    \subitem {ModelSIRD}, \hyperpage{139}
-  \item {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{143}
-    \subitem {clone\_ptr}, \hyperpage{144}
-    \subitem {ModelSIRDCONN}, \hyperpage{144}
-    \subitem {reset}, \hyperpage{145}
-  \item {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
 		\hyperpage{148}
-    \subitem {clone\_ptr}, \hyperpage{150}
-    \subitem {ModelSIRLogit}, \hyperpage{149}
-    \subitem {reset}, \hyperpage{150}
-  \item {epiworld::epimodels::ModelSIS$<$ TSeq $>$}, \hyperpage{154}
-  \item {epiworld::epimodels::ModelSISD$<$ TSeq $>$}, \hyperpage{157}
-  \item {epiworld::epimodels::ModelSURV$<$ TSeq $>$}, \hyperpage{160}
-  \item {epiworld::Event$<$ TSeq $>$}, \hyperpage{63}
-    \subitem {Event}, \hyperpage{63}
-  \item {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{66}
-    \subitem {GlobalEvent}, \hyperpage{67}
-  \item {epiworld::LFMCMC$<$ TData $>$}, \hyperpage{68}
-  \item {epiworld::Model$<$ TSeq $>$}, \hyperpage{71}
-    \subitem {add\_globalevent}, \hyperpage{79}
-    \subitem {clone\_ptr}, \hyperpage{79}
-    \subitem {events\_add}, \hyperpage{80}
-    \subitem {events\_run}, \hyperpage{80}
-    \subitem {initial\_states\_fun}, \hyperpage{83}
-    \subitem {load\_agents\_entities\_ties}, \hyperpage{81}
-    \subitem {rbinomd}, \hyperpage{83}
-    \subitem {reset}, \hyperpage{81}
-    \subitem {rexpd}, \hyperpage{83}
-    \subitem {rgammad}, \hyperpage{83}
-    \subitem {rlognormald}, \hyperpage{84}
-    \subitem {rnormd}, \hyperpage{84}
-    \subitem {run\_multiple}, \hyperpage{81}
-    \subitem {runifd}, \hyperpage{84}
-    \subitem {set\_agents\_data}, \hyperpage{82}
-    \subitem {set\_name}, \hyperpage{82}
-    \subitem {time\_elapsed}, \hyperpage{84}
-    \subitem {write\_data}, \hyperpage{82}
-  \item {epiworld::PersonTools$<$ TSeq $>$}, \hyperpage{164}
-  \item {epiworld::Progress}, \hyperpage{164}
-  \item {epiworld::Queue$<$ TSeq $>$}, \hyperpage{165}
-  \item {epiworld::sampler}, \hyperpage{27}
-    \subitem {make\_sample\_virus\_neighbors}, \hyperpage{27}
-    \subitem {make\_update\_susceptible}, \hyperpage{28}
-    \subitem {sample\_virus\_single}, \hyperpage{28}
-  \item {epiworld::SAMPLETYPE}, \hyperpage{167}
-  \item {epiworld::Tool$<$ TSeq $>$}, \hyperpage{168}
-  \item {epiworld::Tools$<$ TSeq $>$}, \hyperpage{171}
-  \item {epiworld::Tools\_const$<$ TSeq $>$}, \hyperpage{173}
-  \item {epiworld::UserData$<$ TSeq $>$}, \hyperpage{174}
-    \subitem {UserData}, \hyperpage{176}
-  \item {epiworld::vecHasher$<$ T $>$}, \hyperpage{178}
-  \item {epiworld::Virus$<$ TSeq $>$}, \hyperpage{179}
-  \item {epiworld::Viruses$<$ TSeq $>$}, \hyperpage{183}
-  \item {epiworld::Viruses\_const$<$ TSeq $>$}, \hyperpage{184}
+    \subitem {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
+		\hyperpage{154}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{116}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{131}
+    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{141}
+    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{151}
+    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{157}
+
+  \indexspace
+
+  \item {DataBase$<$ TSeq $>$}, \hyperpage{52}
+    \subitem {generation\_time}, \hyperpage{54}
+    \subitem {get\_transmissions}, \hyperpage{55}
+    \subitem {operator==}, \hyperpage{55, 56}
+    \subitem {record\_virus}, \hyperpage{56}
+    \subitem {reproductive\_number}, \hyperpage{56}
+    \subitem {transition\_probability}, \hyperpage{57}
+  \item {default\_rm\_entity}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{45}
+    \subitem {Entity$<$ TSeq $>$}, \hyperpage{65}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{49}
+    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{66}
+
+  \indexspace
+
+  \item {Entities$<$ TSeq $>$}, \hyperpage{61}
+  \item {Entities\_const$<$ TSeq $>$}, \hyperpage{63}
+  \item {Entity$<$ TSeq $>$}, \hyperpage{65}
+    \subitem {default\_rm\_entity}, \hyperpage{65}
+  \item {epiworld::AdjList}, \hyperpage{40}
+    \subitem {AdjList}, \hyperpage{41}
+    \subitem {read\_edgelist}, \hyperpage{41}
+  \item {epiworld::Agent$<$ TSeq $>$}, \hyperpage{46}
+    \subitem {default\_rm\_entity}, \hyperpage{49}
+    \subitem {operator()}, \hyperpage{48}
+    \subitem {swap\_neighbors}, \hyperpage{48}
+  \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{51}
+    \subitem {AgentsSample}, \hyperpage{52}
+  \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {generation\_time}, \hyperpage{59}
+    \subitem {get\_transmissions}, \hyperpage{60}
+    \subitem {operator==}, \hyperpage{60}
+    \subitem {record\_virus}, \hyperpage{60}
+    \subitem {reproductive\_number}, \hyperpage{61}
+    \subitem {transition\_probability}, \hyperpage{61}
+  \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{62}
+  \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{64}
+  \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{66}
+    \subitem {default\_rm\_entity}, \hyperpage{66}
+  \item {epiworld::epimodels::ModelDiffNet$<$ TSeq $>$}, 
+		\hyperpage{103}
+  \item {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, \hyperpage{106}
+    \subitem {initial\_states}, \hyperpage{108}
+    \subitem {update\_exposed\_seir}, \hyperpage{108}
+    \subitem {update\_infected\_seir}, \hyperpage{108}
+  \item {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
+		\hyperpage{112}
+    \subitem {clone\_ptr}, \hyperpage{113}
+    \subitem {initial\_states}, \hyperpage{114}
+    \subitem {ModelSEIRCONN}, \hyperpage{113}
+    \subitem {reset}, \hyperpage{114}
+  \item {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, \hyperpage{119}
+    \subitem {ModelSEIRD}, \hyperpage{121, 122}
+    \subitem {update\_exposed\_seir}, \hyperpage{122}
+  \item {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
+		\hyperpage{126}
+    \subitem {clone\_ptr}, \hyperpage{128}
+    \subitem {initial\_states}, \hyperpage{128}
+    \subitem {ModelSEIRDCONN}, \hyperpage{127}
+    \subitem {reset}, \hyperpage{128}
+  \item {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, \hyperpage{132}
+    \subitem {initial\_states}, \hyperpage{133}
+  \item {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
+		\hyperpage{136}
+    \subitem {clone\_ptr}, \hyperpage{138}
+    \subitem {initial\_states}, \hyperpage{138}
+    \subitem {ModelSIRCONN}, \hyperpage{137}
+    \subitem {reset}, \hyperpage{138}
+  \item {epiworld::epimodels::ModelSIRD$<$ TSeq $>$}, \hyperpage{142}
+    \subitem {initial\_states}, \hyperpage{144}
+    \subitem {ModelSIRD}, \hyperpage{143}
+  \item {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
+		\hyperpage{147}
+    \subitem {clone\_ptr}, \hyperpage{148}
+    \subitem {ModelSIRDCONN}, \hyperpage{148}
+    \subitem {reset}, \hyperpage{149}
+  \item {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
+		\hyperpage{152}
+    \subitem {clone\_ptr}, \hyperpage{154}
+    \subitem {ModelSIRLogit}, \hyperpage{153}
+    \subitem {reset}, \hyperpage{154}
+  \item {epiworld::epimodels::ModelSIS$<$ TSeq $>$}, \hyperpage{158}
+  \item {epiworld::epimodels::ModelSISD$<$ TSeq $>$}, \hyperpage{161}
+  \item {epiworld::epimodels::ModelSURV$<$ TSeq $>$}, \hyperpage{164}
+  \item {epiworld::Event$<$ TSeq $>$}, \hyperpage{67}
+    \subitem {Event}, \hyperpage{67}
+  \item {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
+    \subitem {GlobalEvent}, \hyperpage{71}
+  \item {epiworld::LFMCMC$<$ TData $>$}, \hyperpage{72}
+  \item {epiworld::Model$<$ TSeq $>$}, \hyperpage{75}
+    \subitem {add\_globalevent}, \hyperpage{83}
+    \subitem {clone\_ptr}, \hyperpage{83}
+    \subitem {events\_add}, \hyperpage{84}
+    \subitem {events\_run}, \hyperpage{84}
+    \subitem {initial\_states\_fun}, \hyperpage{87}
+    \subitem {load\_agents\_entities\_ties}, \hyperpage{85}
+    \subitem {rbinomd}, \hyperpage{87}
+    \subitem {reset}, \hyperpage{85}
+    \subitem {rexpd}, \hyperpage{87}
+    \subitem {rgammad}, \hyperpage{87}
+    \subitem {rlognormald}, \hyperpage{88}
+    \subitem {rnormd}, \hyperpage{88}
+    \subitem {run\_multiple}, \hyperpage{85}
+    \subitem {runifd}, \hyperpage{88}
+    \subitem {set\_agents\_data}, \hyperpage{86}
+    \subitem {set\_name}, \hyperpage{86}
+    \subitem {time\_elapsed}, \hyperpage{88}
+    \subitem {write\_data}, \hyperpage{86}
+  \item {epiworld::PersonTools$<$ TSeq $>$}, \hyperpage{168}
+  \item {epiworld::Progress}, \hyperpage{168}
+  \item {epiworld::Queue$<$ TSeq $>$}, \hyperpage{169}
+  \item {epiworld::sampler}, \hyperpage{31}
+    \subitem {make\_sample\_virus\_neighbors}, \hyperpage{31}
+    \subitem {make\_update\_susceptible}, \hyperpage{32}
+    \subitem {sample\_virus\_single}, \hyperpage{32}
+  \item {epiworld::SAMPLETYPE}, \hyperpage{171}
+  \item {epiworld::Tool$<$ TSeq $>$}, \hyperpage{172}
+  \item {epiworld::Tools$<$ TSeq $>$}, \hyperpage{175}
+  \item {epiworld::Tools\_const$<$ TSeq $>$}, \hyperpage{177}
+  \item {epiworld::UserData$<$ TSeq $>$}, \hyperpage{178}
+    \subitem {UserData}, \hyperpage{180}
+  \item {epiworld::vecHasher$<$ T $>$}, \hyperpage{182}
+  \item {epiworld::Virus$<$ TSeq $>$}, \hyperpage{183}
+  \item {epiworld::Viruses$<$ TSeq $>$}, \hyperpage{187}
+  \item {epiworld::Viruses\_const$<$ TSeq $>$}, \hyperpage{188}
   \item {Event}
-    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{63}
-    \subitem {Event$<$ TSeq $>$}, \hyperpage{65}
-  \item {Event$<$ TSeq $>$}, \hyperpage{64}
-    \subitem {Event}, \hyperpage{65}
+    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{67}
+    \subitem {Event$<$ TSeq $>$}, \hyperpage{69}
+  \item {Event$<$ TSeq $>$}, \hyperpage{68}
+    \subitem {Event}, \hyperpage{69}
   \item {events\_add}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{80}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{94}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
   \item {events\_run}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{80}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{94}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
 
   \indexspace
 
   \item {generation\_time}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{50}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{55}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{54}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{59}
   \item {get\_transmissions}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{51}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{56}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{55}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{60}
   \item {GlobalEvent}
-    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{67}
-    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{68}
-  \item {GlobalEvent$<$ TSeq $>$}, \hyperpage{67}
-    \subitem {GlobalEvent}, \hyperpage{68}
+    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{71}
+    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{72}
+  \item {GlobalEvent$<$ TSeq $>$}, \hyperpage{71}
+    \subitem {GlobalEvent}, \hyperpage{72}
 
   \indexspace
 
-  \item {include/epiworld/agent-\/meat-\/state.hpp}, \hyperpage{187}
+  \item {include/epiworld/agent-\/meat-\/state.hpp}, \hyperpage{191}
   \item {initial\_states}
     \subitem {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, 
-		\hyperpage{104}
+		\hyperpage{108}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{110}
+		\hyperpage{114}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{124}
+		\hyperpage{128}
     \subitem {epiworld::epimodels::ModelSIR$<$ TSeq $>$}, 
-		\hyperpage{129}
+		\hyperpage{133}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{134}
+		\hyperpage{138}
     \subitem {epiworld::epimodels::ModelSIRD$<$ TSeq $>$}, 
-		\hyperpage{140}
-    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{106}
-    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{113}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{127}
-    \subitem {ModelSIR$<$ TSeq $>$}, \hyperpage{131}
-    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{137}
-    \subitem {ModelSIRD$<$ TSeq $>$}, \hyperpage{142}
+		\hyperpage{144}
+    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{110}
+    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{117}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{131}
+    \subitem {ModelSIR$<$ TSeq $>$}, \hyperpage{135}
+    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{141}
+    \subitem {ModelSIRD$<$ TSeq $>$}, \hyperpage{146}
   \item {initial\_states\_fun}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{101}
 
   \indexspace
 
-  \item {LFMCMC$<$ TData $>$}, \hyperpage{69}
+  \item {LFMCMC$<$ TData $>$}, \hyperpage{73}
   \item {load\_agents\_entities\_ties}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{81}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{94}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
 
   \indexspace
 
   \item {make\_sample\_virus\_neighbors}
-    \subitem {epiworld::sampler}, \hyperpage{27}
-    \subitem {sampler}, \hyperpage{30}
+    \subitem {epiworld::sampler}, \hyperpage{31}
+    \subitem {sampler}, \hyperpage{34}
   \item {make\_update\_susceptible}
-    \subitem {epiworld::sampler}, \hyperpage{28}
-    \subitem {sampler}, \hyperpage{31}
-  \item {Model$<$ TSeq $>$}, \hyperpage{85}
-    \subitem {add\_globalevent}, \hyperpage{93}
-    \subitem {clone\_ptr}, \hyperpage{93}
-    \subitem {events\_add}, \hyperpage{94}
-    \subitem {events\_run}, \hyperpage{94}
-    \subitem {initial\_states\_fun}, \hyperpage{97}
-    \subitem {load\_agents\_entities\_ties}, \hyperpage{94}
-    \subitem {rbinomd}, \hyperpage{97}
-    \subitem {reset}, \hyperpage{95}
-    \subitem {rexpd}, \hyperpage{97}
-    \subitem {rgammad}, \hyperpage{97}
-    \subitem {rlognormald}, \hyperpage{98}
-    \subitem {rnormd}, \hyperpage{98}
-    \subitem {run\_multiple}, \hyperpage{95}
-    \subitem {runifd}, \hyperpage{98}
-    \subitem {set\_agents\_data}, \hyperpage{96}
-    \subitem {set\_name}, \hyperpage{96}
-    \subitem {time\_elapsed}, \hyperpage{98}
-    \subitem {write\_data}, \hyperpage{96}
-  \item {ModelDiffNet$<$ TSeq $>$}, \hyperpage{100}
-  \item {ModelSEIR$<$ TSeq $>$}, \hyperpage{105}
-    \subitem {initial\_states}, \hyperpage{106}
-    \subitem {update\_exposed\_seir}, \hyperpage{107}
-    \subitem {update\_infected\_seir}, \hyperpage{107}
+    \subitem {epiworld::sampler}, \hyperpage{32}
+    \subitem {sampler}, \hyperpage{35}
+  \item {Model$<$ TSeq $>$}, \hyperpage{89}
+    \subitem {add\_globalevent}, \hyperpage{97}
+    \subitem {clone\_ptr}, \hyperpage{97}
+    \subitem {events\_add}, \hyperpage{98}
+    \subitem {events\_run}, \hyperpage{98}
+    \subitem {initial\_states\_fun}, \hyperpage{101}
+    \subitem {load\_agents\_entities\_ties}, \hyperpage{98}
+    \subitem {rbinomd}, \hyperpage{101}
+    \subitem {reset}, \hyperpage{99}
+    \subitem {rexpd}, \hyperpage{101}
+    \subitem {rgammad}, \hyperpage{101}
+    \subitem {rlognormald}, \hyperpage{102}
+    \subitem {rnormd}, \hyperpage{102}
+    \subitem {run\_multiple}, \hyperpage{99}
+    \subitem {runifd}, \hyperpage{102}
+    \subitem {set\_agents\_data}, \hyperpage{100}
+    \subitem {set\_name}, \hyperpage{100}
+    \subitem {time\_elapsed}, \hyperpage{102}
+    \subitem {write\_data}, \hyperpage{100}
+  \item {ModelDiffNet$<$ TSeq $>$}, \hyperpage{104}
+  \item {ModelSEIR$<$ TSeq $>$}, \hyperpage{109}
+    \subitem {initial\_states}, \hyperpage{110}
+    \subitem {update\_exposed\_seir}, \hyperpage{111}
+    \subitem {update\_infected\_seir}, \hyperpage{111}
   \item {ModelSEIRCONN}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{109}
-    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{112}
-  \item {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{111}
-    \subitem {clone\_ptr}, \hyperpage{112}
-    \subitem {initial\_states}, \hyperpage{113}
-    \subitem {ModelSEIRCONN}, \hyperpage{112}
-    \subitem {reset}, \hyperpage{113}
+		\hyperpage{113}
+    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{116}
+  \item {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{115}
+    \subitem {clone\_ptr}, \hyperpage{116}
+    \subitem {initial\_states}, \hyperpage{117}
+    \subitem {ModelSEIRCONN}, \hyperpage{116}
+    \subitem {reset}, \hyperpage{117}
   \item {ModelSEIRCONNLogit}
-    \subitem {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{115}
-  \item {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{114}
-    \subitem {ModelSEIRCONNLogit}, \hyperpage{115}
+    \subitem {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{119}
+  \item {ModelSEIRCONNLogit$<$ TSeq $>$}, \hyperpage{118}
+    \subitem {ModelSEIRCONNLogit}, \hyperpage{119}
   \item {ModelSEIRD}
     \subitem {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, 
-		\hyperpage{117, 118}
-    \subitem {ModelSEIRD$<$ TSeq $>$}, \hyperpage{120, 121}
-  \item {ModelSEIRD$<$ TSeq $>$}, \hyperpage{119}
-    \subitem {ModelSEIRD}, \hyperpage{120, 121}
-    \subitem {update\_exposed\_seir}, \hyperpage{121}
+		\hyperpage{121, 122}
+    \subitem {ModelSEIRD$<$ TSeq $>$}, \hyperpage{124, 125}
+  \item {ModelSEIRD$<$ TSeq $>$}, \hyperpage{123}
+    \subitem {ModelSEIRD}, \hyperpage{124, 125}
+    \subitem {update\_exposed\_seir}, \hyperpage{125}
   \item {ModelSEIRDCONN}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{123}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{126}
-  \item {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{125}
-    \subitem {clone\_ptr}, \hyperpage{127}
-    \subitem {initial\_states}, \hyperpage{127}
-    \subitem {ModelSEIRDCONN}, \hyperpage{126}
-    \subitem {reset}, \hyperpage{128}
-  \item {ModelSIR$<$ TSeq $>$}, \hyperpage{130}
+		\hyperpage{127}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{130}
+  \item {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{129}
+    \subitem {clone\_ptr}, \hyperpage{131}
     \subitem {initial\_states}, \hyperpage{131}
+    \subitem {ModelSEIRDCONN}, \hyperpage{130}
+    \subitem {reset}, \hyperpage{132}
+  \item {ModelSIR$<$ TSeq $>$}, \hyperpage{134}
+    \subitem {initial\_states}, \hyperpage{135}
   \item {ModelSIRCONN}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{133}
-    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{136}
-  \item {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{135}
-    \subitem {clone\_ptr}, \hyperpage{137}
-    \subitem {initial\_states}, \hyperpage{137}
-    \subitem {ModelSIRCONN}, \hyperpage{136}
-    \subitem {reset}, \hyperpage{137}
+		\hyperpage{137}
+    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{140}
+  \item {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{139}
+    \subitem {clone\_ptr}, \hyperpage{141}
+    \subitem {initial\_states}, \hyperpage{141}
+    \subitem {ModelSIRCONN}, \hyperpage{140}
+    \subitem {reset}, \hyperpage{141}
   \item {ModelSIRD}
     \subitem {epiworld::epimodels::ModelSIRD$<$ TSeq $>$}, 
-		\hyperpage{139}
-    \subitem {ModelSIRD$<$ TSeq $>$}, \hyperpage{141}
-  \item {ModelSIRD$<$ TSeq $>$}, \hyperpage{140}
-    \subitem {initial\_states}, \hyperpage{142}
-    \subitem {ModelSIRD}, \hyperpage{141}
+		\hyperpage{143}
+    \subitem {ModelSIRD$<$ TSeq $>$}, \hyperpage{145}
+  \item {ModelSIRD$<$ TSeq $>$}, \hyperpage{144}
+    \subitem {initial\_states}, \hyperpage{146}
+    \subitem {ModelSIRD}, \hyperpage{145}
   \item {ModelSIRDCONN}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{144}
-    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{146}
-  \item {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{145}
-    \subitem {clone\_ptr}, \hyperpage{147}
-    \subitem {ModelSIRDCONN}, \hyperpage{146}
-    \subitem {reset}, \hyperpage{147}
+		\hyperpage{148}
+    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{150}
+  \item {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{149}
+    \subitem {clone\_ptr}, \hyperpage{151}
+    \subitem {ModelSIRDCONN}, \hyperpage{150}
+    \subitem {reset}, \hyperpage{151}
   \item {ModelSIRLogit}
     \subitem {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
-		\hyperpage{149}
-    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{152}
-  \item {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{151}
-    \subitem {clone\_ptr}, \hyperpage{153}
-    \subitem {ModelSIRLogit}, \hyperpage{152}
-    \subitem {reset}, \hyperpage{153}
-  \item {ModelSIS$<$ TSeq $>$}, \hyperpage{155}
-  \item {ModelSISD$<$ TSeq $>$}, \hyperpage{158}
-  \item {ModelSURV$<$ TSeq $>$}, \hyperpage{162}
+		\hyperpage{153}
+    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{156}
+  \item {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{155}
+    \subitem {clone\_ptr}, \hyperpage{157}
+    \subitem {ModelSIRLogit}, \hyperpage{156}
+    \subitem {reset}, \hyperpage{157}
+  \item {ModelSIS$<$ TSeq $>$}, \hyperpage{159}
+  \item {ModelSISD$<$ TSeq $>$}, \hyperpage{162}
+  \item {ModelSURV$<$ TSeq $>$}, \hyperpage{166}
 
   \indexspace
 
-  \item {Network$<$ Nettype, Nodetype, Edgetype $>$}, \hyperpage{164}
+  \item {Network$<$ Nettype, Nodetype, Edgetype $>$}, \hyperpage{168}
 
   \indexspace
 
   \item {operator()}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{40}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{44}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{44}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
   \item {operator==}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{51, 52}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{56}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{55, 56}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{60}
 
   \indexspace
 
-  \item {PersonTools$<$ TSeq $>$}, \hyperpage{164}
-  \item {Progress}, \hyperpage{165}
+  \item {PersonTools$<$ TSeq $>$}, \hyperpage{168}
+  \item {Progress}, \hyperpage{169}
 
   \indexspace
 
-  \item {Queue$<$ TSeq $>$}, \hyperpage{166}
+  \item {Queue$<$ TSeq $>$}, \hyperpage{170}
 
   \indexspace
 
-  \item {RandGraph}, \hyperpage{167}
+  \item {RandGraph}, \hyperpage{171}
   \item {rbinomd}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{101}
   \item {read\_edgelist}
-    \subitem {AdjList}, \hyperpage{36}
-    \subitem {epiworld::AdjList}, \hyperpage{37}
+    \subitem {AdjList}, \hyperpage{40}
+    \subitem {epiworld::AdjList}, \hyperpage{41}
   \item {record\_virus}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{52}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{56}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{56}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{60}
   \item {reproductive\_number}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{52}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{56}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{61}
   \item {reset}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
-		\hyperpage{110}
+		\hyperpage{114}
     \subitem {epiworld::epimodels::ModelSEIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{124}
+		\hyperpage{128}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
-		\hyperpage{134}
+		\hyperpage{138}
     \subitem {epiworld::epimodels::ModelSIRDCONN$<$ TSeq $>$}, 
-		\hyperpage{145}
+		\hyperpage{149}
     \subitem {epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}, 
-		\hyperpage{150}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{81}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{95}
-    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{113}
-    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{128}
-    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{137}
-    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{147}
-    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{153}
+		\hyperpage{154}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
+    \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{117}
+    \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{132}
+    \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{141}
+    \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{151}
+    \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{157}
   \item {rexpd}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{101}
   \item {rgammad}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{97}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{101}
   \item {rlognormald}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{102}
   \item {rnormd}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{102}
   \item {run\_multiple}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{81}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{95}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
   \item {runifd}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{102}
 
   \indexspace
 
   \item {sample\_virus\_single}
-    \subitem {epiworld::sampler}, \hyperpage{28}
-    \subitem {sampler}, \hyperpage{31}
-  \item {sampler}, \hyperpage{30}
-    \subitem {make\_sample\_virus\_neighbors}, \hyperpage{30}
-    \subitem {make\_update\_susceptible}, \hyperpage{31}
-    \subitem {sample\_virus\_single}, \hyperpage{31}
-  \item {SAMPLETYPE}, \hyperpage{168}
+    \subitem {epiworld::sampler}, \hyperpage{32}
+    \subitem {sampler}, \hyperpage{35}
+  \item {sampler}, \hyperpage{34}
+    \subitem {make\_sample\_virus\_neighbors}, \hyperpage{34}
+    \subitem {make\_update\_susceptible}, \hyperpage{35}
+    \subitem {sample\_virus\_single}, \hyperpage{35}
+  \item {SAMPLETYPE}, \hyperpage{172}
   \item {set\_agents\_data}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{82}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{96}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{86}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{100}
   \item {set\_name}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{82}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{96}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{86}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{100}
   \item {swap\_neighbors}
-    \subitem {Agent$<$ TSeq $>$}, \hyperpage{41}
-    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{44}
+    \subitem {Agent$<$ TSeq $>$}, \hyperpage{45}
+    \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{48}
 
   \indexspace
 
   \item {time\_elapsed}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
-  \item {Tool$<$ TSeq $>$}, \hyperpage{169}
-  \item {Tools$<$ TSeq $>$}, \hyperpage{172}
-  \item {Tools\_const$<$ TSeq $>$}, \hyperpage{173}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{102}
+  \item {Tool$<$ TSeq $>$}, \hyperpage{173}
+  \item {Tools$<$ TSeq $>$}, \hyperpage{176}
+  \item {Tools\_const$<$ TSeq $>$}, \hyperpage{177}
   \item {transition\_probability}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{61}
 
   \indexspace
 
   \item {update\_exposed\_seir}
     \subitem {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, 
-		\hyperpage{104}
+		\hyperpage{108}
     \subitem {epiworld::epimodels::ModelSEIRD$<$ TSeq $>$}, 
-		\hyperpage{118}
-    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{107}
-    \subitem {ModelSEIRD$<$ TSeq $>$}, \hyperpage{121}
+		\hyperpage{122}
+    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{111}
+    \subitem {ModelSEIRD$<$ TSeq $>$}, \hyperpage{125}
   \item {update\_infected\_seir}
     \subitem {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, 
-		\hyperpage{104}
-    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{107}
+		\hyperpage{108}
+    \subitem {ModelSEIR$<$ TSeq $>$}, \hyperpage{111}
   \item {UserData}
-    \subitem {epiworld::UserData$<$ TSeq $>$}, \hyperpage{176}
-    \subitem {UserData$<$ TSeq $>$}, \hyperpage{177}
-  \item {UserData$<$ TSeq $>$}, \hyperpage{176}
-    \subitem {UserData}, \hyperpage{177}
+    \subitem {epiworld::UserData$<$ TSeq $>$}, \hyperpage{180}
+    \subitem {UserData$<$ TSeq $>$}, \hyperpage{181}
+  \item {UserData$<$ TSeq $>$}, \hyperpage{180}
+    \subitem {UserData}, \hyperpage{181}
 
   \indexspace
 
-  \item {vecHasher$<$ T $>$}, \hyperpage{178}
-  \item {Virus$<$ TSeq $>$}, \hyperpage{181}
-  \item {Viruses$<$ TSeq $>$}, \hyperpage{184}
-  \item {Viruses\_const$<$ TSeq $>$}, \hyperpage{185}
+  \item {vecHasher$<$ T $>$}, \hyperpage{182}
+  \item {Virus$<$ TSeq $>$}, \hyperpage{185}
+  \item {Viruses$<$ TSeq $>$}, \hyperpage{188}
+  \item {Viruses\_const$<$ TSeq $>$}, \hyperpage{189}
 
   \indexspace
 
   \item {write\_data}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{82}
-    \subitem {Model$<$ TSeq $>$}, \hyperpage{96}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{86}
+    \subitem {Model$<$ TSeq $>$}, \hyperpage{100}
 
 \end{theindex}
