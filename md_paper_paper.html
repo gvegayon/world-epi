@@ -86,8 +86,30 @@ Example use cases</h1>
 <li><b>Population comorbidities</b>: The library can model the impact of population comorbidities on the spread of the disease, including how different comorbidities affect the transmission and severity of the disease.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md29"></a>
+Other alternatives</h1>
+<h1><a class="anchor" id="autotoc_md30"></a>
+Existing Alternatives</h1>
+<p>The following table from Meyer and Vega Yon (2023) shows existing alternatives to epiworld, including <b>ABM</b> (Ma 2023), <b>abmR</b> (Gochanour, Fernandez-Lopez, and Contina 2023), <b>cystiSim</b> (Devleesschauwer and Braae 2016), <b>villager</b> (Thelen et al. 2022), and <b>RNetLogo</b> (Thiele, Kurth, and Grimm 2012).[^1]</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Package   </th><th class="markdownTableHeadLeft">Multiple <a class="el" href="class_viruses.html" title="Set of viruses (useful for building iterators)">Viruses</a>   </th><th class="markdownTableHeadLeft">Multiple <a class="el" href="class_tools.html" title="Set of tools (useful for building iterators)">Tools</a>   </th><th class="markdownTableHeadLeft">Multiple Runs   </th><th class="markdownTableHeadLeft">Global Actions   </th><th class="markdownTableHeadNone">Built-In Epi Models    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=epiworldR"><b>epiworldR</b></a>   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyNone">yes    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=ABM"><b>ABM</b></a>   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyNone">yes    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=abmR"><b>abmR</b></a>   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyNone">-    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=cystiSim"><b>cystiSim</b></a>   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyNone">-    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=villager"><b>villager</b></a>   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyNone">-    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="https://cran.r-project.org/package=RNetLogo"><b>RNetLogo</b></a>   </td><td class="markdownTableBodyLeft">-   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyLeft">yes   </td><td class="markdownTableBodyNone">-   </td></tr>
+</table>
+<p>A benchmark comparing epiworld’s speed with other software packages can be found in the <a href="#speed-benchmark">benchmark section</a>.</p>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Appendix</h1>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Code example</h2>
 <p>The following code snippet shows a simple example of how to use epiworld to simulate an epidemic, particularly the Susceptible-Infected-Recovered model [SIR]:</p>
 <div class="fragment"><div class="line">#include &quot;epiworld.hpp&quot;</div>
@@ -159,12 +181,17 @@ Code example</h2>
 <div class="line"> - Susceptible  0.96  0.04  0.00</div>
 <div class="line"> - Infected     0.00  0.70  0.30</div>
 <div class="line"> - Recovered    0.00  0.00  1.00</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
 Speed benchmark</h2>
+<p>The following figure shows the time measured in seconds that each of the benchmarked software packages took to simulate a SIR model featuring 50,000 agents for 100 days.</p>
 <p><img src="benchmark.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 Implementation</h2>
-<p><img src="building-models.png" alt="" class="inline"/> </p>
+<p>The following figure illustrates the model composition process used in epiworld. Generally, users can add an arbitrary number of states, viruses, tools, and events to a single model. The flexibility of epiworld’s API provides a simple way to extend the model’s capabilities.</p>
+<p><img src="building-models.png" alt="" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md35"></a>
+References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-cystiSim" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-cystiSim" class="csl-entry">Devleesschauwer, Brecht, and Uffe Christian Braae. 2016. <em>cystiSim: Agent-Based <a class="el" href="class_model.html" title="Core class of epiworld.">Model</a> for Taenia_solium Transmission and Control</em>. <a href="https://CRAN.R-project.org/package=cystiSim">https://CRAN.R-project.org/package=cystiSim</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-cystiSim" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-abmR" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-abmR" class="csl-entry">Gochanour, Benjamin, Javier Fernandez-Lopez, and Andrea Contina. 2023. <em>abmR: Agent-Based Models in R</em>. <a href="https://doi.org/10.1111/2041-210X.14014">https://doi.org/10.1111/2041-210X.14014</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-abmR" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-ABM" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-ABM" class="csl-entry">Ma, Junling. 2023. <em>ABM: <a class="el" href="class_agent.html" title="Agent (agents)">Agent</a> Based <a class="el" href="class_model.html" title="Core class of epiworld.">Model</a> Simulation Framework</em>. <a href="https://CRAN.R-project.org/package=ABM">https://CRAN.R-project.org/package=ABM</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-ABM" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-meyerEpiworldRFastAgentBased2023" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-meyerEpiworldRFastAgentBased2023" class="csl-entry">Meyer, Derek, and George G Vega Yon. 2023. “<span class="nocase">epiworldR</span>: Fast Agent-Based Epi Models.” <em>Journal of Open Source Software</em> 8 (90): 5781. <a href="https://doi.org/10.21105/joss.05781">https://doi.org/10.21105/joss.05781</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-meyerEpiworldRFastAgentBased2023" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-villager" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-villager" class="csl-entry">Thelen, Thomas, Gerardo Aldana, Marcus Thomson, and Toni Gonzalez. 2022. <em>Villager: A Framework for Designing and Running <a class="el" href="class_agent.html" title="Agent (agents)">Agent</a> Based Models</em>. <a href="https://CRAN.R-project.org/package=villager">https://CRAN.R-project.org/package=villager</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-villager" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-RNetLogo" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-RNetLogo" class="csl-entry">Thiele, Jan C., Winfried Kurth, and Volker Grimm. 2012. “RNetLogo: An R Package for Running and Exploring Individual-Based Models Implemented in NetLogo.” <em>Methods in Ecology and Evolution</em> 3 (3): 480–83. <a href="https://doi.org/10.1111/j.2041-210X.2011.00180.x">https://doi.org/10.1111/j.2041-210X.2011.00180.x</a>.</div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"><div id="ref-RNetLogo" class="csl-entry"></div></div><div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0"></div><p>[^1]: Although other ABM frameworks are available, the table focuses on those most relevant (and popular) to epidemiological simulations. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -19,8 +19,31 @@ As a framework, {\ttfamily epiworld} can simulate various epidemiological scenar
 \item {\bfseries{Vaccination strategies}}\+: The library can simulate different vaccination strategies, including prioritizing certain groups for vaccination, varying the vaccination rate, and modeling the impact of vaccine hesitancy.
 \item {\bfseries{Disease evolution}}\+: The library can simulate the evolution of the disease over time, including the emergence of new variants and the impact of these variants on the spread of the disease.
 \item {\bfseries{Population comorbidities}}\+: The library can model the impact of population comorbidities on the spread of the disease, including how different comorbidities affect the transmission and severity of the disease.
-\end{DoxyItemize}\hypertarget{md_paper_paper_autotoc_md29}{}\doxysection{Appendix}\label{md_paper_paper_autotoc_md29}
-\hypertarget{md_paper_paper_autotoc_md30}{}\doxysubsection{Code example}\label{md_paper_paper_autotoc_md30}
+\end{DoxyItemize}\hypertarget{md_paper_paper_autotoc_md29}{}\doxysection{Other alternatives}\label{md_paper_paper_autotoc_md29}
+\hypertarget{md_paper_paper_autotoc_md30}{}\doxysection{Existing Alternatives}\label{md_paper_paper_autotoc_md30}
+The following table from Meyer and Vega Yon (2023) shows existing alternatives to epiworld, including {\bfseries{ABM}} (Ma 2023), {\bfseries{abmR}} (Gochanour, Fernandez-\/\+Lopez, and Contina 2023), {\bfseries{cysti\+Sim}} (Devleesschauwer and Braae 2016), {\bfseries{villager}} (Thelen et al. 2022), and {\bfseries{RNet\+Logo}} (Thiele, Kurth, and Grimm 2012).\mbox{[}$^\wedge$1\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Package   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple \mbox{\hyperlink{class_viruses}{Viruses}}   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple \mbox{\hyperlink{class_tools}{Tools}}   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple Runs   }&\cellcolor{\tableheadbgcolor}\textbf{ Global Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Built-\/\+In Epi Models    }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Package   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple \mbox{\hyperlink{class_viruses}{Viruses}}   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple \mbox{\hyperlink{class_tools}{Tools}}   }&\cellcolor{\tableheadbgcolor}\textbf{ Multiple Runs   }&\cellcolor{\tableheadbgcolor}\textbf{ Global Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Built-\/\+In Epi Models    }\\\cline{1-6}
+\endhead
+\href{https://cran.r-project.org/package=epiworldR}{\texttt{ {\bfseries{epiworldR}}}}   &yes   &yes   &yes   &yes   &yes    \\\cline{1-6}
+\href{https://cran.r-project.org/package=ABM}{\texttt{ {\bfseries{ABM}}}}   &-\/   &-\/   &-\/   &yes   &yes    \\\cline{1-6}
+\href{https://cran.r-project.org/package=abmR}{\texttt{ {\bfseries{abmR}}}}   &-\/   &-\/   &yes   &-\/   &-\/    \\\cline{1-6}
+\href{https://cran.r-project.org/package=cystiSim}{\texttt{ {\bfseries{cysti\+Sim}}}}   &-\/   &yes   &yes   &-\/   &-\/    \\\cline{1-6}
+\href{https://cran.r-project.org/package=villager}{\texttt{ {\bfseries{villager}}}}   &-\/   &-\/   &-\/   &yes   &-\/    \\\cline{1-6}
+\href{https://cran.r-project.org/package=RNetLogo}{\texttt{ {\bfseries{RNet\+Logo}}}}   &-\/   &yes   &yes   &yes   &-\/   \\\cline{1-6}
+\end{longtabu}
+
+
+A benchmark comparing epiworld’s speed with other software packages can be found in the \href{\#speed-benchmark}{\texttt{ benchmark section}}.\hypertarget{md_paper_paper_autotoc_md31}{}\doxysection{Appendix}\label{md_paper_paper_autotoc_md31}
+\hypertarget{md_paper_paper_autotoc_md32}{}\doxysubsection{Code example}\label{md_paper_paper_autotoc_md32}
 The following code snippet shows a simple example of how to use epiworld to simulate an epidemic, particularly the Susceptible-\/\+Infected-\/\+Recovered model \mbox{[}SIR\mbox{]}\+:
 
 
@@ -103,6 +126,51 @@ The output could look something like the following\+:
 \DoxyCodeLine{ -\/ Recovered    0.00  0.00  1.00}
 
 \end{DoxyCode}
-\hypertarget{md_paper_paper_autotoc_md31}{}\doxysubsection{Speed benchmark}\label{md_paper_paper_autotoc_md31}
-\hypertarget{md_paper_paper_autotoc_md32}{}\doxysubsection{Implementation}\label{md_paper_paper_autotoc_md32}
- 
+\hypertarget{md_paper_paper_autotoc_md33}{}\doxysubsection{Speed benchmark}\label{md_paper_paper_autotoc_md33}
+The following figure shows the time measured in seconds that each of the benchmarked software packages took to simulate a SIR model featuring 50,000 agents for 100 days.
+
+\hypertarget{md_paper_paper_autotoc_md34}{}\doxysubsection{Implementation}\label{md_paper_paper_autotoc_md34}
+The following figure illustrates the model composition process used in epiworld. Generally, users can add an arbitrary number of states, viruses, tools, and events to a single model. The flexibility of epiworld’s API provides a simple way to extend the model’s capabilities.
+
+\hypertarget{md_paper_paper_autotoc_md35}{}\doxysection{References}\label{md_paper_paper_autotoc_md35}
+
+
+
+
+Devleesschauwer, Brecht, and Uffe Christian Braae. 2016. {\itshape cysti\+Sim\+: Agent-\/\+Based \mbox{\hyperlink{class_model}{Model}} for Taenia\+\_\+solium Transmission and Control}. \href{https://CRAN.R-project.org/package=cystiSim}{\texttt{ https\+://\+CRAN.\+R-\/project.\+org/package=cysti\+Sim}}.
+
+
+
+
+
+Gochanour, Benjamin, Javier Fernandez-\/\+Lopez, and Andrea Contina. 2023. {\itshape abmR\+: Agent-\/\+Based Models in R}. \href{https://doi.org/10.1111/2041-210X.14014}{\texttt{ https\+://doi.\+org/10.\+1111/2041-\/210\+X.\+14014}}.
+
+
+
+
+
+Ma, Junling. 2023. {\itshape ABM\+: \mbox{\hyperlink{class_agent}{Agent}} Based \mbox{\hyperlink{class_model}{Model}} Simulation Framework}. \href{https://CRAN.R-project.org/package=ABM}{\texttt{ https\+://\+CRAN.\+R-\/project.\+org/package=\+ABM}}.
+
+
+
+
+
+Meyer, Derek, and George G Vega Yon. 2023. “epiworldR\+: Fast Agent-\/\+Based Epi Models.\+” {\itshape Journal of Open Source Software} 8 (90)\+: 5781. \href{https://doi.org/10.21105/joss.05781}{\texttt{ https\+://doi.\+org/10.\+21105/joss.\+05781}}.
+
+
+
+
+
+Thelen, Thomas, Gerardo Aldana, Marcus Thomson, and Toni Gonzalez. 2022. {\itshape Villager\+: A Framework for Designing and Running \mbox{\hyperlink{class_agent}{Agent}} Based Models}. \href{https://CRAN.R-project.org/package=villager}{\texttt{ https\+://\+CRAN.\+R-\/project.\+org/package=villager}}.
+
+
+
+
+
+Thiele, Jan C., Winfried Kurth, and Volker Grimm. 2012. “\+RNet\+Logo\+: An R Package for Running and Exploring Individual-\/\+Based Models Implemented in Net\+Logo.\+” {\itshape Methods in Ecology and Evolution} 3 (3)\+: 480–83. \href{https://doi.org/10.1111/j.2041-210X.2011.00180.x}{\texttt{ https\+://doi.\+org/10.\+1111/j.\+2041-\/210\+X.\+2011.\+00180.\+x}}.
+
+
+
+
+
+\mbox{[}$^\wedge$1\mbox{]}\+: Although other ABM frameworks are available, the table focuses on those most relevant (and popular) to epidemiological simulations. 
