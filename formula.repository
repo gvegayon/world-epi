@@ -1,0 +1,7 @@
+\_form#0=171x30:\[ \frac{1}{1 + \exp\left(-\left(\beta_0 E_i + \sum_{i=1}^{n} \beta_i x_i\right)\right)} \]
+\_form#1=13x13:$\beta_0$
+\_form#2=13x11:$E_i$
+\_form#3=11x13:$\beta_i$
+\_form#4=11x9:$x_i$
+\_form#5=9x6:$n$
+\_form#6=129x30:\[ \frac{1}{1 + \exp\left(-\left(\sum_{i=1}^{n} \beta_i x_i\right)\right)} \]
