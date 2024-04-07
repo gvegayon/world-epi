@@ -74,12 +74,17 @@ $(function() {
 <div class="title">epiworld::epimodels::ModelSIRLogit&lt; TSeq &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Template for a Susceptible-Infected-Removed (SIR) model.  
+ <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_logit.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="epiworld_8hpp_source.html">epiworld.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for epiworld::epimodels::ModelSIRLogit&lt; TSeq &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classepiworld_1_1epimodels_1_1_model_s_i_r_logit__inherit__graph.png" border="0" usemap="#aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_inherit__map" id="aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,95,172,136"/>
+<area shape="rect" title="Template for a Susceptible&#45;Infected&#45;Removed (SIR) model." alt="" coords="5,95,172,136"/>
 <area shape="rect" href="classepiworld_1_1_model.html" title=" " alt="" coords="17,5,160,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -88,7 +93,7 @@ Collaboration diagram for epiworld::epimodels::ModelSIRLogit&lt; TSeq &gt;:</div
 <div class="dyncontent">
 <div class="center"><img src="classepiworld_1_1epimodels_1_1_model_s_i_r_logit__coll__graph.png" border="0" usemap="#aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_coll__map" id="aepiworld_1_1epimodels_1_1_model_s_i_r_logit_3_01_t_seq_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,172,136"/>
+<area shape="rect" title="Template for a Susceptible&#45;Infected&#45;Removed (SIR) model." alt="" coords="5,95,172,136"/>
 <area shape="rect" href="classepiworld_1_1_model.html" title=" " alt="" coords="17,5,160,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -705,7 +710,27 @@ MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bo
 MixerFun&lt; EPI_DEFAULT_TSEQ &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>death_reduction_mixer</b></td></tr>
 <tr class="separator:a874b087ef2a3ede628a918a9344c6395 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;<br />
+class epiworld::epimodels::ModelSIRLogit&lt; TSeq &gt;</h3>
+
+<p>Template for a Susceptible-Infected-Removed (SIR) model. </p>
+<p>In this model, infection and recoveru probabilities are computed using a logit model. Particularly, the probability of infection is computed as:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{1}{1 + \exp\left(-\left(\beta_0 E_i + \sum_{i=1}^{n} \beta_i x_i\right)\right)} \]" src="form_0.png" width="171" height="30"/>
+</p>
+<p>where <img class="formulaInl" alt="$\beta_0$" src="form_1.png" width="13" height="13"/> is the exposure coefficient and <img class="formulaInl" alt="$E_i$" src="form_2.png" width="13" height="11"/> is the exposure number, <img class="formulaInl" alt="$\beta_i$" src="form_3.png" width="11" height="13"/> are the coefficients for the features <img class="formulaInl" alt="$x_i$" src="form_4.png" width="11" height="9"/> of the agents, and <img class="formulaInl" alt="$n$" src="form_5.png" width="9" height="6"/> is the number of features. The probability of recovery is computed as:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{1}{1 + \exp\left(-\left(\sum_{i=1}^{n} \beta_i x_i\right)\right)} \]" src="form_6.png" width="129" height="30"/>
+</p>
+<p>where <img class="formulaInl" alt="$\beta_i$" src="form_3.png" width="11" height="13"/> are the coefficients for the features <img class="formulaInl" alt="$x_i$" src="form_4.png" width="11" height="9"/> of the agents, and <img class="formulaInl" alt="$n$" src="form_5.png" width="9" height="6"/> is the number of features.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TSeq</td><td>Type of the sequence (e.g. std::vector, std::deque) </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac2529763b3f72163846c88d2985a57fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2529763b3f72163846c88d2985a57fc">&#9670;&nbsp;</a></span>ModelSIRLogit()</h2>
 

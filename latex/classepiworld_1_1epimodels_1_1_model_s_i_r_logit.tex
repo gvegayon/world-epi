@@ -2,6 +2,15 @@
 \label{classepiworld_1_1epimodels_1_1_model_s_i_r_logit}\index{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$@{epiworld::epimodels::ModelSIRLogit$<$ TSeq $>$}}
 
 
+Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model.  
+
+
+
+
+{\ttfamily \#include $<$epiworld.\+hpp$>$}
+
+
+
 Inheritance diagram for epiworld\+::epimodels\+::Model\+SIRLogit$<$ TSeq $>$\+:
 \nopagebreak
 \begin{figure}[H]
@@ -51,6 +60,29 @@ std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+infect\+\_\+cols}
 std\+::vector$<$ size\+\_\+t $>$ {\bfseries coef\+\_\+recover\+\_\+cols}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq = EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ$>$\newline
+class epiworld\+::epimodels\+::\+Model\+SIRLogit$<$ TSeq $>$}
+
+Template for a Susceptible-\/\+Infected-\/\+Removed (SIR) model. 
+
+In this model, infection and recoveru probabilities are computed using a logit model. Particularly, the probability of infection is computed as\+:
+
+\[ \frac{1}{1 + \exp\left(-\left(\beta_0 E_i + \sum_{i=1}^{n} \beta_i x_i\right)\right)} \]
+
+where $\beta_0$ is the exposure coefficient and $E_i$ is the exposure number, $\beta_i$ are the coefficients for the features $x_i$ of the agents, and $n$ is the number of features. The probability of recovery is computed as\+:
+
+\[ \frac{1}{1 + \exp\left(-\left(\sum_{i=1}^{n} \beta_i x_i\right)\right)} \]
+
+where $\beta_i$ are the coefficients for the features $x_i$ of the agents, and $n$ is the number of features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em TSeq} & Type of the sequence (e.\+g. std\+::vector, std\+::deque) \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
