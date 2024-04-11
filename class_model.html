@@ -329,6 +329,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_fun</b> (<a 
 <tr class="memitem:ad954b24754852ac823834f5410ba7dca"><td class="memItemLeft" align="right" valign="top"><a id="ad954b24754852ac823834f5410ba7dca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e)</td></tr>
 <tr class="separator:ad954b24754852ac823834f5410ba7dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c30714581353ba0a5dd1c8450d9f47"><td class="memItemLeft" align="right" valign="top"><a id="a90c30714581353ba0a5dd1c8450d9f47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity_n</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, epiworld_fast_uint preval)</td></tr>
+<tr class="separator:a90c30714581353ba0a5dd1c8450d9f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeda84715ac62a7bf5ce169c897f22ec"><td class="memItemLeft" align="right" valign="top"><a id="aaeda84715ac62a7bf5ce169c897f22ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity_fun</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e, EntityToAgentFun&lt; TSeq &gt; fun)</td></tr>
+<tr class="separator:aaeda84715ac62a7bf5ce169c897f22ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2717cc3ab334f7c3b23efc3d2a98db"><td class="memItemLeft" align="right" valign="top"><a id="ada2717cc3ab334f7c3b23efc3d2a98db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_virus</b> (size_t virus_pos)</td></tr>
 <tr class="separator:ada2717cc3ab334f7c3b23efc3d2a98db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -595,6 +601,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dist_tools</b> ()</td
 <tr class="memitem:ac2cc437ae91612c3a56f24943651fef9"><td class="memItemLeft" align="right" valign="top"><a id="ac2cc437ae91612c3a56f24943651fef9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>dist_virus</b> ()</td></tr>
 <tr class="separator:ac2cc437ae91612c3a56f24943651fef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993796fd31850b12c47d859a97787c1e"><td class="memItemLeft" align="right" valign="top"><a id="a993796fd31850b12c47d859a97787c1e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dist_entities</b> ()</td></tr>
+<tr class="separator:a993796fd31850b12c47d859a97787c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeacf2267c574f1d19d1f6577ed668d6c"><td class="memItemLeft" align="right" valign="top"><a id="aeacf2267c574f1d19d1f6577ed668d6c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>chrono_start</b> ()</td></tr>
 <tr class="separator:aeacf2267c574f1d19d1f6577ed668d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -654,6 +663,15 @@ std::vector&lt; ToolToAgentFun&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRi
 <tr class="memitem:a0e479d41d3d4063e733dbe4ad4ddc93a"><td class="memItemLeft" align="right" valign="top"><a id="a0e479d41d3d4063e733dbe4ad4ddc93a"></a>
 std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities</b> = {}</td></tr>
 <tr class="separator:a0e479d41d3d4063e733dbe4ad4ddc93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae534971bfd8ee4f430f530a1034196c2"><td class="memItemLeft" align="right" valign="top"><a id="ae534971bfd8ee4f430f530a1034196c2"></a>
+std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_entity</b> = {}</td></tr>
+<tr class="separator:ae534971bfd8ee4f430f530a1034196c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883fc08216c2ec9f6f3c17b532544b4b"><td class="memItemLeft" align="right" valign="top"><a id="a883fc08216c2ec9f6f3c17b532544b4b"></a>
+std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_entity_as_proportion</b> = {}</td></tr>
+<tr class="separator:a883fc08216c2ec9f6f3c17b532544b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727026bfffb5eb824a24240b3f3803c5"><td class="memItemLeft" align="right" valign="top"><a id="a727026bfffb5eb824a24240b3f3803c5"></a>
+std::vector&lt; EntityToAgentFun&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_dist_funs</b> = {}</td></tr>
+<tr class="separator:a727026bfffb5eb824a24240b3f3803c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337d978e14ca116b438b6916976ac868"><td class="memItemLeft" align="right" valign="top"><a id="a337d978e14ca116b438b6916976ac868"></a>
 std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_backup</b> = {}</td></tr>
 <tr class="separator:a337d978e14ca116b438b6916976ac868"><td class="memSeparator" colspan="2">&#160;</td></tr>
