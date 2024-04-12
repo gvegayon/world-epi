@@ -69,12 +69,17 @@ $(function() {
 <div class="title">GroupSampler&lt; TSeq &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Weighted sampling of groups.  
+ <a href="class_group_sampler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="seirentitiesconnected_8hpp_source.html">seirentitiesconnected.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a94a095099279a3799b176356018de89d"><td class="memItemLeft" align="right" valign="top"><a id="a94a095099279a3799b176356018de89d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GroupSampler</b> (<a class="el" href="classepiworld_1_1_model.html">epiworld::Model</a>&lt; TSeq &gt; &amp;model, const std::vector&lt; double &gt; &amp;contact_matrix, const std::vector&lt; size_t &gt; &amp;group_sizes)</td></tr>
-<tr class="separator:a94a095099279a3799b176356018de89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8802454e1a9d0ae07d00d1b6c2d1abb"><td class="memItemLeft" align="right" valign="top"><a id="ae8802454e1a9d0ae07d00d1b6c2d1abb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GroupSampler</b> (<a class="el" href="classepiworld_1_1_model.html">epiworld::Model</a>&lt; TSeq &gt; &amp;model, const std::vector&lt; double &gt; &amp;contact_matrix, const std::vector&lt; size_t &gt; &amp;group_sizes, bool normalize=true)</td></tr>
+<tr class="separator:ae8802454e1a9d0ae07d00d1b6c2d1abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6048cec45a00488196459714f49b2cd5"><td class="memItemLeft" align="right" valign="top"><a id="a6048cec45a00488196459714f49b2cd5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_1</b> (const int origin_group)</td></tr>
 <tr class="separator:a6048cec45a00488196459714f49b2cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -82,7 +87,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_1</b> (const in
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sample_n</b> (std::vector&lt; size_t &gt; &amp;sample, const int origin_group, const int nsamples)</td></tr>
 <tr class="separator:a02531e00954ad1c0b435c057d92fc3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename TSeq&gt;<br />
+class GroupSampler&lt; TSeq &gt;</h3>
+
+<p>Weighted sampling of groups. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/epiworld/models/<a class="el" href="seirentitiesconnected_8hpp_source.html">seirentitiesconnected.hpp</a></li>
 </ul>
 </div><!-- contents -->
