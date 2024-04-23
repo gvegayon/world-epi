@@ -7,19 +7,19 @@ Weighted sampling of groups.
 
 
 
-{\ttfamily \#include $<$seirentitiesconnected.\+hpp$>$}
+{\ttfamily \#include $<$groupsampler-\/bones.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_group_sampler_a32d1fc38d1ee980789d83855e1880711}\label{class_group_sampler_a32d1fc38d1ee980789d83855e1880711}} 
-{\bfseries Group\+Sampler} (\mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model}}$<$ TSeq $>$ $\ast$model\+\_\+, const std\+::vector$<$ double $>$ \&contact\+\_\+matrix\+\_\+, const std\+::vector$<$ size\+\_\+t $>$ \&group\+\_\+sizes\+\_\+, bool normalize=true)
+\mbox{\Hypertarget{class_group_sampler_a8f064a2eddbaa0188038694bbca5bda3}\label{class_group_sampler_a8f064a2eddbaa0188038694bbca5bda3}} 
+{\bfseries Group\+Sampler} (const std\+::vector$<$ double $>$ \&contact\+\_\+matrix\+\_\+, const std\+::vector$<$ size\+\_\+t $>$ \&group\+\_\+sizes\+\_\+, bool normalize=true)
 \item 
-\mbox{\Hypertarget{class_group_sampler_a6048cec45a00488196459714f49b2cd5}\label{class_group_sampler_a6048cec45a00488196459714f49b2cd5}} 
-int {\bfseries sample\+\_\+1} (const int origin\+\_\+group)
+\mbox{\Hypertarget{class_group_sampler_a99f033f2dfc7b50062f3bb195bfdc8f6}\label{class_group_sampler_a99f033f2dfc7b50062f3bb195bfdc8f6}} 
+int {\bfseries sample\+\_\+1} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, const int origin\+\_\+group)
 \item 
-\mbox{\Hypertarget{class_group_sampler_a02531e00954ad1c0b435c057d92fc3cd}\label{class_group_sampler_a02531e00954ad1c0b435c057d92fc3cd}} 
-void {\bfseries sample\+\_\+n} (std\+::vector$<$ size\+\_\+t $>$ \&sample, const int origin\+\_\+group, const int nsamples)
+\mbox{\Hypertarget{class_group_sampler_ac08870c40256af2196c6dddb79213d35}\label{class_group_sampler_ac08870c40256af2196c6dddb79213d35}} 
+void {\bfseries sample\+\_\+n} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, std\+::vector$<$ int $>$ \&sample, const int origin\+\_\+group, const int nsamples)
 \end{DoxyCompactItemize}
 
 
@@ -29,6 +29,7 @@ class Group\+Sampler$<$ TSeq $>$}
 
 Weighted sampling of groups. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/epiworld/models/\mbox{\hyperlink{seirentitiesconnected_8hpp}{seirentitiesconnected.\+hpp}}\end{DoxyCompactItemize}
+include/epiworld/groupsampler-\/bones.\+hpp\item 
+include/epiworld/groupsampler-\/meat.\+hpp\end{DoxyCompactItemize}

@@ -33,6 +33,9 @@ size\+\_\+t {\bfseries size} () const
 \item 
 void \mbox{\hyperlink{class_model_a4761b43494d081f2f7bd2443ea6cb2db}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (std\+::string fn, int skip)
 \begin{DoxyCompactList}\small\item\em Associate agents-\/entities from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_a0879a1cac7c33b691812d1063dda9f1a}\label{class_model_a0879a1cac7c33b691812d1063dda9f1a}} 
+void \mbox{\hyperlink{class_model_a0879a1cac7c33b691812d1063dda9f1a}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (const std\+::vector$<$ int $>$ \&agents\+\_\+ids, const std\+::vector$<$ int $>$ \&entities\+\_\+ids)
+\begin{DoxyCompactList}\small\item\em Associate agents-\/entities from data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_ab7d63eb898445d3d30167c14ddec0c3d}\label{class_model_ab7d63eb898445d3d30167c14ddec0c3d}} 
 size\+\_\+t \mbox{\hyperlink{class_model_ab7d63eb898445d3d30167c14ddec0c3d}{get\+\_\+n\+\_\+viruses}} () const
 \begin{DoxyCompactList}\small\item\em Number of viruses in the model. \end{DoxyCompactList}\item 
@@ -763,6 +766,9 @@ std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries array\+\_\+double\+\_\+tmp}
 \item 
 \mbox{\Hypertarget{class_model_abad161de5921dd9a93a981ee97f5b6cf}\label{class_model_abad161de5921dd9a93a981ee97f5b6cf}} 
 std\+::vector$<$ \mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries array\+\_\+virus\+\_\+tmp}
+\item 
+\mbox{\Hypertarget{class_model_a689d8828363a6182880ea9dc238f0c76}\label{class_model_a689d8828363a6182880ea9dc238f0c76}} 
+std\+::vector$<$ int $>$ {\bfseries array\+\_\+int\+\_\+tmp}
 \item 
 virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_afd0c24e19b0a104e03d96ab4333725e5}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
