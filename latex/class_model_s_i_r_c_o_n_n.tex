@@ -36,7 +36,21 @@ void \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a5928623ff6a69b6eb6733dc3eb1516f
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
-\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_model_s_i_r_c_o_n_n_a152478d7e14cc0922794b0d7637789e2}{get\+\_\+n\+\_\+infected}} () const
+\begin{DoxyCompactList}\small\item\em Get the infected individuals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_abeec9a6b4fa8203613f819c7e6d16a34}\label{class_model_s_i_r_c_o_n_n_abeec9a6b4fa8203613f819c7e6d16a34}} 
+static const int {\bfseries SUSCEPTIBLE} = 0
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a306fd1b191b0c5c8eb14e1829c62b7ac}\label{class_model_s_i_r_c_o_n_n_a306fd1b191b0c5c8eb14e1829c62b7ac}} 
+static const int {\bfseries INFECTED} = 1
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a3ab09e07a888795f767d3c42ed827f24}\label{class_model_s_i_r_c_o_n_n_a3ab09e07a888795f767d3c42ed827f24}} 
+static const int {\bfseries RECOVERED} = 2
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -90,6 +104,20 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
+\mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a152478d7e14cc0922794b0d7637789e2}\label{class_model_s_i_r_c_o_n_n_a152478d7e14cc0922794b0d7637789e2}} 
+\index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!get\_n\_infected@{get\_n\_infected}}
+\index{get\_n\_infected@{get\_n\_infected}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{get\_n\_infected()}{get\_n\_infected()}}
+{\footnotesize\ttfamily template$<$typename TSeq  = EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$\+::get\+\_\+n\+\_\+infected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the infected individuals. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$ epiworld\+::\+Agent$<$\+TSeq$>$ $\ast$ $>$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}\label{class_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}} 
 \index{ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}!initial\_states@{initial\_states}}
 \index{initial\_states@{initial\_states}!ModelSIRCONN$<$ TSeq $>$@{ModelSIRCONN$<$ TSeq $>$}}
