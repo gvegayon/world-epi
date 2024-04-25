@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>epiworld: Related Pages</title>
+<title>epiworld: Mixing probabilities in connected model</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,23 +60,46 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Mixing probabilities in connected model </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_benchmark__r_e_a_m_e.html" target="_self">Benchmarking</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__c_o_d_e__o_f__c_o_n_d_u_c_t.html" target="_self">Contributor Code of Conduct</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_examples_07_surveillance_07_surveillance.html" target="_self">epiworld c++ template library</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__l_i_c_e_n_s_e.html" target="_self">MIT License</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_model1.html" target="_self">model1</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_paper_mixing.html" target="_self">Mixing probabilities in connected model</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__r_e_a_d_m_e_old.html" target="_self">EPI Simulator</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p>George G. Vega Yon, Ph.D. 2024-04-25</p>
+<p>We will look into the probability of drawing infected individuals to simplify the algorithm. There are $I$ infected individuals at any time in the simulation; thus, instead of drawing from $Bern(c/N, N)$, we will be drawing from $Bern(c/N, I)$. The next step is to check which infected individuals should be drawn. Let’s compare the distributions using the hypergeometric as an example:</p>
+<div class="fragment"><div class="line">set.seed(132)</div>
+<div class="line">nsims &lt;- 1e5</div>
+<div class="line">N &lt;- 400</div>
+<div class="line">rate &lt;- 2</div>
+<div class="line">p &lt;- rate/N</div>
+<div class="line">I &lt;- 10</div>
+<div class="line"> </div>
+<div class="line">sim_complex &lt;- parallel::mclapply(1:nsims, \&zwj;(i) {</div>
+<div class="line">  nsamples &lt;- rbinom(N, N, p)</div>
+<div class="line">  sum(rhyper(N, m = I, n = N, k = nsamples) &gt; 0)</div>
+<div class="line">}, mc.cores = 4L) |&gt; unlist()</div>
+<div class="line"> </div>
+<div class="line">sim_simple &lt;- parallel::mclapply(1:nsims, \&zwj;(i) {</div>
+<div class="line">  sum(rbinom(N, I, p) &gt; 0) </div>
+<div class="line">}, mc.cores = 4L) |&gt; unlist()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">op &lt;- par(mfrow = c(1,2))</div>
+<div class="line">MASS::truehist(sim_complex)</div>
+<div class="line">MASS::truehist(sim_simple)</div>
+</div><!-- fragment --><p><img src="mixing_files/figure-commonmark/Simulation-1.png" alt="" class="inline"/></p>
+<div class="fragment"><div class="line">par(op)</div>
+<div class="line"> </div>
+<div class="line">quantile(sim_complex)</div>
+</div><!-- fragment --> <pre class="fragment">  0%  25%  50%  75% 100% 
+   3   16   19   22   40 
+</pre> <div class="fragment"><div class="line">quantile(sim_simple)</div>
+</div><!-- fragment --> <pre class="fragment">  0%  25%  50%  75% 100% 
+   3   17   19   22   40 
+</pre><p> These two approaches are equivalent, but the second one is more efficient from the computational perspective. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
