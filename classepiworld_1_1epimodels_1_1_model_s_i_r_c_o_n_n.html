@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">epiworld::epimodels::ModelSIRCONN&lt; TSeq &gt; Class Template Reference</div>  </div>
@@ -113,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a433e5c933efa713ae79396eae1bf453d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a>&lt; TSeq &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a433e5c933efa713ae79396eae1bf453d">initial_states</a> (std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</td></tr>
 <tr class="memdesc:a433e5c933efa713ae79396eae1bf453d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial states of the model.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a433e5c933efa713ae79396eae1bf453d">More...</a><br /></td></tr>
 <tr class="separator:a433e5c933efa713ae79396eae1bf453d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a875cc96ef9ea1cf2d398569b6efffd0b">get_n_infected</a> () const</td></tr>
+<tr class="memdesc:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the infected individuals.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a875cc96ef9ea1cf2d398569b6efffd0b">More...</a><br /></td></tr>
+<tr class="separator:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
 <tr class="memitem:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a2d8f67ad467c6d5793a855d2314a39"></a>
 <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> ()</td></tr>
@@ -499,6 +503,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clone_population</b> (const <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;other_model)</td></tr>
 <tr class="separator:a79b54af44ff8e6620aa65d02de764231 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2866844363770022840f088198b5e866"><td class="memItemLeft" align="right" valign="top"><a id="a2866844363770022840f088198b5e866"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SUSCEPTIBLE</b> = 0</td></tr>
+<tr class="separator:a2866844363770022840f088198b5e866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdfc1dda712be260ccb21081477191fc"><td class="memItemLeft" align="right" valign="top"><a id="acdfc1dda712be260ccb21081477191fc"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>INFECTED</b> = 1</td></tr>
+<tr class="separator:acdfc1dda712be260ccb21081477191fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4498eb8f122d9ffea8c789fbec0677e"><td class="memItemLeft" align="right" valign="top"><a id="aa4498eb8f122d9ffea8c789fbec0677e"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>RECOVERED</b> = 2</td></tr>
+<tr class="separator:aa4498eb8f122d9ffea8c789fbec0677e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
@@ -803,6 +819,36 @@ template&lt;typename TSeq &gt; </div>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classepiworld_1_1_model.html#afd0c24e19b0a104e03d96ab4333725e5">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a875cc96ef9ea1cf2d398569b6efffd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875cc96ef9ea1cf2d398569b6efffd0b">&#9670;&nbsp;</a></span>get_n_infected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">epiworld::epimodels::ModelSIRCONN</a>&lt; TSeq &gt;::get_n_infected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the infected individuals. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt; epiworld::Agent&lt;TSeq&gt; * &gt; </dd></dl>
 
 </div>
 </div>

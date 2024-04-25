@@ -36,7 +36,21 @@ void \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a592862
 \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a37cb3d22a04f9f620fbbd7a2c7904227}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n}{Model\+SIRCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
-\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a875cc96ef9ea1cf2d398569b6efffd0b}{get\+\_\+n\+\_\+infected}} () const
+\begin{DoxyCompactList}\small\item\em Get the infected individuals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a2866844363770022840f088198b5e866}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a2866844363770022840f088198b5e866}} 
+static const int {\bfseries SUSCEPTIBLE} = 0
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_acdfc1dda712be260ccb21081477191fc}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_acdfc1dda712be260ccb21081477191fc}} 
+static const int {\bfseries INFECTED} = 1
+\item 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_aa4498eb8f122d9ffea8c789fbec0677e}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_aa4498eb8f122d9ffea8c789fbec0677e}} 
+static const int {\bfseries RECOVERED} = 2
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -90,6 +104,20 @@ Advanced usage\+: Makes a copy of data and returns it as undeleted pointer.
 
 Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
 
+\mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a875cc96ef9ea1cf2d398569b6efffd0b}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a875cc96ef9ea1cf2d398569b6efffd0b}} 
+\index{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}!get\_n\_infected@{get\_n\_infected}}
+\index{get\_n\_infected@{get\_n\_infected}!epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{get\_n\_infected()}{get\_n\_infected()}}
+{\footnotesize\ttfamily template$<$typename TSeq  = EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ$>$ \\
+size\+\_\+t \mbox{\hyperlink{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n}{epiworld\+::epimodels\+::\+Model\+SIRCONN}}$<$ TSeq $>$\+::get\+\_\+n\+\_\+infected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the infected individuals. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$ epiworld\+::\+Agent$<$\+TSeq$>$ $\ast$ $>$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}\label{classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_a433e5c933efa713ae79396eae1bf453d}} 
 \index{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}!initial\_states@{initial\_states}}
 \index{initial\_states@{initial\_states}!epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$@{epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}}
