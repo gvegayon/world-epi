@@ -290,12 +290,12 @@
     \subitem {ModelSEIRDCONN}, \hyperpage{127}
     \subitem {reset}, \hyperpage{129}
   \item {ModelSEIRMixing}
-    \subitem {ModelSEIRMixing$<$ TSeq $>$}, \hyperpage{131}
+    \subitem {ModelSEIRMixing$<$ TSeq $>$}, \hyperpage{130, 131}
   \item {ModelSEIRMixing$<$ TSeq $>$}, \hyperpage{129}
     \subitem {clone\_ptr}, \hyperpage{132}
     \subitem {initial\_states}, \hyperpage{132}
-    \subitem {ModelSEIRMixing}, \hyperpage{131}
-    \subitem {reset}, \hyperpage{133}
+    \subitem {ModelSEIRMixing}, \hyperpage{130, 131}
+    \subitem {reset}, \hyperpage{132}
   \item {ModelSIR$<$ TSeq $>$}, \hyperpage{135}
     \subitem {initial\_states}, \hyperpage{136}
   \item {ModelSIRCONN}
@@ -387,7 +387,7 @@
     \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
     \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{116}
     \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{129}
-    \subitem {ModelSEIRMixing$<$ TSeq $>$}, \hyperpage{133}
+    \subitem {ModelSEIRMixing$<$ TSeq $>$}, \hyperpage{132}
     \subitem {ModelSIRCONN$<$ TSeq $>$}, \hyperpage{143}
     \subitem {ModelSIRDCONN$<$ TSeq $>$}, \hyperpage{153}
     \subitem {ModelSIRLogit$<$ TSeq $>$}, \hyperpage{160}
