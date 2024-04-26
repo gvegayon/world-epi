@@ -1,0 +1,35 @@
+\hypertarget{class_group_sampler}{}\doxysection{Group\+Sampler$<$ TSeq $>$ Class Template Reference}
+\label{class_group_sampler}\index{GroupSampler$<$ TSeq $>$@{GroupSampler$<$ TSeq $>$}}
+
+
+Weighted sampling of groups.  
+
+
+
+
+{\ttfamily \#include $<$groupsampler-\/bones.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_group_sampler_a8f064a2eddbaa0188038694bbca5bda3}\label{class_group_sampler_a8f064a2eddbaa0188038694bbca5bda3}} 
+{\bfseries Group\+Sampler} (const std\+::vector$<$ double $>$ \&contact\+\_\+matrix\+\_\+, const std\+::vector$<$ size\+\_\+t $>$ \&group\+\_\+sizes\+\_\+, bool normalize=true)
+\item 
+\mbox{\Hypertarget{class_group_sampler_a99f033f2dfc7b50062f3bb195bfdc8f6}\label{class_group_sampler_a99f033f2dfc7b50062f3bb195bfdc8f6}} 
+int {\bfseries sample\+\_\+1} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, const int origin\+\_\+group)
+\item 
+\mbox{\Hypertarget{class_group_sampler_ac08870c40256af2196c6dddb79213d35}\label{class_group_sampler_ac08870c40256af2196c6dddb79213d35}} 
+void {\bfseries sample\+\_\+n} (\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$model, std\+::vector$<$ int $>$ \&sample, const int origin\+\_\+group, const int nsamples)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSeq$>$\newline
+class Group\+Sampler$<$ TSeq $>$}
+
+Weighted sampling of groups. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/epiworld/groupsampler-\/bones.\+hpp\item 
+include/epiworld/groupsampler-\/meat.\+hpp\end{DoxyCompactItemize}

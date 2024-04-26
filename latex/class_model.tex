@@ -33,6 +33,9 @@ size\+\_\+t {\bfseries size} () const
 \item 
 void \mbox{\hyperlink{class_model_a4761b43494d081f2f7bd2443ea6cb2db}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (std\+::string fn, int skip)
 \begin{DoxyCompactList}\small\item\em Associate agents-\/entities from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_a0879a1cac7c33b691812d1063dda9f1a}\label{class_model_a0879a1cac7c33b691812d1063dda9f1a}} 
+void \mbox{\hyperlink{class_model_a0879a1cac7c33b691812d1063dda9f1a}{load\+\_\+agents\+\_\+entities\+\_\+ties}} (const std\+::vector$<$ int $>$ \&agents\+\_\+ids, const std\+::vector$<$ int $>$ \&entities\+\_\+ids)
+\begin{DoxyCompactList}\small\item\em Associate agents-\/entities from data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_ab7d63eb898445d3d30167c14ddec0c3d}\label{class_model_ab7d63eb898445d3d30167c14ddec0c3d}} 
 size\+\_\+t \mbox{\hyperlink{class_model_ab7d63eb898445d3d30167c14ddec0c3d}{get\+\_\+n\+\_\+viruses}} () const
 \begin{DoxyCompactList}\small\item\em Number of viruses in the model. \end{DoxyCompactList}\item 
@@ -253,6 +256,12 @@ void {\bfseries add\+\_\+tool\+\_\+fun} (\mbox{\hyperlink{class_tool}{Tool}}$<$ 
 \item 
 \mbox{\Hypertarget{class_model_ad954b24754852ac823834f5410ba7dca}\label{class_model_ad954b24754852ac823834f5410ba7dca}} 
 void {\bfseries add\+\_\+entity} (\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ e)
+\item 
+\mbox{\Hypertarget{class_model_a90c30714581353ba0a5dd1c8450d9f47}\label{class_model_a90c30714581353ba0a5dd1c8450d9f47}} 
+void {\bfseries add\+\_\+entity\+\_\+n} (\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ e, epiworld\+\_\+fast\+\_\+uint preval)
+\item 
+\mbox{\Hypertarget{class_model_aaeda84715ac62a7bf5ce169c897f22ec}\label{class_model_aaeda84715ac62a7bf5ce169c897f22ec}} 
+void {\bfseries add\+\_\+entity\+\_\+fun} (\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ e, Entity\+To\+Agent\+Fun$<$ TSeq $>$ fun)
 \item 
 \mbox{\Hypertarget{class_model_ada2717cc3ab334f7c3b23efc3d2a98db}\label{class_model_ada2717cc3ab334f7c3b23efc3d2a98db}} 
 void {\bfseries rm\+\_\+virus} (size\+\_\+t virus\+\_\+pos)
@@ -551,6 +560,9 @@ void {\bfseries dist\+\_\+tools} ()
 \mbox{\Hypertarget{class_model_ac2cc437ae91612c3a56f24943651fef9}\label{class_model_ac2cc437ae91612c3a56f24943651fef9}} 
 void {\bfseries dist\+\_\+virus} ()
 \item 
+\mbox{\Hypertarget{class_model_a993796fd31850b12c47d859a97787c1e}\label{class_model_a993796fd31850b12c47d859a97787c1e}} 
+void {\bfseries dist\+\_\+entities} ()
+\item 
 \mbox{\Hypertarget{class_model_aeacf2267c574f1d19d1f6577ed668d6c}\label{class_model_aeacf2267c574f1d19d1f6577ed668d6c}} 
 void {\bfseries chrono\+\_\+start} ()
 \item 
@@ -606,6 +618,15 @@ std\+::vector$<$ Tool\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries tools\+\_\+dist
 \item 
 \mbox{\Hypertarget{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}\label{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_ae534971bfd8ee4f430f530a1034196c2}\label{class_model_ae534971bfd8ee4f430f530a1034196c2}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries prevalence\+\_\+entity} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a883fc08216c2ec9f6f3c17b532544b4b}\label{class_model_a883fc08216c2ec9f6f3c17b532544b4b}} 
+std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+entity\+\_\+as\+\_\+proportion} = \{\}
+\item 
+\mbox{\Hypertarget{class_model_a727026bfffb5eb824a24240b3f3803c5}\label{class_model_a727026bfffb5eb824a24240b3f3803c5}} 
+std\+::vector$<$ Entity\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+dist\+\_\+funs} = \{\}
 \item 
 \mbox{\Hypertarget{class_model_a337d978e14ca116b438b6916976ac868}\label{class_model_a337d978e14ca116b438b6916976ac868}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}
@@ -745,6 +766,9 @@ std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries array\+\_\+double\+\_\+tmp}
 \item 
 \mbox{\Hypertarget{class_model_abad161de5921dd9a93a981ee97f5b6cf}\label{class_model_abad161de5921dd9a93a981ee97f5b6cf}} 
 std\+::vector$<$ \mbox{\hyperlink{class_virus}{Virus}}$<$ TSeq $>$ $\ast$ $>$ {\bfseries array\+\_\+virus\+\_\+tmp}
+\item 
+\mbox{\Hypertarget{class_model_a689d8828363a6182880ea9dc238f0c76}\label{class_model_a689d8828363a6182880ea9dc238f0c76}} 
+std\+::vector$<$ int $>$ {\bfseries array\+\_\+int\+\_\+tmp}
 \item 
 virtual \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_afd0c24e19b0a104e03d96ab4333725e5}{clone\+\_\+ptr}} ()
 \begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 

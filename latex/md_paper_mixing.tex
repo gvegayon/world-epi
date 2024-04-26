@@ -1,0 +1,163 @@
+George G. Vega Yon, Ph.\+D. 2024-\/04-\/25\hypertarget{md_paper_mixing_autotoc_md27}{}\doxysection{Case 1\+: No grouping}\label{md_paper_mixing_autotoc_md27}
+We will look into the probability of drawing infected individuals to simplify the algorithm. There are \$I\$ infected individuals at any time in the simulation; thus, instead of drawing from \$\+Bern(c/N, N)\$, we will be drawing from \$\+Bern(c/N, I)\$. The next step is to check which infected individuals should be drawn. Let’s compare the distributions using the hypergeometric as an example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set.seed(132)}
+\DoxyCodeLine{nsims <-\/ 1e4}
+\DoxyCodeLine{N <-\/ 400}
+\DoxyCodeLine{rate <-\/ 5}
+\DoxyCodeLine{p <-\/ rate/N}
+\DoxyCodeLine{I <-\/ 10}
+\DoxyCodeLine{}
+\DoxyCodeLine{sim\_complex <-\/ parallel::mclapply(1:nsims, \(\backslash\)(i) \{}
+\DoxyCodeLine{  nsamples <-\/ rbinom(N, N, p)}
+\DoxyCodeLine{  sum(rbinom(N, size = nsamples, prob = I/N) > 0)}
+\DoxyCodeLine{\}, mc.cores = 4L) |> unlist()}
+\DoxyCodeLine{}
+\DoxyCodeLine{sim\_simple <-\/ parallel::mclapply(1:nsims, \(\backslash\)(i) \{}
+\DoxyCodeLine{  sum(rbinom(N, I, p) > 0)}
+\DoxyCodeLine{\}, mc.cores = 4L) |> unlist()}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{op <-\/ par(mfrow = c(1,2))}
+\DoxyCodeLine{MASS::truehist(sim\_complex)}
+\DoxyCodeLine{MASS::truehist(sim\_simple)}
+
+\end{DoxyCode}
+
+
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{par(op)}
+\DoxyCodeLine{}
+\DoxyCodeLine{quantile(sim\_complex)}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}  0%  25%  50%  75% 100% 
+  27   43   47   51   71 
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{quantile(sim\_simple)}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}  0%  25%  50%  75% 100% 
+  23   43   47   51   71 
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{plotter(sim\_complex, sim\_simple)}
+
+\end{DoxyCode}
+
+
+
+
+These two approaches are equivalent, but the second one is more efficient from the computational perspective.\hypertarget{md_paper_mixing_autotoc_md28}{}\doxysection{Case 2\+: Grouping}\label{md_paper_mixing_autotoc_md28}
+This explores the case when we have mixing across groups. The question is if we can replicate the effect at the group level.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set.seed(123133)}
+\DoxyCodeLine{}
+\DoxyCodeLine{ngroups <-\/ 3}
+\DoxyCodeLine{mixing <-\/ matrix(}
+\DoxyCodeLine{  c(0.1, 0.2, 0.3, 0.2, 0.1, 0.2, 0.3, 0.2, 0.1),}
+\DoxyCodeLine{  nrow = ngroups,}
+\DoxyCodeLine{  ncol = ngroups}
+\DoxyCodeLine{  )}
+\DoxyCodeLine{}
+\DoxyCodeLine{mixing <-\/ mixing/rowSums(mixing)}
+\DoxyCodeLine{mixing}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}          [,1]      [,2]      [,3]
+[1,] 0.1666667 0.3333333 0.5000000
+[2,] 0.4000000 0.2000000 0.4000000
+[3,] 0.5000000 0.3333333 0.1666667
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{N <-\/ 500}
+\DoxyCodeLine{sizes <-\/ c(100, 150, 250)}
+\DoxyCodeLine{rate <-\/ 5}
+\DoxyCodeLine{p <-\/ rate/N}
+\DoxyCodeLine{I <-\/ c(10, 30, 20)}
+\DoxyCodeLine{}
+\DoxyCodeLine{ids <-\/ rep.int(1:ngroups, times = sizes)}
+\DoxyCodeLine{}
+\DoxyCodeLine{nsims <-\/ 1e4}
+\DoxyCodeLine{}
+\DoxyCodeLine{sim\_complex <-\/ parallel::mclapply(1:nsims, \(\backslash\)(i) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \# Sampling group first}
+\DoxyCodeLine{  sapply(1:ngroups, \(\backslash\)(g) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \# How many each individual will sample from the groups}
+\DoxyCodeLine{    ans <-\/ rbinom(}
+\DoxyCodeLine{      n = N, size = sizes[g], prob = mixing[ids,][,g] * p}
+\DoxyCodeLine{      ) |> sum()}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \# Sampling with replacement}
+\DoxyCodeLine{    rbinom(ans, size = 1, prob = I[g]/sizes[g]) |> sum()}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \}) |> sum()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}, mc.cores = 4L) |> unlist()}
+
+\end{DoxyCode}
+
+
+Using the alternative method in which we directly weight the probabilities\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sim\_simple <-\/ parallel::mclapply(1:nsims, \(\backslash\)(i) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \# Sampling group first}
+\DoxyCodeLine{  sapply(1:ngroups, \(\backslash\)(g) \{}
+\DoxyCodeLine{    rbinom(}
+\DoxyCodeLine{      n = N, size = I[g], prob = mixing[cbind(ids,g)] * p}
+\DoxyCodeLine{      ) |> sum()}
+\DoxyCodeLine{  \}) |> sum()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}, mc.cores = 4L) |> unlist()}
+\DoxyCodeLine{}
+\DoxyCodeLine{op <-\/ par(mfrow = c(1,2))}
+\DoxyCodeLine{MASS::truehist(sim\_complex)}
+\DoxyCodeLine{MASS::truehist(sim\_simple)}
+
+\end{DoxyCode}
+
+
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{par(op)}
+\DoxyCodeLine{}
+\DoxyCodeLine{quantile(sim\_complex)}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}  0%  25%  50%  75% 100% 
+  57   88   94  101  131 
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{quantile(sim\_simple)}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}  0%  25%  50%  75% 100% 
+  58   87   94  101  135 
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{plotter(sim\_complex, sim\_simple)}
+
+\end{DoxyCode}
+
+
+ 
