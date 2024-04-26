@@ -325,49 +325,56 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="comment">// When we move the end entity to the new location, the </span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// moved entity needs to reflect the change, i.e., where the</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">// entity will now be located in the agent</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordtype">size_t</span> agent_location_in_last_entity  = p-&gt;entities_locations[p-&gt;n_entities];</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * last_entity = &amp;m-&gt;get_entities()[p-&gt;entities[p-&gt;n_entities]]; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordtype">size_t</span> agent_location_in_last_entity  =</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            p-&gt;entities_locations[p-&gt;n_entities];</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="comment">// The end entity will be located where the removed was</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        last_entity-&gt;agents_location[agent_location_in_last_entity] = idx_entity_in_agent;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * last_entity =</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            &amp;m-&gt;get_entities()[p-&gt;entities[p-&gt;n_entities]]; </div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// We now make the swap</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        std::swap(</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            p-&gt;entities[p-&gt;n_entities],</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            p-&gt;entities[idx_entity_in_agent]</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        );</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">if</span> (--e-&gt;n_agents &gt; 0)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="comment">// When we move the end agent to the new location, the </span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// moved agent needs to reflect the change, i.e., where the</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// agent will now be located in the entity</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordtype">size_t</span> entity_location_in_last_agent = e-&gt;agents_location[e-&gt;n_agents];</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * last_agent  = &amp;m-&gt;<a class="code" href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">get_agents</a>()[e-&gt;agents[e-&gt;n_agents]]; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">// The end entity will be located where the removed was</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        last_agent-&gt;entities_locations[entity_location_in_last_agent] = idx_agent_in_entity;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// We now make the swap</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        std::swap(</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            e-&gt;agents[e-&gt;n_agents],</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            e-&gt;agents[idx_agent_in_entity]</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        );</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// Setting the date of the last removal</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// e-&gt;date_last_add_or_remove = m-&gt;today();</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// The end entity will be located where the removed was</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        last_entity-&gt;agents_location[agent_location_in_last_entity] =</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            idx_entity_in_agent;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// We now make the swap</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        std::swap(</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            p-&gt;entities[p-&gt;n_entities],</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            p-&gt;entities[idx_entity_in_agent]</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">if</span> (--e-&gt;n_agents &gt; 0)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// When we move the end agent to the new location, the </span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// moved agent needs to reflect the change, i.e., where the</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">// agent will now be located in the entity</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordtype">size_t</span> entity_location_in_last_agent = e-&gt;agents_location[e-&gt;n_agents];</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * last_agent  =</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            &amp;m-&gt;<a class="code" href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">get_agents</a>()[e-&gt;agents[e-&gt;n_agents]]; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">// The end entity will be located where the removed was</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        last_agent-&gt;entities_locations[entity_location_in_last_agent] =</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            idx_agent_in_entity;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="comment">// We now make the swap</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        std::swap(</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            e-&gt;agents[e-&gt;n_agents],</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            e-&gt;agents[idx_agent_in_entity]</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        );</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// Setting the date of the last removal</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">// e-&gt;date_last_add_or_remove = m-&gt;today();</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:66</div></div>
-<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:428</div></div>
+<div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:448</div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:20</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a077f3c2f03c119d038909cb34aa1aade"><div class="ttname"><a href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">Model::get_agents</a></div><div class="ttdeci">std::vector&lt; Agent&lt; TSeq &gt; &gt; &amp; get_agents()</div><div class="ttdoc">Returns a reference to the vector of agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:604</div></div>
