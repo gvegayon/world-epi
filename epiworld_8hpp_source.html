@@ -17877,8 +17877,8 @@ $(function() {
 <div class="line"><a name="l19438"></a><span class="lineno">19438</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19441"></a><span class="lineno">19441</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19442"></a><span class="lineno">19442</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19443"></a><span class="lineno">19443</span>&#160;<span class="comment">#ifndef EPIWORLD_MODELS_SEIRENTITIESCONNECTED_HPP</span></div>
-<div class="line"><a name="l19444"></a><span class="lineno">19444</span>&#160;<span class="comment">#define EPIWORLD_MODELS_SEIRENTITIESCONNECTED_HPP</span></div>
+<div class="line"><a name="l19443"></a><span class="lineno">19443</span>&#160;<span class="comment">#ifndef EPIWORLD_MODELS_SEIRMIXING_HPP</span></div>
+<div class="line"><a name="l19444"></a><span class="lineno">19444</span>&#160;<span class="comment">#define EPIWORLD_MODELS_SEIRMIXING_HPP</span></div>
 <div class="line"><a name="l19445"></a><span class="lineno">19445</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19450"></a><span class="lineno">19450</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
 <div class="line"><a name="l19451"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing.html">19451</a></span>&#160;<span class="comment">class ModelSEIRMixing : public epiworld::Model&lt;TSeq&gt; </span></div>
@@ -18359,21 +18359,484 @@ $(function() {
 <div class="line"><a name="l19967"></a><span class="lineno">19967</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19970"></a><span class="lineno">19970</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19971"></a><span class="lineno">19971</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19972"></a><span class="lineno">19972</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19973"></a><span class="lineno">19973</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19974"></a><span class="lineno">19974</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l19975"></a><span class="lineno">19975</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19976"></a><span class="lineno">19976</span>&#160;<span class="comment">#endif</span></div>
-<div class="line"><a name="l19977"></a><span class="lineno">19977</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l19972"></a><span class="lineno">19972</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l19974"></a><span class="lineno">19974</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l19975"></a><span class="lineno">19975</span>&#160;<span class="comment"> Start of -include/epiworld//models/sirmixing.hpp-</span></div>
+<div class="line"><a name="l19976"></a><span class="lineno">19976</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l19979"></a><span class="lineno">19979</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19980"></a><span class="lineno">19980</span>&#160;<span class="comment"> End of -include/epiworld/models/models.hpp-</span></div>
-<div class="line"><a name="l19981"></a><span class="lineno">19981</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19984"></a><span class="lineno">19984</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19985"></a><span class="lineno">19985</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19986"></a><span class="lineno">19986</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19987"></a><span class="lineno">19987</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l19988"></a><span class="lineno">19988</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l19989"></a><span class="lineno">19989</span>&#160;<span class="comment">#endif </span></div>
+<div class="line"><a name="l19980"></a><span class="lineno">19980</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l19981"></a><span class="lineno">19981</span>&#160;<span class="comment">#ifndef EPIWORLD_MODELS_SIRMIXING_HPP</span></div>
+<div class="line"><a name="l19982"></a><span class="lineno">19982</span>&#160;<span class="comment">#define EPIWORLD_MODELS_SIRMIXING_HPP</span></div>
+<div class="line"><a name="l19983"></a><span class="lineno">19983</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l19988"></a><span class="lineno">19988</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
+<div class="line"><a name="l19989"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">19989</a></span>&#160;<span class="comment">class ModelSIRMixing : public epiworld::Model&lt;TSeq&gt; </span></div>
+<div class="line"><a name="l19990"></a><span class="lineno">19990</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l19991"></a><span class="lineno">19991</span>&#160;<span class="comment">private:</span></div>
+<div class="line"><a name="l19992"></a><span class="lineno">19992</span>&#160;<span class="comment">    std::vector&lt; std::vector&lt; epiworld::Agent&lt;TSeq&gt; * &gt; &gt; infected;</span></div>
+<div class="line"><a name="l19993"></a><span class="lineno">19993</span>&#160;<span class="comment">    void update_infected_list();</span></div>
+<div class="line"><a name="l19994"></a><span class="lineno">19994</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;TSeq&gt; * &gt; sampled_agents;</span></div>
+<div class="line"><a name="l19995"></a><span class="lineno">19995</span>&#160;<span class="comment">    size_t sample_agents(</span></div>
+<div class="line"><a name="l19996"></a><span class="lineno">19996</span>&#160;<span class="comment">        epiworld::Agent&lt;TSeq&gt; * agent,</span></div>
+<div class="line"><a name="l19997"></a><span class="lineno">19997</span>&#160;<span class="comment">        std::vector&lt; epiworld::Agent&lt;TSeq&gt; * &gt; &amp; sampled_agents</span></div>
+<div class="line"><a name="l19998"></a><span class="lineno">19998</span>&#160;<span class="comment">        );</span></div>
+<div class="line"><a name="l19999"></a><span class="lineno">19999</span>&#160;<span class="comment">    double adjusted_contact_rate;</span></div>
+<div class="line"><a name="l20000"></a><span class="lineno">20000</span>&#160;<span class="comment">    std::vector&lt; double &gt; contact_matrix;</span></div>
+<div class="line"><a name="l20001"></a><span class="lineno">20001</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20002"></a><span class="lineno">20002</span>&#160;<span class="comment">    size_t index(size_t i, size_t j, size_t n) {</span></div>
+<div class="line"><a name="l20003"></a><span class="lineno">20003</span>&#160;<span class="comment">        return j * n + i;</span></div>
+<div class="line"><a name="l20004"></a><span class="lineno">20004</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20005"></a><span class="lineno">20005</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20006"></a><span class="lineno">20006</span>&#160;<span class="comment">public:</span></div>
+<div class="line"><a name="l20007"></a><span class="lineno">20007</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20008"></a><span class="lineno">20008</span>&#160;<span class="comment">    static const int SUSCEPTIBLE = 0;</span></div>
+<div class="line"><a name="l20009"></a><span class="lineno">20009</span>&#160;<span class="comment">    static const int INFECTED    = 1;</span></div>
+<div class="line"><a name="l20010"></a><span class="lineno">20010</span>&#160;<span class="comment">    static const int RECOVERED   = 2;</span></div>
+<div class="line"><a name="l20011"></a><span class="lineno">20011</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20012"></a><span class="lineno">20012</span>&#160;<span class="comment">    ModelSIRMixing() {};</span></div>
+<div class="line"><a name="l20013"></a><span class="lineno">20013</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20026"></a><span class="lineno">20026</span>&#160;<span class="comment">    ModelSIRMixing(</span></div>
+<div class="line"><a name="l20027"></a><span class="lineno">20027</span>&#160;<span class="comment">        ModelSIRMixing&lt;TSeq&gt; &amp; model,</span></div>
+<div class="line"><a name="l20028"></a><span class="lineno">20028</span>&#160;<span class="comment">        std::string vname,</span></div>
+<div class="line"><a name="l20029"></a><span class="lineno">20029</span>&#160;<span class="comment">        epiworld_fast_uint n,</span></div>
+<div class="line"><a name="l20030"></a><span class="lineno">20030</span>&#160;<span class="comment">        epiworld_double prevalence,</span></div>
+<div class="line"><a name="l20031"></a><span class="lineno">20031</span>&#160;<span class="comment">        epiworld_double contact_rate,</span></div>
+<div class="line"><a name="l20032"></a><span class="lineno">20032</span>&#160;<span class="comment">        epiworld_double transmission_rate,</span></div>
+<div class="line"><a name="l20033"></a><span class="lineno">20033</span>&#160;<span class="comment">        epiworld_double recovery_rate,</span></div>
+<div class="line"><a name="l20034"></a><span class="lineno">20034</span>&#160;<span class="comment">        std::vector&lt; double &gt; contact_matrix</span></div>
+<div class="line"><a name="l20035"></a><span class="lineno">20035</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l20036"></a><span class="lineno">20036</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20048"></a><span class="lineno">20048</span>&#160;<span class="comment">    ModelSIRMixing(</span></div>
+<div class="line"><a name="l20049"></a><span class="lineno">20049</span>&#160;<span class="comment">        std::string vname,</span></div>
+<div class="line"><a name="l20050"></a><span class="lineno">20050</span>&#160;<span class="comment">        epiworld_fast_uint n,</span></div>
+<div class="line"><a name="l20051"></a><span class="lineno">20051</span>&#160;<span class="comment">        epiworld_double prevalence,</span></div>
+<div class="line"><a name="l20052"></a><span class="lineno">20052</span>&#160;<span class="comment">        epiworld_double contact_rate,</span></div>
+<div class="line"><a name="l20053"></a><span class="lineno">20053</span>&#160;<span class="comment">        epiworld_double transmission_rate,</span></div>
+<div class="line"><a name="l20054"></a><span class="lineno">20054</span>&#160;<span class="comment">        epiworld_double recovery_rate,</span></div>
+<div class="line"><a name="l20055"></a><span class="lineno">20055</span>&#160;<span class="comment">        std::vector&lt; double &gt; contact_matrix</span></div>
+<div class="line"><a name="l20056"></a><span class="lineno">20056</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l20057"></a><span class="lineno">20057</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20058"></a><span class="lineno">20058</span>&#160;<span class="comment">    ModelSIRMixing&lt;TSeq&gt; &amp; run(</span></div>
+<div class="line"><a name="l20059"></a><span class="lineno">20059</span>&#160;<span class="comment">        epiworld_fast_uint ndays,</span></div>
+<div class="line"><a name="l20060"></a><span class="lineno">20060</span>&#160;<span class="comment">        int seed = -1</span></div>
+<div class="line"><a name="l20061"></a><span class="lineno">20061</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l20062"></a><span class="lineno">20062</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20063"></a><span class="lineno">20063</span>&#160;<span class="comment">    void reset();</span></div>
+<div class="line"><a name="l20064"></a><span class="lineno">20064</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20065"></a><span class="lineno">20065</span>&#160;<span class="comment">    Model&lt;TSeq&gt; * clone_ptr();</span></div>
+<div class="line"><a name="l20066"></a><span class="lineno">20066</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20072"></a><span class="lineno">20072</span>&#160;<span class="comment">    ModelSIRMixing&lt;TSeq&gt; &amp; initial_states(</span></div>
+<div class="line"><a name="l20073"></a><span class="lineno">20073</span>&#160;<span class="comment">        std::vector&lt; double &gt; proportions_,</span></div>
+<div class="line"><a name="l20074"></a><span class="lineno">20074</span>&#160;<span class="comment">        std::vector&lt; int &gt; queue_ = {}</span></div>
+<div class="line"><a name="l20075"></a><span class="lineno">20075</span>&#160;<span class="comment">    );</span></div>
+<div class="line"><a name="l20076"></a><span class="lineno">20076</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20077"></a><span class="lineno">20077</span>&#160;<span class="comment">    size_t get_n_infected(size_t group) const</span></div>
+<div class="line"><a name="l20078"></a><span class="lineno">20078</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20079"></a><span class="lineno">20079</span>&#160;<span class="comment">        return infected[group].size();</span></div>
+<div class="line"><a name="l20080"></a><span class="lineno">20080</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20081"></a><span class="lineno">20081</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20082"></a><span class="lineno">20082</span>&#160;<span class="comment">    void set_contact_matrix(std::vector&lt; double &gt; cmat)</span></div>
+<div class="line"><a name="l20083"></a><span class="lineno">20083</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20084"></a><span class="lineno">20084</span>&#160;<span class="comment">        contact_matrix = cmat;</span></div>
+<div class="line"><a name="l20085"></a><span class="lineno">20085</span>&#160;<span class="comment">        return;</span></div>
+<div class="line"><a name="l20086"></a><span class="lineno">20086</span>&#160;<span class="comment">    };</span></div>
+<div class="line"><a name="l20087"></a><span class="lineno">20087</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20088"></a><span class="lineno">20088</span>&#160;<span class="comment">};</span></div>
+<div class="line"><a name="l20089"></a><span class="lineno">20089</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20090"></a><span class="lineno">20090</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20091"></a><span class="lineno">20091</span>&#160;<span class="comment">inline void ModelSIRMixing&lt;TSeq&gt;::update_infected_list()</span></div>
+<div class="line"><a name="l20092"></a><span class="lineno">20092</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20093"></a><span class="lineno">20093</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20094"></a><span class="lineno">20094</span>&#160;<span class="comment">    auto &amp; agents = Model&lt;TSeq&gt;::get_agents();</span></div>
+<div class="line"><a name="l20095"></a><span class="lineno">20095</span>&#160;<span class="comment">    auto &amp; entities = Model&lt;TSeq&gt;::get_entities();</span></div>
+<div class="line"><a name="l20096"></a><span class="lineno">20096</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20097"></a><span class="lineno">20097</span>&#160;<span class="comment">    infected.resize(entities.size());</span></div>
+<div class="line"><a name="l20098"></a><span class="lineno">20098</span>&#160;<span class="comment">    sampled_agents.resize(agents.size());</span></div>
+<div class="line"><a name="l20099"></a><span class="lineno">20099</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20100"></a><span class="lineno">20100</span>&#160;<span class="comment">    // Checking contact matrix&#39;s rows add to one</span></div>
+<div class="line"><a name="l20101"></a><span class="lineno">20101</span>&#160;<span class="comment">    size_t nentities = entities.size();</span></div>
+<div class="line"><a name="l20102"></a><span class="lineno">20102</span>&#160;<span class="comment">    if (this-&gt;contact_matrix.size() !=  nentities*nentities)</span></div>
+<div class="line"><a name="l20103"></a><span class="lineno">20103</span>&#160;<span class="comment">        throw std::length_error(</span></div>
+<div class="line"><a name="l20104"></a><span class="lineno">20104</span>&#160;<span class="comment">            std::string(&quot;The contact matrix must be a square matrix of size &quot;) +</span></div>
+<div class="line"><a name="l20105"></a><span class="lineno">20105</span>&#160;<span class="comment">            std::string(&quot;nentities x nentities. &quot;) +</span></div>
+<div class="line"><a name="l20106"></a><span class="lineno">20106</span>&#160;<span class="comment">            std::to_string(this-&gt;contact_matrix.size()) +</span></div>
+<div class="line"><a name="l20107"></a><span class="lineno">20107</span>&#160;<span class="comment">            std::string(&quot; != &quot;) + std::to_string(nentities*nentities) +</span></div>
+<div class="line"><a name="l20108"></a><span class="lineno">20108</span>&#160;<span class="comment">            std::string(&quot;.&quot;)</span></div>
+<div class="line"><a name="l20109"></a><span class="lineno">20109</span>&#160;<span class="comment">            );</span></div>
+<div class="line"><a name="l20110"></a><span class="lineno">20110</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20111"></a><span class="lineno">20111</span>&#160;<span class="comment">    for (size_t i = 0u; i &lt; entities.size(); ++i)</span></div>
+<div class="line"><a name="l20112"></a><span class="lineno">20112</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20113"></a><span class="lineno">20113</span>&#160;<span class="comment">        double sum = 0.0;</span></div>
+<div class="line"><a name="l20114"></a><span class="lineno">20114</span>&#160;<span class="comment">        for (size_t j = 0u; j &lt; entities.size(); ++j)</span></div>
+<div class="line"><a name="l20115"></a><span class="lineno">20115</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l20116"></a><span class="lineno">20116</span>&#160;<span class="comment">            if (this-&gt;contact_matrix[index(i, j, nentities)] &lt; 0.0)</span></div>
+<div class="line"><a name="l20117"></a><span class="lineno">20117</span>&#160;<span class="comment">                throw std::range_error(</span></div>
+<div class="line"><a name="l20118"></a><span class="lineno">20118</span>&#160;<span class="comment">                    std::string(&quot;The contact matrix must be non-negative. &quot;) +</span></div>
+<div class="line"><a name="l20119"></a><span class="lineno">20119</span>&#160;<span class="comment">                    std::to_string(this-&gt;contact_matrix[index(i, j, nentities)]) +</span></div>
+<div class="line"><a name="l20120"></a><span class="lineno">20120</span>&#160;<span class="comment">                    std::string(&quot; &lt; 0.&quot;)</span></div>
+<div class="line"><a name="l20121"></a><span class="lineno">20121</span>&#160;<span class="comment">                    );</span></div>
+<div class="line"><a name="l20122"></a><span class="lineno">20122</span>&#160;<span class="comment">            sum += this-&gt;contact_matrix[index(i, j, nentities)];</span></div>
+<div class="line"><a name="l20123"></a><span class="lineno">20123</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l20124"></a><span class="lineno">20124</span>&#160;<span class="comment">        if (sum &lt; 0.999 || sum &gt; 1.001)</span></div>
+<div class="line"><a name="l20125"></a><span class="lineno">20125</span>&#160;<span class="comment">            throw std::range_error(</span></div>
+<div class="line"><a name="l20126"></a><span class="lineno">20126</span>&#160;<span class="comment">                std::string(&quot;The contact matrix must have rows that add to one. &quot;) +</span></div>
+<div class="line"><a name="l20127"></a><span class="lineno">20127</span>&#160;<span class="comment">                std::to_string(sum) +</span></div>
+<div class="line"><a name="l20128"></a><span class="lineno">20128</span>&#160;<span class="comment">                std::string(&quot; != 1.&quot;)</span></div>
+<div class="line"><a name="l20129"></a><span class="lineno">20129</span>&#160;<span class="comment">                );</span></div>
+<div class="line"><a name="l20130"></a><span class="lineno">20130</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20131"></a><span class="lineno">20131</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20132"></a><span class="lineno">20132</span>&#160;<span class="comment">    for (size_t i = 0; i &lt; entities.size(); ++i)</span></div>
+<div class="line"><a name="l20133"></a><span class="lineno">20133</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20134"></a><span class="lineno">20134</span>&#160;<span class="comment">        infected[i].clear();</span></div>
+<div class="line"><a name="l20135"></a><span class="lineno">20135</span>&#160;<span class="comment">        infected[i].reserve(agents.size());</span></div>
+<div class="line"><a name="l20136"></a><span class="lineno">20136</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20137"></a><span class="lineno">20137</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20138"></a><span class="lineno">20138</span>&#160;<span class="comment">    for (auto &amp; a : agents)</span></div>
+<div class="line"><a name="l20139"></a><span class="lineno">20139</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20140"></a><span class="lineno">20140</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20141"></a><span class="lineno">20141</span>&#160;<span class="comment">        if (a.get_state() == ModelSIRMixing&lt;TSeq&gt;::INFECTED)</span></div>
+<div class="line"><a name="l20142"></a><span class="lineno">20142</span>&#160;<span class="comment">            infected[a.get_entity(0u).get_id()].push_back(&amp;a);</span></div>
+<div class="line"><a name="l20143"></a><span class="lineno">20143</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20144"></a><span class="lineno">20144</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20145"></a><span class="lineno">20145</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20146"></a><span class="lineno">20146</span>&#160;<span class="comment">    // Adjusting contact rate</span></div>
+<div class="line"><a name="l20147"></a><span class="lineno">20147</span>&#160;<span class="comment">    adjusted_contact_rate = Model&lt;TSeq&gt;::get_param(&quot;Contact rate&quot;) /</span></div>
+<div class="line"><a name="l20148"></a><span class="lineno">20148</span>&#160;<span class="comment">        agents.size();</span></div>
+<div class="line"><a name="l20149"></a><span class="lineno">20149</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20150"></a><span class="lineno">20150</span>&#160;<span class="comment">    return;</span></div>
+<div class="line"><a name="l20151"></a><span class="lineno">20151</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20152"></a><span class="lineno">20152</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20153"></a><span class="lineno">20153</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20154"></a><span class="lineno">20154</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20155"></a><span class="lineno">20155</span>&#160;<span class="comment">inline size_t ModelSIRMixing&lt;TSeq&gt;::sample_agents(</span></div>
+<div class="line"><a name="l20156"></a><span class="lineno">20156</span>&#160;<span class="comment">    epiworld::Agent&lt;TSeq&gt; * agent,</span></div>
+<div class="line"><a name="l20157"></a><span class="lineno">20157</span>&#160;<span class="comment">    std::vector&lt; epiworld::Agent&lt;TSeq&gt; * &gt; &amp; sampled_agents</span></div>
+<div class="line"><a name="l20158"></a><span class="lineno">20158</span>&#160;<span class="comment">    )</span></div>
+<div class="line"><a name="l20159"></a><span class="lineno">20159</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20160"></a><span class="lineno">20160</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20161"></a><span class="lineno">20161</span>&#160;<span class="comment">    size_t agent_group_id = agent-&gt;get_entity(0u).get_id();</span></div>
+<div class="line"><a name="l20162"></a><span class="lineno">20162</span>&#160;<span class="comment">    size_t ngroups = infected.size();</span></div>
+<div class="line"><a name="l20163"></a><span class="lineno">20163</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20164"></a><span class="lineno">20164</span>&#160;<span class="comment">    int samp_id = 0;</span></div>
+<div class="line"><a name="l20165"></a><span class="lineno">20165</span>&#160;<span class="comment">    for (size_t g = 0; g &lt; infected.size(); ++g)</span></div>
+<div class="line"><a name="l20166"></a><span class="lineno">20166</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l20167"></a><span class="lineno">20167</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20168"></a><span class="lineno">20168</span>&#160;<span class="comment">        // How many from this entity?</span></div>
+<div class="line"><a name="l20169"></a><span class="lineno">20169</span>&#160;<span class="comment">        int nsamples = epiworld::Model&lt;TSeq&gt;::rbinom(</span></div>
+<div class="line"><a name="l20170"></a><span class="lineno">20170</span>&#160;<span class="comment">            infected[g].size(),</span></div>
+<div class="line"><a name="l20171"></a><span class="lineno">20171</span>&#160;<span class="comment">            adjusted_contact_rate * contact_matrix[</span></div>
+<div class="line"><a name="l20172"></a><span class="lineno">20172</span>&#160;<span class="comment">                index(agent_group_id, g, ngroups)</span></div>
+<div class="line"><a name="l20173"></a><span class="lineno">20173</span>&#160;<span class="comment">            ]</span></div>
+<div class="line"><a name="l20174"></a><span class="lineno">20174</span>&#160;<span class="comment">        );</span></div>
+<div class="line"><a name="l20175"></a><span class="lineno">20175</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20176"></a><span class="lineno">20176</span>&#160;<span class="comment">        if (nsamples == 0)</span></div>
+<div class="line"><a name="l20177"></a><span class="lineno">20177</span>&#160;<span class="comment">            continue;</span></div>
+<div class="line"><a name="l20178"></a><span class="lineno">20178</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20179"></a><span class="lineno">20179</span>&#160;<span class="comment">        // Sampling from the entity</span></div>
+<div class="line"><a name="l20180"></a><span class="lineno">20180</span>&#160;<span class="comment">        for (int s = 0; s &lt; nsamples; ++s)</span></div>
+<div class="line"><a name="l20181"></a><span class="lineno">20181</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l20182"></a><span class="lineno">20182</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20183"></a><span class="lineno">20183</span>&#160;<span class="comment">            // Randomly selecting an agent</span></div>
+<div class="line"><a name="l20184"></a><span class="lineno">20184</span>&#160;<span class="comment">            int which = epiworld::Model&lt;TSeq&gt;::runif() * infected[g].size();</span></div>
+<div class="line"><a name="l20185"></a><span class="lineno">20185</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20186"></a><span class="lineno">20186</span>&#160;<span class="comment">            // Correcting overflow error</span></div>
+<div class="line"><a name="l20187"></a><span class="lineno">20187</span>&#160;<span class="comment">            if (which &gt;= static_cast&lt;int&gt;(infected[g].size()))</span></div>
+<div class="line"><a name="l20188"></a><span class="lineno">20188</span>&#160;<span class="comment">                which = static_cast&lt;int&gt;(infected[g].size()) - 1;</span></div>
+<div class="line"><a name="l20189"></a><span class="lineno">20189</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20190"></a><span class="lineno">20190</span>&#160;<span class="comment">            auto &amp; a = infected[g][which];</span></div>
+<div class="line"><a name="l20191"></a><span class="lineno">20191</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20192"></a><span class="lineno">20192</span>&#160;<span class="comment">            // Can&#39;t sample itself</span></div>
+<div class="line"><a name="l20193"></a><span class="lineno">20193</span>&#160;<span class="comment">            if (a-&gt;get_id() == agent-&gt;get_id())</span></div>
+<div class="line"><a name="l20194"></a><span class="lineno">20194</span>&#160;<span class="comment">                continue;</span></div>
+<div class="line"><a name="l20195"></a><span class="lineno">20195</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20196"></a><span class="lineno">20196</span>&#160;<span class="comment">            sampled_agents[samp_id++] = a;</span></div>
+<div class="line"><a name="l20197"></a><span class="lineno">20197</span>&#160;<span class="comment">            </span></div>
+<div class="line"><a name="l20198"></a><span class="lineno">20198</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l20199"></a><span class="lineno">20199</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20200"></a><span class="lineno">20200</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l20201"></a><span class="lineno">20201</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20202"></a><span class="lineno">20202</span>&#160;<span class="comment">    return samp_id;</span></div>
+<div class="line"><a name="l20203"></a><span class="lineno">20203</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20204"></a><span class="lineno">20204</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20205"></a><span class="lineno">20205</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20206"></a><span class="lineno">20206</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20207"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#a12d2e0af9a76804372fa3f15f0ccf7f7">20207</a></span>&#160;<span class="comment">inline ModelSIRMixing&lt;TSeq&gt; &amp; ModelSIRMixing&lt;TSeq&gt;::run(</span></div>
+<div class="line"><a name="l20208"></a><span class="lineno">20208</span>&#160;<span class="comment">    epiworld_fast_uint ndays,</span></div>
+<div class="line"><a name="l20209"></a><span class="lineno">20209</span>&#160;<span class="comment">    int seed</span></div>
+<div class="line"><a name="l20210"></a><span class="lineno">20210</span>&#160;<span class="comment">)</span></div>
+<div class="line"><a name="l20211"></a><span class="lineno">20211</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20212"></a><span class="lineno">20212</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20213"></a><span class="lineno">20213</span>&#160;<span class="comment">    Model&lt;TSeq&gt;::run(ndays, seed);</span></div>
+<div class="line"><a name="l20214"></a><span class="lineno">20214</span>&#160;<span class="comment">    return *this;</span></div>
+<div class="line"><a name="l20215"></a><span class="lineno">20215</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20216"></a><span class="lineno">20216</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20217"></a><span class="lineno">20217</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20218"></a><span class="lineno">20218</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20219"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#af224df7d32151e7a49b15ea5d051fca5">20219</a></span>&#160;<span class="comment">inline void ModelSIRMixing&lt;TSeq&gt;::reset()</span></div>
+<div class="line"><a name="l20220"></a><span class="lineno">20220</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20221"></a><span class="lineno">20221</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20222"></a><span class="lineno">20222</span>&#160;<span class="comment">    Model&lt;TSeq&gt;::reset();</span></div>
+<div class="line"><a name="l20223"></a><span class="lineno">20223</span>&#160;<span class="comment">    this-&gt;update_infected_list();</span></div>
+<div class="line"><a name="l20224"></a><span class="lineno">20224</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20225"></a><span class="lineno">20225</span>&#160;<span class="comment">    return;</span></div>
+<div class="line"><a name="l20226"></a><span class="lineno">20226</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20227"></a><span class="lineno">20227</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20228"></a><span class="lineno">20228</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20229"></a><span class="lineno">20229</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20230"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#a609d6da791f6d097a6ece6554a75cbe6">20230</a></span>&#160;<span class="comment">inline Model&lt;TSeq&gt; * ModelSIRMixing&lt;TSeq&gt;::clone_ptr()</span></div>
+<div class="line"><a name="l20231"></a><span class="lineno">20231</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20232"></a><span class="lineno">20232</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l20233"></a><span class="lineno">20233</span>&#160;<span class="comment">    ModelSIRMixing&lt;TSeq&gt; * ptr = new ModelSIRMixing&lt;TSeq&gt;(</span></div>
+<div class="line"><a name="l20234"></a><span class="lineno">20234</span>&#160;<span class="comment">        *dynamic_cast&lt;const ModelSIRMixing&lt;TSeq&gt;*&gt;(this)</span></div>
+<div class="line"><a name="l20235"></a><span class="lineno">20235</span>&#160;<span class="comment">        );</span></div>
+<div class="line"><a name="l20236"></a><span class="lineno">20236</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20237"></a><span class="lineno">20237</span>&#160;<span class="comment">    return dynamic_cast&lt; Model&lt;TSeq&gt; *&gt;(ptr);</span></div>
+<div class="line"><a name="l20238"></a><span class="lineno">20238</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20239"></a><span class="lineno">20239</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20240"></a><span class="lineno">20240</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20241"></a><span class="lineno">20241</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20252"></a><span class="lineno">20252</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
+<div class="line"><a name="l20253"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#a9d4599b2bd9197f30d1ffbcc2aeed43f">20253</a></span>&#160;<span class="comment">inline ModelSIRMixing&lt;TSeq&gt;::ModelSIRMixing(</span></div>
+<div class="line"><a name="l20254"></a><span class="lineno">20254</span>&#160;<span class="comment">    ModelSIRMixing&lt;TSeq&gt; &amp; model,</span></div>
+<div class="line"><a name="l20255"></a><span class="lineno">20255</span>&#160;<span class="comment">    std::string vname,</span></div>
+<div class="line"><a name="l20256"></a><span class="lineno">20256</span>&#160;<span class="comment">    epiworld_fast_uint n,</span></div>
+<div class="line"><a name="l20257"></a><span class="lineno">20257</span>&#160;<span class="comment">    epiworld_double prevalence,</span></div>
+<div class="line"><a name="l20258"></a><span class="lineno">20258</span>&#160;<span class="comment">    epiworld_double contact_rate,</span></div>
+<div class="line"><a name="l20259"></a><span class="lineno">20259</span>&#160;<span class="comment">    epiworld_double transmission_rate,</span></div>
+<div class="line"><a name="l20260"></a><span class="lineno">20260</span>&#160;<span class="comment">    epiworld_double recovery_rate,</span></div>
+<div class="line"><a name="l20261"></a><span class="lineno">20261</span>&#160;<span class="comment">    std::vector&lt; double &gt; contact_matrix</span></div>
+<div class="line"><a name="l20262"></a><span class="lineno">20262</span>&#160;<span class="comment">    )</span></div>
+<div class="line"><a name="l20263"></a><span class="lineno">20263</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l20264"></a><span class="lineno">20264</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20265"></a><span class="lineno">20265</span>&#160;<span class="comment">    // Setting up the contact matrix</span></div>
+<div class="line"><a name="l20266"></a><span class="lineno">20266</span>&#160;<span class="comment">    this-&gt;contact_matrix = contact_matrix;</span></div>
+<div class="line"><a name="l20267"></a><span class="lineno">20267</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20268"></a><span class="lineno">20268</span>&#160;<span class="comment">    epiworld::UpdateFun&lt;TSeq&gt; update_susceptible = [](</span></div>
+<div class="line"><a name="l20269"></a><span class="lineno">20269</span>&#160;<span class="comment">        epiworld::Agent&lt;TSeq&gt; * p, epiworld::Model&lt;TSeq&gt; * m</span></div>
+<div class="line"><a name="l20270"></a><span class="lineno">20270</span>&#160;<span class="comment">        ) -&gt; void</span></div>
+<div class="line"><a name="l20271"></a><span class="lineno">20271</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l20272"></a><span class="lineno">20272</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20273"></a><span class="lineno">20273</span>&#160;<span class="comment">            if (p-&gt;get_n_entities() == 0)</span></div>
+<div class="line"><a name="l20274"></a><span class="lineno">20274</span>&#160;<span class="comment">                return;</span></div>
+<div class="line"><a name="l20275"></a><span class="lineno">20275</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20276"></a><span class="lineno">20276</span>&#160;<span class="comment">            // Downcasting to retrieve the sampler attached to the</span></div>
+<div class="line"><a name="l20277"></a><span class="lineno">20277</span>&#160;<span class="comment">            // class</span></div>
+<div class="line"><a name="l20278"></a><span class="lineno">20278</span>&#160;<span class="comment">            ModelSIRMixing&lt;TSeq&gt; * m_down =</span></div>
+<div class="line"><a name="l20279"></a><span class="lineno">20279</span>&#160;<span class="comment">                dynamic_cast&lt;ModelSIRMixing&lt;TSeq&gt; *&gt;(m);</span></div>
+<div class="line"><a name="l20280"></a><span class="lineno">20280</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20281"></a><span class="lineno">20281</span>&#160;<span class="comment">            size_t ndraws = m_down-&gt;sample_agents(p, m_down-&gt;sampled_agents);</span></div>
+<div class="line"><a name="l20282"></a><span class="lineno">20282</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20283"></a><span class="lineno">20283</span>&#160;<span class="comment">            if (ndraws == 0u)</span></div>
+<div class="line"><a name="l20284"></a><span class="lineno">20284</span>&#160;<span class="comment">                return;</span></div>
+<div class="line"><a name="l20285"></a><span class="lineno">20285</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20286"></a><span class="lineno">20286</span>&#160;<span class="comment">            </span></div>
+<div class="line"><a name="l20287"></a><span class="lineno">20287</span>&#160;<span class="comment">            // Drawing from the set</span></div>
+<div class="line"><a name="l20288"></a><span class="lineno">20288</span>&#160;<span class="comment">            int nviruses_tmp = 0;</span></div>
+<div class="line"><a name="l20289"></a><span class="lineno">20289</span>&#160;<span class="comment">            for (size_t n = 0u; n &lt; ndraws; ++n)</span></div>
+<div class="line"><a name="l20290"></a><span class="lineno">20290</span>&#160;<span class="comment">            {</span></div>
+<div class="line"><a name="l20291"></a><span class="lineno">20291</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20292"></a><span class="lineno">20292</span>&#160;<span class="comment">                auto &amp; neighbor = m_down-&gt;sampled_agents[n];</span></div>
+<div class="line"><a name="l20293"></a><span class="lineno">20293</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20294"></a><span class="lineno">20294</span>&#160;<span class="comment">                auto &amp; v = neighbor-&gt;get_virus();</span></div>
+<div class="line"><a name="l20295"></a><span class="lineno">20295</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20296"></a><span class="lineno">20296</span>&#160;<span class="comment">                #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l20297"></a><span class="lineno">20297</span>&#160;<span class="comment">                if (nviruses_tmp &gt;= static_cast&lt;int&gt;(m-&gt;array_virus_tmp.size()))</span></div>
+<div class="line"><a name="l20298"></a><span class="lineno">20298</span>&#160;<span class="comment">                    throw std::logic_error(&quot;Trying to add an extra element to a temporal array outside of the range.&quot;);</span></div>
+<div class="line"><a name="l20299"></a><span class="lineno">20299</span>&#160;<span class="comment">                #endif</span></div>
+<div class="line"><a name="l20300"></a><span class="lineno">20300</span>&#160;<span class="comment">                    </span></div>
+<div class="line"><a name="l20301"></a><span class="lineno">20301</span>&#160;<span class="comment">                /* And it is a function of susceptibility_reduction as well */</span> </div>
+<div class="line"><a name="l20302"></a><span class="lineno">20302</span>&#160;                m-&gt;array_double_tmp[nviruses_tmp] =</div>
+<div class="line"><a name="l20303"></a><span class="lineno">20303</span>&#160;                    (1.0 - p-&gt;get_susceptibility_reduction(v, m)) * </div>
+<div class="line"><a name="l20304"></a><span class="lineno">20304</span>&#160;                    v-&gt;get_prob_infecting(m) * </div>
+<div class="line"><a name="l20305"></a><span class="lineno">20305</span>&#160;                    (1.0 - neighbor-&gt;get_transmission_reduction(v, m)) </div>
+<div class="line"><a name="l20306"></a><span class="lineno">20306</span>&#160;                    ; </div>
+<div class="line"><a name="l20307"></a><span class="lineno">20307</span>&#160;            </div>
+<div class="line"><a name="l20308"></a><span class="lineno">20308</span>&#160;                m-&gt;array_virus_tmp[nviruses_tmp++] = &amp;(*v);</div>
+<div class="line"><a name="l20309"></a><span class="lineno">20309</span>&#160; </div>
+<div class="line"><a name="l20310"></a><span class="lineno">20310</span>&#160;            }</div>
+<div class="line"><a name="l20311"></a><span class="lineno">20311</span>&#160; </div>
+<div class="line"><a name="l20312"></a><span class="lineno">20312</span>&#160;            <span class="comment">// Running the roulette</span></div>
+<div class="line"><a name="l20313"></a><span class="lineno">20313</span>&#160;            <span class="keywordtype">int</span> which = roulette(nviruses_tmp, m);</div>
+<div class="line"><a name="l20314"></a><span class="lineno">20314</span>&#160; </div>
+<div class="line"><a name="l20315"></a><span class="lineno">20315</span>&#160;            <span class="keywordflow">if</span> (which &lt; 0)</div>
+<div class="line"><a name="l20316"></a><span class="lineno">20316</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20317"></a><span class="lineno">20317</span>&#160; </div>
+<div class="line"><a name="l20318"></a><span class="lineno">20318</span>&#160;            p-&gt;set_virus(</div>
+<div class="line"><a name="l20319"></a><span class="lineno">20319</span>&#160;                *m-&gt;array_virus_tmp[which],</div>
+<div class="line"><a name="l20320"></a><span class="lineno">20320</span>&#160;                m,</div>
+<div class="line"><a name="l20321"></a><span class="lineno">20321</span>&#160;                <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::INFECTED</a></div>
+<div class="line"><a name="l20322"></a><span class="lineno">20322</span>&#160;                );</div>
+<div class="line"><a name="l20323"></a><span class="lineno">20323</span>&#160; </div>
+<div class="line"><a name="l20324"></a><span class="lineno">20324</span>&#160;            <span class="keywordflow">return</span>; </div>
+<div class="line"><a name="l20325"></a><span class="lineno">20325</span>&#160; </div>
+<div class="line"><a name="l20326"></a><span class="lineno">20326</span>&#160;        };</div>
+<div class="line"><a name="l20327"></a><span class="lineno">20327</span>&#160; </div>
+<div class="line"><a name="l20328"></a><span class="lineno">20328</span>&#160;    epiworld::UpdateFun&lt;TSeq&gt; update_infected = [](</div>
+<div class="line"><a name="l20329"></a><span class="lineno">20329</span>&#160;        <a class="code" href="classepiworld_1_1_agent.html">epiworld::Agent&lt;TSeq&gt;</a> * p, <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m</div>
+<div class="line"><a name="l20330"></a><span class="lineno">20330</span>&#160;        ) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a name="l20331"></a><span class="lineno">20331</span>&#160; </div>
+<div class="line"><a name="l20332"></a><span class="lineno">20332</span>&#160;            <span class="keyword">auto</span> state = p-&gt;get_state();</div>
+<div class="line"><a name="l20333"></a><span class="lineno">20333</span>&#160; </div>
+<div class="line"><a name="l20334"></a><span class="lineno">20334</span>&#160;            <span class="keywordflow">if</span> (state == <a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::INFECTED</a>)</div>
+<div class="line"><a name="l20335"></a><span class="lineno">20335</span>&#160;            {</div>
+<div class="line"><a name="l20336"></a><span class="lineno">20336</span>&#160; </div>
+<div class="line"><a name="l20337"></a><span class="lineno">20337</span>&#160; </div>
+<div class="line"><a name="l20338"></a><span class="lineno">20338</span>&#160;                <span class="comment">// Odd: Die, Even: Recover</span></div>
+<div class="line"><a name="l20339"></a><span class="lineno">20339</span>&#160;                epiworld_fast_uint n_events = 0u;</div>
+<div class="line"><a name="l20340"></a><span class="lineno">20340</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> &amp; v = p-&gt;get_virus();</div>
+<div class="line"><a name="l20341"></a><span class="lineno">20341</span>&#160; </div>
+<div class="line"><a name="l20342"></a><span class="lineno">20342</span>&#160;                <span class="comment">// Recover</span></div>
+<div class="line"><a name="l20343"></a><span class="lineno">20343</span>&#160;                m-&gt;array_double_tmp[n_events++] = </div>
+<div class="line"><a name="l20344"></a><span class="lineno">20344</span>&#160;                    1.0 - (1.0 - v-&gt;get_prob_recovery(m)) * (1.0 - p-&gt;get_recovery_enhancer(v, m)); </div>
+<div class="line"><a name="l20345"></a><span class="lineno">20345</span>&#160; </div>
+<div class="line"><a name="l20346"></a><span class="lineno">20346</span>&#160;<span class="preprocessor">                #ifdef EPI_DEBUG</span></div>
+<div class="line"><a name="l20347"></a><span class="lineno">20347</span>&#160;                <span class="keywordflow">if</span> (n_events == 0u)</div>
+<div class="line"><a name="l20348"></a><span class="lineno">20348</span>&#160;                {</div>
+<div class="line"><a name="l20349"></a><span class="lineno">20349</span>&#160;                    printf_epiworld(</div>
+<div class="line"><a name="l20350"></a><span class="lineno">20350</span>&#160;                        <span class="stringliteral">&quot;[epi-debug] agent %i has 0 possible events!!\n&quot;</span>,</div>
+<div class="line"><a name="l20351"></a><span class="lineno">20351</span>&#160;                        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(p-&gt;<a class="code" href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>())</div>
+<div class="line"><a name="l20352"></a><span class="lineno">20352</span>&#160;                        );</div>
+<div class="line"><a name="l20353"></a><span class="lineno">20353</span>&#160;                    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Zero events in infected.&quot;</span>);</div>
+<div class="line"><a name="l20354"></a><span class="lineno">20354</span>&#160;                }</div>
+<div class="line"><a name="l20355"></a><span class="lineno">20355</span>&#160;<span class="preprocessor">                #else</span></div>
+<div class="line"><a name="l20356"></a><span class="lineno">20356</span>&#160;                <span class="keywordflow">if</span> (n_events == 0u)</div>
+<div class="line"><a name="l20357"></a><span class="lineno">20357</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20358"></a><span class="lineno">20358</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l20359"></a><span class="lineno">20359</span>&#160;                </div>
+<div class="line"><a name="l20360"></a><span class="lineno">20360</span>&#160; </div>
+<div class="line"><a name="l20361"></a><span class="lineno">20361</span>&#160;                <span class="comment">// Running the roulette</span></div>
+<div class="line"><a name="l20362"></a><span class="lineno">20362</span>&#160;                <span class="keywordtype">int</span> which = roulette(n_events, m);</div>
+<div class="line"><a name="l20363"></a><span class="lineno">20363</span>&#160; </div>
+<div class="line"><a name="l20364"></a><span class="lineno">20364</span>&#160;                <span class="keywordflow">if</span> (which &lt; 0)</div>
+<div class="line"><a name="l20365"></a><span class="lineno">20365</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20366"></a><span class="lineno">20366</span>&#160; </div>
+<div class="line"><a name="l20367"></a><span class="lineno">20367</span>&#160;                <span class="comment">// Which roulette happen?</span></div>
+<div class="line"><a name="l20368"></a><span class="lineno">20368</span>&#160;                p-&gt;rm_virus(m);</div>
+<div class="line"><a name="l20369"></a><span class="lineno">20369</span>&#160; </div>
+<div class="line"><a name="l20370"></a><span class="lineno">20370</span>&#160;                return ;</div>
+<div class="line"><a name="l20371"></a><span class="lineno">20371</span>&#160; </div>
+<div class="line"><a name="l20372"></a><span class="lineno">20372</span>&#160;            } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l20373"></a><span class="lineno">20373</span>&#160;                <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;This function can only be applied to infected individuals. (SIR)&quot;</span>) ;</div>
+<div class="line"><a name="l20374"></a><span class="lineno">20374</span>&#160; </div>
+<div class="line"><a name="l20375"></a><span class="lineno">20375</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20376"></a><span class="lineno">20376</span>&#160; </div>
+<div class="line"><a name="l20377"></a><span class="lineno">20377</span>&#160;        };</div>
+<div class="line"><a name="l20378"></a><span class="lineno">20378</span>&#160; </div>
+<div class="line"><a name="l20379"></a><span class="lineno">20379</span>&#160;    <span class="comment">// Setting up parameters</span></div>
+<div class="line"><a name="l20380"></a><span class="lineno">20380</span>&#160;    model.add_param(contact_rate, <span class="stringliteral">&quot;Contact rate&quot;</span>);</div>
+<div class="line"><a name="l20381"></a><span class="lineno">20381</span>&#160;    model.add_param(transmission_rate, <span class="stringliteral">&quot;Prob. Transmission&quot;</span>);</div>
+<div class="line"><a name="l20382"></a><span class="lineno">20382</span>&#160;    model.add_param(recovery_rate, <span class="stringliteral">&quot;Prob. Recovery&quot;</span>);</div>
+<div class="line"><a name="l20383"></a><span class="lineno">20383</span>&#160;    </div>
+<div class="line"><a name="l20384"></a><span class="lineno">20384</span>&#160;    <span class="comment">// state</span></div>
+<div class="line"><a name="l20385"></a><span class="lineno">20385</span>&#160;    model.add_state(<span class="stringliteral">&quot;Susceptible&quot;</span>, update_susceptible);</div>
+<div class="line"><a name="l20386"></a><span class="lineno">20386</span>&#160;    model.add_state(<span class="stringliteral">&quot;Infected&quot;</span>, update_infected);</div>
+<div class="line"><a name="l20387"></a><span class="lineno">20387</span>&#160;    model.add_state(<span class="stringliteral">&quot;Recovered&quot;</span>);</div>
+<div class="line"><a name="l20388"></a><span class="lineno">20388</span>&#160; </div>
+<div class="line"><a name="l20389"></a><span class="lineno">20389</span>&#160;    <span class="comment">// Global function</span></div>
+<div class="line"><a name="l20390"></a><span class="lineno">20390</span>&#160;    epiworld::GlobalFun&lt;TSeq&gt; update = [](<a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a name="l20391"></a><span class="lineno">20391</span>&#160;    {</div>
+<div class="line"><a name="l20392"></a><span class="lineno">20392</span>&#160; </div>
+<div class="line"><a name="l20393"></a><span class="lineno">20393</span>&#160;        <a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;</a> * m_down =</div>
+<div class="line"><a name="l20394"></a><span class="lineno">20394</span>&#160;            <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;</a> *<span class="keyword">&gt;</span>(m);</div>
+<div class="line"><a name="l20395"></a><span class="lineno">20395</span>&#160; </div>
+<div class="line"><a name="l20396"></a><span class="lineno">20396</span>&#160;        m_down-&gt;update_infected_list();</div>
+<div class="line"><a name="l20397"></a><span class="lineno">20397</span>&#160; </div>
+<div class="line"><a name="l20398"></a><span class="lineno">20398</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20399"></a><span class="lineno">20399</span>&#160; </div>
+<div class="line"><a name="l20400"></a><span class="lineno">20400</span>&#160;    };</div>
+<div class="line"><a name="l20401"></a><span class="lineno">20401</span>&#160; </div>
+<div class="line"><a name="l20402"></a><span class="lineno">20402</span>&#160;    model.add_globalevent(update, <span class="stringliteral">&quot;Update infected individuals&quot;</span>);</div>
+<div class="line"><a name="l20403"></a><span class="lineno">20403</span>&#160; </div>
+<div class="line"><a name="l20404"></a><span class="lineno">20404</span>&#160; </div>
+<div class="line"><a name="l20405"></a><span class="lineno">20405</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
+<div class="line"><a name="l20406"></a><span class="lineno">20406</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
+<div class="line"><a name="l20407"></a><span class="lineno">20407</span>&#160;    virus.set_state(</div>
+<div class="line"><a name="l20408"></a><span class="lineno">20408</span>&#160;        <a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::INFECTED</a>,</div>
+<div class="line"><a name="l20409"></a><span class="lineno">20409</span>&#160;        <a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::RECOVERED</a>,</div>
+<div class="line"><a name="l20410"></a><span class="lineno">20410</span>&#160;        <a class="code" href="class_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::RECOVERED</a></div>
+<div class="line"><a name="l20411"></a><span class="lineno">20411</span>&#160;        );</div>
+<div class="line"><a name="l20412"></a><span class="lineno">20412</span>&#160; </div>
+<div class="line"><a name="l20413"></a><span class="lineno">20413</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Prob. Transmission&quot;</span>));</div>
+<div class="line"><a name="l20414"></a><span class="lineno">20414</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Prob. Recovery&quot;</span>));</div>
+<div class="line"><a name="l20415"></a><span class="lineno">20415</span>&#160; </div>
+<div class="line"><a name="l20416"></a><span class="lineno">20416</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l20417"></a><span class="lineno">20417</span>&#160; </div>
+<div class="line"><a name="l20418"></a><span class="lineno">20418</span>&#160;    model.queuing_off(); <span class="comment">// No queuing need</span></div>
+<div class="line"><a name="l20419"></a><span class="lineno">20419</span>&#160; </div>
+<div class="line"><a name="l20420"></a><span class="lineno">20420</span>&#160;    <span class="comment">// Adding the empty population</span></div>
+<div class="line"><a name="l20421"></a><span class="lineno">20421</span>&#160;    model.agents_empty_graph(n);</div>
+<div class="line"><a name="l20422"></a><span class="lineno">20422</span>&#160; </div>
+<div class="line"><a name="l20423"></a><span class="lineno">20423</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Infected-Removed (SIR) with Mixing&quot;</span>);</div>
+<div class="line"><a name="l20424"></a><span class="lineno">20424</span>&#160; </div>
+<div class="line"><a name="l20425"></a><span class="lineno">20425</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20426"></a><span class="lineno">20426</span>&#160; </div>
+<div class="line"><a name="l20427"></a><span class="lineno">20427</span>&#160;}</div>
+<div class="line"><a name="l20428"></a><span class="lineno">20428</span>&#160; </div>
+<div class="line"><a name="l20429"></a><span class="lineno">20429</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l20430"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#ad52a2584b1f522d9cd499f5350fcbb44">20430</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;::ModelSIRMixing</a>(</div>
+<div class="line"><a name="l20431"></a><span class="lineno">20431</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l20432"></a><span class="lineno">20432</span>&#160;    epiworld_fast_uint n,</div>
+<div class="line"><a name="l20433"></a><span class="lineno">20433</span>&#160;    epiworld_double prevalence,</div>
+<div class="line"><a name="l20434"></a><span class="lineno">20434</span>&#160;    epiworld_double contact_rate,</div>
+<div class="line"><a name="l20435"></a><span class="lineno">20435</span>&#160;    epiworld_double transmission_rate,</div>
+<div class="line"><a name="l20436"></a><span class="lineno">20436</span>&#160;    epiworld_double recovery_rate,</div>
+<div class="line"><a name="l20437"></a><span class="lineno">20437</span>&#160;    std::vector&lt; double &gt; contact_matrix</div>
+<div class="line"><a name="l20438"></a><span class="lineno">20438</span>&#160;    )</div>
+<div class="line"><a name="l20439"></a><span class="lineno">20439</span>&#160;{   </div>
+<div class="line"><a name="l20440"></a><span class="lineno">20440</span>&#160; </div>
+<div class="line"><a name="l20441"></a><span class="lineno">20441</span>&#160;    this-&gt;contact_matrix = contact_matrix;</div>
+<div class="line"><a name="l20442"></a><span class="lineno">20442</span>&#160; </div>
+<div class="line"><a name="l20443"></a><span class="lineno">20443</span>&#160;    <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">ModelSIRMixing</a>(</div>
+<div class="line"><a name="l20444"></a><span class="lineno">20444</span>&#160;        *<span class="keyword">this</span>,</div>
+<div class="line"><a name="l20445"></a><span class="lineno">20445</span>&#160;        vname,</div>
+<div class="line"><a name="l20446"></a><span class="lineno">20446</span>&#160;        n,</div>
+<div class="line"><a name="l20447"></a><span class="lineno">20447</span>&#160;        prevalence,</div>
+<div class="line"><a name="l20448"></a><span class="lineno">20448</span>&#160;        contact_rate,</div>
+<div class="line"><a name="l20449"></a><span class="lineno">20449</span>&#160;        transmission_rate,</div>
+<div class="line"><a name="l20450"></a><span class="lineno">20450</span>&#160;        recovery_rate,</div>
+<div class="line"><a name="l20451"></a><span class="lineno">20451</span>&#160;        contact_matrix</div>
+<div class="line"><a name="l20452"></a><span class="lineno">20452</span>&#160;    );</div>
+<div class="line"><a name="l20453"></a><span class="lineno">20453</span>&#160; </div>
+<div class="line"><a name="l20454"></a><span class="lineno">20454</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l20455"></a><span class="lineno">20455</span>&#160; </div>
+<div class="line"><a name="l20456"></a><span class="lineno">20456</span>&#160;}</div>
+<div class="line"><a name="l20457"></a><span class="lineno">20457</span>&#160; </div>
+<div class="line"><a name="l20458"></a><span class="lineno">20458</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
+<div class="line"><a name="l20459"></a><span class="lineno"><a class="line" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html#a39048154d0a8c6aaaaf15111709b21e6">20459</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">ModelSIRMixing&lt;TSeq&gt;</a> &amp; <a class="code" href="class_model_s_i_r_mixing.html#a39048154d0a8c6aaaaf15111709b21e6">ModelSIRMixing&lt;TSeq&gt;::initial_states</a>(</div>
+<div class="line"><a name="l20460"></a><span class="lineno">20460</span>&#160;    std::vector&lt; double &gt; proportions_,</div>
+<div class="line"><a name="l20461"></a><span class="lineno">20461</span>&#160;    std::vector&lt; int &gt; <span class="comment">/* queue_ */</span></div>
+<div class="line"><a name="l20462"></a><span class="lineno">20462</span>&#160;)</div>
+<div class="line"><a name="l20463"></a><span class="lineno">20463</span>&#160;{</div>
+<div class="line"><a name="l20464"></a><span class="lineno">20464</span>&#160; </div>
+<div class="line"><a name="l20465"></a><span class="lineno">20465</span>&#160;    <a class="code" href="classepiworld_1_1_model.html">Model&lt;TSeq&gt;::initial_states_fun</a> =</div>
+<div class="line"><a name="l20466"></a><span class="lineno">20466</span>&#160;        create_init_function_sir&lt;TSeq&gt;(proportions_)</div>
+<div class="line"><a name="l20467"></a><span class="lineno">20467</span>&#160;        ;</div>
+<div class="line"><a name="l20468"></a><span class="lineno">20468</span>&#160; </div>
+<div class="line"><a name="l20469"></a><span class="lineno">20469</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l20470"></a><span class="lineno">20470</span>&#160; </div>
+<div class="line"><a name="l20471"></a><span class="lineno">20471</span>&#160;}</div>
+<div class="line"><a name="l20472"></a><span class="lineno">20472</span>&#160; </div>
+<div class="line"><a name="l20473"></a><span class="lineno">20473</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l20474"></a><span class="lineno">20474</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l20476"></a><span class="lineno">20476</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20477"></a><span class="lineno">20477</span>&#160;<span class="comment"> End of -include/epiworld//models/sirmixing.hpp-</span></div>
+<div class="line"><a name="l20478"></a><span class="lineno">20478</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20481"></a><span class="lineno">20481</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20482"></a><span class="lineno">20482</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20483"></a><span class="lineno">20483</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20484"></a><span class="lineno">20484</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20485"></a><span class="lineno">20485</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20486"></a><span class="lineno">20486</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20487"></a><span class="lineno">20487</span>&#160;<span class="comment">#endif</span></div>
+<div class="line"><a name="l20488"></a><span class="lineno">20488</span>&#160;<span class="comment">/*//////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l20490"></a><span class="lineno">20490</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20491"></a><span class="lineno">20491</span>&#160;<span class="comment"> End of -include/epiworld/models/models.hpp-</span></div>
+<div class="line"><a name="l20492"></a><span class="lineno">20492</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20495"></a><span class="lineno">20495</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20496"></a><span class="lineno">20496</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20497"></a><span class="lineno">20497</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20498"></a><span class="lineno">20498</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l20499"></a><span class="lineno">20499</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l20500"></a><span class="lineno">20500</span>&#160;<span class="comment">#endif </span></div>
 <div class="ttc" id="aclass_adj_list_html"><div class="ttname"><a href="class_adj_list.html">AdjList</a></div><div class="ttdef"><b>Definition:</b> adjlist-bones.hpp:4</div></div>
 <div class="ttc" id="aclass_adj_list_html_a2bf3a057863c9dfb958d44ff370690d1"><div class="ttname"><a href="class_adj_list.html#a2bf3a057863c9dfb958d44ff370690d1">AdjList::vcount</a></div><div class="ttdeci">size_t vcount() const</div><div class="ttdoc">Number of vertices/nodes in the network.</div><div class="ttdef"><b>Definition:</b> adjlist-meat.hpp:203</div></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:66</div></div>
@@ -18403,6 +18866,8 @@ $(function() {
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html">ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:6</div></div>
 <div class="ttc" id="aclass_model_s_i_r_c_o_n_n_html_a433e5c933efa713ae79396eae1bf453d"><div class="ttname"><a href="class_model_s_i_r_c_o_n_n.html#a433e5c933efa713ae79396eae1bf453d">ModelSIRCONN::initial_states</a></div><div class="ttdeci">ModelSIRCONN&lt; TSeq &gt; &amp; initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div><div class="ttdef"><b>Definition:</b> sirconnected.hpp:351</div></div>
 <div class="ttc" id="aclass_model_s_i_r_d_c_o_n_n_html"><div class="ttname"><a href="class_model_s_i_r_d_c_o_n_n.html">ModelSIRDCONN</a></div><div class="ttdef"><b>Definition:</b> sirdconnected.hpp:6</div></div>
+<div class="ttc" id="aclass_model_s_i_r_mixing_html"><div class="ttname"><a href="class_model_s_i_r_mixing.html">ModelSIRMixing</a></div><div class="ttdef"><b>Definition:</b> sirmixing.hpp:10</div></div>
+<div class="ttc" id="aclass_model_s_i_r_mixing_html_a39048154d0a8c6aaaaf15111709b21e6"><div class="ttname"><a href="class_model_s_i_r_mixing.html#a39048154d0a8c6aaaaf15111709b21e6">ModelSIRMixing::initial_states</a></div><div class="ttdeci">ModelSIRMixing&lt; TSeq &gt; &amp; initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div><div class="ttdef"><b>Definition:</b> sirmixing.hpp:479</div></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
 <div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdoc">Controls which agents are verified at each step.</div><div class="ttdef"><b>Definition:</b> queue-bones.hpp:16</div></div>
 <div class="ttc" id="aclass_tool_html"><div class="ttname"><a href="class_tool.html">Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> tool-bones.hpp:23</div></div>
@@ -18457,6 +18922,7 @@ $(function() {
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html">epiworld::epimodels::ModelSIRCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:16754</div></div>
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n.html">epiworld::epimodels::ModelSIRDCONN</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:18060</div></div>
 <div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_logit_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_logit.html">epiworld::epimodels::ModelSIRLogit</a></div><div class="ttdoc">Template for a Susceptible-Infected-Removed (SIR) model.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:18876</div></div>
+<div class="ttc" id="aclassepiworld_1_1epimodels_1_1_model_s_i_r_mixing_html"><div class="ttname"><a href="classepiworld_1_1epimodels_1_1_model_s_i_r_mixing.html">epiworld::epimodels::ModelSIRMixing</a></div><div class="ttdef"><b>Definition:</b> epiworld.hpp:19990</div></div>
 <div class="ttc" id="anamespaceepiworld_1_1sampler_html_a021132a942bb59db17289b6454315b4e"><div class="ttname"><a href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">epiworld::sampler::sample_virus_single</a></div><div class="ttdeci">Virus&lt; TSeq &gt; * sample_virus_single(Agent&lt; TSeq &gt; *p, Model&lt; TSeq &gt; *m)</div><div class="ttdoc">Sample from neighbors pool of viruses (at most one)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:12970</div></div>
 <div class="ttc" id="anamespaceepiworld_1_1sampler_html_a058e471163798e71719e9580b016692f"><div class="ttname"><a href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">epiworld::sampler::make_sample_virus_neighbors</a></div><div class="ttdeci">std::function&lt; Virus&lt; TSeq &gt; *(Agent&lt; TSeq &gt; *, Model&lt; TSeq &gt; *)&gt; make_sample_virus_neighbors(std::vector&lt; epiworld_fast_uint &gt; exclude={})</div><div class="ttdoc">Make a function to sample from neighbors.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:12802</div></div>
 <div class="ttc" id="anamespacesampler_html"><div class="ttname"><a href="namespacesampler.html">sampler</a></div><div class="ttdoc">Functions for sampling viruses.</div><div class="ttdef"><b>Definition:</b> agent-meat-virus-sampling.hpp:8</div></div>

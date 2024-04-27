@@ -1,0 +1,205 @@
+\hypertarget{class_model_s_i_r_mixing}{}\doxysection{Model\+SIRMixing$<$ TSeq $>$ Class Template Reference}
+\label{class_model_s_i_r_mixing}\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+
+
+Inheritance diagram for Model\+SIRMixing$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_model_s_i_r_mixing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+SIRMixing$<$ TSeq $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_model_s_i_r_mixing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_s_i_r_mixing_a9d4599b2bd9197f30d1ffbcc2aeed43f}{Model\+SIRMixing}} (\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, std\+::vector$<$ double $>$ contact\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_s_i_r_mixing_ad52a2584b1f522d9cd499f5350fcbb44}{Model\+SIRMixing}} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double recovery\+\_\+rate, std\+::vector$<$ double $>$ contact\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a12d2e0af9a76804372fa3f15f0ccf7f7}\label{class_model_s_i_r_mixing_a12d2e0af9a76804372fa3f15f0ccf7f7}} 
+\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_mixing_a12d2e0af9a76804372fa3f15f0ccf7f7}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
+\begin{DoxyCompactList}\small\item\em Runs the simulation (after initialization) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_s_i_r_mixing_af224df7d32151e7a49b15ea5d051fca5}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_mixing_a609d6da791f6d097a6ece6554a75cbe6}{clone\+\_\+ptr}} ()
+\begin{DoxyCompactList}\small\item\em Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_mixing_a39048154d0a8c6aaaaf15111709b21e6}{initial\+\_\+states}} (std\+::vector$<$ double $>$ proportions\+\_\+, std\+::vector$<$ int $>$ queue\+\_\+=\{\})
+\begin{DoxyCompactList}\small\item\em Set the initial states of the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a9a1083b4cadcaaca321d7cddae06e7bb}\label{class_model_s_i_r_mixing_a9a1083b4cadcaaca321d7cddae06e7bb}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+infected} (size\+\_\+t group) const
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_abda8bff228f6b2929430648cd6a2794b}\label{class_model_s_i_r_mixing_abda8bff228f6b2929430648cd6a2794b}} 
+void {\bfseries set\+\_\+contact\+\_\+matrix} (std\+::vector$<$ double $>$ cmat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_acdcdc3fb1dfeb6cf7be701b93104e168}\label{class_model_s_i_r_mixing_acdcdc3fb1dfeb6cf7be701b93104e168}} 
+static const int {\bfseries SUSCEPTIBLE} = 0
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_ab0cf03140d2d8d79834f241fd41080ab}\label{class_model_s_i_r_mixing_ab0cf03140d2d8d79834f241fd41080ab}} 
+static const int {\bfseries INFECTED} = 1
+\item 
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a0c9afd0b864a07b222a94948834bfcde}\label{class_model_s_i_r_mixing_a0c9afd0b864a07b222a94948834bfcde}} 
+static const int {\bfseries RECOVERED} = 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a9d4599b2bd9197f30d1ffbcc2aeed43f}\label{class_model_s_i_r_mixing_a9d4599b2bd9197f30d1ffbcc2aeed43f}} 
+\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}!ModelSIRMixing@{ModelSIRMixing}}
+\index{ModelSIRMixing@{ModelSIRMixing}!ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{ModelSIRMixing()}{ModelSIRMixing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{contact\+\_\+rate,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate,  }\item[{std\+::vector$<$ double $>$}]{contact\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. 
+
+Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & A reference to an existing \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. \\
+\hline
+{\em vname} & The name of the \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. \\
+\hline
+{\em n} & The number of entities in the model. \\
+\hline
+{\em prevalence} & The initial prevalence of the disease in the model. \\
+\hline
+{\em contact\+\_\+rate} & The contact rate between entities in the model. \\
+\hline
+{\em transmission\+\_\+rate} & The transmission rate of the disease in the model. \\
+\hline
+{\em recovery\+\_\+rate} & The recovery rate of the disease in the model. \\
+\hline
+{\em contact\+\_\+matrix} & The contact matrix between entities in the model.\\
+\hline
+{\em model} & A Model$<$\+TSeq$>$ object where to set up the SIR. \\
+\hline
+{\em vname} & std\+::string Name of the virus \\
+\hline
+{\em prevalence} & Initial prevalence (proportion) \\
+\hline
+{\em contact\+\_\+rate} & Average number of contacts (interactions) per step. \\
+\hline
+{\em transmission\+\_\+rate} & Probability of transmission \\
+\hline
+{\em recovery\+\_\+rate} & Probability of recovery \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_model_s_i_r_mixing_ad52a2584b1f522d9cd499f5350fcbb44}\label{class_model_s_i_r_mixing_ad52a2584b1f522d9cd499f5350fcbb44}} 
+\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}!ModelSIRMixing@{ModelSIRMixing}}
+\index{ModelSIRMixing@{ModelSIRMixing}!ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{ModelSIRMixing()}{ModelSIRMixing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} (\begin{DoxyParamCaption}\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{contact\+\_\+rate,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate,  }\item[{std\+::vector$<$ double $>$}]{contact\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vname} & The name of the \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}} object. \\
+\hline
+{\em n} & The number of entities in the model. \\
+\hline
+{\em prevalence} & The initial prevalence of the disease in the model. \\
+\hline
+{\em contact\+\_\+rate} & The contact rate between entities in the model. \\
+\hline
+{\em transmission\+\_\+rate} & The transmission rate of the disease in the model. \\
+\hline
+{\em recovery\+\_\+rate} & The recovery rate of the disease in the model. \\
+\hline
+{\em contact\+\_\+matrix} & The contact matrix between entities in the model. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a609d6da791f6d097a6ece6554a75cbe6}\label{class_model_s_i_r_mixing_a609d6da791f6d097a6ece6554a75cbe6}} 
+\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}!clone\_ptr@{clone\_ptr}}
+\index{clone\_ptr@{clone\_ptr}!ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{clone\_ptr()}{clone\_ptr()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ $\ast$ \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$\+::clone\+\_\+ptr\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Advanced usage\+: Makes a copy of data and returns it as undeleted pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_afd0c24e19b0a104e03d96ab4333725e5}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{class_model_s_i_r_mixing_a39048154d0a8c6aaaaf15111709b21e6}\label{class_model_s_i_r_mixing_a39048154d0a8c6aaaaf15111709b21e6}} 
+\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}!initial\_states@{initial\_states}}
+\index{initial\_states@{initial\_states}!ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_states()}{initial\_states()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$\+::initial\+\_\+states (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{proportions\+\_\+,  }\item[{std\+::vector$<$ int $>$}]{queue\+\_\+ = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the initial states of the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proportions\+\_\+} & Double vector with a single element\+:
+\begin{DoxyItemize}
+\item The proportion of non-\/infected individuals who have recovered. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+\mbox{\Hypertarget{class_model_s_i_r_mixing_af224df7d32151e7a49b15ea5d051fca5}\label{class_model_s_i_r_mixing_af224df7d32151e7a49b15ea5d051fca5}} 
+\index{ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}!reset@{reset}}
+\index{reset@{reset}!ModelSIRMixing$<$ TSeq $>$@{ModelSIRMixing$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+void \mbox{\hyperlink{class_model_s_i_r_mixing}{Model\+SIRMixing}}$<$ TSeq $>$\+::reset\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the model. 
+
+Resetting the model will\+:
+\begin{DoxyItemize}
+\item clear the database
+\item restore the population (if {\ttfamily set\+\_\+backup()} was called before)
+\item re-\/distribute tools
+\item re-\/distribute viruses
+\item set the date to 0 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classepiworld_1_1_model_a9591eb76c7cf1ed7e1510342ff602d37}{epiworld\+::\+Model$<$ EPI\+\_\+\+DEFAULT\+\_\+\+TSEQ $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/epiworld/models/sirmixing.\+hpp\end{DoxyCompactItemize}
