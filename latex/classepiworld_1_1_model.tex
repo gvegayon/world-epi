@@ -269,8 +269,8 @@ void {\bfseries rm\+\_\+virus} (size\+\_\+t virus\+\_\+pos)
 \mbox{\Hypertarget{classepiworld_1_1_model_aed24665541981512ac4c8a70c4162323}\label{classepiworld_1_1_model_aed24665541981512ac4c8a70c4162323}} 
 void {\bfseries rm\+\_\+tool} (size\+\_\+t tool\+\_\+pos)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a0cd07aed1a1bcc042ba751952b84867d}\label{classepiworld_1_1_model_a0cd07aed1a1bcc042ba751952b84867d}} 
-void {\bfseries rm\+\_\+entity} (size\+\_\+t entity\+\_\+pos)
+\mbox{\Hypertarget{classepiworld_1_1_model_a60338c1ea6b452c82d461a965ea10ded}\label{classepiworld_1_1_model_a60338c1ea6b452c82d461a965ea10ded}} 
+void {\bfseries rm\+\_\+entity} (size\+\_\+t entity\+\_\+id)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Accessing population of the model}\par
@@ -304,6 +304,9 @@ bool {\bfseries is\+\_\+directed} () const
 \mbox{\Hypertarget{classepiworld_1_1_model_a077f3c2f03c119d038909cb34aa1aade}\label{classepiworld_1_1_model_a077f3c2f03c119d038909cb34aa1aade}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $>$ \& \mbox{\hyperlink{classepiworld_1_1_model_a077f3c2f03c119d038909cb34aa1aade}{get\+\_\+agents}} ()
 \begin{DoxyCompactList}\small\item\em Returns a reference to the vector of agents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a0dfa9617998970aefb65ead4b277fda9}\label{classepiworld_1_1_model_a0dfa9617998970aefb65ead4b277fda9}} 
+\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ \& {\bfseries get\+\_\+agent} (size\+\_\+t i)
+\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a98edc1600684faeecc9d7f101c141d06}\label{classepiworld_1_1_model_a98edc1600684faeecc9d7f101c141d06}} 
 std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \mbox{\hyperlink{classepiworld_1_1_model_a98edc1600684faeecc9d7f101c141d06}{get\+\_\+agents\+\_\+states}} () const
 \begin{DoxyCompactList}\small\item\em Returns a vector with the states of the agents. \end{DoxyCompactList}\item 
@@ -315,6 +318,9 @@ std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_viruses}{Viruses}}$<$ TSeq $
 \begin{DoxyCompactList}\small\item\em Returns a vector with the viruses of the agents. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_ab0169e85b4be2f060c5a05b1928791a2}\label{classepiworld_1_1_model_ab0169e85b4be2f060c5a05b1928791a2}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+entities} ()
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_model_a609151bb2bdb29e013e2b66927814775}\label{classepiworld_1_1_model_a609151bb2bdb29e013e2b66927814775}} 
+\mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ \& {\bfseries get\+\_\+entity} (size\+\_\+t entity\+\_\+id, int $\ast$entity\+\_\+pos=nullptr)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_acdff2a300e73b98540f5eba198143aa1}\label{classepiworld_1_1_model_acdff2a300e73b98540f5eba198143aa1}} 
 \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ \& {\bfseries agents\+\_\+smallworld} (epiworld\+\_\+fast\+\_\+uint n=1000, epiworld\+\_\+fast\+\_\+uint k=5, bool d=false, epiworld\+\_\+double p=.\+01)
@@ -618,15 +624,6 @@ std\+::vector$<$ Tool\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries tools\+\_\+dist
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a3673b660997806fb8a62c84fd3465b4e}\label{classepiworld_1_1_model_a3673b660997806fb8a62c84fd3465b4e}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a511f64dc32fc544aac2dc4bc875a4b06}\label{classepiworld_1_1_model_a511f64dc32fc544aac2dc4bc875a4b06}} 
-std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries prevalence\+\_\+entity} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a9a1d9d62c5088228e33749f09b87ba50}\label{classepiworld_1_1_model_a9a1d9d62c5088228e33749f09b87ba50}} 
-std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+entity\+\_\+as\+\_\+proportion} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a3dedc972728e965d3153f189f96a7b5c}\label{classepiworld_1_1_model_a3dedc972728e965d3153f189f96a7b5c}} 
-std\+::vector$<$ Entity\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+dist\+\_\+funs} = \{\}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a69c9f8223fb218ca0c5fa1c8ed77ac7d}\label{classepiworld_1_1_model_a69c9f8223fb218ca0c5fa1c8ed77ac7d}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}

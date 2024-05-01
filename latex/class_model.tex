@@ -269,8 +269,8 @@ void {\bfseries rm\+\_\+virus} (size\+\_\+t virus\+\_\+pos)
 \mbox{\Hypertarget{class_model_aed24665541981512ac4c8a70c4162323}\label{class_model_aed24665541981512ac4c8a70c4162323}} 
 void {\bfseries rm\+\_\+tool} (size\+\_\+t tool\+\_\+pos)
 \item 
-\mbox{\Hypertarget{class_model_aebb632e8c24aeeae072b455991ef4190}\label{class_model_aebb632e8c24aeeae072b455991ef4190}} 
-void {\bfseries rm\+\_\+entity} (size\+\_\+t entity\+\_\+pos)
+\mbox{\Hypertarget{class_model_a60338c1ea6b452c82d461a965ea10ded}\label{class_model_a60338c1ea6b452c82d461a965ea10ded}} 
+void {\bfseries rm\+\_\+entity} (size\+\_\+t entity\+\_\+id)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Accessing population of the model}\par
@@ -304,6 +304,9 @@ bool {\bfseries is\+\_\+directed} () const
 \mbox{\Hypertarget{class_model_a077f3c2f03c119d038909cb34aa1aade}\label{class_model_a077f3c2f03c119d038909cb34aa1aade}} 
 std\+::vector$<$ \mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ $>$ \& \mbox{\hyperlink{class_model_a077f3c2f03c119d038909cb34aa1aade}{get\+\_\+agents}} ()
 \begin{DoxyCompactList}\small\item\em Returns a reference to the vector of agents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_a0dfa9617998970aefb65ead4b277fda9}\label{class_model_a0dfa9617998970aefb65ead4b277fda9}} 
+\mbox{\hyperlink{class_agent}{Agent}}$<$ TSeq $>$ \& {\bfseries get\+\_\+agent} (size\+\_\+t i)
+\item 
 \mbox{\Hypertarget{class_model_a98edc1600684faeecc9d7f101c141d06}\label{class_model_a98edc1600684faeecc9d7f101c141d06}} 
 std\+::vector$<$ epiworld\+\_\+fast\+\_\+uint $>$ \mbox{\hyperlink{class_model_a98edc1600684faeecc9d7f101c141d06}{get\+\_\+agents\+\_\+states}} () const
 \begin{DoxyCompactList}\small\item\em Returns a vector with the states of the agents. \end{DoxyCompactList}\item 
@@ -315,6 +318,9 @@ std\+::vector$<$ \mbox{\hyperlink{class_viruses}{Viruses}}$<$ TSeq $>$ $>$ \mbox
 \begin{DoxyCompactList}\small\item\em Returns a vector with the viruses of the agents. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_model_ab0169e85b4be2f060c5a05b1928791a2}\label{class_model_ab0169e85b4be2f060c5a05b1928791a2}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+entities} ()
+\item 
+\mbox{\Hypertarget{class_model_a609151bb2bdb29e013e2b66927814775}\label{class_model_a609151bb2bdb29e013e2b66927814775}} 
+\mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ \& {\bfseries get\+\_\+entity} (size\+\_\+t entity\+\_\+id, int $\ast$entity\+\_\+pos=nullptr)
 \item 
 \mbox{\Hypertarget{class_model_acdff2a300e73b98540f5eba198143aa1}\label{class_model_acdff2a300e73b98540f5eba198143aa1}} 
 \mbox{\hyperlink{class_model}{Model}}$<$ TSeq $>$ \& {\bfseries agents\+\_\+smallworld} (epiworld\+\_\+fast\+\_\+uint n=1000, epiworld\+\_\+fast\+\_\+uint k=5, bool d=false, epiworld\+\_\+double p=.\+01)
@@ -618,15 +624,6 @@ std\+::vector$<$ Tool\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries tools\+\_\+dist
 \item 
 \mbox{\Hypertarget{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}\label{class_model_a0e479d41d3d4063e733dbe4ad4ddc93a}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities} = \{\}
-\item 
-\mbox{\Hypertarget{class_model_ae534971bfd8ee4f430f530a1034196c2}\label{class_model_ae534971bfd8ee4f430f530a1034196c2}} 
-std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries prevalence\+\_\+entity} = \{\}
-\item 
-\mbox{\Hypertarget{class_model_a883fc08216c2ec9f6f3c17b532544b4b}\label{class_model_a883fc08216c2ec9f6f3c17b532544b4b}} 
-std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+entity\+\_\+as\+\_\+proportion} = \{\}
-\item 
-\mbox{\Hypertarget{class_model_a727026bfffb5eb824a24240b3f3803c5}\label{class_model_a727026bfffb5eb824a24240b3f3803c5}} 
-std\+::vector$<$ Entity\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+dist\+\_\+funs} = \{\}
 \item 
 \mbox{\Hypertarget{class_model_a337d978e14ca116b438b6916976ac868}\label{class_model_a337d978e14ca116b438b6916976ac868}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}

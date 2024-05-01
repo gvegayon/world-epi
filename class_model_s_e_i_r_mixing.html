@@ -347,9 +347,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_virus</b> (size_t 
 <tr class="memitem:aed24665541981512ac4c8a70c4162323 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aed24665541981512ac4c8a70c4162323"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_tool</b> (size_t tool_pos)</td></tr>
 <tr class="separator:aed24665541981512ac4c8a70c4162323 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd07aed1a1bcc042ba751952b84867d inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0cd07aed1a1bcc042ba751952b84867d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_entity</b> (size_t entity_pos)</td></tr>
-<tr class="separator:a0cd07aed1a1bcc042ba751952b84867d inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60338c1ea6b452c82d461a965ea10ded inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a60338c1ea6b452c82d461a965ea10ded"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_entity</b> (size_t entity_id)</td></tr>
+<tr class="separator:a60338c1ea6b452c82d461a965ea10ded inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2322e335233024af0f3f3f5e2cac5416 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a2322e335233024af0f3f3f5e2cac5416"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>agents_from_adjlist</b> (std::string fn, int size, int skip=0, bool directed=false)</td></tr>
 <tr class="separator:a2322e335233024af0f3f3f5e2cac5416 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,6 +366,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_directed</b> () co
 std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a077f3c2f03c119d038909cb34aa1aade">get_agents</a> ()</td></tr>
 <tr class="memdesc:a077f3c2f03c119d038909cb34aa1aade inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the vector of agents. <br /></td></tr>
 <tr class="separator:a077f3c2f03c119d038909cb34aa1aade inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfa9617998970aefb65ead4b277fda9 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a0dfa9617998970aefb65ead4b277fda9"></a>
+<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_agent</b> (size_t i)</td></tr>
+<tr class="separator:a0dfa9617998970aefb65ead4b277fda9 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98edc1600684faeecc9d7f101c141d06 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a98edc1600684faeecc9d7f101c141d06"></a>
 std::vector&lt; epiworld_fast_uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#a98edc1600684faeecc9d7f101c141d06">get_agents_states</a> () const</td></tr>
 <tr class="memdesc:a98edc1600684faeecc9d7f101c141d06 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector with the states of the agents. <br /></td></tr>
@@ -381,6 +384,9 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_viruses.html">Viruses</a>&
 <tr class="memitem:ab0169e85b4be2f060c5a05b1928791a2 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ab0169e85b4be2f060c5a05b1928791a2"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entities</b> ()</td></tr>
 <tr class="separator:ab0169e85b4be2f060c5a05b1928791a2 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609151bb2bdb29e013e2b66927814775 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a609151bb2bdb29e013e2b66927814775"></a>
+<a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_entity</b> (size_t entity_id, int *entity_pos=nullptr)</td></tr>
+<tr class="separator:a609151bb2bdb29e013e2b66927814775 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdff2a300e73b98540f5eba198143aa1 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="acdff2a300e73b98540f5eba198143aa1"></a>
 <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>agents_smallworld</b> (epiworld_fast_uint n=1000, epiworld_fast_uint k=5, bool d=false, epiworld_double p=.01)</td></tr>
 <tr class="separator:acdff2a300e73b98540f5eba198143aa1 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -606,15 +612,6 @@ std::vector&lt; ToolToAgentFun&lt; EPI_DEFAULT_TSEQ &gt; &gt;&#160;</td><td clas
 <tr class="memitem:a3673b660997806fb8a62c84fd3465b4e inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3673b660997806fb8a62c84fd3465b4e"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities</b></td></tr>
 <tr class="separator:a3673b660997806fb8a62c84fd3465b4e inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a511f64dc32fc544aac2dc4bc875a4b06 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a511f64dc32fc544aac2dc4bc875a4b06"></a>
-std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_entity</b></td></tr>
-<tr class="separator:a511f64dc32fc544aac2dc4bc875a4b06 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a1d9d62c5088228e33749f09b87ba50 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a1d9d62c5088228e33749f09b87ba50"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_entity_as_proportion</b></td></tr>
-<tr class="separator:a9a1d9d62c5088228e33749f09b87ba50 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dedc972728e965d3153f189f96a7b5c inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3dedc972728e965d3153f189f96a7b5c"></a>
-std::vector&lt; EntityToAgentFun&lt; EPI_DEFAULT_TSEQ &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_dist_funs</b></td></tr>
-<tr class="separator:a3dedc972728e965d3153f189f96a7b5c inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c9f8223fb218ca0c5fa1c8ed77ac7d inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a69c9f8223fb218ca0c5fa1c8ed77ac7d"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; EPI_DEFAULT_TSEQ &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_backup</b></td></tr>
 <tr class="separator:a69c9f8223fb218ca0c5fa1c8ed77ac7d inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>

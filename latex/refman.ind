@@ -1,7 +1,7 @@
 \begin{theindex}
 
   \item {add\_globalevent}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{82}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
   \item {AdjList}, \hyperpage{37}
     \subitem {AdjList}, \hyperpage{37}
@@ -57,7 +57,7 @@
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{43}
     \subitem {Entity$<$ TSeq $>$}, \hyperpage{63}
     \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{47}
-    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{64}
+    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{65}
 
   \indexspace
 
@@ -84,7 +84,7 @@
   \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{60}
   \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{62}
   \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{64}
-    \subitem {default\_rm\_entity}, \hyperpage{64}
+    \subitem {default\_rm\_entity}, \hyperpage{65}
   \item {epiworld::epimodels::ModelDiffNet$<$ TSeq $>$}, 
 		\hyperpage{104}
   \item {epiworld::epimodels::ModelSEIR$<$ TSeq $>$}, \hyperpage{107}
@@ -144,13 +144,13 @@
   \item {epiworld::epimodels::ModelSISD$<$ TSeq $>$}, \hyperpage{176}
   \item {epiworld::epimodels::ModelSURV$<$ TSeq $>$}, \hyperpage{179}
   \item {epiworld::Event$<$ TSeq $>$}, \hyperpage{65}
-    \subitem {Event}, \hyperpage{65}
-  \item {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{68}
-    \subitem {GlobalEvent}, \hyperpage{69}
-  \item {epiworld::GroupSampler$<$ TSeq $>$}, \hyperpage{70}
-  \item {epiworld::LFMCMC$<$ TData $>$}, \hyperpage{71}
-  \item {epiworld::Model$<$ TSeq $>$}, \hyperpage{74}
-    \subitem {add\_globalevent}, \hyperpage{82}
+    \subitem {Event}, \hyperpage{67}
+  \item {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{69}
+    \subitem {GlobalEvent}, \hyperpage{70}
+  \item {epiworld::GroupSampler$<$ TSeq $>$}, \hyperpage{71}
+  \item {epiworld::LFMCMC$<$ TData $>$}, \hyperpage{72}
+  \item {epiworld::Model$<$ TSeq $>$}, \hyperpage{75}
+    \subitem {add\_globalevent}, \hyperpage{83}
     \subitem {clone\_ptr}, \hyperpage{84}
     \subitem {events\_add}, \hyperpage{84}
     \subitem {events\_run}, \hyperpage{85}
@@ -186,10 +186,10 @@
   \item {epiworld::Viruses$<$ TSeq $>$}, \hyperpage{202}
   \item {epiworld::Viruses\_const$<$ TSeq $>$}, \hyperpage{203}
   \item {Event}
-    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{65}
-    \subitem {Event$<$ TSeq $>$}, \hyperpage{67}
-  \item {Event$<$ TSeq $>$}, \hyperpage{66}
-    \subitem {Event}, \hyperpage{67}
+    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{67}
+    \subitem {Event$<$ TSeq $>$}, \hyperpage{68}
+  \item {Event$<$ TSeq $>$}, \hyperpage{67}
+    \subitem {Event}, \hyperpage{68}
   \item {events\_add}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
@@ -210,11 +210,11 @@
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{58}
   \item {GlobalEvent}
-    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{69}
-    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
-  \item {GlobalEvent$<$ TSeq $>$}, \hyperpage{69}
-    \subitem {GlobalEvent}, \hyperpage{70}
-  \item {GroupSampler$<$ TSeq $>$}, \hyperpage{71}
+    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
+    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{71}
+  \item {GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
+    \subitem {GlobalEvent}, \hyperpage{71}
+  \item {GroupSampler$<$ TSeq $>$}, \hyperpage{72}
 
   \indexspace
 
@@ -250,7 +250,7 @@
 
   \indexspace
 
-  \item {LFMCMC$<$ TData $>$}, \hyperpage{72}
+  \item {LFMCMC$<$ TData $>$}, \hyperpage{74}
   \item {load\_agents\_entities\_ties}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
