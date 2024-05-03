@@ -1258,7 +1258,7 @@ $(function() {
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    entity.reset();</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160; </div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <span class="comment">// How should</span></div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <span class="keywordflow">if</span> (entity_pos != (entities.size() - 1))</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <span class="keywordflow">if</span> (entity_pos != (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(entities.size()) - 1))</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;        std::swap(entities[entity_pos], entities[entities.size() - 1]);</div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160; </div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    entities.pop_back();</div>
