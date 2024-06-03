@@ -34,7 +34,7 @@
 		\hyperpage{162}
     \subitem {epiworld::epimodels::ModelSIRMixing$<$ TSeq $>$}, 
 		\hyperpage{168}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{83}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{98}
     \subitem {ModelSEIRCONN$<$ TSeq $>$}, \hyperpage{117}
     \subitem {ModelSEIRDCONN$<$ TSeq $>$}, \hyperpage{130}
@@ -144,27 +144,27 @@
   \item {epiworld::epimodels::ModelSISD$<$ TSeq $>$}, \hyperpage{176}
   \item {epiworld::epimodels::ModelSURV$<$ TSeq $>$}, \hyperpage{179}
   \item {epiworld::Event$<$ TSeq $>$}, \hyperpage{65}
-    \subitem {Event}, \hyperpage{67}
+    \subitem {Event}, \hyperpage{66}
   \item {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{69}
-    \subitem {GlobalEvent}, \hyperpage{70}
+    \subitem {GlobalEvent}, \hyperpage{69}
   \item {epiworld::GroupSampler$<$ TSeq $>$}, \hyperpage{71}
   \item {epiworld::LFMCMC$<$ TData $>$}, \hyperpage{72}
   \item {epiworld::Model$<$ TSeq $>$}, \hyperpage{75}
     \subitem {add\_globalevent}, \hyperpage{83}
-    \subitem {clone\_ptr}, \hyperpage{84}
+    \subitem {clone\_ptr}, \hyperpage{83}
     \subitem {events\_add}, \hyperpage{84}
-    \subitem {events\_run}, \hyperpage{85}
+    \subitem {events\_run}, \hyperpage{84}
     \subitem {initial\_states\_fun}, \hyperpage{88}
     \subitem {load\_agents\_entities\_ties}, \hyperpage{85}
     \subitem {rbinomd}, \hyperpage{88}
     \subitem {reset}, \hyperpage{85}
     \subitem {rexpd}, \hyperpage{88}
     \subitem {rgammad}, \hyperpage{88}
-    \subitem {rlognormald}, \hyperpage{88}
+    \subitem {rlognormald}, \hyperpage{89}
     \subitem {rnormd}, \hyperpage{89}
-    \subitem {run\_multiple}, \hyperpage{86}
+    \subitem {run\_multiple}, \hyperpage{85}
     \subitem {runifd}, \hyperpage{89}
-    \subitem {set\_agents\_data}, \hyperpage{86}
+    \subitem {set\_agents\_data}, \hyperpage{87}
     \subitem {set\_name}, \hyperpage{87}
     \subitem {time\_elapsed}, \hyperpage{89}
     \subitem {write\_data}, \hyperpage{87}
@@ -186,7 +186,7 @@
   \item {epiworld::Viruses$<$ TSeq $>$}, \hyperpage{202}
   \item {epiworld::Viruses\_const$<$ TSeq $>$}, \hyperpage{203}
   \item {Event}
-    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{67}
+    \subitem {epiworld::Event$<$ TSeq $>$}, \hyperpage{66}
     \subitem {Event$<$ TSeq $>$}, \hyperpage{68}
   \item {Event$<$ TSeq $>$}, \hyperpage{67}
     \subitem {Event}, \hyperpage{68}
@@ -194,7 +194,7 @@
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
   \item {events\_run}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{84}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
 
   \indexspace
@@ -210,11 +210,11 @@
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{53}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{58}
   \item {GlobalEvent}
-    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
-    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{71}
+    \subitem {epiworld::GlobalEvent$<$ TSeq $>$}, \hyperpage{69}
+    \subitem {GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
   \item {GlobalEvent$<$ TSeq $>$}, \hyperpage{70}
-    \subitem {GlobalEvent}, \hyperpage{71}
-  \item {GroupSampler$<$ TSeq $>$}, \hyperpage{72}
+    \subitem {GlobalEvent}, \hyperpage{70}
+  \item {GroupSampler$<$ TSeq $>$}, \hyperpage{71}
 
   \indexspace
 
@@ -250,7 +250,7 @@
 
   \indexspace
 
-  \item {LFMCMC$<$ TData $>$}, \hyperpage{74}
+  \item {LFMCMC$<$ TData $>$}, \hyperpage{73}
   \item {load\_agents\_entities\_ties}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{99}
@@ -437,13 +437,13 @@
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{102}
   \item {rlognormald}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{88}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{89}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{103}
   \item {rnormd}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{89}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{103}
   \item {run\_multiple}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{86}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{85}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{100}
   \item {runifd}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{89}
@@ -460,7 +460,7 @@
     \subitem {sample\_virus\_single}, \hyperpage{33}
   \item {SAMPLETYPE}, \hyperpage{187}
   \item {set\_agents\_data}
-    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{86}
+    \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
     \subitem {Model$<$ TSeq $>$}, \hyperpage{101}
   \item {set\_name}
     \subitem {epiworld::Model$<$ TSeq $>$}, \hyperpage{87}
