@@ -3,9 +3,8 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_entity_a4c43cc9f19295b226034f83b2ec93e53}\label{classepiworld_1_1_entity_a4c43cc9f19295b226034f83b2ec93e53}} 
-{\bfseries Entity} (std\+::string name)
-\item 
+\mbox{\hyperlink{classepiworld_1_1_entity_ae7b1bdf38fe261809f4ba03b5ee1bd69}{Entity}} (std\+::string name, epiworld\+\_\+double preval, bool as\+\_\+proportion, Entity\+To\+Agent\+Fun$<$ TSeq $>$ fun=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_a4d71dfbdd69ee14bbf0d43ddc4410331}\label{classepiworld_1_1_entity_a4d71dfbdd69ee14bbf0d43ddc4410331}} 
 void {\bfseries add\+\_\+agent} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ \&p, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
@@ -65,6 +64,9 @@ bool {\bfseries operator==} (const \mbox{\hyperlink{classepiworld_1_1_entity}{En
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_a7361ab3c8ff5a8a6ca88b40f22175ccc}\label{classepiworld_1_1_entity_a7361ab3c8ff5a8a6ca88b40f22175ccc}} 
 bool {\bfseries operator!=} (const \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}}$<$ TSeq $>$ \&other) const
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Entity distribution}\par
+{\em These functions are used for distributing agents among entities. The idea is to have a flexible way of distributing agents among entities. }\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_aa305f726b293203247650deca73cfad0}\label{classepiworld_1_1_entity_aa305f726b293203247650deca73cfad0}} 
 void {\bfseries distribute} ()
@@ -75,6 +77,7 @@ std\+::vector$<$ size\+\_\+t $>$ \& {\bfseries get\+\_\+agents} ()
 \mbox{\Hypertarget{classepiworld_1_1_entity_a5d66e069e6ef1ab6481f8d3c4ffb2fc0}\label{classepiworld_1_1_entity_a5d66e069e6ef1ab6481f8d3c4ffb2fc0}} 
 void {\bfseries print} () const
 \end{DoxyCompactItemize}
+\end{Indent}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -104,6 +107,33 @@ void {\bfseries default\+\_\+add\+\_\+entity} (\mbox{\hyperlink{structepiworld_1
 \item 
 void \mbox{\hyperlink{classepiworld_1_1_entity_a2f8e631876a6426672ef736655789cca}{default\+\_\+rm\+\_\+entity}} (\mbox{\hyperlink{structepiworld_1_1_event}{Event}}$<$ TSeq $>$ \&a, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$m)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classepiworld_1_1_entity_ae7b1bdf38fe261809f4ba03b5ee1bd69}\label{classepiworld_1_1_entity_ae7b1bdf38fe261809f4ba03b5ee1bd69}} 
+\index{epiworld::Entity$<$ TSeq $>$@{epiworld::Entity$<$ TSeq $>$}!Entity@{Entity}}
+\index{Entity@{Entity}!epiworld::Entity$<$ TSeq $>$@{epiworld::Entity$<$ TSeq $>$}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily template$<$typename TSeq $>$ \\
+\mbox{\hyperlink{classepiworld_1_1_entity}{epiworld\+::\+Entity}}$<$ TSeq $>$\+::\mbox{\hyperlink{classepiworld_1_1_entity}{Entity}} (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{epiworld\+\_\+double}]{preval,  }\item[{bool}]{as\+\_\+proportion,  }\item[{Entity\+To\+Agent\+Fun$<$ TSeq $>$}]{fun = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}} object. 
+
+This constructor initializes an \mbox{\hyperlink{classepiworld_1_1_entity}{Entity}} object with the specified parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the entity. \\
+\hline
+{\em preval} & The prevalence of the entity. \\
+\hline
+{\em as\+\_\+proportion} & A flag indicating whether the prevalence is given as a proportion. \\
+\hline
+{\em fun} & A function pointer to a function that maps the entity to an agent. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Friends And Related Function Documentation}

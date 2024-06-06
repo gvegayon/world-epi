@@ -74,9 +74,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a83990b7c2025e56b71af80522a1962b1"><td class="memItemLeft" align="right" valign="top"><a id="a83990b7c2025e56b71af80522a1962b1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (std::string name)</td></tr>
-<tr class="separator:a83990b7c2025e56b71af80522a1962b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9bb0ff316ea7367e29a53b511a15f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">Entity</a> (std::string name, epiworld_double preval, bool as_proportion, EntityToAgentFun&lt; TSeq &gt; fun=nullptr)</td></tr>
+<tr class="memdesc:a6e9bb0ff316ea7367e29a53b511a15f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_entity.html">Entity</a> object.  <a href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">More...</a><br /></td></tr>
+<tr class="separator:a6e9bb0ff316ea7367e29a53b511a15f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d71dfbdd69ee14bbf0d43ddc4410331"><td class="memItemLeft" align="right" valign="top"><a id="a4d71dfbdd69ee14bbf0d43ddc4410331"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_agent</b> (<a class="el" href="class_agent.html">Agent</a>&lt; TSeq &gt; &amp;p, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
 <tr class="separator:a4d71dfbdd69ee14bbf0d43ddc4410331"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +137,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <tr class="memitem:a6e7c317cd07351d196f509090409e892"><td class="memItemLeft" align="right" valign="top"><a id="a6e7c317cd07351d196f509090409e892"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &amp;other) const</td></tr>
 <tr class="separator:a6e7c317cd07351d196f509090409e892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Entity distribution</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functions are used for distributing agents among entities. The idea is to have a flexible way of distributing agents among entities. </p>
+</div></td></tr>
 <tr class="memitem:aa305f726b293203247650deca73cfad0"><td class="memItemLeft" align="right" valign="top"><a id="aa305f726b293203247650deca73cfad0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>distribute</b> ()</td></tr>
 <tr class="separator:aa305f726b293203247650deca73cfad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +179,69 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>default_add_entity</b
 <tr class="memitem:a2f8e631876a6426672ef736655789cca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2f8e631876a6426672ef736655789cca">default_rm_entity</a> (<a class="el" href="struct_event.html">Event</a>&lt; TSeq &gt; &amp;a, <a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *m)</td></tr>
 <tr class="separator:a2f8e631876a6426672ef736655789cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6e9bb0ff316ea7367e29a53b511a15f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9bb0ff316ea7367e29a53b511a15f6">&#9670;&nbsp;</a></span>Entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TSeq &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt;::<a class="el" href="class_entity.html">Entity</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">epiworld_double&#160;</td>
+          <td class="paramname"><em>preval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>as_proportion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EntityToAgentFun&lt; TSeq &gt;&#160;</td>
+          <td class="paramname"><em>fun</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_entity.html">Entity</a> object. </p>
+<p>This constructor initializes an <a class="el" href="class_entity.html">Entity</a> object with the specified parameters.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the entity. </td></tr>
+    <tr><td class="paramname">preval</td><td>The prevalence of the entity. </td></tr>
+    <tr><td class="paramname">as_proportion</td><td>A flag indicating whether the prevalence is given as a proportion. </td></tr>
+    <tr><td class="paramname">fun</td><td>A function pointer to a function that maps the entity to an agent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="a2f8e631876a6426672ef736655789cca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f8e631876a6426672ef736655789cca">&#9670;&nbsp;</a></span>default_rm_entity</h2>
