@@ -265,70 +265,71 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>() <span class="keyword">const</span>; </div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    VirusPtr&lt;TSeq&gt; &amp; get_virus();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    ToolPtr&lt;TSeq&gt; &amp; get_tool(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="class_tools.html">Tools&lt;TSeq&gt;</a> get_tools();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_tools__const.html">Tools_const&lt;TSeq&gt;</a> get_tools() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">size_t</span> get_n_tools() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">void</span> mutate_virus();</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">void</span> add_neighbor(</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; p,</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">bool</span> check_source = <span class="keyword">true</span>,</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">bool</span> check_target = <span class="keyword">true</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        );</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a938c535d35ff860eb59505c36a919df0">swap_neighbors</a>(</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other,</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">size_t</span> n_this,</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">size_t</span> n_other</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    );</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    std::vector&lt; Agent&lt;TSeq&gt; * &gt; get_neighbors();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">size_t</span> get_n_neighbors() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">void</span> change_state(</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        epiworld_fast_uint new_state,</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        epiworld_fast_int queue = 0</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        );</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">const</span> epiworld_fast_uint &amp; get_state() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> reset();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">bool</span> has_tool(epiworld_fast_uint t) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">bool</span> has_tool(std::string name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">bool</span> has_tool(<span class="keyword">const</span> <a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> &amp; t) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">bool</span> has_virus(epiworld_fast_uint t) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">bool</span> has_virus(std::string name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">bool</span> has_virus(<span class="keyword">const</span> <a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> &amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">void</span> print(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model, <span class="keywordtype">bool</span> compressed = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">double</span> &amp; <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> j);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">double</span> &amp; operator[](<span class="keywordtype">size_t</span> j);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> j) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">double</span> operator[](<span class="keywordtype">size_t</span> j) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="class_entities.html">Entities&lt;TSeq&gt;</a> get_entities();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_entities__const.html">Entities_const&lt;TSeq&gt;</a> get_entities() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; get_entity(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; get_entity(<span class="keywordtype">size_t</span> i);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">size_t</span> get_n_entities() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other)<span class="keyword"> const </span>{<span class="keywordflow">return</span> !operator==(other);};</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;};</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">const</span> VirusPtr&lt;TSeq&gt; &amp; get_virus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    ToolPtr&lt;TSeq&gt; &amp; get_tool(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="class_tools.html">Tools&lt;TSeq&gt;</a> get_tools();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_tools__const.html">Tools_const&lt;TSeq&gt;</a> get_tools() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">size_t</span> get_n_tools() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">void</span> mutate_virus();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> add_neighbor(</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; p,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">bool</span> check_source = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">bool</span> check_target = <span class="keyword">true</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_agent.html#a938c535d35ff860eb59505c36a919df0">swap_neighbors</a>(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">size_t</span> n_this,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordtype">size_t</span> n_other</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    std::vector&lt; Agent&lt;TSeq&gt; * &gt; get_neighbors();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">size_t</span> get_n_neighbors() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> change_state(</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model,</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        epiworld_fast_uint new_state,</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        epiworld_fast_int queue = 0</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        );</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">const</span> epiworld_fast_uint &amp; get_state() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">bool</span> has_tool(epiworld_fast_uint t) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">bool</span> has_tool(std::string name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">bool</span> has_tool(<span class="keyword">const</span> <a class="code" href="class_tool.html">Tool&lt;TSeq&gt;</a> &amp; t) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">bool</span> has_virus(epiworld_fast_uint t) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">bool</span> has_virus(std::string name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">bool</span> has_virus(<span class="keyword">const</span> <a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a> &amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">void</span> print(<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model, <span class="keywordtype">bool</span> compressed = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">double</span> &amp; <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> j);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">double</span> &amp; operator[](<span class="keywordtype">size_t</span> j);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">operator()</a>(<span class="keywordtype">size_t</span> j) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">double</span> operator[](<span class="keywordtype">size_t</span> j) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="class_entities.html">Entities&lt;TSeq&gt;</a> get_entities();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_entities__const.html">Entities_const&lt;TSeq&gt;</a> get_entities() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; get_entity(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; get_entity(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">size_t</span> get_n_entities() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; other)<span class="keyword"> const </span>{<span class="keywordflow">return</span> !operator==(other);};</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;};</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:66</div></div>
-<div class="ttc" id="aclass_agent_html_a370107b9e18076bce06f7bffb32f2757"><div class="ttname"><a href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">Agent::operator()</a></div><div class="ttdeci">double &amp; operator()(size_t j)</div><div class="ttdoc">Access the j-th column of the agent.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:763</div></div>
+<div class="ttc" id="aclass_agent_html_a370107b9e18076bce06f7bffb32f2757"><div class="ttname"><a href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">Agent::operator()</a></div><div class="ttdeci">double &amp; operator()(size_t j)</div><div class="ttdoc">Access the j-th column of the agent.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:768</div></div>
 <div class="ttc" id="aclass_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:448</div></div>
-<div class="ttc" id="aclass_agent_html_a938c535d35ff860eb59505c36a919df0"><div class="ttname"><a href="class_agent.html#a938c535d35ff860eb59505c36a919df0">Agent::swap_neighbors</a></div><div class="ttdeci">void swap_neighbors(Agent&lt; TSeq &gt; &amp;other, size_t n_this, size_t n_other)</div><div class="ttdoc">Swaps neighbors between the current agent and agent other</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:549</div></div>
+<div class="ttc" id="aclass_agent_html_a938c535d35ff860eb59505c36a919df0"><div class="ttname"><a href="class_agent.html#a938c535d35ff860eb59505c36a919df0">Agent::swap_neighbors</a></div><div class="ttdeci">void swap_neighbors(Agent&lt; TSeq &gt; &amp;other, size_t n_this, size_t n_other)</div><div class="ttdoc">Swaps neighbors between the current agent and agent other</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:554</div></div>
 <div class="ttc" id="aclass_agent_html_af401cfc8d95fc04e015ada240e169bc5"><div class="ttname"><a href="class_agent.html#af401cfc8d95fc04e015ada240e169bc5">Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(Model&lt; TSeq &gt; *model, epiworld_fast_int state_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> agent-meat.hpp:397</div></div>
 <div class="ttc" id="aclass_agents_sample_html"><div class="ttname"><a href="class_agents_sample.html">AgentsSample</a></div><div class="ttdoc">Sample of agents.</div><div class="ttdef"><b>Definition:</b> agentssample-bones.hpp:28</div></div>
 <div class="ttc" id="aclass_entities__const_html"><div class="ttname"><a href="class_entities__const.html">Entities_const</a></div><div class="ttdoc">Set of Entities (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> entities-bones.hpp:116</div></div>

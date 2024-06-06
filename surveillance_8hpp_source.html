@@ -334,7 +334,7 @@ $(function() {
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    model.add_param(prob_noreinfect, <span class="stringliteral">&quot;Prob. no reinfect&quot;</span>);</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// Virus ------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> covid(<span class="stringliteral">&quot;Covid19&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> covid(<span class="stringliteral">&quot;Covid19&quot;</span>, prevalence, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    covid.set_state(LATENT, RECOVERED, REMOVED);</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    covid.set_post_immunity(&amp;model(<span class="stringliteral">&quot;Prob. no reinfect&quot;</span>));</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    covid.set_prob_death(&amp;model(<span class="stringliteral">&quot;Prob. death&quot;</span>));</div>
@@ -360,7 +360,7 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    covid.set_prob_infecting_fun(ptransmitfun);</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    model.add_virus_n(covid, prevalence);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    model.add_virus(covid);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    model.set_user_data({<span class="stringliteral">&quot;nsampled&quot;</span>, <span class="stringliteral">&quot;ndetected&quot;</span>, <span class="stringliteral">&quot;ndetected_asympt&quot;</span>, <span class="stringliteral">&quot;nasymptomatic&quot;</span>});</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    model.add_globalevent(surveillance_program, <span class="stringliteral">&quot;Surveilance program&quot;</span>, -1);</div>
@@ -419,10 +419,10 @@ $(function() {
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13370</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6073</div></div>
-<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:11384</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10269</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13345</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6072</div></div>
+<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:11359</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -122,13 +122,13 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    model.add_param(transmission_rate, <span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Preparing the virus -------------------------------------------</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname, prevalence, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    virus.set_state(1,2,2);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    model.add_virus(virus);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    model.set_name(<span class="stringliteral">&quot;Susceptible-Infected-Recovered (SIR)&quot;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
@@ -175,8 +175,8 @@ $(function() {
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_s_i_r_html"><div class="ttname"><a href="class_model_s_i_r.html">ModelSIR</a></div><div class="ttdoc">Template for a Susceptible-Infected-Removed (SIR) model.</div><div class="ttdef"><b>Definition:</b> sir.hpp:15</div></div>
 <div class="ttc" id="aclass_model_s_i_r_html_ae9715bbaac20e858f14c28dbbbad6dcd"><div class="ttname"><a href="class_model_s_i_r.html#ae9715bbaac20e858f14c28dbbbad6dcd">ModelSIR::initial_states</a></div><div class="ttdeci">ModelSIR&lt; TSeq &gt; &amp; initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set the initial states of the model.</div><div class="ttdef"><b>Definition:</b> sir.hpp:103</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6073</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10269</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6072</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

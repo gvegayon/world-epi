@@ -108,12 +108,6 @@ void {\bfseries clear\+\_\+state\+\_\+set} ()
 \mbox{\Hypertarget{classepiworld_1_1_model_af5c3197e72237ff481e7bd07e58dd80a}\label{classepiworld_1_1_model_af5c3197e72237ff481e7bd07e58dd80a}} 
 const std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+viruses} () const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a73ac0d8781c52c1542514f077c85b4f8}\label{classepiworld_1_1_model_a73ac0d8781c52c1542514f077c85b4f8}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+prevalence\+\_\+virus} () const
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a811d39484a0fb211e2ffe4e075908937}\label{classepiworld_1_1_model_a811d39484a0fb211e2ffe4e075908937}} 
-const std\+::vector$<$ bool $>$ \& {\bfseries get\+\_\+prevalence\+\_\+virus\+\_\+as\+\_\+proportion} () const
-\item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a0b6762c8a7316a363b12d5a092447fdf}\label{classepiworld_1_1_model_a0b6762c8a7316a363b12d5a092447fdf}} 
 const std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ \& {\bfseries get\+\_\+tools} () const
 \item 
@@ -239,14 +233,8 @@ int {\bfseries rbinom} (int n, epiworld\+\_\+double p)
 \end{DoxyParams}
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_model_aed0dad21a580fcdbbda4eda9288a0458}\label{classepiworld_1_1_model_aed0dad21a580fcdbbda4eda9288a0458}} 
-void {\bfseries add\+\_\+virus} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v, epiworld\+\_\+double preval)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_ac0972360cfc4fafa2bfc13452ef4eac8}\label{classepiworld_1_1_model_ac0972360cfc4fafa2bfc13452ef4eac8}} 
-void {\bfseries add\+\_\+virus\+\_\+n} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v, epiworld\+\_\+fast\+\_\+uint preval)
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a83efbf20bfc3498ea5a7b7252042ea49}\label{classepiworld_1_1_model_a83efbf20bfc3498ea5a7b7252042ea49}} 
-void {\bfseries add\+\_\+virus\+\_\+fun} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v, Virus\+To\+Agent\+Fun$<$ TSeq $>$ fun)
+\mbox{\Hypertarget{classepiworld_1_1_model_a5ab0663767f3779b469517101063501e}\label{classepiworld_1_1_model_a5ab0663767f3779b469517101063501e}} 
+void {\bfseries add\+\_\+virus} (\mbox{\hyperlink{classepiworld_1_1_virus}{Virus}}$<$ TSeq $>$ \&v)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_aa5da6c7fbab1bec4b8887a1de33246eb}\label{classepiworld_1_1_model_aa5da6c7fbab1bec4b8887a1de33246eb}} 
 void {\bfseries add\+\_\+tool} (\mbox{\hyperlink{classepiworld_1_1_tool}{Tool}}$<$ TSeq $>$ \&t, epiworld\+\_\+double preval)
@@ -597,15 +585,6 @@ bool {\bfseries directed} = false
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_adb49c02bf8c9ec3f1b61372c714aa11b}\label{classepiworld_1_1_model_adb49c02bf8c9ec3f1b61372c714aa11b}} 
 std\+::vector$<$ Virus\+Ptr$<$ TSeq $>$ $>$ {\bfseries viruses} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}\label{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}} 
-std\+::vector$<$ epiworld\+\_\+double $>$ \mbox{\hyperlink{classepiworld_1_1_model_a78a5ac2ab5ff5f06f7da085628e18a16}{prevalence\+\_\+virus}} = \{\}
-\begin{DoxyCompactList}\small\item\em Initial prevalence\+\_\+virus of each virus. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a6281922fcfa2dcd4735be9867ede6298}\label{classepiworld_1_1_model_a6281922fcfa2dcd4735be9867ede6298}} 
-std\+::vector$<$ bool $>$ {\bfseries prevalence\+\_\+virus\+\_\+as\+\_\+proportion} = \{\}
-\item 
-\mbox{\Hypertarget{classepiworld_1_1_model_a400c05d6e39888304b53e1bb259c6a82}\label{classepiworld_1_1_model_a400c05d6e39888304b53e1bb259c6a82}} 
-std\+::vector$<$ Virus\+To\+Agent\+Fun$<$ TSeq $>$ $>$ {\bfseries viruses\+\_\+dist\+\_\+funs} = \{\}
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_model_a5da04a2eaeef911f7643364a93211f4c}\label{classepiworld_1_1_model_a5da04a2eaeef911f7643364a93211f4c}} 
 std\+::vector$<$ Tool\+Ptr$<$ TSeq $>$ $>$ {\bfseries tools} = \{\}

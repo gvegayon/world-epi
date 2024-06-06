@@ -117,7 +117,7 @@ Hello world (C++)</h1>
 <div class="line">{</div>
 <div class="line"> </div>
 <div class="line">  // Creating a virus</div>
-<div class="line">  epiworld::Virus&lt;&gt; covid19(&quot;covid 19&quot;);</div>
+<div class="line">  epiworld::Virus&lt;&gt; covid19(&quot;covid 19&quot;, .01, true);</div>
 <div class="line">  covid19.set_infectiousness(.8);</div>
 <div class="line">  </div>
 <div class="line">  // Creating a tool</div>
@@ -128,7 +128,7 @@ Hello world (C++)</h1>
 <div class="line">  epiworld::Model&lt;&gt; model;</div>
 <div class="line"> </div>
 <div class="line">  // Adding the tool and virus</div>
-<div class="line">  model.add_virus(covid19, .01);</div>
+<div class="line">  model.add_virus(covid19);</div>
 <div class="line">  model.add_tool(vax, .5);</div>
 <div class="line"> </div>
 <div class="line">  // Generating a random pop</div>

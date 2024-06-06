@@ -12,8 +12,8 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_virus_a833b1b798d9f1a1d8eb724b454502080}\label{classepiworld_1_1_virus_a833b1b798d9f1a1d8eb724b454502080}} 
-{\bfseries Virus} (std\+::string name=\char`\"{}unknown virus\char`\"{})
+\mbox{\Hypertarget{classepiworld_1_1_virus_a4cad864ddbaa85bbcd863704f358718b}\label{classepiworld_1_1_virus_a4cad864ddbaa85bbcd863704f358718b}} 
+{\bfseries Virus} (std\+::string name=\char`\"{}unknown virus\char`\"{}, epiworld\+\_\+double prevalence=0.\+0, bool prevalence\+\_\+as\+\_\+proportion=false, Virus\+To\+Agent\+Fun$<$ TSeq $>$ dist\+\_\+fun=nullptr)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_virus_aea7334d2f610345ee20d41afcd410e9a}\label{classepiworld_1_1_virus_aea7334d2f610345ee20d41afcd410e9a}} 
 void {\bfseries mutate} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
@@ -164,6 +164,25 @@ void {\bfseries get\+\_\+state} (epiworld\+\_\+fast\+\_\+int $\ast$init, epiworl
 void {\bfseries get\+\_\+queue} (epiworld\+\_\+fast\+\_\+int $\ast$init, epiworld\+\_\+fast\+\_\+int $\ast$end, epiworld\+\_\+fast\+\_\+int $\ast$removed=nullptr)
 \end{DoxyCompactItemize}
 \end{Indent}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_virus_a23d1332061c78d2deea329437b9eda4b}\label{classepiworld_1_1_virus_a23d1332061c78d2deea329437b9eda4b}} 
+epiworld\+\_\+double \mbox{\hyperlink{classepiworld_1_1_virus_a23d1332061c78d2deea329437b9eda4b}{get\+\_\+prevalence}} () const
+\begin{DoxyCompactList}\small\item\em Get information about the prevalence of the virus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classepiworld_1_1_virus_ac187ace2a48e4b1c0a92aa9e6be88104}\label{classepiworld_1_1_virus_ac187ace2a48e4b1c0a92aa9e6be88104}} 
+void {\bfseries set\+\_\+prevalence} (epiworld\+\_\+double prevalence, bool as\+\_\+proportion)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_virus_a7f3712151e3cf6e2883d89292c686424}\label{classepiworld_1_1_virus_a7f3712151e3cf6e2883d89292c686424}} 
+bool {\bfseries get\+\_\+prevalence\+\_\+as\+\_\+proportion} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_virus_a918adfceb40159f1bc4f666258544784}\label{classepiworld_1_1_virus_a918adfceb40159f1bc4f666258544784}} 
+void {\bfseries distribute} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_virus_a080157accd04abf8cace12116485368b}\label{classepiworld_1_1_virus_a080157accd04abf8cace12116485368b}} 
+void {\bfseries set\+\_\+distribution} (Virus\+To\+Agent\+Fun$<$ TSeq $>$ fun)
+\end{DoxyCompactItemize}
+
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 

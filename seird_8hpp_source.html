@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  model.add_param(death_rate, <span class="stringliteral">&quot;Death rate&quot;</span>);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// Preparing the virus -------------------------------------------</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> virus(vname, prevalence, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  virus.set_state(<a class="code" href="class_model_s_e_i_r_d.html">ModelSEIRD&lt;TSeq&gt;::EXPOSED</a>, <a class="code" href="class_model_s_e_i_r_d.html">ModelSEIRD&lt;TSeq&gt;::REMOVED</a>, <a class="code" href="class_model_s_e_i_r_d.html">ModelSEIRD&lt;TSeq&gt;::DECEASED</a>);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  virus.set_prob_infecting(&amp;model(<span class="stringliteral">&quot;Transmission rate&quot;</span>));</div>
@@ -224,7 +224,7 @@ $(function() {
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  virus.set_prob_recovery(&amp;model(<span class="stringliteral">&quot;Recovery rate&quot;</span>));</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="comment">// Adding the tool and the virus</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  model.add_virus(virus, prevalence);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  model.add_virus(virus);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  model.set_name(<span class="stringliteral">&quot;Susceptible-Exposed-Infected-Removed-Deceased (SEIRD)&quot;</span>);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
@@ -275,11 +275,11 @@ $(function() {
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_s_e_i_r_d_html"><div class="ttname"><a href="class_model_s_e_i_r_d.html">ModelSEIRD</a></div><div class="ttdoc">Template for a Susceptible-Exposed-Infected-Removed-Deceased (SEIRD) model.</div><div class="ttdef"><b>Definition:</b> seird.hpp:9</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13370</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14394</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html_af401cfc8d95fc04e015ada240e169bc5"><div class="ttname"><a href="classepiworld_1_1_agent.html#af401cfc8d95fc04e015ada240e169bc5">epiworld::Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(Model&lt; TSeq &gt; *model, epiworld_fast_int state_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14343</div></div>
-<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6073</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10269</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13345</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_a3763f12b56e8dd7f0e23bbca4f183c8a"><div class="ttname"><a href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">epiworld::Agent::get_id</a></div><div class="ttdeci">int get_id() const</div><div class="ttdoc">Id of the individual.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14370</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html_af401cfc8d95fc04e015ada240e169bc5"><div class="ttname"><a href="classepiworld_1_1_agent.html#af401cfc8d95fc04e015ada240e169bc5">epiworld::Agent::rm_agent_by_virus</a></div><div class="ttdeci">void rm_agent_by_virus(Model&lt; TSeq &gt; *model, epiworld_fast_int state_new=-99, epiworld_fast_int queue=-99)</div><div class="ttdoc">Agent removed by virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:14319</div></div>
+<div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6072</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
