@@ -78,9 +78,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a33427ada0273d23ff0899b3d0630572a"><td class="memItemLeft" align="right" valign="top"><a id="a33427ada0273d23ff0899b3d0630572a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Tool</b> (std::string name=&quot;unknown tool&quot;)</td></tr>
-<tr class="separator:a33427ada0273d23ff0899b3d0630572a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc38b1c762bb775cb2d314a93ef9985"><td class="memItemLeft" align="right" valign="top"><a id="a6fc38b1c762bb775cb2d314a93ef9985"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Tool</b> (std::string name=&quot;unknown tool&quot;, epiworld_double prevalence=0.0, bool prevalence_as_proportion=false, ToolToAgentFun&lt; TSeq &gt; dist_fun=nullptr)</td></tr>
+<tr class="separator:a6fc38b1c762bb775cb2d314a93ef9985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3045734161bf2c36a061512b24e51c76"><td class="memItemLeft" align="right" valign="top"><a id="a3045734161bf2c36a061512b24e51c76"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_sequence</b> (TSeq d)</td></tr>
 <tr class="separator:a3045734161bf2c36a061512b24e51c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +132,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memitem:ae3ee14b1d3697f643d919f6ffa13b6e4"><td class="memItemLeft" align="right" valign="top"><a id="ae3ee14b1d3697f643d919f6ffa13b6e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> () const</td></tr>
 <tr class="separator:ae3ee14b1d3697f643d919f6ffa13b6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675bf90b5687075abc6d595789d227e0"><td class="memItemLeft" align="right" valign="top"><a id="a675bf90b5687075abc6d595789d227e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>distribute</b> (<a class="el" href="class_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a675bf90b5687075abc6d595789d227e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4167b1af9bac9acbfe164ce76bfc95a8"><td class="memItemLeft" align="right" valign="top"><a id="a4167b1af9bac9acbfe164ce76bfc95a8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_prevalence</b> (epiworld_double p, bool as_proportion=false)</td></tr>
+<tr class="separator:a4167b1af9bac9acbfe164ce76bfc95a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4224cf6fdba24749296d31e4fd825d9"><td class="memItemLeft" align="right" valign="top"><a id="ab4224cf6fdba24749296d31e4fd825d9"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_prevalence</b> () const</td></tr>
+<tr class="separator:ab4224cf6fdba24749296d31e4fd825d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5370ef995cfd737745864c1420a76f"><td class="memItemLeft" align="right" valign="top"><a id="a5d5370ef995cfd737745864c1420a76f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_prevalence_as_proportion</b> () const</td></tr>
+<tr class="separator:a5d5370ef995cfd737745864c1420a76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696eeb2ce58b38ed7dfb74176dcf67d1"><td class="memItemLeft" align="right" valign="top"><a id="a696eeb2ce58b38ed7dfb74176dcf67d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_dist_fun</b> (ToolToAgentFun&lt; TSeq &gt; fun)</td></tr>
+<tr class="separator:a696eeb2ce58b38ed7dfb74176dcf67d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a506469160cfa7558abd387bbfaad61ce"><td class="memItemLeft" align="right" valign="top"><a id="a506469160cfa7558abd387bbfaad61ce"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_tool.html">Tool</a>&lt; std::vector&lt; int &gt;&gt; &amp;other) const</td></tr>
 <tr class="separator:a506469160cfa7558abd387bbfaad61ce"><td class="memSeparator" colspan="2">&#160;</td></tr>

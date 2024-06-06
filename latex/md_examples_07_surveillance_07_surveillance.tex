@@ -61,7 +61,7 @@ Along update\+:
 \DoxyCodeLine{  covid19.set\_infectiousness(.8);}
 \DoxyCodeLine{  }
 \DoxyCodeLine{  // Creating a tool}
-\DoxyCodeLine{  epiworld::Tool<> vax("{}vaccine"{});}
+\DoxyCodeLine{  epiworld::Tool<> vax("{}vaccine"{}, .5, true);}
 \DoxyCodeLine{  vax.set\_contagion\_reduction(.95);}
 \DoxyCodeLine{}
 \DoxyCodeLine{  // Creating a model}
@@ -69,7 +69,7 @@ Along update\+:
 \DoxyCodeLine{}
 \DoxyCodeLine{  // Adding the tool and virus}
 \DoxyCodeLine{  model.add\_virus(covid19);}
-\DoxyCodeLine{  model.add\_tool(vax, .5);}
+\DoxyCodeLine{  model.add\_tool(vax);}
 \DoxyCodeLine{}
 \DoxyCodeLine{  // Generating a random pop}
 \DoxyCodeLine{  model.population\_from\_adjlist(}

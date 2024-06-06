@@ -366,11 +366,11 @@ $(function() {
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    model.add_globalevent(surveillance_program, <span class="stringliteral">&quot;Surveilance program&quot;</span>, -1);</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;   </div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">// Vaccine tool -----------------------------------------------------------</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="classepiworld_1_1_tool.html">epiworld::Tool&lt;TSeq&gt;</a> vax(<span class="stringliteral">&quot;Vaccine&quot;</span>);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="classepiworld_1_1_tool.html">epiworld::Tool&lt;TSeq&gt;</a> vax(<span class="stringliteral">&quot;Vaccine&quot;</span>, prop_vaccinated, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    vax.set_susceptibility_reduction(&amp;model(<span class="stringliteral">&quot;Vax efficacy&quot;</span>));</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    vax.set_transmission_reduction(&amp;model(<span class="stringliteral">&quot;Vax redux transmission&quot;</span>));</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    model.add_tool(vax, prop_vaccinated);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    model.add_tool(vax);</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    model.set_name(<span class="stringliteral">&quot;Surveillance&quot;</span>);</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
@@ -419,10 +419,10 @@ $(function() {
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_model_s_u_r_v_html"><div class="ttname"><a href="class_model_s_u_r_v.html">ModelSURV</a></div><div class="ttdef"><b>Definition:</b> surveillance.hpp:5</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13345</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13331</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6072</div></div>
-<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:11359</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:10104</div></div>
+<div class="ttc" id="aclassepiworld_1_1_tool_html"><div class="ttname"><a href="classepiworld_1_1_tool.html">epiworld::Tool</a></div><div class="ttdoc">Tools for defending the agent against the virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:11240</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9985</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

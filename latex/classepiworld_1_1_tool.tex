@@ -12,8 +12,8 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_tool_a33427ada0273d23ff0899b3d0630572a}\label{classepiworld_1_1_tool_a33427ada0273d23ff0899b3d0630572a}} 
-{\bfseries Tool} (std\+::string name=\char`\"{}unknown tool\char`\"{})
+\mbox{\Hypertarget{classepiworld_1_1_tool_a6fc38b1c762bb775cb2d314a93ef9985}\label{classepiworld_1_1_tool_a6fc38b1c762bb775cb2d314a93ef9985}} 
+{\bfseries Tool} (std\+::string name=\char`\"{}unknown tool\char`\"{}, epiworld\+\_\+double prevalence=0.\+0, bool prevalence\+\_\+as\+\_\+proportion=false, Tool\+To\+Agent\+Fun$<$ TSeq $>$ dist\+\_\+fun=nullptr)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_tool_a3045734161bf2c36a061512b24e51c76}\label{classepiworld_1_1_tool_a3045734161bf2c36a061512b24e51c76}} 
 void {\bfseries set\+\_\+sequence} (TSeq d)
@@ -65,6 +65,21 @@ bool {\bfseries operator!=} (const \mbox{\hyperlink{classepiworld_1_1_tool}{Tool
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_tool_ae3ee14b1d3697f643d919f6ffa13b6e4}\label{classepiworld_1_1_tool_ae3ee14b1d3697f643d919f6ffa13b6e4}} 
 void {\bfseries print} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_tool_a675bf90b5687075abc6d595789d227e0}\label{classepiworld_1_1_tool_a675bf90b5687075abc6d595789d227e0}} 
+void {\bfseries distribute} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_tool_a4167b1af9bac9acbfe164ce76bfc95a8}\label{classepiworld_1_1_tool_a4167b1af9bac9acbfe164ce76bfc95a8}} 
+void {\bfseries set\+\_\+prevalence} (epiworld\+\_\+double p, bool as\+\_\+proportion=false)
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_tool_ab4224cf6fdba24749296d31e4fd825d9}\label{classepiworld_1_1_tool_ab4224cf6fdba24749296d31e4fd825d9}} 
+epiworld\+\_\+double {\bfseries get\+\_\+prevalence} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_tool_a5d5370ef995cfd737745864c1420a76f}\label{classepiworld_1_1_tool_a5d5370ef995cfd737745864c1420a76f}} 
+bool {\bfseries get\+\_\+prevalence\+\_\+as\+\_\+proportion} () const
+\item 
+\mbox{\Hypertarget{classepiworld_1_1_tool_a696eeb2ce58b38ed7dfb74176dcf67d1}\label{classepiworld_1_1_tool_a696eeb2ce58b38ed7dfb74176dcf67d1}} 
+void {\bfseries set\+\_\+dist\+\_\+fun} (Tool\+To\+Agent\+Fun$<$ TSeq $>$ fun)
 \end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Get and set the tool functions}\par
 {\em 

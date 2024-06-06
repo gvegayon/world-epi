@@ -312,15 +312,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>rbinom</b> (int n, epi
 <tr class="memitem:a5ab0663767f3779b469517101063501e"><td class="memItemLeft" align="right" valign="top"><a id="a5ab0663767f3779b469517101063501e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_virus</b> (<a class="el" href="class_virus.html">Virus</a>&lt; TSeq &gt; &amp;v)</td></tr>
 <tr class="separator:a5ab0663767f3779b469517101063501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5da6c7fbab1bec4b8887a1de33246eb"><td class="memItemLeft" align="right" valign="top"><a id="aa5da6c7fbab1bec4b8887a1de33246eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; &amp;t, epiworld_double preval)</td></tr>
-<tr class="separator:aa5da6c7fbab1bec4b8887a1de33246eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a0519324e32fd931fe906641abdeba0"><td class="memItemLeft" align="right" valign="top"><a id="a9a0519324e32fd931fe906641abdeba0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_n</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; &amp;t, epiworld_fast_uint preval)</td></tr>
-<tr class="separator:a9a0519324e32fd931fe906641abdeba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e54ea3d6c370a43c7c1d9d54d63a31"><td class="memItemLeft" align="right" valign="top"><a id="a47e54ea3d6c370a43c7c1d9d54d63a31"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool_fun</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; &amp;t, ToolToAgentFun&lt; TSeq &gt; fun)</td></tr>
-<tr class="separator:a47e54ea3d6c370a43c7c1d9d54d63a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25eb1e3761df36bef0868dcd80ba88d2"><td class="memItemLeft" align="right" valign="top"><a id="a25eb1e3761df36bef0868dcd80ba88d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_tool</b> (<a class="el" href="class_tool.html">Tool</a>&lt; TSeq &gt; &amp;t)</td></tr>
+<tr class="separator:a25eb1e3761df36bef0868dcd80ba88d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad954b24754852ac823834f5410ba7dca"><td class="memItemLeft" align="right" valign="top"><a id="ad954b24754852ac823834f5410ba7dca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_entity</b> (<a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; e)</td></tr>
 <tr class="separator:ad954b24754852ac823834f5410ba7dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -636,15 +630,6 @@ std::vector&lt; VirusPtr&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" v
 <tr class="memitem:a97053424f048ff1ce301f1c611b73faf"><td class="memItemLeft" align="right" valign="top"><a id="a97053424f048ff1ce301f1c611b73faf"></a>
 std::vector&lt; ToolPtr&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tools</b> = {}</td></tr>
 <tr class="separator:a97053424f048ff1ce301f1c611b73faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20a4b167cc762b74094f0ddbb206cec6"><td class="memItemLeft" align="right" valign="top"><a id="a20a4b167cc762b74094f0ddbb206cec6"></a>
-std::vector&lt; epiworld_double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_tool</b> = {}</td></tr>
-<tr class="separator:a20a4b167cc762b74094f0ddbb206cec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5078b768950793792751f2cf1c53114"><td class="memItemLeft" align="right" valign="top"><a id="af5078b768950793792751f2cf1c53114"></a>
-std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prevalence_tool_as_proportion</b> = {}</td></tr>
-<tr class="separator:af5078b768950793792751f2cf1c53114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0549bca1596afb91d6368a8cbe3208"><td class="memItemLeft" align="right" valign="top"><a id="acb0549bca1596afb91d6368a8cbe3208"></a>
-std::vector&lt; ToolToAgentFun&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tools_dist_funs</b> = {}</td></tr>
-<tr class="separator:acb0549bca1596afb91d6368a8cbe3208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e479d41d3d4063e733dbe4ad4ddc93a"><td class="memItemLeft" align="right" valign="top"><a id="a0e479d41d3d4063e733dbe4ad4ddc93a"></a>
 std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities</b> = {}</td></tr>
 <tr class="separator:a0e479d41d3d4063e733dbe4ad4ddc93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
