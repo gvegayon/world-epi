@@ -121,66 +121,72 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    epiworld_fast_int queue_init = 0; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    epiworld_fast_int queue_post = 0; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    epiworld_double prevalence = 0.0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> prevalence_as_proportion = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    EntityToAgentFun&lt;TSeq&gt; dist_fun = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    epiworld_double prevalence = 0.0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> prevalence_as_proportion = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EntityToAgentFun&lt;TSeq&gt; dist_fun = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">   78</a></span>&#160;    <a class="code" href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">Entity</a>(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::string <a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        epiworld_double preval,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> as_proportion,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        EntityToAgentFun&lt;TSeq&gt; fun = <span class="keyword">nullptr</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ) :</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            entity_name(<a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>),</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            prevalence(preval),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            prevalence_as_proportion(as_proportion),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            dist_fun(fun)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {};</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> add_agent(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; p, <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> add_agent(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p, <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> rm_agent(<span class="keywordtype">size_t</span> idx);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">size_t</span> size() const noexcept;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> set_location(std::vector&lt; epiworld_double &gt; loc);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::vector&lt; epiworld_double &gt; &amp; get_location();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::iterator begin();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::iterator end();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::const_iterator begin() const;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::const_iterator end() const;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * operator[](<span class="keywordtype">size_t</span> i);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> get_id() const noexcept;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    const std::<span class="keywordtype">string</span> &amp; get_name() const noexcept;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> set_state(epiworld_fast_int init, epiworld_fast_int post);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> set_queue(epiworld_fast_int init, epiworld_fast_int post);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> get_state(epiworld_fast_int * init, epiworld_fast_int * post);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">get_queue</a>(epiworld_fast_int * init, epiworld_fast_int * post);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">bool</span> operator==(const <a class="code" href="class_entity.html">Entity</a>&lt;TSeq&gt; &amp; other) const;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> operator!=(const <a class="code" href="class_entity.html">Entity</a>&lt;TSeq&gt; &amp; other)<span class="keyword"> const </span>{<span class="keywordflow">return</span> !operator==(other);};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> distribute();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    std::vector&lt; size_t &gt; &amp; <a class="code" href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">get_agents</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">   79</a></span>&#160;    <a class="code" href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">Entity</a>(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::string <a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        epiworld_double preval,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">bool</span> as_proportion,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        EntityToAgentFun&lt;TSeq&gt; fun = <span class="keyword">nullptr</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ) :</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            entity_name(<a class="code" href="class_model.html#a343ab95f43273186d42d6df618695283">name</a>),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            prevalence(preval),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            prevalence_as_proportion(as_proportion),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            dist_fun(fun)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> add_agent(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> &amp; p, <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> add_agent(<a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * p, <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> rm_agent(<span class="keywordtype">size_t</span> idx);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">size_t</span> size() const noexcept;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> set_location(std::vector&lt; epiworld_double &gt; loc);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::vector&lt; epiworld_double &gt; &amp; get_location();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::iterator begin();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::iterator end();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::const_iterator begin() const;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    typename std::vector&lt; <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * &gt;::const_iterator end() const;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_agent.html">Agent</a>&lt;TSeq&gt; * operator[](<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> get_id() const noexcept;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    const std::<span class="keywordtype">string</span> &amp; get_name() const noexcept;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> set_state(epiworld_fast_int init, epiworld_fast_int post);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> set_queue(epiworld_fast_int init, epiworld_fast_int post);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> get_state(epiworld_fast_int * init, epiworld_fast_int * post);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a3cf5b4f14dcd54816785b38894c8088f">get_queue</a>(epiworld_fast_int * init, epiworld_fast_int * post);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_model.html#a9591eb76c7cf1ed7e1510342ff602d37">reset</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> operator==(const <a class="code" href="class_entity.html">Entity</a>&lt;TSeq&gt; &amp; other) const;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> operator!=(const <a class="code" href="class_entity.html">Entity</a>&lt;TSeq&gt; &amp; other)<span class="keyword"> const </span>{<span class="keywordflow">return</span> !operator==(other);};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> distribute();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::vector&lt; size_t &gt; &amp; <a class="code" href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">get_agents</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> set_prevalence(epiworld_double p, <span class="keywordtype">bool</span> as_proportion);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    epiworld_double get_prevalence() const noexcept;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">bool</span> get_prevalence_as_proportion() const noexcept;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> set_dist_fun(EntityToAgentFun&lt;TSeq&gt; fun);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_agent_html"><div class="ttname"><a href="class_agent.html">Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> agent-bones.hpp:66</div></div>
 <div class="ttc" id="aclass_agents_sample_html"><div class="ttname"><a href="class_agents_sample.html">AgentsSample</a></div><div class="ttdoc">Sample of agents.</div><div class="ttdef"><b>Definition:</b> agentssample-bones.hpp:28</div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:20</div></div>
-<div class="ttc" id="aclass_entity_html_a6e9bb0ff316ea7367e29a53b511a15f6"><div class="ttname"><a href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">Entity::Entity</a></div><div class="ttdeci">Entity(std::string name, epiworld_double preval, bool as_proportion, EntityToAgentFun&lt; TSeq &gt; fun=nullptr)</div><div class="ttdoc">Constructs an Entity object.</div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:78</div></div>
+<div class="ttc" id="aclass_entity_html_a6e9bb0ff316ea7367e29a53b511a15f6"><div class="ttname"><a href="class_entity.html#a6e9bb0ff316ea7367e29a53b511a15f6">Entity::Entity</a></div><div class="ttdeci">Entity(std::string name, epiworld_double preval, bool as_proportion, EntityToAgentFun&lt; TSeq &gt; fun=nullptr)</div><div class="ttdoc">Constructs an Entity object.</div><div class="ttdef"><b>Definition:</b> entity-bones.hpp:79</div></div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_html_a077f3c2f03c119d038909cb34aa1aade"><div class="ttname"><a href="class_model.html#a077f3c2f03c119d038909cb34aa1aade">Model::get_agents</a></div><div class="ttdeci">std::vector&lt; Agent&lt; TSeq &gt; &gt; &amp; get_agents()</div><div class="ttdoc">Returns a reference to the vector of agents.</div><div class="ttdef"><b>Definition:</b> model-meat.hpp:577</div></div>
 <div class="ttc" id="aclass_model_html_a343ab95f43273186d42d6df618695283"><div class="ttname"><a href="class_model.html#a343ab95f43273186d42d6df618695283">Model::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the model.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:98</div></div>

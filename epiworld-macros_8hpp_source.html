@@ -160,7 +160,11 @@ $(function() {
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define EPI_NEW_ENTITYTOAGENTFUN(funname,tseq) inline void \</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    (funname)(epiworld::Entity&lt;tseq&gt; &amp; e, epiworld::Model&lt;tseq&gt; * m)</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define EPI_NEW_ENTITYTOAGENTFUN_LAMBDA(funname,tseq) \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    epiworld::EntityToAgentFun&lt;tseq&gt; funname = \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">    [](epiworld::Entity&lt;tseq&gt; &amp; e, epiworld::Model&lt;tseq&gt; * m) -&gt; void</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
