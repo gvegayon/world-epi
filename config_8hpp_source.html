@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">struct </span><a class="code" href="struct_event.html">Event</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">using</span> ActionFun = std::function&lt;void(<a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a>&amp;,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt;;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">using</span> EventFun = std::function&lt;void(<a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a>&amp;,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt;;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">using</span> VirusToAgentFun = std::function&lt;void(<a class="code" href="class_virus.html">Virus&lt;TSeq&gt;</a>&amp;,<a class="code" href="class_model.html">Model&lt;TSeq&gt;</a>*)&gt;;</div>
@@ -182,18 +182,18 @@ $(function() {
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * entity;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    epiworld_fast_int new_state;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    epiworld_fast_int queue;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    ActionFun&lt;TSeq&gt; call;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    EventFun&lt;TSeq&gt; call;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">int</span> idx_agent;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">int</span> idx_object;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="struct_event.html#a3b0dd668c6413ed1e622e20acd0a5cdf">  147</a></span>&#160;    <a class="code" href="struct_event.html#a3b0dd668c6413ed1e622e20acd0a5cdf">Event</a>(</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="struct_event.html#afbf93fedb156e7aed31f6179aab7a8e3">  147</a></span>&#160;    <a class="code" href="struct_event.html#afbf93fedb156e7aed31f6179aab7a8e3">Event</a>(</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;</a> * agent_,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        VirusPtr&lt;TSeq&gt; virus_,</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        ToolPtr&lt;TSeq&gt; tool_,</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> * entity_,</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        epiworld_fast_int new_state_,</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        epiworld_fast_int queue_,</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        ActionFun&lt;TSeq&gt; call_,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        EventFun&lt;TSeq&gt; call_,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">int</span> idx_agent_,</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">int</span> idx_object_</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    ) : agent(agent_), virus(virus_), tool(tool_), entity(entity_),</div>
@@ -328,7 +328,7 @@ $(function() {
 <div class="ttc" id="aclass_viruses__const_html"><div class="ttname"><a href="class_viruses__const.html">Viruses_const</a></div><div class="ttdoc">Set of Viruses (const) (useful for iterators)</div><div class="ttdef"><b>Definition:</b> viruses-bones.hpp:121</div></div>
 <div class="ttc" id="aclass_viruses_html"><div class="ttname"><a href="class_viruses.html">Viruses</a></div><div class="ttdoc">Set of viruses (useful for building iterators)</div><div class="ttdef"><b>Definition:</b> viruses-bones.hpp:16</div></div>
 <div class="ttc" id="astruct_event_html"><div class="ttname"><a href="struct_event.html">Event</a></div><div class="ttdoc">Event data for update an agent.</div><div class="ttdef"><b>Definition:</b> config.hpp:120</div></div>
-<div class="ttc" id="astruct_event_html_a3b0dd668c6413ed1e622e20acd0a5cdf"><div class="ttname"><a href="struct_event.html#a3b0dd668c6413ed1e622e20acd0a5cdf">Event::Event</a></div><div class="ttdeci">Event(Agent&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, Entity&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</div><div class="ttdoc">Construct a new Event object.</div><div class="ttdef"><b>Definition:</b> config.hpp:147</div></div>
+<div class="ttc" id="astruct_event_html_afbf93fedb156e7aed31f6179aab7a8e3"><div class="ttname"><a href="struct_event.html#afbf93fedb156e7aed31f6179aab7a8e3">Event::Event</a></div><div class="ttdeci">Event(Agent&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, Entity&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, EventFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</div><div class="ttdoc">Construct a new Event object.</div><div class="ttdef"><b>Definition:</b> config.hpp:147</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

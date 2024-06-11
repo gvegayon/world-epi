@@ -82,9 +82,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab711f7fd47bbffdfe1e4325e9b327004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepiworld_1_1_event.html#ab711f7fd47bbffdfe1e4325e9b327004">Event</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, ActionFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
-<tr class="memdesc:ab711f7fd47bbffdfe1e4325e9b327004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="structepiworld_1_1_event.html" title="Event data for update an agent.">Event</a> object.  <a href="structepiworld_1_1_event.html#ab711f7fd47bbffdfe1e4325e9b327004">More...</a><br /></td></tr>
-<tr class="separator:ab711f7fd47bbffdfe1e4325e9b327004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e62a475af1a629a153a9c5ea129cd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepiworld_1_1_event.html#a96e62a475af1a629a153a9c5ea129cd5">Event</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *agent_, VirusPtr&lt; TSeq &gt; virus_, ToolPtr&lt; TSeq &gt; tool_, <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; TSeq &gt; *entity_, epiworld_fast_int new_state_, epiworld_fast_int queue_, EventFun&lt; TSeq &gt; call_, int idx_agent_, int idx_object_)</td></tr>
+<tr class="memdesc:a96e62a475af1a629a153a9c5ea129cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="structepiworld_1_1_event.html" title="Event data for update an agent.">Event</a> object.  <a href="structepiworld_1_1_event.html#a96e62a475af1a629a153a9c5ea129cd5">More...</a><br /></td></tr>
+<tr class="separator:a96e62a475af1a629a153a9c5ea129cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -106,9 +106,9 @@ epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>new_stat
 <tr class="memitem:a4e109410862df1df0d7363e8aed19e6b"><td class="memItemLeft" align="right" valign="top"><a id="a4e109410862df1df0d7363e8aed19e6b"></a>
 epiworld_fast_int&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
 <tr class="separator:a4e109410862df1df0d7363e8aed19e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea1d713207d6abfb9b6ed0776a9db94"><td class="memItemLeft" align="right" valign="top"><a id="a7ea1d713207d6abfb9b6ed0776a9db94"></a>
-ActionFun&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b></td></tr>
-<tr class="separator:a7ea1d713207d6abfb9b6ed0776a9db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afd17c146b022d76c937102b365d8b1"><td class="memItemLeft" align="right" valign="top"><a id="a5afd17c146b022d76c937102b365d8b1"></a>
+EventFun&lt; TSeq &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b></td></tr>
+<tr class="separator:a5afd17c146b022d76c937102b365d8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eaa24ac350708332521e2622e81b358"><td class="memItemLeft" align="right" valign="top"><a id="a4eaa24ac350708332521e2622e81b358"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>idx_agent</b></td></tr>
 <tr class="separator:a4eaa24ac350708332521e2622e81b358"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,8 +128,8 @@ struct epiworld::Event&lt; TSeq &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab711f7fd47bbffdfe1e4325e9b327004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab711f7fd47bbffdfe1e4325e9b327004">&#9670;&nbsp;</a></span>Event()</h2>
+<a id="a96e62a475af1a629a153a9c5ea129cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e62a475af1a629a153a9c5ea129cd5">&#9670;&nbsp;</a></span>Event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +178,7 @@ template&lt;typename TSeq &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ActionFun&lt; TSeq &gt;&#160;</td>
+          <td class="paramtype">EventFun&lt; TSeq &gt;&#160;</td>
           <td class="paramname"><em>call_</em>, </td>
         </tr>
         <tr>
