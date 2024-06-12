@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.12)  12 JUN 2024 05:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.12)  12 JUN 2024 13:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3352,14 +3352,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Underfull \hbox (badness 4303) in paragraph at lines 15--18
-[][] \T1/phv/b/n/10 Tool \T1/phv/m/n/10 (std[]::string name="unknown tool", epi
-world[]_[]double prevalence=0.[]0, bool prevalence[]_[]as[]_[]
- []
-
-[189] [190]
-Underfull \hbox (badness 10000) detected at line 92
+[189]
+Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
@@ -3380,25 +3374,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Underfull \hbox (badness 4303) in paragraph at lines 15--18
-[][] \T1/phv/b/n/10 Tool \T1/phv/m/n/10 (std[]::string name="unknown tool", epi
-world[]_[]double prevalence=0.[]0, bool prevalence[]_[]as[]_[]
- []
-
-[191]
-Underfull \hbox (badness 10000) detected at line 98
+[190]
+Underfull \hbox (badness 10000) detected at line 92
 [][][]
  []
 
-[192pdfTeX warning (ext4): destination with the same identifier (name{class_too
+[191pdfTeX warning (ext4): destination with the same identifier (name{class_too
 l_a506469160cfa7558abd387bbfaad61ce}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.158 \mbox
-           {\Hypertarget{class_tool_aa4532e80368ab60b4fda5bb917f6f0ca}\label...
-]) (./classepiworld_1_1_tools.tex
+l.160 \end{DoxyCompactItemize}
+                              ]) (./classepiworld_1_1_tools.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3415,7 +3402,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[193]) (./class_tools.tex
+[192]) (./class_tools.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3449,7 +3436,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[194]) (./class_tools__const.tex
+[193]) (./class_tools__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3466,7 +3453,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[195]) (./classepiworld_1_1_user_data.tex
+[194]) (./classepiworld_1_1_user_data.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3483,12 +3470,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[196]
+[195]
 Underfull \hbox (badness 10000) detected at line 72
 [][][]
  []
 
-[197]) (./class_user_data.tex
+[196]) (./class_user_data.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3509,7 +3496,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Overfull \vbox (10.83002pt too high) has occurred while \output is active []
 
 
-[198]
+[197]
 Underfull \hbox (badness 10000) detected at line 72
 [][][]
  []
@@ -3518,7 +3505,7 @@ Underfull \hbox (badness 10000) detected at line 72
 Overfull \vbox (4.70511pt too high) has occurred while \output is active []
 
 
-[199]) (./structepiworld_1_1vec_hasher.tex
+[198]) (./structepiworld_1_1vec_hasher.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3552,7 +3539,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[200]) (./classepiworld_1_1_virus.tex
+[199]) (./classepiworld_1_1_virus.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3574,7 +3561,7 @@ Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
-[201] [202]) (./class_virus.tex
+[200] [201]) (./class_virus.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3591,7 +3578,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[203pdfTeX warning (ext4): destination with the same identifier (name{class_vir
+[202pdfTeX warning (ext4): destination with the same identifier (name{class_vir
 us_ac0e64cc22fdfc1f26c2d1f27272b498c}) has been already used, duplicate ignored
 
 
@@ -3603,7 +3590,7 @@ Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
-[204]) (./classepiworld_1_1_viruses.tex
+[203]) (./classepiworld_1_1_viruses.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3620,7 +3607,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[205]) (./class_viruses.tex
+[204]) (./class_viruses.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3654,7 +3641,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[206]) (./class_viruses__const.tex
+[205]) (./class_viruses__const.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -3671,14 +3658,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[207]) [208]
+[206]) [207] [208
+
+]
 Chapter 15.
 (./agent-meat-state_8hpp.tex <./agent-meat-state_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__incl.pdf, id=7198, 229.85875pt x 167.62625pt>
+<agent-meat-state_8hpp__incl.pdf, id=7194, 229.85875pt x 167.62625pt>
 File: agent-meat-state_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
@@ -3689,15 +3678,13 @@ Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__dep__incl.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__dep__incl.pdf, id=7206, 223.83624pt x 223.83624pt>
+<agent-meat-state_8hpp__dep__incl.pdf, id=7202, 223.83624pt x 223.83624pt>
 File: agent-meat-state_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__dep__incl.pdf  used on input li
 ne 22.
 (pdftex.def)             Requested size: 223.0pt x 223.00572pt.
- [209
-
-]
+ [209]
 Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
@@ -3842,10 +3829,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22051 strings out of 480478
- 460668 string characters out of 5905924
- 715824 words of memory out of 5000000
- 34902 multiletter control sequences out of 15000+600000
+ 22043 strings out of 480478
+ 460260 string characters out of 5905924
+ 715604 words of memory out of 5000000
+ 34898 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,96p,1988b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3864,10 +3851,10 @@ b></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-
 dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/helvetic/uhvbo8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (227 pages, 1092811 bytes).
+Output written on refman.pdf (227 pages, 1091775 bytes).
 PDF statistics:
- 8260 PDF objects out of 8907 (max. 8388607)
- 7626 compressed objects within 77 object streams
- 2658 named destinations out of 2984 (max. 500000)
+ 8256 PDF objects out of 8907 (max. 8388607)
+ 7622 compressed objects within 77 object streams
+ 2654 named destinations out of 2984 (max. 500000)
  3521 words of extra memory for PDF output out of 10000 (max. 10000000)
 
