@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['queuing_5foff_189',['queuing_off',['../classepiworld_1_1_model.html#a8822ff230b2c4804d0ae28db014520d1',1,'epiworld::Model::queuing_off()'],['../class_model.html#a8822ff230b2c4804d0ae28db014520d1',1,'Model::queuing_off()']]],
-  ['queuing_5fon_190',['queuing_on',['../classepiworld_1_1_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'epiworld::Model::queuing_on()'],['../class_model.html#a1cbe26a38285095c62d1971251a6c3db',1,'Model::queuing_on()']]]
+  ['operator_28_29_187',['operator()',['../classepiworld_1_1_agent.html#a370107b9e18076bce06f7bffb32f2757',1,'epiworld::Agent::operator()()'],['../class_agent.html#a370107b9e18076bce06f7bffb32f2757',1,'Agent::operator()()']]],
+  ['operator_3d_3d_188',['operator==',['../classepiworld_1_1_data_base.html#ab387bebbab95525c452660a7701c457d',1,'epiworld::DataBase::operator==()'],['../class_data_base.html#ab387bebbab95525c452660a7701c457d',1,'DataBase::operator==(const DataBase&lt; TSeq &gt; &amp;other) const'],['../class_data_base.html#a707b63e79214f82c5efb85fc04ccee11',1,'DataBase::operator==(const DataBase&lt; std::vector&lt; int &gt;&gt; &amp;other) const'],['../class_data_base.html#a707b63e79214f82c5efb85fc04ccee11',1,'DataBase::operator==(const DataBase&lt; std::vector&lt; int &gt;&gt; &amp;other) const']]]
 ];

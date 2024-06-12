@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.12)  12 JUN 2024 04:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.12)  12 JUN 2024 05:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3570,13 +3570,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 15--18
-[][] \T1/phv/b/n/10 Virus \T1/phv/m/n/10 (std[]::string name="unknown virus", e
-piworld[]_[]double prevalence=0.[]0, bool prevalence[]_[]as[]_[]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 74
+Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
@@ -3597,21 +3591,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Underfull \hbox (badness 2213) in paragraph at lines 15--18
-[][] \T1/phv/b/n/10 Virus \T1/phv/m/n/10 (std[]::string name="unknown virus", e
-piworld[]_[]double prevalence=0.[]0, bool prevalence[]_[]as[]_[]
- []
-
 [203pdfTeX warning (ext4): destination with the same identifier (name{class_vir
 us_ac0e64cc22fdfc1f26c2d1f27272b498c}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.80 \begin{DoxyReturn}{Returns}
+l.83 \begin{DoxyReturn}{Returns}
                                 ]
-Underfull \hbox (badness 10000) detected at line 80
+Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
@@ -3690,7 +3678,7 @@ Chapter 15.
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__incl.pdf, id=7202, 229.85875pt x 167.62625pt>
+<agent-meat-state_8hpp__incl.pdf, id=7198, 229.85875pt x 167.62625pt>
 File: agent-meat-state_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
@@ -3701,7 +3689,7 @@ Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__dep__incl.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__dep__incl.pdf, id=7210, 223.83624pt x 223.83624pt>
+<agent-meat-state_8hpp__dep__incl.pdf, id=7206, 223.83624pt x 223.83624pt>
 File: agent-meat-state_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__dep__incl.pdf  used on input li
@@ -3854,10 +3842,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22059 strings out of 480478
- 461084 string characters out of 5905924
- 716044 words of memory out of 5000000
- 34906 multiletter control sequences out of 15000+600000
+ 22051 strings out of 480478
+ 460668 string characters out of 5905924
+ 715824 words of memory out of 5000000
+ 34902 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,96p,1988b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3876,10 +3864,10 @@ b></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-
 dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/helvetic/uhvbo8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (227 pages, 1093135 bytes).
+Output written on refman.pdf (227 pages, 1092811 bytes).
 PDF statistics:
- 8265 PDF objects out of 8907 (max. 8388607)
- 7631 compressed objects within 77 object streams
- 2662 named destinations out of 2984 (max. 500000)
+ 8260 PDF objects out of 8907 (max. 8388607)
+ 7626 compressed objects within 77 object streams
+ 2658 named destinations out of 2984 (max. 500000)
  3521 words of extra memory for PDF output out of 10000 (max. 10000000)
 

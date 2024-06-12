@@ -82,9 +82,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4cad864ddbaa85bbcd863704f358718b"><td class="memItemLeft" align="right" valign="top"><a id="a4cad864ddbaa85bbcd863704f358718b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Virus</b> (std::string name=&quot;unknown virus&quot;, epiworld_double prevalence=0.0, bool prevalence_as_proportion=false, VirusToAgentFun&lt; TSeq &gt; dist_fun=nullptr)</td></tr>
-<tr class="separator:a4cad864ddbaa85bbcd863704f358718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed60597541f01f67f5d0a5b4fcb96540"><td class="memItemLeft" align="right" valign="top"><a id="aed60597541f01f67f5d0a5b4fcb96540"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Virus</b> (std::string name=&quot;unknown virus&quot;, VirusToAgentFun&lt; TSeq &gt; dist_fun=nullptr)</td></tr>
+<tr class="separator:aed60597541f01f67f5d0a5b4fcb96540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fddc2967842c3a316623bbb19c3ed97"><td class="memItemLeft" align="right" valign="top"><a id="a9fddc2967842c3a316623bbb19c3ed97"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Virus</b> (std::string name=&quot;unknown virus&quot;, epiworld_double prevalence=0.0, bool as_proportion=true)</td></tr>
+<tr class="separator:a9fddc2967842c3a316623bbb19c3ed97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea7334d2f610345ee20d41afcd410e9a"><td class="memItemLeft" align="right" valign="top"><a id="aea7334d2f610345ee20d41afcd410e9a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mutate</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
 <tr class="separator:aea7334d2f610345ee20d41afcd410e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,18 +230,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> (epiwor
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_queue</b> (epiworld_fast_int *init, epiworld_fast_int *end, epiworld_fast_int *removed=nullptr)</td></tr>
 <tr class="separator:a1eb655ec885485fe415520546a73af90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a23d1332061c78d2deea329437b9eda4b"><td class="memItemLeft" align="right" valign="top"><a id="a23d1332061c78d2deea329437b9eda4b"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_virus.html#a23d1332061c78d2deea329437b9eda4b">get_prevalence</a> () const</td></tr>
-<tr class="memdesc:a23d1332061c78d2deea329437b9eda4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about the prevalence of the virus. <br /></td></tr>
-<tr class="separator:a23d1332061c78d2deea329437b9eda4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac187ace2a48e4b1c0a92aa9e6be88104"><td class="memItemLeft" align="right" valign="top"><a id="ac187ace2a48e4b1c0a92aa9e6be88104"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_prevalence</b> (epiworld_double prevalence, bool as_proportion)</td></tr>
-<tr class="separator:ac187ace2a48e4b1c0a92aa9e6be88104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f3712151e3cf6e2883d89292c686424"><td class="memItemLeft" align="right" valign="top"><a id="a7f3712151e3cf6e2883d89292c686424"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_prevalence_as_proportion</b> () const</td></tr>
-<tr class="separator:a7f3712151e3cf6e2883d89292c686424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a918adfceb40159f1bc4f666258544784"><td class="memItemLeft" align="right" valign="top"><a id="a918adfceb40159f1bc4f666258544784"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>distribute</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_virus.html#a918adfceb40159f1bc4f666258544784">distribute</a> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="memdesc:a918adfceb40159f1bc4f666258544784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about the prevalence of the virus. <br /></td></tr>
 <tr class="separator:a918adfceb40159f1bc4f666258544784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d378369b379e812e027401f723cb21b"><td class="memItemLeft" align="right" valign="top"><a id="a1d378369b379e812e027401f723cb21b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_dist_fun</b> (VirusToAgentFun&lt; TSeq &gt; fun)</td></tr>
