@@ -1,0 +1,321 @@
+The following are parameters used for both ABM and Compartmental models.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EPI\_BETA  <-\/ 0.75}
+\DoxyCodeLine{EPI\_GAMMA <-\/ 0.33}
+\DoxyCodeLine{EPI\_LATENCY <-\/ 1/0.33}
+\DoxyCodeLine{EPI\_N     <-\/ 10000}
+\DoxyCodeLine{EPI\_0     <-\/ 0.01}
+\DoxyCodeLine{EPI\_NDAYS <-\/ 50}
+\DoxyCodeLine{}
+\DoxyCodeLine{Sys.setenv( \# nolint}
+\DoxyCodeLine{    EPI\_BETA  = EPI\_BETA,}
+\DoxyCodeLine{    EPI\_GAMMA = EPI\_GAMMA,}
+\DoxyCodeLine{    EPI\_LATENCY = EPI\_LATENCY,}
+\DoxyCodeLine{    EPI\_N     = EPI\_N,}
+\DoxyCodeLine{    EPI\_0     = EPI\_0,}
+\DoxyCodeLine{    EPI\_NDAYS = EPI\_NDAYS}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md22}{}\doxysection{Compartmental Models}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md22}
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md23}{}\doxysubsection{SIR Model}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md23}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{library(deSolve)}
+\DoxyCodeLine{library(ggplot2)}
+\DoxyCodeLine{library(data.table)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Code from}
+\DoxyCodeLine{\# Chapter 2: SIR}
+\DoxyCodeLine{\# Book "{}Epidemics: Models and Data using R."{}}
+\DoxyCodeLine{\# By: Ottar N. Bjørnstad}
+\DoxyCodeLine{sirmod <-\/ function(t, y, parms) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \# Pull state variables from the vector y}
+\DoxyCodeLine{    S = y[1]}
+\DoxyCodeLine{    I = y[2]}
+\DoxyCodeLine{    R = y[3]}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Pull parameter values from parms vector}
+\DoxyCodeLine{    beta  = parms["{}beta"{}]}
+\DoxyCodeLine{    mu    = parms["{}mu"{}]}
+\DoxyCodeLine{    gamma = parms["{}gamma"{}]}
+\DoxyCodeLine{    N     = parms["{}N"{}]}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Define equations}
+\DoxyCodeLine{    dS  = mu * (N -\/ S) -\/ beta * S * I/N}
+\DoxyCodeLine{    dI  = beta * S * I/N -\/ (mu + gamma) * I}
+\DoxyCodeLine{    dR  = gamma * I -\/ mu * R}
+\DoxyCodeLine{    res = c(dS, dI, dR)}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Return list of gradients}
+\DoxyCodeLine{    list(res)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Initial parameters}
+\DoxyCodeLine{times <-\/ seq(0, EPI\_NDAYS, by = 1)}
+\DoxyCodeLine{parms <-\/ c(mu = 0, N = EPI\_N, beta = EPI\_BETA, gamma = EPI\_GAMMA)}
+\DoxyCodeLine{start <-\/ c(S = EPI\_N * (1 -\/ EPI\_0), I = EPI\_N * EPI\_0, R = 0)}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{out <-\/ ode(y = start, times = times, func = sirmod, parms= parms)}
+\DoxyCodeLine{out <-\/ as.data.frame(out)}
+\DoxyCodeLine{out <-\/ rbind(}
+\DoxyCodeLine{    with(out, data.table(date = time, state = "{}Susceptible"{}, counts = S)),}
+\DoxyCodeLine{    with(out, data.table(date = time, state = "{}Infected"{}, counts = I)),}
+\DoxyCodeLine{    with(out, data.table(date = time, state = "{}Recovered"{}, counts = R))}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Now we visualize the model
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ggplot(out, aes(x = date, y = counts)) +}
+\DoxyCodeLine{    geom\_line(aes(colour = state)) +}
+\DoxyCodeLine{    labs(title = "{}Compartmental SIR"{})}
+
+\end{DoxyCode}
+
+
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md24}{}\doxysubsection{SEIR Model}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Code adapted from}
+\DoxyCodeLine{\# Chapter 2: SIR}
+\DoxyCodeLine{\# Book "{}Epidemics: Models and Data using R"{}}
+\DoxyCodeLine{\# By: Ottar N. Bjørnstad}
+\DoxyCodeLine{seirmod <-\/ function(t, y, parms) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \# Pull state variables from y vector}
+\DoxyCodeLine{    S = y[1]}
+\DoxyCodeLine{    E = y[2]}
+\DoxyCodeLine{    I = y[3]}
+\DoxyCodeLine{    R = y[4]}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Pull parameter values from parms vector}
+\DoxyCodeLine{    beta  = parms["{}beta"{}]}
+\DoxyCodeLine{    mu    = parms["{}mu"{}]}
+\DoxyCodeLine{    alpha = parms["{}alpha"{}]}
+\DoxyCodeLine{    gamma = parms["{}gamma"{}]}
+\DoxyCodeLine{    N     = parms["{}N"{}]}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Define equations}
+\DoxyCodeLine{    dS  = mu * (N -\/ S) -\/ beta * S * I/N -\/ mu * S}
+\DoxyCodeLine{    dE  = beta * S * I/N -\/ (mu + alpha) * E}
+\DoxyCodeLine{    dI  = alpha * E -\/ (mu + gamma) * I}
+\DoxyCodeLine{    dR  = gamma * I -\/ mu * R}
+\DoxyCodeLine{    res = c(dS, dE, dI, dR)}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \# Return list of gradients}
+\DoxyCodeLine{    list(res)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Initial parameters}
+\DoxyCodeLine{parms <-\/ c(}
+\DoxyCodeLine{    mu = 0, N = EPI\_N, beta = EPI\_BETA,}
+\DoxyCodeLine{    alpha = 1/EPI\_LATENCY, gamma = EPI\_GAMMA}
+\DoxyCodeLine{    )}
+\DoxyCodeLine{start <-\/ c(S = EPI\_N * (1 -\/ EPI\_0), E = EPI\_N * EPI\_0, I = 0, R = 0)}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{out\_seir <-\/ ode(y = start, times = times, func = seirmod, parms = parms)}
+\DoxyCodeLine{out\_seir <-\/ as.data.frame(out\_seir)}
+\DoxyCodeLine{out\_seir <-\/ rbind(}
+\DoxyCodeLine{    with(out\_seir, data.table(date = time, state = "{}Susceptible"{}, counts = S)),}
+\DoxyCodeLine{    with(out\_seir, data.table(date = time, state = "{}Exposed"{}, counts = E)),}
+\DoxyCodeLine{    with(out\_seir, data.table(date = time, state = "{}Infected"{}, counts = I)),}
+\DoxyCodeLine{    with(out\_seir, data.table(date = time, state = "{}Recovered"{}, counts = R))}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Now we visualize the model
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ggplot(out\_seir, aes(x = date, y = counts)) +}
+\DoxyCodeLine{    geom\_line(aes(colour = state)) +}
+\DoxyCodeLine{    labs(title = "{}Compartmental SEIR"{})}
+
+\end{DoxyCode}
+
+
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md25}{}\doxysection{Agent-\/\+Based Model Approach}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md25}
+Calculation of the expected number of days in state \$a\$ when prob of changing state equals \$\textbackslash{}alpha\$ is \$1/\textbackslash{}alpha\$
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set.seed(712)}
+\DoxyCodeLine{a <-\/ .3}
+\DoxyCodeLine{R <-\/ matrix(runif(2e5 * 50), ncol = 50)}
+\DoxyCodeLine{dat <-\/ apply(R, 1, \(\backslash\)(x) \{}
+\DoxyCodeLine{    which.max(x < a)}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{mean(dat) -\/ 1 / a}
+
+\end{DoxyCode}
+ \begin{DoxyVerb}[1] -0.01049333
+\end{DoxyVerb}
+ \hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md26}{}\doxysubsection{Mathematical preliminaries}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md26}
+That agent \$i\$ becomes infected can be computed as follows\+:
+
+At the same time, the probability of not becoming infected equals to the probability of no infected agent transmitting the infection. The probability that agent \$j\$ infects \$i\$ equals
+
+In this case, \$\textbackslash{}beta\$ is parametrized such that its values are within \$(0,1)\$. Since transmission from the \$I\$ infected agents happens independently, we finally have the following\+:
+
+With the above equation, we can now calculate the change in the number of susceptible agents. In this case, it equals the expected number of new infections\+:
+
+With the same parametrization in the canonical SIR model (Kermack and Mc\+Kendrick), the instantaneous change in the number of susceptible agents equals \$\textbackslash{}frac\{\textbackslash{}delta\}\{\textbackslash{}delta t\}S = -\/S \textbackslash{}beta I\$. Given \$S\$ and \$I\$, we can show that, as \$\textbackslash{}beta\textbackslash{}downarrow 0\$, i.\+e., the population grows, both rates converge to the same number. Formally\+:
+
+The same can be shown for the change in the number recovered.\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md27}{}\doxysubsection{Simulation study}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md27}
+Now, what happens with {\ttfamily epiworld}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{system("{}./09-\/sir-\/connected.o -\/n \$EPI\_N -\/b \$EPI\_BETA -\/d \$EPI\_NDAYS -\/p \$EPI\_0 -\/r \$EPI\_GAMMA -\/i 1.0 -\/s555599"{})}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{library(ggplot2)}
+\DoxyCodeLine{epiworld <-\/ data.table::fread("{}total\_hist.txt"{})}
+\DoxyCodeLine{ggplot(epiworld, aes(x = date, y = counts)) +}
+\DoxyCodeLine{    geom\_line(aes(colour = state)) +}
+\DoxyCodeLine{    labs(title = "{}ABM SIR"{})}
+
+\end{DoxyCode}
+
+
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{system("{}./09-\/seir-\/connected.o -\/n \$EPI\_N -\/b \$EPI\_BETA -\/d \$EPI\_NDAYS -\/p \$EPI\_0 -\/r \$EPI\_GAMMA -\/i 1.0 -\/s555599 -\/l \$EPI\_LATENCY"{})}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{library(ggplot2)}
+\DoxyCodeLine{epiworld <-\/ data.table::fread("{}total\_hist.txt"{})}
+\DoxyCodeLine{ggplot(epiworld, aes(x = date, y = counts)) +}
+\DoxyCodeLine{    geom\_line(aes(colour = state)) +}
+\DoxyCodeLine{    labs(title = "{}ABM SEIR"{})}
+
+\end{DoxyCode}
+
+
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md28}{}\doxysection{Comparing ABM with Compartmental Models}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md28}
+To this end, we will compare the results of the first run of the Compartmental model with 100 runs of the ABM, compute the confidence interval, and see how likely is the compartmental model to fall within the trajectory of the ABM simulation.\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md29}{}\doxysubsection{SIR}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md29}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{system("{}./09-\/sir-\/connected.o -\/n \$EPI\_N -\/b \$EPI\_BETA -\/d \$EPI\_NDAYS -\/p \$EPI\_0 -\/r \$EPI\_GAMMA -\/i 1.0 -\/s555599 -\/e 100"{})}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{library(ggplot2)}
+\DoxyCodeLine{library(data.table)}
+\DoxyCodeLine{epiworld <-\/ data.table::fread("{}09-\/sir-\/connected-\/experiments.csv"{})}
+\DoxyCodeLine{epiworld <-\/ epiworld[, .(}
+\DoxyCodeLine{    min  = quantile(counts, probs = .025),}
+\DoxyCodeLine{    mean = mean(counts),}
+\DoxyCodeLine{    max  = quantile(counts, probs = .975)), by = .(date, state)]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Merging Compartmental}
+\DoxyCodeLine{epiworld <-\/ merge(}
+\DoxyCodeLine{    epiworld,}
+\DoxyCodeLine{    out[, .(date = date, state = state, compartmental = counts)],}
+\DoxyCodeLine{    by = c("{}date"{}, "{}state"{})}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{setorder(epiworld, state, date)}
+\DoxyCodeLine{ggplot(epiworld, aes(x = date, y = mean)) +}
+\DoxyCodeLine{    geom\_ribbon(aes(ymin = min, ymax = max, colour = state), alpha = 0.1) +}
+\DoxyCodeLine{    geom\_line(aes(x = date, y = compartmental, colour = sprintf("{}\%s (compt)"{}, state)))}
+
+\end{DoxyCode}
+
+
+
+
+It seems that, although both yield the same equilibria, compartmental models reach the highest point of the simulation earlier. This makes sense as within a single day of the ABM simulation, compartmental models have more events taking place. Nonetheless, as predicted, as \$\textbackslash{}beta\textbackslash{}downarrow 0\$, the differences become lesser. Furthermore, we could use the fact that the transition rates are known to compute an adjustment.\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md30}{}\doxysubsection{SEIR}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md30}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{system("{}./09-\/seir-\/connected.o -\/n \$EPI\_N -\/b \$EPI\_BETA -\/d \$EPI\_NDAYS -\/p \$EPI\_0 -\/r \$EPI\_GAMMA -\/i 1.0 -\/s555599 -\/e 100 -\/l \$EPI\_LATENCY"{})}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{library(ggplot2)}
+\DoxyCodeLine{library(data.table)}
+\DoxyCodeLine{epiworld\_seir <-\/ data.table::fread("{}09-\/seir-\/connected-\/experiments.csv"{})}
+\DoxyCodeLine{epiworld\_seir <-\/ epiworld\_seir[, .(}
+\DoxyCodeLine{    min  = quantile(counts, probs = .025),}
+\DoxyCodeLine{    mean = mean(counts),}
+\DoxyCodeLine{    max  = quantile(counts, probs = .975)), by = .(date, state)]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Merging Compartmental}
+\DoxyCodeLine{epiworld\_seir <-\/ merge(}
+\DoxyCodeLine{    epiworld\_seir,}
+\DoxyCodeLine{    out\_seir[, .(date = date, state = state, compartmental = counts)],}
+\DoxyCodeLine{    by = c("{}date"{}, "{}state"{})}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{setorder(epiworld\_seir, state, date)}
+\DoxyCodeLine{ggplot(epiworld\_seir, aes(x = date, y = mean)) +}
+\DoxyCodeLine{    geom\_ribbon(aes(ymin = min, ymax = max, colour = state), alpha = 0.1) +}
+\DoxyCodeLine{    geom\_line(aes(x = date, y = compartmental, colour = sprintf("{}\%s (compt)"{}, state)))}
+
+\end{DoxyCode}
+
+
+\hypertarget{md_examples_09_sir_connected_09_sir_connected_autotoc_md31}{}\doxysubsection{Rates}\label{md_examples_09_sir_connected_09_sir_connected_autotoc_md31}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{S <-\/ 1000}
+\DoxyCodeLine{rate\_comp <-\/ function(I,B) S * B * I}
+\DoxyCodeLine{}
+\DoxyCodeLine{rate\_abm <-\/ function(I,B) S * (1 -\/ (1 -\/ B)\string^I)}
+\DoxyCodeLine{}
+\DoxyCodeLine{op <-\/ par(mfrow = c(3, 2))}
+\DoxyCodeLine{for (i in c(1, 10, 100)) \{}
+\DoxyCodeLine{    curve(rate\_comp(i, x), from = .01, to = 0.05)}
+\DoxyCodeLine{    curve(rate\_abm(i, x), from = .01, to = 0.05, add = FALSE, lty = 2)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{par(op)}
+
+\end{DoxyCode}
+ 

@@ -267,7 +267,7 @@ $(function() {
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    CHECK_COALESCE_(state_new, virus-&gt;state_init, state);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    CHECK_COALESCE_(queue, virus-&gt;queue_init, <a class="code" href="class_queue.html">Queue&lt;TSeq&gt;::NoOne</a>);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    model-&gt;events_add(</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_agent.html#af401cfc8d95fc04e015ada240e169bc5">  198</a></span>&#160;    model-&gt;events_add(</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keyword">this</span>, virus, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, state_new, queue, default_add_virus&lt;TSeq&gt;, -1, -1</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        );</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
@@ -287,7 +287,7 @@ $(function() {
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_agent.html">Agent&lt;TSeq&gt;::add_entity</a>(</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; entity,</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">  218</a></span>&#160;    <a class="code" href="class_entity.html">Entity&lt;TSeq&gt;</a> &amp; entity,</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="class_model.html">Model&lt;TSeq&gt;</a> * model,</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    epiworld_fast_int state_new,</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    epiworld_fast_int queue</div>
@@ -311,7 +311,7 @@ $(function() {
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="struct_event.html">Event&lt;TSeq&gt;</a> a(</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <span class="keyword">this</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, &amp;entity, state_new, queue, default_add_entity&lt;TSeq&gt;,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                -1, -1</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="class_agent.html#a938c535d35ff860eb59505c36a919df0">  242</a></span>&#160;                -1, -1</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            );</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        default_add_entity(a, model); <span class="comment">/* passing model makes nothing */</span></div>
@@ -357,7 +357,7 @@ $(function() {
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Cannot remove a virus from another agent!&quot;</span>);</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    model-&gt;events_add(</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keyword">this</span>, <span class="keyword">nullptr</span>, tool, <span class="keyword">nullptr</span>, state_new, queue, default_rm_tool&lt;TSeq&gt;, -1, -1</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="class_agent.html#a370107b9e18076bce06f7bffb32f2757">  288</a></span>&#160;        <span class="keyword">this</span>, <span class="keyword">nullptr</span>, tool, <span class="keyword">nullptr</span>, state_new, queue, default_rm_tool&lt;TSeq&gt;, -1, -1</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        );</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
