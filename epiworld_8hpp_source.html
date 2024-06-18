@@ -9351,8 +9351,8 @@ $(function() {
 <div class="line"><a name="l10281"></a><span class="lineno">10281</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10282"></a><span class="lineno">10282</span>&#160;<span class="comment">    VirusFun&lt;TSeq&gt; fun_infect = [coefs_f,vars](</span></div>
 <div class="line"><a name="l10283"></a><span class="lineno">10283</span>&#160;<span class="comment">        Agent&lt;TSeq&gt; * agent,</span></div>
-<div class="line"><a name="l10284"></a><span class="lineno">10284</span>&#160;<span class="comment">        Virus&lt;TSeq&gt; &amp; virus,</span></div>
-<div class="line"><a name="l10285"></a><span class="lineno">10285</span>&#160;<span class="comment">        Model&lt;TSeq&gt; * model</span></div>
+<div class="line"><a name="l10284"></a><span class="lineno">10284</span>&#160;<span class="comment">        Virus&lt;TSeq&gt; &amp;,</span></div>
+<div class="line"><a name="l10285"></a><span class="lineno">10285</span>&#160;<span class="comment">        Model&lt;TSeq&gt; *</span></div>
 <div class="line"><a name="l10286"></a><span class="lineno">10286</span>&#160;<span class="comment">        ) -&gt; epiworld_double {</span></div>
 <div class="line"><a name="l10287"></a><span class="lineno">10287</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l10288"></a><span class="lineno">10288</span>&#160;<span class="comment">        size_t K = coefs_f.size();</span></div>
@@ -15497,7 +15497,7 @@ $(function() {
 <div class="line"><a name="l16933"></a><span class="lineno">16933</span>&#160; </div>
 <div class="line"><a name="l16934"></a><span class="lineno">16934</span>&#160;    epiworld::VirusFun&lt;TSeq&gt; ptransmitfun = [](</div>
 <div class="line"><a name="l16935"></a><span class="lineno">16935</span>&#160;        <a class="code" href="classepiworld_1_1_agent.html">epiworld::Agent&lt;TSeq&gt;</a> * p,</div>
-<div class="line"><a name="l16936"></a><span class="lineno">16936</span>&#160;        <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> &amp; v,</div>
+<div class="line"><a name="l16936"></a><span class="lineno">16936</span>&#160;        <a class="code" href="classepiworld_1_1_virus.html">epiworld::Virus&lt;TSeq&gt;</a> &amp;,</div>
 <div class="line"><a name="l16937"></a><span class="lineno">16937</span>&#160;        <a class="code" href="classepiworld_1_1_model.html">epiworld::Model&lt;TSeq&gt;</a> * m</div>
 <div class="line"><a name="l16938"></a><span class="lineno">16938</span>&#160;        ) -&gt; epiworld_double</div>
 <div class="line"><a name="l16939"></a><span class="lineno">16939</span>&#160;    {</div>
@@ -17936,7 +17936,7 @@ $(function() {
 <div class="line"><a name="l19598"></a><span class="lineno">19598</span>&#160;                    (1.0 - agent.get_transmission_reduction(v, m)) </div>
 <div class="line"><a name="l19599"></a><span class="lineno">19599</span>&#160;                    ; </div>
 <div class="line"><a name="l19600"></a><span class="lineno">19600</span>&#160;            </div>
-<div class="line"><a name="l19601"></a><span class="lineno">19601</span>&#160;                <span class="keywordtype">size_t</span> vid = v-&gt;<a class="code" href="classepiworld_1_1_agent.html#a3763f12b56e8dd7f0e23bbca4f183c8a">get_id</a>();</div>
+<div class="line"><a name="l19601"></a><span class="lineno">19601</span>&#160;                <span class="keywordtype">size_t</span> vid = v-&gt;get_id();</div>
 <div class="line"><a name="l19602"></a><span class="lineno">19602</span>&#160;                <span class="keywordflow">if</span> (!stored[vid])</div>
 <div class="line"><a name="l19603"></a><span class="lineno">19603</span>&#160;                {</div>
 <div class="line"><a name="l19604"></a><span class="lineno">19604</span>&#160;                    stored[vid] = <span class="keyword">true</span>;</div>
