@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.18)  18 JUN 2024 04:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Alpine Linux) (preloaded format=pdflatex 2024.6.18)  18 JUN 2024 05:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1724,12 +1724,12 @@ Package pdftex.def Info: classepiworld_1_1_model__coll__graph.pdf  used on inpu
 t line 19.
 (pdftex.def)             Requested size: 203.0pt x 167.00684pt.
  [81] [82] [83]
-Underfull \hbox (badness 10000) detected at line 346
+Underfull \hbox (badness 10000) detected at line 343
 [][][]
  []
 
 
-Underfull \hbox (badness 808) in paragraph at lines 351--354
+Underfull \hbox (badness 808) in paragraph at lines 348--351
 [][] \T1/phv/m/n/10 void \T1/phv/b/n/10 set[]_[]rewire[]_[]fun \T1/phv/m/n/10 (
 std[]::function$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 void(std[]::vector$\OML/cmm/
 m/it/10 <$ []$<$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/10 >$$>$ $\OMS/cmsy/m/n/10 
@@ -1738,7 +1738,7 @@ m/it/10 <$ []$<$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/10 >$$>$ $\OMS/cmsy/m/n/10
  []
 
 [84]
-Underfull \hbox (badness 10000) detected at line 391
+Underfull \hbox (badness 10000) detected at line 388
 [][][]
  []
 
@@ -1747,33 +1747,33 @@ Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
 []\T1/phv/m/n/10 proportions[] 
  []
 
-[85]
-Underfull \hbox (badness 10000) detected at line 454
+
+Underfull \hbox (badness 10000) detected at line 451
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 521
+[85]
+Underfull \hbox (badness 10000) detected at line 518
 [][][]
  []
 
 [86] [87] [88]
-Overfull \hbox (65.99303pt too wide) in paragraph at lines 813--814
+Overfull \hbox (65.99303pt too wide) in paragraph at lines 810--811
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
 
-Overfull \hbox (101.2272pt too wide) in paragraph at lines 813--814
+Overfull \hbox (101.2272pt too wide) in paragraph at lines 810--811
 []\T1/phv/m/n/10 , [], [], [],
  []
 
 
-Overfull \hbox (145.27505pt too wide) in paragraph at lines 813--814
+Overfull \hbox (145.27505pt too wide) in paragraph at lines 810--811
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--814
+Underfull \hbox (badness 10000) in paragraph at lines 810--811
 []\T1/phv/m/n/10 , [], and
  []
 
@@ -1783,22 +1783,22 @@ Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
  []
 
 [90]
-Overfull \hbox (65.99303pt too wide) in paragraph at lines 903--904
+Overfull \hbox (65.99303pt too wide) in paragraph at lines 900--901
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
 
-Overfull \hbox (101.2272pt too wide) in paragraph at lines 903--904
+Overfull \hbox (101.2272pt too wide) in paragraph at lines 900--901
 []\T1/phv/m/n/10 , [], [], [],
  []
 
 
-Overfull \hbox (145.27505pt too wide) in paragraph at lines 903--904
+Overfull \hbox (145.27505pt too wide) in paragraph at lines 900--901
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 903--904
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
 []\T1/phv/m/n/10 , [], and
  []
 
@@ -1808,7 +1808,7 @@ Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
  []
 
 [92] [93]
-Overfull \hbox (30.9369pt too wide) in paragraph at lines 1082--1084
+Overfull \hbox (30.9369pt too wide) in paragraph at lines 1079--1081
 \T1/pcr/m/n/8 std[]::chrono[]::duration$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 epiworl
 d[]_[]double,std[]::micro$\OML/cmm/m/it/8 >$ []$<$ \T1/pcr/m/n/8 TSeq $\OML/cmm
 /m/it/8 >$[]\T1/pcr/m/n/8 ::time[]_[]elapsed [protected] 
@@ -1836,18 +1836,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model__coll__graph.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >
-<class_model__coll__graph.pdf, id=4439, 163.61125pt x 167.62625pt>
+<class_model__coll__graph.pdf, id=4437, 163.61125pt x 167.62625pt>
 File: class_model__coll__graph.pdf Graphic file (type pdf)
 <use class_model__coll__graph.pdf>
 Package pdftex.def Info: class_model__coll__graph.pdf  used on input line 19.
 (pdftex.def)             Requested size: 163.0pt x 166.99916pt.
  [94] [95] [96] [97]
-Underfull \hbox (badness 10000) detected at line 346
+Underfull \hbox (badness 10000) detected at line 343
 [][][]
  []
 
 
-Underfull \hbox (badness 808) in paragraph at lines 351--354
+Underfull \hbox (badness 808) in paragraph at lines 348--351
 [][] \T1/phv/m/n/10 void \T1/phv/b/n/10 set[]_[]rewire[]_[]fun \T1/phv/m/n/10 (
 std[]::function$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 void(std[]::vector$\OML/cmm/
 m/it/10 <$ []$<$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/10 >$$>$ $\OMS/cmsy/m/n/10 
@@ -1856,7 +1856,7 @@ m/it/10 <$ []$<$ \T1/phv/m/n/10 TSeq $\OML/cmm/m/it/10 >$$>$ $\OMS/cmsy/m/n/10
  []
 
 [98]
-Underfull \hbox (badness 10000) detected at line 391
+Underfull \hbox (badness 10000) detected at line 388
 [][][]
  []
 
@@ -1865,13 +1865,13 @@ Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
 []\T1/phv/m/n/10 proportions[] 
  []
 
-[99]
-Underfull \hbox (badness 10000) detected at line 454
+
+Underfull \hbox (badness 10000) detected at line 451
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 521
+[99]
+Underfull \hbox (badness 10000) detected at line 518
 [][][]
  []
 
@@ -1908,7 +1908,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_diff_net_
 _inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
 >
-<classepiworld_1_1epimodels_1_1_model_diff_net__inherit__graph.pdf, id=4889, 19
+<classepiworld_1_1epimodels_1_1_model_diff_net__inherit__graph.pdf, id=4885, 19
 7.73875pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_diff_net__inherit__graph.pdf Graphic
  file (type pdf)
@@ -1922,7 +1922,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_diff_net_
 _coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
 >
-<classepiworld_1_1epimodels_1_1_model_diff_net__coll__graph.pdf, id=4904, 197.7
+<classepiworld_1_1epimodels_1_1_model_diff_net__coll__graph.pdf, id=4900, 197.7
 3875pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_diff_net__coll__graph.pdf Graphic fi
 le (type pdf)
@@ -1948,7 +1948,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_diff_net__inherit__graph.pdf>
-<class_model_diff_net__inherit__graph.pdf, id=4935, 193.72375pt x 156.585pt>
+<class_model_diff_net__inherit__graph.pdf, id=4931, 193.72375pt x 156.585pt>
 File: class_model_diff_net__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_diff_net__inherit__graph.pdf>
 Package pdftex.def Info: class_model_diff_net__inherit__graph.pdf  used on inpu
@@ -1959,7 +1959,7 @@ t line 19.
 pdfTeX warning: pdflatex (file ./class_model_diff_net__coll__graph.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<class_model_diff_net__coll__graph.pdf, id=4964, 193.72375pt x 156.585pt>
+<class_model_diff_net__coll__graph.pdf, id=4960, 193.72375pt x 156.585pt>
 File: class_model_diff_net__coll__graph.pdf Graphic file (type pdf)
 <use class_model_diff_net__coll__graph.pdf>
 Package pdftex.def Info: class_model_diff_net__coll__graph.pdf  used on input l
@@ -1983,7 +1983,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf, id=5000, 190
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf, id=4995, 190
 .7125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -1997,7 +1997,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf, id=5008, 190.71
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf, id=5004, 190.71
 25pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -2032,7 +2032,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r__inherit__graph.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r__inherit__graph.pdf, id=5064, 190.7125pt x 156.585pt>
+<class_model_s_e_i_r__inherit__graph.pdf, id=5060, 190.7125pt x 156.585pt>
 File: class_model_s_e_i_r__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r__inherit__graph.pdf  used on input
@@ -2043,7 +2043,7 @@ Package pdftex.def Info: class_model_s_e_i_r__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r__coll__graph.pdf, id=5072, 190.7125pt x 156.585pt>
+<class_model_s_e_i_r__coll__graph.pdf, id=5068, 190.7125pt x 156.585pt>
 File: class_model_s_e_i_r__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r__coll__graph.pdf  used on input li
@@ -2078,7 +2078,7 @@ _o_n_n__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group inclu
 ded in a single page
 >
 <classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=5
-119, 219.82124pt x 178.6675pt>
+115, 219.82124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf 
 Graphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
@@ -2092,7 +2092,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r_c
 _o_n_n__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=5134
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=5130
 , 219.82124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_c_o_n_n__coll__graph.pdf Gra
 phic file (type pdf)
@@ -2127,7 +2127,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_c_o_n_n__inherit__graph.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=5186, 214.8025pt x 167.626
+<class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf, id=5182, 214.8025pt x 167.626
 25pt>
 File: class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_c_o_n_n__inherit__graph.pdf>
@@ -2139,7 +2139,7 @@ on input line 10.
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_c_o_n_n__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=5200, 214.8025pt x 167.62625p
+<class_model_s_e_i_r_c_o_n_n__coll__graph.pdf, id=5196, 214.8025pt x 167.62625p
 t>
 File: class_model_s_e_i_r_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_c_o_n_n__coll__graph.pdf>
@@ -2174,7 +2174,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r_d
 __inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__inherit__graph.pdf, id=5254, 1
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__inherit__graph.pdf, id=5250, 1
 96.735pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__inherit__graph.pdf Graphi
 c file (type pdf)
@@ -2188,7 +2188,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r_d
 __coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__coll__graph.pdf, id=5268, 196.
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__coll__graph.pdf, id=5264, 196.
 735pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_d__coll__graph.pdf Graphic f
 ile (type pdf)
@@ -2218,7 +2218,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_d__inherit__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_d__inherit__graph.pdf, id=5323, 192.72pt x 156.585pt>
+<class_model_s_e_i_r_d__inherit__graph.pdf, id=5319, 192.72pt x 156.585pt>
 File: class_model_s_e_i_r_d__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_d__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r_d__inherit__graph.pdf  used on inp
@@ -2229,7 +2229,7 @@ ut line 19.
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_d__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_d__coll__graph.pdf, id=5331, 192.72pt x 156.585pt>
+<class_model_s_e_i_r_d__coll__graph.pdf, id=5327, 192.72pt x 156.585pt>
 File: class_model_s_e_i_r_d__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_d__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_e_i_r_d__coll__graph.pdf  used on input 
@@ -2260,7 +2260,7 @@ _c_o_n_n__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
 >
 <classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__inherit__graph.pdf, id
-=5386, 226.8475pt x 178.6675pt>
+=5382, 226.8475pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__inherit__graph.pd
 f Graphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__inherit__graph.pdf
@@ -2275,7 +2275,7 @@ _c_o_n_n__coll__graph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >
 <classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf, id=53
-94, 226.8475pt x 178.6675pt>
+90, 226.8475pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf G
 raphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf>
@@ -2316,7 +2316,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_d_c_o_n_n__inherit__graph.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_d_c_o_n_n__inherit__graph.pdf, id=5454, 221.82875pt x 167.
+<class_model_s_e_i_r_d_c_o_n_n__inherit__graph.pdf, id=5450, 221.82875pt x 167.
 62625pt>
 File: class_model_s_e_i_r_d_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 
@@ -2329,7 +2329,7 @@ d on input line 10.
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf, id=5462, 221.82875pt x 167.626
+<class_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf, id=5458, 221.82875pt x 167.626
 25pt>
 File: class_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_d_c_o_n_n__coll__graph.pdf>
@@ -2372,7 +2372,7 @@ ixing__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >
 <classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__inherit__graph.pdf, id=55
-23, 217.81375pt x 178.6675pt>
+19, 217.81375pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__inherit__graph.pdf G
 raphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__inherit__graph.pdf>
@@ -2385,7 +2385,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_e_i_r_m
 ixing__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included 
 in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__coll__graph.pdf, id=5531,
+<classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__coll__graph.pdf, id=5527,
  217.81375pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_e_i_r_mixing__coll__graph.pdf Grap
 hic file (type pdf)
@@ -2420,7 +2420,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_mixing__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_mixing__inherit__graph.pdf, id=5613, 213.79875pt x 167.626
+<class_model_s_e_i_r_mixing__inherit__graph.pdf, id=5609, 213.79875pt x 167.626
 25pt>
 File: class_model_s_e_i_r_mixing__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_mixing__inherit__graph.pdf>
@@ -2432,7 +2432,7 @@ n input line 10.
 pdfTeX warning: pdflatex (file ./class_model_s_e_i_r_mixing__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_e_i_r_mixing__coll__graph.pdf, id=5621, 213.79875pt x 167.62625p
+<class_model_s_e_i_r_mixing__coll__graph.pdf, id=5617, 213.79875pt x 167.62625p
 t>
 File: class_model_s_e_i_r_mixing__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_e_i_r_mixing__coll__graph.pdf>
@@ -2467,7 +2467,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r__in
 herit__graph.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf, id=5702, 190.7
+<classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf, id=5698, 190.7
 125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r__inherit__graph.pdf Graphic fi
 le (type pdf)
@@ -2481,7 +2481,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r__co
 ll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf, id=5710, 190.7125
+<classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf, id=5706, 190.7125
 pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r__coll__graph.pdf Graphic file 
 (type pdf)
@@ -2512,7 +2512,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_r__inherit__graph.pdf>
-<class_model_s_i_r__inherit__graph.pdf, id=5735, 190.7125pt x 156.585pt>
+<class_model_s_i_r__inherit__graph.pdf, id=5731, 190.7125pt x 156.585pt>
 File: class_model_s_i_r__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r__inherit__graph.pdf  used on input l
@@ -2523,7 +2523,7 @@ ine 19.
 pdfTeX warning: pdflatex (file ./class_model_s_i_r__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r__coll__graph.pdf, id=5753, 190.7125pt x 156.585pt>
+<class_model_s_i_r__coll__graph.pdf, id=5749, 190.7125pt x 156.585pt>
 File: class_model_s_i_r__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r__coll__graph.pdf  used on input line
@@ -2552,8 +2552,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=578
-0, 213.79875pt x 178.6675pt>
+<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=577
+6, 213.79875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf Gr
 aphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__inherit__graph.pdf>
@@ -2567,7 +2567,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_c_o
 _n_n__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included i
 n a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf, id=5794, 
+<classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf, id=5790, 
 213.79875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n__coll__graph.pdf Graph
 ic file (type pdf)
@@ -2607,7 +2607,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_c_o_n_n__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=5854, 208.78pt x 167.62625pt
+<class_model_s_i_r_c_o_n_n__inherit__graph.pdf, id=5850, 208.78pt x 167.62625pt
 >
 File: class_model_s_i_r_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_c_o_n_n__inherit__graph.pdf>
@@ -2619,7 +2619,7 @@ Package pdftex.def Info: class_model_s_i_r_c_o_n_n__inherit__graph.pdf  used on
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_c_o_n_n__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_c_o_n_n__coll__graph.pdf, id=5862, 208.78pt x 167.62625pt>
+<class_model_s_i_r_c_o_n_n__coll__graph.pdf, id=5858, 208.78pt x 167.62625pt>
 File: class_model_s_i_r_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_c_o_n_n__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_c_o_n_n__coll__graph.pdf  used on in
@@ -2662,7 +2662,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_d__
 inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_d__inherit__graph.pdf, id=5922, 190
+<classepiworld_1_1epimodels_1_1_model_s_i_r_d__inherit__graph.pdf, id=5918, 190
 .7125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_d__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -2676,7 +2676,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_d__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_d__coll__graph.pdf, id=5930, 190.71
+<classepiworld_1_1epimodels_1_1_model_s_i_r_d__coll__graph.pdf, id=5926, 190.71
 25pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_d__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -2707,7 +2707,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_r_d__inherit__graph.pdf>
-<class_model_s_i_r_d__inherit__graph.pdf, id=5967, 190.7125pt x 156.585pt>
+<class_model_s_i_r_d__inherit__graph.pdf, id=5963, 190.7125pt x 156.585pt>
 File: class_model_s_i_r_d__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_d__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_d__inherit__graph.pdf  used on input
@@ -2718,7 +2718,7 @@ Package pdftex.def Info: class_model_s_i_r_d__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_d__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_d__coll__graph.pdf, id=5981, 190.7125pt x 156.585pt>
+<class_model_s_i_r_d__coll__graph.pdf, id=5977, 190.7125pt x 156.585pt>
 File: class_model_s_i_r_d__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_d__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_d__coll__graph.pdf  used on input li
@@ -2753,7 +2753,7 @@ _o_n_n__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group inclu
 ded in a single page
 >
 <classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__inherit__graph.pdf, id=6
-019, 220.825pt x 178.6675pt>
+015, 220.825pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__inherit__graph.pdf 
 Graphic file (type pdf)
 <use classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__inherit__graph.pdf>
@@ -2766,7 +2766,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_d_c
 _o_n_n__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__coll__graph.pdf, id=6027
+<classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__coll__graph.pdf, id=6023
 , 220.825pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_d_c_o_n_n__coll__graph.pdf Gra
 phic file (type pdf)
@@ -2796,7 +2796,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_d_c_o_n_n__inherit__graph.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_d_c_o_n_n__inherit__graph.pdf, id=6073, 215.80624pt x 167.62
+<class_model_s_i_r_d_c_o_n_n__inherit__graph.pdf, id=6069, 215.80624pt x 167.62
 625pt>
 File: class_model_s_i_r_d_c_o_n_n__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_d_c_o_n_n__inherit__graph.pdf>
@@ -2808,7 +2808,7 @@ on input line 10.
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_d_c_o_n_n__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_d_c_o_n_n__coll__graph.pdf, id=6086, 215.80624pt x 167.62625
+<class_model_s_i_r_d_c_o_n_n__coll__graph.pdf, id=6082, 215.80624pt x 167.62625
 pt>
 File: class_model_s_i_r_d_c_o_n_n__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_d_c_o_n_n__coll__graph.pdf>
@@ -2838,7 +2838,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_log
 it__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included 
 in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_logit__inherit__graph.pdf, id=6132,
+<classepiworld_1_1epimodels_1_1_model_s_i_r_logit__inherit__graph.pdf, id=6128,
  205.76875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_logit__inherit__graph.pdf Grap
 hic file (type pdf)
@@ -2852,7 +2852,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_log
 it__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_logit__coll__graph.pdf, id=6140, 20
+<classepiworld_1_1epimodels_1_1_model_s_i_r_logit__coll__graph.pdf, id=6136, 20
 5.76875pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_logit__coll__graph.pdf Graphic
  file (type pdf)
@@ -2882,7 +2882,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_logit__inherit__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_logit__inherit__graph.pdf, id=6202, 201.75375pt x 167.62625p
+<class_model_s_i_r_logit__inherit__graph.pdf, id=6198, 201.75375pt x 167.62625p
 t>
 File: class_model_s_i_r_logit__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_logit__inherit__graph.pdf>
@@ -2894,7 +2894,7 @@ nput line 19.
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_logit__coll__graph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_logit__coll__graph.pdf, id=6210, 201.75375pt x 167.62625pt>
+<class_model_s_i_r_logit__coll__graph.pdf, id=6206, 201.75375pt x 167.62625pt>
 File: class_model_s_i_r_logit__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_logit__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_r_logit__coll__graph.pdf  used on inpu
@@ -2923,7 +2923,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_mix
 ing__inherit__graph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__inherit__graph.pdf, id=6264
+<classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__inherit__graph.pdf, id=6260
 , 211.79124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__inherit__graph.pdf Gra
 phic file (type pdf)
@@ -2937,7 +2937,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_r_mix
 ing__coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__coll__graph.pdf, id=6272, 2
+<classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__coll__graph.pdf, id=6268, 2
 11.79124pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_r_mixing__coll__graph.pdf Graphi
 c file (type pdf)
@@ -2972,7 +2972,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_mixing__inherit__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_mixing__inherit__graph.pdf, id=6345, 207.77625pt x 167.62625
+<class_model_s_i_r_mixing__inherit__graph.pdf, id=6341, 207.77625pt x 167.62625
 pt>
 File: class_model_s_i_r_mixing__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_mixing__inherit__graph.pdf>
@@ -2984,7 +2984,7 @@ input line 10.
 pdfTeX warning: pdflatex (file ./class_model_s_i_r_mixing__coll__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_r_mixing__coll__graph.pdf, id=6359, 207.77625pt x 167.62625pt>
+<class_model_s_i_r_mixing__coll__graph.pdf, id=6355, 207.77625pt x 167.62625pt>
 
 File: class_model_s_i_r_mixing__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_r_mixing__coll__graph.pdf>
@@ -3023,7 +3023,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_s__in
 herit__graph.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf, id=6435, 190.7
+<classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf, id=6431, 190.7
 125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s__inherit__graph.pdf Graphic fi
 le (type pdf)
@@ -3037,7 +3037,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_s__co
 ll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf, id=6448, 190.7125
+<classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf, id=6444, 190.7125
 pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s__coll__graph.pdf Graphic file 
 (type pdf)
@@ -3063,7 +3063,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_s__inherit__graph.pdf>
-<class_model_s_i_s__inherit__graph.pdf, id=6473, 190.7125pt x 156.585pt>
+<class_model_s_i_s__inherit__graph.pdf, id=6468, 190.7125pt x 156.585pt>
 File: class_model_s_i_s__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s__inherit__graph.pdf  used on input l
@@ -3074,7 +3074,7 @@ ine 19.
 pdfTeX warning: pdflatex (file ./class_model_s_i_s__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_s__coll__graph.pdf, id=6481, 190.7125pt x 156.585pt>
+<class_model_s_i_s__coll__graph.pdf, id=6477, 190.7125pt x 156.585pt>
 File: class_model_s_i_s__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s__coll__graph.pdf  used on input line
@@ -3098,7 +3098,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_i_s_d__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_i_s_d__inherit__graph.pdf, id=6498, 190
+<classepiworld_1_1epimodels_1_1_model_s_i_s_d__inherit__graph.pdf, id=6494, 190
 .7125pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s_d__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -3112,7 +3112,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_i_s_d__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_i_s_d__coll__graph.pdf, id=6520, 190.71
+<classepiworld_1_1epimodels_1_1_model_s_i_s_d__coll__graph.pdf, id=6516, 190.71
 25pt x 167.62625pt>
 File: classepiworld_1_1epimodels_1_1_model_s_i_s_d__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -3138,7 +3138,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_i_s_d__inherit__graph.pdf>
-<class_model_s_i_s_d__inherit__graph.pdf, id=6541, 190.7125pt x 156.585pt>
+<class_model_s_i_s_d__inherit__graph.pdf, id=6537, 190.7125pt x 156.585pt>
 File: class_model_s_i_s_d__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s_d__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s_d__inherit__graph.pdf  used on input
@@ -3149,7 +3149,7 @@ Package pdftex.def Info: class_model_s_i_s_d__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_i_s_d__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_i_s_d__coll__graph.pdf, id=6549, 190.7125pt x 156.585pt>
+<class_model_s_i_s_d__coll__graph.pdf, id=6545, 190.7125pt x 156.585pt>
 File: class_model_s_i_s_d__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_i_s_d__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_i_s_d__coll__graph.pdf  used on input li
@@ -3173,7 +3173,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf>
-<classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf, id=6566, 195
+<classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf, id=6562, 195
 .73125pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_u_r_v__inherit__graph.pdf Graphic 
 file (type pdf)
@@ -3187,7 +3187,7 @@ pdfTeX warning: pdflatex (file ./classepiworld_1_1epimodels_1_1_model_s_u_r_v__
 coll__graph.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >
-<classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf, id=6574, 195.73
+<classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf, id=6570, 195.73
 125pt x 178.6675pt>
 File: classepiworld_1_1epimodels_1_1_model_s_u_r_v__coll__graph.pdf Graphic fil
 e (type pdf)
@@ -3229,7 +3229,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
  <./class_model_s_u_r_v__inherit__graph.pdf>
-<class_model_s_u_r_v__inherit__graph.pdf, id=6605, 190.7125pt x 167.62625pt>
+<class_model_s_u_r_v__inherit__graph.pdf, id=6601, 190.7125pt x 167.62625pt>
 File: class_model_s_u_r_v__inherit__graph.pdf Graphic file (type pdf)
 <use class_model_s_u_r_v__inherit__graph.pdf>
 Package pdftex.def Info: class_model_s_u_r_v__inherit__graph.pdf  used on input
@@ -3240,7 +3240,7 @@ Package pdftex.def Info: class_model_s_u_r_v__inherit__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./class_model_s_u_r_v__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<class_model_s_u_r_v__coll__graph.pdf, id=6613, 190.7125pt x 167.62625pt>
+<class_model_s_u_r_v__coll__graph.pdf, id=6609, 190.7125pt x 167.62625pt>
 File: class_model_s_u_r_v__coll__graph.pdf Graphic file (type pdf)
 <use class_model_s_u_r_v__coll__graph.pdf>
 Package pdftex.def Info: class_model_s_u_r_v__coll__graph.pdf  used on input li
@@ -3679,7 +3679,7 @@ Chapter 16.
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__incl.pdf, id=7281, 229.85875pt x 167.62625pt>
+<agent-meat-state_8hpp__incl.pdf, id=7277, 229.85875pt x 167.62625pt>
 File: agent-meat-state_8hpp__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
@@ -3690,7 +3690,7 @@ Package pdftex.def Info: agent-meat-state_8hpp__incl.pdf  used on input line 14
 pdfTeX warning: pdflatex (file ./agent-meat-state_8hpp__dep__incl.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<agent-meat-state_8hpp__dep__incl.pdf, id=7289, 223.83624pt x 223.83624pt>
+<agent-meat-state_8hpp__dep__incl.pdf, id=7285, 223.83624pt x 223.83624pt>
 File: agent-meat-state_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use agent-meat-state_8hpp__dep__incl.pdf>
 Package pdftex.def Info: agent-meat-state_8hpp__dep__incl.pdf  used on input li
@@ -3843,10 +3843,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22100 strings out of 480478
- 462289 string characters out of 5905924
- 718169 words of memory out of 5000000
- 34928 multiletter control sequences out of 15000+600000
+ 22096 strings out of 480478
+ 462081 string characters out of 5905924
+ 718063 words of memory out of 5000000
+ 34926 multiletter control sequences out of 15000+600000
  603446 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,96p,1988b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3865,10 +3865,10 @@ b></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-
 dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/helvetic/uhvbo8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (229 pages, 1105447 bytes).
+Output written on refman.pdf (229 pages, 1105216 bytes).
 PDF statistics:
- 8349 PDF objects out of 8907 (max. 8388607)
- 7708 compressed objects within 78 object streams
- 2679 named destinations out of 2984 (max. 500000)
+ 8345 PDF objects out of 8907 (max. 8388607)
+ 7704 compressed objects within 78 object streams
+ 2677 named destinations out of 2984 (max. 500000)
  3614 words of extra memory for PDF output out of 10000 (max. 10000000)
 
