@@ -86,9 +86,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>add_agent</b> (<a cla
 <tr class="memitem:a893487bd738731c9620ff55f7020d055"><td class="memItemLeft" align="right" valign="top"><a id="a893487bd738731c9620ff55f7020d055"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_agent</b> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *p, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
 <tr class="separator:a893487bd738731c9620ff55f7020d055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67d0547c3d0a2e0f873e794f67146fc3"><td class="memItemLeft" align="right" valign="top"><a id="a67d0547c3d0a2e0f873e794f67146fc3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_agent</b> (size_t idx)</td></tr>
-<tr class="separator:a67d0547c3d0a2e0f873e794f67146fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2722bfcd89639e4918a8f53d89546b18"><td class="memItemLeft" align="right" valign="top"><a id="a2722bfcd89639e4918a8f53d89546b18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rm_agent</b> (size_t idx, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a2722bfcd89639e4918a8f53d89546b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3901491db07fc90aa3eeb8712888a7"><td class="memItemLeft" align="right" valign="top"><a id="a8c3901491db07fc90aa3eeb8712888a7"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const noexcept</td></tr>
 <tr class="separator:a8c3901491db07fc90aa3eeb8712888a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,9 +110,9 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; 
 <tr class="memitem:ab5fb3cce28cf0abaa1021a4e07976488"><td class="memItemLeft" align="right" valign="top"><a id="ab5fb3cce28cf0abaa1021a4e07976488"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; * &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
 <tr class="separator:ab5fb3cce28cf0abaa1021a4e07976488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac240a1f0d1f4f22b4be052163eda0456"><td class="memItemLeft" align="right" valign="top"><a id="ac240a1f0d1f4f22b4be052163eda0456"></a>
-<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t i)</td></tr>
-<tr class="separator:ac240a1f0d1f4f22b4be052163eda0456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8513d1056798e6cf34e5e703c65c8851"><td class="memItemLeft" align="right" valign="top"><a id="a8513d1056798e6cf34e5e703c65c8851"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t i)</td></tr>
+<tr class="separator:a8513d1056798e6cf34e5e703c65c8851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbd3cd347b31afde92f0fe8f8308984a"><td class="memItemLeft" align="right" valign="top"><a id="afbd3cd347b31afde92f0fe8f8308984a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> () const noexcept</td></tr>
 <tr class="separator:afbd3cd347b31afde92f0fe8f8308984a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,9 +143,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr><td colspan="2"><div class="groupHeader">Entity distribution</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These functions are used for distributing agents among entities. The idea is to have a flexible way of distributing agents among entities. </p>
 </div></td></tr>
-<tr class="memitem:aa305f726b293203247650deca73cfad0"><td class="memItemLeft" align="right" valign="top"><a id="aa305f726b293203247650deca73cfad0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>distribute</b> ()</td></tr>
-<tr class="separator:aa305f726b293203247650deca73cfad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6345fd403f89bb05dbe754afd8b2a2da"><td class="memItemLeft" align="right" valign="top"><a id="a6345fd403f89bb05dbe754afd8b2a2da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>distribute</b> (<a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *model)</td></tr>
+<tr class="separator:a6345fd403f89bb05dbe754afd8b2a2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59dadd7e2036910f9a5b0526b4e392c"><td class="memItemLeft" align="right" valign="top"><a id="ad59dadd7e2036910f9a5b0526b4e392c"></a>
 std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_agents</b> ()</td></tr>
 <tr class="separator:ad59dadd7e2036910f9a5b0526b4e392c"><td class="memSeparator" colspan="2">&#160;</td></tr>

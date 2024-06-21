@@ -23,10 +23,10 @@ Collaboration diagram for Model\+SEIRCONN$<$ TSeq $>$\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a30438ed783cd6ad854885b016209bc44}{Model\+SEIRCONN}} (\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&model, std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
+\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_a995ce6a24b286635bd594a793e2c8f77}{Model\+SEIRCONN}} (\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&model, const std\+::string \&vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
 \begin{DoxyCompactList}\small\item\em Template for a Susceptible-\/\+Exposed-\/\+Infected-\/\+Removed (SEIR) model. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_a28b109b60af6b9ad6e8d762ea09b4e8c}\label{class_model_s_e_i_r_c_o_n_n_a28b109b60af6b9ad6e8d762ea09b4e8c}} 
-{\bfseries Model\+SEIRCONN} (std\+::string vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
+\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_af64c256cfe324f0b14da7a3ac7ea6cab}\label{class_model_s_e_i_r_c_o_n_n_af64c256cfe324f0b14da7a3ac7ea6cab}} 
+{\bfseries Model\+SEIRCONN} (const std\+::string \&vname, epiworld\+\_\+fast\+\_\+uint n, epiworld\+\_\+double prevalence, epiworld\+\_\+double contact\+\_\+rate, epiworld\+\_\+double transmission\+\_\+rate, epiworld\+\_\+double avg\+\_\+incubation\+\_\+days, epiworld\+\_\+double recovery\+\_\+rate)
 \item 
 \mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_ade06c88a42f9e4096f75c4f38432e2f0}\label{class_model_s_e_i_r_c_o_n_n_ade06c88a42f9e4096f75c4f38432e2f0}} 
 \mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \& \mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n_ade06c88a42f9e4096f75c4f38432e2f0}{run}} (epiworld\+\_\+fast\+\_\+uint ndays, int seed=-\/1)
@@ -59,12 +59,12 @@ static const int {\bfseries RECOVERED} = 3
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_a30438ed783cd6ad854885b016209bc44}\label{class_model_s_e_i_r_c_o_n_n_a30438ed783cd6ad854885b016209bc44}} 
+\mbox{\Hypertarget{class_model_s_e_i_r_c_o_n_n_a995ce6a24b286635bd594a793e2c8f77}\label{class_model_s_e_i_r_c_o_n_n_a995ce6a24b286635bd594a793e2c8f77}} 
 \index{ModelSEIRCONN$<$ TSeq $>$@{ModelSEIRCONN$<$ TSeq $>$}!ModelSEIRCONN@{ModelSEIRCONN}}
 \index{ModelSEIRCONN@{ModelSEIRCONN}!ModelSEIRCONN$<$ TSeq $>$@{ModelSEIRCONN$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{ModelSEIRCONN()}{ModelSEIRCONN()}}
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
-\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&}]{model,  }\item[{std\+::string}]{vname,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{contact\+\_\+rate,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{avg\+\_\+incubation\+\_\+days,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$\+::\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_s_e_i_r_c_o_n_n}{Model\+SEIRCONN}}$<$ TSeq $>$ \&}]{model,  }\item[{const std\+::string \&}]{vname,  }\item[{epiworld\+\_\+fast\+\_\+uint}]{n,  }\item[{epiworld\+\_\+double}]{prevalence,  }\item[{epiworld\+\_\+double}]{contact\+\_\+rate,  }\item[{epiworld\+\_\+double}]{transmission\+\_\+rate,  }\item[{epiworld\+\_\+double}]{avg\+\_\+incubation\+\_\+days,  }\item[{epiworld\+\_\+double}]{recovery\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

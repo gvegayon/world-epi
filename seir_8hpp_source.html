@@ -87,7 +87,7 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_model_s_e_i_r.html">ModelSEIR</a>(</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_model_s_e_i_r.html">ModelSEIR&lt;TSeq&gt;</a> &amp; model,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::string vname,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> std::string &amp; vname,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        epiworld_double prevalence,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        epiworld_double transmission_rate,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        epiworld_double avg_incubation_days,</div>
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    );</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_model_s_e_i_r.html">ModelSEIR</a>(</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::string vname,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">const</span> std::string &amp; vname,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        epiworld_double prevalence,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        epiworld_double transmission_rate,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        epiworld_double avg_incubation_days,</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r.html">ModelSEIR&lt;TSeq&gt;::ModelSEIR</a>(</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_model_s_e_i_r.html">ModelSEIR&lt;TSeq&gt;</a> &amp; model,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">const</span> std::string &amp; vname,</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    epiworld_double prevalence,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    epiworld_double transmission_rate,</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    epiworld_double avg_incubation_days,</div>
@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq&gt;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_model_s_e_i_r.html">ModelSEIR&lt;TSeq&gt;::ModelSEIR</a>(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    std::string vname,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> std::string &amp; vname,</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    epiworld_double prevalence,</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    epiworld_double transmission_rate,</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    epiworld_double avg_incubation_days,</div>
@@ -217,9 +217,9 @@ $(function() {
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> model-bones.hpp:91</div></div>
 <div class="ttc" id="aclass_model_s_e_i_r_html"><div class="ttname"><a href="class_model_s_e_i_r.html">ModelSEIR</a></div><div class="ttdoc">Template for a Susceptible-Exposed-Infected-Removed (SEIR) model.</div><div class="ttdef"><b>Definition:</b> seir.hpp:16</div></div>
 <div class="ttc" id="aclass_model_s_e_i_r_html_a12d232b04bf988fa60ba3483d73e79b5"><div class="ttname"><a href="class_model_s_e_i_r.html#a12d232b04bf988fa60ba3483d73e79b5">ModelSEIR::initial_states</a></div><div class="ttdeci">ModelSEIR&lt; TSeq &gt; &amp; initial_states(std::vector&lt; double &gt; proportions_, std::vector&lt; int &gt; queue_={})</div><div class="ttdoc">Set up the initial states of the model.</div><div class="ttdef"><b>Definition:</b> seir.hpp:147</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13455</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13445</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6076</div></div>
-<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9915</div></div>
+<div class="ttc" id="aclassepiworld_1_1_virus_html"><div class="ttname"><a href="classepiworld_1_1_virus.html">epiworld::Virus</a></div><div class="ttdoc">Virus.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:9907</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

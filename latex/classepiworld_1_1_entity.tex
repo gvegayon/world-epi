@@ -11,8 +11,8 @@ void {\bfseries add\+\_\+agent} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent
 \mbox{\Hypertarget{classepiworld_1_1_entity_a893487bd738731c9620ff55f7020d055}\label{classepiworld_1_1_entity_a893487bd738731c9620ff55f7020d055}} 
 void {\bfseries add\+\_\+agent} (\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$p, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_entity_a67d0547c3d0a2e0f873e794f67146fc3}\label{classepiworld_1_1_entity_a67d0547c3d0a2e0f873e794f67146fc3}} 
-void {\bfseries rm\+\_\+agent} (size\+\_\+t idx)
+\mbox{\Hypertarget{classepiworld_1_1_entity_a2722bfcd89639e4918a8f53d89546b18}\label{classepiworld_1_1_entity_a2722bfcd89639e4918a8f53d89546b18}} 
+void {\bfseries rm\+\_\+agent} (size\+\_\+t idx, \mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_a8c3901491db07fc90aa3eeb8712888a7}\label{classepiworld_1_1_entity_a8c3901491db07fc90aa3eeb8712888a7}} 
 size\+\_\+t {\bfseries size} () const noexcept
@@ -35,8 +35,8 @@ std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $
 \mbox{\Hypertarget{classepiworld_1_1_entity_ab5fb3cce28cf0abaa1021a4e07976488}\label{classepiworld_1_1_entity_ab5fb3cce28cf0abaa1021a4e07976488}} 
 std\+::vector$<$ \mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$ $>$\+::const\+\_\+iterator {\bfseries end} () const
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_entity_ac240a1f0d1f4f22b4be052163eda0456}\label{classepiworld_1_1_entity_ac240a1f0d1f4f22b4be052163eda0456}} 
-\mbox{\hyperlink{classepiworld_1_1_agent}{Agent}}$<$ TSeq $>$ $\ast$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i)
+\mbox{\Hypertarget{classepiworld_1_1_entity_a8513d1056798e6cf34e5e703c65c8851}\label{classepiworld_1_1_entity_a8513d1056798e6cf34e5e703c65c8851}} 
+size\+\_\+t {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_afbd3cd347b31afde92f0fe8f8308984a}\label{classepiworld_1_1_entity_afbd3cd347b31afde92f0fe8f8308984a}} 
 int {\bfseries get\+\_\+id} () const noexcept
@@ -68,8 +68,8 @@ bool {\bfseries operator!=} (const \mbox{\hyperlink{classepiworld_1_1_entity}{En
 \begin{Indent}\textbf{ Entity distribution}\par
 {\em These functions are used for distributing agents among entities. The idea is to have a flexible way of distributing agents among entities. }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classepiworld_1_1_entity_aa305f726b293203247650deca73cfad0}\label{classepiworld_1_1_entity_aa305f726b293203247650deca73cfad0}} 
-void {\bfseries distribute} ()
+\mbox{\Hypertarget{classepiworld_1_1_entity_a6345fd403f89bb05dbe754afd8b2a2da}\label{classepiworld_1_1_entity_a6345fd403f89bb05dbe754afd8b2a2da}} 
+void {\bfseries distribute} (\mbox{\hyperlink{classepiworld_1_1_model}{Model}}$<$ TSeq $>$ $\ast$model)
 \item 
 \mbox{\Hypertarget{classepiworld_1_1_entity_ad59dadd7e2036910f9a5b0526b4e392c}\label{classepiworld_1_1_entity_ad59dadd7e2036910f9a5b0526b4e392c}} 
 std\+::vector$<$ size\+\_\+t $>$ \& {\bfseries get\+\_\+agents} ()
