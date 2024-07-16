@@ -51,11 +51,11 @@ void {\bfseries write\+\_\+data} (std\+::string fn\+\_\+virus\+\_\+info, std\+::
 void {\bfseries record\+\_\+transmission} (int i, int j, int virus, int i\+\_\+expo\+\_\+date)
 \item 
 \mbox{\Hypertarget{class_data_base_ace337931bf21b1bc080fbf6e374d5d1c}\label{class_data_base_ace337931bf21b1bc080fbf6e374d5d1c}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+viruses} () const
-\item 
+size\+\_\+t \mbox{\hyperlink{class_data_base_ace337931bf21b1bc080fbf6e374d5d1c}{get\+\_\+n\+\_\+viruses}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of viruses. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_data_base_a4e61509ecd31d16fa4f7b235c7989251}\label{class_data_base_a4e61509ecd31d16fa4f7b235c7989251}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+tools} () const
-\item 
+size\+\_\+t \mbox{\hyperlink{class_data_base_a4e61509ecd31d16fa4f7b235c7989251}{get\+\_\+n\+\_\+tools}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of tools. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_data_base_aa9eb9d5d0eb39102963b652a287afd8d}\label{class_data_base_aa9eb9d5d0eb39102963b652a287afd8d}} 
 void {\bfseries set\+\_\+user\+\_\+data} (std\+::vector$<$ std\+::string $>$ names)
 \item 
@@ -145,10 +145,10 @@ void {\bfseries reproductive\+\_\+number} (std\+::string fn) const
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_data_base_a17a16f7aa666f4852b40324cf89cd449}{generation\+\_\+time}} (std\+::vector$<$ int $>$ \&agent\+\_\+id, std\+::vector$<$ int $>$ \&virus\+\_\+id, std\+::vector$<$ int $>$ \&time, std\+::vector$<$ int $>$ \&gentime) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the generation time. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_data_base_a6e8274cb88f77ef8b4b6051b1941e09f}\label{class_data_base_a6e8274cb88f77ef8b4b6051b1941e09f}} 
-void {\bfseries generation\+\_\+time} (std\+::string fn) const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_data_base_a6e8274cb88f77ef8b4b6051b1941e09f}{generation\+\_\+time}} (std\+::string fn) const
+\begin{DoxyCompactList}\small\item\em Write the generation time to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -194,12 +194,16 @@ Statistical data about the process.
 {\footnotesize\ttfamily template$<$typename TSeq $>$ \\
 void \mbox{\hyperlink{class_data_base}{Data\+Base}}$<$ TSeq $>$\+::generation\+\_\+time (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{agent\+\_\+id,  }\item[{std\+::vector$<$ int $>$ \&}]{virus\+\_\+id,  }\item[{std\+::vector$<$ int $>$ \&}]{time,  }\item[{std\+::vector$<$ int $>$ \&}]{gentime }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Get the generation time. 
+
 Calculates the generating time 
 \begin{DoxyParams}{Parameters}
-{\em agent\+\_\+id,virus\+\_\+id,time,gentime} & vectors where to save the values agent\+\_\+id \\
+{\em agent\+\_\+id,virus\+\_\+id,time,gentime} & vectors where to save the values\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_data_base_a2b855969ae8aca805a8ee1713519c52d}\label{class_data_base_a2b855969ae8aca805a8ee1713519c52d}} 
+The generation time is the time between the infection of the source and the infection of the target. \mbox{\Hypertarget{class_data_base_a2b855969ae8aca805a8ee1713519c52d}\label{class_data_base_a2b855969ae8aca805a8ee1713519c52d}} 
 \index{DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}!get\_transmissions@{get\_transmissions}}
 \index{get\_transmissions@{get\_transmissions}!DataBase$<$ TSeq $>$@{DataBase$<$ TSeq $>$}}
 \doxysubsubsection{\texorpdfstring{get\_transmissions()}{get\_transmissions()}}

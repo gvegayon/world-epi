@@ -47,28 +47,28 @@
   \indexspace
 
   \item {DataBase$<$ TSeq $>$}, \hyperpage{55}
-    \subitem {generation\_time}, \hyperpage{57}
+    \subitem {generation\_time}, \hyperpage{58}
     \subitem {get\_transmissions}, \hyperpage{58}
     \subitem {operator==}, \hyperpage{58, 59}
     \subitem {record\_virus}, \hyperpage{59}
-    \subitem {reproductive\_number}, \hyperpage{59}
+    \subitem {reproductive\_number}, \hyperpage{60}
     \subitem {transition\_probability}, \hyperpage{60}
   \item {default\_rm\_entity}
     \subitem {Agent$<$ TSeq $>$}, \hyperpage{48}
     \subitem {Entity$<$ TSeq $>$}, \hyperpage{69}
     \subitem {epiworld::Agent$<$ TSeq $>$}, \hyperpage{52}
-    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{70}
+    \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{71}
 
   \indexspace
 
-  \item {Entities$<$ TSeq $>$}, \hyperpage{64}
+  \item {Entities$<$ TSeq $>$}, \hyperpage{65}
   \item {Entities\_const$<$ TSeq $>$}, \hyperpage{66}
   \item {Entity}
-    \subitem {Entity$<$ TSeq $>$}, \hyperpage{68}
+    \subitem {Entity$<$ TSeq $>$}, \hyperpage{69}
     \subitem {epiworld::Entity$<$ TSeq $>$}, \hyperpage{70}
   \item {Entity$<$ TSeq $>$}, \hyperpage{68}
     \subitem {default\_rm\_entity}, \hyperpage{69}
-    \subitem {Entity}, \hyperpage{68}
+    \subitem {Entity}, \hyperpage{69}
   \item {epiworld::AdjList}, \hyperpage{42}
     \subitem {AdjList}, \hyperpage{43}
     \subitem {read\_edgelist}, \hyperpage{43}
@@ -87,8 +87,8 @@
     \subitem {transition\_probability}, \hyperpage{64}
   \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{65}
   \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{67}
-  \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{69}
-    \subitem {default\_rm\_entity}, \hyperpage{70}
+  \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{70}
+    \subitem {default\_rm\_entity}, \hyperpage{71}
     \subitem {Entity}, \hyperpage{70}
   \item {epiworld::epimodels::ModelDiffNet$<$ TSeq $>$}, 
 		\hyperpage{109}
@@ -205,7 +205,7 @@
   \indexspace
 
   \item {generation\_time}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{57}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{58}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{62}
   \item {get\_n\_infected}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
@@ -409,7 +409,7 @@
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{59}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{63}
   \item {reproductive\_number}
-    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{59}
+    \subitem {DataBase$<$ TSeq $>$}, \hyperpage{60}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{64}
   \item {reset}
     \subitem {epiworld::epimodels::ModelSEIRCONN$<$ TSeq $>$}, 
