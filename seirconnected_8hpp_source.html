@@ -488,16 +488,16 @@ $(function() {
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="comment">// spend at least one day in the exposed state, and 1 day in the </span></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="comment">// infectious state before starting transmitting.</span></div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    std::vector&lt; double &gt; gen_times(</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        this_const-&gt;get_ndays(), 2.0 + days_exposed</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        this_const-&gt;get_ndays(), 1.0 + days_exposed</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        );</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        </div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordtype">double</span> p_c = this_const-&gt;par(<span class="stringliteral">&quot;Contact rate&quot;</span>)/this_const-&gt;size();</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordtype">double</span> p_i = this_const-&gt;par(<span class="stringliteral">&quot;Transmission rate&quot;</span>);</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">double</span> p_r = this_const-&gt;par(<span class="stringliteral">&quot;Recovery rate&quot;</span>);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordtype">double</span> p_i = this_const-&gt;par(<span class="stringliteral">&quot;Prob. Transmission&quot;</span>);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">double</span> p_r = this_const-&gt;par(<span class="stringliteral">&quot;Prob. Recovery&quot;</span>);</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; this_const-&gt;get_ndays(); ++i)</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    {</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        gen_times[i] = gen_int_mean(</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        gen_times[i] += gen_int_mean(</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            S[i],</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            p_c,</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            p_i,</div>
