@@ -122,10 +122,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_data</b> (std::
 void&#160;</td><td class="memItemRight" valign="bottom"><b>record_transmission</b> (int i, int j, int virus, int i_expo_date)</td></tr>
 <tr class="separator:ad4f17453e8aa41a2e5dcd3762390ecbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace337931bf21b1bc080fbf6e374d5d1c"><td class="memItemLeft" align="right" valign="top"><a id="ace337931bf21b1bc080fbf6e374d5d1c"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_viruses</b> () const</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#ace337931bf21b1bc080fbf6e374d5d1c">get_n_viruses</a> () const</td></tr>
+<tr class="memdesc:ace337931bf21b1bc080fbf6e374d5d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of viruses. <br /></td></tr>
 <tr class="separator:ace337931bf21b1bc080fbf6e374d5d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e61509ecd31d16fa4f7b235c7989251"><td class="memItemLeft" align="right" valign="top"><a id="a4e61509ecd31d16fa4f7b235c7989251"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_tools</b> () const</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a4e61509ecd31d16fa4f7b235c7989251">get_n_tools</a> () const</td></tr>
+<tr class="memdesc:a4e61509ecd31d16fa4f7b235c7989251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tools. <br /></td></tr>
 <tr class="separator:a4e61509ecd31d16fa4f7b235c7989251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9eb9d5d0eb39102963b652a287afd8d"><td class="memItemLeft" align="right" valign="top"><a id="aa9eb9d5d0eb39102963b652a287afd8d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_user_data</b> (std::vector&lt; std::string &gt; names)</td></tr>
@@ -204,9 +206,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reproductive_number</
 <tr class="separator:a24076459592eecd983344be203773770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a17a16f7aa666f4852b40324cf89cd449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a17a16f7aa666f4852b40324cf89cd449">generation_time</a> (std::vector&lt; int &gt; &amp;agent_id, std::vector&lt; int &gt; &amp;virus_id, std::vector&lt; int &gt; &amp;time, std::vector&lt; int &gt; &amp;gentime) const</td></tr>
+<tr class="memdesc:a17a16f7aa666f4852b40324cf89cd449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the generation time.  <a href="classepiworld_1_1_data_base.html#a17a16f7aa666f4852b40324cf89cd449">More...</a><br /></td></tr>
 <tr class="separator:a17a16f7aa666f4852b40324cf89cd449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e8274cb88f77ef8b4b6051b1941e09f"><td class="memItemLeft" align="right" valign="top"><a id="a6e8274cb88f77ef8b4b6051b1941e09f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>generation_time</b> (std::string fn) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_data_base.html#a6e8274cb88f77ef8b4b6051b1941e09f">generation_time</a> (std::string fn) const</td></tr>
+<tr class="memdesc:a6e8274cb88f77ef8b4b6051b1941e09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the generation time to a file. <br /></td></tr>
 <tr class="separator:a6e8274cb88f77ef8b4b6051b1941e09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -289,12 +293,15 @@ template&lt;typename TSeq &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the generation time. </p>
 <p>Calculates the generating time </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">agent_id,virus_id,time,gentime</td><td>vectors where to save the values agent_id </td></tr>
+    <tr><td class="paramname">agent_id,virus_id,time,gentime</td><td>vectors where to save the values</td></tr>
   </table>
   </dd>
 </dl>
+<p>The generation time is the time between the infection of the source and the infection of the target. </p>
 
 </div>
 </div>

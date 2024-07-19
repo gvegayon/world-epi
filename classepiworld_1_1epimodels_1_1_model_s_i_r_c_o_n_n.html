@@ -117,10 +117,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a875cc96ef9ea1cf2d398569b6efffd0b">get_n_infected</a> () const</td></tr>
 <tr class="memdesc:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the infected individuals.  <a href="classepiworld_1_1epimodels_1_1_model_s_i_r_c_o_n_n.html#a875cc96ef9ea1cf2d398569b6efffd0b">More...</a><br /></td></tr>
 <tr class="separator:a875cc96ef9ea1cf2d398569b6efffd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d10dda273cdcab539cb3e53d354505"><td class="memItemLeft" align="right" valign="top"><a id="ae3d10dda273cdcab539cb3e53d354505"></a>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>generation_time_expected</b> (int max_days=200, int max_contacts=200) const</td></tr>
+<tr class="separator:ae3d10dda273cdcab539cb3e53d354505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classepiworld_1_1_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classepiworld_1_1_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classepiworld_1_1_model.html">epiworld::Model&lt; EPI_DEFAULT_TSEQ &gt;</a></td></tr>
 <tr class="memitem:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a9a2d8f67ad467c6d5793a855d2314a39"></a>
 <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> ()</td></tr>
 <tr class="separator:a9a2d8f67ad467c6d5793a855d2314a39 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb7d364faeeddef77e9666fb658e657 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="afbb7d364faeeddef77e9666fb658e657"></a>
+const <a class="el" href="classepiworld_1_1_data_base.html">DataBase</a>&lt; EPI_DEFAULT_TSEQ &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_db</b> () const</td></tr>
+<tr class="separator:afbb7d364faeeddef77e9666fb658e657 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b5e55bf646a07c97488f222822bd734 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a7b5e55bf646a07c97488f222822bd734"></a>
 epiworld_double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (std::string pname)</td></tr>
 <tr class="separator:a7b5e55bf646a07c97488f222822bd734 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -426,9 +432,9 @@ epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>get_param<
 <tr class="memitem:ad158afc8437a71e4c187a2fa5f00e93d inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ad158afc8437a71e4c187a2fa5f00e93d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_param</b> (std::string pname, epiworld_double val)</td></tr>
 <tr class="separator:ad158afc8437a71e4c187a2fa5f00e93d inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5e71c658245167f80d44ca3859afc9 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ada5e71c658245167f80d44ca3859afc9"></a>
-epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (std::string pname)</td></tr>
-<tr class="separator:ada5e71c658245167f80d44ca3859afc9 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af135f7d7e2405befcc7dc9cac8e91e7f inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="af135f7d7e2405befcc7dc9cac8e91e7f"></a>
+epiworld_double&#160;</td><td class="memItemRight" valign="bottom"><b>par</b> (std::string pname) const</td></tr>
+<tr class="separator:af135f7d7e2405befcc7dc9cac8e91e7f inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc8d49825ecf57ac045a4c93e4d63924 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="adc8d49825ecf57ac045a4c93e4d63924"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepiworld_1_1_model.html#adc8d49825ecf57ac045a4c93e4d63924">set_user_data</a> (std::vector&lt; std::string &gt; names)</td></tr>
 <tr class="memdesc:adc8d49825ecf57ac045a4c93e4d63924 inherit pub_methods_classepiworld_1_1_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">[@ <br /></td></tr>

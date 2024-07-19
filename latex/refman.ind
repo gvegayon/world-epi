@@ -79,13 +79,13 @@
   \item {epiworld::AgentsSample$<$ TSeq $>$}, \hyperpage{54}
     \subitem {AgentsSample}, \hyperpage{55}
   \item {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{60}
-    \subitem {generation\_time}, \hyperpage{62}
+    \subitem {generation\_time}, \hyperpage{63}
     \subitem {get\_transmissions}, \hyperpage{63}
     \subitem {operator==}, \hyperpage{63}
-    \subitem {record\_virus}, \hyperpage{63}
+    \subitem {record\_virus}, \hyperpage{64}
     \subitem {reproductive\_number}, \hyperpage{64}
     \subitem {transition\_probability}, \hyperpage{64}
-  \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{65}
+  \item {epiworld::Entities$<$ TSeq $>$}, \hyperpage{66}
   \item {epiworld::Entities\_const$<$ TSeq $>$}, \hyperpage{67}
   \item {epiworld::Entity$<$ TSeq $>$}, \hyperpage{70}
     \subitem {default\_rm\_entity}, \hyperpage{71}
@@ -206,7 +206,7 @@
 
   \item {generation\_time}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{58}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{62}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{63}
   \item {get\_n\_infected}
     \subitem {epiworld::epimodels::ModelSIRCONN$<$ TSeq $>$}, 
 		\hyperpage{150}
@@ -407,7 +407,7 @@
     \subitem {epiworld::AdjList}, \hyperpage{43}
   \item {record\_virus}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{59}
-    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{63}
+    \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{64}
   \item {reproductive\_number}
     \subitem {DataBase$<$ TSeq $>$}, \hyperpage{60}
     \subitem {epiworld::DataBase$<$ TSeq $>$}, \hyperpage{64}
