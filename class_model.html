@@ -238,9 +238,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_backup</b> ()</td
 <tr class="memitem:a9cd759fcd96ff1500665f6009127bf6a"><td class="memItemLeft" align="right" valign="top"><a id="a9cd759fcd96ff1500665f6009127bf6a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (std::mt19937 &amp;eng)</td></tr>
 <tr class="separator:a9cd759fcd96ff1500665f6009127bf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa86964269d70d943c217c5e35e8c6382"><td class="memItemLeft" align="right" valign="top"><a id="aa86964269d70d943c217c5e35e8c6382"></a>
-std::mt19937 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
-<tr class="separator:aa86964269d70d943c217c5e35e8c6382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6533d13034b3b67da95dfa9281d9943"><td class="memItemLeft" align="right" valign="top"><a id="ab6533d13034b3b67da95dfa9281d9943"></a>
+std::shared_ptr&lt; std::mt19937 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
+<tr class="separator:ab6533d13034b3b67da95dfa9281d9943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81486b5ae62f4e9492082c98dca65e4"><td class="memItemLeft" align="right" valign="top"><a id="ac81486b5ae62f4e9492082c98dca65e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (size_t s)</td></tr>
 <tr class="separator:ac81486b5ae62f4e9492082c98dca65e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -636,9 +636,9 @@ std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; 
 <tr class="memitem:a337d978e14ca116b438b6916976ac868"><td class="memItemLeft" align="right" valign="top"><a id="a337d978e14ca116b438b6916976ac868"></a>
 std::vector&lt; <a class="el" href="class_entity.html">Entity</a>&lt; TSeq &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_backup</b> = {}</td></tr>
 <tr class="separator:a337d978e14ca116b438b6916976ac868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e2775dc7f107a5e6660bcb70f73108"><td class="memItemLeft" align="right" valign="top"><a id="ae5e2775dc7f107a5e6660bcb70f73108"></a>
-std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
-<tr class="separator:ae5e2775dc7f107a5e6660bcb70f73108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6290306f7de25aed287ec8c61392e5d"><td class="memItemLeft" align="right" valign="top"><a id="aa6290306f7de25aed287ec8c61392e5d"></a>
+std::shared_ptr&lt; std::mt19937 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b> = std::make_shared&lt; std::mt19937 &gt;()</td></tr>
+<tr class="separator:aa6290306f7de25aed287ec8c61392e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac57aa5428270d201ea4b75df1ef4f7a6"><td class="memItemLeft" align="right" valign="top">std::uniform_real_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>runifd</b></td></tr>
 <tr class="separator:ac57aa5428270d201ea4b75df1ef4f7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7545b52c050d063f7825f0486cc2043"><td class="memItemLeft" align="right" valign="top">std::normal_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>rnormd</b></td></tr>

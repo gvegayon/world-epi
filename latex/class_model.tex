@@ -158,8 +158,8 @@ void {\bfseries set\+\_\+backup} ()
 \mbox{\Hypertarget{class_model_a9cd759fcd96ff1500665f6009127bf6a}\label{class_model_a9cd759fcd96ff1500665f6009127bf6a}} 
 void {\bfseries set\+\_\+rand\+\_\+engine} (std\+::mt19937 \&eng)
 \item 
-\mbox{\Hypertarget{class_model_aa86964269d70d943c217c5e35e8c6382}\label{class_model_aa86964269d70d943c217c5e35e8c6382}} 
-std\+::mt19937 \& {\bfseries get\+\_\+rand\+\_\+endgine} ()
+\mbox{\Hypertarget{class_model_ab6533d13034b3b67da95dfa9281d9943}\label{class_model_ab6533d13034b3b67da95dfa9281d9943}} 
+std\+::shared\+\_\+ptr$<$ std\+::mt19937 $>$ \& {\bfseries get\+\_\+rand\+\_\+endgine} ()
 \item 
 \mbox{\Hypertarget{class_model_ac81486b5ae62f4e9492082c98dca65e4}\label{class_model_ac81486b5ae62f4e9492082c98dca65e4}} 
 void {\bfseries seed} (size\+\_\+t s)
@@ -589,8 +589,8 @@ std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfser
 \mbox{\Hypertarget{class_model_a337d978e14ca116b438b6916976ac868}\label{class_model_a337d978e14ca116b438b6916976ac868}} 
 std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}}$<$ TSeq $>$ $>$ {\bfseries entities\+\_\+backup} = \{\}
 \item 
-\mbox{\Hypertarget{class_model_ae5e2775dc7f107a5e6660bcb70f73108}\label{class_model_ae5e2775dc7f107a5e6660bcb70f73108}} 
-std\+::mt19937 {\bfseries engine}
+\mbox{\Hypertarget{class_model_aa6290306f7de25aed287ec8c61392e5d}\label{class_model_aa6290306f7de25aed287ec8c61392e5d}} 
+std\+::shared\+\_\+ptr$<$ std\+::mt19937 $>$ {\bfseries engine} = std\+::make\+\_\+shared$<$ std\+::mt19937 $>$()
 \item 
 std\+::uniform\+\_\+real\+\_\+distribution {\bfseries runifd}
 \item 
