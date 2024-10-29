@@ -5852,7 +5852,7 @@ $(function() {
 <div class="line"><a name="l06478"></a><span class="lineno"> 6478</span>&#160; </div>
 <div class="line"><a name="l06479"></a><span class="lineno"> 6479</span>&#160;    <span class="keywordtype">size_t</span> size() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l06480"></a><span class="lineno"> 6480</span>&#160; </div>
-<div class="line"><a name="l06488"></a><span class="lineno"> 6488</span>&#160;    <span class="keywordtype">void</span> set_rand_engine(std::mt19937 &amp; eng);</div>
+<div class="line"><a name="l06488"></a><span class="lineno"> 6488</span>&#160;    <span class="keywordtype">void</span> set_rand_engine(std::shared_ptr&lt; std::mt19937 &gt; &amp; eng);</div>
 <div class="line"><a name="l06489"></a><span class="lineno"> 6489</span>&#160;    std::shared_ptr&lt; std::mt19937 &gt; &amp; get_rand_endgine();</div>
 <div class="line"><a name="l06490"></a><span class="lineno"> 6490</span>&#160;    <span class="keywordtype">void</span> seed(<span class="keywordtype">size_t</span> s);</div>
 <div class="line"><a name="l06491"></a><span class="lineno"> 6491</span>&#160;    <span class="keywordtype">void</span> set_rand_norm(epiworld_double mean, epiworld_double sd);</div>
@@ -15537,7 +15537,7 @@ $(function() {
 <div class="line"><a name="l17031"></a><span class="lineno">17031</span>&#160; </div>
 <div class="line"><a name="l17032"></a><span class="lineno">17032</span>&#160;        <span class="comment">// How many will we find</span></div>
 <div class="line"><a name="l17033"></a><span class="lineno">17033</span>&#160;        std::binomial_distribution&lt;&gt; bdist(m-&gt;size(), m-&gt;par(<span class="stringliteral">&quot;Surveilance prob.&quot;</span>));</div>
-<div class="line"><a name="l17034"></a><span class="lineno">17034</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(m-&gt;get_rand_endgine());</div>
+<div class="line"><a name="l17034"></a><span class="lineno">17034</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(*m-&gt;get_rand_endgine());</div>
 <div class="line"><a name="l17035"></a><span class="lineno">17035</span>&#160; </div>
 <div class="line"><a name="l17036"></a><span class="lineno">17036</span>&#160;        <span class="keywordtype">int</span> to_go = nsampled + 1;</div>
 <div class="line"><a name="l17037"></a><span class="lineno">17037</span>&#160; </div>

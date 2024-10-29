@@ -257,7 +257,7 @@ $(function() {
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="comment">// How many will we find</span></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        std::binomial_distribution&lt;&gt; bdist(m-&gt;size(), m-&gt;par(<span class="stringliteral">&quot;Surveilance prob.&quot;</span>));</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(m-&gt;get_rand_endgine());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">int</span> nsampled = bdist(*m-&gt;get_rand_endgine());</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">int</span> to_go = nsampled + 1;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
