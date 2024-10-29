@@ -84,12 +84,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a7cfb90e5556c0fbe43cbba453e6a0f"><td class="memItemLeft" align="right" valign="top"><a id="a8a7cfb90e5556c0fbe43cbba453e6a0f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (std::vector&lt; epiworld_double &gt; param_init, size_t n_samples_, epiworld_double epsilon_)</td></tr>
 <tr class="separator:a8a7cfb90e5556c0fbe43cbba453e6a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a464459876b16628fdf35199b6e749da0"><td class="memItemLeft" align="right" valign="top"><a id="a464459876b16628fdf35199b6e749da0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LFMCMC</b> (TData &amp;observed_data_)</td></tr>
-<tr class="separator:a464459876b16628fdf35199b6e749da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613a25a931c0a536f014652bbdc42d92"><td class="memItemLeft" align="right" valign="top"><a id="a613a25a931c0a536f014652bbdc42d92"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_observed_data</b> (TData &amp;observed_data_)</td></tr>
-<tr class="separator:a613a25a931c0a536f014652bbdc42d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c117a9f7c65dda9dca567cfbc3b107"><td class="memItemLeft" align="right" valign="top"><a id="a07c117a9f7c65dda9dca567cfbc3b107"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LFMCMC</b> (const TData &amp;observed_data_)</td></tr>
+<tr class="separator:a07c117a9f7c65dda9dca567cfbc3b107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88127a86f9677c4f9cb30529f1e36ae7"><td class="memItemLeft" align="right" valign="top"><a id="a88127a86f9677c4f9cb30529f1e36ae7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_observed_data</b> (const TData &amp;observed_data_)</td></tr>
+<tr class="separator:a88127a86f9677c4f9cb30529f1e36ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736d4534764b7f9cbfcf8c158ac12491"><td class="memItemLeft" align="right" valign="top"><a id="a736d4534764b7f9cbfcf8c158ac12491"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_proposal_fun</b> (LFMCMCProposalFun&lt; TData &gt; fun)</td></tr>
 <tr class="separator:a736d4534764b7f9cbfcf8c158ac12491"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,12 +164,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </dd>
 </dl>
 </div></td></tr>
-<tr class="memitem:a00c0ccfbe011fd425bcbfa379ca3dcdb"><td class="memItemLeft" align="right" valign="top"><a id="a00c0ccfbe011fd425bcbfa379ca3dcdb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (std::mt19937 &amp;eng)</td></tr>
-<tr class="separator:a00c0ccfbe011fd425bcbfa379ca3dcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a68ab9639d2138aee317aaa2568eda"><td class="memItemLeft" align="right" valign="top"><a id="af0a68ab9639d2138aee317aaa2568eda"></a>
-std::mt19937 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
-<tr class="separator:af0a68ab9639d2138aee317aaa2568eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1550eb836d83eaa8f95452aa20188f"><td class="memItemLeft" align="right" valign="top"><a id="a0c1550eb836d83eaa8f95452aa20188f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (std::shared_ptr&lt; std::mt19937 &gt; &amp;eng)</td></tr>
+<tr class="separator:a0c1550eb836d83eaa8f95452aa20188f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbdb4b82ee3e2943eda4d7082673fa80"><td class="memItemLeft" align="right" valign="top"><a id="adbdb4b82ee3e2943eda4d7082673fa80"></a>
+std::shared_ptr&lt; std::mt19937 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
+<tr class="separator:adbdb4b82ee3e2943eda4d7082673fa80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b20fa3baaa5473ef414fcf316a8598c"><td class="memItemLeft" align="right" valign="top"><a id="a0b20fa3baaa5473ef414fcf316a8598c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (epiworld_fast_uint s)</td></tr>
 <tr class="separator:a0b20fa3baaa5473ef414fcf316a8598c"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -244,9 +244,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_backup</b> ()</td
 <tr class="memitem:a8d87fcc71abe84e341ea56a4e251cb08 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a8d87fcc71abe84e341ea56a4e251cb08"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rand_engine</b> (std::mt19937 &amp;eng)</td></tr>
 <tr class="separator:a8d87fcc71abe84e341ea56a4e251cb08 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa86964269d70d943c217c5e35e8c6382 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="aa86964269d70d943c217c5e35e8c6382"></a>
-std::mt19937 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
-<tr class="separator:aa86964269d70d943c217c5e35e8c6382 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6533d13034b3b67da95dfa9281d9943 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ab6533d13034b3b67da95dfa9281d9943"></a>
+std::shared_ptr&lt; std::mt19937 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_rand_endgine</b> ()</td></tr>
+<tr class="separator:ab6533d13034b3b67da95dfa9281d9943 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81486b5ae62f4e9492082c98dca65e4 inherit pub_methods_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac81486b5ae62f4e9492082c98dca65e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> (size_t s)</td></tr>
 <tr class="separator:ac81486b5ae62f4e9492082c98dca65e4 inherit pub_methods_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -580,9 +580,9 @@ std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt
 <tr class="memitem:a69c9f8223fb218ca0c5fa1c8ed77ac7d inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a69c9f8223fb218ca0c5fa1c8ed77ac7d"></a>
 std::vector&lt; <a class="el" href="classepiworld_1_1_entity.html">Entity</a>&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities_backup</b></td></tr>
 <tr class="separator:a69c9f8223fb218ca0c5fa1c8ed77ac7d inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3682697edb973e1d1961632d0eb09b95 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="a3682697edb973e1d1961632d0eb09b95"></a>
-std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
-<tr class="separator:a3682697edb973e1d1961632d0eb09b95 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad506bbfb3c758e01e8d543bc4489aaee inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ad506bbfb3c758e01e8d543bc4489aaee"></a>
+std::shared_ptr&lt; std::mt19937 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
+<tr class="separator:ad506bbfb3c758e01e8d543bc4489aaee inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e3cf369ccd0e3b7ab5f5d37ab8f8c7 inherit pro_attribs_classepiworld_1_1_model"><td class="memItemLeft" align="right" valign="top"><a id="ac6e3cf369ccd0e3b7ab5f5d37ab8f8c7"></a>
 std::uniform_real_distribution&#160;</td><td class="memItemRight" valign="bottom"><b>runifd</b></td></tr>
 <tr class="separator:ac6e3cf369ccd0e3b7ab5f5d37ab8f8c7 inherit pro_attribs_classepiworld_1_1_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -892,7 +892,7 @@ template&lt;typename TSeq  = int&gt; </div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="ttc" id="aclass_model_s_e_i_r_d_html"><div class="ttname"><a href="class_model_s_e_i_r_d.html">ModelSEIRD</a></div><div class="ttdoc">Template for a Susceptible-Exposed-Infected-Removed-Deceased (SEIRD) model.</div><div class="ttdef"><b>Definition:</b> seird.hpp:9</div></div>
-<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13643</div></div>
+<div class="ttc" id="aclassepiworld_1_1_agent_html"><div class="ttname"><a href="classepiworld_1_1_agent.html">epiworld::Agent</a></div><div class="ttdoc">Agent (agents)</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:13637</div></div>
 <div class="ttc" id="aclassepiworld_1_1_model_html"><div class="ttname"><a href="classepiworld_1_1_model.html">epiworld::Model</a></div><div class="ttdoc">Core class of epiworld.</div><div class="ttdef"><b>Definition:</b> epiworld.hpp:6290</div></div>
 </div><!-- fragment -->
 </div>
