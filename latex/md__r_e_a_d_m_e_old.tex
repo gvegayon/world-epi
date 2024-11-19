@@ -1,13 +1,13 @@
-\hypertarget{md__r_e_a_d_m_e_old_autotoc_md48}{}\doxysection{Disease dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md48}
+\hypertarget{md__r_e_a_d_m_e_old_autotoc_md50}{}\doxysection{Disease dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md50}
 Diseases continuously evolve in time. Changes in their genetic sequence make them more or less resistant to the particular version of the vaccine. Mutations also affect the transmissibility level and mortality rate of the disease. Using this approach allows making vaccination efficacy a function of compatibility between the variant and the vaccine.
 
-When an individual becomes infected, the disease accumulates mutations in the new host. Ultimately, there is no single version of the disease present in the model, but rather an infinite number of them, each slightly different from the other.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md49}{}\doxysection{Network dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md49}
-We can assume that the Population is organized in fully connected blocks for the first version of the model. Block sizes and the number of connections between blocks are Poisson random variables. Individuals interact with all the members of their blocks, and bridging individuals allow the disease to move across blocks.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md50}{}\doxysection{Contagion dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md50}
-The transmission of the disease will be governed by the number of vaccinated, infected, and recovered within each block. Transmission between blocks will be treated in the same way, although individuals bridging the block will only interact with others within the block and their direct connections across the blocks.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md51}{}\doxysection{Time dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md51}
+When an individual becomes infected, the disease accumulates mutations in the new host. Ultimately, there is no single version of the disease present in the model, but rather an infinite number of them, each slightly different from the other.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md51}{}\doxysection{Network dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md51}
+We can assume that the Population is organized in fully connected blocks for the first version of the model. Block sizes and the number of connections between blocks are Poisson random variables. Individuals interact with all the members of their blocks, and bridging individuals allow the disease to move across blocks.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md52}{}\doxysection{Contagion dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md52}
+The transmission of the disease will be governed by the number of vaccinated, infected, and recovered within each block. Transmission between blocks will be treated in the same way, although individuals bridging the block will only interact with others within the block and their direct connections across the blocks.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md53}{}\doxysection{Time dynamics}\label{md__r_e_a_d_m_e_old_autotoc_md53}
 Time dynamics has two components, how biology evolves and how agents react.
 
 The model develops as a continuous-\/time Markov process. Each block of individuals takes action at rates {\ttfamily L(i$\vert$N(i))} function of the local number of infections. This way, if ~\newline
-\hypertarget{md__r_e_a_d_m_e_old_autotoc_md52}{}\doxysection{Updating agent\textquotesingle{}s status}\label{md__r_e_a_d_m_e_old_autotoc_md52}
+\hypertarget{md__r_e_a_d_m_e_old_autotoc_md54}{}\doxysection{Updating agent\textquotesingle{}s status}\label{md__r_e_a_d_m_e_old_autotoc_md54}
 Like most other components, updating agents\textquotesingle{} states can be personalized. A naive approach allows agents to get infected with a single virus or stay as-\/is. The probability of this event is conditional on acquiring at most one virus. Since these are independent events, the conditional probability is computed as follows\+:
 
 
@@ -30,7 +30,7 @@ Where
 \end{DoxyCode}
 
 
-Furthermore, the (Variant, Person) pairs are treated independently.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md53}{}\doxysubsection{Other parameters}\label{md__r_e_a_d_m_e_old_autotoc_md53}
+Furthermore, the (Variant, Person) pairs are treated independently.\hypertarget{md__r_e_a_d_m_e_old_autotoc_md55}{}\doxysubsection{Other parameters}\label{md__r_e_a_d_m_e_old_autotoc_md55}
 
 \begin{DoxyItemize}
 \item Who did you get the infection from.

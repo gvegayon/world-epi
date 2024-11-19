@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af58114de37befaa5de5450e3d4414b22"><td class="memTemplParams" colspan="2">template&lt;typename TSeq &gt; </td></tr>
+<tr class="memitem:af58114de37befaa5de5450e3d4414b22"><td class="memTemplParams" colspan="2">template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </td></tr>
 <tr class="memitem:af58114de37befaa5de5450e3d4414b22"><td class="memTemplItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepiworld_1_1sampler.html#af58114de37befaa5de5450e3d4414b22">make_update_susceptible</a> (std::vector&lt; epiworld_fast_uint &gt; exclude={})</td></tr>
 <tr class="memdesc:af58114de37befaa5de5450e3d4414b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a function to sample from neighbors.  <a href="namespaceepiworld_1_1sampler.html#af58114de37befaa5de5450e3d4414b22">More...</a><br /></td></tr>
 <tr class="separator:af58114de37befaa5de5450e3d4414b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058e471163798e71719e9580b016692f"><td class="memTemplParams" colspan="2">template&lt;typename TSeq  = int&gt; </td></tr>
+<tr class="memitem:a058e471163798e71719e9580b016692f"><td class="memTemplParams" colspan="2">template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </td></tr>
 <tr class="memitem:a058e471163798e71719e9580b016692f"><td class="memTemplItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *(<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">make_sample_virus_neighbors</a> (std::vector&lt; epiworld_fast_uint &gt; exclude={})</td></tr>
 <tr class="memdesc:a058e471163798e71719e9580b016692f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a function to sample from neighbors.  <a href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">More...</a><br /></td></tr>
 <tr class="separator:a058e471163798e71719e9580b016692f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a021132a942bb59db17289b6454315b4e"><td class="memTemplParams" colspan="2">template&lt;typename TSeq  = int&gt; </td></tr>
+<tr class="memitem:a021132a942bb59db17289b6454315b4e"><td class="memTemplParams" colspan="2">template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </td></tr>
 <tr class="memitem:a021132a942bb59db17289b6454315b4e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classepiworld_1_1_virus.html">Virus</a>&lt; TSeq &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">sample_virus_single</a> (<a class="el" href="classepiworld_1_1_agent.html">Agent</a>&lt; TSeq &gt; *p, <a class="el" href="classepiworld_1_1_model.html">Model</a>&lt; TSeq &gt; *m)</td></tr>
 <tr class="memdesc:a021132a942bb59db17289b6454315b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from neighbors pool of viruses (at most one)  <a href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">More...</a><br /></td></tr>
 <tr class="separator:a021132a942bb59db17289b6454315b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,7 +100,7 @@ Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename TSeq  = int&gt; </div>
+template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -144,7 +144,7 @@ template&lt;typename TSeq  = int&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename TSeq &gt; </div>
+template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -188,7 +188,7 @@ template&lt;typename TSeq &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename TSeq  = int&gt; </div>
+template&lt;typename TSeq  = EPI_DEFAULT_TSEQ&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
