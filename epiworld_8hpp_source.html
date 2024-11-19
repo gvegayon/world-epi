@@ -556,7 +556,7 @@ $(function() {
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">    return false;</span></div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="comment">}</span></div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ, typename TDbl = epiworld_double &gt;</span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="comment">template&lt;typename TSeq, typename TDbl&gt;</span></div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="comment">inline int roulette(</span></div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="comment">    const std::vector&lt; TDbl &gt; &amp; probs,</span></div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="comment">    Model&lt;TSeq&gt; * m</span></div>
@@ -6782,7 +6782,7 @@ $(function() {
 <div class="line"><a name="l07661"></a><span class="lineno"> 7661</span>&#160;<span class="comment">inline epiworld_double &amp; Model&lt;TSeq&gt;::operator()(std::string pname) {</span></div>
 <div class="line"><a name="l07662"></a><span class="lineno"> 7662</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l07663"></a><span class="lineno"> 7663</span>&#160;<span class="comment">    if (parameters.find(pname) == parameters.end())</span></div>
-<div class="line"><a name="l07664"></a><span class="lineno"> 7664</span>&#160;<span class="comment">        throw std::range_error(&quot;The parameter &#39;&quot;+ pname + &quot;&#39; is not in the model.&quot;);</span></div>
+<div class="line"><a name="l07664"></a><span class="lineno"> 7664</span>&#160;<span class="comment">        throw std::range_error(&quot;The parameter &quot;+ pname + &quot;is not in the model.&quot;);</span></div>
 <div class="line"><a name="l07665"></a><span class="lineno"> 7665</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l07666"></a><span class="lineno"> 7666</span>&#160;<span class="comment">    return parameters[pname];</span></div>
 <div class="line"><a name="l07667"></a><span class="lineno"> 7667</span>&#160;<span class="comment"></span> </div>
@@ -11893,7 +11893,7 @@ $(function() {
 <div class="line"><a name="l13061"></a><span class="lineno">13061</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l13066"></a><span class="lineno"><a class="line" href="namespaceepiworld_1_1sampler.html">13066</a></span>&#160;<span class="comment">namespace sampler {</span></div>
 <div class="line"><a name="l13067"></a><span class="lineno">13067</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l13081"></a><span class="lineno">13081</span>&#160;<span class="comment">template&lt;typename TSeq = EPI_DEFAULT_TSEQ&gt;</span></div>
+<div class="line"><a name="l13081"></a><span class="lineno">13081</span>&#160;<span class="comment">template&lt;typename TSeq&gt;</span></div>
 <div class="line"><a name="l13082"></a><span class="lineno"><a class="line" href="namespaceepiworld_1_1sampler.html#af58114de37befaa5de5450e3d4414b22">13082</a></span>&#160;<span class="comment">inline std::function&lt;void(Agent&lt;TSeq&gt;*,Model&lt;TSeq&gt;*)&gt; make_update_susceptible(</span></div>
 <div class="line"><a name="l13083"></a><span class="lineno">13083</span>&#160;<span class="comment">    std::vector&lt; epiworld_fast_uint &gt; exclude = {}</span></div>
 <div class="line"><a name="l13084"></a><span class="lineno">13084</span>&#160;<span class="comment">    )</span></div>
@@ -12039,7 +12039,7 @@ $(function() {
 <div class="line"><a name="l13224"></a><span class="lineno">13224</span>&#160;    </div>
 <div class="line"><a name="l13225"></a><span class="lineno">13225</span>&#160;}</div>
 <div class="line"><a name="l13226"></a><span class="lineno">13226</span>&#160; </div>
-<div class="line"><a name="l13240"></a><span class="lineno">13240</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = EPI_DEFAULT_TSEQ&gt;</div>
+<div class="line"><a name="l13240"></a><span class="lineno">13240</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = <span class="keywordtype">int</span>&gt;</div>
 <div class="line"><a name="l13241"></a><span class="lineno"><a class="line" href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">13241</a></span>&#160;<span class="keyword">inline</span> std::function&lt;Virus&lt;TSeq&gt;*(<a class="code" href="classepiworld_1_1_agent.html">Agent&lt;TSeq&gt;</a>*,<a class="code" href="classepiworld_1_1_model.html">Model&lt;TSeq&gt;</a>*)&gt; <a class="code" href="namespaceepiworld_1_1sampler.html#a058e471163798e71719e9580b016692f">make_sample_virus_neighbors</a>(</div>
 <div class="line"><a name="l13242"></a><span class="lineno">13242</span>&#160;    std::vector&lt; epiworld_fast_uint &gt; exclude = {}</div>
 <div class="line"><a name="l13243"></a><span class="lineno">13243</span>&#160;)</div>
@@ -12191,7 +12191,7 @@ $(function() {
 <div class="line"><a name="l13389"></a><span class="lineno">13389</span>&#160; </div>
 <div class="line"><a name="l13390"></a><span class="lineno">13390</span>&#160;}</div>
 <div class="line"><a name="l13391"></a><span class="lineno">13391</span>&#160; </div>
-<div class="line"><a name="l13408"></a><span class="lineno">13408</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = EPI_DEFAULT_TSEQ&gt;</div>
+<div class="line"><a name="l13408"></a><span class="lineno">13408</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSeq = <span class="keywordtype">int</span>&gt;</div>
 <div class="line"><a name="l13409"></a><span class="lineno"><a class="line" href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">13409</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classepiworld_1_1_virus.html">Virus&lt;TSeq&gt;</a> * <a class="code" href="namespaceepiworld_1_1sampler.html#a021132a942bb59db17289b6454315b4e">sample_virus_single</a>(<a class="code" href="classepiworld_1_1_agent.html">Agent&lt;TSeq&gt;</a> * p, <a class="code" href="classepiworld_1_1_model.html">Model&lt;TSeq&gt;</a> * m)</div>
 <div class="line"><a name="l13410"></a><span class="lineno">13410</span>&#160;{</div>
 <div class="line"><a name="l13411"></a><span class="lineno">13411</span>&#160; </div>
