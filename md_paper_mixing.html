@@ -67,7 +67,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>George G. Vega Yon, Ph.D. 2024-04-25</p>
-<h1><a class="anchor" id="autotoc_md38"></a>
+<h1><a class="anchor" id="autotoc_md40"></a>
 Case 1: No grouping</h1>
 <p>We will look into the probability of drawing infected individuals to simplify the algorithm. There are $I$ infected individuals at any time in the simulation; thus, instead of drawing from $Bern(c/N, N)$, we will be drawing from $Bern(c/N, I)$. The next step is to check which infected individuals should be drawn. Let’s compare the distributions using the hypergeometric as an example:</p>
 <div class="fragment"><div class="line">set.seed(132)</div>
@@ -102,7 +102,7 @@ Case 1: No grouping</h1>
 </pre> <div class="fragment"><div class="line">plotter(sim_complex, sim_simple)</div>
 </div><!-- fragment --><p><img src="mixing_files/figure-commonmark/Simulation-2.png" alt="" class="inline"/></p>
 <p>These two approaches are equivalent, but the second one is more efficient from the computational perspective.</p>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 Case 2: Grouping</h1>
 <p>This explores the case when we have mixing across groups. The question is if we can replicate the effect at the group level.</p>
 <div class="fragment"><div class="line">set.seed(123133)</div>

@@ -759,7 +759,7 @@ $(function() {
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="keyword">inline</span> epiworld_double &amp; <a class="code" href="class_model.html">Model&lt;TSeq&gt;::operator()</a>(std::string pname) {</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> (parameters.find(pname) == parameters.end())</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;The parameter &quot;</span>+ pname + <span class="stringliteral">&quot;is not in the model.&quot;</span>);</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        <span class="keywordflow">throw</span> std::range_error(<span class="stringliteral">&quot;The parameter &#39;&quot;</span>+ pname + <span class="stringliteral">&quot;&#39; is not in the model.&quot;</span>);</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keywordflow">return</span> parameters[pname];</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
