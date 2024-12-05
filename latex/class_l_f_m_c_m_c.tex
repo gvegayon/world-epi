@@ -12,8 +12,8 @@ Likelihood-\/\+Free Markov Chain Monte Carlo.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_ada3ecbebd6f90f7b9191213f0bcb4408}\label{class_l_f_m_c_m_c_ada3ecbebd6f90f7b9191213f0bcb4408}} 
-void {\bfseries run} (std\+::vector$<$ epiworld\+\_\+double $>$ param\+\_\+init, size\+\_\+t n\+\_\+samples\+\_\+, epiworld\+\_\+double epsilon\+\_\+, int seed=-\/1)
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a0469bfac0250ce090c885caa638ee8bf}\label{class_l_f_m_c_m_c_a0469bfac0250ce090c885caa638ee8bf}} 
+void {\bfseries run} (std\+::vector$<$ epiworld\+\_\+double $>$ params\+\_\+init\+\_\+, size\+\_\+t n\+\_\+samples\+\_\+, epiworld\+\_\+double epsilon\+\_\+, int seed=-\/1)
 \item 
 \mbox{\Hypertarget{class_l_f_m_c_m_c_afb128cd212e1ba2d75602cb13b89ee34}\label{class_l_f_m_c_m_c_afb128cd212e1ba2d75602cb13b89ee34}} 
 {\bfseries LFMCMC} (const TData \&observed\+\_\+data\+\_\+)
@@ -33,44 +33,50 @@ void {\bfseries set\+\_\+summary\+\_\+fun} (LFMCMCSummary\+Fun$<$ TData $>$ fun)
 \mbox{\Hypertarget{class_l_f_m_c_m_c_a4b96f9837e8eddeca52524124438b6cd}\label{class_l_f_m_c_m_c_a4b96f9837e8eddeca52524124438b6cd}} 
 void {\bfseries set\+\_\+kernel\+\_\+fun} (LFMCMCKernel\+Fun$<$ TData $>$ fun)
 \item 
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a846c20d78aaf5b4b57e0e8a7892c2cfd}\label{class_l_f_m_c_m_c_a846c20d78aaf5b4b57e0e8a7892c2cfd}} 
+void {\bfseries set\+\_\+param\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\item 
+\mbox{\Hypertarget{class_l_f_m_c_m_c_af254f3cff785514c7e62c5ecbb19a534}\label{class_l_f_m_c_m_c_af254f3cff785514c7e62c5ecbb19a534}} 
+void {\bfseries set\+\_\+stat\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\item 
 \mbox{\Hypertarget{class_l_f_m_c_m_c_af91c9ef5701367e8ad752ebd2490fda7}\label{class_l_f_m_c_m_c_af91c9ef5701367e8ad752ebd2490fda7}} 
 size\+\_\+t {\bfseries get\+\_\+n\+\_\+samples} () const
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_aa7d4d3977188c058c7e519cbbc64ac71}\label{class_l_f_m_c_m_c_aa7d4d3977188c058c7e519cbbc64ac71}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+statistics} () const
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a3350d6939e34f3b0b2e285eb196821ef}\label{class_l_f_m_c_m_c_a3350d6939e34f3b0b2e285eb196821ef}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+stats} () const
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a4ce059ee3fd504d14099bcfe77da5984}\label{class_l_f_m_c_m_c_a4ce059ee3fd504d14099bcfe77da5984}} 
-size\+\_\+t {\bfseries get\+\_\+n\+\_\+parameters} () const
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a5a29ec4abc5fd7dc7f04394515fb0ae0}\label{class_l_f_m_c_m_c_a5a29ec4abc5fd7dc7f04394515fb0ae0}} 
+size\+\_\+t {\bfseries get\+\_\+n\+\_\+params} () const
 \item 
 \mbox{\Hypertarget{class_l_f_m_c_m_c_a6427505dc7f730b4998603a391130a35}\label{class_l_f_m_c_m_c_a6427505dc7f730b4998603a391130a35}} 
 epiworld\+\_\+double {\bfseries get\+\_\+epsilon} () const
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a678fa6a2d166dcac44e6d76b36f49003}\label{class_l_f_m_c_m_c_a678fa6a2d166dcac44e6d76b36f49003}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+now} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a3f6a8e1e3bed9d0dee8b75c86221dea5}\label{class_l_f_m_c_m_c_a3f6a8e1e3bed9d0dee8b75c86221dea5}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+initial\+\_\+params} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_ae23f07bd12bf692afaab480efb673062}\label{class_l_f_m_c_m_c_ae23f07bd12bf692afaab480efb673062}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+prev} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a09cd26f587caf53e26672fa1726fa218}\label{class_l_f_m_c_m_c_a09cd26f587caf53e26672fa1726fa218}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+current\+\_\+params} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_af3afb8256abf4c0643dda46d964fd5d3}\label{class_l_f_m_c_m_c_af3afb8256abf4c0643dda46d964fd5d3}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+params\+\_\+init} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_ae6ebbae630eedbb8f5298730b10b5e5b}\label{class_l_f_m_c_m_c_ae6ebbae630eedbb8f5298730b10b5e5b}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+previous\+\_\+params} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_aabd7d68f3a4fc46c1db98013c1b762a8}\label{class_l_f_m_c_m_c_aabd7d68f3a4fc46c1db98013c1b762a8}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+statistics\+\_\+obs} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_aa6e1ad1a96bd0fa7b9a4492adddcde2b}\label{class_l_f_m_c_m_c_aa6e1ad1a96bd0fa7b9a4492adddcde2b}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+observed\+\_\+stats} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a2c1accc9f113d028650db631341a07c2}\label{class_l_f_m_c_m_c_a2c1accc9f113d028650db631341a07c2}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+statistics\+\_\+hist} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_ab2039b0990a0bcc49e4b26e623b9b29d}\label{class_l_f_m_c_m_c_ab2039b0990a0bcc49e4b26e623b9b29d}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+sample\+\_\+params} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a7764cc67d76915be2633470a56d2c883}\label{class_l_f_m_c_m_c_a7764cc67d76915be2633470a56d2c883}} 
-const std\+::vector$<$ bool $>$ \& {\bfseries get\+\_\+statistics\+\_\+accepted} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_abdf059ec8f9240888b3e87327315c22a}\label{class_l_f_m_c_m_c_abdf059ec8f9240888b3e87327315c22a}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+sample\+\_\+stats} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a86f70c5e467620a44a3414c462ffa9a8}\label{class_l_f_m_c_m_c_a86f70c5e467620a44a3414c462ffa9a8}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+posterior\+\_\+lf\+\_\+prob} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_ac9449b3038898bf95f3e0c6f0d0f472a}\label{class_l_f_m_c_m_c_ac9449b3038898bf95f3e0c6f0d0f472a}} 
+const std\+::vector$<$ bool $>$ \& {\bfseries get\+\_\+sample\+\_\+acceptance} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_af23d646443b5b96122be6a798ef3e880}\label{class_l_f_m_c_m_c_af23d646443b5b96122be6a798ef3e880}} 
-const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+drawn\+\_\+prob} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_af96476ba6ce682e2fd188627933388f3}\label{class_l_f_m_c_m_c_af96476ba6ce682e2fd188627933388f3}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+sample\+\_\+drawn\+\_\+prob} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_ad3cba41457c38a50bc16b5783a3b3fb5}\label{class_l_f_m_c_m_c_ad3cba41457c38a50bc16b5783a3b3fb5}} 
-std\+::vector$<$ TData $>$ $\ast$ {\bfseries get\+\_\+sampled\+\_\+data} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a1a51c66460d9f318ead18cb13735230f}\label{class_l_f_m_c_m_c_a1a51c66460d9f318ead18cb13735230f}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+sample\+\_\+kernel\+\_\+scores} ()
 \item 
 \mbox{\Hypertarget{class_l_f_m_c_m_c_a798c3bf3bb2c601be3456c907d5a6ea1}\label{class_l_f_m_c_m_c_a798c3bf3bb2c601be3456c907d5a6ea1}} 
 const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+accepted\+\_\+params} ()
@@ -78,17 +84,17 @@ const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+accepted\
 \mbox{\Hypertarget{class_l_f_m_c_m_c_afa81c1f9d53945f97d0a3b4742cf96ec}\label{class_l_f_m_c_m_c_afa81c1f9d53945f97d0a3b4742cf96ec}} 
 const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+accepted\+\_\+stats} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a7e626ab23d03daac688c7ce51e44ba23}\label{class_l_f_m_c_m_c_a7e626ab23d03daac688c7ce51e44ba23}} 
-void {\bfseries set\+\_\+par\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\mbox{\Hypertarget{class_l_f_m_c_m_c_ad1f5ab48b47d3dfc03bfa1d68be8c2ae}\label{class_l_f_m_c_m_c_ad1f5ab48b47d3dfc03bfa1d68be8c2ae}} 
+const std\+::vector$<$ epiworld\+\_\+double $>$ \& {\bfseries get\+\_\+accepted\+\_\+kernel\+\_\+scores} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a41c23ee776d92f51e4b277e40006a199}\label{class_l_f_m_c_m_c_a41c23ee776d92f51e4b277e40006a199}} 
-void {\bfseries set\+\_\+stats\+\_\+names} (std\+::vector$<$ std\+::string $>$ names)
+\mbox{\Hypertarget{class_l_f_m_c_m_c_ae27211e70036c479ba1c7420c62fb802}\label{class_l_f_m_c_m_c_ae27211e70036c479ba1c7420c62fb802}} 
+std\+::vector$<$ TData $>$ $\ast$ {\bfseries get\+\_\+simulated\+\_\+data} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a9c1ce51dde9257c5c08a34f19baa6e60}\label{class_l_f_m_c_m_c_a9c1ce51dde9257c5c08a34f19baa6e60}} 
-std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+params\+\_\+mean} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a7e05b60e3f5203beb1a2c47ed80d1a06}\label{class_l_f_m_c_m_c_a7e05b60e3f5203beb1a2c47ed80d1a06}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+mean\+\_\+params} ()
 \item 
-\mbox{\Hypertarget{class_l_f_m_c_m_c_a43e3232efd453703869544b6876ee9ae}\label{class_l_f_m_c_m_c_a43e3232efd453703869544b6876ee9ae}} 
-std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+stats\+\_\+mean} ()
+\mbox{\Hypertarget{class_l_f_m_c_m_c_a4ed3f23e43b6a45e1423ae6ac0d81e7a}\label{class_l_f_m_c_m_c_a4ed3f23e43b6a45e1423ae6ac0d81e7a}} 
+std\+::vector$<$ epiworld\+\_\+double $>$ {\bfseries get\+\_\+mean\+\_\+stats} ()
 \item 
 \mbox{\Hypertarget{class_l_f_m_c_m_c_aa3030ef8d08f00fdec8b2fbfa8a33628}\label{class_l_f_m_c_m_c_aa3030ef8d08f00fdec8b2fbfa8a33628}} 
 void {\bfseries print} (size\+\_\+t burnin=0u) const
