@@ -246,43 +246,43 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (seed &gt;= 0)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        this-&gt;seed(seed);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    m_current_params.resize(m_n_params);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    m_previous_params.resize(m_n_params);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    m_current_proposed_params.resize(m_n_params);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    m_current_accepted_params.resize(m_n_params);</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span> (m_simulated_data != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        m_simulated_data-&gt;resize(m_n_samples);</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    m_previous_params = m_initial_params;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    m_current_params  = m_initial_params;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    m_current_accepted_params = m_initial_params;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    m_current_proposed_params  = m_initial_params;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// Computing the baseline sufficient statistics</span></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    m_summary_fun(m_observed_stats, m_observed_data, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    m_n_stats = m_observed_stats.size();</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// Reserving size</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    m_sample_drawn_prob.resize(m_n_samples);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    m_sample_acceptance.resize(m_n_samples, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    m_sample_stats.resize(m_n_samples * m_n_stats);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    m_sample_kernel_scores.resize(m_n_samples);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    m_all_sample_drawn_prob.resize(m_n_samples);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    m_all_sample_acceptance.resize(m_n_samples, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    m_all_sample_stats.resize(m_n_samples * m_n_stats);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    m_all_sample_kernel_scores.resize(m_n_samples);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    m_accepted_params.resize(m_n_samples * m_n_params);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    m_accepted_stats.resize(m_n_samples * m_n_stats);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    m_accepted_kernel_scores.resize(m_n_samples);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    m_all_accepted_params.resize(m_n_samples * m_n_params);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    m_all_accepted_stats.resize(m_n_samples * m_n_stats);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    m_all_accepted_kernel_scores.resize(m_n_samples);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    TData data_i = m_simulation_fun(m_initial_params, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    std::vector&lt; epiworld_double &gt; proposed_stats_i;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    m_summary_fun(proposed_stats_i, data_i, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    m_accepted_kernel_scores[0u] = m_kernel_fun(</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    m_all_accepted_kernel_scores[0u] = m_kernel_fun(</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        proposed_stats_i, m_observed_stats, m_epsilon, <span class="keyword">this</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// Recording statistics</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; m_n_stats; ++i)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        m_sample_stats[i] = proposed_stats_i[i];</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        m_all_sample_stats[i] = proposed_stats_i[i];</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_params; ++k)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        m_accepted_params[k] = m_initial_params[k];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        m_all_accepted_params[k] = m_initial_params[k];</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   </div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">// Init progress bar</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    progress_bar = <a class="code" href="class_progress.html">Progress</a>(m_n_samples, 80);</div>
@@ -293,11 +293,11 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">// Run LFMCMC</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1u; i &lt; m_n_samples; ++i)</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// Step 1: Generate a proposal and store it in m_current_params</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        m_proposal_fun(m_current_params, m_previous_params, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// Step 1: Generate a proposal and store it in m_current_proposed_params</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        m_proposal_fun(m_current_proposed_params, m_current_accepted_params, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// Step 2: Using m_current_params, simulate data</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        TData data_i = m_simulation_fun(m_current_params, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// Step 2: Using m_current_proposed_params, simulate data</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        TData data_i = m_simulation_fun(m_current_proposed_params, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// Are we storing the data?</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> (m_simulated_data != <span class="keyword">nullptr</span>)</div>
@@ -311,41 +311,41 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            proposed_stats_i, m_observed_stats, m_epsilon, <span class="keyword">this</span></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            );</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        m_sample_kernel_scores[i] = hr;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        m_all_sample_kernel_scores[i] = hr;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="comment">// Storing data</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_stats; ++k)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            m_sample_stats[i * m_n_stats + k] = proposed_stats_i[k];</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            m_all_sample_stats[i * m_n_stats + k] = proposed_stats_i[k];</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        </div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// Running Hastings ratio</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        epiworld_double r = runif();</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        m_sample_drawn_prob[i] = r;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        m_all_sample_drawn_prob[i] = r;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// Step 5: Update if likely</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> (r &lt; std::min(<span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(1.0), hr / m_accepted_kernel_scores[i - 1u]))</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> (r &lt; std::min(<span class="keyword">static_cast&lt;</span>epiworld_double<span class="keyword">&gt;</span>(1.0), hr / m_all_accepted_kernel_scores[i - 1u]))</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            m_accepted_kernel_scores[i] = hr;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            m_sample_acceptance[i]     = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            m_all_accepted_kernel_scores[i] = hr;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            m_all_sample_acceptance[i]     = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            </div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_stats; ++k)</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                m_accepted_stats[i * m_n_stats + k] =</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                m_all_accepted_stats[i * m_n_stats + k] =</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    proposed_stats_i[k];</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_previous_params = m_current_params;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_current_accepted_params = m_current_proposed_params;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        } <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        {</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_stats; ++k)</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                m_accepted_stats[i * m_n_stats + k] =</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    m_accepted_stats[(i - 1) * m_n_stats + k];</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                m_all_accepted_stats[i * m_n_stats + k] =</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    m_all_accepted_stats[(i - 1) * m_n_stats + k];</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            m_accepted_kernel_scores[i] = m_accepted_kernel_scores[i - 1u];</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            m_all_accepted_kernel_scores[i] = m_all_accepted_kernel_scores[i - 1u];</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            </div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_params; ++k)</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            m_accepted_params[i * m_n_params + k] = m_previous_params[k];</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            m_all_accepted_params[i * m_n_params + k] = m_current_accepted_params[k];</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">if</span> (verbose) { </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            progress_bar.next(); </div>
@@ -551,7 +551,7 @@ $(function() {
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_params; ++k)</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    {</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; m_n_samples; ++i)</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            res[k] += (this-&gt;m_accepted_params[k + m_n_params * i])/</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            res[k] += (this-&gt;m_all_accepted_params[k + m_n_params * i])/</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                <span class="keyword">static_cast&lt;</span> epiworld_double <span class="keyword">&gt;</span>(m_n_samples);</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    }</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
@@ -567,7 +567,7 @@ $(function() {
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0u; k &lt; m_n_stats; ++k)</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    {</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0u; i &lt; m_n_samples; ++i)</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            res[k] += (this-&gt;m_accepted_stats[k + m_n_stats * i])/</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            res[k] += (this-&gt;m_all_accepted_stats[k + m_n_stats * i])/</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                <span class="keyword">static_cast&lt;</span> epiworld_double <span class="keyword">&gt;</span>(m_n_samples);</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>

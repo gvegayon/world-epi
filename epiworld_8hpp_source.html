@@ -1036,21 +1036,21 @@ $(function() {
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;<span class="comment">    epiworld_double m_epsilon;</span></div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_initial_params;            ///&lt; Initial parameters</span></div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_params;            ///&lt; Parameters for the current sample</span></div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_previous_params;           ///&lt; Parameters from the previous sample</span></div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_initial_params;             ///&lt; Initial parameters</span></div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_proposed_params;    ///&lt; Proposed parameters for the next sample</span></div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_accepted_params;    ///&lt; Most recently accepted parameters (current state of MCMC)</span></div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_observed_stats;            ///&lt; Observed statistics</span></div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_observed_stats;             ///&lt; Observed statistics</span></div>
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_params;             ///&lt; Parameter samples</span></div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_stats;              ///&lt; Statistic samples</span></div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">    std::vector&lt; bool &gt;            m_sample_acceptance;         ///&lt; Indicator if sample was accepted</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_drawn_prob;         ///&lt; Drawn probabilities (runif()) for each sample</span></div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_kernel_scores;      ///&lt; Kernel scores for each sample</span></div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_params;          ///&lt; Parameter samples</span></div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_stats;           ///&lt; Statistic samples</span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">    std::vector&lt; bool &gt;            m_all_sample_acceptance;      ///&lt; Indicator if sample was accepted</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_drawn_prob;      ///&lt; Drawn probabilities (runif()) for each sample</span></div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_kernel_scores;   ///&lt; Kernel scores for each sample</span></div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_params;           ///&lt; Posterior distribution of parameters from accepted samples</span></div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_stats;            ///&lt; Posterior distribution of statistics from accepted samples</span></div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_kernel_scores;    ///&lt; Kernel scores for each accepted sample</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_params;        ///&lt; Posterior distribution of parameters from accepted samples</span></div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_stats;         ///&lt; Posterior distribution of statistics from accepted samples</span></div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_kernel_scores; ///&lt; Kernel scores for each accepted sample</span></div>
 <div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;<span class="comment">    // Functions</span></div>
 <div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="comment">    LFMCMCSimFun&lt;TData&gt; m_simulation_fun;</span></div>
@@ -1126,20 +1126,20 @@ $(function() {
 <div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;<span class="comment">    epiworld_double get_epsilon() const {return m_epsilon;};</span></div>
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_initial_params() {return m_initial_params;};</span></div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_params() {return m_current_params;};</span></div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_previous_params() {return m_previous_params;};</span></div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_proposed_params() {return m_current_proposed_params;};</span></div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_accepted_params() {return m_current_accepted_params;};</span></div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_observed_stats() {return m_observed_stats;};</span></div>
 <div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_params() {return m_sample_params;};</span></div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_stats() {return m_sample_stats;};</span></div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;<span class="comment">    const std::vector&lt; bool &gt;            &amp; get_sample_acceptance() {return m_sample_acceptance;};</span></div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_drawn_prob() {return m_sample_drawn_prob;};</span></div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_kernel_scores() {return m_sample_kernel_scores;};</span></div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_params() {return m_all_sample_params;};</span></div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_stats() {return m_all_sample_stats;};</span></div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;<span class="comment">    const std::vector&lt; bool &gt;            &amp; get_all_sample_acceptance() {return m_all_sample_acceptance;};</span></div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_drawn_prob() {return m_all_sample_drawn_prob;};</span></div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_kernel_scores() {return m_all_sample_kernel_scores;};</span></div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_params() {return m_accepted_params;};</span></div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_stats() {return m_accepted_stats;};</span></div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_kernel_scores() {return m_accepted_kernel_scores;};</span></div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_params() {return m_all_accepted_params;};</span></div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_stats() {return m_all_accepted_stats;};</span></div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_kernel_scores() {return m_all_accepted_kernel_scores;};</span></div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;<span class="comment">    std::vector&lt; TData &gt; * get_simulated_data() {return m_simulated_data;};</span></div>
 <div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;<span class="comment"></span> </div>
@@ -1262,21 +1262,21 @@ $(function() {
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;<span class="comment">    epiworld_double m_epsilon;</span></div>
 <div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_initial_params;            ///&lt; Initial parameters</span></div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_params;            ///&lt; Parameters for the current sample</span></div>
-<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_previous_params;           ///&lt; Parameters from the previous sample</span></div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_initial_params;             ///&lt; Initial parameters</span></div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_proposed_params;    ///&lt; Proposed parameters for the next sample</span></div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_current_accepted_params;    ///&lt; Most recently accepted parameters (current state of MCMC)</span></div>
 <div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_observed_stats;            ///&lt; Observed statistics</span></div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_observed_stats;             ///&lt; Observed statistics</span></div>
 <div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_params;             ///&lt; Parameter samples</span></div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_stats;              ///&lt; Statistic samples</span></div>
-<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;<span class="comment">    std::vector&lt; bool &gt;            m_sample_acceptance;         ///&lt; Indicator if sample was accepted</span></div>
-<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_drawn_prob;         ///&lt; Drawn probabilities (runif()) for each sample</span></div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_sample_kernel_scores;      ///&lt; Kernel scores for each sample</span></div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_params;          ///&lt; Parameter samples</span></div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_stats;           ///&lt; Statistic samples</span></div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;<span class="comment">    std::vector&lt; bool &gt;            m_all_sample_acceptance;      ///&lt; Indicator if sample was accepted</span></div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_drawn_prob;      ///&lt; Drawn probabilities (runif()) for each sample</span></div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_sample_kernel_scores;   ///&lt; Kernel scores for each sample</span></div>
 <div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_params;           ///&lt; Posterior distribution of parameters from accepted samples</span></div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_stats;            ///&lt; Posterior distribution of statistics from accepted samples</span></div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_accepted_kernel_scores;    ///&lt; Kernel scores for each accepted sample</span></div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_params;        ///&lt; Posterior distribution of parameters from accepted samples</span></div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_stats;         ///&lt; Posterior distribution of statistics from accepted samples</span></div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; m_all_accepted_kernel_scores; ///&lt; Kernel scores for each accepted sample</span></div>
 <div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;<span class="comment">    // Functions</span></div>
 <div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;<span class="comment">    LFMCMCSimFun&lt;TData&gt; m_simulation_fun;</span></div>
@@ -1352,20 +1352,20 @@ $(function() {
 <div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;<span class="comment">    epiworld_double get_epsilon() const {return m_epsilon;};</span></div>
 <div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_initial_params() {return m_initial_params;};</span></div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_params() {return m_current_params;};</span></div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_previous_params() {return m_previous_params;};</span></div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_proposed_params() {return m_current_proposed_params;};</span></div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_current_accepted_params() {return m_current_accepted_params;};</span></div>
 <div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_observed_stats() {return m_observed_stats;};</span></div>
 <div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_params() {return m_sample_params;};</span></div>
-<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_stats() {return m_sample_stats;};</span></div>
-<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;<span class="comment">    const std::vector&lt; bool &gt;            &amp; get_sample_acceptance() {return m_sample_acceptance;};</span></div>
-<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_drawn_prob() {return m_sample_drawn_prob;};</span></div>
-<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_sample_kernel_scores() {return m_sample_kernel_scores;};</span></div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_params() {return m_all_sample_params;};</span></div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_stats() {return m_all_sample_stats;};</span></div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;<span class="comment">    const std::vector&lt; bool &gt;            &amp; get_all_sample_acceptance() {return m_all_sample_acceptance;};</span></div>
+<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_drawn_prob() {return m_all_sample_drawn_prob;};</span></div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_sample_kernel_scores() {return m_all_sample_kernel_scores;};</span></div>
 <div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_params() {return m_accepted_params;};</span></div>
-<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_stats() {return m_accepted_stats;};</span></div>
-<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_accepted_kernel_scores() {return m_accepted_kernel_scores;};</span></div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_params() {return m_all_accepted_params;};</span></div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_stats() {return m_all_accepted_stats;};</span></div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;<span class="comment">    const std::vector&lt; epiworld_double &gt; &amp; get_all_accepted_kernel_scores() {return m_all_accepted_kernel_scores;};</span></div>
 <div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;<span class="comment">    </span></div>
 <div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;<span class="comment">    std::vector&lt; TData &gt; * get_simulated_data() {return m_simulated_data;};</span></div>
 <div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;<span class="comment"></span> </div>
@@ -1558,43 +1558,43 @@ $(function() {
 <div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;<span class="comment">    if (seed &gt;= 0)</span></div>
 <div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;<span class="comment">        this-&gt;seed(seed);</span></div>
 <div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;<span class="comment">    m_current_params.resize(m_n_params);</span></div>
-<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;<span class="comment">    m_previous_params.resize(m_n_params);</span></div>
+<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;<span class="comment">    m_current_proposed_params.resize(m_n_params);</span></div>
+<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;<span class="comment">    m_current_accepted_params.resize(m_n_params);</span></div>
 <div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;<span class="comment">    if (m_simulated_data != nullptr)</span></div>
 <div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;<span class="comment">        m_simulated_data-&gt;resize(m_n_samples);</span></div>
 <div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;<span class="comment">    m_previous_params = m_initial_params;</span></div>
-<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;<span class="comment">    m_current_params  = m_initial_params;</span></div>
+<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;<span class="comment">    m_current_accepted_params = m_initial_params;</span></div>
+<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;<span class="comment">    m_current_proposed_params  = m_initial_params;</span></div>
 <div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="comment">    // Computing the baseline sufficient statistics</span></div>
 <div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;<span class="comment">    m_summary_fun(m_observed_stats, m_observed_data, this);</span></div>
 <div class="line"><a name="l01872"></a><span class="lineno"> 1872</span>&#160;<span class="comment">    m_n_stats = m_observed_stats.size();</span></div>
 <div class="line"><a name="l01873"></a><span class="lineno"> 1873</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01874"></a><span class="lineno"> 1874</span>&#160;<span class="comment">    // Reserving size</span></div>
-<div class="line"><a name="l01875"></a><span class="lineno"> 1875</span>&#160;<span class="comment">    m_sample_drawn_prob.resize(m_n_samples);</span></div>
-<div class="line"><a name="l01876"></a><span class="lineno"> 1876</span>&#160;<span class="comment">    m_sample_acceptance.resize(m_n_samples, false);</span></div>
-<div class="line"><a name="l01877"></a><span class="lineno"> 1877</span>&#160;<span class="comment">    m_sample_stats.resize(m_n_samples * m_n_stats);</span></div>
-<div class="line"><a name="l01878"></a><span class="lineno"> 1878</span>&#160;<span class="comment">    m_sample_kernel_scores.resize(m_n_samples);</span></div>
+<div class="line"><a name="l01875"></a><span class="lineno"> 1875</span>&#160;<span class="comment">    m_all_sample_drawn_prob.resize(m_n_samples);</span></div>
+<div class="line"><a name="l01876"></a><span class="lineno"> 1876</span>&#160;<span class="comment">    m_all_sample_acceptance.resize(m_n_samples, false);</span></div>
+<div class="line"><a name="l01877"></a><span class="lineno"> 1877</span>&#160;<span class="comment">    m_all_sample_stats.resize(m_n_samples * m_n_stats);</span></div>
+<div class="line"><a name="l01878"></a><span class="lineno"> 1878</span>&#160;<span class="comment">    m_all_sample_kernel_scores.resize(m_n_samples);</span></div>
 <div class="line"><a name="l01879"></a><span class="lineno"> 1879</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;<span class="comment">    m_accepted_params.resize(m_n_samples * m_n_params);</span></div>
-<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;<span class="comment">    m_accepted_stats.resize(m_n_samples * m_n_stats);</span></div>
-<div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;<span class="comment">    m_accepted_kernel_scores.resize(m_n_samples);</span></div>
+<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;<span class="comment">    m_all_accepted_params.resize(m_n_samples * m_n_params);</span></div>
+<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;<span class="comment">    m_all_accepted_stats.resize(m_n_samples * m_n_stats);</span></div>
+<div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;<span class="comment">    m_all_accepted_kernel_scores.resize(m_n_samples);</span></div>
 <div class="line"><a name="l01883"></a><span class="lineno"> 1883</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01884"></a><span class="lineno"> 1884</span>&#160;<span class="comment">    TData data_i = m_simulation_fun(m_initial_params, this);</span></div>
 <div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;<span class="comment">    std::vector&lt; epiworld_double &gt; proposed_stats_i;</span></div>
 <div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;<span class="comment">    m_summary_fun(proposed_stats_i, data_i, this);</span></div>
-<div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;<span class="comment">    m_accepted_kernel_scores[0u] = m_kernel_fun(</span></div>
+<div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;<span class="comment">    m_all_accepted_kernel_scores[0u] = m_kernel_fun(</span></div>
 <div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;<span class="comment">        proposed_stats_i, m_observed_stats, m_epsilon, this</span></div>
 <div class="line"><a name="l01890"></a><span class="lineno"> 1890</span>&#160;<span class="comment">        );</span></div>
 <div class="line"><a name="l01891"></a><span class="lineno"> 1891</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;<span class="comment">    // Recording statistics</span></div>
 <div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;<span class="comment">    for (size_t i = 0u; i &lt; m_n_stats; ++i)</span></div>
-<div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;<span class="comment">        m_sample_stats[i] = proposed_stats_i[i];</span></div>
+<div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;<span class="comment">        m_all_sample_stats[i] = proposed_stats_i[i];</span></div>
 <div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;<span class="comment">    for (size_t k = 0u; k &lt; m_n_params; ++k)</span></div>
-<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;<span class="comment">        m_accepted_params[k] = m_initial_params[k];</span></div>
+<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;<span class="comment">        m_all_accepted_params[k] = m_initial_params[k];</span></div>
 <div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;<span class="comment">   </span></div>
 <div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;<span class="comment">    // Init progress bar</span></div>
 <div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;<span class="comment">    progress_bar = Progress(m_n_samples, 80);</span></div>
@@ -1605,11 +1605,11 @@ $(function() {
 <div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;<span class="comment">    // Run LFMCMC</span></div>
 <div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;<span class="comment">    for (size_t i = 1u; i &lt; m_n_samples; ++i)</span></div>
 <div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;<span class="comment">    {</span></div>
-<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;<span class="comment">        // Step 1: Generate a proposal and store it in m_current_params</span></div>
-<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;<span class="comment">        m_proposal_fun(m_current_params, m_previous_params, this);</span></div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;<span class="comment">        // Step 1: Generate a proposal and store it in m_current_proposed_params</span></div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;<span class="comment">        m_proposal_fun(m_current_proposed_params, m_current_accepted_params, this);</span></div>
 <div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;<span class="comment">        // Step 2: Using m_current_params, simulate data</span></div>
-<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;<span class="comment">        TData data_i = m_simulation_fun(m_current_params, this);</span></div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;<span class="comment">        // Step 2: Using m_current_proposed_params, simulate data</span></div>
+<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;<span class="comment">        TData data_i = m_simulation_fun(m_current_proposed_params, this);</span></div>
 <div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01914"></a><span class="lineno"> 1914</span>&#160;<span class="comment">        // Are we storing the data?</span></div>
 <div class="line"><a name="l01915"></a><span class="lineno"> 1915</span>&#160;<span class="comment">        if (m_simulated_data != nullptr)</span></div>
@@ -1623,41 +1623,41 @@ $(function() {
 <div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;<span class="comment">            proposed_stats_i, m_observed_stats, m_epsilon, this</span></div>
 <div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;<span class="comment">            );</span></div>
 <div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;<span class="comment">        m_sample_kernel_scores[i] = hr;</span></div>
+<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;<span class="comment">        m_all_sample_kernel_scores[i] = hr;</span></div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;<span class="comment">        // Storing data</span></div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;<span class="comment">        for (size_t k = 0u; k &lt; m_n_stats; ++k)</span></div>
-<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;<span class="comment">            m_sample_stats[i * m_n_stats + k] = proposed_stats_i[k];</span></div>
+<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;<span class="comment">            m_all_sample_stats[i * m_n_stats + k] = proposed_stats_i[k];</span></div>
 <div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;<span class="comment">        </span></div>
 <div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;<span class="comment">        // Running Hastings ratio</span></div>
 <div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;<span class="comment">        epiworld_double r = runif();</span></div>
-<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;<span class="comment">        m_sample_drawn_prob[i] = r;</span></div>
+<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;<span class="comment">        m_all_sample_drawn_prob[i] = r;</span></div>
 <div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01936"></a><span class="lineno"> 1936</span>&#160;<span class="comment">        // Step 5: Update if likely</span></div>
-<div class="line"><a name="l01937"></a><span class="lineno"> 1937</span>&#160;<span class="comment">        if (r &lt; std::min(static_cast&lt;epiworld_double&gt;(1.0), hr / m_accepted_kernel_scores[i - 1u]))</span></div>
+<div class="line"><a name="l01937"></a><span class="lineno"> 1937</span>&#160;<span class="comment">        if (r &lt; std::min(static_cast&lt;epiworld_double&gt;(1.0), hr / m_all_accepted_kernel_scores[i - 1u]))</span></div>
 <div class="line"><a name="l01938"></a><span class="lineno"> 1938</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l01939"></a><span class="lineno"> 1939</span>&#160;<span class="comment">            m_accepted_kernel_scores[i] = hr;</span></div>
-<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;<span class="comment">            m_sample_acceptance[i]     = true;</span></div>
+<div class="line"><a name="l01939"></a><span class="lineno"> 1939</span>&#160;<span class="comment">            m_all_accepted_kernel_scores[i] = hr;</span></div>
+<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;<span class="comment">            m_all_sample_acceptance[i]     = true;</span></div>
 <div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;<span class="comment">            </span></div>
 <div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;<span class="comment">            for (size_t k = 0u; k &lt; m_n_stats; ++k)</span></div>
-<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;<span class="comment">                m_accepted_stats[i * m_n_stats + k] =</span></div>
+<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;<span class="comment">                m_all_accepted_stats[i * m_n_stats + k] =</span></div>
 <div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;<span class="comment">                    proposed_stats_i[k];</span></div>
 <div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;<span class="comment">            m_previous_params = m_current_params;</span></div>
+<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;<span class="comment">            m_current_accepted_params = m_current_proposed_params;</span></div>
 <div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01948"></a><span class="lineno"> 1948</span>&#160;<span class="comment">        } else</span></div>
 <div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;<span class="comment">        {</span></div>
 <div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;<span class="comment">            for (size_t k = 0u; k &lt; m_n_stats; ++k)</span></div>
-<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;<span class="comment">                m_accepted_stats[i * m_n_stats + k] =</span></div>
-<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;<span class="comment">                    m_accepted_stats[(i - 1) * m_n_stats + k];</span></div>
+<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;<span class="comment">                m_all_accepted_stats[i * m_n_stats + k] =</span></div>
+<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;<span class="comment">                    m_all_accepted_stats[(i - 1) * m_n_stats + k];</span></div>
 <div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;<span class="comment">            m_accepted_kernel_scores[i] = m_accepted_kernel_scores[i - 1u];</span></div>
+<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;<span class="comment">            m_all_accepted_kernel_scores[i] = m_all_accepted_kernel_scores[i - 1u];</span></div>
 <div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160;<span class="comment">        }</span></div>
 <div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;<span class="comment">            </span></div>
 <div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;<span class="comment">        for (size_t k = 0u; k &lt; m_n_params; ++k)</span></div>
-<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;<span class="comment">            m_accepted_params[i * m_n_params + k] = m_previous_params[k];</span></div>
+<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;<span class="comment">            m_all_accepted_params[i * m_n_params + k] = m_current_accepted_params[k];</span></div>
 <div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;<span class="comment">        if (verbose) { </span></div>
 <div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;<span class="comment">            progress_bar.next(); </span></div>
@@ -1864,7 +1864,7 @@ $(function() {
 <div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;<span class="comment">        std::vector&lt; epiworld_double &gt; par_i(n_samples_print);</span></div>
 <div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;<span class="comment">        for (size_t i = burnin; i &lt; m_n_samples; ++i)</span></div>
 <div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;<span class="comment">            par_i[i-burnin] = m_accepted_params[i * m_n_params + k];</span></div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;<span class="comment">            par_i[i-burnin] = m_all_accepted_params[i * m_n_params + k];</span></div>
 <div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;<span class="comment">            summ_params[k * 3] += par_i[i-burnin]/n_samples_dbl;</span></div>
 <div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;<span class="comment">        }</span></div>
 <div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;<span class="comment"></span> </div>
@@ -1886,7 +1886,7 @@ $(function() {
 <div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;<span class="comment">        std::vector&lt; epiworld_double &gt; stat_k(n_samples_print);</span></div>
 <div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;<span class="comment">        for (size_t i = burnin; i &lt; m_n_samples; ++i)</span></div>
 <div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;<span class="comment">            stat_k[i-burnin] = m_accepted_stats[i * m_n_stats + k];</span></div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;<span class="comment">            stat_k[i-burnin] = m_all_accepted_stats[i * m_n_stats + k];</span></div>
 <div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;<span class="comment">            summ_stats[k * 3] += stat_k[i-burnin]/n_samples_dbl;</span></div>
 <div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;<span class="comment">        }</span></div>
 <div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;<span class="comment"></span> </div>
@@ -2102,7 +2102,7 @@ $(function() {
 <div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;<span class="comment">    for (size_t k = 0u; k &lt; m_n_params; ++k)</span></div>
 <div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160;<span class="comment">    {</span></div>
 <div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;<span class="comment">        for (size_t i = 0u; i &lt; m_n_samples; ++i)</span></div>
-<div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;<span class="comment">            res[k] += (this-&gt;m_accepted_params[k + m_n_params * i])/</span></div>
+<div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;<span class="comment">            res[k] += (this-&gt;m_all_accepted_params[k + m_n_params * i])/</span></div>
 <div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;<span class="comment">                static_cast&lt; epiworld_double &gt;(m_n_samples);</span></div>
 <div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;<span class="comment">    }</span></div>
 <div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;<span class="comment"></span> </div>
@@ -2118,7 +2118,7 @@ $(function() {
 <div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;<span class="comment">    for (size_t k = 0u; k &lt; m_n_stats; ++k)</span></div>
 <div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;<span class="comment">    {</span></div>
 <div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;<span class="comment">        for (size_t i = 0u; i &lt; m_n_samples; ++i)</span></div>
-<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;<span class="comment">            res[k] += (this-&gt;m_accepted_stats[k + m_n_stats * i])/</span></div>
+<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;<span class="comment">            res[k] += (this-&gt;m_all_accepted_stats[k + m_n_stats * i])/</span></div>
 <div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;<span class="comment">                static_cast&lt; epiworld_double &gt;(m_n_samples);</span></div>
 <div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;<span class="comment">    }</span></div>
 <div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;<span class="comment"></span> </div>
